@@ -116,79 +116,37 @@ SPHERE-I-SCIENCE/
 │
 └── S1 — 🩺 Biomedical & Oncology/
     ├── 🧬 S1-A · PHYLO-GENOMICS/
-    │   └── R1 · Variant classification/
+    │   └── S1-A-R1 · Variant classification/
     │       ├── R1a-openvariant/              ✅  AUC=0.939
     │       └── R1b-somatic-classifier/       🔶
     ├── 🔬 S1-B · PHYLO-RNA/
-    │   ├── R1 · miRNA silencing/
+    │   ├── S1-B-R1 · miRNA silencing/
     │   │   └── R1a-brca2-mirna/              ✅
-    │   ├── R2 · siRNA SL/
+    │   ├── S1-B-R2 · siRNA SL/
     │   │   └── R2a-tp53-sirna/               ✅
-    │   └── R3 · lncRNA + ASO/
+    │   └── S1-B-R3 · lncRNA + ASO/
     │       ├── R3a-lncrna-trem2/             ✅
     │       └── R3b-aso-designer/             ✅
     ├── 💊 S1-C · PHYLO-DRUG/
-    │   ├── R1 · RNA-directed drug/
+    │   ├── S1-C-R1 · RNA-directed drug/
     │   │   ├── R1a-fgfr3-rna-drug/           ✅
     │   │   └── R1b-sl-drug-mapping/          🔶
-    │   └── R2 · Frontier/
+    │   └── S1-C-R2 · Frontier/
     │       └── R2a-m6a-ferroptosis-circadian/ 🔴
     ├── 🧪 S1-D · PHYLO-LNP/
-    │   ├── R1 · Serum corona/   → R1a-lnp-corona-ml/         ✅  AUC=0.791
-    │   ├── R2 · Flow corona/    → R2a-flow-corona/            ✅
-    │   ├── R3 · Brain BBB/      → R3a-lnp-bbb/               ✅
-    │   ├── R4 · NLP/            → R4a-autocorona-nlp/         ✅  F1=0.71
-    │   └── R5 · Exotic fluids/  → R5a-csf-vitreous-bm/       🔴
+    │   ├── S1-D-R1 · Serum corona/   → R1a-lnp-corona-ml/         ✅  AUC=0.791
+    │   ├── S1-D-R2 · Flow corona/    → R2a-flow-corona/            ✅
+    │   ├── S1-D-R3 · Brain BBB/      → R3a-lnp-bbb/               ✅
+    │   ├── S1-D-R4 · NLP/            → R4a-autocorona-nlp/         ✅  F1=0.71
+    │   └── S1-D-R5 · Exotic fluids/  → R5a-csf-vitreous-bm/       🔴
     ├── 🩸 S1-E · PHYLO-BIOMARKERS/
-    │   └── R1 · Liquid biopsy/
+    │   └── S1-E-R1 · Liquid biopsy/
     │       ├── R1a-liquid-biopsy/             ✅  AUC=0.992*
     │       └── R1b-protein-validator/         🔶
     └── 🧠 S1-F · PHYLO-RARE/
-        ├── R1 · DIPG/  → R1a-dipg/            🔶  PBTA · GSE126319
-        ├── R2 · UVM/   → R2a-uvm/             🔶  TCGA-UVM n=80
-        └── R3 · pAML/  → R3a-paml/            🔶  TARGET-AML
-```
-
----
-
-## 🚀 Git: rename existing folders
-
-Run each command **inside the correct PHYLO/R-direction subfolder**:
-
-```bash
-# S1-A / R1 · Variant classification/
-git mv 05_A5-openvariant         R1a-openvariant
-
-# S1-B / R1 · miRNA silencing/
-git mv 01_A1-brca2-mirna         R1a-brca2-mirna
-
-# S1-B / R2 · siRNA SL/
-git mv 02_A2-tp53-sirna          R2a-tp53-sirna
-
-# S1-B / R3 · lncRNA + ASO/
-git mv 03_A3-lncrna-trem2        R3a-lncrna-trem2
-
-# S1-C / R1 · RNA-directed drug/
-git mv 04_A4-fgfr3-rna-drug      R1a-fgfr3-rna-drug
-
-# S1-D / R1 · Serum corona/
-git mv 06_B1-lnp-corona-ml       R1a-lnp-corona-ml
-
-# S1-D / R2 · Flow corona/
-git mv 08_B3-corona-flow-dynamics R2a-flow-corona
-
-# S1-D / R3 · Brain BBB/
-git mv 09_B4-lnp-apoe-bbb        R3a-lnp-bbb
-
-# S1-E / R1 · Liquid biopsy/
-git mv 07_B2-corona-liquid-biopsy R1a-liquid-biopsy
-
-# S1-D / R4 · NLP/
-git mv 10_B5-autocorona-nlp       R4a-autocorona-nlp
-
-git add -A
-git commit -m "refactor: adopt per-track R{n}{letter} study numbering"
-git push
+        ├── S1-F-R1 · DIPG/  → R1a-dipg/            🔶  PBTA · GSE126319
+        ├── S1-F-R2 · UVM/   → R2a-uvm/             🔶  TCGA-UVM n=80
+        └── S1-F-R3 · pAML/  → R3a-paml/            🔶  TARGET-AML
 ```
 
 ---
