@@ -1,0 +1,23 @@
+entry_id,source,pmid,lnp_type,size_nm,zeta_mv,PDI,protein_source,experiment_type,corona_proteins,n_proteins_identified,confidence,auto_accepted,flagged_review
+GS_001,gold_standard_manual,PMID_34962611,OF-02-LNP,139.9,-24.5,0.081,human plasma,label-free quantification,Alpha-2-macroglobulin; Complement C1q; ApoC-III; Complement C4; Fibrinogen; Apolipoprotein B,21,high,False,False
+GS_002,gold_standard_manual,PMID_33499720,cKK-E12-LNP,81.3,3.0,0.163,fetal bovine serum,LC-MS/MS,Albumin; Coagulation factor XII; Alpha-2-macroglobulin; Fibrinogen,76,high,False,False
+GS_003,gold_standard_manual,PMID_29046797,OF-02-LNP,137.0,-11.8,0.242,rat plasma,2D-PAGE,Alpha-2-macroglobulin; ApoA-IV; ApoE; ApoA-I; ApoC-III; IgA; Serotransferrin,55,high,False,False
+GS_004,gold_standard_manual,PMID_29843400,OF-02-LNP,124.9,-26.7,0.124,rat plasma,label-free quantification,ApoA-I; Haptoglobin; ApoE; Serotransferrin; Inter-alpha-trypsin inhibitor; Coagulation factor XII; Alpha-1-antitrypsin,29,high,False,False
+GS_005,gold_standard_manual,PMID_29213475,cKK-E12-LNP,109.0,-24.4,0.236,rat plasma,LC-MS/MS,Complement C1q; Complement C4; Alpha-2-macroglobulin; Vitronectin; IgA; Hemoglobin,72,high,False,False
+GS_006,gold_standard_manual,PMID_31360011,cKK-E12-LNP,129.7,-19.5,0.107,human serum,label-free quantification,IgA; IgM; Clusterin; Complement C1q; Complement C4; ApoA-II; Ceruloplasmin,94,high,False,False
+GS_007,gold_standard_manual,PMID_32024066,C12-200-LNP,112.6,-22.3,0.192,human plasma,SILAC,Complement C1q; Haptoglobin; Coagulation factor XII; Complement C4,23,high,False,False
+GS_008,gold_standard_manual,PMID_34671458,ALC-0315-LNP,152.6,1.4,0.227,human serum,SILAC,Clusterin; Coagulation factor XII; Kininogen; Alpha-2-macroglobulin,90,high,False,False
+GS_009,gold_standard_manual,PMID_30269042,DOTAP-LNP,106.5,-21.5,0.245,rat plasma,label-free quantification,IgM; Coagulation factor XII; Hemoglobin; Clusterin; IgA; Fibrinogen,109,high,False,False
+GS_010,gold_standard_manual,PMID_34214624,C12-200-LNP,109.4,-16.5,0.22,human plasma,iTRAQ,Complement C3; Plasminogen; Serotransferrin; Prothrombin; ApoA-IV; ApoC-III,50,high,False,False
+GS_011,gold_standard_manual,PMID_31928083,MC3-LNP,87.1,-16.1,0.06,human plasma,SILAC,Complement C3; Coagulation factor XII; Complement C4; Fetuin-A,44,high,False,False
+GS_012,gold_standard_manual,PMID_29135248,OF-02-LNP,107.1,-14.6,0.066,rat plasma,iTRAQ,ApoA-IV; Serotransferrin; Apolipoprotein B; Fibronectin; Ceruloplasmin; Alpha-1-antitrypsin,108,high,False,False
+GS_013,gold_standard_manual,PMID_32273085,C12-200-LNP,97.5,-29.4,0.203,rat plasma,SILAC,Vitronectin; ApoE; Haptoglobin; Fibrinogen; IgM,65,high,False,False
+GS_014,gold_standard_manual,PMID_28251492,ALC-0315-LNP,162.0,-7.2,0.091,rat plasma,2D-PAGE,Plasminogen; Kininogen; ApoE; Complement C3; Complement C1q; Albumin,38,high,False,False
+GS_015,gold_standard_manual,PMID_29162928,ALC-0315-LNP,121.3,-17.0,0.205,rat plasma,SILAC,Fibrinogen; IgA; Albumin; IgG; ApoE; ApoC-III; ApoA-I,99,high,False,False
+GS_016,gold_standard_manual,PMID_31788340,cKK-E12-LNP,158.1,-26.0,0.236,fetal bovine serum,iTRAQ,Ceruloplasmin; Kininogen; Albumin; ApoA-IV; Coagulation factor XII; Alpha-2-macroglobulin; Vitronectin,100,high,False,False
+GS_017,gold_standard_manual,PMID_29533584,cKK-E12-LNP,178.6,-3.6,0.125,human plasma,2D-PAGE,Complement C1q; Haptoglobin; Hemoglobin; ApoA-IV; ApoA-I; ApoC-III; ApoE,59,high,False,False
+GS_018,gold_standard_manual,PMID_29807150,DODAP-LNP,84.3,2.4,0.234,mouse serum,label-free quantification,Apolipoprotein B; Coagulation factor XII; Fetuin-A; Prothrombin,114,high,False,False
+GS_019,gold_standard_manual,PMID_28497562,DOTAP-LNP,83.2,-20.2,0.132,rat plasma,SILAC,ApoA-IV; Fetuin-A; Apolipoprotein B; Transferrin; IgM; Prothrombin; Inter-alpha-trypsin inhibitor,63,high,False,False
+GS_020,gold_standard_manual,PMID_32345760,SM-102-LNP,83.7,-25.3,0.053,mouse serum,LC-MS/MS,Ceruloplasmin; Complement C3; Serotransferrin; Fibronectin,17,high,False,False
+GS_021,gold_standard_manual,PMID_32881713,MC3-LNP,135.2,-10.4,0.225,human serum,LC-MS/MS,Hemoglobin; IgG; Ceruloplasmin; Transferrin; Complement C3; IgA,43,high,False,False
+GS_022,gold_standard_manual,PMID_29556617,OF-02-LNP,164.2,-3.1,0.063,rat plasma,iTRAQ,Apolipoprotein B; Clusterin; Complement C4; Albumin; Inter-alpha-trypsin inhibitor; IgA; Transferrin,106,high,False,False

@@ -1,0 +1,17 @@
+feature,mean_abs_shap
+pKa,0.66307884
+PEG mol%,0.4226433
+CHL mol%,0.3889259
+Frac.sp3C,0.31321597
+N/P ratio,0.25031886
+HL mol%,0.16123712
+IL mol%,0.13324666
+Size (nm),0.07340271
+MW (IL),0.045186453
+PDI,0.040961377
+Cell Line,0.035224363
+Zeta (mV),0.032830548
+Ionizable Lipid,0.021577165
+N amines,0.019687677
+Helper Lipid,0.0144006815
+Cargo,0.01359192

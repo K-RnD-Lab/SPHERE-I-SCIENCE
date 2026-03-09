@@ -1,0 +1,21 @@
+protein,log2FC_tumor_vs_healthy,rf_importance,elisa_available,secreted,cancer_type
+SERPINH1,4.239,0.04247,True,True,Pan-cancer
+LDHA,3.882,0.0366,True,True,Pan-cancer
+CTHRC1,3.797,0.02943,True,True,Pan-cancer
+FN1,2.093,0.0284,True,True,Pan-cancer
+EGFR,4.173,0.02584,True,True,LUAD
+P4HA1,2.868,0.02375,False,False,Pan-cancer
+ABCA8,-3.25,0.02173,False,False,Pan-cancer (down)
+FHL2,4.476,0.02002,True,False,Pan-cancer
+PCNA,2.95,0.01887,False,False,Pan-cancer
+COL1A1,1.565,0.01721,False,True,Pan-cancer
+HIF1A,1.899,0.01493,True,False,Pan-cancer
+MUC16,3.668,0.01254,True,True,BRCA
+VEGFA,1.863,0.0122,True,True,Pan-cancer
+MMP9,2.318,0.01134,True,True,Pan-cancer
+VIM,3.902,0.00953,True,True,Pan-cancer
+CA19-9,3.526,0.0089,True,True,PDAC
+CDH1,-1.685,0.00718,True,True,BRCA (down)
+SMAD4,-1.389,0.00711,False,False,PDAC (down)
+KRAS,1.439,0.00636,False,False,PDAC
+TP53,1.725,0.005,True,False,Pan-cancer

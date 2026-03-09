@@ -1,0 +1,24 @@
+# reference = row IDs only; no real papers used
+LNP_ID,lipid_type,pKa,logP,TPSA,MW,PEG_mol_pct,zeta_mV,CHL_mol_pct,ApoE_pct,reference,DATA_NOTE
+LNP-I01,Ionizable,6.35,3.1,87,620,2.0,-2.1,38.5,28.4,SIMULATED_ROW_01,SIMULATED — based on literature-reported ranges; not real experimental measurements
+LNP-I02,Ionizable,6.52,2.9,91,598,1.8,-3.4,40.0,31.2,SIMULATED_ROW_02,SIMULATED — based on literature-reported ranges; not real experimental measurements
+LNP-I03,Ionizable,6.44,3.3,84,635,2.2,1.2,37.0,26.8,SIMULATED_ROW_03,SIMULATED — based on literature-reported ranges; not real experimental measurements
+LNP-I04,Ionizable,6.71,2.7,94,612,2.5,-4.8,42.0,22.1,SIMULATED_ROW_04,SIMULATED — based on literature-reported ranges; not real experimental measurements
+LNP-I05,Ionizable,6.28,3.5,79,648,1.5,3.1,36.0,24.5,SIMULATED_ROW_05,SIMULATED — based on literature-reported ranges; not real experimental measurements
+LNP-I06,Ionizable,6.6,3.0,89,605,2.1,-1.8,39.5,29.7,SIMULATED_ROW_06,SIMULATED — based on literature-reported ranges; not real experimental measurements
+LNP-I07,Ionizable,5.9,3.8,72,660,1.2,6.5,34.0,14.3,SIMULATED_ROW_07,SIMULATED — based on literature-reported ranges; not real experimental measurements
+LNP-I08,Ionizable,7.1,2.5,98,590,2.8,-6.2,43.0,17.8,SIMULATED_ROW_08,SIMULATED — based on literature-reported ranges; not real experimental measurements
+LNP-I09,Ionizable,6.48,3.2,86,625,2.0,-2.5,38.0,27.3,SIMULATED_ROW_09,SIMULATED — based on literature-reported ranges; not real experimental measurements
+LNP-C01,Cationic,8.5,4.2,55,700,1.0,18.5,30.0,8.2,SIMULATED_ROW_10,SIMULATED — based on literature-reported ranges; not real experimental measurements
+LNP-C02,Cationic,9.1,4.8,48,720,0.8,22.3,28.0,6.5,SIMULATED_ROW_11,SIMULATED — based on literature-reported ranges; not real experimental measurements
+LNP-C03,Cationic,8.8,4.5,52,710,1.2,15.7,32.0,9.8,SIMULATED_ROW_12,SIMULATED — based on literature-reported ranges; not real experimental measurements
+LNP-C04,Cationic,8.2,3.9,60,695,1.5,12.4,33.0,11.4,SIMULATED_ROW_13,SIMULATED — based on literature-reported ranges; not real experimental measurements
+LNP-C05,Cationic,9.3,5.1,44,735,0.5,28.1,25.0,5.1,SIMULATED_ROW_14,SIMULATED — based on literature-reported ranges; not real experimental measurements
+LNP-N01,Neutral,7.4,2.2,105,580,3.0,-8.5,45.0,15.2,SIMULATED_ROW_15,SIMULATED — based on literature-reported ranges; not real experimental measurements
+LNP-N02,Neutral,7.6,2.0,110,565,3.5,-9.1,47.0,12.8,SIMULATED_ROW_16,SIMULATED — based on literature-reported ranges; not real experimental measurements
+LNP-N03,Neutral,7.2,2.5,100,595,2.8,-7.2,44.0,16.5,SIMULATED_ROW_17,SIMULATED — based on literature-reported ranges; not real experimental measurements
+LNP-N04,Neutral,7.8,1.8,115,550,4.0,-11.3,48.0,10.1,SIMULATED_ROW_18,SIMULATED — based on literature-reported ranges; not real experimental measurements
+LNP-N05,Neutral,7.5,2.1,108,572,3.2,-8.8,46.0,13.4,SIMULATED_ROW_19,SIMULATED — based on literature-reported ranges; not real experimental measurements
+LNP-A01,Anionic,4.2,1.5,130,520,5.0,-22.4,50.0,4.8,SIMULATED_ROW_20,SIMULATED — based on literature-reported ranges; not real experimental measurements
+LNP-A02,Anionic,3.8,1.2,140,505,5.5,-28.7,52.0,3.2,SIMULATED_ROW_21,SIMULATED — based on literature-reported ranges; not real experimental measurements
+LNP-A03,Anionic,4.5,1.8,125,535,4.5,-18.9,48.0,5.9,SIMULATED_ROW_22,SIMULATED — based on literature-reported ranges; not real experimental measurements

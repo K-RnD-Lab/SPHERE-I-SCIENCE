@@ -1,0 +1,17 @@
+feature_name,type,encoding,units,description
+CHL_mol_pct,numeric,raw,mol%,Cholesterol molar fraction
+HL_mol_pct,numeric,raw,mol%,Helper lipid molar fraction
+PEG_mol_pct,numeric,raw,mol%,PEGylated lipid molar fraction
+IL_mol_pct,numeric,raw,mol%,Ionizable lipid molar fraction
+Frac_sp3C,numeric,raw,0–1,Fraction of sp3 carbons in ionizable lipid head group
+pKa,numeric,raw,pH,Apparent pKa of ionizable lipid
+MW_IL,numeric,raw,Da,Molecular weight of ionizable lipid
+n_amines,numeric,raw,count,Number of ionizable amine groups
+NP_ratio,numeric,raw,ratio,Nitrogen-to-phosphate ratio
+size_nm,numeric,raw,nm,Particle size by DLS
+zeta_mV,numeric,raw,mV,Zeta potential
+PDI,numeric,raw,0–1,Polydispersity index
+ionizable_lipid,categorical,label_encoded (0–14),—,"Ionizable lipid identity (15 types: MC3, DLin-MC3-DMA, C12-200, SM-102, ALC-0315, …)"
+helper_lipid,categorical,label_encoded (0–4),—,"Helper lipid identity (5 types: DSPC, DOPE, DPPC, DOPC, DSPE)"
+cell_line,categorical,label_encoded (0–7),—,"Cell line (8 types: HeLa, HEK293, A549, Huh7, RAW264.7, Jurkat, MCF7, PC3)"
+cargo_type,categorical,label_encoded (0–3),—,"Nucleic acid cargo (4 types: mRNA, siRNA, pDNA, ASO)"

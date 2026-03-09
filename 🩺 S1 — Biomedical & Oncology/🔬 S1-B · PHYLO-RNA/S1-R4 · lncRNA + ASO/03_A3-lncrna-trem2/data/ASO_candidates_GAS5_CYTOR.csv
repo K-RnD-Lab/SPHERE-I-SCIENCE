@@ -1,0 +1,3 @@
+Gene,Accession,Transcript_len,ASO_position,ASO_length,Target_RNA_seq,ASO_DNA_seq,GC_content_pct,Tm_C,Window_seq,Window_structure,Window_MFE,ASO_region_struct,Accessibility_pct
+GAS5,NR_186289.1,846,119,20,CUGGGGAGAGGGGAACUGGC,GCCTGTTCCCCTCTCCCCTG,70.0,60.0,GUCGGCACUGGAGGGGAAGCCUGGGGAGAGGGGAACUGGCUAAAGGGCAAAAUGUCACUG,..........((.(....((((..((..((.....))..))...))))....).))....,-9.4,((..((..((.....))..),55.0
+CYTOR,NR_024205.3,677,507,20,GGCCUGGUUCCAACCGCCCA,TGGGCGGTTGGTTCCTGGCC,70.0,60.0,GCAGCUGAAAGAUUCCCUGGGGCCUGGUUCCAACCGCCCACUGUGGACUCUGAGGCCUCU,...(((...(((.((((.(((((..(((....))))))).).).))).)))..)))....,-18.9,(((..(((....))))))).,35.0
