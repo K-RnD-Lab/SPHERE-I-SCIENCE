@@ -54,6 +54,7 @@ S1-E · PHYLO-BIOMARKERS   — Detect without biopsy
 > R-codes follow the global research roadmap (`docs/research-roadmap-v2.md`).
 > R9 is classified under PHYLO-BIOMARKERS (not LNP) because it uses protein expression,
 > not nanoparticle corona data.
+> github.com/K-RnD-Lab/.github/blob/main/profile/docs/research-roadmap-v2.md
 
 ---
 
