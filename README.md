@@ -52,7 +52,7 @@ Each experiment gets a code **R{n}{letter}** scoped to its PHYLO track:
 ### 🧬 S1-A · PHYLO-GENOMICS
 *What breaks in DNA?*
 
-| Code &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Study &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Direction | Key Finding | Status |
+| Code &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Study &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Direction | Key Finding | Status |
 |------|-------|-----------|-------------|--------|
 | S1-A · **R1a** | [OpenVariant ⭐](<S1 — 🩺 Biomedical & Oncology/🧬 S1-A · PHYLO-GENOMICS/R1 · Variant classification/R1a-openvariant/>) | R1 · Variant classification | AUC=0.939 on ClinVar 2026, matches AlphaMissense without deep learning | ✅ |
 | S1-A · R1b | [Somatic Classifier](<S1 — 🩺 Biomedical & Oncology/🧬 S1-A · PHYLO-GENOMICS/R1 · Variant classification/R1b-somatic-classifier/>) | R1 · Variant classification | BRCA · LUAD somatic mutation panels — same direction, broader scope | 🔶 |
