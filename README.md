@@ -60,7 +60,7 @@ Each experiment gets a code **R{n}{letter}** scoped to its PHYLO track:
 ### 🔬 S1-B · PHYLO-RNA
 *How to silence it via RNA?*
 
-| Code &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Study &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Direction | Key Finding | Status |
+| Code &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Study &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Direction | Key Finding | Status |
 |------|-------|-----------|-------------|--------|
 | S1-B · **R1a** | [BRCA2 miRNA](<S1 — 🩺 Biomedical & Oncology/🔬 S1-B · PHYLO-RNA/R1 · miRNA silencing/R1a-brca2-mirna/>) | R1 · miRNA silencing | hsa-miR-148a-3p top silenced miRNA in BRCA2-mut breast cancer | ✅ |
 | S1-B · **R2a** | [TP53 siRNA](<S1 — 🩺 Biomedical & Oncology/🔬 S1-B · PHYLO-RNA/R2 · siRNA SL/R2a-tp53-sirna/>) | R2 · siRNA SL | SPC24, BUB1B, CDC45 — novel synthetic-lethal targets, no existing drugs | ✅ |
@@ -70,7 +70,7 @@ Each experiment gets a code **R{n}{letter}** scoped to its PHYLO track:
 ### 💊 S1-C · PHYLO-DRUG
 *Which molecule treats it?*
 
-| Code &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Study &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Direction | Key Finding | Status |
+| Code &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Study &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Direction | Key Finding | Status |
 |------|-------|-----------|-------------|--------|
 | S1-C · **R1a** | [FGFR3 RNA Drug](<S1 — 🩺 Biomedical & Oncology/💊 S1-C · PHYLO-DRUG/R1 · RNA-directed drug/R1a-fgfr3-rna-drug/>) | R1 · RNA-directed drug | CHEMBL1575701 lead, RNA-score 0.793, near-zero toxicity | ✅ |
 | S1-C · R1b | [SL Drug Mapping](<S1 — 🩺 Biomedical & Oncology/💊 S1-C · PHYLO-DRUG/R1 · RNA-directed drug/R1b-sl-drug-mapping/>) | R1 · RNA-directed drug | Synthetic lethal drug mapping — pan-cancer extension of R1a | 🔶 |
@@ -79,7 +79,7 @@ Each experiment gets a code **R{n}{letter}** scoped to its PHYLO track:
 ### 🧪 S1-D · PHYLO-LNP
 *How to deliver the drug?*
 
-| Code &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Study &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Direction | Key Finding | Status |
+| Code &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Study &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Direction | Key Finding | Status |
 |------|-------|-----------|-------------|--------|
 | S1-D · **R1a** | [LNP Corona ML](<S1 — 🩺 Biomedical & Oncology/🧪 S1-D · PHYLO-LNP/R1 · Serum corona/R1a-lnp-corona-ml/>) | R1 · Serum corona | CHL/HL/PEG molar ratios dominate corona efficacy (AUC=0.791) | ✅ |
 | S1-D · **R2a** | [Flow Corona](<S1 — 🩺 Biomedical & Oncology/🧪 S1-D · PHYLO-LNP/R2 · Flow corona/R2a-flow-corona/>) | R2 · Flow dynamics | Blood flow accelerates albumin→ApoE exchange 3–4× vs static (Vroman) | ✅ |
@@ -90,7 +90,7 @@ Each experiment gets a code **R{n}{letter}** scoped to its PHYLO track:
 ### 🩸 S1-E · PHYLO-BIOMARKERS
 *How to detect it without biopsy?*
 
-| Code &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Study &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Direction | Key Finding | Status |
+| Code &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Study &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Direction | Key Finding | Status |
 |------|-------|-----------|-------------|--------|
 | S1-E · **R1a** | [Liquid Biopsy](<S1 — 🩺 Biomedical & Oncology/🩸 S1-E · PHYLO-BIOMARKERS/R1 · Liquid biopsy/R1a-liquid-biopsy/>) | R1 · Liquid biopsy | CTHRC1+FHL2+LDHA separates cancer vs healthy (AUC=0.992*) | ✅ |
 | S1-E · R1b | [Protein Validator](<S1 — 🩺 Biomedical & Oncology/🩸 S1-E · PHYLO-BIOMARKERS/R1 · Liquid biopsy/R1b-protein-validator/>) | R1 · Liquid biopsy | Multi-cancer plasma proteomics validation — same direction, validation step | 🔶 |
@@ -98,7 +98,7 @@ Each experiment gets a code **R{n}{letter}** scoped to its PHYLO track:
 ### 🧠 S1-F · PHYLO-RARE
 *Where almost nobody has looked yet (<300 cases/yr · <5% survival)*
 
-| Code &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Study &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Direction | Key Finding | Status |
+| Code &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Study &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Direction | Key Finding | Status |
 |------|-------|-----------|-------------|--------|
 | S1-F · R1a | [DIPG Toolkit](<S1 — 🩺 Biomedical & Oncology/☠️ S1-F · PHYLO-RARE/R1 · DIPG/R1a-dipg/>) | R1 · DIPG | H3K27M (78%) + CSF LNP corona — 0 prior LNP studies · PBTA/GSE126319 | 🔶 |
 | S1-F · R2a | [UVM Toolkit](<S1 — 🩺 Biomedical & Oncology/☠️ S1-F · PHYLO-RARE/R2 · UVM/R2a-uvm/>) | R2 · UVM | GNAQ/GNA11 (78%) + vitreous corona + m6A · TCGA-UVM n=80 | 🔶 |
