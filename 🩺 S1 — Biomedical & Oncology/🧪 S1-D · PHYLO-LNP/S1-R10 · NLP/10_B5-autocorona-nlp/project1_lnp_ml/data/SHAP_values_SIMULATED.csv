@@ -1,0 +1,16 @@
+feature,mean_abs_shap
+CHL mol%,0.194
+HL mol%,0.134
+Frac.sp3C,0.119
+PEG mol%,0.118
+IL mol%,0.098
+pKa head,0.087
+MW (g/mol),0.075
+LogP,0.068
+Encap. Eff. (%),0.061
+Size (nm),0.055
+PDI,0.048
+TPSA,0.042
+Zeta (mV),0.038
+RotBonds,0.031
+HBA,0.027

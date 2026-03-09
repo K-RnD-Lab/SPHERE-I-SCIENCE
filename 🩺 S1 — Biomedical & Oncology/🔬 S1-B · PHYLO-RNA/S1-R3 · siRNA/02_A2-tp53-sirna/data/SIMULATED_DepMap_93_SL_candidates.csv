@@ -1,0 +1,94 @@
+gene,dCERES,log2FC,drug_status,ceres_selectivity,pvalue,padj,venn_category
+SPC24,-0.175,1.13,Novel,0.74,0.0008,0.0248,Triple (SL + HighExpr + NoDrug)
+BUB1B,-0.119,1.12,Novel,0.71,0.0021,0.0391,Triple (SL + HighExpr + NoDrug)
+CDC45,-0.144,1.26,Novel,0.76,0.0012,0.0279,Triple (SL + HighExpr + NoDrug)
+PLK1,-0.239,1.03,Clinical,0.82,0.0001,0.0093,SL + HighExpr
+CDK1,-0.201,1.0,Clinical,0.8,0.0003,0.0139,SL + HighExpr
+AURKB,0.034,0.086,Preclinical,0.589,0.0623,0.1448,Unclassified (none of three criteria)
+CENPE,-0.098,0.069,Preclinical,0.613,0.0198,0.0979,Unclassified (none of three criteria)
+KIF11,-0.166,0.589,Novel,0.5,0.0051,0.0593,SL + NoDrug
+BIRC5,-0.175,0.758,Novel,0.519,0.0938,0.1448,SL + NoDrug
+TTK,-0.155,0.622,Novel,0.781,0.1212,0.1448,SL + NoDrug
+CHEK1,-0.028,0.399,Clinical,0.684,0.1265,0.1448,Unclassified (none of three criteria)
+WEE1,-0.146,0.559,Novel,0.585,0.0729,0.1448,SL + NoDrug
+PKMYT1,-0.128,0.556,Clinical,0.771,0.1168,0.1448,SL only
+CDC20,-0.099,0.576,Preclinical,0.549,0.1013,0.1448,Unclassified (none of three criteria)
+MAD2L1,0.027,0.026,Novel,0.84,0.1089,0.1448,NoDrug only
+BUB3,-0.169,0.579,Novel,0.588,0.0744,0.1448,SL + NoDrug
+ZWINT,-0.219,0.324,Novel,0.585,0.0954,0.1448,SL + NoDrug
+NDC80,-0.204,0.916,Novel,0.575,0.121,0.1448,SL + NoDrug
+NUF2,0.024,0.553,Novel,0.499,0.0603,0.1448,NoDrug only
+SPC25,-0.045,0.834,Novel,0.494,0.1211,0.1448,NoDrug only
+MIS12,-0.146,0.379,Preclinical,0.709,0.0892,0.1448,SL only
+CENPH,-0.172,0.394,Novel,0.8,0.0257,0.1039,SL + NoDrug
+CENPN,-0.141,1.098,Novel,0.766,0.0047,0.0593,Triple (SL + HighExpr + NoDrug)
+INCENP,-0.189,0.675,Preclinical,0.506,0.0551,0.1448,SL only
+CDCA8,0.034,0.214,Clinical,0.668,0.0825,0.1448,Unclassified (none of three criteria)
+HASPIN,-0.008,0.859,Novel,0.492,0.1261,0.1448,NoDrug only
+SGOL1,-0.095,0.287,Clinical,0.468,0.02,0.0979,Unclassified (none of three criteria)
+SGOL2,0.014,0.59,Novel,0.713,0.1202,0.1448,NoDrug only
+ESPL1,-0.153,1.235,Unverified [SIMULATED],0.664,0.1296,0.1448,SL + HighExpr
+PTTG1,-0.026,-0.073,Clinical,0.483,0.0235,0.0993,Unclassified (none of three criteria)
+CCNB1,0.011,0.43,Clinical,0.464,0.1279,0.1448,Unclassified (none of three criteria)
+CCNB2,-0.124,0.663,Novel,0.846,0.1487,0.1492,SL + NoDrug
+CDC25C,-0.015,0.806,Preclinical,0.462,0.1093,0.1448,Unclassified (none of three criteria)
+CHEK2,-0.14,0.004,Novel,0.628,0.1179,0.1448,SL + NoDrug
+ATR,-0.139,-0.114,Novel,0.652,0.1492,0.1492,SL + NoDrug
+ATM,-0.191,0.936,Novel,0.497,0.0912,0.1448,SL + NoDrug
+BRCA1,-0.101,0.212,Novel,0.518,0.0469,0.1395,SL + NoDrug
+BRCA2,-0.023,0.195,Novel,0.591,0.1258,0.1448,NoDrug only
+RAD51,0.034,1.12,Preclinical,0.755,0.0926,0.1448,HighExpr only
+FANCD2,-0.057,0.528,Preclinical,0.653,0.0876,0.1448,Unclassified (none of three criteria)
+FANCL,0.013,0.53,Novel,0.705,0.0388,0.1395,NoDrug only
+PALB2,0.002,0.428,Novel,0.844,0.1137,0.1448,NoDrug only
+BARD1,-0.173,0.01,Novel,0.757,0.0132,0.0976,SL + NoDrug
+RPA1,-0.089,0.77,Novel,0.624,0.1387,0.1449,NoDrug only
+RPA2,-0.188,0.664,Novel,0.629,0.0495,0.1395,SL + NoDrug
+PCNA,-0.036,0.567,Preclinical,0.698,0.02,0.0979,Unclassified (none of three criteria)
+RFC1,0.036,0.453,Novel,0.716,0.0669,0.1448,NoDrug only
+RFC2,-0.183,0.383,Novel,0.65,0.0073,0.0754,SL + NoDrug
+RFC3,-0.022,0.865,Novel,0.708,0.103,0.1448,NoDrug only
+RFC4,-0.049,0.443,Preclinical,0.459,0.1355,0.1448,Unclassified (none of three criteria)
+RFC5,-0.062,0.474,Clinical,0.622,0.1258,0.1448,Unclassified (none of three criteria)
+LIG1,-0.115,0.712,Preclinical,0.562,0.02,0.0979,SL only
+FEN1,-0.124,0.583,Clinical,0.502,0.0198,0.0979,SL only
+POLD1,-0.208,1.157,Novel,0.49,0.1222,0.1448,Triple (SL + HighExpr + NoDrug)
+POLD2,-0.161,-0.205,Novel,0.691,0.1387,0.1449,SL + NoDrug
+POLE,-0.216,0.62,Clinical,0.659,0.0696,0.1448,SL only
+POLE2,-0.063,0.218,Novel,0.551,0.0753,0.1448,NoDrug only
+MCM2,-0.191,0.123,Clinical,0.638,0.0484,0.1395,SL only
+MCM3,0.016,0.317,Novel,0.647,0.1342,0.1448,NoDrug only
+MCM4,-0.079,0.522,Novel,0.528,0.0971,0.1448,NoDrug only
+MCM5,-0.031,0.54,Novel,0.711,0.0439,0.1395,NoDrug only
+MCM6,-0.109,-0.107,Clinical,0.762,0.0455,0.1395,SL only
+MCM7,-0.069,0.284,Clinical,0.767,0.1338,0.1448,Unclassified (none of three criteria)
+ORC1,0.035,0.612,Novel,0.691,0.003,0.0465,NoDrug only
+ORC2,-0.198,0.149,Novel,0.655,0.0491,0.1395,SL + NoDrug
+ORC3,-0.151,0.054,Novel,0.474,0.0836,0.1448,SL + NoDrug
+ORC4,-0.009,-0.402,Novel,0.565,0.0231,0.0993,NoDrug only
+ORC5,-0.193,0.235,Novel,0.487,0.0147,0.0976,SL + NoDrug
+ORC6,-0.2,0.04,Novel,0.836,0.1225,0.1448,SL + NoDrug
+CDT1,-0.122,0.106,Novel,0.504,0.1343,0.1448,SL + NoDrug
+CDC6,-0.195,0.391,Novel,0.511,0.1237,0.1448,SL + NoDrug
+GINS1,-0.062,0.26,Novel,0.806,0.1349,0.1448,NoDrug only
+GINS2,-0.159,0.034,Novel,0.828,0.0834,0.1448,SL + NoDrug
+GINS3,0.022,-0.346,Novel,0.756,0.122,0.1448,NoDrug only
+GINS4,-0.008,0.621,Novel,0.452,0.0582,0.1448,NoDrug only
+TOPBP1,-0.031,0.801,Novel,0.451,0.1003,0.1448,NoDrug only
+CLASPIN,-0.053,0.341,Clinical,0.601,0.1483,0.1492,Unclassified (none of three criteria)
+TIPIN,0.013,0.394,Novel,0.507,0.0346,0.1341,NoDrug only
+TIMELESS,-0.16,0.501,Novel,0.457,0.0591,0.1448,SL + NoDrug
+AND1,0.016,1.132,Novel,0.636,0.0725,0.1448,HighExpr + NoDrug
+RECQL4,-0.007,-0.127,Clinical,0.827,0.0216,0.0993,Unclassified (none of three criteria)
+HELQ,-0.018,0.334,Preclinical,0.58,0.0131,0.0976,Unclassified (none of three criteria)
+FANCM,-0.068,-0.189,Clinical,0.714,0.1246,0.1448,Unclassified (none of three criteria)
+FANCA,-0.154,0.645,Clinical,0.711,0.1465,0.1492,SL only
+FANCB,-0.106,0.442,Novel,0.55,0.0613,0.1448,SL + NoDrug
+FANCC,-0.006,0.581,Clinical,0.71,0.0141,0.0976,Unclassified (none of three criteria)
+FANCE,-0.211,0.561,Clinical,0.535,0.0108,0.0976,SL only
+FANCF,-0.009,0.896,Novel,0.499,0.1338,0.1448,NoDrug only
+FANCG,-0.155,0.715,Novel,0.731,0.0701,0.1448,SL + NoDrug
+FANCI,-0.181,0.832,Novel,0.495,0.0487,0.1395,SL + NoDrug
+FANCJ,-0.189,0.074,Preclinical,0.849,0.072,0.1448,SL only
+FANCN,-0.213,0.977,Novel,0.523,0.0484,0.1395,SL + NoDrug
+FANCO,-0.079,0.211,Clinical,0.688,0.0739,0.1448,Unclassified (none of three criteria)

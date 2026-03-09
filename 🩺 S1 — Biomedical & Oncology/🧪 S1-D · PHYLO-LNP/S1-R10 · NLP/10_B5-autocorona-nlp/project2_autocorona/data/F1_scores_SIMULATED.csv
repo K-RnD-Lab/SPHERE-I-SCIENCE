@@ -1,0 +1,7 @@
+field,F1,precision,recall,N_benchmark,failure_reason,failure_category
+size_nm,0.0,0.0,0.0,7,data_in_figures_supplementary,red
+zeta_mv,0.0,0.0,0.0,7,data_in_figures_supplementary,red
+PDI,0.14,0.2,0.11,7,partially_in_methods,orange
+corona_proteins,0.19,0.22,0.17,7,dictionary_ceiling_30_proteins,orange
+protein_source,0.71,0.75,0.68,7,well_extracted,green
+experiment_type,0.57,0.62,0.53,7,terminology_variation,orange

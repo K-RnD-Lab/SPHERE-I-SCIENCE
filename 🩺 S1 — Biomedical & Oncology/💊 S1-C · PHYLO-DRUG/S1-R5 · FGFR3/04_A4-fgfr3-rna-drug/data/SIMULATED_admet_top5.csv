@@ -1,0 +1,6 @@
+chembl_id,label,MW,LogP,HBD,HBA,PSA,RTB,Ro5_viol,QED,oral_bioavail_pct,hERG_risk,hepatotox_risk,RNA_bind_score,identity_note
+CHEMBL1575701,"Benzo[g]pteridine-2,4-dione",288.22,-0.04,3,7,160.66,1,0,0.24,62,0.05,0.04,0.793,"PubChem CID 16195593; IUPAC: 8-amino-7-methyl-9-nitro-1H-benzo[g]pteridine-2,4-dione; no established RNA-binding activity in literature"
+CHEMBL15727,Thionin Ac. (dye),228.3,2.9,2,3,64.93,0,0,0.35,71,0.08,0.06,0.789,"3,7-Diamino-5-phenothiazinium acetate; synthetic histological dye (CAS 78338-22-4); MW_salt=287.34 Da; NOT a plant peptide — previous caveat was incorrect. No established FGFR3 mRNA binding activity."
+CHEMBL4297528,Risdiplam,401.47,1.96,1,8,79.83,2,0,0.55,78,0.12,0.07,0.771,
+CHEMBL4290141,Branaplam,393.49,3.93,3,6,95.95,4,0,0.62,74,0.14,0.09,0.764,
+CHEMBL126,Linezolid,337.35,1.12,1,5,71.11,4,0,0.89,80,0.1,0.05,0.758,

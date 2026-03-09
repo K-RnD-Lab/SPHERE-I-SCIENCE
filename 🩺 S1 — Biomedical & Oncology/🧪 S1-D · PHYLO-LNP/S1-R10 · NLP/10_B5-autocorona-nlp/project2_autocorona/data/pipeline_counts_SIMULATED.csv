@@ -1,0 +1,7 @@
+step,count,description
+PMC Retrieval,100,100 open-access papers retrieved
+XML Parse,87,87 papers successfully parsed
+Regex+Dict Extract,43,43 total entries extracted
+Schema Validation,36,36 entries pass schema validation
+Confidence Scoring,21,21 new entries scored
+DB Export,21,21 new entries exported to DB
