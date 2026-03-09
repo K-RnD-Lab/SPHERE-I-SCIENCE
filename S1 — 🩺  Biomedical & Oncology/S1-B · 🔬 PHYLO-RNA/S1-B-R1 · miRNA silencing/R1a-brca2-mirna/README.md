@@ -1,7 +1,7 @@
 # Identification of Tumor Suppressor miRNAs Silenced in BRCA2-Mutant Breast Cancer: A Multi-Dataset Meta-Analysis
 
 > Part of [K R&D Lab](https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026)
-> **Oksana Kolisnyk** · ML Engineer @ FAZENA
+> **Oksana Kolisnyk** · ML Engineer @ KOSATIKS GROUP
 
 ## 🔬 Key Finding
 > hsa-miR-148a-3p is the top downregulated miRNA in BRCA2-mutant breast cancer (log2FC=−0.70, padj=0.013), targeting DNMT1 and AKT2, suggesting epigenetic reprogramming as a therapeutic axis.
@@ -79,7 +79,7 @@ jupyter notebook execution_trace.ipynb
   author    = {Kolisnyk, Oksana},
   year      = {2026},
   month     = {March},
-  note      = {K R\&D Lab, FAZENA. SIMULATED DATA — for methodological
+  note      = {K R\&D Lab, KOSATIKS GROUP. SIMULATED DATA — for methodological
                demonstration only. GitHub: https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026},
   url       = {https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026}
 }

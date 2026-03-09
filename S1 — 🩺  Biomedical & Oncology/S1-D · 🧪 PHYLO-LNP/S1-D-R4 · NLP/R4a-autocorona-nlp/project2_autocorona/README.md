@@ -90,6 +90,6 @@ python evaluate_extraction.py \
   author  = {Kolisnyk, Oksana},
   year    = {2026},
   url     = {https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026},
-  note    = {K R\&D Lab, FAZENA. ORCID: 0009-0003-5780-2290}
+  note    = {K R\&D Lab, KOSATIKS GROUP. ORCID: 0009-0003-5780-2290}
 }
 ```
