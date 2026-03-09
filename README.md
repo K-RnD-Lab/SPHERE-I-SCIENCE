@@ -60,8 +60,8 @@ S1-E · PHYLO-BIOMARKERS   — Detect without biopsy
 
 ## 🔬 Research Projects
 
-| # | Folder | Key Finding | PHYLO track | Status |
-|---|--------|-------------|-------------&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--------|
+| # | Folder | Key Finding | PHYLO track &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Status |
+|---|--------|-------------|-------------|--------|
 | A1 | [BRCA2 miRNA](01_A1-brca2-mirna/) | hsa-miR-148a-3p top silenced miRNA in BRCA2-mut breast cancer | S1-B · RNA | ✅ |
 | A2 | [TP53 siRNA](02_A2-tp53-sirna/) | SPC24, BUB1B, CDC45 — novel SL targets, no existing drugs | S1-B · RNA | ✅ |
 | A3 | [lncRNA-TREM2](03_A3-lncrna-trem2/) | CYTOR→miR-138-5p→AKT1 axis controls TREM2 neuroinflammation | S1-B · RNA | ✅ |
