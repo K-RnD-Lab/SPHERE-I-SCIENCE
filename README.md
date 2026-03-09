@@ -29,11 +29,11 @@ Each experiment gets a code **R{n}{letter}** scoped to its PHYLO track:
 - Single studies still get letter `a` — so future `b` can be added without renaming
 
 ```
-S1-A · R1a  ← track A, direction 1, experiment a
-S1-B · R1a  ← track B, direction 1, experiment a   (R1 is LOCAL to each track)
-S1-B · R2a  ← track B, direction 2, experiment a
-S1-D · R1a  ← track D, direction 1, experiment a
-S1-D · R5a  ← track D, direction 5, experiment a   (D has 5 different directions)
+🧬 S1-A · R1a  ← track A, direction 1, experiment a
+🔬 S1-B · R1a  ← track B, direction 1, experiment a   (R1 is LOCAL to each track)
+🔬 S1-B · R2a  ← track B, direction 2, experiment a
+🧪 S1-D · R1a  ← track D, direction 1, experiment a
+🧪 S1-D · R5a  ← track D, direction 5, experiment a   (D has 5 different directions)
 ```
 
 ```
