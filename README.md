@@ -79,7 +79,7 @@ Each experiment gets a code **R{n}{letter}** scoped to its PHYLO track:
 ### 🧪 S1-D · PHYLO-LNP
 *How to deliver the drug?*
 
-| Code &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Study &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Direction | Key Finding | Status |
+| Code &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Study &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Direction | Key Finding | Status |
 |------|-------|-----------|-------------|--------|
 | S1-D · **R1a** | [LNP Corona ML](<S1 — 🩺 Biomedical & Oncology/🧪 S1-D · PHYLO-LNP/R1 · Serum corona/R1a-lnp-corona-ml/>) | R1 · Serum corona | CHL/HL/PEG molar ratios dominate corona efficacy (AUC=0.791) | ✅ |
 | S1-D · **R2a** | [Flow Corona](<S1 — 🩺 Biomedical & Oncology/🧪 S1-D · PHYLO-LNP/R2 · Flow corona/R2a-flow-corona/>) | R2 · Flow dynamics | Blood flow accelerates albumin→ApoE exchange 3–4× vs static (Vroman) | ✅ |
