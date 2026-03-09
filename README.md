@@ -39,16 +39,16 @@ S1-E · PHYLO-BIOMARKERS   — Detect without biopsy
 
 | Folder | Sub-dir | PHYLO track | Research question |
 |--------|---------|-------------|-------------------|
-| [`05_A5-openvariant/`](05_A5-openvariant/) | S1-A · R1 | **PHYLO-GENOMICS** | Which DNA variants are pathogenic? |
-| [`01_A1-brca2-mirna/`](01_A1-brca2-mirna/) | S1-B · R2 | **PHYLO-RNA** | Which miRNAs silence BRCA2? |
-| [`02_A2-tp53-sirna/`](02_A2-tp53-sirna/) | S1-B · R3 | **PHYLO-RNA** | Which siRNA targets are SL with TP53-null? |
-| [`03_A3-lncrna-trem2/`](03_A3-lncrna-trem2/) | S1-B · R4 | **PHYLO-RNA** | How does lncRNA-TREM2 drive neuroinflammation? |
-| [`04_A4-fgfr3-rna-drug/`](04_A4-fgfr3-rna-drug/) | S1-C · R5 | **PHYLO-DRUG** | Which compounds bind the FGFR3 RNA structure? |
-| [`06_B1-lnp-corona-ml/`](06_B1-lnp-corona-ml/) | S1-D · R6 | **PHYLO-LNP** | What determines LNP protein corona in serum? |
-| [`08_B3-corona-flow-dynamics/`](08_B3-corona-flow-dynamics/) | S1-D · R7 | **PHYLO-LNP** | How does blood flow reshape the corona (Vroman)? |
-| [`09_B4-lnp-apoe-bbb/`](09_B4-lnp-apoe-bbb/) | S1-D · R8 | **PHYLO-LNP** | What LNP parameters maximize ApoE for BBB crossing? |
-| [`10_B5-autocorona-nlp/`](10_B5-autocorona-nlp/) | S1-D · R10 | **PHYLO-LNP** | Can NLP extract corona data from PMC abstracts? |
-| [`07_B2-corona-liquid-biopsy/`](07_B2-corona-liquid-biopsy/) | S1-E · R9 | **PHYLO-BIOMARKERS** | Can proteomics classify cancer vs healthy? |
+| [`05_A5-openvariant/`](<S1 — 🩺 Biomedical & Oncology/🧬 S1-A · PHYLO-GENOMICS/S1-R1 · OpenVariant/05_A5-openvariant/>) | S1-A · R1 | **PHYLO-GENOMICS** | Which DNA variants are pathogenic? | | S1-A · R1 | **PHYLO-GENOMICS** | Which DNA variants are pathogenic? |
+| [`01_A1-brca2-mirna/`](<S1 — 🩺  Biomedical & Oncology/🔬 S1-B · PHYLO-RNA/S1-R2 · miRNA/01_A1-brca2-mirna/>) | S1-B · R2 | **PHYLO-RNA** | Which miRNAs silence BRCA2? | | S1-B · R2 | **PHYLO-RNA** | Which miRNAs silence BRCA2? |
+| [`02_A2-tp53-sirna/`](<S1 — 🩺  Biomedical & Oncology/🔬 S1-B · PHYLO-RNA/S1-R3 · siRNA/02_A2-tp53-sirna/>) | S1-B · R3 | **PHYLO-RNA** | Which siRNA targets are SL with TP53-null? | | S1-B · R3 | **PHYLO-RNA** | Which siRNA targets are SL with TP53-null? |
+| [`03_A3-lncrna-trem2/`](<S1 — 🩺  Biomedical & Oncology/🔬 S1-B · PHYLO-RNA/S1-R4 · lncRNA + ASO/03_A3-lncrna-trem2/>) | S1-B · R4 | **PHYLO-RNA** | How does lncRNA-TREM2 drive neuroinflammation? | | S1-B · R4 | **PHYLO-RNA** | How does lncRNA-TREM2 drive neuroinflammation? |
+| [`04_A4-fgfr3-rna-drug/`](<S1 — 🩺 Biomedical & Oncology/💊 S1-C · PHYLO-DRUG/S1-R5 · FGFR3/04_A4-fgfr3-rna-drug/>) | S1-C · R5 | **PHYLO-DRUG** | Which compounds bind the FGFR3 RNA structure? | | S1-C · R5 | **PHYLO-DRUG** | Which compounds bind the FGFR3 RNA structure? |
+| [`06_B1-lnp-corona-ml/`](<S1 — 🩺  Biomedical & Oncology/🧪 S1-D · PHYLO-LNP/S1-R6 · Corona/06_B1-lnp-corona-ml/>) | S1-D · R6 | **PHYLO-LNP** | What determines LNP protein corona in serum? | | S1-D · R6 | **PHYLO-LNP** | What determines LNP protein corona in serum? |
+| [`08_B3-corona-flow-dynamics/`](<S1 — 🩺  Biomedical & Oncology/🧪 S1-D · PHYLO-LNP/S1-R7 · Flow/08_B3-corona-flow-dynamics/>) | S1-D · R7 | **PHYLO-LNP** | How does blood flow reshape the corona (Vroman)? | | S1-D · R7 | **PHYLO-LNP** | How does blood flow reshape the corona (Vroman)? |
+| [`09_B4-lnp-apoe-bbb/`](<S1 — 🩺  Biomedical & Oncology/🧪 S1-D · PHYLO-LNP/S1-R8 · Brain/09_B4-lnp-apoe-bbb/>) | S1-D · R8 | **PHYLO-LNP** | What LNP parameters maximize ApoE for BBB crossing? | | S1-D · R8 | **PHYLO-LNP** | What LNP parameters maximize ApoE for BBB crossing? |
+| [`10_B5-autocorona-nlp/`](<S1 — 🩺  Biomedical & Oncology/🧪 S1-D · PHYLO-LNP/S1-R10 · NLP/10_B5-autocorona-nlp/>) | S1-D · R10 | **PHYLO-LNP** | Can NLP extract corona data from PMC abstracts? | | S1-D · R10 | **PHYLO-LNP** | Can NLP extract corona data from PMC abstracts? |
+| [`07_B2-corona-liquid-biopsy/`](<S1 — 🩺  Biomedical & Oncology/🩸 S1-E · PHYLO-BIOMARKERS/S1-R9 · Liquid Biopsy/07_B2-corona-liquid-biopsy/>) | S1-E · R9 | **PHYLO-BIOMARKERS** | Can proteomics classify cancer vs healthy? | | S1-E · R9 | **PHYLO-BIOMARKERS** | Can proteomics classify cancer vs healthy? |
 
 > **Note on numbering:** B3=R7, B4=R8, B5=R10, B2=R9 — folder IDs follow creation order,
 > R-codes follow the global research roadmap (`docs/research-roadmap-v2.md`).
