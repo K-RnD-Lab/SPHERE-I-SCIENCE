@@ -42,7 +42,7 @@ S1-D · R5a  ← track D, direction 5, experiment a   (D has 5 different directi
 💊 S1-C · PHYLO-DRUG        — Which molecule treats it?
 🧪 S1-D · PHYLO-LNP         — How to deliver the drug?
 🩸 S1-E · PHYLO-BIOMARKERS  — How to detect it without biopsy?
-☠️ S1-F · PHYLO-RARE        — Where almost nobody has looked yet (<300 cases/yr)
+🧠 S1-F · PHYLO-RARE        — Where almost nobody has looked yet (<300 cases/yr)
 ```
 
 ---
@@ -95,7 +95,7 @@ S1-D · R5a  ← track D, direction 5, experiment a   (D has 5 different directi
 | S1-E · **R1a** | [Liquid Biopsy](<S1 — 🩺 Biomedical & Oncology/🩸 S1-E · PHYLO-BIOMARKERS/R1 · Liquid biopsy/R1a-liquid-biopsy/>) | R1 · Liquid biopsy | CTHRC1+FHL2+LDHA separates cancer vs healthy (AUC=0.992*) | ✅ |
 | S1-E · R1b | [Protein Validator](<S1 — 🩺 Biomedical & Oncology/🩸 S1-E · PHYLO-BIOMARKERS/R1 · Liquid biopsy/R1b-protein-validator/>) | R1 · Liquid biopsy | Multi-cancer plasma proteomics validation — same direction, validation step | 🔶 |
 
-### ☠️ S1-F · PHYLO-RARE
+### 🧠 S1-F · PHYLO-RARE
 *Where almost nobody has looked yet (<300 cases/yr · <5% survival)*
 
 | Code | Study | Direction | Key Finding | Status |
@@ -143,7 +143,7 @@ SPHERE-I-SCIENCE/
     │   └── R1 · Liquid biopsy/
     │       ├── R1a-liquid-biopsy/             ✅  AUC=0.992*
     │       └── R1b-protein-validator/         🔶
-    └── ☠️ S1-F · PHYLO-RARE/
+    └── 🧠 S1-F · PHYLO-RARE/
         ├── R1 · DIPG/  → R1a-dipg/            🔶  PBTA · GSE126319
         ├── R2 · UVM/   → R2a-uvm/             🔶  TCGA-UVM n=80
         └── R3 · pAML/  → R3a-paml/            🔶  TARGET-AML
