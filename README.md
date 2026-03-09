@@ -28,11 +28,12 @@ This repository implements **Science Sphere 1 (S1) — Biomedical**, structured
 across five research tracks (A–E). Each folder maps to a specific PHYLO sub-direction:
 
 ```
-S1-A · PHYLO-GENOMICS     — What breaks in DNA
-S1-B · PHYLO-RNA          — How to silence it via RNA
-S1-C · PHYLO-DRUG         — Which molecule treats it
-S1-D · PHYLO-LNP          — How to deliver the drug
-S1-E · PHYLO-BIOMARKERS   — Detect without biopsy
+🧬 S1-A · PHYLO-GENOMICS     — What breaks in DNA
+🔬 S1-B · PHYLO-RNA          — How to silence it via RNA
+💊 S1-C · PHYLO-DRUG         — Which molecule treats it
+🧪 S1-D · PHYLO-LNP          — How to deliver the drug
+🩸 S1-E · PHYLO-BIOMARKERS   — Detect without biopsy
+🧠 S1-F · PHYLO-RARE         — Where almost nobody has looked yet
 ```
 
 ### Folder → PHYLO track mapping
