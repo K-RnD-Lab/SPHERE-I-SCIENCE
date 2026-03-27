@@ -5,7 +5,7 @@
     googleSheet: 'https://docs.google.com/spreadsheets/d/1GcgjCJEPDAFtqOwONsfN_np5zdZFe3v2qa2lNzqDZd4/edit?gid=1089917585#gid=1089917585',
     lookerStudio: '',
     appsScript: 'https://script.google.com/macros/s/AKfycbzvd3zQ62mTJ6yLLCxhOG3rYRN2p8-KKCUCpbNbABOtm4BOZk1NX--L381uXmu71u2vug/exec',
-    liveDashboard: 'https://REPLACE_ME.vercel.app'
+    liveDashboard: ''
   },
   scoreTargets: {
     tznk: 80,
@@ -18,4 +18,5 @@
     it: ''
   }
 };
+
 

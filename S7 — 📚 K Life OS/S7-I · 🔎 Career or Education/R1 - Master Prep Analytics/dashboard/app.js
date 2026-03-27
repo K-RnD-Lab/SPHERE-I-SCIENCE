@@ -23,6 +23,10 @@ const el = {
   goalVsRealitySummary: document.getElementById('goal-vs-reality-summary'),
   efficiencyGrid: document.getElementById('efficiency-grid'),
   scoreGapGrid: document.getElementById('score-gap-grid'),
+  accuracyTargetChart: document.getElementById('accuracy-target-chart'),
+  studyMinutesChart: document.getElementById('study-minutes-chart'),
+  modeChart: document.getElementById('mode-chart'),
+  effortAccuracyChart: document.getElementById('effort-accuracy-chart'),
   tabs: Array.from(document.querySelectorAll('.tab')),
   tabPanels: Array.from(document.querySelectorAll('.tab-panel')),
 };
@@ -126,6 +130,7 @@ function render() {
   renderTrendChart(sessionRows);
   renderInsights(studyRows, sessionRows);
   renderBreakdowns(sessionRows, studyRows);
+  renderCharts(studyRows, sessionRows);
   renderEfficiency(studyRows, sessionRows);
   renderResources(resourceRows);
   renderSessions(sessionRows);
@@ -146,7 +151,7 @@ function renderLinks() {
 function renderLiveModeNote() {
   const endpoint = getDataEndpoint();
   if (state.sourceMode === 'remote_sheet') {
-    el.liveModeNote.innerHTML = '<strong>Live mode is active.</strong><span>The dashboard is reading the Google Sheet via Apps Script, so visitors see the latest published state.</span>';
+    el.liveModeNote.innerHTML = '<strong>Live mode is active.</strong><span>This same dashboard can be the public Vercel version once the folder is deployed and the Apps Script endpoint is public JSON.</span>';
     return;
   }
 
@@ -524,6 +529,107 @@ function goalRealityTitle(subject) {
   return labels[subject] || `${String(subject || '').toUpperCase()} performance path`;
 }
 
+function renderCharts(studyRows, sessionRows) {
+  renderAccuracyTargetChart(sessionRows);
+  renderStudyMinutesChart(studyRows);
+  renderModeChart(sessionRows);
+  renderEffortAccuracyChart(sessionRows);
+}
+
+function renderAccuracyTargetChart(sessionRows) {
+  const cards = getCurrentSubjectCards(sessionRows).filter((card) => state.subject === 'all' || card.subject === state.subject);
+  if (!cards.length) {
+    el.accuracyTargetChart.innerHTML = '<p class="empty">No subject score data yet.</p>';
+    return;
+  }
+
+  const maxValue = Math.max(100, ...cards.map((card) => Math.max(card.targetScore || 0, card.currentScoreValue || 0, card.actualScoreValue || 0)));
+  el.accuracyTargetChart.innerHTML = cards.map((card) => chartBarRow(card.subject.toUpperCase(), [
+    { label: 'Current', value: card.currentScoreValue, max: maxValue, tone: 'is-accent' },
+    { label: 'Target', value: card.targetScore, max: maxValue, tone: 'is-ghost' },
+    { label: 'Actual', value: card.actualScoreValue, max: maxValue, tone: 'is-good' },
+  ])).join('');
+}
+
+function renderStudyMinutesChart(studyRows) {
+  const rows = SUBJECTS.map((subject) => ({
+    subject,
+    minutes: sum(studyRows.filter((row) => normalizeSubject(row.subject) === subject).map((row) => toFiniteNumber(row.minutes))),
+  })).filter((row) => state.subject === 'all' || row.subject === state.subject);
+  const maxValue = Math.max(1, ...rows.map((row) => row.minutes));
+  if (!rows.some((row) => row.minutes > 0)) {
+    el.studyMinutesChart.innerHTML = '<p class="empty">No study-minute data yet.</p>';
+    return;
+  }
+
+  el.studyMinutesChart.innerHTML = rows.map((row) => chartBarRow(row.subject.toUpperCase(), [
+    { label: 'Minutes', value: row.minutes, max: maxValue, tone: 'is-accent' },
+  ])).join('');
+}
+
+function renderModeChart(sessionRows) {
+  const grouped = Object.entries(groupRows(sessionRows, (row) => cleanMode(row.mode) || 'unknown'));
+  const maxValue = Math.max(1, ...grouped.map((entry) => entry[1].length));
+  if (!grouped.length) {
+    el.modeChart.innerHTML = '<p class="empty">No mode data yet.</p>';
+    return;
+  }
+
+  el.modeChart.innerHTML = grouped.map(([mode, rows]) => chartBarRow(mode, [
+    { label: 'Sessions', value: rows.length, max: maxValue, tone: 'is-accent' },
+    { label: 'Accuracy', value: average(rows.map((row) => toFiniteNumber(row.accuracy_pct))), max: 100, tone: 'is-good' },
+  ])).join('');
+}
+
+function renderEffortAccuracyChart(sessionRows) {
+  const points = getCurrentSubjectCards(sessionRows).filter((card) => (state.subject === 'all' || card.subject === state.subject) && (card.studyMinutes > 0 || card.avgAccuracy > 0));
+  if (!points.length) {
+    el.effortAccuracyChart.innerHTML = '<p class="empty">Need both study and session data to see effort vs accuracy.</p>';
+    return;
+  }
+
+  const maxMinutes = Math.max(1, ...points.map((card) => card.studyMinutes));
+  const svgPoints = points.map((card) => {
+    const x = 50 + ((card.studyMinutes / maxMinutes) * 520);
+    const y = 220 - ((card.avgAccuracy / 100) * 170);
+    return `<g><circle cx="${round(x, 1)}" cy="${round(y, 1)}" r="8" fill="#70d6ff"></circle><text x="${round(x + 12, 1)}" y="${round(y + 4, 1)}" fill="#eff5ff" font-size="12">${escapeHtml(card.subject.toUpperCase())}</text></g>`;
+  }).join('');
+
+  el.effortAccuracyChart.innerHTML = `
+    <svg viewBox="0 0 620 260" role="img" aria-label="Effort versus accuracy by subject">
+      <line x1="40" y1="220" x2="590" y2="220" stroke="rgba(157,178,203,0.24)" stroke-width="1"></line>
+      <line x1="50" y1="30" x2="50" y2="230" stroke="rgba(157,178,203,0.24)" stroke-width="1"></line>
+      <text x="52" y="24" fill="#9db2cb" font-size="11">Accuracy</text>
+      <text x="500" y="246" fill="#9db2cb" font-size="11">Study minutes</text>
+      ${svgPoints}
+    </svg>
+    <div class="chart-caption"><span><strong>X:</strong> study minutes</span><span><strong>Y:</strong> average accuracy</span></div>`;
+}
+
+function chartBarRow(title, bars) {
+  const visibleBars = bars.filter((bar) => Number.isFinite(bar.value) && bar.value > 0);
+  if (!visibleBars.length) {
+    return `<article class="chart-stack-card"><div class="chart-stack-card__head"><strong>${escapeHtml(title)}</strong></div><p class="empty">No values yet.</p></article>`;
+  }
+
+  return `
+    <article class="chart-stack-card">
+      <div class="chart-stack-card__head">
+        <strong>${escapeHtml(title)}</strong>
+      </div>
+      <div class="chart-stack-card__bars">
+        ${visibleBars.map((bar) => {
+          const width = bar.max ? clamp((bar.value / bar.max) * 100, 0, 100) : 0;
+          return `
+            <div class="chart-bar-row">
+              <div class="chart-bar-row__meta"><span>${escapeHtml(bar.label)}</span><span>${escapeHtml(round(bar.value, 1))}</span></div>
+              <div class="chart-bar-row__track"><div class="chart-bar-row__fill ${escapeHtml(bar.tone)}" style="width:${width}%"></div></div>
+            </div>`;
+        }).join('')}
+      </div>
+    </article>`;
+}
+
 function cardLink(label, href, description) {
   if (!href || String(href).includes('REPLACE_ME')) return '';
   return `<a class="link-card" href="${escapeAttr(href)}" target="_blank" rel="noreferrer"><strong>${escapeHtml(label)}</strong><span>${escapeHtml(description)}</span></a>`;
@@ -752,6 +858,7 @@ function escapeHtml(value) {
 function escapeAttr(value) {
   return escapeHtml(value);
 }
+
 
 
 

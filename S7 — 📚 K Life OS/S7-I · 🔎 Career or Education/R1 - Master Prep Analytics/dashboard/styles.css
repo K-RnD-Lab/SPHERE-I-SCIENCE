@@ -235,3 +235,55 @@ th { color: var(--muted); font-weight: 700; }
   color: var(--muted);
   line-height: 1.5;
 }
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.chart-stack-card {
+  display: grid;
+  gap: 12px;
+  padding: 14px 0;
+}
+.chart-stack-card__head {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.chart-stack-card__bars {
+  display: grid;
+  gap: 10px;
+}
+.chart-bar-row {
+  display: grid;
+  gap: 6px;
+}
+.chart-bar-row__meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.chart-bar-row__track {
+  height: 12px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.08);
+}
+.chart-bar-row__fill {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+}
+.chart-bar-row__fill.is-good {
+  background: linear-gradient(90deg, var(--accent-3), var(--accent));
+}
+.chart-bar-row__fill.is-ghost {
+  background: linear-gradient(90deg, rgba(157,178,203,0.5), rgba(157,178,203,0.9));
+}
+@media (max-width: 1024px) {
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
