@@ -33,8 +33,8 @@
           <h2>Current focus and fallback imports</h2>
         </div>
         <p class="summary-copy">
-          The dashboard can read live Google Sheet data through Apps Script or local CSV snapshots
-          from this repository.
+          Live Google Sheet data is the main source. CSV uploads are only a manual fallback for snapshots,
+          recovery, or testing.
         </p>
       </div>
 
@@ -71,6 +71,7 @@
     <section class="tabbar" id="tabbar">
       <button class="tab is-active" data-tab="overview" type="button">Overview</button>
       <button class="tab" data-tab="subjects" type="button">Subjects</button>
+      <button class="tab" data-tab="charts" type="button">Charts</button>
       <button class="tab" data-tab="efficiency" type="button">Efficiency</button>
       <button class="tab" data-tab="sessions" type="button">Sessions</button>
     </section>
@@ -157,6 +158,50 @@
       </section>
     </section>
 
+    <section class="tab-panel" data-panel="charts">
+      <div class="charts-grid">
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Chart layer</p>
+              <h2>Accuracy vs target by subject</h2>
+            </div>
+          </div>
+          <div id="accuracy-target-chart" class="chart-card"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Chart layer</p>
+              <h2>Study minutes by subject</h2>
+            </div>
+          </div>
+          <div id="study-minutes-chart" class="chart-card"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Chart layer</p>
+              <h2>Sessions by mode</h2>
+            </div>
+          </div>
+          <div id="mode-chart" class="chart-card"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Chart layer</p>
+              <h2>Effort vs accuracy</h2>
+            </div>
+          </div>
+          <div id="effort-accuracy-chart" class="chart-card"></div>
+        </section>
+      </div>
+    </section>
+
     <section class="tab-panel" data-panel="efficiency">
       <div class="two-col-layout">
         <section class="panel">
@@ -197,4 +242,3 @@
   <script src="app.js"></script>
 </body>
 </html>
-
