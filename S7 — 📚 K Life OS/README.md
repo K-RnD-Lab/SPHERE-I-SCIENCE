@@ -28,46 +28,62 @@ It gives a scientific home to projects where the object of study is:
 
 ---
 
-## Current S7 Directions
-
-### [S7-A · Career & Education](./S7-A%20%C2%B7%20Career%20%26%20Education/)
-
-A lane for structured learning, preparation systems, education-facing analytics, and measurable progress in career or study-related contexts.
-
-Current project inside this lane:
-- [R1 - Master Prep Analytics](./S7-A%20%C2%B7%20Career%20%26%20Education/R1%20-%20Master%20Prep%20Analytics/)
-
----
-
-## Suggested future S7 structure
+## Full S7 A–L Structure
 
 ```text
 📚 S7 — K Life OS
 │
-├── S7-A · Career & Education
-│   └── R1 - Master Prep Analytics
-├── S7-B · Learning Workflow Studies
-├── S7-C · Adaptive Training Systems
-└── S7-D · Longitudinal Life Pattern Studies
+├── S7-A · 🚀 Creativity or Self-Expression
+├── S7-B · 👨‍🏫 Personal Development or Learning
+├── S7-C · 🏠 Domestic Life or Household
+├── S7-D · 💵 Finance
+├── S7-E · 🤝 Parenting or Family
+├── S7-F · 📚 Recreation and Hobbies
+├── S7-G · 👤 Community Involvement
+├── S7-H · 🌳 Physical Health
+├── S7-I · 🔎 Career or Education
+├── S7-J · 🌿 Environmental or Charity
+├── S7-K · 👥 Personal Relationship
+└── S7-L · 🧘 Spirituality
 ```
+
+### Current life-sphere directions
+
+- [S7-A · 🚀 Creativity or Self-Expression](./S7-A%20%C2%B7%20%F0%9F%9A%80%20Creativity%20or%20Self-Expression/)
+- [S7-B · 👨‍🏫 Personal Development or Learning](./S7-B%20%C2%B7%20%F0%9F%91%A8%E2%80%8D%F0%9F%8F%AB%20Personal%20Development%20or%20Learning/)
+- [S7-C · 🏠 Domestic Life or Household](./S7-C%20%C2%B7%20%F0%9F%8F%A0%20Domestic%20Life%20or%20Household/)
+- [S7-D · 💵 Finance](./S7-D%20%C2%B7%20%F0%9F%92%B5%20Finance/)
+- [S7-E · 🤝 Parenting or Family](./S7-E%20%C2%B7%20%F0%9F%A4%9D%20Parenting%20or%20Family/)
+- [S7-F · 📚 Recreation and Hobbies](./S7-F%20%C2%B7%20%F0%9F%93%9A%20Recreation%20and%20Hobbies/)
+- [S7-G · 👤 Community Involvement](./S7-G%20%C2%B7%20%F0%9F%91%A4%20Community%20Involvement/)
+- [S7-H · 🌳 Physical Health](./S7-H%20%C2%B7%20%F0%9F%8C%B3%20Physical%20Health/)
+- [S7-I · 🔎 Career or Education](./S7-I%20%C2%B7%20%F0%9F%94%8E%20Career%20or%20Education/)
+- [S7-J · 🌿 Environmental or Charity](./S7-J%20%C2%B7%20%F0%9F%8C%BF%20Environmental%20or%20Charity/)
+- [S7-K · 👥 Personal Relationship](./S7-K%20%C2%B7%20%F0%9F%91%A5%20Personal%20Relationship/)
+- [S7-L · 🧘 Spirituality](./S7-L%20%C2%B7%20%F0%9F%A7%98%20Spirituality/)
 
 ---
 
-## What should and should not live here
+## Current active lane
 
-Good fit for `S7`:
-- preparation analytics
-- learning workflows
-- cognition and attention tracking
-- adaptive training systems
-- longitudinal life-pattern research with clear metrics
+### [S7-I · 🔎 Career or Education](./S7-I%20%C2%B7%20%F0%9F%94%8E%20Career%20or%20Education/)
 
-Not a good fit by default:
-- private journaling without structure
-- broad reflective notes without measurable design
-- every Life OS note or archive by default
+This is the most concrete active lane right now for career, preparation, and education-facing analytics.
 
-So `K Life OS` can be the broad philosophical and personal frame, while `S7` is its research-facing, measurable layer.
+Current project inside this lane:
+- [R1 - Master Prep Analytics](./S7-I%20%C2%B7%20%F0%9F%94%8E%20Career%20or%20Education/R1%20-%20Master%20Prep%20Analytics/)
+
+---
+
+## Suggested logic for long-range research
+
+- yearly reviews can live inside each sphere as periodic assessments
+- 5-year reviews make more sense as a deeper longitudinal layer
+- broader life-wheel assessment should be treated as a future cross-sphere synthesis, not mixed into every lane immediately
+
+That means:
+- sphere-specific analytics → inside `S7-A` to `S7-L`
+- broader synthesis across all 12 spheres → later as a separate longitudinal case
 
 ---
 
@@ -76,8 +92,11 @@ So `K Life OS` can be the broad philosophical and personal frame, while `S7` is 
 Primary scientific home:
 - `📚 S7 — K Life OS`
 
-Current education-facing lane:
-- `S7-A · Career & Education`
+Current scientific sub-lane:
+- `S7-I · 🔎 Career or Education`
+
+Current project:
+- `R1 - Master Prep Analytics`
 
 Optional public-case mirror:
 - `E4-B · Learning & Preparation Cases`

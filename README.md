@@ -60,17 +60,19 @@ This sphere currently has its strongest active density in `S1`, including:
 
 ## 📚 S7 — K Life OS
 
-**New science lane added**
+**Life-system science lane**
 
 This is the science-facing lane for measurable life systems, cognition, adaptive training, self-tracking, and longitudinal human-pattern research.
 
-Current S7 entry points:
-- [S7-A · Career & Education](./S7%20%E2%80%94%20%F0%9F%93%9A%20K%20Life%20OS/S7-A%20%C2%B7%20Career%20%26%20Education/)
-- [R1 - Master Prep Analytics](./S7%20%E2%80%94%20%F0%9F%93%9A%20K%20Life%20OS/S7-A%20%C2%B7%20Career%20%26%20Education/R1%20-%20Master%20Prep%20Analytics/)
+Current active lane:
+- [S7-I · 🔎 Career or Education](./S7%20%E2%80%94%20%F0%9F%93%9A%20K%20Life%20OS/S7-I%20%C2%B7%20%F0%9F%94%8E%20Career%20or%20Education/)
+
+Current project:
+- [R1 - Master Prep Analytics](./S7%20%E2%80%94%20%F0%9F%93%9A%20K%20Life%20OS/S7-I%20%C2%B7%20%F0%9F%94%8E%20Career%20or%20Education/R1%20-%20Master%20Prep%20Analytics/)
 
 This means:
 - **primary scientific home** → `📚 S7 — K Life OS`
-- **career / education lane** → `S7-A · Career & Education`
+- **scientific sub-lane** → `S7-I · 🔎 Career or Education`
 - **current project** → `R1 - Master Prep Analytics`
 - **optional public-case mirror** → `E4-B · Learning & Preparation Cases`
 
