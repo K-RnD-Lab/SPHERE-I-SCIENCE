@@ -1,4 +1,4 @@
-﻿# S7-B · 👨‍🏫 Personal Development or Learning
+﻿# S7-B · 👨‍🏫 Personal Development or Self-Care
 
 A sub-lane inside 📚 S7 — K Life OS.
 
