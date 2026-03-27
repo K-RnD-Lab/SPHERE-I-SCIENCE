@@ -3,20 +3,16 @@
 A meta-lane inside `📚 S7 - K Life OS`.
 
 Focus:
-- overall yearly reviews across all 12 life spheres
-- 5-year longitudinal reviews
+- one overall 5-year review across all 12 life spheres
 - life-wheel synthesis
 - satisfaction versus effort overview
 - time allocation across spheres
 
 This lane exists so broad life-pattern reviews do not have to be duplicated inside every separate sphere.
 
-Suggested structure:
+Current structure:
 
-- `R1 - Overall Yearly Assessment`
-- `R2 - Overall Five-Year Assessment`
-- `R3 - Satisfaction vs Effort Overview`
-- `R4 - Time Allocation Across Life Spheres`
+- `R1 - Overall Five-Year Assessment`
 
 Recommended core fields:
 - `life_sphere`
