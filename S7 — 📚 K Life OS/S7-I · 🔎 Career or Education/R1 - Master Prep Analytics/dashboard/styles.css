@@ -287,3 +287,50 @@ th { color: var(--muted); font-weight: 700; }
     grid-template-columns: 1fr;
   }
 }
+.trainer-layout {
+  align-items: start;
+}
+.trainer-panel {
+  display: grid;
+  gap: 18px;
+}
+.trainer-actions {
+  display: flex;
+  justify-content: flex-start;
+}
+.trainer-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(112, 214, 255, 0.28);
+  background: linear-gradient(135deg, rgba(112, 214, 255, 0.18), rgba(138, 139, 255, 0.18));
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 700;
+}
+.trainer-frame-wrap {
+  min-height: 920px;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(112, 214, 255, 0.18);
+  background: rgba(4, 11, 22, 0.82);
+}
+.trainer-frame {
+  width: 100%;
+  min-height: 920px;
+  border: 0;
+  background: #081120;
+}
+.trainer-side-panel {
+  display: grid;
+  gap: 18px;
+}
+@media (max-width: 1024px) {
+  .trainer-frame-wrap,
+  .trainer-frame {
+    min-height: 720px;
+  }
+}

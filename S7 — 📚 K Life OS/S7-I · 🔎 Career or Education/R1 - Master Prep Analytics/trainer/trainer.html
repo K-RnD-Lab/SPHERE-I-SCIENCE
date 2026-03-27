@@ -1,0 +1,225 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Master Trainer</title>
+  <link rel="stylesheet" href="trainer.css?v=20260326u2">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-copy-wrap">
+      <p class="eyebrow" data-i18n="heroEyebrow">PRIVATE PREP ENVIRONMENT</p>
+      <h1>AI Master Trainer</h1>
+      <p class="hero-copy" data-i18n="heroCopy">A lighter prep cockpit for resources, short practice, simulation, and session logs.</p>
+      <p class="hero-subcopy" data-i18n="heroSubcopy">Logs are created by this site when you study here or when you manually record an external session.</p>
+    </div>
+    <nav class="hero-actions">
+      <a href="index.html" data-i18n="openHub">Open Fullscreen Hub</a>
+      <button id="export-json-btn" type="button" data-i18n="exportJson">Export JSON</button>
+      <button id="export-csv-btn" type="button" data-i18n="exportCsv">Export CSV</button>
+      <label class="import-label" data-owner-only>
+        <span data-i18n="importJson">Import JSON</span>
+        <input id="import-json-input" type="file" accept="application/json">
+      </label>
+      <button id="reset-state-btn" type="button" class="danger" data-owner-only data-i18n="resetState">Reset Local State</button>
+    </nav>
+  </header>
+
+  <main class="layout">
+    <section class="card workspace-card">
+      <div class="workspace-head">
+        <div>
+          <p class="section-kicker" data-i18n="workspaceKicker">WORKSPACE</p>
+          <h2 data-i18n="workspaceTitle">Today setup</h2>
+        </div>
+        <p class="workspace-note" data-i18n="workspaceNote">Use one subject at a time, do a short batch, then let the log capture the result.</p>
+      </div>
+      <div class="controls-grid">
+        <label>
+          <span data-i18n="subjectLabel">Subject</span>
+          <select id="subject-select"></select>
+        </label>
+        <label>
+          <span data-i18n="languageLabel">Interface Language</span>
+          <select id="language-select">
+            <option value="en">English</option>
+            <option value="uk">Українська</option>
+          </select>
+        </label>
+        <label>
+          <span data-i18n="practiceSizeLabel">Practice Batch</span>
+          <select id="practice-size-select">
+            <option value="5">5 questions</option>
+            <option value="10">10 questions</option>
+            <option value="15">15 questions</option>
+          </select>
+        </label>
+        <label>
+          <span data-i18n="sessionLabel">Session Label</span>
+          <input id="session-label-input" type="text" placeholder="s001">
+        </label>
+      </div>
+      <p class="micro-note" data-i18n="workspaceLogNote">This site does not pull logs from external platforms automatically. It saves your built-in sessions and any manual log entries you add.</p>
+    </section>
+
+    <section class="card tabs-card">
+      <div class="tabs">
+        <button type="button" class="tab is-active" data-tab="resources" data-i18n="tabResources">Resources</button>
+        <button type="button" class="tab" data-tab="practice" data-i18n="tabPractice">Practice</button>
+        <button type="button" class="tab" data-tab="simulation" data-i18n="tabSimulation">Simulation</button>
+        <button type="button" class="tab" data-tab="logs" data-i18n="tabLogs">Logs</button>
+      </div>
+    </section>
+
+    <section class="pane is-active" data-pane="resources">
+      <div class="split-grid">
+        <section class="card">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker" data-i18n="materialsKicker">FOUNDATIONS</p>
+              <h2 data-i18n="materialsTitle">Study blocks</h2>
+            </div>
+            <p class="section-copy" data-i18n="materialsCopy">Pick one compact block, spend 15-45 minutes, then log it in one click.</p>
+          </div>
+          <div id="materials-grid" class="materials-grid"></div>
+        </section>
+
+        <section class="card">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker" data-i18n="resourceLinksKicker">READY-MADE RESOURCES</p>
+              <h2 data-i18n="resourceLinksTitle">Where to practice outside</h2>
+            </div>
+            <p class="section-copy" data-i18n="resourceLinksCopy">Use these existing platforms for bigger pools and official demos. Then log the result back here.</p>
+          </div>
+          <div id="resource-links-grid" class="resource-links-grid"></div>
+        </section>
+      </div>
+    </section>
+
+    <section class="pane" data-pane="practice" hidden>
+      <div class="split-grid split-grid-compact">
+        <section class="card">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker" data-i18n="practiceKicker">SHORT RUN</p>
+              <h2 data-i18n="practiceTitle">Practice session</h2>
+            </div>
+            <div id="practice-stats" class="badge-row"></div>
+          </div>
+          <div class="controls-actions compact-actions">
+            <button id="start-practice-btn" type="button" data-i18n="startPractice">Start Practice</button>
+            <button id="next-practice-btn" type="button" class="ghost" data-i18n="nextQuestion">Next Question</button>
+            <button id="finish-practice-btn" type="button" class="warning" data-i18n="finishPractice">Finish And Log</button>
+          </div>
+          <div id="practice-panel" class="question-panel"></div>
+        </section>
+
+        <section class="card sidebar-card">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker" data-i18n="practiceHowKicker">HOW IT WORKS</p>
+              <h2 data-i18n="practiceHowTitle">What this log gives you</h2>
+            </div>
+          </div>
+          <div id="practice-info" class="info-stack"></div>
+        </section>
+      </div>
+    </section>
+
+    <section class="pane" data-pane="simulation" hidden>
+      <div class="split-grid split-grid-compact">
+        <section class="card">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker" data-i18n="simulationKicker">LONGER RUN</p>
+              <h2 data-i18n="simulationTitle">Simulation</h2>
+            </div>
+            <div id="simulation-stats" class="badge-row"></div>
+          </div>
+          <div class="controls-actions compact-actions">
+            <button id="start-simulation-btn" type="button" data-i18n="startSimulation">Start Simulation</button>
+            <button id="next-simulation-btn" type="button" class="ghost" data-i18n="nextQuestion">Next Question</button>
+            <button id="finish-simulation-btn" type="button" class="warning" data-i18n="finishSimulation">Finish And Log</button>
+          </div>
+          <div id="simulation-panel" class="question-panel"></div>
+        </section>
+
+        <section class="card sidebar-card">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker" data-i18n="simulationMetaKicker">EXAM MODE</p>
+              <h2 data-i18n="simulationMetaTitle">Session profile</h2>
+            </div>
+          </div>
+          <div id="simulation-meta" class="info-stack"></div>
+        </section>
+      </div>
+    </section>
+
+    <section class="pane" data-pane="logs" hidden>
+      <div class="metrics-grid" id="summary-grid"></div>
+
+      <div class="split-grid">
+        <section class="card">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker" data-i18n="manualLogKicker">EXTERNAL SESSION</p>
+              <h2 data-i18n="manualLogTitle">Quick Log</h2>
+            </div>
+            <p class="section-copy" data-i18n="manualLogCopy">Use this when you study or test yourself on other sites and still want one clean dashboard.</p>
+          </div>
+          <div class="controls-grid">
+            <label>
+              <span data-i18n="platformLabel">Platform</span>
+              <input id="manual-source-input" type="text" placeholder="Connected / Testportal / Osvita.ua">
+            </label>
+            <label>
+              <span data-i18n="modeLabel">Mode</span>
+              <select id="manual-mode-select">
+                <option value="practice">Practice</option>
+                <option value="simulation">Simulation</option>
+                <option value="review">Review</option>
+              </select>
+            </label>
+            <label>
+              <span data-i18n="questionsLabel">Questions</span>
+              <input id="manual-total-input" type="number" min="0" value="10">
+            </label>
+            <label>
+              <span data-i18n="correctLabel">Correct</span>
+              <input id="manual-correct-input" type="number" min="0" value="0">
+            </label>
+            <label>
+              <span data-i18n="minutesLabel">Minutes</span>
+              <input id="manual-minutes-input" type="number" min="0" value="25">
+            </label>
+            <label>
+              <span data-i18n="notesLabel">Notes</span>
+              <input id="manual-notes-input" type="text" placeholder="reading, logic, weak spots">
+            </label>
+          </div>
+          <div class="controls-actions">
+            <button id="save-manual-log-btn" type="button" data-i18n="saveManualLog">Save Quick Log</button>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker" data-i18n="logsKicker">SESSION HISTORY</p>
+              <h2 data-i18n="logsTitle">Recent logs</h2>
+            </div>
+            <p class="section-copy" data-i18n="logsCopy">Export CSV to open everything in Google Sheets.</p>
+          </div>
+          <div id="logs-list" class="log-list"></div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <script src="trainer.js?v=20260326u2"></script>
+</body>
+</html>
+

@@ -1,4 +1,4 @@
-ï»¿const config = window.MASTER_PREP_CONFIG || { dataEndpoint: '', links: {}, scoreTargets: {}, actualExamScores: {} };
+const config = window.MASTER_PREP_CONFIG || { dataEndpoint: '', links: {}, scoreTargets: {}, actualExamScores: {} };
 const SUBJECTS = ['tznk', 'english', 'it'];
 
 const el = {
@@ -139,6 +139,7 @@ function render() {
 
 function renderLinks() {
   const links = [
+    cardLink('Trainer workspace', config.links?.trainerWorkspace, 'Interactive practice and simulation workspace inside this same project'),
     cardLink('Live dashboard', config.links?.liveDashboard, 'Public dashboard on Vercel'),
     cardLink('Google Sheet', config.links?.googleSheet, 'Live source of truth for study and session logs'),
     cardLink('Looker Studio', config.links?.lookerStudio, 'Optional polished public reporting layer'),
@@ -413,11 +414,11 @@ function getCurrentSubjectCards(sessionRows) {
       predictedScoreValue: latestPredicted,
       actualScoreValue: latestActual,
       progressPercent,
-      targetLabel: Number.isFinite(targetScore) ? `${targetScore}` : 'â€”',
+      targetLabel: Number.isFinite(targetScore) ? `${targetScore}` : '—',
       currentLabel: Number.isFinite(currentScore) ? `${round(currentScore, 1)}` : 'No score yet',
-      currentScoreLabel: Number.isFinite(currentScore) ? `${round(currentScore, 1)}` : 'â€”',
-      predictedLabel: Number.isFinite(latestPredicted) ? `${round(latestPredicted, 1)}` : 'â€”',
-      actualLabel: Number.isFinite(latestActual) ? `${round(latestActual, 1)}` : 'â€”',
+      currentScoreLabel: Number.isFinite(currentScore) ? `${round(currentScore, 1)}` : '—',
+      predictedLabel: Number.isFinite(latestPredicted) ? `${round(latestPredicted, 1)}` : '—',
+      actualLabel: Number.isFinite(latestActual) ? `${round(latestActual, 1)}` : '—',
     };
   });
 }
@@ -858,6 +859,7 @@ function escapeHtml(value) {
 function escapeAttr(value) {
   return escapeHtml(value);
 }
+
 
 
 

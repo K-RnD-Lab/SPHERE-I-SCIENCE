@@ -1,0 +1,2046 @@
+{
+  "version": "1.0",
+  "created_at": "2026-03-24",
+  "quiz_sets": [
+    {
+      "id": "starter-round-1",
+      "title": "Starter Round 1",
+      "questions": [
+        {
+          "id": "tznk-r1-q1",
+          "subject": "tznk",
+          "block": "logic",
+          "topic": "sets",
+          "prompt": "In a study group, 18 students know Python, 12 know SQL, and 7 know both. How many know Python but do not know SQL?",
+          "choices": {
+            "A": "5",
+            "B": "11",
+            "C": "12",
+            "D": "25"
+          },
+          "correct_answer": "B",
+          "explanation": "Python only = 18 - 7 = 11."
+        },
+        {
+          "id": "english-r1-q1",
+          "subject": "english",
+          "block": "use_of_english",
+          "topic": "grammar",
+          "prompt": "Choose the correct option: If I ___ more time yesterday, I would have finished the project.",
+          "choices": {
+            "A": "had had",
+            "B": "have",
+            "C": "would have",
+            "D": "have had"
+          },
+          "correct_answer": "A",
+          "explanation": "This is a third conditional sentence: if + past perfect, would have + past participle."
+        },
+        {
+          "id": "it-r1-q1",
+          "subject": "it",
+          "block": "algorithms",
+          "topic": "sorting",
+          "prompt": "Which time complexity best matches binary search on a sorted array?",
+          "choices": {
+            "A": "O(1)",
+            "B": "O(log n)",
+            "C": "O(n)",
+            "D": "O(n log n)"
+          },
+          "correct_answer": "B",
+          "explanation": "Binary search halves the search range on each step."
+        }
+      ]
+    },
+    {
+      "id": "starter-round-2",
+      "title": "Starter Round 2",
+      "questions": [
+        {
+          "id": "tznk-r2-q1",
+          "subject": "tznk",
+          "block": "logic",
+          "topic": "constraints",
+          "prompt": "Three tasks must be scheduled in this order: A before B, and B before C. Which statement must be true?",
+          "choices": {
+            "A": "C can be first",
+            "B": "A can be after C",
+            "C": "A is before C",
+            "D": "B is always last"
+          },
+          "correct_answer": "C",
+          "explanation": "If A is before B and B is before C, then A must be before C."
+        },
+        {
+          "id": "english-r2-q1",
+          "subject": "english",
+          "block": "reading",
+          "topic": "main_idea",
+          "prompt": "Read the sentence: 'The company cut meeting time by 30%, which gave engineers longer uninterrupted periods for deep work.' What is the main effect described?",
+          "choices": {
+            "A": "Engineers were asked to attend more meetings",
+            "B": "Engineers had more focused work time",
+            "C": "The company hired more managers",
+            "D": "Projects became less technical"
+          },
+          "correct_answer": "B",
+          "explanation": "The sentence says less meeting time created longer uninterrupted periods for deep work."
+        },
+        {
+          "id": "it-r2-q1",
+          "subject": "it",
+          "block": "databases",
+          "topic": "sql",
+          "prompt": "Which SQL clause is used to filter rows before grouping?",
+          "choices": {
+            "A": "HAVING",
+            "B": "ORDER BY",
+            "C": "WHERE",
+            "D": "GROUP BY"
+          },
+          "correct_answer": "C",
+          "explanation": "WHERE filters rows before aggregation; HAVING filters groups after aggregation."
+        }
+      ]
+    },
+    {
+      "id": "starter-round-3",
+      "title": "Starter Round 3",
+      "questions": [
+        {
+          "id": "tznk-r3-q1",
+          "subject": "tznk",
+          "block": "verbal",
+          "topic": "argument",
+          "prompt": "Argument: 'Every intern on this team knows Git. Marta is an intern on this team.' Which conclusion follows logically?",
+          "choices": {
+            "A": "Marta does not know Git",
+            "B": "Some team members do not know Git",
+            "C": "Marta knows Git",
+            "D": "Only interns know Git"
+          },
+          "correct_answer": "C",
+          "explanation": "The statement applies to every intern on the team, and Marta is one of them."
+        },
+        {
+          "id": "english-r3-q1",
+          "subject": "english",
+          "block": "use_of_english",
+          "topic": "word_formation",
+          "prompt": "Choose the best option: The migration to cloud infrastructure improved system ___ during peak traffic.",
+          "choices": {
+            "A": "reliable",
+            "B": "reliability",
+            "C": "rely",
+            "D": "reliably"
+          },
+          "correct_answer": "B",
+          "explanation": "After 'improved system', a noun is needed: reliability."
+        },
+        {
+          "id": "it-r3-q1",
+          "subject": "it",
+          "block": "networks",
+          "topic": "security",
+          "prompt": "Which protocol is primarily used to provide secure communication over the web?",
+          "choices": {
+            "A": "HTTP",
+            "B": "FTP",
+            "C": "HTTPS",
+            "D": "Telnet"
+          },
+          "correct_answer": "C",
+          "explanation": "HTTPS is HTTP over TLS/SSL and is used for secure web communication."
+        }
+      ]
+    },
+    {
+      "id": "starter-round-4",
+      "title": "Starter Round 4",
+      "questions": [
+        {
+          "id": "tznk-r4-q1",
+          "subject": "tznk",
+          "block": "logic",
+          "topic": "percentages",
+          "prompt": "A book club has 40 members. 65% attended the first meeting, and 15 of those attendees also joined a workshop afterwards. How many attended the meeting but did not join the workshop?",
+          "choices": {
+            "A": "11",
+            "B": "15",
+            "C": "26",
+            "D": "40"
+          },
+          "correct_answer": "A",
+          "explanation": "65% of 40 is 26. Of those, 15 joined the workshop, so 26 - 15 = 11 attended only the meeting."
+        },
+        {
+          "id": "english-r4-q1",
+          "subject": "english",
+          "block": "use_of_english",
+          "topic": "passive_voice",
+          "prompt": "Choose the best option: The final report ___ by Friday so that we can submit it on Monday.",
+          "choices": {
+            "A": "must finish",
+            "B": "must be finished",
+            "C": "must have finishing",
+            "D": "must been finished"
+          },
+          "correct_answer": "B",
+          "explanation": "A passive construction is needed: must be finished."
+        },
+        {
+          "id": "it-r4-q1",
+          "subject": "it",
+          "block": "programming",
+          "topic": "data_structures",
+          "prompt": "Which data structure follows the Last In, First Out principle?",
+          "choices": {
+            "A": "Queue",
+            "B": "Array",
+            "C": "Stack",
+            "D": "Hash table"
+          },
+          "correct_answer": "C",
+          "explanation": "A stack is LIFO: the last element pushed is the first popped."
+        }
+      ]
+    },
+    {
+      "id": "starter-round-5",
+      "title": "Starter Round 5",
+      "questions": [
+        {
+          "id": "tznk-r5-q1",
+          "subject": "tznk",
+          "block": "verbal",
+          "topic": "assumption",
+          "prompt": "Claim: 'We should install soundproof panels in the office because productivity dropped after we switched to open seating.' Which assumption is needed?",
+          "choices": {
+            "A": "Open seating reduced productivity partly because of noise",
+            "B": "Employees prefer darker rooms",
+            "C": "All teams work on the same tasks",
+            "D": "The office budget will double next year"
+          },
+          "correct_answer": "A",
+          "explanation": "The argument links open seating to lower productivity and proposes a noise-related solution, so it assumes noise is part of the cause."
+        },
+        {
+          "id": "english-r5-q1",
+          "subject": "english",
+          "block": "reading",
+          "topic": "inference",
+          "prompt": "Sentence: 'Although the rollout was delayed, customer satisfaction rose because the team fixed the most visible bugs before release.' What can be inferred?",
+          "choices": {
+            "A": "Customers were unhappy about bug fixes",
+            "B": "The delay likely improved product quality",
+            "C": "The rollout happened earlier than planned",
+            "D": "The team ignored customer feedback"
+          },
+          "correct_answer": "B",
+          "explanation": "The sentence connects the delay with bug fixing and better satisfaction, so the delay likely helped quality."
+        },
+        {
+          "id": "it-r5-q1",
+          "subject": "it",
+          "block": "databases",
+          "topic": "keys",
+          "prompt": "What is the main purpose of a primary key in a relational table?",
+          "choices": {
+            "A": "To sort all rows alphabetically",
+            "B": "To uniquely identify each row",
+            "C": "To encrypt sensitive columns",
+            "D": "To remove duplicate tables"
+          },
+          "correct_answer": "B",
+          "explanation": "A primary key uniquely identifies each row in a table."
+        }
+      ]
+    },
+    {
+      "id": "starter-round-6",
+      "title": "Starter Round 6",
+      "questions": [
+        {
+          "id": "tznk-r6-q1",
+          "subject": "tznk",
+          "block": "logic",
+          "topic": "ordering",
+          "prompt": "Four presentations will be given: D must be before B, A must be after C, and C is first. Which statement must be true?",
+          "choices": {
+            "A": "A is last",
+            "B": "D is before B",
+            "C": "B is first",
+            "D": "C is after A"
+          },
+          "correct_answer": "B",
+          "explanation": "Only the relation D before B is explicitly required in every valid order."
+        },
+        {
+          "id": "english-r6-q1",
+          "subject": "english",
+          "block": "use_of_english",
+          "topic": "word_formation",
+          "prompt": "Choose the best option: Her explanation was clear and extremely ___.",
+          "choices": {
+            "A": "persuade",
+            "B": "persuasion",
+            "C": "persuasive",
+            "D": "persuasively"
+          },
+          "correct_answer": "C",
+          "explanation": "After was and extremely, an adjective is needed: persuasive."
+        },
+        {
+          "id": "it-r6-q1",
+          "subject": "it",
+          "block": "networks",
+          "topic": "ip_addressing",
+          "prompt": "Which of the following is a private IPv4 address?",
+          "choices": {
+            "A": "8.8.8.8",
+            "B": "172.16.5.10",
+            "C": "1.1.1.1",
+            "D": "54.23.10.7"
+          },
+          "correct_answer": "B",
+          "explanation": "172.16.0.0 to 172.31.255.255 is a private address range."
+        }
+      ]
+    },
+    {
+      "id": "starter-round-7",
+      "title": "Starter Round 7",
+      "questions": [
+        {
+          "id": "tznk-r7-q1",
+          "subject": "tznk",
+          "block": "verbal",
+          "topic": "syllogism",
+          "prompt": "All data analysts in the company use spreadsheets. Some interns are data analysts. Which conclusion follows?",
+          "choices": {
+            "A": "All interns use spreadsheets",
+            "B": "Some interns use spreadsheets",
+            "C": "No interns use spreadsheets",
+            "D": "Only analysts use spreadsheets"
+          },
+          "correct_answer": "B",
+          "explanation": "If some interns are analysts, and all analysts use spreadsheets, then some interns use spreadsheets."
+        },
+        {
+          "id": "english-r7-q1",
+          "subject": "english",
+          "block": "use_of_english",
+          "topic": "conditionals",
+          "prompt": "Choose the correct option: If she were more organized, she ___ all the deadlines last month.",
+          "choices": {
+            "A": "would meet",
+            "B": "would have met",
+            "C": "met",
+            "D": "had met"
+          },
+          "correct_answer": "B",
+          "explanation": "This is a mixed conditional: present condition, past result."
+        },
+        {
+          "id": "it-r7-q1",
+          "subject": "it",
+          "block": "cybersecurity",
+          "topic": "phishing",
+          "prompt": "Which sign most strongly suggests a phishing email?",
+          "choices": {
+            "A": "A message from a known sender with expected context",
+            "B": "A request to verify credentials through an urgent unfamiliar link",
+            "C": "A weekly automated backup report",
+            "D": "A calendar invite from your teammate"
+          },
+          "correct_answer": "B",
+          "explanation": "Urgency plus credential requests through unfamiliar links is a classic phishing pattern."
+        }
+      ]
+    },
+    {
+      "id": "starter-round-8",
+      "title": "Starter Round 8",
+      "questions": [
+        {
+          "id": "tznk-r8-q1",
+          "subject": "tznk",
+          "block": "logic",
+          "topic": "averages",
+          "prompt": "The average of five numbers is 18. Four of the numbers are 14, 17, 19, and 20. What is the fifth number?",
+          "choices": {
+            "A": "20",
+            "B": "18",
+            "C": "16",
+            "D": "22"
+          },
+          "correct_answer": "A",
+          "explanation": "If the average is 18, the total is 90. The known four sum to 70, so the missing number is 20."
+        },
+        {
+          "id": "english-r8-q1",
+          "subject": "english",
+          "block": "use_of_english",
+          "topic": "collocation",
+          "prompt": "Choose the best option: The new dashboard gives managers better ___ into customer behavior.",
+          "choices": {
+            "A": "insight",
+            "B": "insightsly",
+            "C": "insightful",
+            "D": "insighting"
+          },
+          "correct_answer": "A",
+          "explanation": "The fixed collocation is give insight into."
+        },
+        {
+          "id": "it-r8-q1",
+          "subject": "it",
+          "block": "software_engineering",
+          "topic": "version_control",
+          "prompt": "Why do teams commonly create feature branches in Git?",
+          "choices": {
+            "A": "To avoid writing commit messages",
+            "B": "To isolate work before merging it into the main branch",
+            "C": "To disable collaboration",
+            "D": "To replace code review"
+          },
+          "correct_answer": "B",
+          "explanation": "Feature branches isolate in-progress changes and make review and merging safer."
+        }
+      ]
+    },
+    {
+      "id": "starter-round-9",
+      "title": "Starter Round 9",
+      "questions": [
+        {
+          "id": "tznk-r9-q1",
+          "subject": "tznk",
+          "block": "logic",
+          "topic": "sets",
+          "prompt": "In a class, 24 students study math, 18 study physics, and 9 study both. How many study at least one of the two subjects?",
+          "choices": {
+            "A": "33",
+            "B": "42",
+            "C": "15",
+            "D": "27"
+          },
+          "correct_answer": "A",
+          "explanation": "Use inclusion-exclusion: 24 + 18 - 9 = 33."
+        },
+        {
+          "id": "english-r9-q1",
+          "subject": "english",
+          "block": "use_of_english",
+          "topic": "modals",
+          "prompt": "Choose the best option: She worked through the night, so she ___ be tired now.",
+          "choices": {
+            "A": "must",
+            "B": "should not",
+            "C": "can",
+            "D": "used to"
+          },
+          "correct_answer": "A",
+          "explanation": "Must is used for strong logical deduction in the present."
+        },
+        {
+          "id": "it-r9-q1",
+          "subject": "it",
+          "block": "ai",
+          "topic": "machine_learning",
+          "prompt": "What best describes supervised learning?",
+          "choices": {
+            "A": "Learning without any input data",
+            "B": "Learning from labeled examples",
+            "C": "Randomly changing model parameters forever",
+            "D": "Only using images as training data"
+          },
+          "correct_answer": "B",
+          "explanation": "Supervised learning uses input-output pairs or labeled examples."
+        }
+      ]
+    },
+    {
+      "id": "starter-round-10",
+      "title": "Starter Round 10",
+      "questions": [
+        {
+          "id": "tznk-r10-q1",
+          "subject": "tznk",
+          "block": "verbal",
+          "topic": "strengthen_argument",
+          "prompt": "Claim: 'We should move the help center article higher on the page because customers do not see it soon enough.' Which fact best strengthens the claim?",
+          "choices": {
+            "A": "Most support tickets are about topics already explained in that article",
+            "B": "The company plans to hire more designers next year",
+            "C": "The article uses a sans-serif font",
+            "D": "Some users prefer calling support"
+          },
+          "correct_answer": "A",
+          "explanation": "If many tickets are about topics already covered, making the article more visible would likely reduce confusion and ticket volume."
+        },
+        {
+          "id": "english-r10-q1",
+          "subject": "english",
+          "block": "use_of_english",
+          "topic": "articles",
+          "prompt": "Choose the correct option: She is ___ engineer who led ___ migration to the new platform.",
+          "choices": {
+            "A": "an / the",
+            "B": "a / an",
+            "C": "the / a",
+            "D": "an / an"
+          },
+          "correct_answer": "A",
+          "explanation": "Engineer begins with a vowel sound, so an engineer. A specific migration is the migration."
+        },
+        {
+          "id": "it-r10-q1",
+          "subject": "it",
+          "block": "operating_systems",
+          "topic": "memory",
+          "prompt": "What is the main purpose of virtual memory?",
+          "choices": {
+            "A": "To permanently store files on a USB drive",
+            "B": "To let the system use disk space as an extension of RAM",
+            "C": "To disable multitasking",
+            "D": "To replace the CPU cache"
+          },
+          "correct_answer": "B",
+          "explanation": "Virtual memory allows the OS to use secondary storage to extend the usable memory space."
+        }
+      ]
+    },
+    {
+      "id": "starter-round-11",
+      "title": "Starter Round 11",
+      "questions": [
+        {
+          "id": "tznk-r11-q1",
+          "subject": "tznk",
+          "block": "logic",
+          "topic": "percentages",
+          "prompt": "A price was increased by 20% and then decreased by 20%. Compared with the original price, the final price is:",
+          "choices": {
+            "A": "4% lower",
+            "B": "equal",
+            "C": "4% higher",
+            "D": "8% lower"
+          },
+          "correct_answer": "A",
+          "explanation": "1.2 x 0.8 = 0.96, so the result is 4% below the start."
+        },
+        {
+          "id": "english-r11-q1",
+          "subject": "english",
+          "block": "use_of_english",
+          "topic": "grammar",
+          "prompt": "Choose the best option: By the time we arrived, the lecture ___.",
+          "choices": {
+            "A": "already started",
+            "B": "has already started",
+            "C": "had already started",
+            "D": "was already starting"
+          },
+          "correct_answer": "C",
+          "explanation": "Past perfect shows the earlier action before another point in the past."
+        },
+        {
+          "id": "it-r11-q1",
+          "subject": "it",
+          "block": "databases",
+          "topic": "sql",
+          "prompt": "Which SQL statement is used to remove rows from a table without deleting the table itself?",
+          "choices": {
+            "A": "DROP",
+            "B": "DELETE",
+            "C": "REMOVE",
+            "D": "ERASE"
+          },
+          "correct_answer": "B",
+          "explanation": "DELETE removes rows, while DROP removes the whole table object."
+        }
+      ]
+    },
+    {
+      "id": "starter-round-12",
+      "title": "Starter Round 12",
+      "questions": [
+        {
+          "id": "tznk-r12-q1",
+          "subject": "tznk",
+          "block": "logic",
+          "topic": "sequences",
+          "prompt": "Find the next number in the sequence: 2, 6, 12, 20, 30, ?",
+          "choices": {
+            "A": "36",
+            "B": "40",
+            "C": "42",
+            "D": "44"
+          },
+          "correct_answer": "C",
+          "explanation": "The differences are +4, +6, +8, +10, so next is +12."
+        },
+        {
+          "id": "english-r12-q1",
+          "subject": "english",
+          "block": "reading",
+          "topic": "vocabulary",
+          "prompt": "Choose the closest meaning to \"reliable\".",
+          "choices": {
+            "A": "expensive",
+            "B": "trustworthy",
+            "C": "narrow",
+            "D": "temporary"
+          },
+          "correct_answer": "B",
+          "explanation": "Reliable means dependable or trustworthy."
+        },
+        {
+          "id": "it-r12-q1",
+          "subject": "it",
+          "block": "networking",
+          "topic": "protocols",
+          "prompt": "Which protocol is mainly used to securely load web pages in a browser?",
+          "choices": {
+            "A": "FTP",
+            "B": "HTTP",
+            "C": "HTTPS",
+            "D": "SMTP"
+          },
+          "correct_answer": "C",
+          "explanation": "HTTPS is the secure version of HTTP."
+        }
+      ]
+    },
+    {
+      "id": "starter-round-13",
+      "title": "Starter Round 13",
+      "questions": [
+        {
+          "id": "tznk-r13-q1",
+          "subject": "tznk",
+          "block": "verbal",
+          "topic": "conclusions",
+          "prompt": "All startups in the incubator submit weekly reports. NovaTech is in the incubator. Which conclusion is valid?",
+          "choices": {
+            "A": "NovaTech may submit monthly reports only",
+            "B": "NovaTech submits weekly reports",
+            "C": "Every company submits weekly reports",
+            "D": "Only startups submit weekly reports"
+          },
+          "correct_answer": "B",
+          "explanation": "If all incubator startups submit weekly reports and NovaTech is one of them, then NovaTech does too."
+        },
+        {
+          "id": "english-r13-q1",
+          "subject": "english",
+          "block": "use_of_english",
+          "topic": "word_formation",
+          "prompt": "Complete the sentence: Her explanation was clear and very ___.",
+          "choices": {
+            "A": "convince",
+            "B": "convincing",
+            "C": "convinced",
+            "D": "conviction"
+          },
+          "correct_answer": "B",
+          "explanation": "After \"very\" we need an adjective describing the explanation."
+        },
+        {
+          "id": "it-r13-q1",
+          "subject": "it",
+          "block": "software_engineering",
+          "topic": "testing",
+          "prompt": "What is the main purpose of a unit test?",
+          "choices": {
+            "A": "To check one small component in isolation",
+            "B": "To deploy code to production",
+            "C": "To encrypt user data",
+            "D": "To replace documentation"
+          },
+          "correct_answer": "A",
+          "explanation": "Unit tests verify a small part of the program independently."
+        }
+      ]
+    },
+    {
+      "id": "starter-round-14",
+      "title": "Starter Round 14",
+      "questions": [
+        {
+          "id": "tznk-r14-q1",
+          "subject": "tznk",
+          "block": "math",
+          "topic": "ratios",
+          "prompt": "In a group, the ratio of developers to designers is 5:3. If there are 24 people total, how many are designers?",
+          "choices": {
+            "A": "8",
+            "B": "9",
+            "C": "10",
+            "D": "15"
+          },
+          "correct_answer": "B",
+          "explanation": "Total parts = 8, so each part is 3. Designers = 3 x 3 = 9."
+        },
+        {
+          "id": "english-r14-q1",
+          "subject": "english",
+          "block": "use_of_english",
+          "topic": "modals",
+          "prompt": "Choose the best option: You ___ back up your files regularly; otherwise you may lose your work.",
+          "choices": {
+            "A": "should",
+            "B": "would",
+            "C": "might have",
+            "D": "used to"
+          },
+          "correct_answer": "A",
+          "explanation": "The sentence expresses recommendation or advice."
+        },
+        {
+          "id": "it-r14-q1",
+          "subject": "it",
+          "block": "os",
+          "topic": "processes",
+          "prompt": "Which state best describes a process that is waiting for CPU time but ready to run?",
+          "choices": {
+            "A": "Blocked",
+            "B": "Ready",
+            "C": "Terminated",
+            "D": "Suspended forever"
+          },
+          "correct_answer": "B",
+          "explanation": "A ready process has everything needed except CPU allocation."
+        }
+      ]
+    },
+    {
+      "id": "starter-round-15",
+      "title": "Starter Round 15",
+      "questions": [
+        {
+          "id": "tznk-r15-q1",
+          "subject": "tznk",
+          "block": "math",
+          "topic": "averages",
+          "prompt": "The average of four numbers is 18. If three of them are 15, 20 and 19, what is the fourth number?",
+          "choices": {
+            "A": "16",
+            "B": "18",
+            "C": "20",
+            "D": "24"
+          },
+          "correct_answer": "B",
+          "explanation": "Sum of four numbers is 72. The known three sum to 54, so the fourth is 18."
+        },
+        {
+          "id": "english-r15-q1",
+          "subject": "english",
+          "block": "reading",
+          "topic": "inference",
+          "prompt": "If a text says a solution is \"cost-effective\", it most likely means it is:",
+          "choices": {
+            "A": "cheap but useless",
+            "B": "worth the money spent",
+            "C": "illegal to use",
+            "D": "hard to maintain"
+          },
+          "correct_answer": "B",
+          "explanation": "Cost-effective means giving good value for the cost."
+        },
+        {
+          "id": "it-r15-q1",
+          "subject": "it",
+          "block": "security",
+          "topic": "authentication",
+          "prompt": "Which measure most directly improves account security?",
+          "choices": {
+            "A": "Using the same password everywhere",
+            "B": "Disabling updates",
+            "C": "Enabling multi-factor authentication",
+            "D": "Sharing passwords with teammates"
+          },
+          "correct_answer": "C",
+          "explanation": "MFA adds an additional verification factor and directly improves account security."
+        }
+      ]
+    },
+    {
+      "id": "starter-round-16",
+      "title": "Starter Round 16",
+      "questions": [
+        {
+          "id": "tznk-r16-q1",
+          "subject": "tznk",
+          "block": "logic",
+          "topic": "comparison",
+          "prompt": "If M is taller than N, and N is taller than P, which statement must be true?",
+          "choices": {
+            "A": "P is taller than M",
+            "B": "M is taller than P",
+            "C": "M and P are equal",
+            "D": "N is shorter than P"
+          },
+          "correct_answer": "B",
+          "explanation": "The relation is transitive: M > N > P, so M > P."
+        },
+        {
+          "id": "english-r16-q1",
+          "subject": "english",
+          "block": "use_of_english",
+          "topic": "articles",
+          "prompt": "Choose the correct option: She wants to become ___ engineer.",
+          "choices": {
+            "A": "a",
+            "B": "an",
+            "C": "the",
+            "D": "-"
+          },
+          "correct_answer": "B",
+          "explanation": "Engineer begins with a vowel sound, so we use \"an\"."
+        },
+        {
+          "id": "it-r16-q1",
+          "subject": "it",
+          "block": "algorithms",
+          "topic": "data_structures",
+          "prompt": "Which data structure works on the principle First In, First Out?",
+          "choices": {
+            "A": "Stack",
+            "B": "Queue",
+            "C": "Tree",
+            "D": "Graph"
+          },
+          "correct_answer": "B",
+          "explanation": "Queue follows FIFO order."
+        }
+      ]
+    },
+    {
+      "id": "starter-round-17",
+      "title": "Starter Round 17",
+      "questions": [
+        {
+          "id": "tznk-r17-q1",
+          "subject": "tznk",
+          "block": "verbal",
+          "topic": "arguments",
+          "prompt": "Which fact best strengthens the claim that a campus should extend library hours?",
+          "choices": {
+            "A": "The library building is old",
+            "B": "Many students study after evening classes end",
+            "C": "The cafeteria closes at 18:00",
+            "D": "Some students prefer e-books"
+          },
+          "correct_answer": "B",
+          "explanation": "This fact directly supports the need for later access."
+        },
+        {
+          "id": "english-r17-q1",
+          "subject": "english",
+          "block": "use_of_english",
+          "topic": "conditionals",
+          "prompt": "Choose the correct option: If I knew the answer, I ___ you now.",
+          "choices": {
+            "A": "told",
+            "B": "would tell",
+            "C": "will tell",
+            "D": "had told"
+          },
+          "correct_answer": "B",
+          "explanation": "This is a second conditional: if + past simple, would + base verb."
+        },
+        {
+          "id": "it-r17-q1",
+          "subject": "it",
+          "block": "web",
+          "topic": "http",
+          "prompt": "Which HTTP method is commonly used to retrieve data without changing server state?",
+          "choices": {
+            "A": "GET",
+            "B": "POST",
+            "C": "DELETE",
+            "D": "PUT"
+          },
+          "correct_answer": "A",
+          "explanation": "GET is typically used for safe retrieval operations."
+        }
+      ]
+    },
+    {
+      "id": "starter-round-18",
+      "title": "Starter Round 18",
+      "questions": [
+        {
+          "id": "tznk-r18-q1",
+          "subject": "tznk",
+          "block": "math",
+          "topic": "probability",
+          "prompt": "A bag contains 3 red and 2 blue balls. What is the probability of drawing a blue ball at random?",
+          "choices": {
+            "A": "1/5",
+            "B": "2/5",
+            "C": "3/5",
+            "D": "2/3"
+          },
+          "correct_answer": "B",
+          "explanation": "There are 2 blue balls out of 5 total."
+        },
+        {
+          "id": "english-r18-q1",
+          "subject": "english",
+          "block": "use_of_english",
+          "topic": "collocations",
+          "prompt": "Choose the natural collocation: The team ___ a decision after the meeting.",
+          "choices": {
+            "A": "did",
+            "B": "made",
+            "C": "took",
+            "D": "set"
+          },
+          "correct_answer": "B",
+          "explanation": "The standard collocation is \"make a decision\"."
+        },
+        {
+          "id": "it-r18-q1",
+          "subject": "it",
+          "block": "databases",
+          "topic": "normalization",
+          "prompt": "Database normalization is mainly used to reduce:",
+          "choices": {
+            "A": "screen brightness",
+            "B": "redundancy",
+            "C": "CPU clock speed",
+            "D": "network latency"
+          },
+          "correct_answer": "B",
+          "explanation": "Normalization helps reduce data redundancy and update anomalies."
+        }
+      ]
+    },
+    {
+      "id": "starter-round-19",
+      "title": "Starter Round 19",
+      "questions": [
+        {
+          "id": "tznk-r19-q1",
+          "subject": "tznk",
+          "block": "logic",
+          "topic": "ordering",
+          "prompt": "Five students stand in a line. O is before P, P is before R, and Q is after R. Which pair must appear in this order?",
+          "choices": {
+            "A": "Q before O",
+            "B": "R before P",
+            "C": "O before R",
+            "D": "Q before P"
+          },
+          "correct_answer": "C",
+          "explanation": "From O before P before R, O must be before R."
+        },
+        {
+          "id": "english-r19-q1",
+          "subject": "english",
+          "block": "reading",
+          "topic": "detail",
+          "prompt": "If a passage states that demand \"rose sharply\", demand:",
+          "choices": {
+            "A": "fell a little",
+            "B": "increased quickly",
+            "C": "stayed stable",
+            "D": "became uncertain"
+          },
+          "correct_answer": "B",
+          "explanation": "Rose sharply means increased quickly and significantly."
+        },
+        {
+          "id": "it-r19-q1",
+          "subject": "it",
+          "block": "programming",
+          "topic": "oop",
+          "prompt": "Which OOP concept hides internal implementation details behind a public interface?",
+          "choices": {
+            "A": "Inheritance",
+            "B": "Encapsulation",
+            "C": "Recursion",
+            "D": "Compilation"
+          },
+          "correct_answer": "B",
+          "explanation": "Encapsulation bundles data and behavior and hides internals behind methods."
+        }
+      ]
+    },
+    {
+      "id": "starter-round-20",
+      "title": "Starter Round 20",
+      "questions": [
+        {
+          "id": "tznk-r20-q1",
+          "subject": "tznk",
+          "block": "verbal",
+          "topic": "assumptions",
+          "prompt": "A company claims remote work improved productivity because more tasks were completed last month. Which assumption is most necessary?",
+          "choices": {
+            "A": "The number and difficulty of tasks stayed comparable",
+            "B": "Every employee prefers remote work",
+            "C": "Office rent became cheaper",
+            "D": "All meetings were canceled"
+          },
+          "correct_answer": "A",
+          "explanation": "Without comparable task volume and difficulty, the productivity comparison is weak."
+        },
+        {
+          "id": "english-r20-q1",
+          "subject": "english",
+          "block": "use_of_english",
+          "topic": "passive_voice",
+          "prompt": "Choose the correct option: The new platform ___ next month.",
+          "choices": {
+            "A": "launches",
+            "B": "will launch",
+            "C": "will be launched",
+            "D": "is launching by"
+          },
+          "correct_answer": "C",
+          "explanation": "This is future passive: will be launched."
+        },
+        {
+          "id": "it-r20-q1",
+          "subject": "it",
+          "block": "security",
+          "topic": "backup",
+          "prompt": "Which backup approach best reduces the risk of losing data after ransomware?",
+          "choices": {
+            "A": "Keeping one writable copy on the same machine",
+            "B": "Using offline or versioned backups",
+            "C": "Disabling antivirus alerts",
+            "D": "Sharing one admin account"
+          },
+          "correct_answer": "B",
+          "explanation": "Offline or immutable/versioned backups help recovery when live data is encrypted."
+        }
+      ]
+    },
+    {
+      "id": "starter-round-21",
+      "title": "Starter Round 21",
+      "questions": [
+        {
+          "id": "tznk-r21-q1",
+          "subject": "tznk",
+          "block": "logic",
+          "topic": "sets",
+          "prompt": "Out of 40 students, 22 study Python, 18 study JavaScript, and 10 study both. How many study only Python?",
+          "choices": {
+            "A": "8",
+            "B": "10",
+            "C": "12",
+            "D": "14"
+          },
+          "correct_answer": "C",
+          "explanation": "Only Python = 22 - 10 = 12."
+        },
+        {
+          "id": "english-r21-q1",
+          "subject": "english",
+          "block": "use_of_english",
+          "topic": "grammar",
+          "prompt": "Choose the correct option: I ___ this book yet, so please do not spoil the ending.",
+          "choices": {
+            "A": "did not finish",
+            "B": "have not finished",
+            "C": "had not finished",
+            "D": "do not finish"
+          },
+          "correct_answer": "B",
+          "explanation": "Present perfect fits with \"yet\" and the present situation."
+        },
+        {
+          "id": "it-r21-q1",
+          "subject": "it",
+          "block": "databases",
+          "topic": "indexing",
+          "prompt": "What is a common benefit of adding an index to a database table?",
+          "choices": {
+            "A": "Faster lookup queries",
+            "B": "More screen resolution",
+            "C": "Automatic encryption",
+            "D": "Lower RAM usage in every case"
+          },
+          "correct_answer": "A",
+          "explanation": "Indexes usually improve read performance for matching queries."
+        }
+      ]
+    },
+    {
+      "id": "starter-round-22",
+      "title": "Starter Round 22",
+      "questions": [
+        {
+          "id": "tznk-r22-q1",
+          "subject": "tznk",
+          "block": "math",
+          "topic": "speed_time_distance",
+          "prompt": "A bus travels 180 km in 3 hours. What is its average speed?",
+          "choices": {
+            "A": "45 km/h",
+            "B": "50 km/h",
+            "C": "60 km/h",
+            "D": "90 km/h"
+          },
+          "correct_answer": "C",
+          "explanation": "Average speed = distance / time = 180 / 3 = 60 km/h."
+        },
+        {
+          "id": "english-r22-q1",
+          "subject": "english",
+          "block": "use_of_english",
+          "topic": "passive_voice",
+          "prompt": "Choose the correct option: The reports ___ by Friday every week.",
+          "choices": {
+            "A": "submit",
+            "B": "are submitted",
+            "C": "were submitted",
+            "D": "have submitting"
+          },
+          "correct_answer": "B",
+          "explanation": "This is a routine action in the passive voice."
+        },
+        {
+          "id": "it-r22-q1",
+          "subject": "it",
+          "block": "networks",
+          "topic": "routing",
+          "prompt": "What is the main function of a router?",
+          "choices": {
+            "A": "To cool the CPU",
+            "B": "To direct packets between networks",
+            "C": "To store passwords only",
+            "D": "To compile code"
+          },
+          "correct_answer": "B",
+          "explanation": "Routers forward traffic between networks."
+        }
+      ]
+    },
+    {
+      "id": "starter-round-23",
+      "title": "Starter Round 23",
+      "questions": [
+        {
+          "id": "tznk-r23-q1",
+          "subject": "tznk",
+          "block": "verbal",
+          "topic": "strengthen_argument",
+          "prompt": "A team wants to switch to shorter meetings because they believe this will improve productivity. Which fact best supports the idea?",
+          "choices": {
+            "A": "Meetings often repeat information already written in chat",
+            "B": "The office has a new coffee machine",
+            "C": "Some employees live far away",
+            "D": "The company logo was redesigned"
+          },
+          "correct_answer": "A",
+          "explanation": "If meetings repeat written information, shortening them could save time and improve productivity."
+        },
+        {
+          "id": "english-r23-q1",
+          "subject": "english",
+          "block": "reading",
+          "topic": "main_idea",
+          "prompt": "If the paragraph compares several methods and ends by recommending one of them, the main idea is most likely:",
+          "choices": {
+            "A": "A complaint about prices",
+            "B": "An evaluation leading to a recommendation",
+            "C": "A historical timeline only",
+            "D": "A personal letter"
+          },
+          "correct_answer": "B",
+          "explanation": "The paragraph structure suggests comparison and recommendation."
+        },
+        {
+          "id": "it-r23-q1",
+          "subject": "it",
+          "block": "programming",
+          "topic": "debugging",
+          "prompt": "What is the most direct use of a debugger?",
+          "choices": {
+            "A": "To observe code execution step by step",
+            "B": "To print posters",
+            "C": "To replace all tests",
+            "D": "To overclock hardware"
+          },
+          "correct_answer": "A",
+          "explanation": "A debugger lets you inspect program flow and variable state."
+        }
+      ]
+    },
+    {
+      "id": "starter-round-24",
+      "title": "Starter Round 24",
+      "questions": [
+        {
+          "id": "tznk-r24-q1",
+          "subject": "tznk",
+          "block": "logic",
+          "topic": "syllogisms",
+          "prompt": "All certified analysts passed the final exam. Oksana is a certified analyst. What follows?",
+          "choices": {
+            "A": "Oksana may have skipped the exam",
+            "B": "Oksana passed the final exam",
+            "C": "Everyone passed the exam",
+            "D": "Only analysts passed the exam"
+          },
+          "correct_answer": "B",
+          "explanation": "If all certified analysts passed and Oksana is one, then she passed."
+        },
+        {
+          "id": "english-r24-q1",
+          "subject": "english",
+          "block": "use_of_english",
+          "topic": "modals",
+          "prompt": "Choose the best option: That ___ be the correct file; it has the wrong name.",
+          "choices": {
+            "A": "must",
+            "B": "can't",
+            "C": "should",
+            "D": "ought"
+          },
+          "correct_answer": "B",
+          "explanation": "\"Can't\" expresses strong negative deduction."
+        },
+        {
+          "id": "it-r24-q1",
+          "subject": "it",
+          "block": "cybersecurity",
+          "topic": "malware",
+          "prompt": "Ransomware is malware that mainly aims to:",
+          "choices": {
+            "A": "Encrypt data and demand payment",
+            "B": "Improve Wi-Fi speed",
+            "C": "Design websites",
+            "D": "Clean temporary files"
+          },
+          "correct_answer": "A",
+          "explanation": "Ransomware locks or encrypts data and asks for payment."
+        }
+      ]
+    },
+    {
+      "id": "starter-round-25",
+      "title": "Starter Round 25",
+      "questions": [
+        {
+          "id": "tznk-r25-q1",
+          "subject": "tznk",
+          "block": "math",
+          "topic": "fractions",
+          "prompt": "What is 3/4 of 120?",
+          "choices": {
+            "A": "60",
+            "B": "75",
+            "C": "90",
+            "D": "100"
+          },
+          "correct_answer": "C",
+          "explanation": "120 x 3 / 4 = 90."
+        },
+        {
+          "id": "english-r25-q1",
+          "subject": "english",
+          "block": "use_of_english",
+          "topic": "word_formation",
+          "prompt": "Complete the sentence: Their decision was based on careful ___.",
+          "choices": {
+            "A": "analyze",
+            "B": "analysis",
+            "C": "analytical",
+            "D": "analyzingly"
+          },
+          "correct_answer": "B",
+          "explanation": "After \"careful\" and \"based on\" we need a noun: analysis."
+        },
+        {
+          "id": "it-r25-q1",
+          "subject": "it",
+          "block": "software_engineering",
+          "topic": "requirements",
+          "prompt": "A functional requirement describes:",
+          "choices": {
+            "A": "What the system should do",
+            "B": "How bright the monitor is",
+            "C": "The salary of the team",
+            "D": "The company logo"
+          },
+          "correct_answer": "A",
+          "explanation": "Functional requirements define system behavior or capabilities."
+        }
+      ]
+    },
+    {
+      "id": "starter-round-26",
+      "title": "Starter Round 26",
+      "questions": [
+        {
+          "id": "tznk-r26-q1",
+          "subject": "tznk",
+          "block": "logic",
+          "topic": "proportions",
+          "prompt": "If 4 notebooks cost 200 UAH, how much do 7 notebooks cost at the same price?",
+          "choices": {
+            "A": "280",
+            "B": "300",
+            "C": "350",
+            "D": "400"
+          },
+          "correct_answer": "C",
+          "explanation": "One notebook costs 50 UAH, so 7 cost 350 UAH."
+        },
+        {
+          "id": "english-r26-q1",
+          "subject": "english",
+          "block": "reading",
+          "topic": "reference",
+          "prompt": "In a text, the pronoun \"they\" most often refers to:",
+          "choices": {
+            "A": "A future event",
+            "B": "A plural noun mentioned earlier",
+            "C": "An adjective",
+            "D": "A punctuation mark"
+          },
+          "correct_answer": "B",
+          "explanation": "Pronouns usually refer back to previously mentioned nouns."
+        },
+        {
+          "id": "it-r26-q1",
+          "subject": "it",
+          "block": "operating_systems",
+          "topic": "filesystems",
+          "prompt": "What is a file extension mainly used for?",
+          "choices": {
+            "A": "To indicate the file type",
+            "B": "To increase CPU speed",
+            "C": "To set screen size",
+            "D": "To replace permissions"
+          },
+          "correct_answer": "A",
+          "explanation": "Extensions help identify file format or associated application."
+        }
+      ]
+    },
+    {
+      "id": "starter-round-27",
+      "title": "Starter Round 27",
+      "questions": [
+        {
+          "id": "tznk-r27-q1",
+          "subject": "tznk",
+          "block": "verbal",
+          "topic": "weaken_argument",
+          "prompt": "A manager says switching to a new tool increased output because output rose the next month. Which fact weakens this claim most?",
+          "choices": {
+            "A": "The team was larger that month",
+            "B": "The tool has a dark theme",
+            "C": "The office moved floors",
+            "D": "A conference was announced"
+          },
+          "correct_answer": "A",
+          "explanation": "A larger team is an alternative explanation for higher output."
+        },
+        {
+          "id": "english-r27-q1",
+          "subject": "english",
+          "block": "use_of_english",
+          "topic": "conditionals",
+          "prompt": "Choose the correct option: If she ___ earlier, she would catch the train every day.",
+          "choices": {
+            "A": "left",
+            "B": "had left",
+            "C": "leaves",
+            "D": "would leave"
+          },
+          "correct_answer": "A",
+          "explanation": "Second conditional uses past simple in the if-clause."
+        },
+        {
+          "id": "it-r27-q1",
+          "subject": "it",
+          "block": "ai",
+          "topic": "ml_basics",
+          "prompt": "In machine learning, training data is used to:",
+          "choices": {
+            "A": "Teach a model patterns from examples",
+            "B": "Charge the battery",
+            "C": "Replace the internet",
+            "D": "Increase monitor size"
+          },
+          "correct_answer": "A",
+          "explanation": "Training data helps the model learn relationships or patterns."
+        }
+      ]
+    },
+    {
+      "id": "starter-round-28",
+      "title": "Starter Round 28",
+      "questions": [
+        {
+          "id": "tznk-r28-q1",
+          "subject": "tznk",
+          "block": "math",
+          "topic": "percentages",
+          "prompt": "A student answered 27 out of 30 questions correctly. What percentage is that?",
+          "choices": {
+            "A": "80%",
+            "B": "85%",
+            "C": "90%",
+            "D": "95%"
+          },
+          "correct_answer": "C",
+          "explanation": "27 / 30 = 0.9 = 90%."
+        },
+        {
+          "id": "english-r28-q1",
+          "subject": "english",
+          "block": "use_of_english",
+          "topic": "relative_clauses",
+          "prompt": "Choose the correct option: The app ___ we tested yesterday worked well.",
+          "choices": {
+            "A": "who",
+            "B": "which",
+            "C": "where",
+            "D": "whose"
+          },
+          "correct_answer": "B",
+          "explanation": "\"Which\" refers to a thing: the app."
+        },
+        {
+          "id": "it-r28-q1",
+          "subject": "it",
+          "block": "programming",
+          "topic": "loops",
+          "prompt": "Which construct is best for repeating an action while a condition remains true?",
+          "choices": {
+            "A": "Loop",
+            "B": "Import",
+            "C": "Comment",
+            "D": "Index"
+          },
+          "correct_answer": "A",
+          "explanation": "A loop repeats steps according to a condition."
+        }
+      ]
+    },
+    {
+      "id": "starter-round-29",
+      "title": "Starter Round 29",
+      "questions": [
+        {
+          "id": "tznk-r29-q1",
+          "subject": "tznk",
+          "block": "logic",
+          "topic": "tables",
+          "prompt": "One project took 6 days, another took 8 days, and a third took 10 days. What is the median duration?",
+          "choices": {
+            "A": "6",
+            "B": "7",
+            "C": "8",
+            "D": "10"
+          },
+          "correct_answer": "C",
+          "explanation": "For three ordered values, the median is the middle one: 8."
+        },
+        {
+          "id": "english-r29-q1",
+          "subject": "english",
+          "block": "reading",
+          "topic": "tone",
+          "prompt": "If an article describes a plan as \"overdue but promising\", the tone is best described as:",
+          "choices": {
+            "A": "fully negative",
+            "B": "balanced with cautious optimism",
+            "C": "sarcastic only",
+            "D": "irrelevant"
+          },
+          "correct_answer": "B",
+          "explanation": "The phrase combines criticism with hope."
+        },
+        {
+          "id": "it-r29-q1",
+          "subject": "it",
+          "block": "algorithms",
+          "topic": "sorting",
+          "prompt": "What is the main goal of a sorting algorithm?",
+          "choices": {
+            "A": "To arrange data in a defined order",
+            "B": "To draw a chart",
+            "C": "To open a browser",
+            "D": "To create passwords"
+          },
+          "correct_answer": "A",
+          "explanation": "Sorting arranges elements by a chosen order."
+        }
+      ]
+    },
+    {
+      "id": "starter-round-30",
+      "title": "Starter Round 30",
+      "questions": [
+        {
+          "id": "tznk-r30-q1",
+          "subject": "tznk",
+          "block": "verbal",
+          "topic": "analogy",
+          "prompt": "Choose the best analogy: Teacher is to school as doctor is to ___.",
+          "choices": {
+            "A": "patient",
+            "B": "hospital",
+            "C": "medicine",
+            "D": "stethoscope"
+          },
+          "correct_answer": "B",
+          "explanation": "The relation is profession to common place of work."
+        },
+        {
+          "id": "english-r30-q1",
+          "subject": "english",
+          "block": "use_of_english",
+          "topic": "prepositions",
+          "prompt": "Choose the correct option: She is interested ___ data analysis.",
+          "choices": {
+            "A": "on",
+            "B": "at",
+            "C": "in",
+            "D": "for"
+          },
+          "correct_answer": "C",
+          "explanation": "The correct collocation is \"interested in\"."
+        },
+        {
+          "id": "it-r30-q1",
+          "subject": "it",
+          "block": "systems",
+          "topic": "cloud",
+          "prompt": "Cloud computing mainly allows users to:",
+          "choices": {
+            "A": "Access computing resources over the internet",
+            "B": "Turn off all networks",
+            "C": "Store files only on paper",
+            "D": "Avoid using software"
+          },
+          "correct_answer": "A",
+          "explanation": "Cloud services provide computing resources through internet-based platforms."
+        }
+      ]
+    },
+    {
+      "id": "starter-round-31",
+      "title": "Starter Round 31",
+      "questions": [
+        {
+          "id": "tznk-r31-q1",
+          "subject": "tznk",
+          "block": "logic",
+          "topic": "averages",
+          "prompt": "The average of five test scores is 14. The first four scores sum to 50. What is the fifth score?",
+          "choices": {
+            "A": "14",
+            "B": "18",
+            "C": "20",
+            "D": "24"
+          },
+          "correct_answer": "C",
+          "explanation": "Total sum is 70, so the fifth score is 20."
+        },
+        {
+          "id": "english-r31-q1",
+          "subject": "english",
+          "block": "use_of_english",
+          "topic": "future_forms",
+          "prompt": "Choose the best option: Look at those clouds. It ___.",
+          "choices": {
+            "A": "rains",
+            "B": "is raining",
+            "C": "is going to rain",
+            "D": "would rain"
+          },
+          "correct_answer": "C",
+          "explanation": "Visible evidence suggests \"is going to\"."
+        },
+        {
+          "id": "it-r31-q1",
+          "subject": "it",
+          "block": "databases",
+          "topic": "joins",
+          "prompt": "A SQL JOIN is used to:",
+          "choices": {
+            "A": "Combine related rows from tables",
+            "B": "Delete the database engine",
+            "C": "Format a monitor",
+            "D": "Encrypt only images"
+          },
+          "correct_answer": "A",
+          "explanation": "JOIN combines data from related tables based on a condition."
+        }
+      ]
+    },
+    {
+      "id": "starter-round-32",
+      "title": "Starter Round 32",
+      "questions": [
+        {
+          "id": "tznk-r32-q1",
+          "subject": "tznk",
+          "block": "math",
+          "topic": "geometry",
+          "prompt": "A rectangle has length 9 and width 4. What is its area?",
+          "choices": {
+            "A": "13",
+            "B": "26",
+            "C": "36",
+            "D": "40"
+          },
+          "correct_answer": "C",
+          "explanation": "Area of a rectangle = length x width = 36."
+        },
+        {
+          "id": "english-r32-q1",
+          "subject": "english",
+          "block": "reading",
+          "topic": "context_clues",
+          "prompt": "If a sentence says a process is \"time-consuming\", it probably means the process:",
+          "choices": {
+            "A": "takes a lot of time",
+            "B": "costs no money",
+            "C": "is fully automatic",
+            "D": "is very loud"
+          },
+          "correct_answer": "A",
+          "explanation": "Time-consuming means requiring much time."
+        },
+        {
+          "id": "it-r32-q1",
+          "subject": "it",
+          "block": "cybersecurity",
+          "topic": "passwords",
+          "prompt": "Which password is generally strongest?",
+          "choices": {
+            "A": "12345678",
+            "B": "password",
+            "C": "Ky!9v_Rain_27",
+            "D": "qwerty"
+          },
+          "correct_answer": "C",
+          "explanation": "A longer mixed password with symbols and unpredictability is stronger."
+        }
+      ]
+    },
+    {
+      "id": "starter-round-33",
+      "title": "Starter Round 33",
+      "questions": [
+        {
+          "id": "tznk-r33-q1",
+          "subject": "tznk",
+          "block": "verbal",
+          "topic": "cause_effect",
+          "prompt": "Which statement most clearly shows cause and effect?",
+          "choices": {
+            "A": "The team used a planner, and deadlines were met more often",
+            "B": "The office is on the third floor",
+            "C": "The logo is blue",
+            "D": "The calendar has 12 months"
+          },
+          "correct_answer": "A",
+          "explanation": "The planner is presented as a reason for improved deadlines."
+        },
+        {
+          "id": "english-r33-q1",
+          "subject": "english",
+          "block": "use_of_english",
+          "topic": "comparatives",
+          "prompt": "Choose the correct option: This task is ___ than the previous one.",
+          "choices": {
+            "A": "more easy",
+            "B": "easier",
+            "C": "easiest",
+            "D": "easyer"
+          },
+          "correct_answer": "B",
+          "explanation": "The correct comparative form is \"easier\"."
+        },
+        {
+          "id": "it-r33-q1",
+          "subject": "it",
+          "block": "operating_systems",
+          "topic": "memory",
+          "prompt": "RAM is mainly used for:",
+          "choices": {
+            "A": "Temporary working memory",
+            "B": "Permanent printed storage",
+            "C": "Charging the device",
+            "D": "Cooling the motherboard"
+          },
+          "correct_answer": "A",
+          "explanation": "RAM stores data temporarily while programs run."
+        }
+      ]
+    },
+    {
+      "id": "starter-round-34",
+      "title": "Starter Round 34",
+      "questions": [
+        {
+          "id": "tznk-r34-q1",
+          "subject": "tznk",
+          "block": "logic",
+          "topic": "probability",
+          "prompt": "A coin is tossed once. What is the probability of getting heads?",
+          "choices": {
+            "A": "1/4",
+            "B": "1/3",
+            "C": "1/2",
+            "D": "2/3"
+          },
+          "correct_answer": "C",
+          "explanation": "For a fair coin, heads has probability 1/2."
+        },
+        {
+          "id": "english-r34-q1",
+          "subject": "english",
+          "block": "use_of_english",
+          "topic": "reported_speech",
+          "prompt": "Choose the correct option: He said that he ___ tired.",
+          "choices": {
+            "A": "is",
+            "B": "was",
+            "C": "has",
+            "D": "will be"
+          },
+          "correct_answer": "B",
+          "explanation": "Reported speech usually backshifts present to past."
+        },
+        {
+          "id": "it-r34-q1",
+          "subject": "it",
+          "block": "programming",
+          "topic": "functions",
+          "prompt": "What is a function in programming?",
+          "choices": {
+            "A": "A named block of reusable code",
+            "B": "A type of hardware fan",
+            "C": "A network cable",
+            "D": "An image format"
+          },
+          "correct_answer": "A",
+          "explanation": "Functions package reusable logic under a name."
+        }
+      ]
+    },
+    {
+      "id": "starter-round-35",
+      "title": "Starter Round 35",
+      "questions": [
+        {
+          "id": "tznk-r35-q1",
+          "subject": "tznk",
+          "block": "math",
+          "topic": "discounts",
+          "prompt": "A laptop price dropped from 25,000 UAH to 20,000 UAH. What was the discount percentage?",
+          "choices": {
+            "A": "10%",
+            "B": "15%",
+            "C": "20%",
+            "D": "25%"
+          },
+          "correct_answer": "C",
+          "explanation": "The drop is 5,000 out of 25,000, which is 20%."
+        },
+        {
+          "id": "english-r35-q1",
+          "subject": "english",
+          "block": "reading",
+          "topic": "purpose",
+          "prompt": "If a writer presents several risks and then offers practical steps, the purpose is most likely to:",
+          "choices": {
+            "A": "warn and guide",
+            "B": "entertain with fiction",
+            "C": "hide key facts",
+            "D": "describe only scenery"
+          },
+          "correct_answer": "A",
+          "explanation": "The structure suggests warning plus practical guidance."
+        },
+        {
+          "id": "it-r35-q1",
+          "subject": "it",
+          "block": "networks",
+          "topic": "dns",
+          "prompt": "DNS mainly translates:",
+          "choices": {
+            "A": "Domain names into IP addresses",
+            "B": "Source code into graphics",
+            "C": "Images into sound",
+            "D": "Passwords into usernames"
+          },
+          "correct_answer": "A",
+          "explanation": "DNS resolves names like example.com to IP addresses."
+        }
+      ]
+    },
+    {
+      "id": "starter-round-36",
+      "title": "Starter Round 36",
+      "questions": [
+        {
+          "id": "tznk-r36-q1",
+          "subject": "tznk",
+          "block": "verbal",
+          "topic": "inference",
+          "prompt": "A report says a pilot course had low attendance but high completion among attendees. Which inference is most reasonable?",
+          "choices": {
+            "A": "Everyone in the city completed it",
+            "B": "Those who joined were engaged enough to finish",
+            "C": "The course was canceled before finishing",
+            "D": "Attendance and completion mean the same thing"
+          },
+          "correct_answer": "B",
+          "explanation": "High completion among attendees suggests good engagement of those who joined."
+        },
+        {
+          "id": "english-r36-q1",
+          "subject": "english",
+          "block": "use_of_english",
+          "topic": "gerunds_infinitives",
+          "prompt": "Choose the correct option: She decided ___ a short break.",
+          "choices": {
+            "A": "taking",
+            "B": "to take",
+            "C": "take",
+            "D": "took"
+          },
+          "correct_answer": "B",
+          "explanation": "\"Decide\" is followed by the infinitive."
+        },
+        {
+          "id": "it-r36-q1",
+          "subject": "it",
+          "block": "software_engineering",
+          "topic": "version_control",
+          "prompt": "What is a main advantage of version control?",
+          "choices": {
+            "A": "Tracking changes over time",
+            "B": "Making coffee",
+            "C": "Replacing the operating system",
+            "D": "Reducing all bugs to zero instantly"
+          },
+          "correct_answer": "A",
+          "explanation": "Version control records history and supports collaboration."
+        }
+      ]
+    },
+    {
+      "id": "starter-round-37",
+      "title": "Starter Round 37",
+      "questions": [
+        {
+          "id": "tznk-r37-q1",
+          "subject": "tznk",
+          "block": "logic",
+          "topic": "ordering",
+          "prompt": "If A finishes before B, and C finishes after B, who must finish last among A, B, C?",
+          "choices": {
+            "A": "A",
+            "B": "B",
+            "C": "C",
+            "D": "Cannot tell"
+          },
+          "correct_answer": "C",
+          "explanation": "From A before B and C after B, C must be last."
+        },
+        {
+          "id": "english-r37-q1",
+          "subject": "english",
+          "block": "use_of_english",
+          "topic": "collocations",
+          "prompt": "Choose the natural collocation: We need to ___ attention to the details.",
+          "choices": {
+            "A": "make",
+            "B": "pay",
+            "C": "do",
+            "D": "set"
+          },
+          "correct_answer": "B",
+          "explanation": "The fixed expression is \"pay attention\"."
+        },
+        {
+          "id": "it-r37-q1",
+          "subject": "it",
+          "block": "systems",
+          "topic": "virtualization",
+          "prompt": "Virtualization allows one physical machine to:",
+          "choices": {
+            "A": "Run multiple isolated virtual systems",
+            "B": "Become a paper notebook",
+            "C": "Disconnect from electricity permanently",
+            "D": "Eliminate all storage needs"
+          },
+          "correct_answer": "A",
+          "explanation": "Virtualization lets multiple virtual machines share one physical host."
+        }
+      ]
+    },
+    {
+      "id": "starter-round-38",
+      "title": "Starter Round 38",
+      "questions": [
+        {
+          "id": "tznk-r38-q1",
+          "subject": "tznk",
+          "block": "math",
+          "topic": "integers",
+          "prompt": "What is the result of -3 + 8?",
+          "choices": {
+            "A": "11",
+            "B": "5",
+            "C": "-5",
+            "D": "-11"
+          },
+          "correct_answer": "B",
+          "explanation": "Adding 8 to -3 gives 5."
+        },
+        {
+          "id": "english-r38-q1",
+          "subject": "english",
+          "block": "reading",
+          "topic": "detail",
+          "prompt": "If instructions say \"install the update before restarting\", which action comes first?",
+          "choices": {
+            "A": "Restarting",
+            "B": "Installing the update",
+            "C": "Deleting the app",
+            "D": "Printing the manual"
+          },
+          "correct_answer": "B",
+          "explanation": "The instruction explicitly gives the order."
+        },
+        {
+          "id": "it-r38-q1",
+          "subject": "it",
+          "block": "cybersecurity",
+          "topic": "social_engineering",
+          "prompt": "Social engineering attacks mainly exploit:",
+          "choices": {
+            "A": "Human trust and behavior",
+            "B": "Only monitor brightness",
+            "C": "Keyboard layout",
+            "D": "Printer paper"
+          },
+          "correct_answer": "A",
+          "explanation": "They manipulate people rather than only technical systems."
+        }
+      ]
+    },
+    {
+      "id": "starter-round-39",
+      "title": "Starter Round 39",
+      "questions": [
+        {
+          "id": "tznk-r39-q1",
+          "subject": "tznk",
+          "block": "verbal",
+          "topic": "summary",
+          "prompt": "Which sentence works best as a concise summary of a text describing a problem, evidence, and proposed solution?",
+          "choices": {
+            "A": "It presents an issue, supports it with evidence, and suggests a fix",
+            "B": "It is about weather only",
+            "C": "It lists random unrelated facts",
+            "D": "It contains no conclusion"
+          },
+          "correct_answer": "A",
+          "explanation": "A good summary keeps the main structure: issue, support, solution."
+        },
+        {
+          "id": "english-r39-q1",
+          "subject": "english",
+          "block": "use_of_english",
+          "topic": "quantifiers",
+          "prompt": "Choose the correct option: There are ___ mistakes in your draft, so the overall quality is good.",
+          "choices": {
+            "A": "a little",
+            "B": "few",
+            "C": "much",
+            "D": "less"
+          },
+          "correct_answer": "B",
+          "explanation": "\"Few\" is used with countable plural nouns like mistakes."
+        },
+        {
+          "id": "it-r39-q1",
+          "subject": "it",
+          "block": "ai",
+          "topic": "classification",
+          "prompt": "Email spam detection is often treated as what kind of ML task?",
+          "choices": {
+            "A": "Classification",
+            "B": "Sorting colors only",
+            "C": "3D printing",
+            "D": "Compression of audio"
+          },
+          "correct_answer": "A",
+          "explanation": "The model classifies emails into categories such as spam or not spam."
+        }
+      ]
+    },
+    {
+      "id": "starter-round-40",
+      "title": "Starter Round 40",
+      "questions": [
+        {
+          "id": "tznk-r40-q1",
+          "subject": "tznk",
+          "block": "logic",
+          "topic": "patterns",
+          "prompt": "Find the next number: 3, 9, 27, 81, ?",
+          "choices": {
+            "A": "108",
+            "B": "162",
+            "C": "243",
+            "D": "324"
+          },
+          "correct_answer": "C",
+          "explanation": "Each term is multiplied by 3."
+        },
+        {
+          "id": "english-r40-q1",
+          "subject": "english",
+          "block": "use_of_english",
+          "topic": "tense_logic",
+          "prompt": "Choose the correct option: She usually ___ to work by bus, but today she is walking.",
+          "choices": {
+            "A": "go",
+            "B": "goes",
+            "C": "is going",
+            "D": "has gone"
+          },
+          "correct_answer": "B",
+          "explanation": "\"Usually\" calls for present simple: she goes."
+        },
+        {
+          "id": "it-r40-q1",
+          "subject": "it",
+          "block": "programming",
+          "topic": "api",
+          "prompt": "An API is best described as:",
+          "choices": {
+            "A": "A contract/interface for software interaction",
+            "B": "A battery unit",
+            "C": "A monitor cable only",
+            "D": "A spreadsheet color theme"
+          },
+          "correct_answer": "A",
+          "explanation": "APIs define how software components communicate."
+        }
+      ]
+    }
+  ]
+}
