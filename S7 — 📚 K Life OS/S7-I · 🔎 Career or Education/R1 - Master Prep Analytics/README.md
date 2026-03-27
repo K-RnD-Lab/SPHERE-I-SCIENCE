@@ -165,6 +165,7 @@ That public build now also contains a `Trainer` tab and a deployable `dashboard/
 
 1. publish the Apps Script endpoint as a public web app
 2. paste the endpoint URL into `dashboard/config.js`
-3. keep training in `trainer/` or `dashboard/trainer/`
+3. keep training in `trainer/` or `dashboard/trainer/`, with new logs posting into Google Sheet automatically when Apps Script is public
 4. let the Vercel dashboard read live Google Sheet data
-5. later wire trainer log actions to the same Sheet automatically
+5. use local export only as backup once live sheet sync is active
+

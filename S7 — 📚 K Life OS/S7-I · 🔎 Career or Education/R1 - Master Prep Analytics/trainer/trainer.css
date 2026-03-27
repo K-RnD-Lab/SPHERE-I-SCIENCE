@@ -314,3 +314,9 @@ input, select {
 .pane[hidden] {
   display: none !important;
 }
+
+.sync-note { border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; padding: 10px 12px; background: rgba(11, 21, 37, 0.5); }
+.sync-note.good { border-color: rgba(77, 227, 184, 0.35); color: #dffcf4; }
+.sync-note.warn { border-color: rgba(255, 211, 111, 0.35); color: #fff2c9; }
+.sync-note.bad { border-color: rgba(255, 119, 146, 0.35); color: #ffd7df; }
+
