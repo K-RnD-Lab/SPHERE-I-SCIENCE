@@ -34,7 +34,7 @@ It gives a scientific home to projects where the object of study is:
 📚 S7 — K Life OS
 │
 ├── S7-A · 🚀 Creativity or Self-Expression
-├── S7-B · 👨‍🏫 Personal Development or Learning
+├── S7-B · 👨‍🏫 Personal Development or Self-Care
 ├── S7-C · 🏠 Domestic Life or Household
 ├── S7-D · 💵 Finance
 ├── S7-E · 🤝 Parenting or Family
@@ -50,7 +50,7 @@ It gives a scientific home to projects where the object of study is:
 ### Current life-sphere directions
 
 - [S7-A · 🚀 Creativity or Self-Expression](./S7-A%20%C2%B7%20%F0%9F%9A%80%20Creativity%20or%20Self-Expression/)
-- [S7-B · 👨‍🏫 Personal Development or Learning](./S7-B%20%C2%B7%20%F0%9F%91%A8%E2%80%8D%F0%9F%8F%AB%20Personal%20Development%20or%20Learning/)
+- [S7-B · 👨‍🏫 Personal Development or Self-Care](./S7-B%20%C2%B7%20%F0%9F%91%A8%E2%80%8D%F0%9F%8F%AB%20Personal%20Development%20or%20Self-Care/)
 - [S7-C · 🏠 Domestic Life or Household](./S7-C%20%C2%B7%20%F0%9F%8F%A0%20Domestic%20Life%20or%20Household/)
 - [S7-D · 💵 Finance](./S7-D%20%C2%B7%20%F0%9F%92%B5%20Finance/)
 - [S7-E · 🤝 Parenting or Family](./S7-E%20%C2%B7%20%F0%9F%A4%9D%20Parenting%20or%20Family/)
@@ -102,3 +102,4 @@ Optional public-case mirror:
 - `E4-B · Learning & Preparation Cases`
 
 So master prep can be shown publicly later without losing its scientific framing.
+
