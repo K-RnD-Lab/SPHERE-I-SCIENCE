@@ -70,11 +70,14 @@ Not because admission itself is “science”, but because the object of study h
 - measurable progress
 - human performance over time
 
-Current S7 entry point:
-- [S7-R1 — Master Prep Analytics](./S7%20%E2%80%94%20%F0%9F%93%9A%20Learning,%20Cognition%20%26%20Adaptive%20Systems/S7-R1%20-%20Master%20Prep%20Analytics/)
+Current S7 entry points:
+- [S7-A · Career & Education](./S7%20%E2%80%94%20%F0%9F%93%9A%20Learning,%20Cognition%20%26%20Adaptive%20Systems/S7-A%20%C2%B7%20Career%20%26%20Education/)
+- [R1 - Master Prep Analytics](./S7%20%E2%80%94%20%F0%9F%93%9A%20Learning,%20Cognition%20%26%20Adaptive%20Systems/S7-A%20%C2%B7%20Career%20%26%20Education/R1%20-%20Master%20Prep%20Analytics/)
 
 This means:
 - **primary scientific home** → `S7`
+- **career / education lane** → `S7-A`
+- **current project** → `R1 - Master Prep Analytics`
 - **optional public-case mirror** → `E4` in the entrepreneurship sphere
 
 ---
@@ -94,4 +97,3 @@ All computational models are research-grade and experimental. Results labeled si
 
 *Built with Python · Gradio · scikit-learn · pandas · matplotlib*  
 *© 2026 Oksana Kolisnyk · KOSATIKS GROUP · MIT License*
-
