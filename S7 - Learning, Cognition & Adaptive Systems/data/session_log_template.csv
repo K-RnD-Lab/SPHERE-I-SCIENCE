@@ -1,0 +1,4 @@
+session_id,date,subject,platform,mode,questions_total,correct,accuracy_pct,minutes,session_label,notes
+session-001,2026-03-26,tznk,Osvita.ua,practice,10,7,70,18,s001,logic batch
+session-002,2026-03-26,english,Testportal,simulation,30,21,70,45,s001-exam,full demo run
+
