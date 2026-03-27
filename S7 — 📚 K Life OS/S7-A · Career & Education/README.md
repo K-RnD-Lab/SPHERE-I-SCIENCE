@@ -1,6 +1,6 @@
 ﻿# S7-A · Career & Education
 
-A sub-lane inside `📚 S7 — Learning, Cognition & Adaptive Systems`.
+A sub-lane inside `📚 S7 — K Life OS`.
 
 This direction covers:
 - structured learning systems

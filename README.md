@@ -7,7 +7,7 @@
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![GitHub](https://img.shields.io/badge/GitHub-K--RnD--Lab-orange)](https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE)
 
-*Computational approaches to biology, medicine, plant science, ecology, chemistry, and cognition*
+*Computational approaches to biology, medicine, plant science, ecology, chemistry, cognition, and longitudinal life-pattern research*
 
 > ⚠️ Research use only. All models are experimental and hypothesis-generating.
 
@@ -28,7 +28,7 @@ It first shows the full science structure, and then points to the active or emer
 - [⚗️ S4 — Biochemistry & Metabolomics](./S4%20-%20%E2%9A%97%EF%B8%8F%20Biochemistry%20%26%20Metabolomics/)
 - [🧠 S5 — Neuroscience & Aging](./S5%20-%20%F0%9F%A7%A0%20Neuroscience%20%26%20Aging/)
 - [🌍 S6 — Ecology & Environmental Science](./S6%20-%20%F0%9F%8C%8D%20Ecology%20%26%20Environmental%20Science/)
-- [📚 S7 — Learning, Cognition & Adaptive Systems](./S7%20%E2%80%94%20%F0%9F%93%9A%20Learning,%20Cognition%20%26%20Adaptive%20Systems/)
+- [📚 S7 — K Life OS](./S7%20%E2%80%94%20%F0%9F%93%9A%20K%20Life%20OS/)
 
 ```text
 SPHERE I — SCIENCE
@@ -39,7 +39,7 @@ SPHERE I — SCIENCE
 ├── ⚗️ S4 — Biochemistry & Metabolomics
 ├── 🧠 S5 — Neuroscience & Aging
 ├── 🌍 S6 — Ecology & Environmental Science
-└── 📚 S7 — Learning, Cognition & Adaptive Systems
+└── 📚 S7 — K Life OS
 ```
 
 ---
@@ -58,27 +58,21 @@ This sphere currently has its strongest active density in `S1`, including:
 
 ---
 
-## 📚 S7 — Learning, Cognition & Adaptive Systems
+## 📚 S7 — K Life OS
 
 **New science lane added**
 
-This is where master preparation belongs as a scientific research line.
-Not because admission itself is “science”, but because the object of study here is:
-- learning systems
-- cognition
-- adaptive training
-- measurable progress
-- human performance over time
+This is the science-facing lane for measurable life systems, cognition, adaptive training, self-tracking, and longitudinal human-pattern research.
 
 Current S7 entry points:
-- [S7-A · Career & Education](./S7%20%E2%80%94%20%F0%9F%93%9A%20Learning,%20Cognition%20%26%20Adaptive%20Systems/S7-A%20%C2%B7%20Career%20%26%20Education/)
-- [R1 - Master Prep Analytics](./S7%20%E2%80%94%20%F0%9F%93%9A%20Learning,%20Cognition%20%26%20Adaptive%20Systems/S7-A%20%C2%B7%20Career%20%26%20Education/R1%20-%20Master%20Prep%20Analytics/)
+- [S7-A · Career & Education](./S7%20%E2%80%94%20%F0%9F%93%9A%20K%20Life%20OS/S7-A%20%C2%B7%20Career%20%26%20Education/)
+- [R1 - Master Prep Analytics](./S7%20%E2%80%94%20%F0%9F%93%9A%20K%20Life%20OS/S7-A%20%C2%B7%20Career%20%26%20Education/R1%20-%20Master%20Prep%20Analytics/)
 
 This means:
-- **primary scientific home** → `S7`
-- **career / education lane** → `S7-A`
+- **primary scientific home** → `📚 S7 — K Life OS`
+- **career / education lane** → `S7-A · Career & Education`
 - **current project** → `R1 - Master Prep Analytics`
-- **optional public-case mirror** → `E4` in the entrepreneurship sphere
+- **optional public-case mirror** → `E4-B · Learning & Preparation Cases`
 
 ---
 
@@ -87,7 +81,7 @@ This means:
 - Use the root README as the map of the science sphere.
 - Open each folder for its own lane-level README and assets.
 - Treat `S1` as the strongest active biomedical cluster today.
-- Treat `S7` as the science-facing home for preparation, learning, and cognition research.
+- Treat `S7` as the science-facing home for preparation, learning, life systems, and cognition research.
 
 ---
 
