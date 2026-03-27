@@ -27,20 +27,17 @@ It gives a scientific home to projects where the object of study is:
 
 ---
 
-## Current S7 Direction
+## Current S7 Directions
 
-### S7-R1 — Master Prep Analytics
+### [S7-R1 — Master Prep Analytics](./S7-R1%20-%20Master%20Prep%20Analytics/)
 
 A CSV-first research case for magistracy preparation, learning systems, and evidence-based progress tracking.
 
-Included in this folder:
-- `data/` — resource catalog and log templates
-- `dashboard/` — static browser dashboard
-- `report.md` — research case narrative
-- `figures/` — chart exports and screenshots
-
-This project is not an LMS and not a replacement for official exam platforms.
-It is a structured research-and-operations layer for studying how preparation evolves over time.
+This folder includes:
+- dashboard
+- CSV templates
+- report layer
+- figures layer
 
 ---
 
@@ -65,4 +62,3 @@ Optional public-case mirror:
 - `E4 — Applied Investigations & Public Cases`
 
 So master prep can be shown publicly later without losing its scientific framing.
-
