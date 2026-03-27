@@ -5,7 +5,7 @@ A CSV-first research case for magistracy preparation, learning systems, cognitio
 This project belongs to:
 - `K R&D Lab`
 - `SPHERE I — SCIENCE`
-- `📚 S7 — Learning, Cognition & Adaptive Systems`
+- `📚 S7 — K Life OS`
 
 It can also be mirrored publicly through:
 - `SPHERE II — ENTREPRENEURSHIP`
@@ -192,3 +192,4 @@ Official entry points:
 3. paste the endpoint URL into `dashboard/config.js`
 4. deploy the dashboard on Vercel
 5. start logging sessions immediately
+
