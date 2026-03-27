@@ -3,21 +3,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Master Prep Analytics</title>
+  <title>S7-R1 Master Prep Analytics</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <main class="wrap">
     <section class="hero">
-      <p class="eyebrow">K R&D Lab</p>
+      <p class="eyebrow">K R&D Lab · S7-R1</p>
       <h1>Master Prep Analytics</h1>
-      <p>A CSV-first prep dashboard for study blocks, practice runs, simulation sessions, and resource planning.</p>
+      <p>A preparation dashboard for study blocks, training sessions, simulations, and evidence-based progress tracking.</p>
+      <div class="link-grid" id="project-links"></div>
     </section>
 
-    <section class="panel upload-panel">
+    <section class="panel status-panel">
       <div>
-        <h2>Load your CSV files</h2>
-        <p>Use the templates from the `data` folder, update them as you prepare, and reload them here. Nothing leaves your browser.</p>
+        <p class="eyebrow">Data source</p>
+        <h2>Current data mode</h2>
+        <p id="source-status" class="summary-copy"></p>
       </div>
       <div class="upload-grid">
         <label>
@@ -45,6 +47,35 @@
     <section class="panel">
       <div class="panel-head">
         <div>
+          <p class="eyebrow">Insights</p>
+          <h2>What the current data suggests</h2>
+        </div>
+      </div>
+      <div id="insights-grid" class="insights-grid"></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <p class="eyebrow">Breakdowns</p>
+          <h2>Subject and mode patterns</h2>
+        </div>
+      </div>
+      <div class="two-col">
+        <div>
+          <h3>Subject breakdown</h3>
+          <div id="subject-breakdown" class="stack-grid"></div>
+        </div>
+        <div>
+          <h3>Mode breakdown</h3>
+          <div id="mode-breakdown" class="stack-grid"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <div>
           <p class="eyebrow">Resource map</p>
           <h2>Preparation sources</h2>
         </div>
@@ -63,6 +94,7 @@
       <div id="study-table"></div>
     </section>
   </main>
+  <script src="config.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
