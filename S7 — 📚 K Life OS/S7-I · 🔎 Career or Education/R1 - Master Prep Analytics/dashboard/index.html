@@ -30,7 +30,7 @@
       <div class="panel-head">
         <div>
           <p class="eyebrow">Inputs</p>
-          <h2>Data, filters, and current focus</h2>
+          <h2>Current focus and fallback imports</h2>
         </div>
         <p class="summary-copy">
           The dashboard can read live Google Sheet data through Apps Script or local CSV snapshots
@@ -40,14 +40,6 @@
 
       <div class="filter-grid">
         <label>
-          <span>Study log CSV</span>
-          <input id="study-file" type="file" accept=".csv,text/csv">
-        </label>
-        <label>
-          <span>Session log CSV</span>
-          <input id="session-file" type="file" accept=".csv,text/csv">
-        </label>
-        <label>
           <span>Subject focus</span>
           <select id="subject-filter">
             <option value="all">All subjects</option>
@@ -56,7 +48,22 @@
             <option value="it">IT</option>
           </select>
         </label>
+        <div class="live-mode-note" id="live-mode-note"></div>
       </div>
+
+      <details class="manual-imports">
+        <summary>Manual CSV fallback</summary>
+        <div class="filter-grid manual-imports__grid">
+          <label>
+            <span>Study log CSV</span>
+            <input id="study-file" type="file" accept=".csv,text/csv">
+          </label>
+          <label>
+            <span>Session log CSV</span>
+            <input id="session-file" type="file" accept=".csv,text/csv">
+          </label>
+        </div>
+      </details>
     </section>
 
     <section class="metrics-grid" id="metrics"></section>
@@ -190,3 +197,4 @@
   <script src="app.js"></script>
 </body>
 </html>
+

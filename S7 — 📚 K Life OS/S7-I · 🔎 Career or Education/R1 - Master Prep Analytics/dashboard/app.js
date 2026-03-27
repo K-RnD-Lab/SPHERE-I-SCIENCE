@@ -17,6 +17,7 @@ const el = {
   projectLinks: document.getElementById('project-links'),
   targetGrid: document.getElementById('target-grid'),
   targetSummary: document.getElementById('target-summary'),
+  liveModeNote: document.getElementById('live-mode-note'),
   trendChart: document.getElementById('trend-chart'),
   goalVsReality: document.getElementById('goal-vs-reality'),
   goalVsRealitySummary: document.getElementById('goal-vs-reality-summary'),
@@ -74,7 +75,7 @@ function activateTab(name) {
 
 async function loadInitialData() {
   state.resources = await loadResources();
-  if (config.dataEndpoint) {
+  if (getDataEndpoint()) {
     const ok = await loadRemoteData();
     if (ok) return;
   }
@@ -88,7 +89,7 @@ async function loadResources() {
 
 async function loadRemoteData() {
   try {
-    const res = await fetch(config.dataEndpoint, { cache: 'no-store' });
+    const res = await fetch(getDataEndpoint(), { cache: 'no-store' });
     if (!res.ok) throw new Error(`Endpoint error ${res.status}`);
     const payload = await res.json();
     state.study = normalizeRows(payload.study || []);
@@ -118,6 +119,7 @@ function render() {
   const sessionRows = filterBySubject(state.sessions, state.subject);
   const resourceRows = filterResources(state.resources, state.subject);
   renderSourceStatus();
+  renderLiveModeNote();
   renderMetrics(studyRows, sessionRows);
   renderTargetCards(sessionRows);
   renderGoalVsReality(sessionRows);
@@ -139,6 +141,21 @@ function renderLinks() {
     cardLink('Repository', config.links?.repository, 'Research structure, templates, and case notes'),
   ].filter(Boolean);
   el.projectLinks.innerHTML = links.join('');
+}
+
+function renderLiveModeNote() {
+  const endpoint = getDataEndpoint();
+  if (state.sourceMode === 'remote_sheet') {
+    el.liveModeNote.innerHTML = '<strong>Live mode is active.</strong><span>The dashboard is reading the Google Sheet via Apps Script, so visitors see the latest published state.</span>';
+    return;
+  }
+
+  if (endpoint) {
+    el.liveModeNote.innerHTML = '<strong>Live mode is configured but not active yet.</strong><span>The Apps Script endpoint still is not returning public JSON, so the dashboard fell back to repository CSV data.</span>';
+    return;
+  }
+
+  el.liveModeNote.innerHTML = '<strong>Live mode is not connected yet.</strong><span>Add a public Apps Script web app URL so the dashboard can read the Google Sheet automatically.</span>';
 }
 
 function renderSourceStatus() {
@@ -508,7 +525,7 @@ function goalRealityTitle(subject) {
 }
 
 function cardLink(label, href, description) {
-  if (!href) return '';
+  if (!href || String(href).includes('REPLACE_ME')) return '';
   return `<a class="link-card" href="${escapeAttr(href)}" target="_blank" rel="noreferrer"><strong>${escapeHtml(label)}</strong><span>${escapeHtml(description)}</span></a>`;
 }
 
@@ -708,6 +725,13 @@ function splitCsvLine(line) {
   return cells;
 }
 
+function getDataEndpoint() {
+  const direct = String(config.dataEndpoint || '').trim();
+  if (direct) return direct;
+  const fallback = String(config.links?.appsScript || '').trim();
+  return fallback || '';
+}
+
 function normalizeSubject(value) {
   return String(value || '').trim().toLowerCase();
 }
@@ -728,6 +752,8 @@ function escapeHtml(value) {
 function escapeAttr(value) {
   return escapeHtml(value);
 }
+
+
 
 
 

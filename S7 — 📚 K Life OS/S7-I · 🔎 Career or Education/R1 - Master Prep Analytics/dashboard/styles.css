@@ -200,3 +200,38 @@ th { color: var(--muted); font-weight: 700; }
 .empty { border: 1px dashed var(--line); border-radius: 16px; padding: 16px; }
 @media (max-width: 1024px) { .hero, .two-col-layout { grid-template-columns: 1fr; } }
 @media (max-width: 760px) { .shell { padding: 16px; } .panel-head { flex-direction: column; } .metrics-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .goal-reality-figures { grid-template-columns: 1fr; } .goal-reality-top, .goal-reality-meta { flex-direction: column; } }
+.manual-imports {
+  margin-top: 16px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: rgba(7, 19, 36, 0.45);
+}
+.manual-imports summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 18px 20px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.manual-imports summary::-webkit-details-marker {
+  display: none;
+}
+.manual-imports__grid {
+  padding: 0 20px 20px;
+}
+.live-mode-note {
+  display: grid;
+  gap: 6px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(112, 214, 255, 0.18);
+  background: rgba(6, 16, 29, 0.54);
+}
+.live-mode-note strong {
+  color: var(--ink);
+  font-size: 15px;
+}
+.live-mode-note span {
+  color: var(--muted);
+  line-height: 1.5;
+}
