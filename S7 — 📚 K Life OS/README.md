@@ -90,7 +90,7 @@ That means:
 ### [S7-M · 🧭 Longitudinal Reviews & Life Wheel Synthesis](./S7-M%20%C2%B7%20%F0%9F%A7%AD%20Longitudinal%20Reviews%20%26%20Life%20Wheel%20Synthesis/)
 
 This is the meta-lane for one-pass reviews across all life spheres at once.
-Use it when you do not want to maintain 12 separate annual review files.
+Use it when you want one clear synthesis across all 12 life spheres instead of maintaining separate review files for each one.
 
 Best fit:
 - one overall yearly review across all 12 spheres
@@ -116,3 +116,4 @@ Optional public-case mirror:
 - `E4-B · Learning & Preparation Cases`
 
 So master prep can be shown publicly later without losing its scientific framing.
+
