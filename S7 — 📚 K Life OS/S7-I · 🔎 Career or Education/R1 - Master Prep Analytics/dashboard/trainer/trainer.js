@@ -575,10 +575,13 @@ async function postRowToSheet(type, row) {
   }
 
   try {
+    const form = new URLSearchParams();
+    form.set('type', type);
+    form.set('row', JSON.stringify(row));
+
     const response = await fetch(endpoint, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ type, row }),
+      body: form,
     });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const payload = await response.json();

@@ -13,9 +13,7 @@
 }
 
 function doPost(e) {
-  const body = e && e.postData && e.postData.contents
-    ? JSON.parse(e.postData.contents)
-    : {};
+  const body = parseRequestBody(e);
 
   const ss = SpreadsheetApp.getActiveSpreadsheet();
   const type = String(body.type || '').trim();
@@ -28,6 +26,36 @@ function doPost(e) {
 
   appendObjectRow(ss.getSheetByName(sheetName), row);
   return jsonResponse({ ok: true, updatedAt: new Date().toISOString() });
+}
+
+function parseRequestBody(e) {
+  const contents = e && e.postData && e.postData.contents
+    ? String(e.postData.contents)
+    : '';
+
+  if (contents) {
+    try {
+      return JSON.parse(contents);
+    } catch (error) {
+      // Ignore and continue with form-style payloads.
+    }
+  }
+
+  const params = e && e.parameter ? e.parameter : {};
+  let row = params.row || {};
+
+  if (typeof row === 'string') {
+    try {
+      row = JSON.parse(row);
+    } catch (error) {
+      row = {};
+    }
+  }
+
+  return {
+    type: params.type || '',
+    row: row || {},
+  };
 }
 
 function readSheet(ss, sheetName) {
