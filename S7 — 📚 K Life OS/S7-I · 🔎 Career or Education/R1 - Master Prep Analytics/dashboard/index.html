@@ -3,25 +3,42 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>S7-R1 Master Prep Analytics</title>
+  <title>S7-I / R1 Master Prep Analytics</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="wrap">
+  <main class="shell">
     <section class="hero">
-      <p class="eyebrow">K R&D Lab · S7-R1</p>
-      <h1>Master Prep Analytics</h1>
-      <p>A preparation dashboard for study blocks, training sessions, simulations, and evidence-based progress tracking.</p>
-      <div class="link-grid" id="project-links"></div>
+      <div class="hero-copy">
+        <p class="eyebrow">K R&amp;D Lab / S7-I / R1</p>
+        <h1>Master Prep Analytics</h1>
+        <p class="hero-text">
+          A blue research cockpit for preparation tracking: study blocks, training sessions,
+          simulation quality, target-score progress, and evidence-based readiness signals.
+        </p>
+      </div>
+      <div class="hero-side">
+        <div class="goal-chip">
+          <span class="goal-chip__label">Current mode</span>
+          <strong id="source-status">Loading data...</strong>
+        </div>
+        <div class="link-grid" id="project-links"></div>
+      </div>
     </section>
 
-    <section class="panel status-panel">
-      <div>
-        <p class="eyebrow">Data source</p>
-        <h2>Current data mode</h2>
-        <p id="source-status" class="summary-copy"></p>
+    <section class="panel filters-panel">
+      <div class="panel-head">
+        <div>
+          <p class="eyebrow">Inputs</p>
+          <h2>Data, filters, and current focus</h2>
+        </div>
+        <p class="summary-copy">
+          The dashboard can read live Google Sheet data through Apps Script or local CSV snapshots
+          from this repository.
+        </p>
       </div>
-      <div class="upload-grid">
+
+      <div class="filter-grid">
         <label>
           <span>Study log CSV</span>
           <input id="study-file" type="file" accept=".csv,text/csv">
@@ -33,7 +50,7 @@
         <label>
           <span>Subject focus</span>
           <select id="subject-filter">
-            <option value="all">All</option>
+            <option value="all">All subjects</option>
             <option value="tznk">TZNK</option>
             <option value="english">English</option>
             <option value="it">IT</option>
@@ -42,56 +59,120 @@
       </div>
     </section>
 
-    <section class="metrics" id="metrics"></section>
+    <section class="metrics-grid" id="metrics"></section>
 
-    <section class="panel">
-      <div class="panel-head">
-        <div>
-          <p class="eyebrow">Insights</p>
-          <h2>What the current data suggests</h2>
-        </div>
-      </div>
-      <div id="insights-grid" class="insights-grid"></div>
+    <section class="tabbar" id="tabbar">
+      <button class="tab is-active" data-tab="overview" type="button">Overview</button>
+      <button class="tab" data-tab="subjects" type="button">Subjects</button>
+      <button class="tab" data-tab="efficiency" type="button">Efficiency</button>
+      <button class="tab" data-tab="sessions" type="button">Sessions</button>
     </section>
 
-    <section class="panel">
-      <div class="panel-head">
-        <div>
-          <p class="eyebrow">Breakdowns</p>
-          <h2>Subject and mode patterns</h2>
-        </div>
+    <section class="tab-panel is-active" data-panel="overview">
+      <div class="two-col-layout">
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Target tracking</p>
+              <h2>How close you are to the score goal</h2>
+            </div>
+            <p class="summary-copy" id="target-summary"></p>
+          </div>
+          <div class="target-grid" id="target-grid"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Accuracy trend</p>
+              <h2>Session trajectory over time</h2>
+            </div>
+            <p class="summary-copy">Current estimate is based on the latest predicted or actual score when available.</p>
+          </div>
+          <div id="trend-chart" class="chart-card"></div>
+        </section>
       </div>
-      <div class="two-col">
-        <div>
-          <h3>Subject breakdown</h3>
+
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Signals</p>
+            <h2>What the current data suggests</h2>
+          </div>
+        </div>
+        <div id="insights-grid" class="insights-grid"></div>
+      </section>
+    </section>
+
+    <section class="tab-panel" data-panel="subjects">
+      <div class="two-col-layout">
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Subject picture</p>
+              <h2>Average accuracy and study load</h2>
+            </div>
+          </div>
           <div id="subject-breakdown" class="stack-grid"></div>
-        </div>
-        <div>
-          <h3>Mode breakdown</h3>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Mode pattern</p>
+              <h2>Training versus simulation</h2>
+            </div>
+          </div>
           <div id="mode-breakdown" class="stack-grid"></div>
+        </section>
+      </div>
+
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Preparation sources</p>
+            <h2>Resource map</h2>
+          </div>
+          <p id="resource-summary" class="summary-copy"></p>
         </div>
+        <div class="resource-grid" id="resource-grid"></div>
+      </section>
+    </section>
+
+    <section class="tab-panel" data-panel="efficiency">
+      <div class="two-col-layout">
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Efficiency</p>
+              <h2>Return on effort</h2>
+            </div>
+          </div>
+          <div id="efficiency-grid" class="insights-grid"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Score gap</p>
+              <h2>Predicted versus actual</h2>
+            </div>
+          </div>
+          <div id="score-gap-grid" class="stack-grid"></div>
+        </section>
       </div>
     </section>
 
-    <section class="panel">
-      <div class="panel-head">
-        <div>
-          <p class="eyebrow">Resource map</p>
-          <h2>Preparation sources</h2>
-        </div>
-        <p id="resource-summary" class="summary-copy"></p>
-      </div>
-      <div class="resource-grid" id="resource-grid"></div>
-    </section>
+    <section class="tab-panel" data-panel="sessions">
+      <section class="panel">
+        <h2>Recent sessions</h2>
+        <div id="sessions-table"></div>
+      </section>
 
-    <section class="panel">
-      <h2>Recent sessions</h2>
-      <div id="sessions-table"></div>
-    </section>
-
-    <section class="panel">
-      <h2>Study blocks</h2>
-      <div id="study-table"></div>
+      <section class="panel">
+        <h2>Study blocks</h2>
+        <div id="study-table"></div>
+      </section>
     </section>
   </main>
   <script src="config.js"></script>
