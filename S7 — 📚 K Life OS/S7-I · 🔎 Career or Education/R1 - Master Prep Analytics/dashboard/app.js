@@ -18,6 +18,8 @@ const el = {
   targetGrid: document.getElementById('target-grid'),
   targetSummary: document.getElementById('target-summary'),
   trendChart: document.getElementById('trend-chart'),
+  goalVsReality: document.getElementById('goal-vs-reality'),
+  goalVsRealitySummary: document.getElementById('goal-vs-reality-summary'),
   efficiencyGrid: document.getElementById('efficiency-grid'),
   scoreGapGrid: document.getElementById('score-gap-grid'),
   tabs: Array.from(document.querySelectorAll('.tab')),
@@ -118,6 +120,7 @@ function render() {
   renderSourceStatus();
   renderMetrics(studyRows, sessionRows);
   renderTargetCards(sessionRows);
+  renderGoalVsReality(sessionRows);
   renderTrendChart(sessionRows);
   renderInsights(studyRows, sessionRows);
   renderBreakdowns(sessionRows, studyRows);
@@ -182,6 +185,21 @@ function renderTargetCards(sessionRows) {
   el.targetGrid.innerHTML = visibleCards.length
     ? visibleCards.map(renderTargetCard).join('')
     : '<p class="empty">Add predicted_score values or actual exam results to unlock target tracking.</p>';
+}
+
+function renderGoalVsReality(sessionRows) {
+  const cards = getCurrentSubjectCards(sessionRows);
+  const visibleCards = state.subject === 'all' ? cards : cards.filter((card) => card.subject === state.subject);
+
+  const readyCount = visibleCards.filter((card) => Number.isFinite(card.targetScore) && Number.isFinite(card.currentScoreValue) && card.currentScoreValue >= card.targetScore).length;
+  const actualCount = visibleCards.filter((card) => Number.isFinite(card.actualScoreValue)).length;
+  el.goalVsRealitySummary.textContent = visibleCards.length
+    ? `${readyCount}/${visibleCards.length} subjects are at or above target. Actual exam scores logged for ${actualCount}/${visibleCards.length}.`
+    : 'No subject cards for this filter yet.';
+
+  el.goalVsReality.innerHTML = visibleCards.length
+    ? visibleCards.map(renderGoalRealityCard).join('')
+    : '<p class="empty">Add predicted and actual scores to compare goals against real outcomes.</p>';
 }
 
 function renderTrendChart(sessionRows) {
@@ -399,7 +417,7 @@ function renderTargetCard(card) {
         <strong>${escapeHtml(card.subject.toUpperCase())}</strong>
         <span class="target-score">${escapeHtml(card.currentScoreLabel)}</span>
       </div>
-      <p>Target ${escapeHtml(card.targetLabel)} · Predicted ${escapeHtml(card.predictedLabel)} · Actual ${escapeHtml(card.actualLabel)}</p>
+      <p>Target ${escapeHtml(card.targetLabel)} / Predicted ${escapeHtml(card.predictedLabel)} / Actual ${escapeHtml(card.actualLabel)}</p>
       <div class="progress-track">
         <div class="${barClass}" style="width:${Math.max(card.progressPercent, 4)}%"></div>
       </div>
@@ -409,6 +427,84 @@ function renderTargetCard(card) {
       </div>
     </article>
   `;
+}
+
+function renderGoalRealityCard(card) {
+  const gapToTarget = Number.isFinite(card.targetScore) && Number.isFinite(card.currentScoreValue)
+    ? round(card.targetScore - card.currentScoreValue, 1)
+    : NaN;
+  const actualGap = Number.isFinite(card.targetScore) && Number.isFinite(card.actualScoreValue)
+    ? round(card.actualScoreValue - card.targetScore, 1)
+    : NaN;
+  const status = goalRealityStatus(card, gapToTarget, actualGap);
+  const progressWidth = Math.max(Number.isFinite(card.progressPercent) ? Math.min(card.progressPercent, 140) : 0, 4);
+
+  return `
+    <article class="goal-reality-card">
+      <div class="goal-reality-top">
+        <div>
+          <p class="eyebrow">${escapeHtml(card.subject.toUpperCase())}</p>
+          <h3>${escapeHtml(goalRealityTitle(card.subject))}</h3>
+        </div>
+        <span class="goal-reality-status ${escapeHtml(status.tone)}">${escapeHtml(status.label)}</span>
+      </div>
+
+      <div class="goal-reality-figures">
+        ${goalFigure('Current estimate', card.currentScoreLabel)}
+        ${goalFigure('Target', card.targetLabel)}
+        ${goalFigure('Predicted', card.predictedLabel)}
+        ${goalFigure('Actual', card.actualLabel)}
+      </div>
+
+      <div class="progress-track goal-reality-progress">
+        <div class="progress-bar ${progressWidth >= 100 ? 'is-over' : ''}" style="width:${progressWidth}%"></div>
+      </div>
+
+      <div class="goal-reality-meta">
+        <span>${escapeHtml(status.note)}</span>
+        <strong>${escapeHtml(Number.isFinite(card.progressPercent) ? `${round(card.progressPercent)}% of target` : 'No progress line yet')}</strong>
+      </div>
+    </article>
+  `;
+}
+
+function goalFigure(label, value) {
+  return `
+    <div class="goal-figure">
+      <span>${escapeHtml(label)}</span>
+      <strong>${escapeHtml(value)}</strong>
+    </div>
+  `;
+}
+
+function goalRealityStatus(card, gapToTarget, actualGap) {
+  if (Number.isFinite(actualGap)) {
+    if (actualGap >= 0) {
+      return { label: 'Goal reached', tone: 'is-good', note: `${Math.abs(actualGap)} points above final target.` };
+    }
+    return { label: 'Below target', tone: 'is-alert', note: `${Math.abs(actualGap)} points below final target.` };
+  }
+
+  if (Number.isFinite(gapToTarget)) {
+    if (gapToTarget <= 0) {
+      return { label: 'On track', tone: 'is-good', note: `${Math.abs(gapToTarget)} points above the current target line.` };
+    }
+    if (gapToTarget <= 5) {
+      return { label: 'Close', tone: 'is-warm', note: `${gapToTarget} points left to reach the target.` };
+    }
+    return { label: 'Needs push', tone: 'is-alert', note: `${gapToTarget} points left to reach the target.` };
+  }
+
+  return { label: 'Set score inputs', tone: 'is-muted', note: 'Add target, predicted, or actual score values to unlock this comparison.' };
+}
+
+function goalRealityTitle(subject) {
+  const labels = {
+    tznk: 'TZNK performance path',
+    english: 'English performance path',
+    it: 'IT performance path',
+  };
+  return labels[subject] || `${String(subject || '').toUpperCase()} performance path`;
 }
 
 function cardLink(label, href, description) {
@@ -632,4 +728,8 @@ function escapeHtml(value) {
 function escapeAttr(value) {
   return escapeHtml(value);
 }
+
+
+
+
 

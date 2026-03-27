@@ -23,7 +23,7 @@ body {
 a { color: inherit; }
 h1, h2, h3, strong { margin: 0; }
 .shell { max-width: 1380px; margin: 0 auto; padding: 28px; display: grid; gap: 18px; }
-.hero, .panel, .metric, .link-card, .insight-card, .stack-card, .target-card, .chart-card {
+.hero, .panel, .metric, .link-card, .insight-card, .stack-card, .target-card, .chart-card, .goal-reality-card {
   border: 1px solid var(--line);
   background: var(--panel);
   border-radius: 26px;
@@ -48,26 +48,28 @@ h1, h2, h3, strong { margin: 0; }
   font-weight: 700;
 }
 .hero h1 { font-size: clamp(38px, 5vw, 64px); letter-spacing: -.04em; line-height: .95; }
-.hero-text, .summary-copy, label span, .link-card span, .insight-card span, .stack-card span, .target-card p, th, td, .empty, .goal-chip__label {
+.hero-text, .summary-copy, label span, .link-card span, .insight-card span, .stack-card span, .target-card p, .goal-reality-card p, th, td, .empty, .goal-chip__label {
   color: var(--muted); line-height: 1.55;
 }
 .goal-chip { display: grid; gap: 6px; padding: 18px 20px; border-radius: 20px; border: 1px solid var(--line); background: var(--panel-strong); }
 .goal-chip strong { font-size: 18px; color: var(--ink); }
-.link-grid, .metrics-grid, .filter-grid, .insights-grid, .resource-grid, .target-grid, .two-col-layout { display: grid; gap: 14px; }
+.link-grid, .metrics-grid, .filter-grid, .insights-grid, .resource-grid, .target-grid, .two-col-layout, .goal-vs-reality-grid, .goal-reality-figures { display: grid; gap: 14px; }
 .link-grid, .resource-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
 .metrics-grid { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
 .filter-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
 .insights-grid { grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
 .target-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.goal-vs-reality-grid { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+.goal-reality-figures { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 .two-col-layout { grid-template-columns: 1.05fr .95fr; }
 .panel-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 18px; margin-bottom: 18px; }
 .panel-head h2, .panel h2 { font-size: 26px; }
-.metrics-grid .metric, .link-card, .insight-card, .stack-card, .target-card, .chart-card { padding: 18px; }
+.metrics-grid .metric, .link-card, .insight-card, .stack-card, .target-card, .chart-card, .goal-reality-card { padding: 18px; }
 .metric span, .insight-card span, .stack-card span, .target-card span { display: block; margin-bottom: 8px; }
 .metric strong { font-size: 30px; color: var(--accent); }
 .link-card { text-decoration: none; display: grid; gap: 6px; transition: transform .18s ease, border-color .18s ease; }
 .link-card:hover { transform: translateY(-2px); border-color: rgba(112, 214, 255, 0.46); }
-.link-card strong, .insight-card strong, .stack-card strong, .target-card strong { color: var(--ink); }
+.link-card strong, .insight-card strong, .stack-card strong, .target-card strong, .goal-reality-card strong { color: var(--ink); }
 .filters-panel { background: linear-gradient(180deg, rgba(12, 28, 49, 0.92), rgba(10, 24, 44, 0.82)); }
 label { display: grid; gap: 6px; }
 input, select {
@@ -91,6 +93,89 @@ input, select {
 .progress-bar.is-over { background: linear-gradient(90deg, var(--accent-3), var(--accent)); }
 .progress-meta { display: flex; justify-content: space-between; gap: 12px; font-size: 13px; }
 .progress-meta strong { font-size: 14px; }
+.goal-reality-card {
+  display: grid;
+  gap: 16px;
+  padding: 22px;
+  background: linear-gradient(180deg, rgba(11, 26, 48, 0.98), rgba(9, 21, 39, 0.9));
+}
+.goal-reality-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  align-items: flex-start;
+}
+.goal-reality-top h3 {
+  font-size: 24px;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+.goal-reality-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  padding: 0 12px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: rgba(157, 178, 203, 0.12);
+}
+.goal-reality-status.is-good {
+  background: rgba(77, 227, 184, 0.16);
+  border-color: rgba(77, 227, 184, 0.35);
+}
+.goal-reality-status.is-warm {
+  background: rgba(255, 211, 111, 0.16);
+  border-color: rgba(255, 211, 111, 0.34);
+}
+.goal-reality-status.is-alert {
+  background: rgba(255, 131, 131, 0.14);
+  border-color: rgba(255, 131, 131, 0.3);
+}
+.goal-reality-status.is-muted {
+  background: rgba(157, 178, 203, 0.1);
+}
+.goal-figure {
+  display: grid;
+  gap: 6px;
+  padding: 16px;
+  border-radius: 18px;
+  border: 1px solid rgba(150, 197, 255, 0.14);
+  background: rgba(5, 16, 30, 0.54);
+}
+.goal-figure span {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.goal-figure strong {
+  font-size: 28px;
+  color: var(--ink);
+}
+.goal-reality-progress {
+  height: 14px;
+}
+.goal-reality-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  align-items: baseline;
+}
+.goal-reality-meta span {
+  color: var(--muted);
+  line-height: 1.5;
+}
+.goal-reality-meta strong {
+  color: var(--accent);
+  font-size: 15px;
+}
 .insight-card, .stack-card, .chart-card { background: linear-gradient(180deg, rgba(9, 22, 39, 0.94), rgba(8, 18, 34, 0.82)); }
 .stack-grid { display: grid; gap: 14px; }
 .stack-card { display: grid; gap: 8px; }
@@ -114,4 +199,4 @@ th, td { border-bottom: 1px solid var(--line); padding: 10px 8px; text-align: le
 th { color: var(--muted); font-weight: 700; }
 .empty { border: 1px dashed var(--line); border-radius: 16px; padding: 16px; }
 @media (max-width: 1024px) { .hero, .two-col-layout { grid-template-columns: 1fr; } }
-@media (max-width: 760px) { .shell { padding: 16px; } .panel-head { flex-direction: column; } .metrics-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 760px) { .shell { padding: 16px; } .panel-head { flex-direction: column; } .metrics-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .goal-reality-figures { grid-template-columns: 1fr; } .goal-reality-top, .goal-reality-meta { flex-direction: column; } }
