@@ -22,6 +22,8 @@ const SUBJECTS = {
   it: { id: 'it', examQuestions: 140, examMinutes: 180 },
 };
 
+let runtimeTicker = null;
+
 const UI = {
   en: {
     heroEyebrow: 'PRIVATE PREP ENVIRONMENT',
@@ -641,6 +643,75 @@ function mergeDeep(base, patch) {
   return out;
 }
 
+function stopRuntimeTicker() {
+  if (runtimeTicker) {
+    window.clearInterval(runtimeTicker);
+    runtimeTicker = null;
+  }
+}
+
+function startRuntimeTicker() {
+  if (!state.practiceRuntime && !state.simulationRuntime) {
+    stopRuntimeTicker();
+    return;
+  }
+  if (runtimeTicker) return;
+  runtimeTicker = window.setInterval(() => {
+    if (!state.practiceRuntime && !state.simulationRuntime) {
+      stopRuntimeTicker();
+      return;
+    }
+    if (state.practiceRuntime) renderPracticeRuntime();
+    if (state.simulationRuntime) renderSimulationRuntime();
+  }, 1000);
+}
+
+function formatClock(totalSeconds) {
+  const safe = Math.max(0, Math.floor(totalSeconds || 0));
+  const minutes = Math.floor(safe / 60);
+  const seconds = safe % 60;
+  return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+}
+
+function getRuntimeTimeProfile(runtime) {
+  const subjectMeta = SUBJECTS[runtime.subject] || { examQuestions: runtime.questions.length || 1, examMinutes: runtime.questions.length || 1 };
+  const examQuestions = Math.max(1, Number(subjectMeta.examQuestions) || runtime.questions.length || 1);
+  const examMinutes = Math.max(1, Number(subjectMeta.examMinutes) || runtime.questions.length || 1);
+  const targetMinutes = runtime.mode === 'simulation'
+    ? examMinutes
+    : Math.max(5, Math.round(((runtime.questions.length || 1) / examQuestions) * examMinutes));
+  const targetSeconds = targetMinutes * 60;
+  const elapsedSeconds = Math.max(0, Math.floor((Date.now() - new Date(runtime.startedAt).getTime()) / 1000));
+  const remainingSeconds = Math.max(0, targetSeconds - elapsedSeconds);
+  const overrunSeconds = Math.max(0, elapsedSeconds - targetSeconds);
+
+  let badgeClass = 'timer-good';
+  if (overrunSeconds > 0 || remainingSeconds <= 60) {
+    badgeClass = 'timer-bad';
+  } else if (remainingSeconds <= 300) {
+    badgeClass = 'timer-warn';
+  }
+
+  return {
+    examQuestions,
+    examMinutes,
+    targetMinutes,
+    targetSeconds,
+    elapsedSeconds,
+    remainingSeconds,
+    overrunSeconds,
+    badgeClass,
+  };
+}
+
+function runtimeTimerLabel(runtime) {
+  const profile = getRuntimeTimeProfile(runtime);
+  const lead = profile.overrunSeconds > 0
+    ? `Over pace: +${formatClock(profile.overrunSeconds)}`
+    : `Time left: ${formatClock(profile.remainingSeconds)}`;
+  return `${lead} | official pace: ${runtime.questions.length}/${profile.examQuestions}`;
+}
+
 async function loadAppData() {
   const [materialsRes, bankRes] = await Promise.all([
     fetch('app_data/materials_manifest.json').then((res) => res.json()),
@@ -720,6 +791,11 @@ function renderAll() {
   renderSimulationRuntime();
   renderSummary();
   renderLogs();
+  if (state.practiceRuntime || state.simulationRuntime) {
+    startRuntimeTicker();
+  } else {
+    stopRuntimeTicker();
+  }
   setActiveTab(state.settings.activeTab || 'resources', false);
 }
 
@@ -839,6 +915,7 @@ function startPracticeSession() {
   };
   saveState();
   renderPracticeRuntime();
+  startRuntimeTicker();
 }
 
 function nextPracticeQuestion() {
@@ -887,6 +964,7 @@ function startSimulationSession() {
   };
   saveState();
   renderSimulationRuntime();
+  startRuntimeTicker();
 }
 
 function nextSimulationQuestion() {
@@ -912,10 +990,11 @@ function renderSimulationRuntime() {
     return;
   }
   renderRuntimeInto(runtime, el.simulationStats, el.simulationPanel, 'simulation');
+  const timeProfile = getRuntimeTimeProfile(runtime);
   el.simulationMeta.innerHTML = `
     <article class="info-card">
       <h3>${escapeHtml(t(`subject_${runtime.subject}`))}</h3>
-      <p>${escapeHtml(`${SUBJECTS[runtime.subject].examQuestions} / ${SUBJECTS[runtime.subject].examMinutes}`)}</p>
+      <p>Official pace: ${escapeHtml(`${timeProfile.examQuestions} ${t('batchQuestions')} / ${timeProfile.examMinutes} ${t('studyMinutes')}`)}</p>
       <p>${escapeHtml(t('simulationLimited'))}</p>
     </article>
   `;
@@ -926,10 +1005,13 @@ function renderRuntimeInto(runtime, statsNode, panelNode, prefix) {
   const answer = runtime.answers[current.id];
   const progress = `${runtime.index + 1}/${runtime.questions.length}`;
   const accuracy = runtime.score.answered ? `${Math.round((runtime.score.correct / runtime.score.answered) * 100)}%` : '0%';
+  const timerProfile = getRuntimeTimeProfile(runtime);
+  const timerLabel = runtimeTimerLabel(runtime);
   statsNode.innerHTML = `
     <span class="badge">${escapeHtml(t(`subject_${runtime.subject}`))}</span>
     <span class="badge">${escapeHtml(t('progress'))}: ${escapeHtml(progress)}</span>
     <span class="badge">${escapeHtml(t('score'))}: ${escapeHtml(accuracy)}</span>
+    <span class="badge badge-timer ${timerProfile.badgeClass}">${escapeHtml(timerLabel)}</span>
   `;
 
   const choices = Object.entries(current.choices || {}).map(([key, value]) => `
@@ -1012,6 +1094,9 @@ async function finishRuntime(runtimeKey) {
   });
 
   state[runtimeKey] = null;
+  if (!state.practiceRuntime && !state.simulationRuntime) {
+    stopRuntimeTicker();
+  }
   saveState();
   renderAll();
   await postRowToSheet('session', toSessionSheetRow(state.sessionLogs[0]));

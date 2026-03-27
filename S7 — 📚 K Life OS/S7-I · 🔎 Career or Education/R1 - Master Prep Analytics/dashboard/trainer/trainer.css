@@ -217,6 +217,21 @@ input, select {
   background: var(--soft);
   font-size: 12px;
 }
+.badge-timer {
+  font-weight: 700;
+}
+.badge-timer.timer-good {
+  background: rgba(20,106,82,.14);
+  color: #125743;
+}
+.badge-timer.timer-warn {
+  background: rgba(196,104,51,.16);
+  color: #8b441b;
+}
+.badge-timer.timer-bad {
+  background: rgba(166,65,55,.16);
+  color: #8a2018;
+}
 .question-panel {
   display: grid;
   gap: 14px;
@@ -319,4 +334,5 @@ input, select {
 .sync-note.good { border-color: rgba(77, 227, 184, 0.35); color: #dffcf4; }
 .sync-note.warn { border-color: rgba(255, 211, 111, 0.35); color: #fff2c9; }
 .sync-note.bad { border-color: rgba(255, 119, 146, 0.35); color: #ffd7df; }
+
 
