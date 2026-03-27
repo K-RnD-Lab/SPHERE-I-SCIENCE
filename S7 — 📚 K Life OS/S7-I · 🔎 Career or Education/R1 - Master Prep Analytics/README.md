@@ -1,21 +1,28 @@
-﻿# S7-R1 Master Prep Analytics
+# R1 - Master Prep Analytics
 
-A CSV-first research case for magistracy preparation, learning systems, cognition, and evidence-based progress tracking.
+A combined research case for magistracy preparation, learning systems, cognition, live dashboarding, and the actual trainer workspace used in practice.
 
 This project belongs to:
 - `K R&D Lab`
-- `SPHERE I — SCIENCE`
-- `📚 S7 — K Life OS`
+- `SPHERE I - SCIENCE`
+- `?? S7 - K Life OS`
+- `S7-I � ?? Career or Education`
 
-It can also be mirrored publicly through:
-- `SPHERE II — ENTREPRENEURSHIP`
-- `E4 — Applied Investigations & Public Cases`
+---
+
+## What now lives here
+
+This space now contains both layers of the case:
+- `trainer/` = the migrated interactive prep workspace from the former `master_prep_2026` repo
+- `dashboard/` = the public analytics layer with charts, targets, and a trainer preview
+
+That means the preparation environment and the public proof layer now live in one research structure.
 
 ---
 
 ## Public entry points
 
-Use these as public-facing bridges once you replace the placeholders:
+Replace placeholders with your real links when each layer is ready:
 
 - **Live dashboard (Vercel):** [replace with your public dashboard](https://REPLACE_ME.vercel.app)
 - **Google Sheet:** [replace with your source spreadsheet](https://docs.google.com/spreadsheets/d/REPLACE_ME/edit)
@@ -29,7 +36,7 @@ Use these as public-facing bridges once you replace the placeholders:
 This repo is meant to help answer questions like:
 - Can relatively modest but structured effort still produce strong scores?
 - Which subject improves faster per hour invested?
-- Does training inside the custom hub match real external simulation results?
+- Does the custom trainer match external simulation results?
 - Are predicted results close to actual exam-facing results?
 - Which sources produce the best return for the time invested?
 
@@ -42,36 +49,39 @@ This repo is meant to help answer questions like:
 - **Google Sheet** = live source of truth
 - **Apps Script web app** = JSON endpoint for the dashboard
 - **Vercel** = public dashboard deployment
-- **GitHub** = research structure, snapshots, and report layer
+- **GitHub** = research structure, trainer, snapshots, and report layer
 
 That means:
 - do **not** write every log directly into GitHub
 - use the Sheet for continuous updates
-- use GitHub for case-study snapshots and structure
+- use GitHub for case-study structure, trainer code, and snapshots
 
 ---
 
 ## Files and roles
 
-- `data/resource_catalog.csv`  
+- `trainer/`
+  full practice and simulation workspace preserved inside this repo
+
+- `dashboard/`
+  public analytics layer that can run from local CSV **or** from the Apps Script endpoint
+
+- `data/resource_catalog.csv`
   categorized preparation sources for TZNK, English, and IT
 
-- `data/study_log_template.csv`  
+- `data/study_log_template.csv`
   live study-block template for theory and concept work
 
-- `data/session_log_template.csv`  
+- `data/session_log_template.csv`
   live session template for training, simulation, and review
 
-- `dashboard/`  
-  static dashboard that can run from local CSV **or** from the Apps Script endpoint
-
-- `docs/GOOGLE_SHEETS_SETUP.md`  
+- `docs/GOOGLE_SHEETS_SETUP.md`
   exact setup for Sheet tabs and Apps Script
 
-- `integrations/google-apps-script/Code.gs`  
+- `integrations/google-apps-script/Code.gs`
   starter Apps Script endpoint logic
 
-- `report.md`  
+- `report.md`
   longer case-study narrative and interpretation layer
 
 ---
@@ -91,13 +101,16 @@ That means:
 - strongest subject
 - weakest subject
 - readiness signal
+- current estimate versus target
+- predicted versus actual score gap
 
 ### Insight metrics
 - study vs session ratio
 - external vs internal sessions
 - most used mode
 - training vs simulation split
-- predicted vs actual score fields for later comparison
+- progress to target by subject
+- efficiency per subject
 
 This is enough to catch signals like:
 - low effort, strong output
@@ -140,56 +153,18 @@ Use `is_internal` as:
 
 ## Vercel deployment idea
 
-You do **not** need a separate repo just for the dashboard.
-You can deploy the subfolder:
-- `SPHERE-I-SCIENCE / 📚 S7 / S7-R1 / dashboard`
+You do **not** need a separate repo just for the public layer.
+Deploy this repo with `Root Directory` pointed to:
+- `S7-I / R1 / dashboard`
 
-In Vercel:
-- import the repo `K-RnD-Lab/SPHERE-I-SCIENCE`
-- set `Root Directory` to the `dashboard` folder inside `S7-R1`
-- keep it as a static project
-- update `config.js` with the real Apps Script URL
-
----
-
-## Looker Studio or built-in dashboard?
-
-### Built-in dashboard
-Best for:
-- quick live check
-- simple public status page
-- direct Vercel publishing
-- low maintenance
-
-### Looker Studio
-Best for:
-- prettier stakeholder-facing reporting
-- more polished charts
-- separate public report link
-
-Recommendation:
-- start with the built-in dashboard
-- add Looker later only if you want a cleaner public report layer
-
----
-
-## Exam-format note
-
-For EVI / TZNK / English and the usual IT admission test flow, the official prep materials and demos are test-format based rather than essay-style open responses. I would still treat the yearly official characteristics and demo materials as the final source of truth for the exact structure.
-
-Official entry points:
-- [UCEQA 2026 overview](https://testportal.gov.ua/osnovne-pro-yevi-yefvv-2026/)
-- [UCEQA preparation hub](https://testportal.gov.ua/pidgotovka-yefvv-yevi/)
-- [TZNK demo PDF](https://testportal.gov.ua/wp-content/uploads/2024/04/TZNK_maket_sajt_2024_03_29_merged.pdf)
-- [English demo](https://lv.testportal.gov.ua/testmktEnglish/)
+That public build now also contains a `Trainer` tab and a deployable `dashboard/trainer/` copy for demonstration.
 
 ---
 
 ## Suggested next step
 
-1. create the Google Sheet tabs
-2. deploy the Apps Script endpoint
-3. paste the endpoint URL into `dashboard/config.js`
-4. deploy the dashboard on Vercel
-5. start logging sessions immediately
-
+1. publish the Apps Script endpoint as a public web app
+2. paste the endpoint URL into `dashboard/config.js`
+3. keep training in `trainer/` or `dashboard/trainer/`
+4. let the Vercel dashboard read live Google Sheet data
+5. later wire trainer log actions to the same Sheet automatically

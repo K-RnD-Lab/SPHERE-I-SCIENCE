@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -70,6 +70,7 @@
 
     <section class="tabbar" id="tabbar">
       <button class="tab is-active" data-tab="overview" type="button">Overview</button>
+      <button class="tab" data-tab="trainer" type="button">Trainer</button>
       <button class="tab" data-tab="subjects" type="button">Subjects</button>
       <button class="tab" data-tab="charts" type="button">Charts</button>
       <button class="tab" data-tab="efficiency" type="button">Efficiency</button>
@@ -123,6 +124,49 @@
       </section>
     </section>
 
+
+    <section class="tab-panel" data-panel="trainer">
+      <div class="two-col-layout trainer-layout">
+        <section class="panel trainer-panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Interactive workspace</p>
+              <h2>Practice and simulation trainer</h2>
+            </div>
+            <p class="summary-copy">This is the same trainer workspace moved into the research case so people can inspect the actual preparation environment, not only the analytics layer.</p>
+          </div>
+          <div class="trainer-actions">
+            <a class="trainer-link" href="./trainer/trainer.html" target="_blank" rel="noreferrer">Open full trainer</a>
+          </div>
+          <div class="trainer-frame-wrap">
+            <iframe class="trainer-frame" src="./trainer/trainer.html" title="Master Prep Trainer"></iframe>
+          </div>
+        </section>
+
+        <section class="panel trainer-side-panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Current status</p>
+              <h2>How this trainer fits the case</h2>
+            </div>
+          </div>
+          <div class="stack-grid">
+            <article class="stack-card">
+              <strong>What it already does</strong>
+              <span>Runs training sessions, simulations, study logs, exports, and local progress persistence.</span>
+            </article>
+            <article class="stack-card">
+              <strong>What comes next</strong>
+              <span>We can connect its log actions to the same Apps Script endpoint so training events write into Google Sheet automatically.</span>
+            </article>
+            <article class="stack-card">
+              <strong>Why it matters publicly</strong>
+              <span>The dashboard shows the results, while this trainer proves the underlying environment and workflow were real.</span>
+            </article>
+          </div>
+        </section>
+      </div>
+    </section>
     <section class="tab-panel" data-panel="subjects">
       <div class="two-col-layout">
         <section class="panel">
@@ -242,3 +286,5 @@
   <script src="app.js"></script>
 </body>
 </html>
+
+

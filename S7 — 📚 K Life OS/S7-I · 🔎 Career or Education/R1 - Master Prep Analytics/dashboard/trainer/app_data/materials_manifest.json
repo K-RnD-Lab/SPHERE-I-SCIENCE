@@ -1,0 +1,55 @@
+﻿{
+  "materials": [
+    {
+      "id": "tznk-foundations",
+      "subject": "tznk",
+      "title": "TZNK Foundations",
+      "resource_id": "materials/tznk_foundations.md",
+      "estimated_minutes": 25,
+      "summary": [
+        "Work with constraints, order, set intersections, and valid conclusions.",
+        "Translate text conditions into short symbolic form before choosing an answer.",
+        "Avoid intuition-first answers; prove each option from the statement."
+      ],
+      "checklist": [
+        "I can solve A-only / A-and-B set tasks.",
+        "I can tell what must be true vs may be true.",
+        "I can explain why a conclusion follows logically."
+      ]
+    },
+    {
+      "id": "english-foundations",
+      "subject": "english",
+      "title": "English Foundations",
+      "resource_id": "materials/english_foundations.md",
+      "estimated_minutes": 20,
+      "summary": [
+        "Decide meaning first, then grammar, then collocation.",
+        "For gap-fill, identify part of speech before selecting an option.",
+        "High-value zones: conditionals, word formation, tense logic, context vocabulary."
+      ],
+      "checklist": [
+        "I can spot a third conditional.",
+        "I can choose the right part of speech in a gap.",
+        "I can justify an answer by context, not only by grammar."
+      ]
+    },
+    {
+      "id": "it-foundations",
+      "subject": "it",
+      "title": "IT Foundations",
+      "resource_id": "materials/it_foundations.md",
+      "estimated_minutes": 25,
+      "summary": [
+        "Prioritize exact definitions: complexity, SQL order, protocols, structures.",
+        "Most errors come from near-correct options from a neighboring topic.",
+        "Recall a short list of canonical facts before solving mixed questions."
+      ],
+      "checklist": [
+        "I know binary search complexity.",
+        "I know WHERE vs HAVING.",
+        "I know HTTPS, queue, stack, and basic security distinctions."
+      ]
+    }
+  ]
+}
