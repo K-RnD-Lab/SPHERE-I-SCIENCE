@@ -29,7 +29,7 @@ const UI = {
     heroEyebrow: 'PRIVATE PREP ENVIRONMENT',
     heroCopy: 'A lighter prep cockpit for resources, short practice, simulation, and session logs.',
     heroSubcopy: 'Logs are created by this site when you study here or when you manually record an external session.',
-    openHub: 'Open Fullscreen Hub',
+    openHub: 'Back to Analytics Hub',
     exportJson: 'Export JSON',
     exportCsv: 'Export CSV',
     importJson: 'Import JSON',
