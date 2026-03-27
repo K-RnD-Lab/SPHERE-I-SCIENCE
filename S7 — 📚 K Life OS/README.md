@@ -1,8 +1,8 @@
-﻿# 📚 S7 — K Life OS
+﻿# 📚 S7 - K Life OS
 
 Science-facing lane for measurable life systems, cognition, adaptive training, self-tracking, and longitudinal human-pattern research.
 
-This direction belongs to **SPHERE I — SCIENCE** inside K R&D Lab.
+This direction belongs to **SPHERE I - SCIENCE** inside K R&D Lab.
 It is the natural scientific home for:
 - long-horizon preparation research
 - structured learning systems
@@ -28,10 +28,10 @@ It gives a scientific home to projects where the object of study is:
 
 ---
 
-## Full S7 A–L Structure
+## Full S7 A-L Structure plus Meta Review Lane
 
 ```text
-📚 S7 — K Life OS
+📚 S7 - K Life OS
 │
 ├── S7-A · 🚀 Creativity or Self-Expression
 ├── S7-B · 👨‍🏫 Personal Development or Self-Care
@@ -44,7 +44,8 @@ It gives a scientific home to projects where the object of study is:
 ├── S7-I · 🔎 Career or Education
 ├── S7-J · 🌿 Environmental or Charity
 ├── S7-K · 👥 Personal Relationship
-└── S7-L · 🧘 Spirituality
+├── S7-L · 🧘 Spirituality
+└── S7-M · 🧭 Longitudinal Reviews & Life Wheel Synthesis
 ```
 
 ### Current life-sphere directions
@@ -61,6 +62,7 @@ It gives a scientific home to projects where the object of study is:
 - [S7-J · 🌿 Environmental or Charity](./S7-J%20%C2%B7%20%F0%9F%8C%BF%20Environmental%20or%20Charity/)
 - [S7-K · 👥 Personal Relationship](./S7-K%20%C2%B7%20%F0%9F%91%A5%20Personal%20Relationship/)
 - [S7-L · 🧘 Spirituality](./S7-L%20%C2%B7%20%F0%9F%A7%98%20Spirituality/)
+- [S7-M · 🧭 Longitudinal Reviews & Life Wheel Synthesis](./S7-M%20%C2%B7%20%F0%9F%A7%AD%20Longitudinal%20Reviews%20%26%20Life%20Wheel%20Synthesis/)
 
 ---
 
@@ -82,15 +84,27 @@ Current project inside this lane:
 - broader life-wheel assessment should be treated as a future cross-sphere synthesis, not mixed into every lane immediately
 
 That means:
-- sphere-specific analytics → inside `S7-A` to `S7-L`
-- broader synthesis across all 12 spheres → later as a separate longitudinal case
+- sphere-specific analytics -> inside `S7-A` to `S7-L`
+- broader synthesis across all 12 spheres -> inside `S7-M` as a dedicated longitudinal review lane
+
+### [S7-M · 🧭 Longitudinal Reviews & Life Wheel Synthesis](./S7-M%20%C2%B7%20%F0%9F%A7%AD%20Longitudinal%20Reviews%20%26%20Life%20Wheel%20Synthesis/)
+
+This is the meta-lane for one-pass reviews across all life spheres at once.
+Use it when you do not want to maintain 12 separate annual review files.
+
+Best fit:
+- one overall yearly review across all 12 spheres
+- one 5-year review across all 12 spheres
+- effort-versus-satisfaction synthesis
+- total time allocation and worth-it analysis
+- life-wheel snapshots that summarize the whole system in one place
 
 ---
 
 ## Public-case bridge
 
 Primary scientific home:
-- `📚 S7 — K Life OS`
+- `📚 S7 - K Life OS`
 
 Current scientific sub-lane:
 - `S7-I · 🔎 Career or Education`
@@ -102,4 +116,3 @@ Optional public-case mirror:
 - `E4-B · Learning & Preparation Cases`
 
 So master prep can be shown publicly later without losing its scientific framing.
-
