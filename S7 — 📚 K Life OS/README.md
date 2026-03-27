@@ -101,7 +101,7 @@ Best fit:
 
 ---
 
-## Public-case bridge
+## Current project placement
 
 Primary scientific home:
 - `📚 S7 - K Life OS`
@@ -112,8 +112,6 @@ Current scientific sub-lane:
 Current project:
 - `R1 - Master Prep Analytics`
 
-Optional public-case mirror:
-- `E4-B · Learning & Preparation Cases`
 
-So master prep can be shown publicly later without losing its scientific framing.
+This keeps master prep inside the science-facing structure without mixing it with other spheres.
 

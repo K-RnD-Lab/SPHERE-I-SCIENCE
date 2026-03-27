@@ -74,7 +74,6 @@ This means:
 - **primary scientific home** → `📚 S7 — K Life OS`
 - **scientific sub-lane** → `S7-I · 🔎 Career or Education`
 - **current project** → `R1 - Master Prep Analytics`
-- **optional public-case mirror** → `E4-B · Learning & Preparation Cases`
 
 ---
 
