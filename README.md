@@ -28,7 +28,7 @@ It first shows the full science structure, and then points to the active or emer
 - [⚗️ S4 — Biochemistry & Metabolomics](./S4%20-%20%E2%9A%97%EF%B8%8F%20Biochemistry%20%26%20Metabolomics/)
 - [🧠 S5 — Neuroscience & Aging](./S5%20-%20%F0%9F%A7%A0%20Neuroscience%20%26%20Aging/)
 - [🌍 S6 — Ecology & Environmental Science](./S6%20-%20%F0%9F%8C%8D%20Ecology%20%26%20Environmental%20Science/)
-- [📚 S7 — Learning, Cognition & Adaptive Systems](./S7%20-%20Learning,%20Cognition%20%26%20Adaptive%20Systems/)
+- [📚 S7 — Learning, Cognition & Adaptive Systems](./S7%20%E2%80%94%20%F0%9F%93%9A%20Learning,%20Cognition%20%26%20Adaptive%20Systems/)
 
 ```text
 SPHERE I — SCIENCE
@@ -71,7 +71,7 @@ Not because admission itself is “science”, but because the object of study h
 - human performance over time
 
 Current S7 entry point:
-- [S7-R1 — Master Prep Analytics](./S7%20-%20Learning,%20Cognition%20%26%20Adaptive%20Systems/)
+- [S7-R1 — Master Prep Analytics](./S7%20%E2%80%94%20%F0%9F%93%9A%20Learning,%20Cognition%20%26%20Adaptive%20Systems/)
 
 This means:
 - **primary scientific home** → `S7`
@@ -94,4 +94,3 @@ All computational models are research-grade and experimental. Results labeled si
 
 *Built with Python · Gradio · scikit-learn · pandas · matplotlib*  
 *© 2026 Oksana Kolisnyk · KOSATIKS GROUP · MIT License*
-
