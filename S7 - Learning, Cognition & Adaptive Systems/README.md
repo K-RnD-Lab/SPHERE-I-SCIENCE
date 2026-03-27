@@ -47,7 +47,7 @@ It is a structured research-and-operations layer for studying how preparation ev
 ## Suggested future S7 structure
 
 ```text
-S7 — Learning, Cognition & Adaptive Systems
+📚 S7 — Learning, Cognition & Adaptive Systems
 │
 ├── S7-R1  Master Prep Analytics
 ├── S7-R2  Learning Workflow Studies
@@ -59,9 +59,10 @@ S7 — Learning, Cognition & Adaptive Systems
 ## Public-case bridge
 
 Primary scientific home:
-- `S7 — Learning, Cognition & Adaptive Systems`
+- `📚 S7 — Learning, Cognition & Adaptive Systems`
 
 Optional public-case mirror:
 - `E4 — Applied Investigations & Public Cases`
 
 So master prep can be shown publicly later without losing its scientific framing.
+
