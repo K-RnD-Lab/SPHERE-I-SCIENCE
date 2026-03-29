@@ -532,7 +532,7 @@ function cacheDom() {
     'export-json-btn', 'export-csv-btn', 'import-json-input', 'reset-state-btn',
     'materials-grid', 'resource-links-grid', 'practice-stats', 'practice-panel', 'practice-info',
     'simulation-stats', 'simulation-panel', 'simulation-meta', 'summary-grid', 'logs-list',
-    'manual-source-input', 'manual-mode-select', 'manual-total-input', 'manual-correct-input', 'manual-minutes-input', 'manual-notes-input', 'save-manual-log-btn',
+    'manual-source-input', 'manual-mode-select', 'manual-total-input', 'manual-correct-input', 'manual-minutes-input', 'manual-notes-input', 'save-manual-log-btn', 'sync-status',
     'start-practice-btn', 'next-practice-btn', 'finish-practice-btn', 'start-simulation-btn', 'next-simulation-btn', 'finish-simulation-btn'
   ].forEach((id) => {
     el[toKey(id)] = document.getElementById(id);
@@ -575,13 +575,12 @@ async function postRowToSheet(type, row) {
   }
 
   try {
-    const form = new URLSearchParams();
-    form.set('type', type);
-    form.set('row', JSON.stringify(row));
-
     const response = await fetch(endpoint, {
       method: 'POST',
-      body: form,
+      headers: {
+        'Content-Type': 'text/plain;charset=utf-8',
+      },
+      body: JSON.stringify({ type, row }),
     });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const payload = await response.json();
