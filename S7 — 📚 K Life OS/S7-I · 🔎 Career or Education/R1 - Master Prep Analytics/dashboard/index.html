@@ -89,7 +89,7 @@
               <p class="eyebrow" data-i18n="targetEyebrow">Target tracking</p>
               <h2 data-i18n="targetTitle">How close you are to the score goal</h2>
             </div>
-            <p class="summary-copy" id="target-summary"></p>
+            <p class="summary-copy goal-reality-summary" id="target-summary"></p>
           </div>
           <div class="target-grid" id="target-grid"></div>
         </section>
@@ -112,7 +112,7 @@
             <p class="eyebrow" data-i18n="goalEyebrow">Goal vs Reality</p>
             <h2 data-i18n="goalTitle">Large subject cards for target, estimate, and real result</h2>
           </div>
-          <p class="summary-copy" id="goal-vs-reality-summary"></p>
+          <p class="summary-copy goal-reality-summary" id="goal-vs-reality-summary"></p>
         </div>
         <div id="goal-vs-reality" class="goal-vs-reality-grid"></div>
       </section>
@@ -126,10 +126,20 @@
         </div>
         <div id="insights-grid" class="insights-grid"></div>
       </section>
+
+      <section class="panel trainer-bridge">
+        <div class="panel-head trainer-bridge__head">
+          <div>
+            <p class="eyebrow" data-i18n="trainerEyebrow">Interactive workspace</p>
+            <h2 data-i18n="trainerTitle">Practice and simulation trainer</h2>
+          </div>
+          <a class="trainer-link" href="./trainer/trainer.html" target="_blank" rel="noreferrer" data-i18n="openTrainer">Open full trainer</a>
+        </div>
+        <p class="summary-copy trainer-bridge__copy" data-i18n="trainerSummary">This is the same trainer workspace moved into the research case so people can inspect the actual preparation environment, not only the analytics layer.</p>
+      </section>
     </section>
 
-
-    <section class="tab-panel" data-panel="trainer">
+<section class="tab-panel" data-panel="trainer">
       <div class="two-col-layout trainer-layout">
         <section class="panel trainer-panel">
           <div class="panel-head">
@@ -287,7 +297,7 @@
     </section>
   </main>
   <script src="config.js"></script>
-  <script src="app.js?v=20260329e2"></script>
+  <script src="app.js?v=20260329f1"></script>
 </body>
 </html>
 

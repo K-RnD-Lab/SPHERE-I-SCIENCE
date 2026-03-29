@@ -29,7 +29,7 @@ const COPY = {
     goalSummarySuffix1: 'subjects are at or above target. Actual exam scores logged for', goalSummarySuffix2: 'subjects.', noTrend: 'No session trend yet. Log a few sessions to unlock the line chart.', firstLabel: 'First', latestLabel: 'Latest',
     insightStrongest: 'Strongest subject', insightWeakest: 'Weakest subject', insightMode: 'Most used mode', insightInternal: 'Internal vs external', insightTrainVsSim: 'Training vs simulation', insightInterpretation: 'Interpretation',
     subjectBreakdownEmpty: 'No subject breakdown for this filter yet.', modeBreakdownEmpty: 'No mode rows yet.', chartEmpty: 'Not enough data for this chart yet.', studyLoad: 'Study load', avgAccuracy: 'Average accuracy', targetProgress: 'Target score progress', rowsLabel: 'rows', openSource: 'Open source', resourceSummary: 'Showing {count} source cards for {label}. Learn-stage sources should be used before larger test batches.', noResources: 'No resource rows found for this filter.', noRows: 'No rows for this filter yet.',
-    target: 'Target', predicted: 'Predicted', actual: 'Actual', pointsAbove: 'points above target', pointsLeft: 'points left', setTargetHint: 'Set target and predicted score to unlock gap tracking.', statusGoalReached: 'Goal reached', statusOnTrack: 'On track', statusClose: 'Close', statusNeedsPush: 'Needs push', currentEstimate: 'Current estimate', worthIt: 'Worth-it score', needsStudyMinutes: 'Need study minutes to estimate', accuracyPerHour: 'accuracy-points per hour', scoreDataNeeded: 'Need more score data', pointsToTarget: 'points left to target', actualVsPredicted: 'actual vs predicted', internal: 'internal', external: 'external', training: 'training', simulation: 'simulation', review: 'review', unknown: 'unknown', notEnoughData: 'Not enough data yet',
+    target: 'Target', predicted: '\u041f\u0440\u043e\u0433\u043d\u043e\u0437', actual: '\u0420\u0435\u0430\u043b\u044c\u043d\u0438\u0439 \u0431\u0430\u043b', pointsAbove: 'points above target', pointsLeft: 'points left', setTargetHint: 'Set target and predicted score to unlock gap tracking.', statusGoalReached: 'Goal reached', statusOnTrack: 'On track', statusClose: 'Close', statusNeedsPush: 'Needs push', currentEstimate: 'Current estimate', worthIt: 'Worth-it score', needsStudyMinutes: 'Need study minutes to estimate', accuracyPerHour: 'accuracy-points per hour', scoreDataNeeded: 'Need more score data', pointsToTarget: 'points left to target', actualVsPredicted: 'actual vs predicted', internal: 'internal', external: 'external', training: 'training', simulation: 'simulation', review: 'review', unknown: 'unknown', notEnoughData: 'Not enough data yet',
     insightNarrativeNoData: 'Start logging practice and simulation rows to unlock real readiness signals.', insightNarrativeTargets: '{done}/{total} subject targets are already being met or exceeded.', insightNarrativeEfficient: 'Strong efficiency signal: relatively modest logged study time is already producing high accuracy.', insightNarrativeNeedSim: 'You have practice data, but no simulation baseline yet. Add full-run sessions before making readiness claims.', insightNarrativeGeneral: 'The dashboard now has enough structure to show growth, score gaps, and readiness movement over time.',
     sessionId: 'Session ID', date: 'Date', subject: 'Subject', platform: 'Platform', mode: 'Mode', questionsTotal: 'Questions', correct: 'Correct', accuracyPct: 'Accuracy %', minutes: 'Minutes', sessionLabel: 'Session label', predictedScore: 'Predicted score', actualScore: 'Actual score', notes: 'Notes', resourceTitle: 'Resource', resourceType: 'Resource type', stage: 'Stage', focusScore: 'Focus score', energyLevel: 'Energy level',
   },
@@ -173,8 +173,8 @@ const UK_OVERRIDES = {
   noResources: 'Для цього фільтра поки немає ресурсів.',
   noRows: 'Поки немає рядків.',
   target: 'Ціль',
-  predicted: 'Predicted',
-  actual: 'Actual',
+  predicted: '\u041f\u0440\u043e\u0433\u043d\u043e\u0437',
+  actual: '\u0420\u0435\u0430\u043b\u044c\u043d\u0438\u0439 \u0431\u0430\u043b',
   pointsAbove: 'балів вище',
   pointsLeft: 'балів до цілі',
   setTargetHint: 'Задай target у config.js',
@@ -188,7 +188,7 @@ const UK_OVERRIDES = {
   accuracyPerHour: 'Точність за годину',
   scoreDataNeeded: 'Поки недостатньо даних по балах',
   pointsToTarget: 'балів до цілі',
-  actualVsPredicted: 'Actual vs predicted',
+  actualVsPredicted: '\u0420\u0435\u0430\u043b\u044c\u043d\u0438\u0439 \u043f\u0440\u043e\u0442\u0438 \u043f\u0440\u043e\u0433\u043d\u043e\u0437\u0443',
   internal: 'Внутрішні',
   external: 'Зовнішні',
   training: 'Тренування',
@@ -533,7 +533,7 @@ function getCurrentSubjectCards(sessionRows) {
 function renderTargetCard(card) {
   const gap = Number.isFinite(card.targetScore) && Number.isFinite(card.currentScoreValue) ? round(card.targetScore - card.currentScoreValue, 1) : NaN;
   const statusText = Number.isFinite(gap) ? (gap <= 0 ? `${Math.abs(gap)} ${t('pointsAbove')}` : `${gap} ${t('pointsLeft')}`) : t('setTargetHint');
-  return `<article class="target-card"><div class="target-topline"><strong>${escapeHtml(subjectLabel(card.subject))}</strong><span class="target-score">${escapeHtml(card.currentScoreLabel)}</span></div><p>${escapeHtml(t('target'))} ${escapeHtml(card.targetLabel)} ? ${escapeHtml(t('predicted'))} ${escapeHtml(card.predictedLabel)} ? ${escapeHtml(t('actual'))} ${escapeHtml(card.actualLabel)}</p><div class="progress-track"><div class="progress-bar${card.progressPercent >= 100 ? ' is-over' : ''}" style="width:${Math.max(card.progressPercent, 4)}%"></div></div><div class="progress-meta"><span>${escapeHtml(statusText)}</span><strong>${escapeHtml(`${round(card.progressPercent || 0)}%`)}</strong></div></article>`;
+  return `<article class="target-card"><div class="target-topline"><strong>${escapeHtml(subjectLabel(card.subject))}</strong><span class="target-score">${escapeHtml(card.currentScoreLabel)}</span></div><div class="target-meta-list"><div class="target-meta-item"><span>${escapeHtml(t('target'))}</span><strong>${escapeHtml(card.targetLabel)}</strong></div><div class="target-meta-item"><span>${escapeHtml(t('predicted'))}</span><strong>${escapeHtml(card.predictedLabel)}</strong></div><div class="target-meta-item"><span>${escapeHtml(t('actual'))}</span><strong>${escapeHtml(card.actualLabel)}</strong></div></div><div class="progress-track"><div class="progress-bar${card.progressPercent >= 100 ? ' is-over' : ''}" style="width:${Math.max(card.progressPercent, 4)}%"></div></div><div class="progress-meta"><span>${escapeHtml(statusText)}</span><strong>${escapeHtml(`${round(card.progressPercent || 0)}%`)}</strong></div></article>`;
 }
 
 function goalStateLabel(card, gap) {
