@@ -4,22 +4,26 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>S7-I / R1 Master Prep Analytics</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20260329d1">
 </head>
 <body>
   <main class="shell">
     <section class="hero">
       <div class="hero-copy">
-        <p class="eyebrow">K R&amp;D Lab / S7-I / R1</p>
-        <h1>Master Prep Analytics</h1>
-        <p class="hero-text">
+        <p class="eyebrow" data-i18n="heroEyebrow">K R&amp;D Lab / S7-I / R1</p>
+        <h1 data-i18n="heroTitle">Master Prep Analytics</h1>
+        <p class="hero-text" data-i18n="heroText">
           A blue research cockpit for preparation tracking: study blocks, training sessions,
           simulation quality, target-score progress, and evidence-based readiness signals.
         </p>
       </div>
       <div class="hero-side">
+        <div class="lang-switch" aria-label="Language switch">
+          <button class="lang-pill is-active" data-lang="en" type="button">EN</button>
+          <button class="lang-pill" data-lang="uk" type="button">UA</button>
+        </div>
         <div class="goal-chip">
-          <span class="goal-chip__label">Current mode</span>
+          <span class="goal-chip__label" data-i18n="currentMode">Current mode</span>
           <strong id="source-status">Loading data...</strong>
         </div>
         <div class="link-grid" id="project-links"></div>
@@ -29,10 +33,10 @@
     <section class="panel filters-panel">
       <div class="panel-head">
         <div>
-          <p class="eyebrow">Inputs</p>
-          <h2>Current focus and fallback imports</h2>
+          <p class="eyebrow" data-i18n="inputsEyebrow">Inputs</p>
+          <h2 data-i18n="inputsTitle">Current focus and fallback imports</h2>
         </div>
-        <p class="summary-copy">
+        <p class="summary-copy" data-i18n="inputsSummary">
           Live Google Sheet data is the main source. CSV uploads are only a manual fallback for snapshots,
           recovery, or testing.
         </p>
@@ -40,9 +44,9 @@
 
       <div class="filter-grid">
         <label>
-          <span>Subject focus</span>
+          <span data-i18n="subjectFocus">Subject focus</span>
           <select id="subject-filter">
-            <option value="all">All subjects</option>
+            <option value="all" data-i18n="subjectAll">All subjects</option>
             <option value="tznk">TZNK</option>
             <option value="english">English</option>
             <option value="it">IT</option>
@@ -52,14 +56,14 @@
       </div>
 
       <details class="manual-imports">
-        <summary>Manual CSV fallback</summary>
+        <summary data-i18n="manualFallback">Manual CSV fallback</summary>
         <div class="filter-grid manual-imports__grid">
           <label>
-            <span>Study log CSV</span>
+            <span data-i18n="studyCsv">Study log CSV</span>
             <input id="study-file" type="file" accept=".csv,text/csv">
           </label>
           <label>
-            <span>Session log CSV</span>
+            <span data-i18n="sessionCsv">Session log CSV</span>
             <input id="session-file" type="file" accept=".csv,text/csv">
           </label>
         </div>
@@ -69,12 +73,12 @@
     <section class="metrics-grid" id="metrics"></section>
 
     <section class="tabbar" id="tabbar">
-      <button class="tab is-active" data-tab="overview" type="button">Overview</button>
-      <button class="tab" data-tab="trainer" type="button">Trainer</button>
-      <button class="tab" data-tab="subjects" type="button">Subjects</button>
-      <button class="tab" data-tab="charts" type="button">Charts</button>
-      <button class="tab" data-tab="efficiency" type="button">Efficiency</button>
-      <button class="tab" data-tab="sessions" type="button">Sessions</button>
+      <button class="tab is-active" data-tab="overview" type="button" data-i18n="tabOverview">Overview</button>
+      <button class="tab" data-tab="trainer" type="button" data-i18n="tabTrainer">Trainer</button>
+      <button class="tab" data-tab="subjects" type="button" data-i18n="tabSubjects">Subjects</button>
+      <button class="tab" data-tab="charts" type="button" data-i18n="tabCharts">Charts</button>
+      <button class="tab" data-tab="efficiency" type="button" data-i18n="tabEfficiency">Efficiency</button>
+      <button class="tab" data-tab="sessions" type="button" data-i18n="tabSessions">Sessions</button>
     </section>
 
     <section class="tab-panel is-active" data-panel="overview">
@@ -82,8 +86,8 @@
         <section class="panel">
           <div class="panel-head">
             <div>
-              <p class="eyebrow">Target tracking</p>
-              <h2>How close you are to the score goal</h2>
+              <p class="eyebrow" data-i18n="targetEyebrow">Target tracking</p>
+              <h2 data-i18n="targetTitle">How close you are to the score goal</h2>
             </div>
             <p class="summary-copy" id="target-summary"></p>
           </div>
@@ -93,10 +97,10 @@
         <section class="panel">
           <div class="panel-head">
             <div>
-              <p class="eyebrow">Accuracy trend</p>
-              <h2>Session trajectory over time</h2>
+              <p class="eyebrow" data-i18n="trendEyebrow">Accuracy trend</p>
+              <h2 data-i18n="trendTitle">Session trajectory over time</h2>
             </div>
-            <p class="summary-copy">Current estimate is based on the latest predicted or actual score when available.</p>
+            <p class="summary-copy" data-i18n="trendSummary">Current estimate is based on the latest predicted or actual score when available.</p>
           </div>
           <div id="trend-chart" class="chart-card"></div>
         </section>
@@ -105,8 +109,8 @@
       <section class="panel">
         <div class="panel-head">
           <div>
-            <p class="eyebrow">Goal vs Reality</p>
-            <h2>Large subject cards for target, estimate, and real result</h2>
+            <p class="eyebrow" data-i18n="goalEyebrow">Goal vs Reality</p>
+            <h2 data-i18n="goalTitle">Large subject cards for target, estimate, and real result</h2>
           </div>
           <p class="summary-copy" id="goal-vs-reality-summary"></p>
         </div>
@@ -116,8 +120,8 @@
       <section class="panel">
         <div class="panel-head">
           <div>
-            <p class="eyebrow">Signals</p>
-            <h2>What the current data suggests</h2>
+            <p class="eyebrow" data-i18n="signalsEyebrow">Signals</p>
+            <h2 data-i18n="signalsTitle">What the current data suggests</h2>
           </div>
         </div>
         <div id="insights-grid" class="insights-grid"></div>
@@ -130,13 +134,13 @@
         <section class="panel trainer-panel">
           <div class="panel-head">
             <div>
-              <p class="eyebrow">Interactive workspace</p>
-              <h2>Practice and simulation trainer</h2>
+              <p class="eyebrow" data-i18n="trainerEyebrow">Interactive workspace</p>
+              <h2 data-i18n="trainerTitle">Practice and simulation trainer</h2>
             </div>
-            <p class="summary-copy">This is the same trainer workspace moved into the research case so people can inspect the actual preparation environment, not only the analytics layer.</p>
+            <p class="summary-copy" data-i18n="trainerSummary">This is the same trainer workspace moved into the research case so people can inspect the actual preparation environment, not only the analytics layer.</p>
           </div>
           <div class="trainer-actions">
-            <a class="trainer-link" href="./trainer/trainer.html" target="_blank" rel="noreferrer">Open full trainer</a>
+            <a class="trainer-link" href="./trainer/trainer.html" target="_blank" rel="noreferrer" data-i18n="openTrainer">Open full trainer</a>
           </div>
           <div class="trainer-frame-wrap">
             <iframe class="trainer-frame" src="./trainer/trainer.html" title="Master Prep Trainer"></iframe>
@@ -146,22 +150,22 @@
         <section class="panel trainer-side-panel">
           <div class="panel-head">
             <div>
-              <p class="eyebrow">Current status</p>
-              <h2>How this trainer fits the case</h2>
+              <p class="eyebrow" data-i18n="trainerStatusEyebrow">Current status</p>
+              <h2 data-i18n="trainerStatusTitle">How this trainer fits the case</h2>
             </div>
           </div>
           <div class="stack-grid">
             <article class="stack-card">
-              <strong>What it already does</strong>
-              <span>Runs training sessions, simulations, study logs, exports, and local progress persistence.</span>
+              <strong data-i18n="trainerCard1Title">What it already does</strong>
+              <span data-i18n="trainerCard1Body">Runs training sessions, simulations, study logs, exports, and local progress persistence.</span>
             </article>
             <article class="stack-card">
-              <strong>What comes next</strong>
-              <span>We can connect its log actions to the same Apps Script endpoint so training events write into Google Sheet automatically.</span>
+              <strong data-i18n="trainerCard2Title">What comes next</strong>
+              <span data-i18n="trainerCard2Body">We can connect its log actions to the same Apps Script endpoint so training events write into Google Sheet automatically.</span>
             </article>
             <article class="stack-card">
-              <strong>Why it matters publicly</strong>
-              <span>The dashboard shows the results, while this trainer proves the underlying environment and workflow were real.</span>
+              <strong data-i18n="trainerCard3Title">Why it matters publicly</strong>
+              <span data-i18n="trainerCard3Body">The dashboard shows the results, while this trainer proves the underlying environment and workflow were real.</span>
             </article>
           </div>
         </section>
@@ -172,8 +176,8 @@
         <section class="panel">
           <div class="panel-head">
             <div>
-              <p class="eyebrow">Subject picture</p>
-              <h2>Average accuracy and study load</h2>
+              <p class="eyebrow" data-i18n="subjectEyebrow">Subject picture</p>
+              <h2 data-i18n="subjectTitle">Average accuracy and study load</h2>
             </div>
           </div>
           <div id="subject-breakdown" class="stack-grid"></div>
@@ -182,8 +186,8 @@
         <section class="panel">
           <div class="panel-head">
             <div>
-              <p class="eyebrow">Mode pattern</p>
-              <h2>Training versus simulation</h2>
+              <p class="eyebrow" data-i18n="modeEyebrow">Mode pattern</p>
+              <h2 data-i18n="modeTitle">Training versus simulation</h2>
             </div>
           </div>
           <div id="mode-breakdown" class="stack-grid"></div>
@@ -193,8 +197,8 @@
       <section class="panel">
         <div class="panel-head">
           <div>
-            <p class="eyebrow">Preparation sources</p>
-            <h2>Resource map</h2>
+            <p class="eyebrow" data-i18n="resourcesEyebrow">Preparation sources</p>
+            <h2 data-i18n="resourcesTitle">Resource map</h2>
           </div>
           <p id="resource-summary" class="summary-copy"></p>
         </div>
@@ -207,8 +211,8 @@
         <section class="panel">
           <div class="panel-head">
             <div>
-              <p class="eyebrow">Chart layer</p>
-              <h2>Accuracy vs target by subject</h2>
+              <p class="eyebrow" data-i18n="chartsEyebrow">Chart layer</p>
+              <h2 data-i18n="chartAccuracyTitle">Accuracy vs target by subject</h2>
             </div>
           </div>
           <div id="accuracy-target-chart" class="chart-card"></div>
@@ -217,8 +221,8 @@
         <section class="panel">
           <div class="panel-head">
             <div>
-              <p class="eyebrow">Chart layer</p>
-              <h2>Study minutes by subject</h2>
+              <p class="eyebrow" data-i18n="chartsEyebrow">Chart layer</p>
+              <h2 data-i18n="chartStudyTitle">Study minutes by subject</h2>
             </div>
           </div>
           <div id="study-minutes-chart" class="chart-card"></div>
@@ -227,8 +231,8 @@
         <section class="panel">
           <div class="panel-head">
             <div>
-              <p class="eyebrow">Chart layer</p>
-              <h2>Sessions by mode</h2>
+              <p class="eyebrow" data-i18n="chartsEyebrow">Chart layer</p>
+              <h2 data-i18n="chartModeTitle">Sessions by mode</h2>
             </div>
           </div>
           <div id="mode-chart" class="chart-card"></div>
@@ -237,8 +241,8 @@
         <section class="panel">
           <div class="panel-head">
             <div>
-              <p class="eyebrow">Chart layer</p>
-              <h2>Effort vs accuracy</h2>
+              <p class="eyebrow" data-i18n="chartsEyebrow">Chart layer</p>
+              <h2 data-i18n="chartEffortTitle">Effort vs accuracy</h2>
             </div>
           </div>
           <div id="effort-accuracy-chart" class="chart-card"></div>
@@ -251,8 +255,8 @@
         <section class="panel">
           <div class="panel-head">
             <div>
-              <p class="eyebrow">Efficiency</p>
-              <h2>Return on effort</h2>
+              <p class="eyebrow" data-i18n="efficiencyEyebrow">Efficiency</p>
+              <h2 data-i18n="efficiencyTitle">Return on effort</h2>
             </div>
           </div>
           <div id="efficiency-grid" class="insights-grid"></div>
@@ -261,8 +265,8 @@
         <section class="panel">
           <div class="panel-head">
             <div>
-              <p class="eyebrow">Score gap</p>
-              <h2>Predicted versus actual</h2>
+              <p class="eyebrow" data-i18n="scoreGapEyebrow">Score gap</p>
+              <h2 data-i18n="scoreGapTitle">Predicted versus actual</h2>
             </div>
           </div>
           <div id="score-gap-grid" class="stack-grid"></div>
@@ -272,18 +276,18 @@
 
     <section class="tab-panel" data-panel="sessions">
       <section class="panel">
-        <h2>Recent sessions</h2>
+        <h2 data-i18n="sessionsTitle">Recent sessions</h2>
         <div id="sessions-table"></div>
       </section>
 
       <section class="panel">
-        <h2>Study blocks</h2>
+        <h2 data-i18n="studyBlocksTitle">Study blocks</h2>
         <div id="study-table"></div>
       </section>
     </section>
   </main>
   <script src="config.js"></script>
-  <script src="app.js"></script>
+  <script src="app.js?v=20260329d1"></script>
 </body>
 </html>
 
