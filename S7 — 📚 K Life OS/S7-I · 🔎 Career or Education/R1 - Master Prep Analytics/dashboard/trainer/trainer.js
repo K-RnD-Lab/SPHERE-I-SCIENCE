@@ -68,6 +68,10 @@ const UI = {
     practiceSizeLabel: 'Practice Batch',
     sessionLabel: 'Session Label',
     workspaceLogNote: 'This site does not pull logs from external platforms automatically. It saves built-in sessions and any manual entries you add.',
+    sheetSyncConnected: 'Google Sheet sync is connected. New logs will try to save live.',
+    sheetSyncMissing: 'Sheet sync is not connected yet. Logs are saved locally only.',
+    sheetSyncSaved: 'Saved to Google Sheet at',
+    sheetSyncFailed: 'Sheet sync failed. The log is still saved locally in this browser.',
     tabResources: 'Resources',
     tabPractice: 'Practice',
     tabSimulation: 'Simulation',
@@ -162,107 +166,111 @@ const UI = {
     heroEyebrow: 'ПРИВАТНИЙ ПРОСТІР ПІДГОТОВКИ',
     heroCopy: 'Легший prep-cockpit для ресурсів, короткої практики, симуляції та журналу сесій.',
     heroSubcopy: 'Логи створює сам цей сайт: або коли ти працюєш тут, або коли вручну заносиш зовнішню сесію.',
-    openHub: '????? ?? ???????????? ????',
+    openHub: 'Назад до аналітичного хаба',
     exportJson: 'Експорт JSON',
     exportCsv: 'Експорт CSV',
     importJson: 'Імпорт JSON',
     resetState: 'Скинути локальний стан',
     workspaceKicker: 'РОБОЧИЙ ПРОСТІР',
     workspaceTitle: 'Налаштування на сьогодні',
-    workspaceNote: 'Обери один предмет, пройди компактний блок і збережи історію так, щоб її потім було легко перенести в Google Sheets.',
+    workspaceNote: 'Виберіть одну тему, запустіть компактний пакет і зберігайте історію достатньо чистою, щоб потім експортувати її в Google Таблиці.',
     subjectLabel: 'Предмет',
     languageLabel: 'Мова інтерфейсу',
     practiceSizeLabel: 'Розмір практики',
     sessionLabel: 'Мітка сесії',
-    workspaceLogNote: 'Сайт не забирає логи із зовнішніх платформ автоматично. Він зберігає вбудовані сесії та ручні записи, які ти додаєш сама.',
+    workspaceLogNote: 'Цей сайт не отримує журнали із зовнішніх платформ автоматично. Він зберігає вбудовані сеанси та будь-які додані вами вручну записи.',
+    sheetSyncConnected: 'Синхронізація з Google Sheet підключена. Нові логи пробуватимуть зберігатися наживо.',
+    sheetSyncMissing: 'Синхронізацію з Sheet ще не підключено. Логи зберігаються лише локально.',
+    sheetSyncSaved: 'Збережено в Google Sheet о',
+    sheetSyncFailed: 'Синхронізація з Sheet не вдалася. Лог усе одно збережено локально в браузері.',
     tabResources: 'Ресурси',
     tabPractice: 'Практика',
     tabSimulation: 'Симуляція',
     tabLogs: 'Логи',
     materialsKicker: 'ОСНОВИ',
     materialsTitle: 'Навчальні блоки',
-    materialsCopy: 'Починай з понять, а не лише з сирих тестів. Відкрий джерело, повчися 15-45 хвилин і зафіксуй це тут.',
+    materialsCopy: 'Почніть із концепцій, а не лише з необроблених тестів. Відкрийте одне джерело, вивчіть 15-45 хвилин, а потім зареєструйте його тут.',
     resourceLinksKicker: 'ГОТОВІ РЕСУРСИ',
-    resourceLinksTitle: 'Де вчити теорію і де практикуватися',
-    resourceLinksCopy: 'Картки нижче розділяють джерела для вивчення, банки тестів і офіційні демо, щоб шлях був зрозумілішим.',
-    practiceKicker: 'КОРОТКИЙ БЛОК',
+    resourceLinksTitle: 'Де вчитися і де практикуватися',
+    resourceLinksCopy: 'Картки нижче відокремлюють джерела навчання від пулів тестування та офіційних демонстрацій, тому процес легше стежити.',
+    practiceKicker: 'КОРОТКИЙ ПРОБІГ',
     practiceTitle: 'Практична сесія',
-    startPractice: 'Почати практику',
+    startPractice: 'Розпочати практику',
     nextQuestion: 'Наступне питання',
-    finishPractice: 'Завершити й зберегти',
+    finishPractice: 'Фініш і журнал',
     practiceHowKicker: 'ЯК ЦЕ ПРАЦЮЄ',
-    practiceHowTitle: 'Що дають ці логи',
-    simulationKicker: 'ДОВШИЙ БЛОК',
+    practiceHowTitle: 'Що вам дає цей журнал',
+    simulationKicker: 'ДОВШИЙ БІГ',
     simulationTitle: 'Симуляція',
-    startSimulation: 'Почати симуляцію',
-    finishSimulation: 'Завершити й зберегти',
-    simulationMetaKicker: 'ЕКЗАМЕННИЙ РЕЖИМ',
-    simulationMetaTitle: 'Профіль сесії',
-    manualLogKicker: 'ЗОВНІШНЯ СЕСІЯ',
-    manualLogTitle: 'Швидкий лог',
-    manualLogCopy: 'Використовуй це, коли вчилася або тестувалася на іншій платформі, але хочеш мати один дашборд.',
+    startSimulation: 'Розпочати симуляцію',
+    finishSimulation: 'Фініш і журнал',
+    simulationMetaKicker: 'РЕЖИМ ЕКЗАМЕНУ',
+    simulationMetaTitle: 'Профіль сеансу',
+    manualLogKicker: 'ЗАСІДАННЯ',
+    manualLogTitle: 'Швидкий журнал',
+    manualLogCopy: 'Використовуйте це, якщо ви вивчали або перевіряли себе на іншій платформі, але все ще хочете мати інформаційну панель.',
     platformLabel: 'Платформа',
     modeLabel: 'Режим',
-    questionsLabel: 'Питань',
-    correctLabel: 'Правильних',
-    minutesLabel: 'Хвилини',
-    notesLabel: 'Нотатки',
-    saveManualLog: 'Зберегти швидкий лог',
-    logsKicker: 'ІСТОРІЯ СЕСІЙ',
-    logsTitle: 'Останні логи',
-    logsCopy: 'Експортуй CSV, щоб відкрити все в Google Sheets або додати знімки в K-R&D Lab.',
-    batchQuestions: 'питань',
+    questionsLabel: 'Питання',
+    correctLabel: 'Правильно',
+    minutesLabel: 'хвилин',
+    notesLabel: 'Примітки',
+    saveManualLog: 'Зберегти швидкий журнал',
+    logsKicker: 'ІСТОРІЯ СЕСІЇ',
+    logsTitle: 'Останні журнали',
+    logsCopy: 'Експортуйте файл CSV, щоб відкрити все в Google Таблицях, або пізніше додайте знімки до K-R&D Lab.',
+    batchQuestions: 'запитання',
     studyMinutes: 'хвилин',
-    totalStudy: 'Хвилини навчання',
-    totalSessions: 'Збережені сесії',
+    totalStudy: 'Навчальний протокол',
+    totalSessions: 'Зареєстровані сесії',
     totalAccuracy: 'Середня точність',
     lastActivity: 'Остання активність',
-    noLogs: 'Поки що немає логів. Почни з одного навчального блоку, короткої практики або ручного зовнішнього запису.',
-    noQuestion: 'Почни практичну сесію, щоб завантажити перше питання.',
-    noSimulation: 'Почни симуляцію, щоб завантажити екзаменний прогін.',
-    materialButton: 'Відкрити джерело',
+    noLogs: 'Журналів ще немає. Почніть з одного навчального блоку, однієї короткої пробіжки або одного ручного зовнішнього журналу.',
+    noQuestion: 'Почніть практикум, щоб завантажити перше запитання.',
+    noSimulation: 'Розпочніть симуляцію, щоб завантажити цикл іспиту.',
+    materialButton: 'Відкритий код',
     log15: '+15 хв',
     log25: '+25 хв',
     log45: '+45 хв',
-    logged: 'Збережено',
+    logged: 'Зареєстровано',
     practiceInfo1Title: 'Вбудоване відстеження',
-    practiceInfo1Body: 'Коли ти відповідаєш на питання тут, сайт автоматично фіксує предмет, мітку сесії, час і точність.',
-    practiceInfo2Title: 'Зовнішнє навчання теж враховується',
-    practiceInfo2Body: 'Якщо ти користуєшся Testportal, Osvita.ua, Connected або іншим джерелом, додай один швидкий лог і тримай історію в одному місці.',
-    practiceInfo3Title: 'CSV-first підхід',
-    practiceInfo3Body: 'Твій довгостроковий дашборд краще вести в Google Sheets або K-R&D Lab. Цей сайт готує чисті експорти для цього.',
+    practiceInfo1Body: 'Коли ви відповідаєте на запитання тут, сайт автоматично записує тему, мітку сеансу, час і точність.',
+    practiceInfo2Title: 'ЗНО ще підходить',
+    practiceInfo2Body: 'Якщо ви використовуєте Тестпортал, Освіта.ua, На зв’язку чи інше джерело, додайте один швидкий журнал і зберігайте історію в одному місці.',
+    practiceInfo3Title: 'CSV-перший потік',
+    practiceInfo3Body: 'Ваша довгострокова інформаційна панель має бути в Google Таблицях або K-R&D Lab. Цей сайт готує чистий експорт для цього.',
     modePractice: 'Практика',
     modeSimulation: 'Симуляція',
     modeReview: 'Повторення',
     subject_tznk: 'ТЗНК',
     subject_english: 'Англійська',
     subject_it: 'ІТ',
-    sessionCompleted: 'Сесію завершено й збережено.',
+    sessionCompleted: 'Сеанс завершено та зареєстровано.',
     answerCorrect: 'Правильно.',
-    answerIncorrect: 'Неправильно.',
-    chooseAnswer: 'Спершу обери відповідь.',
-    simulationLimited: 'Вбудований банк менший за реальний іспит, тому симуляція використовує доступні зараз питання цього предмета.',
-    resourcesLearn: 'Вивчення понять',
-    resourcesPractice: 'Банки практики',
-    resourcesOfficial: 'Офіційні демо',
-    openResource: 'Відкрити ресурс',
-    manualSaved: 'Швидкий лог збережено.',
-    ownerOnly: 'Керування лише для owner-mode',
-    checkAnswer: 'Перевірити відповідь',
-    finishAndSeeNext: 'Спершу перевір відповідь, потім переходь далі через Наступне питання.',
-    currentQuestion: 'Поточне питання',
+    answerIncorrect: 'Невірно.',
+    chooseAnswer: 'Спочатку виберіть відповідь.',
+    simulationLimited: 'Вбудований банк менший, ніж реальний іспит, тому симуляція використовує доступні на даний момент питання для цього предмету.',
+    resourcesLearn: 'Вивчайте поняття',
+    resourcesPractice: 'Практичні басейни',
+    resourcesOfficial: 'Офіційні демоверсії',
+    openResource: 'Відкритий ресурс',
+    manualSaved: 'Швидкий журнал збережено.',
+    ownerOnly: 'Контроль тільки власника',
+    checkAnswer: 'Перевірте відповідь',
+    finishAndSeeNext: 'Перевірте відповідь, а потім перейдіть до наступного запитання.',
+    currentQuestion: 'Актуальне питання',
     progress: 'Прогрес',
-    score: 'Результат',
-    sourceTypeLearn: 'Теорія',
+    score: 'Оцінка',
+    sourceTypeLearn: 'вчитися',
     sourceTypePractice: 'Практика',
-    sourceTypeOfficial: 'Офіційно',
-    sourceTypeExtra: 'Додатково',
-    sessionReady: 'Сесію підготовлено',
-    simulationReady: 'Симуляцію підготовлено',
-    practiceEmpty: 'Для цього предмета в локальному банку не знайдено питань.',
-    simulationEmpty: 'Для цього предмета в локальному банку не знайдено питань для симуляції.',
-    manualSourcePlaceholder: 'Connected / Testportal / Osvita.ua',
-    manualNotesPlaceholder: 'логіка, граматика, слабкі місця, таймінг',
+    sourceTypeOfficial: 'Офіційний',
+    sourceTypeExtra: 'Екстра',
+    sessionReady: 'Сесія готова',
+    simulationReady: 'Симуляція готова',
+    practiceEmpty: 'У місцевому банку запитань на цю тему не знайдено.',
+    simulationEmpty: 'У місцевому банку не знайдено симуляційних запитань для цієї теми.',
+    manualSourcePlaceholder: 'На зв\'язку / Тестпортал / Освіта.ua',
+    manualNotesPlaceholder: 'логіка, граматика, слабкі місця, час',
     sessionPlaceholder: 's001',
   },
 };
@@ -565,7 +573,7 @@ async function init() {
 
   bindEvents();
 
-  setSyncStatus(getSyncEndpoint() ? 'Google Sheet sync is connected. New logs will try to save live.' : 'Sheet sync is not connected yet. Logs are saved locally only.', getSyncEndpoint() ? 'good' : 'warn');
+  setSyncStatus(getSyncEndpoint() ? t('sheetSyncConnected') : t('sheetSyncMissing'), getSyncEndpoint() ? 'good' : 'warn');
 
   renderAll();
 
@@ -661,7 +669,7 @@ async function postRowToSheet(type, row) {
 
   if (!endpoint) {
 
-    setSyncStatus('Sheet sync is not connected yet. Logs are saved locally only.', 'warn');
+    setSyncStatus(t('sheetSyncMissing'), 'warn');
 
     return false;
 
@@ -691,7 +699,7 @@ async function postRowToSheet(type, row) {
 
     if (!payload.ok) throw new Error(payload.error || 'Unknown sync error');
 
-    setSyncStatus(`Saved to Google Sheet at ${new Date().toLocaleTimeString()}.`, 'good');
+    setSyncStatus(`${t('sheetSyncSaved')} ${new Date().toLocaleTimeString()}.`, 'good');
 
     return true;
 
@@ -699,7 +707,7 @@ async function postRowToSheet(type, row) {
 
     console.warn('Sheet sync failed.', error);
 
-    setSyncStatus('Sheet sync failed. The log is still saved locally in this browser.', 'bad');
+    setSyncStatus(t('sheetSyncFailed'), 'bad');
 
     return false;
 
@@ -1148,37 +1156,39 @@ function applyI18n() {
 
 
 function renderControls() {
-
   const subjectOptions = Object.keys(SUBJECTS)
-
     .map((id) => `<option value="${id}" ${state.settings.subject === id ? 'selected' : ''}>${escapeHtml(t(`subject_${id}`))}</option>`)
-
     .join('');
-
   el.subjectSelect.innerHTML = subjectOptions;
 
-  el.languageSelect.value = state.settings.lang;
+  if (el.languageSelect) {
+    const languageOptions = [
+      ['en', state.settings.lang === 'uk' ? 'Англійська' : 'English'],
+      ['uk', state.settings.lang === 'uk' ? 'Українська' : 'Ukrainian'],
+    ]
+      .map(([value, label]) => `<option value="${value}" ${state.settings.lang === value ? 'selected' : ''}>${escapeHtml(label)}</option>`)
+      .join('');
+    el.languageSelect.innerHTML = languageOptions;
+    el.languageSelect.value = state.settings.lang;
+  }
 
-  el.practiceSizeSelect.value = String(state.settings.practiceSize);
+  if (el.practiceSizeSelect) {
+    const practiceLabel = state.settings.lang === 'uk' ? 'питань' : 'questions';
+    el.practiceSizeSelect.innerHTML = [5, 10, 15]
+      .map((size) => `<option value="${size}" ${state.settings.practiceSize === size ? 'selected' : ''}>${size} ${practiceLabel}</option>`)
+      .join('');
+    el.practiceSizeSelect.value = String(state.settings.practiceSize);
+  }
 
   el.sessionLabelInput.value = state.settings.sessionLabel;
 
-
-
   if (el.manualModeSelect) {
-
     el.manualModeSelect.innerHTML = [
-
       ['practice', t('modePractice')],
-
       ['simulation', t('modeSimulation')],
-
       ['review', t('modeReview')],
-
     ].map(([value, label]) => `<option value="${value}">${escapeHtml(label)}</option>`).join('');
-
   }
-
 }
 
 function renderMaterials() {

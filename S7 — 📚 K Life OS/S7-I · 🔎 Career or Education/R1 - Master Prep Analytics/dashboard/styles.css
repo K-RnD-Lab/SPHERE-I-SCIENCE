@@ -39,6 +39,9 @@ h1, h2, h3, strong { margin: 0; }
 }
 .hero-copy { display: grid; gap: 12px; }
 .hero-side { display: grid; gap: 14px; align-content: start; }
+.lang-switch { display: inline-flex; gap: 8px; justify-content: flex-end; }
+.lang-pill { min-width: 58px; min-height: 40px; border-radius: 999px; border: 1px solid var(--line); background: rgba(8, 20, 35, 0.68); color: var(--muted); font: inherit; font-weight: 700; cursor: pointer; }
+.lang-pill.is-active { color: var(--ink); background: linear-gradient(135deg, rgba(112, 214, 255, 0.18), rgba(138, 139, 255, 0.16)); border-color: rgba(112, 214, 255, 0.5); }
 .eyebrow {
   margin: 0;
   color: var(--accent);
