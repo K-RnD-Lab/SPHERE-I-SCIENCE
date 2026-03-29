@@ -1,0 +1,20 @@
+subject,resource_type,stage,title,url,priority,why_use
+all,official_calendar,orientation,UCEQA admissions 2026,https://testportal.gov.ua/vstupni-vyprobuvannya-u-2026-rotsi/,high,official current entry overview
+all,official_prep,orientation,UCEQA preparation index,https://testportal.gov.ua/pidgotovka-yefvv-yevi/,high,official hub for preparation materials
+all,official_schedule,orientation,UCEQA magistracy calendar 2026,https://testportal.gov.ua/vstupni-do-magistratury-j-aspirantury-u-2026-rotsi-kalendari-provedennya/,high,official timing and sessions
+tznk,official_structure,learn,UCEQA block overview,https://testportal.gov.ua/osoblyvosti-blokiv-tznk-ta-inozemna-mova-v-testi-yevi/,high,explains block structure and task logic
+tznk,concept_explainer,learn,Osvita.ua TZNK preparation article,https://osvita.ua/master/master-zno/91951/,high,concept-first explainer for task types and traps
+tznk,demo_pdf,official,TZNK demo PDF,https://testportal.gov.ua/wp-content/uploads/2024/04/TZNK_maket_sajt_2024_03_29_merged.pdf,high,shows real task format
+tznk,question_pool,practice,Osvita.ua TZNK list,https://zno.osvita.ua/master/tznpk/list.html,high,large pool for batch practice
+tznk,topic_batches,practice,Osvita.ua TZNK thematic tests,https://zno.osvita.ua/master/tznpk/tema.html,high,easier topic drilling
+tznk,extra_practice,practice,Connected tests,https://connected.com.ua/tests/,medium,extra logic-style practice
+english,official_program,learn,MON language program PDF,https://mon.gov.ua/static-objects/mon/uploads/public/661/687/704/66168770465de084402330.pdf,high,official language coverage and expectations
+english,test_archive,learn,Osvita.ua English master archive,https://zno.osvita.ua/master/english/,high,helps review recurring formats and topics
+english,demo,official,Testportal English demo,https://lv.testportal.gov.ua/testmktEnglish/,high,closest official run format
+english,question_pool,practice,Osvita.ua English list,https://zno.osvita.ua/master/english/list.html,high,all questions in one pool
+english,extra_practice,practice,MathCorporation English master quiz,https://www.mathcorporation.com/quizzes/english-master-zno?year=all,medium,extra interface and drill flow
+it,official_program,learn,MON IT program,https://mon.gov.ua/npa/pro-zatverdzhennya-programi-predmetnogo-testu-z-informacijnih-tehnologij-yedinogo-fahovogo-vstupnogo-viprobuvannya,high,official IT topic scope
+it,test_archive,learn,Osvita.ua IT archive,https://zno.osvita.ua/master/it/,high,shows recurring task types and topic mix
+it,question_pool,practice,Osvita.ua IT task pool,https://zno.osvita.ua/master/it/list.html,high,all available IT questions
+it,official_overview,official,UCEQA preparation index,https://testportal.gov.ua/pidgotovka-yefvv-yevi/,medium,official prep landing for updates and materials
+

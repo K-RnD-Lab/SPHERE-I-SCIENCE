@@ -1,0 +1,4 @@
+﻿session_id,date,subject,platform,mode,source_group,is_internal,questions_total,correct,accuracy_pct,minutes,session_label,predicted_score,actual_score,notes
+session-001,2026-03-26,tznk,Osvita.ua,training,external,false,10,7,70,18,s001,,,logic batch
+session-002,2026-03-26,english,Testportal,simulation,external,false,30,21,70,45,s001-exam,72,,full demo run
+session-003,2026-03-27,tznk,Master Trainer,training,internal,true,12,9,75,20,s002,76,,internal trainer block
