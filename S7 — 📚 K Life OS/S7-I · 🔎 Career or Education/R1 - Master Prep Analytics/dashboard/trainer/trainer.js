@@ -1777,7 +1777,39 @@ function renderRuntimeInto(runtime, statsNode, panelNode, prefix) {
 
 
 
+  panelNode.querySelectorAll(`input[name="${prefix}-answer"]`).forEach((input) => {
+
+    input.addEventListener('change', () => saveRuntimeSelection(prefix, input.value));
+
+  });
+
   panelNode.querySelector(`#${prefix}-check-btn`)?.addEventListener('click', () => checkCurrentAnswer(prefix));
+
+}
+
+
+
+function saveRuntimeSelection(prefix, selected) {
+
+  const runtime = prefix === 'practice' ? state.practiceRuntime : state.simulationRuntime;
+
+  if (!runtime) return;
+
+  const current = runtime.questions[runtime.index];
+
+  const existing = runtime.answers[current.id] || {};
+
+  if (existing.checked) return;
+
+  runtime.answers[current.id] = {
+
+    ...existing,
+
+    selected,
+
+  };
+
+  saveState();
 
 }
 
@@ -1791,7 +1823,9 @@ function checkCurrentAnswer(prefix) {
 
   const current = runtime.questions[runtime.index];
 
-  const selected = document.querySelector(`input[name="${prefix}-answer"]:checked`)?.value;
+  const selected = runtime.answers[current.id]?.selected
+
+    || document.querySelector(`input[name="${prefix}-answer"]:checked`)?.value;
 
   if (!selected) {
 
