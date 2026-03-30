@@ -2,34 +2,32 @@ cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 type: software
 
-title: "K R&D Lab: Computational Biology Research Suite"
-version: "1.0.0"
-date-released: "2026-03-07"
+title: "SPHERE-I-SCIENCE"
+version: "1.1.0"
+date-released: "2026-03-30"
 
 authors:
   - family-names: Kolisnyk
     given-names: Oksana
-    orcid: "https://orcid.org/my-orcid?orcid=0009-0003-5780-2290"
+    orcid: "https://orcid.org/0009-0003-5780-2290"
     website: "https://kosatiks-group.pp.ua"
 
 abstract: >
-  10 open-source computational biology studies spanning
-  RNA therapeutics (miRNA, siRNA, lncRNA, small molecules),
-  lipid nanoparticle delivery (protein corona ML, brain delivery,
-  flow dynamics), clinical genomics (variant pathogenicity,
-  liquid biopsy), and NLP (literature mining). All tools are
-  accessible via an interactive Gradio demo.
+  K R&D Lab research repository for computational biology and biomedical
+  studies. GitHub is the source of truth for study structure, reports,
+  notebooks, and datasets, while Hugging Face Spaces provide the mirrored
+  interactive app layer for exploration and demos.
 
-repository-code: "https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026"
-url: "https://huggingface.co/spaces/K-RnD-Lab/K-RnD-Lab-PHYLO-03_2026"
+repository-code: "https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE"
+url: "https://huggingface.co/K-RnD-Lab"
 license: MIT
 
 keywords:
   - computational-biology
+  - bioinformatics
+  - oncology
   - RNA-therapeutics
+  - synthetic-lethality
   - lipid-nanoparticles
   - protein-corona
-  - variant-pathogenicity
-  - machine-learning
-  - bioinformatics
   - open-science

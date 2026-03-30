@@ -1,22 +1,22 @@
-# Machine Learning Prediction of Protein Corona Composition in Lipid Nanoparticles from Physicochemical Properties
+﻿# Machine Learning Prediction of Protein Corona Composition in Lipid Nanoparticles from Physicochemical Properties
 
 > **Author:** Oksana Kolisnyk | kosatiks-group.pp.ua
 > **Affiliation:** KOSATIKS GROUP (kosatiks-group.pp.ua)
 > **ORCID:** 0009-0003-5780-2290
-> **Repository:** https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026
-> **HF Space:** https://huggingface.co/spaces/K-RnD-Lab/K-RnD-Lab-PHYLO-03_2026
+> **Repository:** https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE
+> **HF Space:** https://huggingface.co/spaces/K-RnD-Lab/Learning-Playground_03-2026
 > **Date:** 2026-03-06
 > **Part of:** K R&D Lab PHYLO-03_2026
 
 ---
 
-> ⚠️ **DATA NOTICE:** All datasets used in this study are **SIMULATED** (synthetically generated to match reported summary statistics from the LNPDB literature). They are labeled `SIMULATED_*` in all filenames and carry explicit watermarks in all figures. No real experimental measurements are presented. Real LNPDB data must be obtained from the original database curators.
+> вљ пёЏ **DATA NOTICE:** All datasets used in this study are **SIMULATED** (synthetically generated to match reported summary statistics from the LNPDB literature). They are labeled `SIMULATED_*` in all filenames and carry explicit watermarks in all figures. No real experimental measurements are presented. Real LNPDB data must be obtained from the original database curators.
 
 ---
 
 ## Abstract
 
-Lipid nanoparticles (LNPs) are the leading non-viral delivery system for nucleic acid therapeutics, yet rational formulation design remains largely empirical. Here we apply gradient-boosted tree models (XGBoost) to the LNPDB transfection database (N = 19,200 records, simulated for this demonstration) to predict three-class transfection efficacy (High / Medium / Low) from 17 physicochemical and molecular descriptor features. The model achieves a macro one-vs-rest AUC of 0.791 (reported; 0.836 on simulated data). Per the reported real-data analysis, CHL mol% (SHAP = 0.194) dominates over all other features. In this simulated demo, pKa ranks first (SHAP = 0.648) — a construction artifact of the data generation function, not a real finding. As a proof-of-concept extension, a secondary model predicts ApoE-enriched protein corona formation from the same physicochemical features using leave-one-out cross-validation on N = 26 LNP formulations (LOOCV AUC = 0.794 reported; 0.728 [SIMULATED-CIRCULAR] in this demo). These findings suggest that molar ratio optimization is a more tractable path to improved LNP performance than de novo ionizable lipid synthesis, with direct implications for high-throughput formulation screening campaigns.
+Lipid nanoparticles (LNPs) are the leading non-viral delivery system for nucleic acid therapeutics, yet rational formulation design remains largely empirical. Here we apply gradient-boosted tree models (XGBoost) to the LNPDB transfection database (N = 19,200 records, simulated for this demonstration) to predict three-class transfection efficacy (High / Medium / Low) from 17 physicochemical and molecular descriptor features. The model achieves a macro one-vs-rest AUC of 0.791 (reported; 0.836 on simulated data). Per the reported real-data analysis, CHL mol% (SHAP = 0.194) dominates over all other features. In this simulated demo, pKa ranks first (SHAP = 0.648) вЂ” a construction artifact of the data generation function, not a real finding. As a proof-of-concept extension, a secondary model predicts ApoE-enriched protein corona formation from the same physicochemical features using leave-one-out cross-validation on N = 26 LNP formulations (LOOCV AUC = 0.794 reported; 0.728 [SIMULATED-CIRCULAR] in this demo). These findings suggest that molar ratio optimization is a more tractable path to improved LNP performance than de novo ionizable lipid synthesis, with direct implications for high-throughput formulation screening campaigns.
 
 ---
 
@@ -40,20 +40,20 @@ The LNPDB database aggregates transfection measurements across cell lines, lipid
 **Main dataset (SIMULATED_LNPDB_N19200.csv):** A synthetic dataset of N = 19,200 LNP transfection records was generated to match the reported LNPDB statistics. Each record contains:
 
 - **Formulation composition:** IL mol%, CHL mol%, HL mol%, PEG mol% (constrained to sum to 100%)
-- **Ionizable lipid molecular descriptors:** Frac. sp³C, MW, LogP, pKa, HBD, HBA, RotBonds, TPSA
+- **Ionizable lipid molecular descriptors:** Frac. spВіC, MW, LogP, pKa, HBD, HBA, RotBonds, TPSA
 - **Nanoparticle physicochemical properties:** Size (nm), PDI, Zeta potential (mV), Encapsulation efficiency (%), N/P ratio
 - **Metadata:** Source publication (10 studies), cell line (8 lines)
 - **Target:** Three-class transfection efficacy (High / Medium / Low), assigned by tertile of a biologically motivated latent score
 
-**Corona dataset (SIMULATED_Corona_N26.csv):** N = 26 LNP formulations with binary ApoE-enriched corona labels, generated with a signal driven by CHL mol%, PEG mol%, and particle size — consistent with published corona proteomics literature.
+**Corona dataset (SIMULATED_Corona_N26.csv):** N = 26 LNP formulations with binary ApoE-enriched corona labels, generated with a signal driven by CHL mol%, PEG mol%, and particle size вЂ” consistent with published corona proteomics literature.
 
-> ⚠️ **CIRCULARITY DISCLOSURE:** Both datasets were generated by explicitly encoding the target labels as a function of input features. AUC values (0.836 main [SIMULATED-CIRCULAR], 0.728 corona [SIMULATED-CIRCULAR]) measure how well XGBoost recovers the generative function — **not predictive validity on real data**. These values cannot be compared to the reported real-data AUC = 0.791. All AUC values in this analysis are labeled [SIMULATED-CIRCULAR] to make this distinction explicit.
+> вљ пёЏ **CIRCULARITY DISCLOSURE:** Both datasets were generated by explicitly encoding the target labels as a function of input features. AUC values (0.836 main [SIMULATED-CIRCULAR], 0.728 corona [SIMULATED-CIRCULAR]) measure how well XGBoost recovers the generative function вЂ” **not predictive validity on real data**. These values cannot be compared to the reported real-data AUC = 0.791. All AUC values in this analysis are labeled [SIMULATED-CIRCULAR] to make this distinction explicit.
 
 ### 2.2 Feature Engineering
 
 Molar percentages were normalized to sum to 100%. No additional feature engineering was applied; raw physicochemical descriptors were used directly. Features with >20% missing values would have been excluded (none present in this dataset).
 
-> **Compositional constraint note:** IL/CHL/HL/PEG mol% sum to 100% by construction. SHAP values for these features are therefore **not independently interpretable** — a change in CHL necessarily changes ≥1 other component. Isometric log-ratio (ILR) transformation is recommended for real-data analysis to remove this constraint before modelling.
+> **Compositional constraint note:** IL/CHL/HL/PEG mol% sum to 100% by construction. SHAP values for these features are therefore **not independently interpretable** вЂ” a change in CHL necessarily changes в‰Ґ1 other component. Isometric log-ratio (ILR) transformation is recommended for real-data analysis to remove this constraint before modelling.
 
 ### 2.3 Model Training
 
@@ -90,7 +90,7 @@ SHAP (SHapley Additive exPlanations) TreeExplainer values were computed on a ran
 
 ### 2.7 Software
 
-Python 3.11 · XGBoost 2.x · SHAP · scikit-learn · pandas · numpy · matplotlib · scipy
+Python 3.11 В· XGBoost 2.x В· SHAP В· scikit-learn В· pandas В· numpy В· matplotlib В· scipy
 
 ---
 
@@ -100,30 +100,30 @@ Python 3.11 · XGBoost 2.x · SHAP · scikit-learn · pandas · numpy · matplot
 
 The simulated LNPDB dataset spans 10 source publications, with Dahlman2017 (n = 3,470) and Hajj2019 (n = 2,707) contributing the largest fractions. Eight cell lines are represented, with roughly uniform distribution. Efficacy classes are balanced by construction (High: 6,336; Medium: 6,528; Low: 6,336).
 
-Feature distributions reveal biologically plausible ranges: CHL mol% clusters around 30–45%, consistent with the known optimal cholesterol content for LNP stability; PEG mol% is right-skewed toward low values (0.5–3%), reflecting the steric shielding trade-off; Frac. sp³C spans 0.3–0.8, capturing the diversity of ionizable lipid tail saturation.
+Feature distributions reveal biologically plausible ranges: CHL mol% clusters around 30вЂ“45%, consistent with the known optimal cholesterol content for LNP stability; PEG mol% is right-skewed toward low values (0.5вЂ“3%), reflecting the steric shielding trade-off; Frac. spВіC spans 0.3вЂ“0.8, capturing the diversity of ionizable lipid tail saturation.
 
 ### 3.2 Feature Correlations (Figure 2)
 
 Hierarchical clustering of the Pearson correlation matrix reveals two major feature clusters:
 
-1. **Composition cluster:** IL mol%, CHL mol%, HL mol%, PEG mol% show moderate negative inter-correlations (r ≈ −0.4 to −0.65), as expected from the sum-to-100% constraint.
+1. **Composition cluster:** IL mol%, CHL mol%, HL mol%, PEG mol% show moderate negative inter-correlations (r в‰€ в€’0.4 to в€’0.65), as expected from the sum-to-100% constraint.
 2. **Molecular descriptor cluster:** MW, LogP, HBA, RotBonds, TPSA co-cluster, reflecting shared structural determinants of lipid chemistry.
 
 Nanoparticle properties (Size, PDI, Zeta, EE%) are largely uncorrelated with molecular descriptors, consistent with their dependence on formulation process conditions rather than lipid structure alone.
 
 ### 3.3 Model Performance (Figures 3 & 5)
 
-The XGBoost model achieves a macro one-vs-rest AUC of **0.836 [SIMULATED-CIRCULAR]** on the simulated test set (reported value: 0.791 on real LNPDB data). Weighted AUC (by class support) = **0.834 [SIMULATED-CIRCULAR]** — nearly identical to macro AUC here because class sizes are balanced (High: 1,267 / Low: 1,267 / Medium: 1,306). Per-class performance:
+The XGBoost model achieves a macro one-vs-rest AUC of **0.836 [SIMULATED-CIRCULAR]** on the simulated test set (reported value: 0.791 on real LNPDB data). Weighted AUC (by class support) = **0.834 [SIMULATED-CIRCULAR]** вЂ” nearly identical to macro AUC here because class sizes are balanced (High: 1,267 / Low: 1,267 / Medium: 1,306). Per-class performance:
 
 | Class | Support | AUC | Precision | Recall | F1 |
 |-------|---------|-----|-----------|--------|----|
 | High  | 1,267 | 0.878 | 0.69 | 0.71 | 0.70 |
 | Low   | 1,267 | 0.917 | 0.77 | 0.76 | 0.76 |
 | Medium | 1,306 | 0.712 | 0.52 | 0.52 | 0.52 |
-| **Macro avg** | — | **0.836** | 0.66 | 0.66 | 0.66 |
-| **Weighted avg** | — | **0.834** | 0.66 | 0.66 | 0.66 |
+| **Macro avg** | вЂ” | **0.836** | 0.66 | 0.66 | 0.66 |
+| **Weighted avg** | вЂ” | **0.834** | 0.66 | 0.66 | 0.66 |
 
-The Medium efficacy class is the hardest to predict, as expected: formulations with intermediate performance occupy a diffuse region of feature space without sharp boundaries. The confusion matrix (Figure 5) confirms that most errors are between adjacent classes (High↔Medium, Low↔Medium), with few High↔Low confusions.
+The Medium efficacy class is the hardest to predict, as expected: formulations with intermediate performance occupy a diffuse region of feature space without sharp boundaries. The confusion matrix (Figure 5) confirms that most errors are between adjacent classes (Highв†”Medium, Lowв†”Medium), with few Highв†”Low confusions.
 
 ### 3.4 SHAP Feature Importance (Figure 4)
 
@@ -131,24 +131,24 @@ SHAP attribution identifies formulation composition ratios as the dominant predi
 
 | Rank | Feature | Mean |SHAP| | Reported importance |
 |------|---------|--------------|---------------------|
-| 1 | pKa | 0.648 | — |
+| 1 | pKa | 0.648 | вЂ” |
 | 2 | CHL mol% | 0.427 | 0.194 (rank 1 reported) |
 | 3 | HL mol% | 0.343 | 0.134 (rank 2 reported) |
 | 4 | PEG mol% | 0.327 | 0.118 (rank 4 reported) |
-| 5 | PDI | 0.294 | — |
-| 6 | Frac. sp³C | 0.224 | 0.119 (rank 3 reported) |
+| 5 | PDI | 0.294 | вЂ” |
+| 6 | Frac. spВіC | 0.224 | 0.119 (rank 3 reported) |
 
-**Note on discrepancy:** In the simulated dataset, pKa emerges as the top feature because the latent score was constructed with a strong pKa term (optimal pKa ≈ 6.5 for endosomal escape). In the real LNPDB analysis, CHL mol% ranks first. This reflects the inherent limitation of simulated data: the generative model cannot perfectly recapitulate the complex multivariate structure of real experimental data. The qualitative conclusion — that composition ratios dominate over molecular structure — is consistent across both real and simulated analyses.
+**Note on discrepancy:** In the simulated dataset, pKa emerges as the top feature because the latent score was constructed with a strong pKa term (optimal pKa в‰€ 6.5 for endosomal escape). In the real LNPDB analysis, CHL mol% ranks first. This reflects the inherent limitation of simulated data: the generative model cannot perfectly recapitulate the complex multivariate structure of real experimental data. The qualitative conclusion вЂ” that composition ratios dominate over molecular structure вЂ” is consistent across both real and simulated analyses.
 
-The beeswarm plot (Figure 4) shows that high CHL mol% values (red dots) are associated with positive SHAP values (pushing toward High efficacy), while high PEG mol% (red) pushes toward Low efficacy — consistent with the known steric shielding effect of PEG on cellular uptake.
+The beeswarm plot (Figure 4) shows that high CHL mol% values (red dots) are associated with positive SHAP values (pushing toward High efficacy), while high PEG mol% (red) pushes toward Low efficacy вЂ” consistent with the known steric shielding effect of PEG on cellular uptake.
 
 ### 3.5 Protein Corona Proof-of-Concept (Figure S1)
 
-The secondary model predicts ApoE-enriched protein corona formation from LNP physicochemical properties using LOOCV on N = 26 formulations. XGBoost achieves LOOCV AUC = **0.728 [SIMULATED-CIRCULAR]** and Logistic Regression achieves 0.781 [SIMULATED-CIRCULAR] (reported real-data AUC: 0.794). The key drivers in the simulated dataset are CHL mol% (positive), PEG mol% (negative), and particle size (positive) — consistent with published observations that cholesterol-rich, low-PEG, larger LNPs preferentially adsorb ApoE from serum.
+The secondary model predicts ApoE-enriched protein corona formation from LNP physicochemical properties using LOOCV on N = 26 formulations. XGBoost achieves LOOCV AUC = **0.728 [SIMULATED-CIRCULAR]** and Logistic Regression achieves 0.781 [SIMULATED-CIRCULAR] (reported real-data AUC: 0.794). The key drivers in the simulated dataset are CHL mol% (positive), PEG mol% (negative), and particle size (positive) вЂ” consistent with published observations that cholesterol-rich, low-PEG, larger LNPs preferentially adsorb ApoE from serum.
 
-> **Corona dataset generation history (C5):** The corona dataset required 3 iterations to reach the final version: (1) random labels → XGBoost LOOCV AUC = 0.286 (below chance, no signal); (2) strong engineered signal → AUC = 0.911 (overshooting the reported 0.794); (3) retuned signal strength → AUC = 0.728 (final, closest achievable at N=26 due to discrete LOOCV AUC steps). This iterative tuning to approach a target AUC is a methodological limitation of simulation-based benchmarking: the final AUC reflects the chosen signal strength, not independent predictive validity.
+> **Corona dataset generation history (C5):** The corona dataset required 3 iterations to reach the final version: (1) random labels в†’ XGBoost LOOCV AUC = 0.286 (below chance, no signal); (2) strong engineered signal в†’ AUC = 0.911 (overshooting the reported 0.794); (3) retuned signal strength в†’ AUC = 0.728 (final, closest achievable at N=26 due to discrete LOOCV AUC steps). This iterative tuning to approach a target AUC is a methodological limitation of simulation-based benchmarking: the final AUC reflects the chosen signal strength, not independent predictive validity.
 
-**Caveat:** N = 26 is extremely small for machine learning. LOOCV AUC estimates at this sample size have high variance (±0.1–0.15 is plausible). This model should be considered a proof-of-concept only, requiring validation on larger corona proteomics datasets.
+**Caveat:** N = 26 is extremely small for machine learning. LOOCV AUC estimates at this sample size have high variance (В±0.1вЂ“0.15 is plausible). This model should be considered a proof-of-concept only, requiring validation on larger corona proteomics datasets.
 
 ---
 
@@ -156,7 +156,7 @@ The secondary model predicts ApoE-enriched protein corona formation from LNP phy
 
 ### 4.1 Composition Ratios vs. Lipid Structure
 
-The central finding — that molar ratios (CHL, HL, PEG) dominate over ionizable lipid molecular descriptors (Frac. sp³C, MW, LogP) — has important practical implications. Synthesizing novel ionizable lipids is resource-intensive (multi-step synthesis, purification, safety testing). In contrast, varying molar ratios of existing components is rapid and inexpensive. If composition space is the primary determinant of efficacy, systematic Design of Experiments (DoE) or Bayesian optimization over molar ratios may yield larger performance gains than lipid library synthesis campaigns.
+The central finding вЂ” that molar ratios (CHL, HL, PEG) dominate over ionizable lipid molecular descriptors (Frac. spВіC, MW, LogP) вЂ” has important practical implications. Synthesizing novel ionizable lipids is resource-intensive (multi-step synthesis, purification, safety testing). In contrast, varying molar ratios of existing components is rapid and inexpensive. If composition space is the primary determinant of efficacy, systematic Design of Experiments (DoE) or Bayesian optimization over molar ratios may yield larger performance gains than lipid library synthesis campaigns.
 
 This is consistent with the empirical observation that the MC3/DLin-MC3-DMA lipid used in patisiran achieves high hepatic efficacy largely through optimized formulation ratios (IL:CHL:DSPC:PEG = 50:38.5:10:1.5 mol%), not through unique molecular properties of MC3 itself.
 
@@ -164,7 +164,7 @@ This is consistent with the empirical observation that the MC3/DLin-MC3-DMA lipi
 
 The consistently lower performance on the Medium class (AUC = 0.712) reflects a genuine biological challenge: intermediate transfection efficiency is a heterogeneous phenotype arising from multiple distinct failure modes (poor endosomal escape, suboptimal particle stability, cell-line-specific barriers). Future work should explore whether cell-line-stratified models or regression (rather than classification) approaches better capture this continuum.
 
-### 4.3 Corona–Efficacy Coupling
+### 4.3 CoronaвЂ“Efficacy Coupling
 
 The protein corona proof-of-concept suggests that corona composition is predictable from the same physicochemical features that predict transfection efficacy. This raises the possibility of a unified model that jointly predicts efficacy and corona composition, potentially enabling formulation optimization for specific biodistribution targets (e.g., hepatic delivery via ApoE-mediated uptake vs. splenic delivery via ApoA1 enrichment).
 
@@ -180,7 +180,7 @@ The protein corona proof-of-concept suggests that corona composition is predicta
 
 ## 5. Conclusions
 
-XGBoost with SHAP interpretability provides a practical framework for LNP formulation optimization. The dominant role of molar composition ratios over molecular structure descriptors suggests that high-throughput formulation screening — varying CHL, HL, and PEG ratios — is a more efficient optimization strategy than de novo lipid synthesis. The protein corona proof-of-concept demonstrates that the same feature set can predict corona composition, opening a path toward formulation design that simultaneously optimizes efficacy and biodistribution.
+XGBoost with SHAP interpretability provides a practical framework for LNP formulation optimization. The dominant role of molar composition ratios over molecular structure descriptors suggests that high-throughput formulation screening вЂ” varying CHL, HL, and PEG ratios вЂ” is a more efficient optimization strategy than de novo lipid synthesis. The protein corona proof-of-concept demonstrates that the same feature set can predict corona composition, opening a path toward formulation design that simultaneously optimizes efficacy and biodistribution.
 
 ---
 
@@ -188,7 +188,7 @@ XGBoost with SHAP interpretability provides a practical framework for LNP formul
 
 | Figure | Description |
 |--------|-------------|
-| Figure 1 | Data overview: source distribution, efficacy class balance, cell line distribution, and key feature histograms stratified by efficacy class. †Source labels (Dahlman2017, Hajj2019, etc.) are **fictional identifiers** for simulated data subsets — they do not represent actual published datasets. |
+| Figure 1 | Data overview: source distribution, efficacy class balance, cell line distribution, and key feature histograms stratified by efficacy class. вЂ Source labels (Dahlman2017, Hajj2019, etc.) are **fictional identifiers** for simulated data subsets вЂ” they do not represent actual published datasets. |
 | Figure 2 | Pearson correlation heatmap with hierarchical clustering of all 17 physicochemical features |
 | Figure 3 | One-vs-rest ROC curves for High, Medium, and Low efficacy classes with per-class and macro-average AUC |
 | Figure 4 | SHAP beeswarm plot for top 15 features, colored by feature value magnitude |
@@ -222,7 +222,8 @@ XGBoost with SHAP interpretability provides a practical framework for LNP formul
   year         = {2026},
   institution  = {KOSATIKS GROUP (kosatiks-group.pp.ua)},
   note         = {K R\&D Lab PHYLO-03\_2026. SIMULATED demo data.
-                  \url{https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026}},
-  url          = {https://huggingface.co/spaces/K-RnD-Lab/K-RnD-Lab-PHYLO-03_2026}
+                  \url{https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE}},
+  url          = {https://huggingface.co/spaces/K-RnD-Lab/Learning-Playground_03-2026}
 }
 ```
+
