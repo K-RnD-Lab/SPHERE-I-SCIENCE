@@ -20,6 +20,16 @@ const DEFAULT_STATE = {
 
     activeTab: 'resources',
 
+    studyResourceType: 'study_block',
+
+    studyStage: 'foundations',
+
+    studyCustomMinutes: 25,
+
+    studyFocusScore: 4,
+
+    studyEnergyLevel: 3,
+
   },
 
   studyLogs: [],
@@ -47,6 +57,11 @@ const SUBJECTS = {
 
 
 let runtimeTicker = null;
+
+let syncStatusState = { key: 'sheetSyncMissing', level: 'warn', timestamp: '' };
+
+const STUDY_RESOURCE_TYPES = ['official_program', 'concept_notes', 'study_block', 'article', 'video_lesson', 'other'];
+const STUDY_STAGES = ['foundations', 'orientation', 'review', 'drill', 'other'];
 
 
 
@@ -104,7 +119,28 @@ const UI = {
     correctLabel: 'Correct',
     minutesLabel: 'Minutes',
     notesLabel: 'Notes',
+    predictedScoreLabel: 'Predicted score',
+    actualScoreLabel: 'Actual score',
+    resourceTitleLabel: 'Resource title',
+    resourceTypeLabel: 'Resource type',
+    stageLabel: 'Stage',
+    customMinutesLabel: 'Study minutes',
+    focusScoreLabel: 'Focus score',
+    energyLevelLabel: 'Energy level',
     saveManualLog: 'Save Quick Log',
+    saveStudyCustom: 'Log custom block',
+    studyNotesPlaceholder: 'what exactly you studied, weak spot, takeaway',
+    resourceType_official_program: 'Official program',
+    resourceType_concept_notes: 'Concept notes',
+    resourceType_study_block: 'Study block',
+    resourceType_article: 'Article / PDF',
+    resourceType_video_lesson: 'Video lesson',
+    resourceType_other: 'Other',
+    stage_foundations: 'Foundations',
+    stage_orientation: 'Orientation',
+    stage_review: 'Review',
+    stage_drill: 'Drill',
+    stage_other: 'Other',
     logsKicker: 'SESSION HISTORY',
     logsTitle: 'Recent logs',
     logsCopy: 'Export CSV to open everything in Google Sheets or attach snapshots to K-R&D Lab later.',
@@ -573,7 +609,7 @@ async function init() {
 
   bindEvents();
 
-  setSyncStatus(getSyncEndpoint() ? t('sheetSyncConnected') : t('sheetSyncMissing'), getSyncEndpoint() ? 'good' : 'warn');
+  setSyncStatusState(getSyncEndpoint() ? 'sheetSyncConnected' : 'sheetSyncMissing', getSyncEndpoint() ? 'good' : 'warn');
 
   renderAll();
 
@@ -593,7 +629,7 @@ function cacheDom() {
 
     'simulation-stats', 'simulation-panel', 'simulation-meta', 'summary-grid', 'logs-list',
 
-    'manual-source-input', 'manual-mode-select', 'manual-total-input', 'manual-correct-input', 'manual-minutes-input', 'manual-notes-input', 'save-manual-log-btn', 'sync-status',
+    'manual-source-input', 'manual-mode-select', 'manual-total-input', 'manual-correct-input', 'manual-minutes-input', 'manual-predicted-input', 'manual-actual-input', 'manual-notes-input', 'save-manual-log-btn', 'sync-status',
 
     'start-practice-btn', 'next-practice-btn', 'finish-practice-btn', 'start-simulation-btn', 'next-simulation-btn', 'finish-simulation-btn'
 
@@ -651,13 +687,31 @@ function getSyncEndpoint() {
 
 
 
-function setSyncStatus(message, level = 'warn') {
+function renderSyncStatus() {
 
   if (!el.syncStatus) return;
 
+  let message = t(syncStatusState.key);
+
+  if (syncStatusState.key === 'sheetSyncSaved' && syncStatusState.timestamp) {
+
+    message = `${t('sheetSyncSaved')} ${syncStatusState.timestamp}.`;
+
+  }
+
   el.syncStatus.textContent = message;
 
-  el.syncStatus.className = `micro-note sync-note ${level}`;
+  el.syncStatus.className = `micro-note sync-note ${syncStatusState.level}`;
+
+}
+
+
+
+function setSyncStatusState(key, level = 'warn', timestamp = '') {
+
+  syncStatusState = { key, level, timestamp };
+
+  renderSyncStatus();
 
 }
 
@@ -669,7 +723,7 @@ async function postRowToSheet(type, row) {
 
   if (!endpoint) {
 
-    setSyncStatus(t('sheetSyncMissing'), 'warn');
+    setSyncStatusState('sheetSyncMissing', 'warn');
 
     return false;
 
@@ -699,7 +753,7 @@ async function postRowToSheet(type, row) {
 
     if (!payload.ok) throw new Error(payload.error || 'Unknown sync error');
 
-    setSyncStatus(`${t('sheetSyncSaved')} ${new Date().toLocaleTimeString()}.`, 'good');
+    setSyncStatusState('sheetSyncSaved', 'good', new Date().toLocaleTimeString(state.settings.lang === 'uk' ? 'uk-UA' : 'en-US'));
 
     return true;
 
@@ -707,7 +761,7 @@ async function postRowToSheet(type, row) {
 
     console.warn('Sheet sync failed.', error);
 
-    setSyncStatus(t('sheetSyncFailed'), 'bad');
+    setSyncStatusState('sheetSyncFailed', 'bad');
 
     return false;
 
@@ -729,15 +783,15 @@ function toStudySheetRow(item) {
 
     resource_title: item.source || '',
 
-    resource_type: 'study_block',
+    resource_type: item.resourceType || 'study_block',
 
-    stage: item.label || 'study',
+    stage: item.stage || item.label || 'study',
 
     minutes: item.durationMin || 0,
 
-    focus_score: '',
+    focus_score: Number.isFinite(Number(item.focusScore)) ? Number(item.focusScore) : '',
 
-    energy_level: '',
+    energy_level: Number.isFinite(Number(item.energyLevel)) ? Number(item.energyLevel) : '',
 
     notes: item.notes || '',
 
@@ -751,6 +805,8 @@ function toSessionSheetRow(item) {
 
   const isInternal = item.source === 'built-in' || item.source === 'Master Trainer';
 
+  const normalizedMode = item.kind === 'practice' ? 'training' : (item.kind || 'training');
+
   return {
 
     session_id: item.id,
@@ -761,7 +817,7 @@ function toSessionSheetRow(item) {
 
     platform: isInternal ? 'Master Trainer' : (item.source || 'External'),
 
-    mode: item.kind || 'training',
+    mode: normalizedMode,
 
     source_group: isInternal ? 'internal' : 'external',
 
@@ -777,9 +833,9 @@ function toSessionSheetRow(item) {
 
     session_label: item.label || '',
 
-    predicted_score: item.predictedScore || '',
+    predicted_score: item.predictedScore ?? '',
 
-    actual_score: item.actualScore || '',
+    actual_score: item.actualScore ?? '',
 
     notes: item.notes || '',
 
@@ -1099,6 +1155,8 @@ function renderAll() {
 
   applyI18n();
 
+  renderSyncStatus();
+
   renderControls();
 
   renderMaterials();
@@ -1207,6 +1265,14 @@ function renderMaterials() {
 
   const localized = material[state.settings.lang] || material.en;
 
+  const resourceTypeOptions = STUDY_RESOURCE_TYPES
+    .map((value) => `<option value="${value}" ${state.settings.studyResourceType === value ? 'selected' : ''}>${escapeHtml(t(`resourceType_${value}`))}</option>`)
+    .join('');
+
+  const stageOptions = STUDY_STAGES
+    .map((value) => `<option value="${value}" ${state.settings.studyStage === value ? 'selected' : ''}>${escapeHtml(t(`stage_${value}`))}</option>`)
+    .join('');
+
   el.materialsGrid.innerHTML = `
 
     <article class="material-card">
@@ -1225,6 +1291,66 @@ function renderMaterials() {
 
       <ul>${localized.checklist.map((line) => `<li>${escapeHtml(line)}</li>`).join('')}</ul>
 
+      <div class="controls-grid study-log-grid">
+
+        <label>
+
+          <span>${escapeHtml(t('resourceTitleLabel'))}</span>
+
+          <input id="study-resource-title-input" type="text" value="${escapeAttr(localized.title)}">
+
+        </label>
+
+        <label>
+
+          <span>${escapeHtml(t('resourceTypeLabel'))}</span>
+
+          <select id="study-resource-type-select">${resourceTypeOptions}</select>
+
+        </label>
+
+        <label>
+
+          <span>${escapeHtml(t('stageLabel'))}</span>
+
+          <select id="study-stage-select">${stageOptions}</select>
+
+        </label>
+
+        <label>
+
+          <span>${escapeHtml(t('customMinutesLabel'))}</span>
+
+          <input id="study-minutes-input" type="number" min="1" value="${escapeAttr(String(state.settings.studyCustomMinutes || localized.minutes || 25))}">
+
+        </label>
+
+        <label>
+
+          <span>${escapeHtml(t('focusScoreLabel'))}</span>
+
+          <input id="study-focus-input" type="number" min="1" max="5" value="${escapeAttr(String(state.settings.studyFocusScore || 4))}">
+
+        </label>
+
+        <label>
+
+          <span>${escapeHtml(t('energyLevelLabel'))}</span>
+
+          <input id="study-energy-input" type="number" min="1" max="5" value="${escapeAttr(String(state.settings.studyEnergyLevel || 3))}">
+
+        </label>
+
+        <label class="study-log-notes">
+
+          <span>${escapeHtml(t('notesLabel'))}</span>
+
+          <input id="study-notes-input" type="text" placeholder="${escapeAttr(t('studyNotesPlaceholder'))}">
+
+        </label>
+
+      </div>
+
       <div class="card-actions">
 
         <a class="resource-link" href="${escapeAttr(material.sourceUrl)}" target="_blank" rel="noreferrer">${escapeHtml(t('materialButton'))}</a>
@@ -1235,6 +1361,8 @@ function renderMaterials() {
 
         <button type="button" data-study-log="45">${escapeHtml(t('log45'))}</button>
 
+        <button type="button" id="save-study-custom-btn" class="ghost">${escapeHtml(t('saveStudyCustom'))}</button>
+
       </div>
 
     </article>
@@ -1242,6 +1370,32 @@ function renderMaterials() {
   `;
 
 
+
+  const rememberDefaults = () => {
+
+    state.settings.studyResourceType = document.getElementById('study-resource-type-select')?.value || 'study_block';
+
+    state.settings.studyStage = document.getElementById('study-stage-select')?.value || 'foundations';
+
+    state.settings.studyCustomMinutes = Number(document.getElementById('study-minutes-input')?.value || localized.minutes || 25) || 25;
+
+    state.settings.studyFocusScore = Number(document.getElementById('study-focus-input')?.value || 0) || 0;
+
+    state.settings.studyEnergyLevel = Number(document.getElementById('study-energy-input')?.value || 0) || 0;
+
+    saveState();
+
+  };
+
+  ['study-resource-type-select', 'study-stage-select', 'study-minutes-input', 'study-focus-input', 'study-energy-input'].forEach((id) => {
+
+    document.getElementById(id)?.addEventListener('change', rememberDefaults);
+
+    document.getElementById(id)?.addEventListener('input', rememberDefaults);
+
+  });
+
+  document.getElementById('save-study-custom-btn')?.addEventListener('click', () => logStudyBlock(material));
 
   el.materialsGrid.querySelectorAll('[data-study-log]').forEach((button) => {
 
@@ -1715,6 +1869,10 @@ async function finishRuntime(runtimeKey) {
 
     finishedAt,
 
+    predictedScore: accuracyPct,
+
+    actualScore: '',
+
     notes: '',
 
   });
@@ -1741,9 +1899,23 @@ async function finishRuntime(runtimeKey) {
 
 
 
-async function logStudyBlock(material, minutes) {
+async function logStudyBlock(material, forcedMinutes) {
 
   const localized = material[state.settings.lang] || material.en;
+
+  const resourceTitle = (document.getElementById('study-resource-title-input')?.value || localized.title || '').trim() || localized.title;
+
+  const resourceType = document.getElementById('study-resource-type-select')?.value || state.settings.studyResourceType || 'study_block';
+
+  const stage = document.getElementById('study-stage-select')?.value || state.settings.studyStage || 'foundations';
+
+  const durationMin = Number(forcedMinutes || document.getElementById('study-minutes-input')?.value || state.settings.studyCustomMinutes || localized.minutes || 25) || 25;
+
+  const focusScore = Number(document.getElementById('study-focus-input')?.value || state.settings.studyFocusScore || 0) || '';
+
+  const energyLevel = Number(document.getElementById('study-energy-input')?.value || state.settings.studyEnergyLevel || 0) || '';
+
+  const notes = (document.getElementById('study-notes-input')?.value || '').trim();
 
   state.studyLogs.unshift({
 
@@ -1755,19 +1927,41 @@ async function logStudyBlock(material, minutes) {
 
     label: state.settings.sessionLabel,
 
-    source: localized.title,
+    source: resourceTitle,
 
     sourceUrl: material.sourceUrl,
 
-    durationMin: minutes,
+    resourceType,
+
+    stage,
+
+    durationMin,
+
+    focusScore,
+
+    energyLevel,
 
     loggedAt: new Date().toISOString(),
 
-    notes: '',
+    notes,
 
   });
 
+  state.settings.studyResourceType = resourceType;
+
+  state.settings.studyStage = stage;
+
+  state.settings.studyCustomMinutes = durationMin;
+
+  state.settings.studyFocusScore = Number(focusScore || 0) || 0;
+
+  state.settings.studyEnergyLevel = Number(energyLevel || 0) || 0;
+
   saveState();
+
+  const notesInput = document.getElementById('study-notes-input');
+
+  if (notesInput) notesInput.value = '';
 
   renderSummary();
 
@@ -1788,6 +1982,14 @@ async function saveManualLog() {
   const durationMin = Number(el.manualMinutesInput.value || 0);
 
   const accuracyPct = total ? Math.round((correct / total) * 100) : 0;
+
+  const predictedScoreRaw = String(el.manualPredictedInput?.value || '').trim();
+
+  const actualScoreRaw = String(el.manualActualInput?.value || '').trim();
+
+  const predictedScore = predictedScoreRaw === '' ? accuracyPct : Number(predictedScoreRaw);
+
+  const actualScore = actualScoreRaw === '' ? '' : Number(actualScoreRaw);
 
 
 
@@ -1817,6 +2019,10 @@ async function saveManualLog() {
 
     finishedAt: new Date().toISOString(),
 
+    predictedScore: Number.isFinite(predictedScore) ? predictedScore : '',
+
+    actualScore: Number.isFinite(actualScore) ? actualScore : '',
+
     notes: (el.manualNotesInput.value || '').trim(),
 
   });
@@ -1832,6 +2038,10 @@ async function saveManualLog() {
   el.manualTotalInput.value = '10';
 
   el.manualMinutesInput.value = '25';
+
+  if (el.manualPredictedInput) el.manualPredictedInput.value = '';
+
+  if (el.manualActualInput) el.manualActualInput.value = '';
 
   el.manualNotesInput.value = '';
 

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AI Master Trainer</title>
-  <link rel="stylesheet" href="trainer.css?v=20260329d1">
+  <link rel="stylesheet" href="trainer.css?v=20260330a1">
 </head>
 <body>
   <header class="hero">
@@ -197,6 +197,14 @@
               <input id="manual-minutes-input" type="number" min="0" value="25">
             </label>
             <label>
+              <span data-i18n="predictedScoreLabel">Predicted score</span>
+              <input id="manual-predicted-input" type="number" min="0" max="100" step="1">
+            </label>
+            <label>
+              <span data-i18n="actualScoreLabel">Actual score</span>
+              <input id="manual-actual-input" type="number" min="0" max="100" step="1">
+            </label>
+            <label>
               <span data-i18n="notesLabel">Notes</span>
               <input id="manual-notes-input" type="text" placeholder="reading, logic, weak spots">
             </label>
@@ -220,8 +228,8 @@
     </section>
   </main>
 
-  <script src="trainer_config.js?v=20260329e2"></script>
-  <script src="trainer.js?v=20260329e2"></script>
+  <script src="trainer_config.js?v=20260330a1"></script>
+  <script src="trainer.js?v=20260330a1"></script>
 </body>
 </html>
 
