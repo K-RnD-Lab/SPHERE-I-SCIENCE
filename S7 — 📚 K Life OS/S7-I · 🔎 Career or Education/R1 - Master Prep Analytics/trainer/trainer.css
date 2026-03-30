@@ -336,3 +336,24 @@ input, select {
 .sync-note.bad { border-color: rgba(255, 119, 146, 0.35); color: #ffd7df; }
 
 
+
+.study-log-grid {
+  margin-top: 14px;
+}
+.study-log-notes {
+  grid-column: 1 / -1;
+}
+.sync-note {
+  overflow-wrap: anywhere;
+}
+.material-card .controls-grid label span,
+.material-card h3,
+.log-card h3,
+.question-prompt {
+  overflow-wrap: anywhere;
+}
+@media (max-width: 760px) {
+  .study-log-notes {
+    grid-column: auto;
+  }
+}
