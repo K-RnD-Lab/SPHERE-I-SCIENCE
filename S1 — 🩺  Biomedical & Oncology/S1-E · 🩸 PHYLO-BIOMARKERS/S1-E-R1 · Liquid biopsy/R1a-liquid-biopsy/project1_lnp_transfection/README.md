@@ -1,21 +1,21 @@
-# Machine Learning Prediction of LNP Transfection Efficacy from Physicochemical and Formulation Features
+﻿# Machine Learning Prediction of LNP Transfection Efficacy from Physicochemical and Formulation Features
 
-> Part of [K R&D Lab](https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026)
+> Part of [K R&D Lab](https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE)
 > **Oksana Kolisnyk** | kosatiks-group.pp.ua
 
-## 🔬 Key Finding
-> In this simulated dataset, molecular descriptors (pKa + Frac.sp3C, summed SHAP ≈ 0.976) and formulation ratios (CHL + PEG + HL, summed SHAP ≈ 0.973) contribute near-equally to XGBoost predictions (AUC=0.782, N=19,200). Whether CHL mol% dominates on real LNPDB data requires experimental validation.
+## рџ”¬ Key Finding
+> In this simulated dataset, molecular descriptors (pKa + Frac.sp3C, summed SHAP в‰€ 0.976) and formulation ratios (CHL + PEG + HL, summed SHAP в‰€ 0.973) contribute near-equally to XGBoost predictions (AUC=0.782, N=19,200). Whether CHL mol% dominates on real LNPDB data requires experimental validation.
 >
-> ⚠️ pKa ranks #1 individually because the synthetic data generation formula assigned it the largest coefficient — this is not a data-driven biological discovery.
+> вљ пёЏ pKa ranks #1 individually because the synthetic data generation formula assigned it the largest coefficient вЂ” this is not a data-driven biological discovery.
 
-**Model performance:** XGBoost AUC = 0.782 (5-fold CV) | **Dataset:** N = 19,200 (SIMULATED — based on LNPDB statistics)
+**Model performance:** XGBoost AUC = 0.782 (5-fold CV) | **Dataset:** N = 19,200 (SIMULATED вЂ” based on LNPDB statistics)
 
-> ⚠️ **Data Transparency:** All datasets in this repository are **SIMULATED** synthetic data generated to match published LNPDB statistics. No proprietary or unpublished experimental data is included. All filenames are prefixed with `SIMULATED_`.
+> вљ пёЏ **Data Transparency:** All datasets in this repository are **SIMULATED** synthetic data generated to match published LNPDB statistics. No proprietary or unpublished experimental data is included. All filenames are prefixed with `SIMULATED_`.
 
-## 🤗 Demo
-[![Demo](https://img.shields.io/badge/🤗-Live_Demo-yellow)](https://huggingface.co/spaces/K-RnD-Lab/K-RnD-Lab-PHYLO-03_2026)
+## рџ¤— Demo
+[![Demo](https://img.shields.io/badge/рџ¤—-Live_Demo-yellow)](https://huggingface.co/spaces/K-RnD-Lab/Learning-Playground_03-2026)
 
-## 📊 Results Summary
+## рџ“Љ Results Summary
 | Metric | Value |
 |--------|-------|
 | XGBoost AUC (5-fold CV) | 0.782 |
@@ -27,26 +27,26 @@
 | Dataset size | N = 19,200 (SIMULATED) |
 | Features | 16 physicochemical + formulation |
 
-## 📁 Repository Structure
+## рџ“Ѓ Repository Structure
 ```
 project1_lnp_transfection/
-├── README.md
-├── report.md
-├── data/
-│   ├── SIMULATED_lnpdb_transfection.csv     # Main dataset (N=19,200)
-│   ├── SIMULATED_shap_values.csv            # SHAP feature importances
-│   ├── SIMULATED_roc_curve.csv              # ROC curve data
-│   └── SIMULATED_corona_poc_dataset.csv     # Corona PoC dataset (N=26)
-└── figures/
-    ├── Figure1.png / Figure1.svg            # Data overview
-    ├── Figure2.png / Figure2.svg            # Correlation heatmap
-    ├── Figure3.png / Figure3.svg            # ROC curves
-    ├── Figure4.png / Figure4.svg            # SHAP beeswarm
-    ├── Figure5.png / Figure5.svg            # Confusion matrix
-    └── FigureS1.png / FigureS1.svg          # Corona PoC performance
+в”њв”Ђв”Ђ README.md
+в”њв”Ђв”Ђ report.md
+в”њв”Ђв”Ђ data/
+в”‚   в”њв”Ђв”Ђ SIMULATED_lnpdb_transfection.csv     # Main dataset (N=19,200)
+в”‚   в”њв”Ђв”Ђ SIMULATED_shap_values.csv            # SHAP feature importances
+в”‚   в”њв”Ђв”Ђ SIMULATED_roc_curve.csv              # ROC curve data
+в”‚   в””в”Ђв”Ђ SIMULATED_corona_poc_dataset.csv     # Corona PoC dataset (N=26)
+в””в”Ђв”Ђ figures/
+    в”њв”Ђв”Ђ Figure1.png / Figure1.svg            # Data overview
+    в”њв”Ђв”Ђ Figure2.png / Figure2.svg            # Correlation heatmap
+    в”њв”Ђв”Ђ Figure3.png / Figure3.svg            # ROC curves
+    в”њв”Ђв”Ђ Figure4.png / Figure4.svg            # SHAP beeswarm
+    в”њв”Ђв”Ђ Figure5.png / Figure5.svg            # Confusion matrix
+    в””в”Ђв”Ђ FigureS1.png / FigureS1.svg          # Corona PoC performance
 ```
 
-## 🚀 Quick Start
+## рџљЂ Quick Start
 
 > **Note:** Model requires 16 features total (12 numeric + 4 categorical encoded). See `data/feature_schema.csv` for the full feature list and encoding specification.
 
@@ -73,7 +73,7 @@ y_prob = cross_val_predict(model, X, y, cv=cv, method='predict_proba')[:, 1]
 print(f"AUC: {roc_auc_score(y, y_prob):.3f}")
 ```
 
-## ⚠️ Limitations
+## вљ пёЏ Limitations
 1. **Simulated data only:** All datasets are synthetic, generated to match published LNPDB statistics. Results should be validated on real experimental data before drawing biological conclusions.
 2. **Binary efficacy target:** Transfection efficiency is binarized at the 60th percentile; continuous regression models may capture more nuance.
 3. **Corona PoC is underpowered:** N=26 is insufficient for robust generalization; LOOCV AUC=0.763 should be treated as a proof-of-concept signal only.
@@ -81,7 +81,7 @@ print(f"AUC: {roc_auc_score(y, y_prob):.3f}")
 5. **Missing in vivo features:** In vivo corona composition differs substantially from in vitro; plasma protein binding data is not included.
 6. **No temporal validation:** No held-out prospective test set; all metrics are cross-validated on the same synthetic distribution.
 
-## 📖 Citation
+## рџ“– Citation
 ```bibtex
 @misc{kolisnyk2026lnp,
   title     = {Machine Learning Prediction of LNP Transfection Efficacy
@@ -89,7 +89,8 @@ print(f"AUC: {roc_auc_score(y, y_prob):.3f}")
   author    = {Kolisnyk, Oksana},
   year      = {2026},
   publisher = {GitHub},
-  url       = {https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026},
+  url       = {https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE},
   note      = {K R\&D Lab, KOSATIKS GROUP (kosatiks-group.pp.ua). SIMULATED dataset.}
 }
 ```
+
