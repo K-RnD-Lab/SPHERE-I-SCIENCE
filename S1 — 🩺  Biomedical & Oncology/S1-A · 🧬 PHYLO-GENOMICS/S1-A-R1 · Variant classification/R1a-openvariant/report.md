@@ -2,8 +2,8 @@
 
 **Author:** Oksana Kolisnyk | kosatiks-group.pp.ua
 **Affiliation:** KOSATIKS GROUP (kosatiks-group.pp.ua)
-**Repository:** https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026
-**HuggingFace:** https://huggingface.co/spaces/K-RnD-Lab/K-RnD-Lab-PHYLO-03_2026
+**Repository:** https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE
+**HuggingFace:** https://huggingface.co/spaces/K-RnD-Lab/Learning-Playground_03-2026
 **Date:** March 2026
 **Part of:** K R&D Lab PHYLO-03_2026
 

@@ -1,6 +1,6 @@
 # Machine Learning Prediction of Protein Corona Composition in Lipid Nanoparticles from Physicochemical Properties
 
-> Part of [K R&D Lab](https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026)
+> Part of [K R&D Lab](https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE)
 > **Oksana Kolisnyk** | kosatiks-group.pp.ua
 
 ## 🔬 Key Finding
@@ -13,7 +13,7 @@
 > ⚠️ **DATA NOTICE:** All datasets in this repository are **SIMULATED** (synthetically generated to match reported statistics). They are clearly labeled `SIMULATED_*` in all filenames and figures. Real LNPDB data must be obtained from the original authors.
 
 ## 🤗 Demo
-[![Demo](https://img.shields.io/badge/🤗-Live_Demo-yellow)](https://huggingface.co/spaces/K-RnD-Lab/K-RnD-Lab-PHYLO-03_2026)
+[![Demo](https://img.shields.io/badge/🤗-Live_Demo-yellow)](https://huggingface.co/spaces/K-RnD-Lab/Learning-Playground_03-2026)
 
 ## 📊 Results Summary
 
@@ -38,7 +38,7 @@
 ## 📁 Repository Structure
 
 ```
-K-RnD-Lab-PHYLO-03_2026/
+SPHERE-I-SCIENCE/
 ├── README.md
 ├── report.md
 ├── execution_trace.ipynb
@@ -104,7 +104,7 @@ print("Predicted efficacy probabilities (High/Low/Medium):", probs[:3])
   year         = {2026},
   institution  = {KOSATIKS GROUP (kosatiks-group.pp.ua)},
   note         = {K R\&D Lab PHYLO-03\_2026. SIMULATED demo data.
-                  \url{https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026}},
-  url          = {https://huggingface.co/spaces/K-RnD-Lab/K-RnD-Lab-PHYLO-03_2026}
+                  \url{https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE}},
+  url          = {https://huggingface.co/spaces/K-RnD-Lab/Learning-Playground_03-2026}
 }
 ```

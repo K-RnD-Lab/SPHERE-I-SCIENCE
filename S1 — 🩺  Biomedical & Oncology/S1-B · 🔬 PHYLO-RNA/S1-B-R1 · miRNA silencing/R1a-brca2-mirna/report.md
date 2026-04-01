@@ -7,7 +7,7 @@
 **Authors:** Oksana Kolisnyk¹  
 **Affiliation:** ¹ FAZENA (fazena.org) | K R&D Lab  
 **ORCID:** 0009-0003-5780-2290  
-**Repository:** https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026  
+**Repository:** https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE  
 **Date:** March 2026
 
 ---

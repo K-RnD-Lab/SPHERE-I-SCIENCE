@@ -1,6 +1,6 @@
 # lncRNA Regulatory Networks Controlling TREM2-Dependent Microglial Inflammation: Implications for Alzheimer's Therapy
 
-> Part of [K R&D Lab](https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026)
+> Part of [K R&D Lab](https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE)
 > **Oksana Kolisnyk** | kosatiks-group.pp.ua
 
 ## Key Finding
@@ -13,7 +13,7 @@
 
 ## Demo
 
-[![Demo](https://img.shields.io/badge/%F0%9F%A4%97-Live_Demo-yellow)](https://huggingface.co/spaces/K-RnD-Lab/K-RnD-Lab-PHYLO-03_2026)
+[![Demo](https://img.shields.io/badge/%F0%9F%A4%97-Live_Demo-yellow)](https://huggingface.co/spaces/K-RnD-Lab/Learning-Playground_03-2026)
 
 ## Results Summary
 
@@ -38,7 +38,7 @@
 ## Repository Structure
 
 ```
-K-RnD-Lab-PHYLO-03_2026/
+SPHERE-I-SCIENCE/
 ├── README.md
 ├── report.md                          # Full manuscript
 ├── execution_trace.ipynb              # Reproducible analysis notebook
@@ -61,8 +61,8 @@ K-RnD-Lab-PHYLO-03_2026/
 
 ```bash
 # Clone repository
-git clone https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026.git
-cd K-RnD-Lab-PHYLO-03_2026
+git clone https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE.git
+cd SPHERE-I-SCIENCE
 
 # Install dependencies
 pip install numpy pandas scipy matplotlib seaborn biopython ViennaRNA adjustText scikit-learn
@@ -97,7 +97,7 @@ jupyter notebook execution_trace.ipynb
   year         = {2026},
   publisher    = {GitHub},
   journal      = {K R\&D Lab -- PHYLO-03},
-  howpublished = {\url{https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026}},
+  howpublished = {\url{https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE}},
   note         = {ORCID: 0009-0003-5780-2290}
 }
 ```

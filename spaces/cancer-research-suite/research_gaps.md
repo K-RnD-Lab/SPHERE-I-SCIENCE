@@ -1,0 +1,51 @@
+# Research Gaps Analysis
+**K R&D Lab — Cancer Research Suite**
+Author: Oksana Kolisnyk | kosatiks-group.pp.ua
+Repo: github.com/TEZv/K-RnD-Lab-PHYLO-03_2026
+Generated: 2026-03-07
+
+---
+
+## 10 Underexplored Research Directions
+
+### Domain Coverage
+- **LNP drug delivery** (brain/GBM focus): Directions 1–4
+- **Cancer liquid biopsy biomarkers**: Directions 5–7
+- **Protein corona in disease context**: Directions 8–10
+
+---
+
+| # | Direction | Why Underexplored | Data That Exists | Experiment Design | Cost Estimate (USD) |
+|---|-----------|-------------------|-----------------|-------------------|---------------------|
+| 1 | **ApoE isoform-specific LNP corona engineering for GBM** — Exploiting ApoE2/E3/E4 differential LDLR/LRP1 binding to tune BBB transcytosis efficiency of ionizable LNPs | ApoE isoform effects on LNP uptake are studied in liver but almost never in brain endothelium or GBM models. Most BBB-LNP studies use pooled human serum ignoring isoform heterogeneity. | ApoE isoform LDLR binding affinities (structural data); LNP-ApoE corona proteomics (liver); LRP1 expression atlas in brain endothelium (HPA); GBM patient ApoE genotyping (TCGA) | (1) Formulate 3 ionizable LNP variants (MC3, DLin-KC2, Lipid 5); (2) Incubate with ApoE2/E3/E4-spiked plasma; (3) Quantify corona by LC-MS/MS; (4) Test BBB transcytosis in hCMEC/D3 monolayer; (5) Validate in orthotopic GBM mouse model stratified by ApoE genotype | $85,000–$140,000 |
+| 2 | **Focused ultrasound (FUS) + LNP synergy for DIPG delivery** — Using low-intensity FUS to transiently open the BBB at the pons specifically for LNP-mRNA delivery in diffuse intrinsic pontine glioma | DIPG is almost universally fatal with no effective systemic therapy. FUS-BBB opening is validated in GBM but the pons presents unique anatomical and safety challenges. LNP-FUS combination is essentially unstudied in DIPG. | FUS BBB-opening safety data (GBM trials); DIPG transcriptome (CBTTC); LNP-mRNA efficacy in GBM models; Pons anatomy MRI atlases | (1) Establish DIPG patient-derived xenograft (PDX) in pons; (2) Optimize FUS parameters for pontine BBB opening (MRI-guided); (3) Deliver LNP-mRNA (IL-12 or H3K27M-targeting) post-FUS; (4) Measure delivery efficiency by luciferase reporter; (5) Assess safety by MRI + histology | $180,000–$260,000 |
+| 3 | **Intranasal LNP delivery bypassing BBB for GBM — olfactory-trigeminal pathway optimization** | Intranasal delivery to brain is conceptually established but LNP formulation parameters for olfactory epithelium uptake vs. systemic absorption are poorly defined. No systematic formulation screen exists for GBM-relevant payloads. | Intranasal delivery pharmacokinetics (small molecules); Olfactory epithelium transcriptomics; LNP size-uptake relationships (liver); GBM mouse models | (1) Screen 12 LNP formulations varying size (50–200 nm), charge, PEG density; (2) Intranasal dosing in C57BL/6 mice; (3) Quantify brain vs. lung vs. liver distribution by fluorescence imaging; (4) Test in GL261 orthotopic GBM; (5) Measure tumor mRNA expression | $55,000–$90,000 |
+| 4 | **LNP-mediated delivery of circular RNA (circRNA) for sustained GBM immunotherapy** | circRNA is more stable than linear mRNA (no 5'/3' ends for exonuclease degradation) and can drive prolonged protein expression. LNP formulation for circRNA is almost entirely unstudied — most circRNA delivery uses electroporation or viral vectors. | circRNA production protocols (in vitro); LNP-mRNA delivery benchmarks; GBM immunotherapy targets (IL-12, STING agonists); circRNA stability data | (1) Synthesize circRNA encoding IL-12 or anti-PD-L1 nanobody; (2) Formulate in ionizable LNPs (compare MC3 vs. Lipid 5); (3) Compare expression duration vs. linear mRNA-LNP in vitro; (4) Test in GBM organoids; (5) In vivo efficacy in GL261 model | $120,000–$200,000 |
+| 5 | **cfRNA splicing isoform signatures as GBM liquid biopsy** — Tumor-specific alternative splicing events detectable in plasma cfRNA as GBM biomarkers | GBM sheds minimal ctDNA due to BBB. cfRNA from GBM-specific splicing (EGFRvIII, PTPRZ1-MET fusion) is theoretically detectable but no validated plasma cfRNA panel exists for GBM. Most liquid biopsy research focuses on solid tumors with high ctDNA shedding. | GBM splicing atlas (TCGA RNA-seq); EGFRvIII detection methods; cfRNA isolation protocols; Healthy donor cfRNA baseline (GTEx) | (1) Identify top 20 GBM-specific splicing events from TCGA; (2) Design RT-qPCR assays for plasma cfRNA; (3) Collect plasma from 30 GBM patients + 30 healthy controls; (4) Validate with ddPCR; (5) Correlate with tumor burden by MRI | $95,000–$150,000 |
+| 6 | **Extracellular vesicle (EV) surface proteomics as pan-cancer early detection** — Using EV surface protein signatures (not cargo) as cancer-type-specific biomarkers | EV cargo (miRNA, cfDNA) is well-studied. EV surface proteomics by proximity labeling or aptamer arrays is technically feasible but rarely applied to early-stage cancer detection. Surface proteins are more stable and accessible than EV cargo. | EV proteomics databases (EVpedia, Vesiclepedia); Cancer-specific surface markers (HPA); EV isolation benchmarks; SomaScan aptamer platform data | (1) Isolate EVs from plasma of 50 early-stage cancer patients (5 types) + 50 controls by SEC; (2) Profile surface proteome by proximity labeling (BioID2) + LC-MS/MS; (3) Identify cancer-type-specific surface signatures; (4) Validate top 10 markers by aptamer array; (5) Build ML classifier | $200,000–$320,000 |
+| 7 | **Clonal hematopoiesis (CHIP) interference correction in ctDNA liquid biopsy** — Developing computational methods to distinguish tumor-derived variants from CHIP-derived variants in cfDNA | CHIP affects >10% of adults >65 and generates somatic variants (DNMT3A, TET2, ASXL1) that contaminate ctDNA signals. No validated correction algorithm exists for routine clinical use, causing false-positive cancer detections. | CHIP variant databases (gnomAD somatic); ctDNA variant callers (GATK, Mutect2); Paired tumor-normal WGS datasets (TCGA); CHIP prevalence data (UK Biobank) | (1) Collect paired cfDNA + WBC DNA from 100 cancer patients; (2) Call variants in both fractions; (3) Identify CHIP-specific variant patterns (VAF, trinucleotide context); (4) Train random forest classifier to distinguish CHIP vs. tumor variants; (5) Validate in independent cohort | $130,000–$210,000 |
+| 8 | **Disease-specific protein corona fingerprinting for cancer diagnosis** — Using the unique corona formed on standardized nanoparticle probes incubated in patient plasma as a cancer biomarker | The corona formed on a nanoparticle probe reflects the plasma proteome in a concentrated, amplified form. Different cancers produce distinct corona fingerprints. This "corona biopsy" concept has <10 publications and no clinical validation. | Plasma proteomics in cancer (CPTAC); Nanoparticle corona proteomics methods; LC-MS/MS cancer biomarker studies; Healthy donor plasma proteome (HPA) | (1) Incubate 5 standardized NP probes (varying charge/size) in plasma from 20 GBM + 20 PDAC + 20 healthy donors; (2) Elute and quantify corona by LC-MS/MS; (3) Identify cancer-type-specific corona signatures; (4) Build PCA/SVM classifier; (5) Validate in blinded cohort | $160,000–$250,000 |
+| 9 | **Complement activation by LNPs in immunocompromised cancer patients** — Characterizing how chemotherapy-induced immunosuppression alters complement-mediated LNP clearance | Complement C3 deposition on LNPs triggers opsonization and rapid clearance. Cancer patients on chemotherapy have altered complement levels. LNP pharmacokinetics in immunocompromised patients is almost entirely unstudied despite being the primary clinical population. | Complement proteomics in cancer patients; LNP complement activation assays; Chemotherapy immunosuppression data; LNP PK in healthy volunteers | (1) Collect plasma from 30 cancer patients (pre/post chemotherapy) + 15 healthy controls; (2) Incubate LNPs in each plasma sample; (3) Quantify C3b/iC3b deposition by ELISA; (4) Measure LNP uptake by macrophages in complement-depleted vs. replete conditions; (5) Correlate with patient complement levels | $75,000–$120,000 |
+| 10 | **Corona-mediated immunogenicity of LNP-mRNA in repeat-dosing cancer vaccine regimens** — Understanding how the evolving protein corona changes LNP immunogenicity across multiple vaccine doses | Cancer vaccines require multiple doses. Anti-PEG antibodies alter the corona on subsequent doses, potentially changing immunogenicity. The interplay between corona evolution, anti-PEG immunity, and vaccine efficacy is completely unstudied in multi-dose regimens. | Anti-PEG antibody prevalence data; LNP corona proteomics (single dose); mRNA vaccine immunogenicity data (COVID-19); Accelerated blood clearance (ABC) phenomenon literature | (1) Immunize mice with LNP-mRNA (3 doses, 3-week intervals); (2) Collect plasma after each dose; (3) Measure anti-PEG IgM/IgG by ELISA; (4) Incubate LNPs in post-dose plasma and profile corona by LC-MS/MS; (5) Correlate corona changes with T-cell and antibody responses | $90,000–$145,000 |
+
+---
+
+## Key Cross-Cutting Themes
+
+1. **ApoE biology** connects LNP brain targeting (Dir. 1, 2) with corona-mediated organ selectivity (Dir. 9)
+2. **Stability advantage** of circRNA (Dir. 4) and EV surface proteins (Dir. 6) over conventional analytes is underexploited
+3. **Patient heterogeneity** (ApoE genotype, CHIP status, immune status) is systematically ignored in LNP and liquid biopsy studies
+4. **Corona as diagnostic tool** (Dir. 8) inverts the usual framing — instead of preventing corona, using it as a signal
+
+## Recommended Priority Order (impact × feasibility)
+
+| Priority | Direction | Rationale |
+|----------|-----------|-----------|
+| 1 | Dir. 3 (Intranasal LNP) | Low cost, high feasibility, unmet need in GBM |
+| 2 | Dir. 7 (CHIP correction) | Computational, leverages existing datasets |
+| 3 | Dir. 5 (cfRNA splicing GBM) | Addresses unique GBM liquid biopsy gap |
+| 4 | Dir. 8 (Corona fingerprinting) | Novel concept, moderate cost |
+| 5 | Dir. 1 (ApoE isoform LNP) | High impact if validated |
+
+---
+*Analysis generated by K R&D Lab Cancer Research Suite | 2026-03-07*

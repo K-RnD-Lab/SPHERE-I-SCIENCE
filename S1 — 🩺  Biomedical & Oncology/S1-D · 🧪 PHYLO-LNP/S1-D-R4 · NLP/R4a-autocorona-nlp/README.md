@@ -1,9 +1,9 @@
 # K R&D Lab — LNP Corona Research Projects
 
-> Part of [K R&D Lab](https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026)
+> Part of [K R&D Lab](https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE)
 > **Oksana Kolisnyk** | kosatiks-group.pp.ua · ORCID: 0009-0003-5780-2290
 
-[![Demo](https://img.shields.io/badge/🤗-Live_Demo-yellow)](https://huggingface.co/spaces/K-RnD-Lab/K-RnD-Lab-PHYLO-03_2026)
+[![Demo](https://img.shields.io/badge/🤗-Live_Demo-yellow)](https://huggingface.co/spaces/K-RnD-Lab/Learning-Playground_03-2026)
 
 ## Projects in This Repository
 
@@ -52,7 +52,7 @@ pip install -r requirements.txt
   title   = {K R\&D Lab: LNP Corona Research Projects},
   author  = {Kolisnyk, Oksana},
   year    = {2026},
-  url     = {https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026},
+  url     = {https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE},
   note    = {kosatiks-group.pp.ua. ORCID: 0009-0003-5780-2290}
 }
 ```

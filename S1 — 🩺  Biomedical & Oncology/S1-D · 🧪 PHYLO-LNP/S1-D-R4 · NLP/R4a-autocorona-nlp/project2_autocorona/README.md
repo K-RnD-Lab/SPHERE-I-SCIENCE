@@ -1,6 +1,6 @@
 # AutoCorona: An NLP Pipeline for Automated Extraction of LNP Protein Corona Data from Scientific Literature
 
-> Part of [K R&D Lab](https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026)
+> Part of [K R&D Lab](https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE)
 > **Oksana Kolisnyk** | kosatiks-group.pp.ua
 
 ## 🔬 Key Finding
@@ -9,7 +9,7 @@
 **Model performance:** F1 = 0.71 (protein_source) | **Dataset:** N = 43 entries (22 GS + 21 new)
 
 ## 🤗 Demo
-[![Demo](https://img.shields.io/badge/🤗-Live_Demo-yellow)](https://huggingface.co/spaces/K-RnD-Lab/K-RnD-Lab-PHYLO-03_2026)
+[![Demo](https://img.shields.io/badge/🤗-Live_Demo-yellow)](https://huggingface.co/spaces/K-RnD-Lab/Learning-Playground_03-2026)
 
 ## 📊 Results Summary
 | Metric | Value |
@@ -89,7 +89,7 @@ python evaluate_extraction.py \
              LNP Protein Corona Data from Scientific Literature},
   author  = {Kolisnyk, Oksana},
   year    = {2026},
-  url     = {https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026},
+  url     = {https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE},
   note    = {K R\&D Lab, KOSATIKS GROUP. ORCID: 0009-0003-5780-2290}
 }
 ```

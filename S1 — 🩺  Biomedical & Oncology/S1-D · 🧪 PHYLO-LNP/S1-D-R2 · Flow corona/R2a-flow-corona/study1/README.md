@@ -1,6 +1,6 @@
 # Machine Learning Prediction of Protein Corona Composition in Lipid Nanoparticles from Physicochemical Properties
 
-> Part of [K R&D Lab](https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026)
+> Part of [K R&D Lab](https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE)
 > **Oksana Kolisnyk** · ML Engineer @ kosatiks-group.pp.ua
 
 ## 🔬 Key Finding
@@ -11,7 +11,7 @@
 > ⚠️ **DATA NOTICE:** All quantitative results are based on literature-anchored **simulated data**. No raw LNPDB records were used. All CSV files are labelled `_SIMULATED_`. Results demonstrate methodology only and must not be interpreted as experimental findings.
 
 ## 🤗 Demo
-[![Demo](https://img.shields.io/badge/🤗-Live_Demo-yellow)](https://huggingface.co/spaces/K-RnD-Lab/K-RnD-Lab-PHYLO-03_2026)
+[![Demo](https://img.shields.io/badge/🤗-Live_Demo-yellow)](https://huggingface.co/spaces/K-RnD-Lab/Learning-Playground_03-2026)
 
 ## 📊 Results Summary
 | Metric | Value |
@@ -91,7 +91,7 @@ print(f"AUC: {roc_auc_score(y, y_prob):.3f}")
   author  = {Kolisnyk, Oksana},
   year    = {2026},
   note    = {K R\&D Lab, kosatiks-group.pp.ua. Methodology demonstration on simulated data.
-             GitHub: https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026},
-  url     = {https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026}
+             GitHub: https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE},
+  url     = {https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE}
 }
 ```

@@ -1,6 +1,6 @@
 # Protein Corona Fingerprinting of Lipid Nanoparticles as a Liquid Biopsy Biomarker: Distinguishing Cancer Patients from Healthy Individuals Using Machine Learning
 
-> Part of [K R&D Lab](https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026)
+> Part of [K R&D Lab](https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE)
 > **Oksana Kolisnyk** | kosatiks-group.pp.ua
 
 ## 🔬 Key Finding
@@ -11,7 +11,7 @@
 > ⚠️ **Critical Caveat:** AUC=0.992 reflects **tumor vs adjacent-normal TISSUE proteomics**, NOT plasma-level corona screening. Real plasma LNP corona would realistically yield AUC ~0.75–0.90. All synthetic corona data is labeled **SYNTHETIC** throughout. No public LNP corona LC-MS/MS dataset (cancer vs healthy plasma) currently exists.
 
 ## 🤗 Demo
-[![Demo](https://img.shields.io/badge/🤗-Live_Demo-yellow)](https://huggingface.co/spaces/K-RnD-Lab/K-RnD-Lab-PHYLO-03_2026)
+[![Demo](https://img.shields.io/badge/🤗-Live_Demo-yellow)](https://huggingface.co/spaces/K-RnD-Lab/Learning-Playground_03-2026)
 
 ## 📊 Results Summary
 | Metric | Value |
@@ -91,7 +91,7 @@ print(f"GroupKFold AUC: {roc_auc_score(y, y_prob):.3f}")
   author    = {Kolisnyk, Oksana},
   year      = {2026},
   publisher = {GitHub},
-  url       = {https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026},
+  url       = {https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE},
   note      = {K R\&D Lab, KOSATIKS GROUP (kosatiks-group.pp.ua). SIMULATED/SYNTHETIC dataset.
                Tissue-level AUC only; plasma validation required.}
 }

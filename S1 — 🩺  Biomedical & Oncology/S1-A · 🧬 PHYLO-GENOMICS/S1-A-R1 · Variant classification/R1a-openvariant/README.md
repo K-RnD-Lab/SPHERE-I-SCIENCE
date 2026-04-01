@@ -1,6 +1,6 @@
 # OpenVariant: An Open-Source Variant Pathogenicity Classifier Benchmarked Against AlphaMissense
 
-> Part of [K R&D Lab](https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026)
+> Part of [K R&D Lab](https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE)
 > **Oksana Kolisnyk** | kosatiks-group.pp.ua
 
 ## 🔬 Key Finding
@@ -11,7 +11,7 @@
 > ⚠ **Data Notice:** All variant data in this repository is **SIMULATED** for benchmarking and methodology demonstration purposes. It does not represent real ClinVar records or patient data. Files are explicitly labeled `SIMULATED_*`.
 
 ## 🤗 Demo
-[![Demo](https://img.shields.io/badge/🤗-Live_Demo-yellow)](https://huggingface.co/spaces/K-RnD-Lab/K-RnD-Lab-PHYLO-03_2026)
+[![Demo](https://img.shields.io/badge/🤗-Live_Demo-yellow)](https://huggingface.co/spaces/K-RnD-Lab/Learning-Playground_03-2026)
 
 ↑ Live demo hosted at this Space. If the link is inactive, run locally via `app.py` (see Quick Start below).
 
@@ -40,7 +40,7 @@
 
 ## 📁 Repository Structure
 ```
-K-RnD-Lab-PHYLO-03_2026/
+SPHERE-I-SCIENCE/
 ├── README.md
 ├── report.md                               # Full manuscript
 ├── execution_trace.ipynb                   # Reproducible analysis notebook
@@ -107,7 +107,7 @@ model.fit(X, y)
   year         = {2026},
   month        = {March},
   institution  = {KOSATIKS GROUP},
-  url          = {https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026},
+  url          = {https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE},
   note         = {K R\&D Lab PHYLO-03\_2026. SIMULATED benchmark data.}
 }
 ```

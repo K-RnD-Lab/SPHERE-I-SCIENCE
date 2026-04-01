@@ -3,8 +3,8 @@
 > **Author:** Oksana Kolisnyk | kosatiks-group.pp.ua
 > **Affiliation:** KOSATIKS GROUP (kosatiks-group.pp.ua)
 > **ORCID:** 0009-0003-5780-2290
-> **Repository:** https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026
-> **HF Space:** https://huggingface.co/spaces/K-RnD-Lab/K-RnD-Lab-PHYLO-03_2026
+> **Repository:** https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE
+> **HF Space:** https://huggingface.co/spaces/K-RnD-Lab/Learning-Playground_03-2026
 > **Date:** 2026-03-06
 > **Part of:** K R&D Lab PHYLO-03_2026
 
@@ -222,7 +222,7 @@ XGBoost with SHAP interpretability provides a practical framework for LNP formul
   year         = {2026},
   institution  = {KOSATIKS GROUP (kosatiks-group.pp.ua)},
   note         = {K R\&D Lab PHYLO-03\_2026. SIMULATED demo data.
-                  \url{https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026}},
-  url          = {https://huggingface.co/spaces/K-RnD-Lab/K-RnD-Lab-PHYLO-03_2026}
+                  \url{https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE}},
+  url          = {https://huggingface.co/spaces/K-RnD-Lab/Learning-Playground_03-2026}
 }
 ```

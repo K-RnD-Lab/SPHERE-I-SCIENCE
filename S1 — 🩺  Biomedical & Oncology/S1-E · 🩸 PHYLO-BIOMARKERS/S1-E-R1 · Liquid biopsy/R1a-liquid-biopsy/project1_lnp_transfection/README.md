@@ -1,6 +1,6 @@
 # Machine Learning Prediction of LNP Transfection Efficacy from Physicochemical and Formulation Features
 
-> Part of [K R&D Lab](https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026)
+> Part of [K R&D Lab](https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE)
 > **Oksana Kolisnyk** | kosatiks-group.pp.ua
 
 ## 🔬 Key Finding
@@ -13,7 +13,7 @@
 > ⚠️ **Data Transparency:** All datasets in this repository are **SIMULATED** synthetic data generated to match published LNPDB statistics. No proprietary or unpublished experimental data is included. All filenames are prefixed with `SIMULATED_`.
 
 ## 🤗 Demo
-[![Demo](https://img.shields.io/badge/🤗-Live_Demo-yellow)](https://huggingface.co/spaces/K-RnD-Lab/K-RnD-Lab-PHYLO-03_2026)
+[![Demo](https://img.shields.io/badge/🤗-Live_Demo-yellow)](https://huggingface.co/spaces/K-RnD-Lab/Learning-Playground_03-2026)
 
 ## 📊 Results Summary
 | Metric | Value |
@@ -89,7 +89,7 @@ print(f"AUC: {roc_auc_score(y, y_prob):.3f}")
   author    = {Kolisnyk, Oksana},
   year      = {2026},
   publisher = {GitHub},
-  url       = {https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026},
+  url       = {https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE},
   note      = {K R\&D Lab, KOSATIKS GROUP (kosatiks-group.pp.ua). SIMULATED dataset.}
 }
 ```

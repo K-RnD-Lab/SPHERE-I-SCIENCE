@@ -2,7 +2,7 @@
 
 > **Author:** Oksana Kolisnyk · ML Engineer @ KOSATIKS GROUP (kosatiks-group.pp.ua)
 > **ORCID:** 0009-0003-5780-2290
-> **Repository:** https://github.com/TEZv/K-RnD-Lab-BIO-03_2026
+> **Repository:** https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE
 > **HuggingFace:** https://huggingface.co/TEZv
 > **Date:** March 2026
 > **Data status:** ⚠️ ALL DATA IN THIS REPORT IS SIMULATED FOR DEMONSTRATION PURPOSES
@@ -244,10 +244,10 @@ All datasets used in this analysis are simulated and clearly labeled with the `S
   year      = {2026},
   month     = {March},
   note      = {K R\&D Lab · KOSATIKS GROUP.
-               GitHub: https://github.com/TEZv/K-RnD-Lab-BIO-03_2026.
+               GitHub: https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE.
                HuggingFace: https://huggingface.co/TEZv.
                ORCID: 0009-0003-5780-2290.
                WARNING: All data is simulated for demonstration purposes.},
-  url       = {https://github.com/TEZv/K-RnD-Lab-BIO-03_2026}
+  url       = {https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE}
 }
 ```

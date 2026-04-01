@@ -1,6 +1,6 @@
 # Computational Discovery of Small Molecules Targeting FGFR3 mRNA for Bladder Cancer
 
-> Part of [K R&D Lab](https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026)
+> Part of [K R&D Lab](https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE)
 > **Oksana Kolisnyk** · ML Engineer | kosatiks-group.pp.ua
 
 ## Key Finding
@@ -11,7 +11,7 @@
 
 ## Demo
 
-[![Demo](https://img.shields.io/badge/HuggingFace-Live_Demo-yellow)](https://huggingface.co/spaces/K-RnD-Lab/K-RnD-Lab-PHYLO-03_2026)
+[![Demo](https://img.shields.io/badge/HuggingFace-Live_Demo-yellow)](https://huggingface.co/spaces/K-RnD-Lab/Learning-Playground_03-2026)
 
 ## Results Summary
 
@@ -36,7 +36,7 @@
 ## Repository Structure
 
 ```
-K-RnD-Lab-PHYLO-03_2026/
+SPHERE-I-SCIENCE/
 ├── README.md
 ├── report.md
 ├── execution_trace.ipynb
@@ -56,8 +56,8 @@ K-RnD-Lab-PHYLO-03_2026/
 
 ```bash
 # Clone repository
-git clone https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026
-cd K-RnD-Lab-PHYLO-03_2026
+git clone https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE
+cd SPHERE-I-SCIENCE
 
 # Install dependencies
 pip install pandas numpy matplotlib seaborn requests
@@ -91,7 +91,7 @@ python -c "import pandas as pd; df = pd.read_csv('data/SIMULATED_docking_scores.
   year      = {2026},
   month     = {March},
   publisher = {K R\&D Lab | kosatiks-group.pp.ua},
-  url       = {https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026},
+  url       = {https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE},
   note      = {ORCID: 0009-0003-5780-2290. Contains SIMULATED data — not peer-reviewed experimental results.}
 }
 ```
