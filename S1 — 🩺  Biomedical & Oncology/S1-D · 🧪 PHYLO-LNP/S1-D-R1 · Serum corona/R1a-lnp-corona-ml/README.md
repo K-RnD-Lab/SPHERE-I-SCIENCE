@@ -1,67 +1,67 @@
-﻿# Machine Learning Prediction of Protein Corona Composition in Lipid Nanoparticles from Physicochemical Properties
+# Machine Learning Prediction of Protein Corona Composition in Lipid Nanoparticles from Physicochemical Properties
 
 > Part of [K R&D Lab](https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE)
 > **Oksana Kolisnyk** | kosatiks-group.pp.ua
 
-## рџ”¬ Key Finding
+## 🔬 Key Finding
 > Formulation composition ratios (CHL/HL/PEG molar ratios) dominate over ionizable lipid molecular structure in predicting LNP transfection efficacy (XGBoost AUC = 0.791, N = 19,200), suggesting molar ratio optimization yields larger gains than new lipid synthesis.
 
-> вљ пёЏ This finding is from the **REPORTED real-data analysis** (Kolisnyk 2026), not from this simulated demo. The simulated model produces pKa as the top SHAP feature due to data generation parameters вЂ” see Results Summary table for full comparison.
+> ⚠️ This finding is from the **REPORTED real-data analysis** (Kolisnyk 2026), not from this simulated demo. The simulated model produces pKa as the top SHAP feature due to data generation parameters — see Results Summary table for full comparison.
 
 **Model performance:** Macro-OvR AUC = 0.791 (reported) / 0.836 [SIMULATED-CIRCULAR] | **Dataset:** N = 19,200 (LNPDB, simulated for this demo)
 
-> вљ пёЏ **DATA NOTICE:** All datasets in this repository are **SIMULATED** (synthetically generated to match reported statistics). They are clearly labeled `SIMULATED_*` in all filenames and figures. Real LNPDB data must be obtained from the original authors.
+> ⚠️ **DATA NOTICE:** All datasets in this repository are **SIMULATED** (synthetically generated to match reported statistics). They are clearly labeled `SIMULATED_*` in all filenames and figures. Real LNPDB data must be obtained from the original authors.
 
-## рџ¤— Demo
-[![Demo](https://img.shields.io/badge/рџ¤—-Live_Demo-yellow)](https://huggingface.co/spaces/K-RnD-Lab/Learning-Playground_03-2026)
+## 🤗 Demo
+[![Demo](https://img.shields.io/badge/🤗-Live_Demo-yellow)](https://huggingface.co/spaces/K-RnD-Lab/Learning-Playground_03-2026)
 
-## рџ“Љ Results Summary
+## 📊 Results Summary
 
 > **Two columns:** *Reported* = values from the real LNPDB analysis (target of this study). *Simulated demo* = values computed on the synthetic dataset in this repository.
 
 | Metric | Reported (real data) | Simulated demo |
 |--------|----------------------|----------------|
 | XGBoost Macro-OvR AUC | **0.791** | 0.836 |
-| Top SHAP feature | CHL mol% (0.194) | pKa (0.648)вЂ  |
+| Top SHAP feature | CHL mol% (0.194) | pKa (0.648)† |
 | 2nd SHAP feature | HL mol% (0.134) | CHL mol% (0.427) |
-| 3rd SHAP feature | Frac. spВіC (0.119) | HL mol% (0.343) |
+| 3rd SHAP feature | Frac. sp³C (0.119) | HL mol% (0.343) |
 | 4th SHAP feature | PEG mol% (0.118) | PEG mol% (0.327) |
-| Corona LOOCV AUC (N=26) | **0.794** | 0.728 (XGB) / 0.781 (LR)вЂЎ |
+| Corona LOOCV AUC (N=26) | **0.794** | 0.728 (XGB) / 0.781 (LR)‡ |
 | Training set size | N = 19,200 | N = 19,200 (simulated) |
 | Efficacy classes | High / Medium / Low | High / Medium / Low |
 | Cross-validation | Stratified 80/20 split | Stratified 80/20 split |
 
-вЂ  pKa ranks first in the simulated data because the synthetic latent score was constructed with a strong pKa term (optimal в‰€ 6.5). In real LNPDB data, CHL mol% is the dominant feature. The qualitative conclusion вЂ” composition ratios dominate over molecular structure вЂ” holds in both.
+† pKa ranks first in the simulated data because the synthetic latent score was constructed with a strong pKa term (optimal ≈ 6.5). In real LNPDB data, CHL mol% is the dominant feature. The qualitative conclusion — composition ratios dominate over molecular structure — holds in both.
 
-вЂЎ LOOCV AUC at N=26 can only take discrete values; the closest achievable to the reported 0.794 is 0.728 (XGBoost) / 0.781 (Logistic Regression).
+‡ LOOCV AUC at N=26 can only take discrete values; the closest achievable to the reported 0.794 is 0.728 (XGBoost) / 0.781 (Logistic Regression).
 
-## рџ“Ѓ Repository Structure
+## 📁 Repository Structure
 
 ```
 SPHERE-I-SCIENCE/
-в”њв”Ђв”Ђ README.md
-в”њв”Ђв”Ђ report.md
-в”њв”Ђв”Ђ execution_trace.ipynb
-в”њв”Ђв”Ђ data/
-в”‚   в”њв”Ђв”Ђ SIMULATED_LNPDB_N19200.csv       # Main dataset (SIMULATED)
-в”‚   в”њв”Ђв”Ђ SIMULATED_Corona_N26.csv          # Corona proof-of-concept (SIMULATED)
-в”‚   в”њв”Ђв”Ђ SIMULATED_feature_importance.csv  # SHAP feature rankings
-в”‚   в”њв”Ђв”Ђ roc_data.json                     # ROC curve data
-в”‚   в”њв”Ђв”Ђ confusion_matrix.npy              # Raw confusion matrix
-в”‚   в”њв”Ђв”Ђ confusion_matrix_norm.npy         # Normalized confusion matrix
-в”‚   в”њв”Ђв”Ђ shap_arr.npy                      # SHAP values array (2000, 17, 3)
-в”‚   в”њв”Ђв”Ђ X_test_shap.npy                   # Test features for SHAP
-в”‚   в””в”Ђв”Ђ xgboost_model.pkl                 # Trained XGBoost model
-в””в”Ђв”Ђ figures/
-    в”њв”Ђв”Ђ Figure1.png / Figure1.svg         # Data overview
-    в”њв”Ђв”Ђ Figure2.png / Figure2.svg         # Correlation heatmap
-    в”њв”Ђв”Ђ Figure3.png / Figure3.svg         # ROC curves
-    в”њв”Ђв”Ђ Figure4.png / Figure4.svg         # SHAP beeswarm
-    в”њв”Ђв”Ђ Figure5.png / Figure5.svg         # Confusion matrix
-    в””в”Ђв”Ђ FigureS1.png / FigureS1.svg       # Corona proof-of-concept
+├── README.md
+├── report.md
+├── execution_trace.ipynb
+├── data/
+│   ├── SIMULATED_LNPDB_N19200.csv       # Main dataset (SIMULATED)
+│   ├── SIMULATED_Corona_N26.csv          # Corona proof-of-concept (SIMULATED)
+│   ├── SIMULATED_feature_importance.csv  # SHAP feature rankings
+│   ├── roc_data.json                     # ROC curve data
+│   ├── confusion_matrix.npy              # Raw confusion matrix
+│   ├── confusion_matrix_norm.npy         # Normalized confusion matrix
+│   ├── shap_arr.npy                      # SHAP values array (2000, 17, 3)
+│   ├── X_test_shap.npy                   # Test features for SHAP
+│   └── xgboost_model.pkl                 # Trained XGBoost model
+└── figures/
+    ├── Figure1.png / Figure1.svg         # Data overview
+    ├── Figure2.png / Figure2.svg         # Correlation heatmap
+    ├── Figure3.png / Figure3.svg         # ROC curves
+    ├── Figure4.png / Figure4.svg         # SHAP beeswarm
+    ├── Figure5.png / Figure5.svg         # Confusion matrix
+    └── FigureS1.png / FigureS1.svg       # Corona proof-of-concept
 ```
 
-## рџљЂ Quick Start
+## 🚀 Quick Start
 
 ```bash
 # Install dependencies
@@ -84,7 +84,7 @@ probs = model.predict_proba(df[FEATURES].values)
 print("Predicted efficacy probabilities (High/Low/Medium):", probs[:3])
 ```
 
-## вљ пёЏ Limitations
+## ⚠️ Limitations
 
 1. **Simulated data only.** All datasets are synthetically generated. Results cannot be directly compared to real experimental findings without access to the original LNPDB database.
 2. **Three-class problem is hard.** Medium efficacy class shows lower AUC (0.712) than High/Low, reflecting genuine difficulty in distinguishing intermediate performers.
@@ -94,7 +94,7 @@ print("Predicted efficacy probabilities (High/Low/Medium):", probs[:3])
 6. **No temporal validation.** No held-out year-based test set; temporal generalization is unknown.
 7. **Molecular descriptors are 2D only.** 3D conformational features (e.g., cone angle, tail unsaturation geometry) are not included.
 
-## рџ“– Citation
+## 📖 Citation
 
 ```bibtex
 @misc{kolisnyk2026lnp,
@@ -108,4 +108,3 @@ print("Predicted efficacy probabilities (High/Low/Medium):", probs[:3])
   url          = {https://huggingface.co/spaces/K-RnD-Lab/Learning-Playground_03-2026}
 }
 ```
-

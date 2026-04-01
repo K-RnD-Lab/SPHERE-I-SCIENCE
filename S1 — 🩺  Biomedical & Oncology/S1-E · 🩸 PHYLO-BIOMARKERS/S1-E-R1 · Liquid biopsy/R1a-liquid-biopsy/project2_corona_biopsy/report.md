@@ -1,22 +1,22 @@
-﻿# Protein Corona Fingerprinting of Lipid Nanoparticles as a Liquid Biopsy Biomarker: Distinguishing Cancer Patients from Healthy Individuals Using Machine Learning
+# Protein Corona Fingerprinting of Lipid Nanoparticles as a Liquid Biopsy Biomarker: Distinguishing Cancer Patients from Healthy Individuals Using Machine Learning
 
 **Author:** Oksana Kolisnyk | kosatiks-group.pp.ua
-**Affiliation:** KOSATIKS GROUP В· K R&D Lab
+**Affiliation:** KOSATIKS GROUP · K R&D Lab
 **Date:** March 2026
 **Repository:** https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE
 **ORCID:** 0009-0003-5780-2290
 
 ---
 
-> вљ пёЏ **MANDATORY DATA TRANSPARENCY STATEMENT**
+> ⚠️ **MANDATORY DATA TRANSPARENCY STATEMENT**
 >
-> All datasets in this study are **SIMULATED** (proteomics) or **SYNTHETIC** (LNP corona), generated to reproduce published CPTAC summary statistics. The reported AUC=0.992 reflects **tumor vs adjacent-normal TISSUE proteomics only** вЂ” it does NOT represent plasma-level LNP corona screening performance. Realistic plasma LNP corona AUC is expected to be **0.75вЂ“0.90** based on published plasma proteomics benchmarks. No public LNP corona LC-MS/MS dataset comparing cancer patients to healthy individuals in plasma currently exists. This work identifies candidate biomarkers and provides an experimental protocol to fill this gap. All filenames are prefixed with `SIMULATED_` or `SYNTHETIC_`.
+> All datasets in this study are **SIMULATED** (proteomics) or **SYNTHETIC** (LNP corona), generated to reproduce published CPTAC summary statistics. The reported AUC=0.992 reflects **tumor vs adjacent-normal TISSUE proteomics only** — it does NOT represent plasma-level LNP corona screening performance. Realistic plasma LNP corona AUC is expected to be **0.75–0.90** based on published plasma proteomics benchmarks. No public LNP corona LC-MS/MS dataset comparing cancer patients to healthy individuals in plasma currently exists. This work identifies candidate biomarkers and provides an experimental protocol to fill this gap. All filenames are prefixed with `SIMULATED_` or `SYNTHETIC_`.
 
 ---
 
 ## Abstract
 
-The protein corona вЂ” the layer of plasma proteins adsorbed onto lipid nanoparticle (LNP) surfaces вЂ” encodes information about the systemic proteome of the host. We hypothesize that LNP corona composition can serve as a liquid biopsy readout for cancer detection. Using a SIMULATED proxy of the CPTAC multi-cancer proteomics dataset (N=576 samples Г— 8,843 proteins; PDAC, BRCA, LUAD), we train Random Forest, SVM, and Logistic Regression classifiers to distinguish tumor from normal/healthy tissue. Random Forest achieves GroupKFold AUC=0.993В±0.005 at the tissue level. RFECV identifies a 30-protein biomarker panel; the top pan-cancer markers are CTHRC1, FHL2, LDHA, P4HA1, SERPINH1, and ABCA8. A 3-protein signature (CTHRC1/FHL2/LDHA) is proposed as the primary candidate for plasma LNP corona enrichment studies. We provide a detailed 6-phase experimental roadmap (estimated $80,000вЂ“$140,000, 10вЂ“19 months) to validate this approach in real plasma. **Critically, no plasma validation data exists; the tissue-level AUC cannot be extrapolated to plasma performance.**
+The protein corona — the layer of plasma proteins adsorbed onto lipid nanoparticle (LNP) surfaces — encodes information about the systemic proteome of the host. We hypothesize that LNP corona composition can serve as a liquid biopsy readout for cancer detection. Using a SIMULATED proxy of the CPTAC multi-cancer proteomics dataset (N=576 samples × 8,843 proteins; PDAC, BRCA, LUAD), we train Random Forest, SVM, and Logistic Regression classifiers to distinguish tumor from normal/healthy tissue. Random Forest achieves GroupKFold AUC=0.993±0.005 at the tissue level. RFECV identifies a 30-protein biomarker panel; the top pan-cancer markers are CTHRC1, FHL2, LDHA, P4HA1, SERPINH1, and ABCA8. A 3-protein signature (CTHRC1/FHL2/LDHA) is proposed as the primary candidate for plasma LNP corona enrichment studies. We provide a detailed 6-phase experimental roadmap (estimated $80,000–$140,000, 10–19 months) to validate this approach in real plasma. **Critically, no plasma validation data exists; the tissue-level AUC cannot be extrapolated to plasma performance.**
 
 **Keywords:** protein corona, lipid nanoparticles, liquid biopsy, cancer detection, machine learning, CPTAC, CTHRC1, LDHA, FHL2, proteomics, pan-cancer biomarker
 
@@ -26,7 +26,7 @@ The protein corona вЂ” the layer of plasma proteins adsorbed onto lipid nano
 
 ### 1.1 The Protein Corona as a Biological Sensor
 
-When nanoparticles enter biological fluids, plasma proteins rapidly adsorb onto their surfaces, forming a "protein corona" that fundamentally alters nanoparticle identity and biological fate. The corona composition is not random вЂ” it reflects the local proteome of the biological fluid, which in turn encodes disease state information. This property has been exploited in the "corona fingerprinting" concept: by analyzing the protein composition of LNP coronas incubated in patient plasma, one can infer the patient's disease state without directly measuring plasma proteins.
+When nanoparticles enter biological fluids, plasma proteins rapidly adsorb onto their surfaces, forming a "protein corona" that fundamentally alters nanoparticle identity and biological fate. The corona composition is not random — it reflects the local proteome of the biological fluid, which in turn encodes disease state information. This property has been exploited in the "corona fingerprinting" concept: by analyzing the protein composition of LNP coronas incubated in patient plasma, one can infer the patient's disease state without directly measuring plasma proteins.
 
 The key advantage of corona-based detection over direct plasma proteomics is **signal enrichment**: LNPs preferentially adsorb low-abundance proteins that are difficult to detect in bulk plasma, effectively concentrating disease-relevant signals. Published work by Hajipour et al. (2021) and Caracciolo et al. (2017) demonstrated proof-of-concept corona fingerprinting for Alzheimer's disease and cancer, respectively.
 
@@ -48,7 +48,7 @@ Early detection of pancreatic ductal adenocarcinoma (PDAC), breast cancer (BRCA)
 
 ### 2.1 Dataset
 
-**Primary dataset:** SIMULATED proxy of CPTAC multi-cancer proteomics (N=576 samples Г— 8,843 proteins).
+**Primary dataset:** SIMULATED proxy of CPTAC multi-cancer proteomics (N=576 samples × 8,843 proteins).
 
 | Group | N | Description |
 |-------|---|-------------|
@@ -97,7 +97,7 @@ Recursive Feature Elimination with Cross-Validation (RFECV) was applied to the t
 - Step size: 10 proteins per elimination round
 - Minimum features: 20
 
-> **Note (M2):** RFECV used StratifiedKFold(5) while the main model used GroupKFold(5). The 30-protein panel was therefore selected under a less rigorous CV scheme that does not enforce patient-level leakage protection. Panel composition may be optimistically biased вЂ” proteins that differ between paired tumor/normal samples from the same patient may be over-selected. Rerunning RFECV with GroupKFold is recommended before clinical translation.
+> **Note (M2):** RFECV used StratifiedKFold(5) while the main model used GroupKFold(5). The 30-protein panel was therefore selected under a less rigorous CV scheme that does not enforce patient-level leakage protection. Panel composition may be optimistically biased — proteins that differ between paired tumor/normal samples from the same patient may be over-selected. Rerunning RFECV with GroupKFold is recommended before clinical translation.
 
 ### 2.5 Differential Expression Analysis
 
@@ -128,11 +128,11 @@ Volcano plot analysis (Figure 3) identifies:
 
 **Healthy vs PDAC:** 118 proteins significantly upregulated, 150 downregulated (FDR<0.05, |log2FC|>1)
 **Healthy vs BRCA:** 129 proteins significantly upregulated, 138 downregulated (FDR<0.05, |log2FC|>1)
-**PDAC vs BRCA:** 142 proteins upregulated in BRCA vs PDAC, 129 downregulated вЂ” fewer net differences than healthy comparisons, reflecting shared pan-cancer biology with cancer-type-specific divergence
+**PDAC vs BRCA:** 142 proteins upregulated in BRCA vs PDAC, 129 downregulated — fewer net differences than healthy comparisons, reflecting shared pan-cancer biology with cancer-type-specific divergence
 
 Key pan-cancer upregulated proteins: CTHRC1 (log2FC=+3.8), LDHA (log2FC=+3.9), FHL2 (log2FC=+4.5), SERPINH1 (log2FC=+4.2), P4HA1 (log2FC=+2.9), VIM (log2FC=+3.9).
 
-Key downregulated proteins: ABCA8 (log2FC=в€’3.3), CDH1 (log2FC=в€’1.7), SMAD4 (log2FC=в€’1.4).
+Key downregulated proteins: ABCA8 (log2FC=−3.3), CDH1 (log2FC=−1.7), SMAD4 (log2FC=−1.4).
 
 ### 3.3 Model Performance
 
@@ -140,15 +140,15 @@ All three classifiers achieve high AUC at the tissue level (Figure 4):
 
 | Model | GroupKFold AUC | Notes |
 |-------|---------------|-------|
-| Random Forest | 0.993 В± 0.005 | Primary model |
+| Random Forest | 0.993 ± 0.005 | Primary model |
 | Logistic Regression | 0.990 | L2 regularized |
 | SVM (RBF) | 0.983 | RBF kernel |
 
-The RF confusion matrix shows 100% sensitivity (all 370 tumor samples correctly classified) with 62.1% specificity (128/206 normal/healthy correctly classified; bootstrap 95% CI: 55.3%вЂ“68.9%). The 13.6 percentage-point CI width reflects the limited number of normal/healthy samples (N=206 across 5 folds, ~41 per fold). The high sensitivity at the cost of specificity is consistent with the class imbalance (370 tumor vs 206 normal).
+The RF confusion matrix shows 100% sensitivity (all 370 tumor samples correctly classified) with 62.1% specificity (128/206 normal/healthy correctly classified; bootstrap 95% CI: 55.3%–68.9%). The 13.6 percentage-point CI width reflects the limited number of normal/healthy samples (N=206 across 5 folds, ~41 per fold). The high sensitivity at the cost of specificity is consistent with the class imbalance (370 tumor vs 206 normal).
 
-> **Note (M4):** Specificity is estimated from N=206 normal/healthy samples total. The bootstrap 95% CI (55.3%вЂ“68.9%) is wide, indicating this cohort is underpowered for reliable specificity estimation. A minimum of Nв‰Ґ400 normal samples is recommended before drawing conclusions about false-positive rates.
+> **Note (M4):** Specificity is estimated from N=206 normal/healthy samples total. The bootstrap 95% CI (55.3%–68.9%) is wide, indicating this cohort is underpowered for reliable specificity estimation. A minimum of N≥400 normal samples is recommended before drawing conclusions about false-positive rates.
 
-> вљ пёЏ **Critical interpretation:** These AUC values reflect tissue proteomics, where tumor and normal samples differ by thousands of proteins at large fold-changes. Plasma proteomics has ~10Г— lower dynamic range, ~10,000Г— more abundant background proteins (albumin, IgG, fibrinogen), and the LNP corona captures only a subset of plasma proteins. Realistic plasma AUC is expected to be **0.75вЂ“0.90**.
+> ⚠️ **Critical interpretation:** These AUC values reflect tissue proteomics, where tumor and normal samples differ by thousands of proteins at large fold-changes. Plasma proteomics has ~10× lower dynamic range, ~10,000× more abundant background proteins (albumin, IgG, fibrinogen), and the LNP corona captures only a subset of plasma proteins. Realistic plasma AUC is expected to be **0.75–0.90**.
 
 ### 3.4 Biomarker Panel
 
@@ -162,7 +162,7 @@ RFECV selected 30 proteins as the minimal predictive panel. The top 20 proteins 
 | FN1 | +2.09 | 0.028 | Yes | Yes | Pan-cancer |
 | EGFR | +4.17 | 0.026 | Yes | Yes | LUAD |
 | P4HA1 | +2.87 | 0.024 | No | No | Pan-cancer |
-| ABCA8 | в€’3.25 | 0.022 | No | No | Pan-cancer (в†“) |
+| ABCA8 | −3.25 | 0.022 | No | No | Pan-cancer (↓) |
 | FHL2 | +4.48 | 0.020 | Yes | No* | Pan-cancer |
 
 *\*FHL2 secreted=False (not classically secreted via signal peptide). Proposed mechanism: exosomal/microvesicle release. Requires experimental validation of plasma detectability and LNP corona enrichment before inclusion in the final panel.*
@@ -180,13 +180,13 @@ Figure 6 presents a 6-phase experimental protocol to validate the LNP corona liq
 
 | Phase | Description | Duration | Cost |
 |-------|-------------|----------|------|
-| 1 | LNP probe design & characterization | 2вЂ“3 months | ~$15,000 |
-| 2 | Blood collection (Nв‰Ґ200, IRB) | 3вЂ“6 months | ~$25,000 |
-| 3 | Corona formation & isolation | 1вЂ“2 months | ~$10,000 |
-| 4 | LC-MS/MS proteomics (TMT 10-plex) | 2вЂ“3 months | ~$40,000 |
-| 5 | ML classification & panel refinement | 1вЂ“2 months | ~$5,000 |
-| 6 | Prospective clinical validation (Nв‰Ґ500) | 6вЂ“12 months | ~$45,000 |
-| **Total** | | **10вЂ“19 months** | **$80,000вЂ“$140,000** |
+| 1 | LNP probe design & characterization | 2–3 months | ~$15,000 |
+| 2 | Blood collection (N≥200, IRB) | 3–6 months | ~$25,000 |
+| 3 | Corona formation & isolation | 1–2 months | ~$10,000 |
+| 4 | LC-MS/MS proteomics (TMT 10-plex) | 2–3 months | ~$40,000 |
+| 5 | ML classification & panel refinement | 1–2 months | ~$5,000 |
+| 6 | Prospective clinical validation (N≥500) | 6–12 months | ~$45,000 |
+| **Total** | | **10–19 months** | **$80,000–$140,000** |
 
 ---
 
@@ -200,7 +200,7 @@ Figure 6 presents a 6-phase experimental protocol to validate the LNP corona liq
 - Caracciolo et al. (2017): Nanoparticle corona for ovarian cancer detection (N=~30, serum)
 - Tenzer et al. (2013): Comprehensive plasma corona proteomics (healthy only)
 
-None of these provide a multi-cancer, adequately powered (Nв‰Ґ200), plasma-validated dataset with paired LC-MS/MS and clinical outcomes.
+None of these provide a multi-cancer, adequately powered (N≥200), plasma-validated dataset with paired LC-MS/MS and clinical outcomes.
 
 ### 4.2 Why Tissue AUC Cannot Be Extrapolated to Plasma
 
@@ -209,7 +209,7 @@ None of these provide a multi-cancer, adequately powered (Nв‰Ґ200), plasma-v
 | Dynamic range | ~4 orders of magnitude | ~10 orders of magnitude |
 | Background proteins | Tissue-specific | Albumin/IgG dominate (>90%) |
 | Tumor signal | Direct (tumor cells present) | Indirect (secreted proteins only) |
-| Expected AUC | 0.99 (this study) | 0.75вЂ“0.90 (estimated) |
+| Expected AUC | 0.99 (this study) | 0.75–0.90 (estimated) |
 | Sample stability | Frozen tissue | EDTA plasma, time-sensitive |
 
 ### 4.3 What This Study Provides
@@ -217,21 +217,21 @@ None of these provide a multi-cancer, adequately powered (Nв‰Ґ200), plasma-v
 1. **Candidate biomarker list:** 20 proteins with strong tissue-level evidence, ranked by RF importance and annotated for secretion status and ELISA availability
 2. **Experimental protocol:** Detailed 6-phase roadmap with realistic budget and timeline
 3. **Computational pipeline:** Reproducible ML pipeline ready to apply to real plasma corona data
-4. **Honest benchmarks:** Clear statement that tissue AUC в‰  plasma AUC
+4. **Honest benchmarks:** Clear statement that tissue AUC ≠ plasma AUC
 
 ### 4.4 Recommended Next Steps
 
-**Immediate (0вЂ“3 months, ~$5,000):**
-- Validate CTHRC1, LDHA, SERPINH1 plasma levels by ELISA in existing biobank samples (Nв‰Ґ50)
+**Immediate (0–3 months, ~$5,000):**
+- Validate CTHRC1, LDHA, SERPINH1 plasma levels by ELISA in existing biobank samples (N≥50)
 - Confirm LNP corona enrichment of these proteins vs direct plasma measurement
 
-**Short-term (3вЂ“12 months, ~$40,000):**
+**Short-term (3–12 months, ~$40,000):**
 - Collect N=100 plasma samples (25 PDAC, 25 BRCA, 25 LUAD, 25 healthy)
 - Perform LNP corona LC-MS/MS (TMT 6-plex)
 - Train initial plasma corona classifier
 
-**Long-term (12вЂ“24 months, ~$100,000):**
-- Prospective validation cohort Nв‰Ґ500
+**Long-term (12–24 months, ~$100,000):**
+- Prospective validation cohort N≥500
 - Multi-site study for generalizability
 - Regulatory pathway assessment (LDT vs IVD)
 
@@ -241,11 +241,11 @@ None of these provide a multi-cancer, adequately powered (Nв‰Ґ200), plasma-v
 
 ### 5.1 CTHRC1 as a Pan-Cancer Biomarker
 
-CTHRC1 (Collagen Triple Helix Repeat Containing 1) is a secreted glycoprotein that promotes tumor invasion and metastasis by activating the Wnt/PCP pathway. It is upregulated in PDAC, BRCA, LUAD, and multiple other cancers. Crucially, CTHRC1 is secreted into the extracellular matrix and bloodstream, making it detectable in plasma. Published studies report plasma CTHRC1 levels of 2вЂ“5 ng/mL in cancer patients vs <1 ng/mL in healthy controls вЂ” within the detection range of commercial ELISA kits and potentially enrichable by LNP corona.
+CTHRC1 (Collagen Triple Helix Repeat Containing 1) is a secreted glycoprotein that promotes tumor invasion and metastasis by activating the Wnt/PCP pathway. It is upregulated in PDAC, BRCA, LUAD, and multiple other cancers. Crucially, CTHRC1 is secreted into the extracellular matrix and bloodstream, making it detectable in plasma. Published studies report plasma CTHRC1 levels of 2–5 ng/mL in cancer patients vs <1 ng/mL in healthy controls — within the detection range of commercial ELISA kits and potentially enrichable by LNP corona.
 
 ### 5.2 LDHA as a Metabolic Marker
 
-LDHA (Lactate Dehydrogenase A) is a key enzyme in the Warburg effect вЂ” the preferential use of glycolysis by cancer cells even in the presence of oxygen. LDHA is actively secreted by cancer cells and is measurable in plasma. Elevated serum LDH is already used clinically as a non-specific cancer marker. The LNP corona may preferentially enrich LDHA from cancer patient plasma due to its abundance and surface-binding properties.
+LDHA (Lactate Dehydrogenase A) is a key enzyme in the Warburg effect — the preferential use of glycolysis by cancer cells even in the presence of oxygen. LDHA is actively secreted by cancer cells and is measurable in plasma. Elevated serum LDH is already used clinically as a non-specific cancer marker. The LNP corona may preferentially enrich LDHA from cancer patient plasma due to its abundance and surface-binding properties.
 
 ### 5.3 FHL2 and the Cytoskeletal Remodeling Signature
 
@@ -263,7 +263,7 @@ However, this hypothesis requires experimental validation. The LNP surface chemi
 ### 5.5 Limitations
 
 1. **All data are simulated:** No experimental validation has been performed
-2. **Tissue в‰  plasma:** The fundamental limitation of this study
+2. **Tissue ≠ plasma:** The fundamental limitation of this study
 3. **Small healthy cohort (N=26):** Severely underpowered for robust healthy vs cancer discrimination
 4. **Adjacent-normal bias:** Adjacent-normal tissue has field cancerization effects; it is not equivalent to healthy plasma
 5. **No batch correction:** Synthetic batch effects were introduced but not corrected
@@ -274,18 +274,18 @@ However, this hypothesis requires experimental validation. The LNP surface chemi
 
 ## 6. Conclusions
 
-This proof-of-concept computational study identifies CTHRC1, FHL2, and LDHA as the strongest candidates for a pan-cancer plasma LNP corona biomarker panel, based on SIMULATED CPTAC tissue proteomics. The Random Forest classifier achieves AUC=0.993В±0.005 at the tissue level вЂ” a result that cannot be directly extrapolated to plasma but provides a strong biological rationale for experimental follow-up. The proposed 6-phase experimental roadmap ($80,000вЂ“$140,000, 10вЂ“19 months) provides a concrete path to plasma validation. **The most important next step is collecting real plasma LNP corona LC-MS/MS data from cancer patients and healthy controls вЂ” this dataset does not yet exist and is the critical bottleneck for the field.**
+This proof-of-concept computational study identifies CTHRC1, FHL2, and LDHA as the strongest candidates for a pan-cancer plasma LNP corona biomarker panel, based on SIMULATED CPTAC tissue proteomics. The Random Forest classifier achieves AUC=0.993±0.005 at the tissue level — a result that cannot be directly extrapolated to plasma but provides a strong biological rationale for experimental follow-up. The proposed 6-phase experimental roadmap ($80,000–$140,000, 10–19 months) provides a concrete path to plasma validation. **The most important next step is collecting real plasma LNP corona LC-MS/MS data from cancer patients and healthy controls — this dataset does not yet exist and is the critical bottleneck for the field.**
 
 ---
 
 ## 7. Figures
 
-- **Figure 1:** Dataset overview вЂ” study design flowchart, sample distribution by group, cancer type, and tissue type [SIMULATED]
-- **Figure 2:** PCA scatter plot (PC1 vs PC2, colored by cancer type) + hierarchical clustering heatmap (48 samples Г— 20 key proteins) [SIMULATED]
-- **Figure 3:** Volcano plots вЂ” Healthy vs PDAC | Healthy vs BRCA | PDAC vs BRCA (FDR<0.05, |log2FC|>1) [SIMULATED]
-- **Figure 4:** ROC curves (RF, SVM, LogReg) + RF confusion matrix (row-normalized %) [SIMULATED вЂ” tissue-level only]
-- **Figure 5:** Biomarker dot plot вЂ” top 20 proteins by RF importance, colored by log2FC, annotated for ELISA availability [SIMULATED]
-- **Figure 6:** Experimental roadmap вЂ” 6-phase LNP corona liquid biopsy protocol [PROPOSED FUTURE WORK вЂ” not yet executed]
+- **Figure 1:** Dataset overview — study design flowchart, sample distribution by group, cancer type, and tissue type [SIMULATED]
+- **Figure 2:** PCA scatter plot (PC1 vs PC2, colored by cancer type) + hierarchical clustering heatmap (48 samples × 20 key proteins) [SIMULATED]
+- **Figure 3:** Volcano plots — Healthy vs PDAC | Healthy vs BRCA | PDAC vs BRCA (FDR<0.05, |log2FC|>1) [SIMULATED]
+- **Figure 4:** ROC curves (RF, SVM, LogReg) + RF confusion matrix (row-normalized %) [SIMULATED — tissue-level only]
+- **Figure 5:** Biomarker dot plot — top 20 proteins by RF importance, colored by log2FC, annotated for ELISA availability [SIMULATED]
+- **Figure 6:** Experimental roadmap — 6-phase LNP corona liquid biopsy protocol [PROPOSED FUTURE WORK — not yet executed]
 
 ---
 
@@ -295,17 +295,17 @@ This proof-of-concept computational study identifies CTHRC1, FHL2, and LDHA as t
 
 This work identifies candidate biomarkers and provides the experimental protocol to fill this gap.
 
-**Estimated budget:** $80,000вЂ“$140,000 (academic pricing)
-**Estimated timeline:** 10вЂ“19 months
+**Estimated budget:** $80,000–$140,000 (academic pricing)
+**Estimated timeline:** 10–19 months
 **Critical path:** IRB approval + patient recruitment (Phase 2) is the longest lead-time item
 
-**What would change this conclusion:** A plasma LNP corona dataset with Nв‰Ґ200 (50 per cancer type + 50 healthy) would allow direct training of a plasma-level classifier. Based on published plasma proteomics benchmarks, we expect AUC=0.75вЂ“0.90 вЂ” clinically useful but substantially lower than the tissue-level AUC=0.992 reported here.
+**What would change this conclusion:** A plasma LNP corona dataset with N≥200 (50 per cancer type + 50 healthy) would allow direct training of a plasma-level classifier. Based on published plasma proteomics benchmarks, we expect AUC=0.75–0.90 — clinically useful but substantially lower than the tissue-level AUC=0.992 reported here.
 
 **Funding opportunities:**
 - NCI R21 (exploratory/developmental): $275,000 over 2 years
 - NCI R01 (full project): $1.5M over 5 years
 - CDMRP Pancreatic Cancer Research Program: $300,000 over 3 years
-- EU Horizon Europe (EIC Pathfinder): в‚¬3M over 4 years
+- EU Horizon Europe (EIC Pathfinder): €3M over 4 years
 
 ---
 
@@ -319,15 +319,15 @@ For real CPTAC data access: https://proteomics.cancer.gov/programs/cptac (requir
 
 ## 10. References
 
-1. Hajipour MJ, et al. Personalized disease-specific protein corona influences the therapeutic impact of graphene oxide. *Nanoscale.* 2015;7(19):8978вЂ“8994.
-2. Caracciolo G, et al. Clinically approved liposomal nanomedicines as "Trojan horses" for combination cancer therapy. *Nanoscale.* 2017;9(22):7419вЂ“7428.
-3. Tenzer S, et al. Rapid formation of plasma protein corona critically affects nanoparticle pathophysiology. *Nat Nanotechnol.* 2013;8(10):772вЂ“781.
+1. Hajipour MJ, et al. Personalized disease-specific protein corona influences the therapeutic impact of graphene oxide. *Nanoscale.* 2015;7(19):8978–8994.
+2. Caracciolo G, et al. Clinically approved liposomal nanomedicines as "Trojan horses" for combination cancer therapy. *Nanoscale.* 2017;9(22):7419–7428.
+3. Tenzer S, et al. Rapid formation of plasma protein corona critically affects nanoparticle pathophysiology. *Nat Nanotechnol.* 2013;8(10):772–781.
 4. Doyle LM, Wang MZ. Overview of extracellular vesicles, their origin, composition, purpose, and methods for exosome isolation and analysis. *Cells.* 2019;8(7):727.
-5. [REFERENCE REMOVED вЂ” author attribution unverifiable; CTHRC1/Wnt-PCP pathway reference requires manual literature search before publication] [UNVERIFIED]
-6. Vander Heiden MG, Cantley LC, Thompson CB. Understanding the Warburg effect: the metabolic requirements of cell proliferation. *Science.* 2009;324(5930):1029вЂ“1033.
-7. Winn ME, et al. FHL2 mediates epithelial-mesenchymal transition and cancer progression. *Cancer Res.* 2016;76(14):4100вЂ“4112.
+5. [REFERENCE REMOVED — author attribution unverifiable; CTHRC1/Wnt-PCP pathway reference requires manual literature search before publication] [UNVERIFIED]
+6. Vander Heiden MG, Cantley LC, Thompson CB. Understanding the Warburg effect: the metabolic requirements of cell proliferation. *Science.* 2009;324(5930):1029–1033.
+7. Winn ME, et al. FHL2 mediates epithelial-mesenchymal transition and cancer progression. *Cancer Res.* 2016;76(14):4100–4112.
 8. Miao L, et al. Synergistic lipid compositions for albumin receptor mediated delivery of mRNA to the liver. *Nat Commun.* 2020;11(1):2424.
-9. Edwards NJ, et al. The CPTAC data portal: a resource for cancer proteomics research. *J Proteome Res.* 2015;14(6):2707вЂ“2713.
+9. Edwards NJ, et al. The CPTAC data portal: a resource for cancer proteomics research. *J Proteome Res.* 2015;14(6):2707–2713.
 10. Lundberg SM, Lee SI. A unified approach to interpreting model predictions. *Adv Neural Inf Process Syst.* 2017;30.
 
 > **Note:** References marked [UNVERIFIED] require manual DOI lookup and author verification before submission or publication. Reference 5 (CTHRC1/Wnt-PCP) was flagged as unverifiable and must be replaced with a confirmed citation.
@@ -335,5 +335,4 @@ For real CPTAC data access: https://proteomics.cancer.gov/programs/cptac (requir
 ---
 
 *Report generated: March 2026 | K R&D Lab | KOSATIKS GROUP | Oksana Kolisnyk | kosatiks-group.pp.ua*
-*вљ  All data SIMULATED/SYNTHETIC. Tissue-level AUC only. Plasma validation required.*
-
+*⚠ All data SIMULATED/SYNTHETIC. Tissue-level AUC only. Plasma validation required.*
