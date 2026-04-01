@@ -2,7 +2,7 @@
 
 **Author:** Oksana Kolisnyk | kosatiks-group.pp.ua
 **ORCID:** 0009-0003-5780-2290
-**Repository:** https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026
+**Repository:** https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE
 **Date:** 2026-03-06
 **Project:** K R&D Lab — PHYLO-03
 

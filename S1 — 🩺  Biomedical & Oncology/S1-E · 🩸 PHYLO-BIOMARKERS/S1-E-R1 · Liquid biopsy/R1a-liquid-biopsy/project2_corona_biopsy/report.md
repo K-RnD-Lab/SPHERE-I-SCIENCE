@@ -3,7 +3,7 @@
 **Author:** Oksana Kolisnyk | kosatiks-group.pp.ua
 **Affiliation:** KOSATIKS GROUP · K R&D Lab
 **Date:** March 2026
-**Repository:** https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026
+**Repository:** https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE
 **ORCID:** 0009-0003-5780-2290
 
 ---
@@ -311,7 +311,7 @@ This work identifies candidate biomarkers and provides the experimental protocol
 
 ## 9. Data Availability
 
-All datasets are SIMULATED/SYNTHETIC. Available at: https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026
+All datasets are SIMULATED/SYNTHETIC. Available at: https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE
 
 For real CPTAC data access: https://proteomics.cancer.gov/programs/cptac (requires dbGaP approval)
 

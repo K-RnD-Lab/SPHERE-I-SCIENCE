@@ -1,6 +1,6 @@
 # Ionizable Lipid Properties Predicting ApoE Enrichment in LNP Protein Corona for Blood-Brain Barrier Crossing in Glioblastoma
 
-> Part of [K R&D Lab](https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026)
+> Part of [K R&D Lab](https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE)
 > **Oksana Kolisnyk** | kosatiks-group.pp.ua
 
 ## 🔬 Key Finding
@@ -9,7 +9,7 @@
 **Model performance:** LOO-CV R² = 0.542 (overall; dominated by lipid-type confound — within-group ionizable R²=−1.571), Pearson r = 0.780, MAE = 4.9% | **Dataset:** N = 22 (SIMULATED — literature-grounded ranges)
 
 ## 🤗 Demo
-[![Demo](https://img.shields.io/badge/🤗-Live_Demo-yellow)](https://huggingface.co/spaces/K-RnD-Lab/K-RnD-Lab-PHYLO-03_2026)
+[![Demo](https://img.shields.io/badge/🤗-Live_Demo-yellow)](https://huggingface.co/spaces/K-RnD-Lab/Learning-Playground_03-2026)
 
 ## 📊 Results Summary
 
@@ -36,7 +36,7 @@
 ## 📁 Repository Structure
 
 ```
-K-RnD-Lab-PHYLO-03_2026/
+SPHERE-I-SCIENCE/
 ├── README.md
 ├── report.md                          # Full manuscript
 ├── execution_trace.ipynb              # Reproducible analysis notebook
@@ -83,7 +83,7 @@ python -c "import pandas as pd; print(pd.read_csv('data/apoe_corona_SIMULATED.cs
   year    = {2026},
   month   = {March},
   note    = {K R\&D Lab · Oksana Kolisnyk | kosatiks-group.pp.ua · SIMULATED proof-of-concept study},
-  url     = {https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026},
+  url     = {https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE},
   orcid   = {0009-0003-5780-2290}
 }
 ```

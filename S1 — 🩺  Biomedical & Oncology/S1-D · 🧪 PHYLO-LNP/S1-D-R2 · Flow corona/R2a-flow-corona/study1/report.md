@@ -4,8 +4,8 @@
 **Affiliation:** ¹ Oksana Kolisnyk | kosatiks-group.pp.ua | K R&D Lab  
 **Date:** March 2026  
 **Status:** Methodology demonstration — all data is SIMULATED  
-**Repository:** https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026  
-**HF Space:** https://huggingface.co/spaces/K-RnD-Lab/K-RnD-Lab-PHYLO-03_2026  
+**Repository:** https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE  
+**HF Space:** https://huggingface.co/spaces/K-RnD-Lab/Learning-Playground_03-2026  
 
 ---
 

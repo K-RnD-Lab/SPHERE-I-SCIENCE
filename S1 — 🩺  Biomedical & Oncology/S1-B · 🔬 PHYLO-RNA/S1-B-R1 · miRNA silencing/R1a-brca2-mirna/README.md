@@ -1,6 +1,6 @@
 # Identification of Tumor Suppressor miRNAs Silenced in BRCA2-Mutant Breast Cancer: A Multi-Dataset Meta-Analysis
 
-> Part of [K R&D Lab](https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026)
+> Part of [K R&D Lab](https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE)
 > **Oksana Kolisnyk** · ML Engineer @ KOSATIKS GROUP
 
 ## 🔬 Key Finding
@@ -9,7 +9,7 @@
 **Model performance:** 25 significant DE miRNAs identified (padj ≤ 0.05, |log2FC| ≥ 0.3) | **Dataset:** N = 300 (13 BRCA2-mutant, 287 wildtype) — ⚠️ SIMULATED DATA
 
 ## 🤗 Demo
-[![Demo](https://img.shields.io/badge/🤗-Live_Demo-yellow)](https://huggingface.co/spaces/K-RnD-Lab/K-RnD-Lab-PHYLO-03_2026)
+[![Demo](https://img.shields.io/badge/🤗-Live_Demo-yellow)](https://huggingface.co/spaces/K-RnD-Lab/PHYLO-03_2026-01_A1-brca2-mirna)
 
 ## 📊 Results Summary
 | Metric | Value |
@@ -30,7 +30,7 @@
 
 ## 📁 Repository Structure
 ```
-K-RnD-Lab-PHYLO-03_2026/
+SPHERE-I-SCIENCE/
 ├── README.md
 ├── report.md                          # Full manuscript
 ├── execution_trace.ipynb              # Reproducible analysis notebook
@@ -52,8 +52,8 @@ K-RnD-Lab-PHYLO-03_2026/
 ## 🚀 Quick Start
 ```bash
 # Clone repository
-git clone https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026.git
-cd K-RnD-Lab-PHYLO-03_2026
+git clone https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE.git
+cd SPHERE-I-SCIENCE
 
 # Install dependencies
 pip install pandas numpy scipy matplotlib seaborn networkx adjustText \
@@ -80,7 +80,7 @@ jupyter notebook execution_trace.ipynb
   year      = {2026},
   month     = {March},
   note      = {K R\&D Lab, KOSATIKS GROUP. SIMULATED DATA — for methodological
-               demonstration only. GitHub: https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026},
-  url       = {https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026}
+               demonstration only. GitHub: https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE},
+  url       = {https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE}
 }
 ```

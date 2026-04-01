@@ -1,6 +1,6 @@
 # Predicting Protein Corona Remodeling in Lipid Nanoparticles Under Physiological Flow: Closing the Static-Dynamic Gap
 
-> Part of [K R&D Lab](https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026)
+> Part of [K R&D Lab](https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE)
 > **Oksana Kolisnyk** · ML Engineer @ kosatiks-group.pp.ua
 
 ## 🔬 Key Finding
@@ -11,7 +11,7 @@
 > ⚠️ **DATA NOTICE:** All quantitative data is **simulated** with literature-anchored parameters. No public matched static/dynamic LNP corona dataset exists. N ≥ 50 matched formulations needed for minimum viable ML; N ≥ 300 for publication-standard validation. The **DYNAMIC-CORONA-STD v1.0** experimental protocol is the primary contribution of this work.
 
 ## 🤗 Demo
-[![Demo](https://img.shields.io/badge/🤗-Live_Demo-yellow)](https://huggingface.co/spaces/K-RnD-Lab/K-RnD-Lab-PHYLO-03_2026)
+[![Demo](https://img.shields.io/badge/🤗-Live_Demo-yellow)](https://huggingface.co/spaces/K-RnD-Lab/Learning-Playground_03-2026)
 
 ## 📊 Results Summary
 | Metric | Value |
@@ -99,7 +99,7 @@ CSI = 0.25×|Δzeta|/5.4 + 0.45×|Δalbumin|/12.2 + 0.30×ΔApoE/6.0
   year    = {2026},
   note    = {K R\&D Lab, kosatiks-group.pp.ua. Methodology demonstration on simulated data.
              Primary contribution: DYNAMIC-CORONA-STD v1.0 experimental protocol.
-             GitHub: https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026},
-  url     = {https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026}
+             GitHub: https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE},
+  url     = {https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE}
 }
 ```

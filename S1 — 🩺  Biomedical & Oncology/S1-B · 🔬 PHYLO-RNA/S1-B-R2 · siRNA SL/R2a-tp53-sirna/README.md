@@ -1,6 +1,6 @@
 # Computational Identification of siRNA Synthetic Lethal Targets in TP53-Mutant Lung Adenocarcinoma
 
-> Part of [K R&D Lab](https://github.com/TEZv/K-RnD-Lab-BIO-03_2026)
+> Part of [K R&D Lab](https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE)
 > **Oksana Kolisnyk** · ML Engineer @ KOSATIKS GROUP
 
 ## Key Finding
@@ -11,7 +11,7 @@
 > **Note:** BUB1B dropped to rank 11 after Z-score normalization of the composite SL score and is absent from Figure 4 (top-10 heatmap). It remains a validated SL hit by the dual-threshold criterion (padj ≤ 0.05, dCERES ≤ −0.10) and is included in the Venn triple intersection. See report §3.4 for details.
 
 ## Demo
-[![Demo](https://img.shields.io/badge/HuggingFace-Live_Demo-yellow)](https://huggingface.co/spaces/TEZv/K-RnD-Lab-BIO-03_2026)
+[![Demo](https://img.shields.io/badge/HuggingFace-K--RnD--Lab-yellow)](https://huggingface.co/spaces/K-RnD-Lab/Learning-Playground_03-2026)
 
 ## Results Summary
 | Metric | Value |
@@ -35,7 +35,7 @@
 
 ## Repository Structure
 ```
-K-RnD-Lab-BIO-03_2026/
+SPHERE-I-SCIENCE/
 ├── README.md
 ├── report.md
 ├── execution_trace.ipynb
@@ -95,10 +95,10 @@ jupyter nbconvert --to notebook --execute execution_trace.ipynb
   year      = {2026},
   month     = {March},
   note      = {K R\&D Lab · KOSATIKS GROUP.
-               GitHub: https://github.com/TEZv/K-RnD-Lab-BIO-03_2026.
-               HuggingFace: https://huggingface.co/TEZv.
+               GitHub: https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE.
+               HuggingFace: https://huggingface.co/spaces/K-RnD-Lab/Learning-Playground_03-2026.
                ORCID: 0009-0003-5780-2290.
                WARNING: All data is simulated for demonstration purposes.},
-  url       = {https://github.com/TEZv/K-RnD-Lab-BIO-03_2026}
+  url       = {https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE}
 }
 ```

@@ -2,10 +2,10 @@
 
 **Author:** Oksana Kolisnyk · ML Engineer | kosatiks-group.pp.ua  
 **ORCID:** 0009-0003-5780-2290  
-**Repository:** https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026  
-**HF Space:** https://huggingface.co/spaces/K-RnD-Lab/K-RnD-Lab-PHYLO-03_2026  
+**Repository:** https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE  
+**HF Space:** https://huggingface.co/spaces/K-RnD-Lab/Learning-Playground_03-2026  
 **Date:** March 2026  
-**Part of:** [K R&D Lab](https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026)
+**Part of:** [K R&D Lab](https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE)
 
 > **DATA TRANSPARENCY NOTICE:** Docking scores, ADMET bioavailability, hERG risk, and hepatotoxicity values in this report are **SIMULATED** illustrative data. Physicochemical properties (MW, LogP, HBD, HBA, PSA, Ro5) for the top-5 compounds are **real values from ChEMBL**. The mRNA secondary structure, pocket volumes, accessibility scores, G4Hunter scores, and all nucleotide position assignments are **SIMULATED/ILLUSTRATIVE SEED DATA** — not computed from the NM_000142.5 sequence. No wet-lab experiments were performed.
 

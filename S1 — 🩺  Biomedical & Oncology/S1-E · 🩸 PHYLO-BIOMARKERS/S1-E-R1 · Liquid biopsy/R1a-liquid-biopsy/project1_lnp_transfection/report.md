@@ -3,7 +3,7 @@
 **Author:** Oksana Kolisnyk | kosatiks-group.pp.ua
 **Affiliation:** KOSATIKS GROUP · K R&D Lab
 **Date:** March 2026
-**Repository:** https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026
+**Repository:** https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE
 **ORCID:** 0009-0003-5780-2290
 
 > ⚠️ **Data Transparency Statement:** All datasets used in this study are **SIMULATED** synthetic data generated to reproduce published LNPDB summary statistics. No proprietary experimental data is included. All results must be interpreted as proof-of-concept demonstrations. Filenames are prefixed with `SIMULATED_` throughout.
@@ -180,7 +180,7 @@ This proof-of-concept study demonstrates that XGBoost with SHAP interpretability
 
 ## 7. Data Availability
 
-All datasets are SIMULATED synthetic data generated to match published LNPDB statistics. Available at: https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026
+All datasets are SIMULATED synthetic data generated to match published LNPDB statistics. Available at: https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE
 
 For access to the real LNPDB database, see: Rampado R et al. (2021) *ACS Nano* 15(2):2850–2864. DOI: 10.1021/acsnano.0c10158
 

@@ -1,6 +1,6 @@
 # Machine Learning Prediction of Protein Corona Composition in Lipid Nanoparticles from Physicochemical Properties
 
-> Part of [K R&D Lab](https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026)
+> Part of [K R&D Lab](https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE)
 > **Oksana Kolisnyk** | kosatiks-group.pp.ua
 
 ## 🔬 Key Finding
@@ -9,7 +9,7 @@
 **Model performance:** XGBoost AUC = 0.791 (5-fold CV) | **Dataset:** N = 19,200 transfection records
 
 ## 🤗 Demo
-[![Demo](https://img.shields.io/badge/🤗-Live_Demo-yellow)](https://huggingface.co/spaces/K-RnD-Lab/K-RnD-Lab-PHYLO-03_2026)
+[![Demo](https://img.shields.io/badge/🤗-Live_Demo-yellow)](https://huggingface.co/spaces/K-RnD-Lab/Learning-Playground_03-2026)
 
 ## 📊 Results Summary
 | Metric | Value |
@@ -72,7 +72,7 @@ python generate_figures.py --results results/ --output figures/
              in Lipid Nanoparticles from Physicochemical Properties},
   author  = {Kolisnyk, Oksana},
   year    = {2026},
-  url     = {https://github.com/TEZv/K-RnD-Lab-PHYLO-03_2026},
+  url     = {https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE},
   note    = {K R\&D Lab, KOSATIKS GROUP. ORCID: 0009-0003-5780-2290}
 }
 ```
