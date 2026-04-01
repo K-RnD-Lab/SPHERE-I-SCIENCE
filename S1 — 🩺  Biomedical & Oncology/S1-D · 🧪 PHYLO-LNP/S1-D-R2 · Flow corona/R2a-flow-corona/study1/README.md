@@ -1,56 +1,56 @@
-﻿# Machine Learning Prediction of Protein Corona Composition in Lipid Nanoparticles from Physicochemical Properties
+# Machine Learning Prediction of Protein Corona Composition in Lipid Nanoparticles from Physicochemical Properties
 
 > Part of [K R&D Lab](https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE)
-> **Oksana Kolisnyk** В· ML Engineer @ kosatiks-group.pp.ua
+> **Oksana Kolisnyk** · ML Engineer @ kosatiks-group.pp.ua
 
-## рџ”¬ Key Finding
-> In this simulated demo, colloidal quality (PDI, SHAP=0.210) and molar ratios (CHL+HL+PEG) are the dominant predictors. Per the reported real-data analysis, CHL mol% leads (SHAP=0.194) вЂ” PDI was not the top feature in real LNPDB data.
+## 🔬 Key Finding
+> In this simulated demo, colloidal quality (PDI, SHAP=0.210) and molar ratios (CHL+HL+PEG) are the dominant predictors. Per the reported real-data analysis, CHL mol% leads (SHAP=0.194) — PDI was not the top feature in real LNPDB data.
 
 **Model performance:** XGBoost AUC = 0.877 (5-fold CV, simulated; target spec: 0.791) | Corona PoC AUC = 0.834 (LOOCV) | **Dataset:** N = 19,200 (SIMULATED)
 
-> вљ пёЏ **DATA NOTICE:** All quantitative results are based on literature-anchored **simulated data**. No raw LNPDB records were used. All CSV files are labelled `_SIMULATED_`. Results demonstrate methodology only and must not be interpreted as experimental findings.
+> ⚠️ **DATA NOTICE:** All quantitative results are based on literature-anchored **simulated data**. No raw LNPDB records were used. All CSV files are labelled `_SIMULATED_`. Results demonstrate methodology only and must not be interpreted as experimental findings.
 
-## рџ¤— Demo
-[![Demo](https://img.shields.io/badge/рџ¤—-Live_Demo-yellow)](https://huggingface.co/spaces/K-RnD-Lab/Learning-Playground_03-2026)
+## 🤗 Demo
+[![Demo](https://img.shields.io/badge/🤗-Live_Demo-yellow)](https://huggingface.co/spaces/K-RnD-Lab/Learning-Playground_03-2026)
 
-## рџ“Љ Results Summary
+## 📊 Results Summary
 | Metric | Value |
 |--------|-------|
 | XGBoost 5-fold CV AUC | 0.877 |
 | Corona PoC LOOCV AUC | 0.834 (spec: 0.794, +5% deviation) |
 | Dataset size (simulated) | N = 19,200 |
 | Corona PoC dataset (simulated) | N = 26 |
-| Top SHAP feature | PDI (0.210) вЂ” colloidal quality |
+| Top SHAP feature | PDI (0.210) — colloidal quality |
 | 2nd SHAP feature | CHL mol% (0.192) |
 | 3rd SHAP feature | HL mol% (0.134) |
 | 4th SHAP feature | PEG mol% (0.105) |
 | 5th SHAP feature | pKa (0.099) |
-| Note: Frac.sp3C | Rank 9 (0.029) вЂ” lower than spec |
+| Note: Frac.sp3C | Rank 9 (0.029) — lower than spec |
 | Binary classification accuracy | 80% |
 
-## рџ“Ѓ Repository Structure
+## 📁 Repository Structure
 ```
 study1/
-в”њв”Ђв”Ђ data/
-в”‚   в”њв”Ђв”Ђ LNPDB_SIMULATED_N19200.csv          # Main dataset (SIMULATED)
-в”‚   в”њв”Ђв”Ђ LNPDB_SIMULATED_cv_predictions.csv  # 5-fold CV predictions
-в”‚   в”њв”Ђв”Ђ LNPDB_SIMULATED_shap_values.csv     # SHAP feature importances
-в”‚   в””в”Ђв”Ђ LNPDB_SIMULATED_corona_N26.csv      # Corona PoC dataset (SIMULATED)
-в”њв”Ђв”Ђ figures/
-в”‚   в”њв”Ђв”Ђ Figure1.png / .svg   # Data overview
-в”‚   в”њв”Ђв”Ђ Figure2.png / .svg   # Correlation heatmap
-в”‚   в”њв”Ђв”Ђ Figure3.png / .svg   # ROC curves
-в”‚   в”њв”Ђв”Ђ Figure4.png / .svg   # SHAP beeswarm
-в”‚   в”њв”Ђв”Ђ Figure5.png / .svg   # Confusion matrices
-в”‚   в””в”Ђв”Ђ FigureS1.png / .svg  # Corona PoC model
-в”њв”Ђв”Ђ tmp/
-в”‚   в”њв”Ђв”Ђ shap_matrix.npy      # Intermediate: raw SHAP matrix (not for distribution)
-в”‚   в””в”Ђв”Ђ X_features.npy       # Intermediate: feature matrix (not for distribution)
-в”њв”Ђв”Ђ README.md
-в””в”Ђв”Ђ report.md
+├── data/
+│   ├── LNPDB_SIMULATED_N19200.csv          # Main dataset (SIMULATED)
+│   ├── LNPDB_SIMULATED_cv_predictions.csv  # 5-fold CV predictions
+│   ├── LNPDB_SIMULATED_shap_values.csv     # SHAP feature importances
+│   └── LNPDB_SIMULATED_corona_N26.csv      # Corona PoC dataset (SIMULATED)
+├── figures/
+│   ├── Figure1.png / .svg   # Data overview
+│   ├── Figure2.png / .svg   # Correlation heatmap
+│   ├── Figure3.png / .svg   # ROC curves
+│   ├── Figure4.png / .svg   # SHAP beeswarm
+│   ├── Figure5.png / .svg   # Confusion matrices
+│   └── FigureS1.png / .svg  # Corona PoC model
+├── tmp/
+│   ├── shap_matrix.npy      # Intermediate: raw SHAP matrix (not for distribution)
+│   └── X_features.npy       # Intermediate: feature matrix (not for distribution)
+├── README.md
+└── report.md
 ```
 
-## рџљЂ Quick Start
+## 🚀 Quick Start
 ```bash
 pip install xgboost shap scikit-learn pandas numpy matplotlib seaborn scipy
 
@@ -75,15 +75,15 @@ y_prob = cross_val_predict(model, X, y, cv=cv, method='predict_proba')[:, 1]
 print(f"AUC: {roc_auc_score(y, y_prob):.3f}")
 ```
 
-## вљ пёЏ Limitations
+## ⚠️ Limitations
 1. **All data is simulated.** No real LNPDB records were accessed. Results are methodology demonstrations only.
 2. **AUC inflation.** Simulated data was generated with known structure; real-world AUC will likely be lower.
-3. **Corona PoC model (N=26) is underpowered.** LOOCV on N<30 is highly variable; minimum Nв‰Ґ100 required for reliable estimates.
+3. **Corona PoC model (N=26) is underpowered.** LOOCV on N<30 is highly variable; minimum N≥100 required for reliable estimates.
 4. **No external validation.** Model has not been tested on held-out real experimental data.
 5. **Categorical features excluded.** Ionizable lipid identity, cell line, and cargo type were not encoded in the ML model.
 6. **Static in vitro conditions only.** Physiological flow effects on corona composition are not captured (see Study 2).
 
-## рџ“– Citation
+## 📖 Citation
 ```bibtex
 @misc{kolisnyk2026lnp_efficacy,
   title   = {Machine Learning Prediction of Protein Corona Composition
@@ -95,4 +95,3 @@ print(f"AUC: {roc_auc_score(y, y_prob):.3f}")
   url     = {https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE}
 }
 ```
-
