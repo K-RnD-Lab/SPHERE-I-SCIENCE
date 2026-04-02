@@ -111,6 +111,12 @@ Current project:
 - `S5`: neuroinflammation biomarker panels, cognitive aging predictors, vulnerability scoring
 - `S6`: environmental microbiome sentinels, biodiversity stress markers, pollutant-response networks
 
+## Cross-Sphere Registry
+
+The first shared registry scaffold across `SCIENCE`, `ENTREPRENEURSHIP`, and `TECHNOLOGY` lives in `SPHERE-III`:
+
+- [Study Registry Dashboard Template](https://github.com/K-RnD-Lab/SPHERE-III-TECHNOLOGY/tree/main/T3%20-%20Dashboards%2C%20Interfaces%20%26%20Open%20Infrastructure/T3-R1%20-%20Dashboard%20Templates%20%26%20Public%20Interfaces/R1a-study-registry-dashboard-template)
+
 ## Source Of Truth
 
 - GitHub repo: research structure, manuscripts, notebooks, data snapshots
