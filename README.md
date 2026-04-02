@@ -111,6 +111,17 @@ Current project:
 - `S5`: neuroinflammation biomarker panels, cognitive aging predictors, vulnerability scoring
 - `S6`: environmental microbiome sentinels, biodiversity stress markers, pollutant-response networks
 
+## Primary Sphere And Hybrid Combos
+
+`SPHERE-I` remains the home sphere for scientific questions, hypotheses, and validation logic. Hybrid combo labels are added only when a study clearly crosses into reusable tooling or translational decision-making:
+
+- `S` for pure scientific questions and hypothesis work
+- `S+T` for science-facing methods, scoring systems, or reusable analytical tooling
+- `S+E` for translational opportunity framing grounded in a science problem
+- `S+E+T` for work that simultaneously connects domain research, implementation, and venture logic
+
+Hugging Face is treated as an interactive delivery layer for demos and interfaces, not as a separate sphere.
+
 ## Cross-Sphere Registry
 
 The first shared registry scaffold across `SCIENCE`, `ENTREPRENEURSHIP`, and `TECHNOLOGY` lives in `SPHERE-III`:
