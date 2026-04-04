@@ -1001,13 +1001,23 @@ function runtimeTimerLabel(runtime) {
 
   const profile = getRuntimeTimeProfile(runtime);
 
+  const overPaceLabel = state.settings.lang === 'uk'
+    ? '\u041f\u043e\u043d\u0430\u0434 \u0442\u0435\u043c\u043f:'
+    : 'Over pace:';
+  const timeLeftLabel = state.settings.lang === 'uk'
+    ? '\u0417\u0430\u043b\u0438\u0448\u0438\u043b\u043e\u0441\u044f \u0447\u0430\u0441\u0443:'
+    : 'Time left:';
+  const officialPaceLabel = state.settings.lang === 'uk'
+    ? '\u043e\u0444\u0456\u0446\u0456\u0439\u043d\u0438\u0439 \u0442\u0435\u043c\u043f:'
+    : 'official pace:';
+
   const lead = profile.overrunSeconds > 0
 
-    ? `Over pace: +${formatClock(profile.overrunSeconds)}`
+    ? `${overPaceLabel} +${formatClock(profile.overrunSeconds)}`
 
-    : `Time left: ${formatClock(profile.remainingSeconds)}`;
+    : `${timeLeftLabel} ${formatClock(profile.remainingSeconds)}`;
 
-  return `${lead} | official pace: ${runtime.questions.length}/${profile.examQuestions}`;
+  return `${lead} | ${officialPaceLabel} ${runtime.questions.length}/${profile.examQuestions}`;
 
 }
 
@@ -1726,7 +1736,7 @@ function renderSimulationRuntime() {
 
       <h3>${escapeHtml(t(`subject_${runtime.subject}`))}</h3>
 
-      <p>Official pace: ${escapeHtml(`${timeProfile.examQuestions} ${t('batchQuestions')} / ${timeProfile.examMinutes} ${t('studyMinutes')}`)}</p>
+      <p>${escapeHtml(state.settings.lang === 'uk' ? '\u041e\u0444\u0456\u0446\u0456\u0439\u043d\u0438\u0439 \u0442\u0435\u043c\u043f:' : 'Official pace:')} ${escapeHtml(`${timeProfile.examQuestions} ${t('batchQuestions')} / ${timeProfile.examMinutes} ${t('studyMinutes')}`)}</p>
 
       <p>${escapeHtml(t('simulationLimited'))}</p>
 
