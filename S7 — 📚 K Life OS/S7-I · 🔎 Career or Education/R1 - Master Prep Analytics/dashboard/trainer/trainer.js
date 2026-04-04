@@ -1264,21 +1264,28 @@ function renderControls() {
   }
 }
 
+function getQuestionRecord(question) {
+  if (!question?.id) return question;
+  return appData.questions.find((item) => item.id === question.id) || question;
+}
+
 function getLocalizedQuestionContent(question) {
+  const record = getQuestionRecord(question);
+
   if (state.settings.lang !== 'uk') {
     return {
-      prompt: question.prompt,
-      choices: question.choices || {},
-      explanation: question.explanation || '',
+      prompt: record.prompt,
+      choices: record.choices || {},
+      explanation: record.explanation || '',
     };
   }
 
-  const localized = question.i18n || {};
+  const localized = record.i18n || {};
 
   return {
-    prompt: localized.prompt?.ua || question.prompt,
-    choices: localized.choices?.ua || question.choices || {},
-    explanation: localized.explanation?.ua || question.explanation || '',
+    prompt: localized.prompt?.ua || record.prompt,
+    choices: localized.choices?.ua || record.choices || {},
+    explanation: localized.explanation?.ua || record.explanation || '',
   };
 }
 
