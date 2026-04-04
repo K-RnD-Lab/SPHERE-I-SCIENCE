@@ -1015,19 +1015,27 @@ function runtimeTimerLabel(runtime) {
 
 async function loadAppData() {
 
-  const [materialsRes, bankRes] = await Promise.all([
+  const [materialsRes, bankRes, contentI18nRes] = await Promise.all([
 
     fetch('app_data/materials_manifest.json').then((res) => res.json()),
 
     fetch('app_data/quiz_bank_v1.json').then((res) => res.json()),
 
+    fetch('app_data/content_i18n.json').then((res) => res.json()),
+
   ]);
 
 
 
-  const questions = (bankRes.quiz_sets || []).flatMap((set) => set.questions || []);
+  const questionI18n = contentI18nRes.questions || {};
+  const materialI18n = contentI18nRes.materials || {};
 
-  const materials = (materialsRes.materials || []).map((item) => normalizeMaterial(item));
+  const questions = (bankRes.quiz_sets || []).flatMap((set) => (set.questions || []).map((question) => ({
+    ...question,
+    i18n: questionI18n[question.id] || {},
+  })));
+
+  const materials = (materialsRes.materials || []).map((item) => normalizeMaterial(item, materialI18n[item.id] || {}));
 
   return { questions, materials };
 
@@ -1035,9 +1043,11 @@ async function loadAppData() {
 
 
 
-function normalizeMaterial(item) {
+function normalizeMaterial(item, localizedContent = {}) {
 
   const override = MATERIAL_OVERRIDES[item.subject] || {};
+  const en = override.en || {};
+  const uk = override.uk || {};
 
   return {
 
@@ -1047,9 +1057,14 @@ function normalizeMaterial(item) {
 
     sourceUrl: getPrimaryLearnUrl(item.subject),
 
-    en: override.en,
+    en,
 
-    uk: override.uk,
+    uk: {
+      title: localizedContent.title?.ua || uk.title || en.title || '',
+      minutes: uk.minutes ?? en.minutes ?? 20,
+      summary: localizedContent.summary?.ua || uk.summary || en.summary || [],
+      checklist: localizedContent.checklist?.ua || uk.checklist || en.checklist || [],
+    },
 
   };
 
@@ -1221,8 +1236,8 @@ function renderControls() {
 
   if (el.languageSelect) {
     const languageOptions = [
-      ['en', state.settings.lang === 'uk' ? 'Англійська' : 'English'],
-      ['uk', state.settings.lang === 'uk' ? 'Українська' : 'Ukrainian'],
+      ['en', state.settings.lang === 'uk' ? '\u0410\u043d\u0433\u043b\u0456\u0439\u0441\u044c\u043a\u0430' : 'English'],
+      ['uk', state.settings.lang === 'uk' ? '\u0423\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430' : 'Ukrainian'],
     ]
       .map(([value, label]) => `<option value="${value}" ${state.settings.lang === value ? 'selected' : ''}>${escapeHtml(label)}</option>`)
       .join('');
@@ -1231,7 +1246,7 @@ function renderControls() {
   }
 
   if (el.practiceSizeSelect) {
-    const practiceLabel = state.settings.lang === 'uk' ? 'питань' : 'questions';
+    const practiceLabel = state.settings.lang === 'uk' ? '\u043f\u0438\u0442\u0430\u043d\u044c' : 'questions';
     el.practiceSizeSelect.innerHTML = [5, 10, 15]
       .map((size) => `<option value="${size}" ${state.settings.practiceSize === size ? 'selected' : ''}>${size} ${practiceLabel}</option>`)
       .join('');
@@ -1248,6 +1263,33 @@ function renderControls() {
     ].map(([value, label]) => `<option value="${value}">${escapeHtml(label)}</option>`).join('');
   }
 }
+
+function getLocalizedQuestionContent(question) {
+  if (state.settings.lang !== 'uk') {
+    return {
+      prompt: question.prompt,
+      choices: question.choices || {},
+      explanation: question.explanation || '',
+    };
+  }
+
+  const localized = question.i18n || {};
+
+  return {
+    prompt: localized.prompt?.ua || question.prompt,
+    choices: localized.choices?.ua || question.choices || {},
+    explanation: localized.explanation?.ua || question.explanation || '',
+  };
+}
+
+const UI_UK_PATCH = {
+  openHub: '\u041d\u0430\u0437\u0430\u0434 \u0434\u043e \u0430\u043d\u0430\u043b\u0456\u0442\u0438\u0447\u043d\u043e\u0433\u043e \u0445\u0430\u0431\u0430',
+  subject_english: '\u0410\u043d\u0433\u043b\u0456\u0439\u0441\u044c\u043a\u0430',
+  subject_it: '\u0406\u0422',
+  batchQuestions: '\u043f\u0438\u0442\u0430\u043d\u044c',
+};
+
+Object.assign(UI.uk, UI_UK_PATCH);
 
 function renderMaterials() {
 
@@ -1692,6 +1734,7 @@ function renderSimulationRuntime() {
 function renderRuntimeInto(runtime, statsNode, panelNode, prefix) {
 
   const current = runtime.questions[runtime.index];
+  const localizedQuestion = getLocalizedQuestionContent(current);
 
   const answer = runtime.answers[current.id];
 
@@ -1717,7 +1760,7 @@ function renderRuntimeInto(runtime, statsNode, panelNode, prefix) {
 
 
 
-  const choices = Object.entries(current.choices || {}).map(([key, value]) => `
+  const choices = Object.entries(localizedQuestion.choices || {}).map(([key, value]) => `
 
     <label class="answer-option">
 
@@ -1737,7 +1780,7 @@ function renderRuntimeInto(runtime, statsNode, panelNode, prefix) {
 
       <strong>${escapeHtml(answer.correct ? t('answerCorrect') : t('answerIncorrect'))}</strong>
 
-      <p>${escapeHtml(current.explanation || '')}</p>
+      <p>${escapeHtml(localizedQuestion.explanation || '')}</p>
 
     </div>
 
@@ -1759,7 +1802,7 @@ function renderRuntimeInto(runtime, statsNode, panelNode, prefix) {
 
       </div>
 
-      <p class="question-prompt">${escapeHtml(current.prompt)}</p>
+      <p class="question-prompt">${escapeHtml(localizedQuestion.prompt)}</p>
 
       <div class="answer-list">${choices}</div>
 
