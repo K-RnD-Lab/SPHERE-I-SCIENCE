@@ -33,6 +33,10 @@ Primary platform files:
   - deployment dependencies for the lab-level app
 - `run_lab.ps1`
   - local launcher for the full platform
+- `../../../streamlit_app.py`
+  - repository-root ASCII-safe deploy wrapper for Streamlit Community Cloud
+- `../../../requirements.txt`
+  - repository-root dependency file for hosted deployment
 
 This means the public-facing app can now be deployed from the lab root instead of directly from the internal `R1a` module path.
 
