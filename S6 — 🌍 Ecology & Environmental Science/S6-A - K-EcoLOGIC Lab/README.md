@@ -27,7 +27,7 @@ This lane is best treated as a hybrid `S+T` pattern inside `SPHERE I`:
 
 Public live app:
 
-- `https://k-ecologic-lab.streamlit.app/`
+- [`https://k-ecologic-lab.streamlit.app/`](https://k-ecologic-lab.streamlit.app/)
 
 Primary platform files:
 
