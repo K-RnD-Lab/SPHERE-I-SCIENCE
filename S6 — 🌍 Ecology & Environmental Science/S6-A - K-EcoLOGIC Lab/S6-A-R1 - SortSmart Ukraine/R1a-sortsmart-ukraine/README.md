@@ -71,6 +71,25 @@ This repo is intentionally scoped as a nationwide MVP for the Zoomcamp deadline:
 
 This is not a real-time nationwide waste counter. It is a transparent analytical model built on open public datasets plus explicit assumptions.
 
+## Delivery Footprint
+
+This submission is packaged as one coherent platform, but its delivery can also be read as a set of concrete proof-of-capability layers:
+
+- domain framing
+  - a clearly stated Ukraine-focused waste, recovery, and environmental-intelligence problem
+- cloud-backed data layer
+  - BigQuery is used as the warehouse target for the cloud run path
+- ingestion
+  - Python fetches and normalizes official waste, facilities, air, water, permits, and radiation datasets
+- warehouse
+  - normalized datasets and analytical outputs are loaded into BigQuery
+- transformations
+  - `dbt` adds a seed plus staging and mart models over the warehouse layer
+- dashboard
+  - one Streamlit platform exposes the flagship waste module plus supporting environmental MVP modules
+- reproducibility
+  - PowerShell launchers, a GCP setup helper, pinned dependencies, and a processed snapshot are included so the project is reviewable without rebuilding everything from scratch
+
 ## Data Sources
 
 Primary sources currently wired into the pipeline:
@@ -117,6 +136,54 @@ flowchart LR
     I --> J[dbt marts]
     J --> K[Streamlit dashboard]
 ```
+
+## BigQuery Usage
+
+Yes, BigQuery is part of the implemented project and not just a planned option.
+
+The cloud setup uses:
+
+- project id
+  - currently validated on `k-rnd-lab`
+- dataset
+  - `sortsmart_raw`
+- location
+  - `EU` by default
+
+The Python warehouse loader pushes these data assets into BigQuery:
+
+- normalized/base tables
+  - `waste_metrics`
+  - `waste_facilities`
+  - `waste_facility_counts`
+  - `air_quality_context`
+  - `water_monitoring_observations`
+  - `permits_registry`
+  - `radiation_locations`
+  - `radiation_indicators`
+- analytical outputs prepared in Python
+  - `oblast_sorting_readiness`
+  - `oblast_sorting_readiness_trend`
+  - `air_module_overview`
+  - `water_basin_overview`
+  - `permits_city_overview`
+  - `radiation_station_overview`
+  - `radiation_platform_overview`
+
+On top of that, `dbt` is used in the same warehouse to validate an additional transformation layer:
+
+- seed table
+  - `material_factors`
+- staging views
+  - `stg_waste_metrics`
+  - `stg_waste_facility_counts`
+- mart table
+  - `mart_oblast_sorting_readiness`
+
+So the project uses both:
+
+- local Parquet outputs for fast local iteration and deployment snapshots
+- BigQuery for the cloud warehouse path and `dbt` validation flow
 
 ## Platform Surface
 
@@ -170,6 +237,34 @@ Recommended app entrypoint:
 The lab root now acts as the canonical public platform entrypoint, while the internal `R1a` dashboard files continue to supply the module pages.
 
 The repository now also carries a processed snapshot under `data/processed`, which makes the hosted app immediately viewable without running the full pipeline on every cold start.
+
+## Sandbox Retention Note
+
+If you keep the project on BigQuery Sandbox with billing disabled, the platform code and local files stay safe, but warehouse objects in BigQuery do not stay there forever.
+
+In practice for this project, the items that automatically expire are the BigQuery objects inside the sandbox dataset, including:
+
+- tables
+  - for example `waste_metrics`, `permits_registry`, `oblast_sorting_readiness`, `air_module_overview`
+- views
+  - for example `stg_waste_metrics`, `stg_waste_facility_counts`
+- partitions
+  - if partitioned relations are added later
+
+The items that do not disappear just because Sandbox expiration is reached are:
+
+- the GitHub repository
+- the Streamlit app code
+- local `data/processed` snapshot files in the repo
+- your local JSON key file
+- the GCP project itself
+- the BigQuery dataset container name
+
+If a sandbox table expires, the practical recovery path for this project is simply to rerun:
+
+- `.\setup_bigquery.ps1 ...`
+
+That recreates the dataset contents and reruns the `dbt` layer.
 
 ## Submission Notes
 

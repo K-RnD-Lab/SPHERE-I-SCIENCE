@@ -24,6 +24,12 @@ Two valid paths:
 
 For this project, I recommend billing enabled plus a tiny budget because it reduces friction and should still stay at zero or near zero cost for a small student project.
 
+If you stay on BigQuery Sandbox with billing disabled, remember one important retention rule:
+
+- BigQuery tables, views, and partitions in the sandbox automatically expire after 60 days
+
+For this project that means the contents of `sortsmart_raw` are temporary unless you enable billing or periodically rerun the load/setup flow.
+
 ## What You Need To Create
 
 1. A GCP project
@@ -145,6 +151,32 @@ dbt debug --project-dir dbt
 dbt seed --project-dir dbt
 dbt run --project-dir dbt
 ```
+
+## What Actually Lands In BigQuery
+
+The warehouse setup for this project loads the following relations into the `sortsmart_raw` dataset:
+
+- raw and normalized tables
+  - `waste_metrics`
+  - `waste_facilities`
+  - `waste_facility_counts`
+  - `air_quality_context`
+  - `water_monitoring_observations`
+  - `permits_registry`
+  - `radiation_locations`
+  - `radiation_indicators`
+- Python-built analytical outputs
+  - `oblast_sorting_readiness`
+  - `oblast_sorting_readiness_trend`
+  - `air_module_overview`
+  - `water_basin_overview`
+  - `permits_city_overview`
+  - `radiation_station_overview`
+  - `radiation_platform_overview`
+- `dbt` validation layer
+  - seed: `material_factors`
+  - views: `stg_waste_metrics`, `stg_waste_facility_counts`
+  - mart: `mart_oblast_sorting_readiness`
 
 ## Minimal Values To Send Back To Codex
 
