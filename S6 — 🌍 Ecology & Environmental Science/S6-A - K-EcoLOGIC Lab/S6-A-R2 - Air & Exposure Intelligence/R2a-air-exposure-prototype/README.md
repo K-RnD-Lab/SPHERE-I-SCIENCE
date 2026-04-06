@@ -2,15 +2,17 @@
 
 `R2a-air-exposure-prototype` is the first implementation module for `S6-A-R2`.
 
-This module is intended to host:
+This module now contributes a live MVP page inside the shared K-EcoLOGIC Lab platform.
+
+## Current Scope
 
 - air-quality source inventory
 - ingestion and normalization pipeline
-- exposure summaries by city or region
-- dashboard views linked back to the main K-EcoLOGIC Lab site
+- sheet-level context summaries
+- platform-facing dashboard outputs
 
 ## Current State
 
-- scaffolded research module
-- linked conceptually to the platform page `Air & Exposure`
-- ready for data-source inventory and first ingestion scripts
+- implemented MVP module
+- exposed publicly through `Air & Exposure`
+- hosted as part of `https://k-ecologic-lab.streamlit.app/`

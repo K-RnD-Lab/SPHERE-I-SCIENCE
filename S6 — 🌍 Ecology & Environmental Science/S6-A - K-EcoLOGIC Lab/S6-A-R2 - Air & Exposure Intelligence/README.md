@@ -9,6 +9,13 @@ Its purpose is to turn fragmented Ukrainian air-quality and exposure data into a
 - cross-links between pollution signals and other environmental modules
 - activist-facing summaries built on current public datasets
 
+## Live Surface
+
+- public platform
+  - `https://k-ecologic-lab.streamlit.app/`
+- module page
+  - `Air & Exposure`
+
 ## Why this belongs in S6
 
 The core research unit is still an environmental system:

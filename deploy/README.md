@@ -12,6 +12,8 @@ Current entrypoints:
 
 - `k_ecologic_lab.py`
   - K-EcoLOGIC Lab multipage environmental platform
+- live app
+  - `https://k-ecologic-lab.streamlit.app/`
 
 Recommended pattern for future public apps:
 

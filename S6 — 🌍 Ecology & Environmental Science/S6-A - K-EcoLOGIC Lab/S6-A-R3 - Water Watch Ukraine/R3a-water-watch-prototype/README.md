@@ -2,15 +2,17 @@
 
 `R3a-water-watch-prototype` is the first implementation module for `S6-A-R3`.
 
-This module is intended to host:
+This module now contributes a live MVP page inside the shared K-EcoLOGIC Lab platform.
+
+## Current Scope
 
 - water dataset inventory
 - ingestion and normalization scripts
-- basin and regional mart design
-- dashboard outputs that later plug into the main K-EcoLOGIC Lab site
+- basin-level summaries
+- platform-facing dashboard outputs
 
 ## Current State
 
-- scaffolded research module
-- reserved for the first water-monitoring pipeline
-- aligned with the platform page `Water Watch`
+- implemented MVP module
+- exposed publicly through `Water Watch`
+- hosted as part of `https://k-ecologic-lab.streamlit.app/`

@@ -143,6 +143,8 @@ Current example:
 
 - `deploy/k_ecologic_lab.py`
   - public wrapper for the K-EcoLOGIC Lab environmental platform
+- live app
+  - `https://k-ecologic-lab.streamlit.app/`
 
 ## Interactive Spaces
 

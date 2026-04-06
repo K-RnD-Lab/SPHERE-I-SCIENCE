@@ -9,6 +9,13 @@ Its purpose is to build a structured Ukrainian water-observability layer for:
 - basin and oblast level comparisons
 - public-interest reporting and evidence support
 
+## Live Surface
+
+- public platform
+  - `https://k-ecologic-lab.streamlit.app/`
+- module page
+  - `Water Watch`
+
 ## Why this belongs in S6
 
 The research unit is an environmental system centered on:

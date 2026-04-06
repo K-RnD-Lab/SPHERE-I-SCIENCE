@@ -25,6 +25,10 @@ This lane is best treated as a hybrid `S+T` pattern inside `SPHERE I`:
 
 `S6-A - K-EcoLOGIC Lab` is now the canonical public app root for the environmental platform.
 
+Public live app:
+
+- `https://k-ecologic-lab.streamlit.app/`
+
 Primary platform files:
 
 - `app.py`
@@ -48,9 +52,10 @@ This means the public-facing app can now be deployed from the lab root instead o
 - [S6-A-R2 - Air & Exposure Intelligence](./S6-A-R2%20-%20Air%20%26%20Exposure%20Intelligence/)
 - [S6-A-R3 - Water Watch Ukraine](./S6-A-R3%20-%20Water%20Watch%20Ukraine/)
 - [S6-A-R4 - Polluters, Permits, and Environmental Oversight](./S6-A-R4%20-%20Polluters,%20Permits,%20and%20Environmental%20Oversight/)
+- [S6-A-R5 - Radiation and Environmental Risk](./S6-A-R5%20-%20Radiation%20and%20Environmental%20Risk/)
 
 ## Planned Expansion
 
 Future modules can branch here without breaking the current numbering:
 
-- `S6-A-R5` Radiation and Environmental Risk
+- `S6-A-R6` Land, Soil, and Environmental Damage Signals

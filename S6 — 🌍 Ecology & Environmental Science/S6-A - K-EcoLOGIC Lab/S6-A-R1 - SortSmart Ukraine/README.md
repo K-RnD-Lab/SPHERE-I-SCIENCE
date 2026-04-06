@@ -1,6 +1,6 @@
 # S6-A-R1 - SortSmart Ukraine
 
-`S6-A-R1` is the first active research program under `K-EcoLOGIC Lab`.
+`S6-A-R1` is the flagship research program under `K-EcoLOGIC Lab`.
 
 Its purpose is to turn fragmented Ukrainian waste and environmental data into a usable analytical system for:
 
@@ -8,6 +8,13 @@ Its purpose is to turn fragmented Ukrainian waste and environmental data into a 
 - recovery-gap estimation
 - circular-material prioritization
 - climate-impact modeling
+
+## Live Surface
+
+- public platform
+  - `https://k-ecologic-lab.streamlit.app/`
+- flagship page
+  - `SortSmart Ukraine`
 
 ## Why this belongs in S6
 

@@ -9,6 +9,13 @@ Its purpose is to connect oversight-oriented environmental records into a practi
 - compliance and monitoring context
 - activist and researcher evidence workflows
 
+## Live Surface
+
+- public platform
+  - `https://k-ecologic-lab.streamlit.app/`
+- module page
+  - `Polluters & Permits`
+
 ## Why this belongs in S6
 
 The program still studies environmental systems through:
