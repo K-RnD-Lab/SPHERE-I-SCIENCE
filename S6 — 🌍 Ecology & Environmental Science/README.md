@@ -23,6 +23,10 @@ Current active lane:
 
 - [S6-A - K-EcoLOGIC Lab](./S6-A%20-%20K-EcoLOGIC%20Lab/)
 
+Current public app entrypoint:
+
+- `S6-A - K-EcoLOGIC Lab/app.py`
+
 Indexing rule:
 
 - `S6` holds the domain-level map

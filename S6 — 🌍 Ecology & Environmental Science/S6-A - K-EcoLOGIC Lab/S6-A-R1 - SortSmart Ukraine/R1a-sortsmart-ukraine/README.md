@@ -165,9 +165,9 @@ For a straightforward public demo, deploy the Streamlit app from this subproject
 
 Recommended app entrypoint:
 
-- `S6 — 🌍 Ecology & Environmental Science/S6-A - K-EcoLOGIC Lab/S6-A-R1 - SortSmart Ukraine/R1a-sortsmart-ukraine/dashboard/app.py`
+- `S6 — 🌍 Ecology & Environmental Science/S6-A - K-EcoLOGIC Lab/app.py`
 
-The `dashboard/requirements.txt` file is included so Community Cloud can resolve this subdirectory app without relying on the repository root.
+The lab root now acts as the canonical public platform entrypoint, while the internal `R1a` dashboard files continue to supply the module pages.
 
 The repository now also carries a processed snapshot under `data/processed`, which makes the hosted app immediately viewable without running the full pipeline on every cold start.
 

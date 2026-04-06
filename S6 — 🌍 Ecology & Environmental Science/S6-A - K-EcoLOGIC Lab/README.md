@@ -21,6 +21,21 @@ This lane is best treated as a hybrid `S+T` pattern inside `SPHERE I`:
 - `S`, because the questions are ecological and environmental
 - `T`, because the delivery layer includes data pipelines, scoring logic, dashboards, and research software
 
+## Platform Entry Point
+
+`S6-A - K-EcoLOGIC Lab` is now the canonical public app root for the environmental platform.
+
+Primary platform files:
+
+- `app.py`
+  - root multipage Streamlit entrypoint for the whole lab
+- `requirements.txt`
+  - deployment dependencies for the lab-level app
+- `run_lab.ps1`
+  - local launcher for the full platform
+
+This means the public-facing app can now be deployed from the lab root instead of directly from the internal `R1a` module path.
+
 ## Research Programs
 
 - [S6-A-R1 - SortSmart Ukraine](./S6-A-R1%20-%20SortSmart%20Ukraine/)
