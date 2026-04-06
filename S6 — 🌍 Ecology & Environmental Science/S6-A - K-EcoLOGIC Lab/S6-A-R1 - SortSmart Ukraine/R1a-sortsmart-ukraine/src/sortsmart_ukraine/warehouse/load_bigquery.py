@@ -15,11 +15,15 @@ TABLES = {
     "air_quality_context": PROCESSED_DIR / "normalized" / "air_quality_context.parquet",
     "water_monitoring_observations": PROCESSED_DIR / "normalized" / "water_monitoring_observations.parquet",
     "permits_registry": PROCESSED_DIR / "normalized" / "permits_registry.parquet",
+    "radiation_locations": PROCESSED_DIR / "normalized" / "radiation_locations.parquet",
+    "radiation_indicators": PROCESSED_DIR / "normalized" / "radiation_indicators.parquet",
     "oblast_sorting_readiness": PROCESSED_DIR / "marts" / "oblast_sorting_readiness.parquet",
     "oblast_sorting_readiness_trend": PROCESSED_DIR / "marts" / "oblast_sorting_readiness_trend.parquet",
     "air_module_overview": PROCESSED_DIR / "marts" / "air_module_overview.parquet",
     "water_basin_overview": PROCESSED_DIR / "marts" / "water_basin_overview.parquet",
     "permits_city_overview": PROCESSED_DIR / "marts" / "permits_city_overview.parquet",
+    "radiation_station_overview": PROCESSED_DIR / "marts" / "radiation_station_overview.parquet",
+    "radiation_platform_overview": PROCESSED_DIR / "marts" / "radiation_platform_overview.parquet",
 }
 
 

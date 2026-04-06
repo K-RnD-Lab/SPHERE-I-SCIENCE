@@ -18,7 +18,7 @@ The platform is intentionally split into:
 | `S6-A-R2 / Air & Exposure` | implemented MVP | live MVP page | implemented context layer | supporting module |
 | `S6-A-R3 / Water Watch Ukraine` | implemented MVP | live MVP page | implemented basin summary | supporting module |
 | `S6-A-R4 / Polluters, Permits, and Environmental Oversight` | implemented MVP | live MVP page | implemented pilot coverage | supporting module |
-| `S6-A-R5 / Radiation and Environmental Risk` | planned only | scaffolded page | not implemented | roadmap |
+| `S6-A-R5 / Radiation and Environmental Risk` | implemented MVP | live MVP page | implemented network-coverage layer | supporting module |
 
 ## What Already Exists
 
@@ -28,29 +28,29 @@ For `SortSmart Ukraine`, the repository already contains:
 - normalization for waste metrics
 - normalization for waste-facility registry
 - air-quality context ingestion
+- water-monitoring ingestion
+- permits-ingestion pilot
+- radiation-network ingestion
 - analytical mart build step
 - BigQuery bootstrap and load scripts
 - `dbt` project skeleton with seeds
 - Streamlit multipage platform shell
 - one live data-backed dashboard page
-- live MVP pages for air, water, and permits
-- module scaffolds for future expansion
+- live MVP pages for air, water, permits, and radiation
+- formal research-program structure for future expansion
 
 ## What Is Still Missing Before Calling The Whole Platform "Fully Working"
 
-- a successful end-to-end local run on the target machine
-- a successful BigQuery load on the target machine
-- `dbt` execution confirmation on the target machine
+- screenshot capture for README / submission
 - dashboard visual verification with real processed data
-- screenshots and/or export assets for the project README
-- optional hardening for `R2`, `R3`, and `R4` if they are to move beyond MVP state
+- optional hardening for `R2`, `R3`, `R4`, and `R5` if they are to move beyond MVP state
 
 ## Recommended Submission Positioning
 
 For Zoomcamp, present this as:
 
 - one platform: `K-EcoLOGIC Lab`
-- one fully implemented module: `SortSmart Ukraine`
+- one flagship implemented module: `SortSmart Ukraine`
 - additional implemented MVP modules showing extensibility and long-term vision
 
 This is much safer than claiming that every environmental module is equally mature today.
@@ -66,6 +66,9 @@ Run and confirm:
    - home page
    - SortSmart page
    - Air & Exposure page
+   - Water Watch page
+   - Polluters & Permits page
+   - Radiation & Risk page
    - module navigation in sidebar
 5. confirm generated artifacts exist under:
    - `data/processed/normalized`
@@ -76,4 +79,4 @@ Run and confirm:
 1. Make `SortSmart Ukraine` fully runnable and screenshot-ready.
 2. Lock BigQuery and `dbt` execution.
 3. Polish README for submission.
-4. Only then decide whether to deepen `R2`, `R3`, or `R4`.
+4. Only then decide whether to deepen `R2`, `R3`, `R4`, or `R5`.

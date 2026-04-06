@@ -2,7 +2,15 @@ from __future__ import annotations
 
 import streamlit as st
 
-from common import configure_page, load_air_context, load_air_overview, load_permits_overview, load_sortsmart_mart, load_water_overview
+from common import (
+    configure_page,
+    load_air_context,
+    load_air_overview,
+    load_permits_overview,
+    load_radiation_overview,
+    load_sortsmart_mart,
+    load_water_overview,
+)
 
 
 configure_page("K-EcoLOGIC Lab")
@@ -28,9 +36,10 @@ air = load_air_context()
 air_overview = load_air_overview()
 water_overview = load_water_overview()
 permits_overview = load_permits_overview()
+radiation_overview = load_radiation_overview()
 
 col1, col2, col3 = st.columns(3)
-active_modules = sum(value is not None for value in [mart, air_overview, water_overview, permits_overview])
+active_modules = sum(value is not None for value in [mart, air_overview, water_overview, permits_overview, radiation_overview])
 col1.metric("Data-backed Modules", str(active_modules))
 col2.metric("Platform Pages", "5")
 col3.metric("Core Scope", "Ukraine")
@@ -60,8 +69,8 @@ module_data = [
     },
     {
         "module": "Radiation & Risk",
-        "status": "Planned",
-        "focus": "Radiation context and anomaly tracking",
+        "status": "Live MVP" if radiation_overview is not None else "Scaffolded",
+        "focus": "Monitoring-network coverage and radiation context",
     },
 ]
 
@@ -84,7 +93,7 @@ with col1:
         )
 
 with col2:
-    if air is None and water_overview is None and permits_overview is None:
+    if air is None and water_overview is None and permits_overview is None and radiation_overview is None:
         st.info("Additional environmental context appears after the pipeline finishes all module transforms.")
     else:
         st.success("Additional modules ready")
@@ -93,6 +102,7 @@ with col2:
                 "air_rows": int(len(air)) if air is not None else 0,
                 "water_basins": int(len(water_overview)) if water_overview is not None else 0,
                 "permit_settlements": int(len(permits_overview)) if permits_overview is not None else 0,
+                "radiation_regions": int(len(radiation_overview)) if radiation_overview is not None else 0,
             }
         )
 

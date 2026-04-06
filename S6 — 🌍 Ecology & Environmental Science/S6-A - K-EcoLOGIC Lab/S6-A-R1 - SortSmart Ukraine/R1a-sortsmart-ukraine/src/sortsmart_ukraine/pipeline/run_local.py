@@ -6,6 +6,7 @@ from sortsmart_ukraine.pipeline import (
     transform_air_quality,
     transform_facilities_registry,
     transform_permits,
+    transform_radiation,
     transform_waste_metrics,
     transform_water_monitoring,
 )
@@ -18,6 +19,7 @@ def main() -> None:
     transform_air_quality.main()
     transform_water_monitoring.main()
     transform_permits.main()
+    transform_radiation.main()
     build_marts.main()
     print("Local SortSmart Ukraine pipeline finished.")
 

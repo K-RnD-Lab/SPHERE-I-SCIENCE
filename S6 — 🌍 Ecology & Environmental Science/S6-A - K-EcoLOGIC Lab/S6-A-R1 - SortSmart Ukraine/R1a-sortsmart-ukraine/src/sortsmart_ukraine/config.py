@@ -26,6 +26,16 @@ STATIC_SOURCES = {
         "filename": "waste_facilities_registry.ods",
         "description": "Official registry of waste-generation, treatment, and utilization objects",
     },
+    "radiation_locations": {
+        "url": "https://data.gov.ua/dataset/6b9f3b1b-4c3d-446a-8989-cc43931917c4/resource/94357f36-4803-43a8-b2ec-0d17468828da/download/saveecobotradiationcontrollocations.csv",
+        "filename": "saveecobot_radiation_locations.csv",
+        "description": "Nationwide list of radiation-monitoring stations and posts from public sources collected by SaveEcoBot",
+    },
+    "radiation_indicators": {
+        "url": "https://data.gov.ua/dataset/6b9f3b1b-4c3d-446a-8989-cc43931917c4/resource/c24f3848-a06e-4ae5-b289-90a388db1233/download/saveecobotradiationcontrolindicators.csv",
+        "filename": "saveecobot_radiation_indicators.csv",
+        "description": "Indicator dictionary for the SaveEcoBot radiation-monitoring package",
+    },
 }
 
 MATERIAL_FACTORS_PATH = ROOT_DIR / "dbt" / "seeds" / "material_factors.csv"

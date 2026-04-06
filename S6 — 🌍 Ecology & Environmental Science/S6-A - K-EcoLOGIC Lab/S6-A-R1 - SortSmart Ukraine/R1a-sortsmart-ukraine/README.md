@@ -94,6 +94,10 @@ Primary sources currently wired into the pipeline:
   - scope: open permits list for pollutant emissions
   - format: CSV
   - current pipeline uses the latest published CSV resource
+- `data.gov.ua` dataset `80c116f5-9826-4e8e-87f8-ff5d5342da94`
+  - scope: nationwide radiation-monitoring stations and indicator dictionary collected by SaveEcoBot / SaveDnipro
+  - format: CSV
+  - current MVP uses station coverage and indicator metadata, not the full historical measurements archive
 - material factors are stored locally in `dbt/seeds/material_factors.csv`
   - purpose: transparent modeling assumptions for recyclable share and avoided CO2e
   - note: these are scenario inputs, not an official Ukrainian state dataset
@@ -105,12 +109,13 @@ flowchart LR
     A[data.gov.ua waste metrics] --> B[raw files]
     C[data.gov.ua facility registry] --> B
     D[data.gov.ua air quality package] --> B
-    B --> E[Python normalization]
-    E --> F[processed parquet/csv]
-    F --> G[BigQuery raw tables]
-    G --> H[dbt staging]
-    H --> I[dbt marts]
-    I --> J[Streamlit dashboard]
+    E[data.gov.ua radiation package] --> B
+    B --> F[Python normalization]
+    F --> G[processed parquet/csv]
+    G --> H[BigQuery raw tables]
+    H --> I[dbt staging]
+    I --> J[dbt marts]
+    J --> K[Streamlit dashboard]
 ```
 
 ## Platform Surface
@@ -130,7 +135,7 @@ Current module layout:
 - `Polluters & Permits`
   - live MVP permits page
 - `Radiation & Risk`
-  - planned module shell
+  - live MVP radiation-network coverage page
 
 This keeps the project submission coherent as one environmental platform while allowing the first module to be fully operational today.
 
@@ -168,4 +173,5 @@ Recommended project framing for Zoomcamp:
 - the air-quality component is currently a context layer, not the main decision engine
 - the current regional waste file exposes waste-management outcomes, so `generated` is proxied from recovery + incineration + landfill-disposal for scoring
 - the current permits MVP is based on the latest open CSV resource available for Vinnytsia oblast, so this module is a regional pilot rather than nationwide coverage
+- the radiation MVP currently shows monitoring-network coverage and source context, not a validated real-time emergency warning feed
 - facility registry parsing may need one light iteration after the first real run depending on schema drift

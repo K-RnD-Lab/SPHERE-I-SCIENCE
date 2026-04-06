@@ -14,6 +14,9 @@ AIR_CONTEXT_PATH = ROOT_DIR / "data" / "processed" / "normalized" / "air_quality
 AIR_OVERVIEW_PATH = ROOT_DIR / "data" / "processed" / "marts" / "air_module_overview.parquet"
 WATER_OVERVIEW_PATH = ROOT_DIR / "data" / "processed" / "marts" / "water_basin_overview.parquet"
 PERMITS_OVERVIEW_PATH = ROOT_DIR / "data" / "processed" / "marts" / "permits_city_overview.parquet"
+RADIATION_LOCATIONS_PATH = ROOT_DIR / "data" / "processed" / "normalized" / "radiation_locations.parquet"
+RADIATION_OVERVIEW_PATH = ROOT_DIR / "data" / "processed" / "marts" / "radiation_station_overview.parquet"
+RADIATION_PLATFORMS_PATH = ROOT_DIR / "data" / "processed" / "marts" / "radiation_platform_overview.parquet"
 
 
 def configure_page(title: str) -> None:
@@ -65,6 +68,27 @@ def load_permits_overview() -> pd.DataFrame | None:
     if not PERMITS_OVERVIEW_PATH.exists():
         return None
     return pd.read_parquet(PERMITS_OVERVIEW_PATH)
+
+
+@st.cache_data(show_spinner=False)
+def load_radiation_locations() -> pd.DataFrame | None:
+    if not RADIATION_LOCATIONS_PATH.exists():
+        return None
+    return pd.read_parquet(RADIATION_LOCATIONS_PATH)
+
+
+@st.cache_data(show_spinner=False)
+def load_radiation_overview() -> pd.DataFrame | None:
+    if not RADIATION_OVERVIEW_PATH.exists():
+        return None
+    return pd.read_parquet(RADIATION_OVERVIEW_PATH)
+
+
+@st.cache_data(show_spinner=False)
+def load_radiation_platforms() -> pd.DataFrame | None:
+    if not RADIATION_PLATFORMS_PATH.exists():
+        return None
+    return pd.read_parquet(RADIATION_PLATFORMS_PATH)
 
 
 def render_pipeline_hint() -> None:
