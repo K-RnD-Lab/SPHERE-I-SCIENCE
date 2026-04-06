@@ -32,6 +32,27 @@ function Resolve-PythonLauncher {
   throw "No Python launcher was found. Install Python 3.11+ or add it to PATH."
 }
 
+function Stop-ListeningPythonProcess {
+  param(
+    [Parameter(Mandatory = $true)]
+    [int]$Port
+  )
+
+  $connections = Get-NetTCPConnection -LocalPort $Port -State Listen -ErrorAction SilentlyContinue |
+    Select-Object -ExpandProperty OwningProcess -Unique
+
+  foreach ($connectionPid in $connections) {
+    try {
+      $process = Get-Process -Id $connectionPid -ErrorAction Stop
+      if ($process.ProcessName -like "python*") {
+        Stop-Process -Id $connectionPid -Force
+      }
+    } catch {
+      continue
+    }
+  }
+}
+
 $launcher = Resolve-PythonLauncher
 
 $venvPath = if ($env:SORTSMART_VENV_PATH) {
@@ -55,6 +76,20 @@ if ((-not (Test-Path -LiteralPath $requirementsStamp)) -or ((Get-Content -Litera
   Set-Content -LiteralPath $requirementsStamp -Value $requirementsVersion
 }
 
+$streamlitPort = if ($env:SORTSMART_STREAMLIT_PORT) {
+  [int]$env:SORTSMART_STREAMLIT_PORT
+} else {
+  8501
+}
+
+$dashboardCache = Join-Path $projectRoot "dashboard\__pycache__"
+if (Test-Path -LiteralPath $dashboardCache) {
+  Remove-Item -LiteralPath $dashboardCache -Recurse -Force
+}
+
+Stop-ListeningPythonProcess -Port $streamlitPort
+
 $env:PYTHONPATH = "src"
 & $venvPython -m sortsmart_ukraine.pipeline.run_local
-& $venvPython -m streamlit run dashboard/app.py
+Write-Host "Opening Streamlit on http://localhost:$streamlitPort"
+& $venvPython -m streamlit run dashboard/app.py --server.port $streamlitPort

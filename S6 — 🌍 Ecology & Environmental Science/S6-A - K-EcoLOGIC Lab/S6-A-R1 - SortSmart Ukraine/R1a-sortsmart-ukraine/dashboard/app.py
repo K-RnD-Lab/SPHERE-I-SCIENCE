@@ -41,7 +41,7 @@ radiation_overview = load_radiation_overview()
 col1, col2, col3 = st.columns(3)
 active_modules = sum(value is not None for value in [mart, air_overview, water_overview, permits_overview, radiation_overview])
 col1.metric("Data-backed Modules", str(active_modules))
-col2.metric("Platform Pages", "5")
+col2.metric("Platform Pages", "6")
 col3.metric("Core Scope", "Ukraine")
 
 st.subheader("Module Map")
@@ -113,6 +113,6 @@ Use the left sidebar to open a module page:
 
 - `SortSmart Ukraine` for the main working dashboard
 - `Air & Exposure` for climate-context monitoring
-- the remaining pages for platform roadmap and module framing
+- `Water Watch`, `Polluters & Permits`, and `Radiation & Risk` for the broader environmental context
 """
 )
