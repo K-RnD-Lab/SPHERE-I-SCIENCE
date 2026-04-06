@@ -1,0 +1,27 @@
+{
+  "coverage_note": "Current permits module is based on the latest open CSV resource currently published for Vinnytsia oblast.",
+  "permit_count": 1451,
+  "settlement_count": 488,
+  "top_settlements": [
+    {
+      "settlement": "Вінниця",
+      "permit_count": 185
+    },
+    {
+      "settlement": "Козятин",
+      "permit_count": 35
+    },
+    {
+      "settlement": "Гайсин",
+      "permit_count": 34
+    },
+    {
+      "settlement": "Калинівка",
+      "permit_count": 31
+    },
+    {
+      "settlement": "Жмеринка",
+      "permit_count": 30
+    }
+  ]
+}

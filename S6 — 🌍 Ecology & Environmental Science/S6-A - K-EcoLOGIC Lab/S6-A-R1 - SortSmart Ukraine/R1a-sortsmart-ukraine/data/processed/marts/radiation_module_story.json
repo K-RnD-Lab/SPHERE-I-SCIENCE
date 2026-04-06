@@ -1,0 +1,8 @@
+{
+  "coverage_note": "This module currently shows monitoring-network coverage, not a real-time emergency radiation warning feed.",
+  "station_count": 1028,
+  "oblast_coverage": 26,
+  "platform_count": 77,
+  "cez_station_count": 110,
+  "indicator_count": 5
+}

@@ -1,0 +1,53 @@
+{
+  "latest_year": 2023,
+  "top_readiness_regions": [
+    {
+      "oblast_name_en": "Cherkasy Oblast",
+      "sorting_readiness_score": 64.7
+    },
+    {
+      "oblast_name_en": "Ivano-Frankivsk Oblast",
+      "sorting_readiness_score": 64.3
+    },
+    {
+      "oblast_name_en": "Ternopil Oblast",
+      "sorting_readiness_score": 61.7
+    },
+    {
+      "oblast_name_en": "Dnipropetrovsk Oblast",
+      "sorting_readiness_score": 51.9
+    },
+    {
+      "oblast_name_en": "Vinnytsia Oblast",
+      "sorting_readiness_score": 48.9
+    }
+  ],
+  "largest_recovery_gap_regions": [
+    {
+      "oblast_name_en": "Dnipropetrovsk Oblast",
+      "recovery_gap_thsd_t": 29406.21285000001
+    },
+    {
+      "oblast_name_en": "Poltava Oblast",
+      "recovery_gap_thsd_t": 12929.941400000002
+    },
+    {
+      "oblast_name_en": "Donetsk Oblast",
+      "recovery_gap_thsd_t": 3106.734675
+    },
+    {
+      "oblast_name_en": "Lviv Oblast",
+      "recovery_gap_thsd_t": 1061.7217250000003
+    },
+    {
+      "oblast_name_en": "Zaporizhzhia Oblast",
+      "recovery_gap_thsd_t": 733.3778250000001
+    }
+  ],
+  "national_totals": {
+    "generated_thsd_t": 143426.4,
+    "recovery_thsd_t": 39166.7,
+    "recovery_gap_thsd_t": 49329.35,
+    "climate_impact_potential_t_co2e": 63119512.85
+  }
+}

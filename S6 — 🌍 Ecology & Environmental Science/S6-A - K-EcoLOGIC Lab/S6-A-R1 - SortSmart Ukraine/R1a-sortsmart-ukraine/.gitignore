@@ -15,6 +15,10 @@ data/raw/*
 !data/raw/.gitkeep
 data/processed/*
 !data/processed/.gitkeep
+!data/processed/normalized/
+!data/processed/normalized/**
+!data/processed/marts/
+!data/processed/marts/**
 
 .streamlit/secrets.toml
 dbt/target/

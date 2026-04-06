@@ -159,6 +159,18 @@ python -m sortsmart_ukraine.pipeline.run_local
 streamlit run dashboard/app.py
 ```
 
+## Hosting
+
+For a straightforward public demo, deploy the Streamlit app from this subproject to Streamlit Community Cloud.
+
+Recommended app entrypoint:
+
+- `S6 — 🌍 Ecology & Environmental Science/S6-A - K-EcoLOGIC Lab/S6-A-R1 - SortSmart Ukraine/R1a-sortsmart-ukraine/dashboard/app.py`
+
+The `dashboard/requirements.txt` file is included so Community Cloud can resolve this subdirectory app without relying on the repository root.
+
+The repository now also carries a processed snapshot under `data/processed`, which makes the hosted app immediately viewable without running the full pipeline on every cold start.
+
 ## Submission Notes
 
 Recommended project framing for Zoomcamp:

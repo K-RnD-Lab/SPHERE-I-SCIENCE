@@ -1,0 +1,6 @@
+indicator_id,indicator_name,unit_code,unit_name,source_file
+gamma,Gamma Ray,nSv/h,Nanosievert per hour,saveecobot_radiation_indicators.csv
+gamma_ur,Gamma Ray,μR/h,Microroentgen per hour,saveecobot_radiation_indicators.csv
+gamma_raw,Gamma Ray (Raw Data),nSv/h,Nanosievert per hour,saveecobot_radiation_indicators.csv
+gamma_cpm,CPM,,,saveecobot_radiation_indicators.csv
+gamma_cpm_raw,CPM (Raw Data),,,saveecobot_radiation_indicators.csv

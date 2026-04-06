@@ -1,0 +1,27 @@
+{
+  "basin_count": 7,
+  "observation_count": 405,
+  "latest_sample_date": "2026-02-24",
+  "top_basins": [
+    {
+      "river_basin": "Дніпро",
+      "observation_count": 138
+    },
+    {
+      "river_basin": "Дунай",
+      "observation_count": 88
+    },
+    {
+      "river_basin": "Дністер",
+      "observation_count": 86
+    },
+    {
+      "river_basin": "Дон",
+      "observation_count": 46
+    },
+    {
+      "river_basin": "Вісла",
+      "observation_count": 21
+    }
+  ]
+}
