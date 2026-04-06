@@ -1,0 +1,22 @@
+id: sortsmart_ukraine_pipeline
+namespace: zoomcamp.projects
+
+tasks:
+  - id: install
+    type: io.kestra.plugin.scripts.shell.Commands
+    commands:
+      - pip install -r requirements.txt
+
+  - id: run_pipeline
+    type: io.kestra.plugin.scripts.shell.Commands
+    env:
+      PYTHONPATH: src
+    commands:
+      - python -m sortsmart_ukraine.pipeline.run_local
+
+  - id: run_dbt
+    type: io.kestra.plugin.scripts.shell.Commands
+    commands:
+      - cd dbt
+      - dbt seed
+      - dbt run

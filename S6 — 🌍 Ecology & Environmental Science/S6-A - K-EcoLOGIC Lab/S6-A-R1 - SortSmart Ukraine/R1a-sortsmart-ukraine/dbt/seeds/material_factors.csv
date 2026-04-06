@@ -1,0 +1,11 @@
+material,material_class,share_of_msw,recyclable_share,co2e_avoided_t_per_t_recycled,sorting_note
+paper_cardboard,fiber,0.17,0.80,3.17,Keep dry and separate from food contamination
+plastic,polymer,0.12,0.60,1.54,Separate PET and hard plastic when possible
+glass,glass,0.10,0.95,0.31,Rinse and sort by color only if local system asks for it
+metals,metal,0.04,0.95,1.92,Aluminium and steel are high-value recovery streams
+organics,biogenic,0.38,0.60,0.42,Best diverted to composting or anaerobic treatment
+textiles,fiber,0.05,0.30,1.20,Reusable textiles should be separated before disposal
+wood,biogenic,0.03,0.50,0.20,Treated wood should not be mixed with clean wood
+e_waste,complex,0.01,0.70,2.50,Requires dedicated collection due to hazardous components
+batteries,hazardous,0.005,0.90,1.80,Never place in mixed waste
+mixed_other,mixed,0.095,0.05,0.10,Residual stream with low recovery value

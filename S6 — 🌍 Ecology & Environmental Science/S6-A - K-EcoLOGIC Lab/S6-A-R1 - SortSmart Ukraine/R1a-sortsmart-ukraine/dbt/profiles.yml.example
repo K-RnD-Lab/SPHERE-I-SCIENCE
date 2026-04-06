@@ -1,0 +1,13 @@
+sortsmart_ukraine:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: your-gcp-project
+      dataset: sortsmart_analytics
+      threads: 4
+      keyfile: /absolute/path/to/service-account.json
+      location: EU
+      priority: interactive
+      timeout_seconds: 300

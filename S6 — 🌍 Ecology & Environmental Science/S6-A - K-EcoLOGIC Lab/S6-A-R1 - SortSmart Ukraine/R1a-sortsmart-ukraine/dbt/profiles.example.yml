@@ -1,0 +1,12 @@
+sortsmart_ukraine:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: your-project-id
+      dataset: sortsmart_raw
+      threads: 4
+      timeout_seconds: 300
+      location: EU
+      keyfile: C:\Users\kolisnyk.o\.secrets\sortsmart-bq.json
