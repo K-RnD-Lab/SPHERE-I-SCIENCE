@@ -33,8 +33,10 @@ Primary platform files:
   - deployment dependencies for the lab-level app
 - `run_lab.ps1`
   - local launcher for the full platform
+- `../../../deploy/k_ecologic_lab.py`
+  - repository-root deploy wrapper for the public K-EcoLOGIC Lab app
 - `../../../streamlit_app.py`
-  - repository-root ASCII-safe deploy wrapper for Streamlit Community Cloud
+  - compatibility wrapper that forwards to `deploy/k_ecologic_lab.py`
 - `../../../requirements.txt`
   - repository-root dependency file for hosted deployment
 

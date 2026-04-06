@@ -135,6 +135,15 @@ The first shared registry scaffold across `SCIENCE`, `ENTREPRENEURSHIP`, and `TE
 - Hugging Face Spaces: interactive demos and app wrappers
 - Local `spaces/` directory: mirrored copies of the current HF app layer for audit and sync
 
+## Deploy Entrypoints
+
+Public app launchers that need ASCII-safe hosted paths live in `deploy/`.
+
+Current example:
+
+- `deploy/k_ecologic_lab.py`
+  - public wrapper for the K-EcoLOGIC Lab environmental platform
+
 ## Interactive Spaces
 
 The current live app environment is split across these Spaces:
