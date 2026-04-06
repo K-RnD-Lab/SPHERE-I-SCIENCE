@@ -15,6 +15,23 @@
 - biodiversity stress markers
 - pollutant-response networks
 
+## Research Index
+
+Use the top-level `S6` layer as the navigation index for all environmental lanes and research programs.
+
+Current active lane:
+
+- [S6-A - K-EcoLOGIC Lab](./S6-A%20-%20K-EcoLOGIC%20Lab/)
+
+Indexing rule:
+
+- `S6` holds the domain-level map
+- `S6-*` holds major research lanes or labs
+- `S6-*-R*` holds research programs
+- `R*a-*` holds working modules, prototypes, and implementation artifacts
+
+This makes it easy to keep one clear environmental entry point while still allowing multiple parallel studies to grow underneath it.
+
 ## Boundary rule
 
 Use `S6` when the research unit is an ecosystem, environmental community, or ecological system. Keep plant-intrinsic questions in `S2` and agricultural intervention questions in `S3`.

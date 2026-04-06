@@ -1,0 +1,35 @@
+# S6-A - K-EcoLOGIC Lab
+
+`S6-A` is the first structured environmental-intelligence lane inside `S6`.
+
+It is designed for research units that combine:
+
+- ecology and environmental systems
+- pollution-linked system effects
+- circularity and waste logic
+- operational decision support for activists, researchers, and public-interest builders
+
+## Focus
+
+K-EcoLOGIC Lab stands for:
+
+- `Eco` as the environmental domain
+- `LOGIC` as evidence, modeling, structure, and actionable reasoning
+
+This lane is best treated as a hybrid `S+T` pattern inside `SPHERE I`:
+
+- `S`, because the questions are ecological and environmental
+- `T`, because the delivery layer includes data pipelines, scoring logic, dashboards, and research software
+
+## Research Programs
+
+- [S6-A-R1 - SortSmart Ukraine](./S6-A-R1%20-%20SortSmart%20Ukraine/)
+- [S6-A-R2 - Air & Exposure Intelligence](./S6-A-R2%20-%20Air%20%26%20Exposure%20Intelligence/)
+- [S6-A-R3 - Water Watch Ukraine](./S6-A-R3%20-%20Water%20Watch%20Ukraine/)
+- [S6-A-R4 - Polluters, Permits, and Environmental Oversight](./S6-A-R4%20-%20Polluters,%20Permits,%20and%20Environmental%20Oversight/)
+
+## Planned Expansion
+
+Future modules can branch here without breaking the current numbering:
+
+- `S6-A-R5` Radiation and Environmental Risk

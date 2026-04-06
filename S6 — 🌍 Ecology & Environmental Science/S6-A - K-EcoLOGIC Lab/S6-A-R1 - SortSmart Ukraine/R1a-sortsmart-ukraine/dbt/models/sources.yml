@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: sortsmart_raw
+    schema: "{{ env_var('DBT_BQ_RAW_SCHEMA', 'sortsmart_raw') }}"
+    tables:
+      - name: waste_metrics
+      - name: waste_facility_counts
+
+models:
+  - name: stg_waste_metrics
+    description: Normalized waste metrics loaded from the Python pipeline.
+  - name: stg_waste_facility_counts
+    description: Regional counts of facilities from the national waste registry.
+  - name: mart_oblast_sorting_readiness
+    description: Region-level sorting-readiness mart used by the dashboard.
