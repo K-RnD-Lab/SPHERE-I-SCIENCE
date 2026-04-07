@@ -101,7 +101,7 @@ The useful AI role on top of this logic is:
 - explaining uncertainty
 - translating the answer into simple public language
 
-You can now find that higher-level layer in `AI & Activist Mode`, while this page keeps the transparent rule-based core.
+You can now find those higher-level layers in `Environmental Briefs`, `Sorting Assistant`, and `Activist Requests`, while this page keeps the transparent rule-based core.
 """
     )
 

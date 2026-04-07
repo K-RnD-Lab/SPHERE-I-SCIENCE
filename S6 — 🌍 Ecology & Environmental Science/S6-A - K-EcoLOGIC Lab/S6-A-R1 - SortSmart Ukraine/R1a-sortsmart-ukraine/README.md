@@ -19,6 +19,10 @@ Module pages on the public app:
 
 - `Home`
 - `SortSmart Ukraine`
+- `Packaging & Sorting Guide`
+- `Environmental Briefs`
+- `Sorting Assistant`
+- `Activist Requests`
 - `Air & Exposure`
 - `Water Watch`
 - `Polluters & Permits`
@@ -206,6 +210,14 @@ Current module layout:
   - platform overview and module map
 - `SortSmart Ukraine`
   - live nationwide waste-sorting dashboard
+- `Packaging & Sorting Guide`
+  - public-facing sorting and materials guidance
+- `Environmental Briefs`
+  - copy-ready summaries built from the current marts
+- `Sorting Assistant`
+  - item-level disposal guidance
+- `Activist Requests`
+  - problem framing, data gaps, and outreach drafts
 - `Air & Exposure`
   - live MVP climate-context page
 - `Water Watch`

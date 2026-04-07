@@ -33,6 +33,10 @@ Public platform:
 - module pages:
   - `Home`
   - `SortSmart Ukraine`
+  - `Packaging & Sorting Guide`
+  - `Environmental Briefs`
+  - `Sorting Assistant`
+  - `Activist Requests`
   - `Air & Exposure`
   - `Water Watch`
   - `Polluters & Permits`

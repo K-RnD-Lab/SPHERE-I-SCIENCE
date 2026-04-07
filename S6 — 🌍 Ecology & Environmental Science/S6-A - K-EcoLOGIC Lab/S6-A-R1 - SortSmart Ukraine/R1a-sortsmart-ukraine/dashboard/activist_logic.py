@@ -1,29 +1,21 @@
 from __future__ import annotations
 
 import json
-import sys
+from functools import lru_cache
 from pathlib import Path
 
-import streamlit as st
+import pandas as pd
 
 
-DASHBOARD_DIR = Path(__file__).resolve().parents[1]
-if str(DASHBOARD_DIR) not in sys.path:
-    sys.path.insert(0, str(DASHBOARD_DIR))
+ROOT_DIR = Path(__file__).resolve().parents[1]
+MARTS_DIR = ROOT_DIR / "data" / "processed" / "marts"
 
-from kecologic_common import (
-    configure_page,
-    load_air_city_snapshot,
-    load_permits_overview,
-    load_sortsmart_mart,
-    load_sortsmart_trend,
-    load_water_overview,
-)
-from sorting_logic import classify_item
+SORTSMART_PATH = MARTS_DIR / "oblast_sorting_readiness.parquet"
+SORTSMART_TREND_PATH = MARTS_DIR / "oblast_sorting_readiness_trend.parquet"
+AIR_CITY_SNAPSHOT_PATH = MARTS_DIR / "air_city_snapshot.parquet"
+WATER_OVERVIEW_PATH = MARTS_DIR / "water_basin_overview.parquet"
+PERMITS_OVERVIEW_PATH = MARTS_DIR / "permits_city_overview.parquet"
 
-
-MODULE_ROOT = DASHBOARD_DIR.parent
-MARTS_DIR = MODULE_ROOT / "data" / "processed" / "marts"
 NATIONAL_STORY_PATH = MARTS_DIR / "national_story.json"
 AIR_STORY_PATH = MARTS_DIR / "air_module_story.json"
 WATER_STORY_PATH = MARTS_DIR / "water_module_story.json"
@@ -31,17 +23,80 @@ PERMITS_STORY_PATH = MARTS_DIR / "permits_module_story.json"
 RADIATION_STORY_PATH = MARTS_DIR / "radiation_module_story.json"
 
 
-def _load_story(path: Path) -> dict | None:
+@lru_cache(maxsize=1)
+def _read_parquet(path_str: str) -> pd.DataFrame | None:
+    path = Path(path_str)
+    if not path.exists():
+        return None
+    return pd.read_parquet(path)
+
+
+@lru_cache(maxsize=1)
+def _read_json(path_str: str) -> dict | None:
+    path = Path(path_str)
     if not path.exists():
         return None
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def _format_number(value: float) -> str:
+def load_sortsmart_mart() -> pd.DataFrame | None:
+    return _read_parquet(str(SORTSMART_PATH))
+
+
+def load_sortsmart_trend() -> pd.DataFrame | None:
+    return _read_parquet(str(SORTSMART_TREND_PATH))
+
+
+def load_air_city_snapshot() -> pd.DataFrame | None:
+    return _read_parquet(str(AIR_CITY_SNAPSHOT_PATH))
+
+
+def load_water_overview() -> pd.DataFrame | None:
+    return _read_parquet(str(WATER_OVERVIEW_PATH))
+
+
+def load_permits_overview() -> pd.DataFrame | None:
+    return _read_parquet(str(PERMITS_OVERVIEW_PATH))
+
+
+def load_national_story() -> dict | None:
+    return _read_json(str(NATIONAL_STORY_PATH))
+
+
+def load_air_story() -> dict | None:
+    return _read_json(str(AIR_STORY_PATH))
+
+
+def load_water_story() -> dict | None:
+    return _read_json(str(WATER_STORY_PATH))
+
+
+def load_permits_story() -> dict | None:
+    return _read_json(str(PERMITS_STORY_PATH))
+
+
+def load_radiation_story() -> dict | None:
+    return _read_json(str(RADIATION_STORY_PATH))
+
+
+def available_regions(sortsmart: pd.DataFrame | None) -> list[str]:
+    regions = ["All Ukraine"]
+    if sortsmart is not None and "oblast_name_en" in sortsmart:
+        regions.extend(sorted(sortsmart["oblast_name_en"].dropna().unique().tolist()))
+    return regions
+
+
+def format_number(value: float) -> str:
     return f"{value:,.1f}"
 
 
-def _build_sortsmart_brief(region: str, audience: str, mart, trend, story: dict | None) -> str:
+def build_sortsmart_brief(
+    region: str,
+    audience: str,
+    mart: pd.DataFrame | None,
+    trend: pd.DataFrame | None,
+    story: dict | None,
+) -> str:
     if mart is None or trend is None:
         return "SortSmart data is not available yet."
 
@@ -61,7 +116,7 @@ def _build_sortsmart_brief(region: str, audience: str, mart, trend, story: dict 
         return (
             f"{intro}\n\n"
             f"In the latest nationwide year in view ({latest_year}), the average sorting readiness score is {avg_score:.1f}. "
-            f"The modeled recovery gap is {_format_number(gap)} thousand tonnes, with a modeled climate benefit of about {climate:,.0f} tCO2e if recoverable material were redirected away from landfill.\n\n"
+            f"The modeled recovery gap is {format_number(gap)} thousand tonnes, with a modeled climate benefit of about {climate:,.0f} tCO2e if recoverable material were redirected away from landfill.\n\n"
             f"The strongest current readiness signal appears in {top_region}, while the largest recovery gap appears in {biggest_gap}. "
             "This means the platform can already help distinguish between places that are relatively prepared and places where the material loss problem is still structurally large.\n\n"
             "Important limitation: the strongest open nationwide waste file is still oblast-level and outcome-oriented, so this brief should be read as a transparent decision-support layer rather than a complete municipal operations picture."
@@ -74,20 +129,20 @@ def _build_sortsmart_brief(region: str, audience: str, mart, trend, story: dict 
     return (
         f"{region} currently appears as a meaningful regional case for waste-system analysis. "
         f"Its sorting readiness score is {row['sorting_readiness_score']:.1f}, with recovery at {row['recovery']:.1f} thousand tonnes and landfill disposal at {row['disposal_on_landfills']:.1f} thousand tonnes.\n\n"
-        f"The modeled recovery gap is {_format_number(row['recovery_gap_thsd_t'])} thousand tonnes, and the platform currently flags `{row['priority_material']}` as the most strategically important material stream. "
+        f"The modeled recovery gap is {format_number(row['recovery_gap_thsd_t'])} thousand tonnes, and the platform currently flags `{row['priority_material']}` as the most strategically important material stream. "
         "For an activist or municipal audience, this means the region can already be discussed in terms of both visible waste pressure and concrete material priorities.\n\n"
         "Important limitation: this is still not city-level system coverage, so any operational follow-up should push for fresher local datasets, municipal collection maps, and material-specific container inventories."
     )
 
 
-def _build_air_brief(audience: str, air_story: dict | None, air_snapshot) -> str:
+def build_air_brief(audience: str, air_story: dict | None, air_snapshot: pd.DataFrame | None) -> str:
     if air_snapshot is None or air_snapshot.empty:
         return "Air module data is not available yet."
     latest = air_snapshot.sort_values("max_q_max_gdk_ratio", ascending=False).iloc[0]
     city_count = int(air_snapshot["city"].nunique())
     month_label = air_snapshot["observation_month_label"].dropna().iloc[0]
     return (
-        f"The current air module provides a compact exposure-oriented picture rather than a full real-time air monitoring network. "
+        "The current air module provides a compact exposure-oriented picture rather than a full real-time air monitoring network. "
         f"It currently covers {city_count} cities in the latest parsed month ({month_label}).\n\n"
         f"In the latest snapshot, `{latest['city']}` shows the strongest exceedance-style signal, with a peak qmax/GDK ratio of {latest['max_q_max_gdk_ratio']:.2f}. "
         f"The current top pollutant signal there is `{latest['top_pollutant_name_uk']}`.\n\n"
@@ -95,7 +150,7 @@ def _build_air_brief(audience: str, air_story: dict | None, air_snapshot) -> str
     )
 
 
-def _build_water_brief(audience: str, water_story: dict | None, water_overview) -> str:
+def build_water_brief(audience: str, water_story: dict | None, water_overview: pd.DataFrame | None) -> str:
     if water_overview is None or water_overview.empty:
         return "Water module data is not available yet."
     latest_sample = str(water_overview["latest_sample_date"].dropna().max())
@@ -108,31 +163,57 @@ def _build_water_brief(audience: str, water_story: dict | None, water_overview) 
     )
 
 
-def _build_permits_brief(audience: str, permits_story: dict | None, permits_overview) -> str:
+def build_permits_brief(audience: str, permits_story: dict | None, permits_overview: pd.DataFrame | None) -> str:
     if permits_overview is None or permits_overview.empty:
         return "Permits module data is not available yet."
     settlements = int(permits_overview["settlement"].nunique())
     permits = int(permits_overview["permit_count"].sum())
     top = permits_overview.sort_values("permit_count", ascending=False).iloc[0]["settlement"]
     return (
-        f"The permits module is currently a regional pilot rather than a full nationwide oversight system. "
+        "The permits module is currently a regional pilot rather than a full nationwide oversight system. "
         f"It covers {settlements} settlements and {permits} permit records in the current open source used by the platform.\n\n"
         f"The strongest visible settlement-level concentration right now is `{top}`. "
         f"For {audience.lower()}, the main message is that this module already helps identify oversight hotspots, but it also makes the national data-gap problem impossible to ignore."
     )
 
 
-def _build_radiation_brief(audience: str, radiation_story: dict | None) -> str:
+def build_radiation_brief(audience: str, radiation_story: dict | None) -> str:
     if not radiation_story:
         return "Radiation module data is not available yet."
     return (
-        f"The radiation module currently functions as a network-coverage and public-context layer. "
+        "The radiation module currently functions as a network-coverage and public-context layer. "
         f"It tracks {radiation_story['station_count']} stations across {radiation_story['oblast_coverage']} oblast-level units and {radiation_story['platform_count']} platform networks.\n\n"
         f"For {audience.lower()}, the important nuance is that this is helpful for visibility and coverage mapping, but it should not be presented as a sole emergency-warning source."
     )
 
 
-def _build_data_gaps(theme: str, region: str) -> list[str]:
+def build_module_brief(
+    module: str,
+    audience: str,
+    region: str,
+    sortsmart: pd.DataFrame | None,
+    trend: pd.DataFrame | None,
+    air_snapshot: pd.DataFrame | None,
+    water_overview: pd.DataFrame | None,
+    permits_overview: pd.DataFrame | None,
+    national_story: dict | None,
+    air_story: dict | None,
+    water_story: dict | None,
+    permits_story: dict | None,
+    radiation_story: dict | None,
+) -> str:
+    if module == "SortSmart Ukraine":
+        return build_sortsmart_brief(region, audience, sortsmart, trend, national_story)
+    if module == "Air & Exposure":
+        return build_air_brief(audience, air_story, air_snapshot)
+    if module == "Water Watch":
+        return build_water_brief(audience, water_story, water_overview)
+    if module == "Polluters & Permits":
+        return build_permits_brief(audience, permits_story, permits_overview)
+    return build_radiation_brief(audience, radiation_story)
+
+
+def build_data_gaps(theme: str, region: str) -> list[str]:
     gaps = {
         "SortSmart Ukraine": [
             "The strongest nationwide waste dataset is still mostly oblast-level rather than city-level.",
@@ -161,7 +242,7 @@ def _build_data_gaps(theme: str, region: str) -> list[str]:
     return [region_note] + gaps.get(theme, [])
 
 
-def _build_draft_request(theme: str, region: str, target: str) -> str:
+def build_draft_request(theme: str, region: str, target: str) -> str:
     subject_map = {
         "Municipality or city council": "request for local environmental and waste-management data publication",
         "Ministry or national authority": "request for updated nationwide environmental open data",
@@ -173,131 +254,17 @@ def _build_draft_request(theme: str, region: str, target: str) -> str:
     return (
         f"Draft request to {target}\n\n"
         f"Subject: {subject}\n\n"
-        f"Hello,\n\n"
+        "Hello,\n\n"
         f"I am reaching out regarding the K-EcoLOGIC Lab environmental monitoring platform, {region_line}. "
         f"Our current analysis of `{theme}` shows that publicly accessible data is useful but still incomplete for practical civic and policy work.\n\n"
-        f"We would like to request clearer and more regular publication of the datasets needed to understand:\n"
-        f"- current environmental pressure and its geographic distribution\n"
-        f"- material or monitoring gaps that limit public accountability\n"
-        f"- infrastructure or regulatory information needed for evidence-based action\n\n"
-        f"In particular, we are interested in fresher machine-readable data, clearer metadata, and more stable publication across reporting periods. "
-        f"This would directly support public communication, civic monitoring, and more informed environmental interventions.\n\n"
-        f"If useful, we can also share the current platform view and the specific data gaps we have identified.\n\n"
-        f"Kind regards,\n"
-        f"Oksana Kolisnyk\n"
-        f"K-EcoLOGIC Lab\n"
+        "We would like to request clearer and more regular publication of the datasets needed to understand:\n"
+        "- current environmental pressure and its geographic distribution\n"
+        "- material or monitoring gaps that limit public accountability\n"
+        "- infrastructure or regulatory information needed for evidence-based action\n\n"
+        "In particular, we are interested in fresher machine-readable data, clearer metadata, and more stable publication across reporting periods. "
+        "This would directly support public communication, civic monitoring, and more informed environmental interventions.\n\n"
+        "If useful, we can also share the current platform view and the specific data gaps we have identified.\n\n"
+        "Kind regards,\n"
+        "Oksana Kolisnyk\n"
+        "K-EcoLOGIC Lab\n"
     )
-
-
-configure_page("AI & Activist Mode")
-
-st.title("AI & Activist Mode")
-st.caption("Data-grounded briefs, sorting help, and activist-facing drafts built on top of the current platform marts")
-
-st.markdown(
-    """
-This page is the first AI-oriented layer of the platform.
-
-Important:
-
-- it is grounded in the current warehouse outputs and processed marts
-- it does not invent new environmental facts
-- it translates current data into more usable public, activist, and partner-facing language
-"""
-)
-
-sortsmart = load_sortsmart_mart()
-trend = load_sortsmart_trend()
-air_snapshot = load_air_city_snapshot()
-water_overview = load_water_overview()
-permits_overview = load_permits_overview()
-air_story = _load_story(AIR_STORY_PATH)
-national_story = _load_story(NATIONAL_STORY_PATH)
-water_story = _load_story(WATER_STORY_PATH)
-permits_story = _load_story(PERMITS_STORY_PATH)
-radiation_story = _load_story(RADIATION_STORY_PATH)
-
-tab1, tab2, tab3 = st.tabs(["Environmental Brief Generator", "AI Sorting Assistant", "AI Activist Mode"])
-
-with tab1:
-    st.subheader("Environmental Brief Generator")
-    audience = st.selectbox("Audience", ["Public summary", "Activist brief", "Municipal note", "Donor / partner pitch"])
-    module = st.selectbox(
-        "Theme",
-        ["SortSmart Ukraine", "Air & Exposure", "Water Watch", "Polluters & Permits", "Radiation & Risk"],
-    )
-    region_options = ["All Ukraine"]
-    if sortsmart is not None:
-        region_options += sorted(sortsmart["oblast_name_en"].dropna().unique().tolist())
-    region = st.selectbox("Region focus", region_options)
-
-    if module == "SortSmart Ukraine":
-        brief = _build_sortsmart_brief(region, audience, sortsmart, trend, national_story)
-    elif module == "Air & Exposure":
-        brief = _build_air_brief(audience, air_story, air_snapshot)
-    elif module == "Water Watch":
-        brief = _build_water_brief(audience, water_story, water_overview)
-    elif module == "Polluters & Permits":
-        brief = _build_permits_brief(audience, permits_story, permits_overview)
-    else:
-        brief = _build_radiation_brief(audience, radiation_story)
-
-    st.markdown("**Generated brief**")
-    st.text_area("Copy-ready brief", brief, height=260)
-
-with tab2:
-    st.subheader("AI Sorting Assistant")
-    st.caption("This first version is data-grounded and rule-based, so it stays interpretable and safe.")
-
-    item = st.text_input("Describe the item", placeholder="e.g. yoghurt cup, pizza box, charger, jar lid, paper bag")
-    classification, score = classify_item(item)
-
-    if item and classification:
-        st.success(f"Likely stream: {classification['stream']}")
-        explanation = (
-            f"This item is most likely part of the `{classification['stream']}` stream. "
-            f"A sensible default action is: {classification['what_to_do']} "
-            f"The default container logic is `{classification['container_hint']}`. "
-            f"This matters because {classification['why'].lower()}"
-        )
-        st.text_area("Generated explanation", explanation, height=180)
-        if score <= 1:
-            st.warning("Confidence is still limited. The current assistant uses transparent rules; a future LLM layer can make this more flexible.")
-    elif item:
-        st.warning("The current assistant could not classify this item confidently yet.")
-    else:
-        st.info("Enter an item to generate a sorting explanation.")
-
-with tab3:
-    st.subheader("AI Activist Mode")
-    target = st.selectbox(
-        "Target audience",
-        ["Municipality or city council", "Regional administration", "Ministry or national authority", "NGO or donor partner"],
-    )
-    theme = st.selectbox(
-        "Issue area",
-        ["SortSmart Ukraine", "Air & Exposure", "Water Watch", "Polluters & Permits", "Radiation & Risk"],
-        key="activist_theme",
-    )
-    region = st.selectbox("Target region", region_options, key="activist_region")
-
-    gaps = _build_data_gaps(theme, region)
-    draft = _build_draft_request(theme, region, target)
-
-    st.markdown("**Problem summary**")
-    if theme == "SortSmart Ukraine":
-        summary = _build_sortsmart_brief(region, "Activist brief", sortsmart, trend, national_story)
-    elif theme == "Air & Exposure":
-        summary = _build_air_brief("Activist brief", air_story, air_snapshot)
-    elif theme == "Water Watch":
-        summary = _build_water_brief("Activist brief", water_story, water_overview)
-    elif theme == "Polluters & Permits":
-        summary = _build_permits_brief("Activist brief", permits_story, permits_overview)
-    else:
-        summary = _build_radiation_brief("Activist brief", radiation_story)
-
-    st.text_area("Problem brief", summary, height=220)
-    st.markdown("**Data gaps to highlight**")
-    st.markdown("\n".join(f"- {gap}" for gap in gaps))
-    st.markdown("**Draft request**")
-    st.text_area("Copy-ready request", draft, height=320)

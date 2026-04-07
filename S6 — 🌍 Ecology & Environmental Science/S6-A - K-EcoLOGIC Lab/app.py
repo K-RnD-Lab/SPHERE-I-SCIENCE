@@ -46,8 +46,16 @@ def packaging_page() -> None:
     _run_dashboard_script("pages/6_Packaging_Sorting_Guide.py")
 
 
-def ai_activist_page() -> None:
-    _run_dashboard_script("pages/7_AI_Activist_Mode.py")
+def environmental_briefs_page() -> None:
+    _run_dashboard_script("pages/7_Environmental_Briefs.py")
+
+
+def sorting_assistant_page() -> None:
+    _run_dashboard_script("pages/8_Sorting_Assistant.py")
+
+
+def activist_requests_page() -> None:
+    _run_dashboard_script("pages/9_Activist_Requests.py")
 
 
 navigation = st.navigation(
@@ -55,10 +63,16 @@ navigation = st.navigation(
         "K-EcoLOGIC Lab": [
             st.Page(home_page, title="Home", default=True),
         ],
-        "Environmental Modules": [
+        "Public Guidance": [
             st.Page(sortsmart_page, title="SortSmart Ukraine"),
             st.Page(packaging_page, title="Packaging & Sorting Guide"),
-            st.Page(ai_activist_page, title="AI & Activist Mode"),
+        ],
+        "AI & Activist Tools": [
+            st.Page(environmental_briefs_page, title="Environmental Briefs"),
+            st.Page(sorting_assistant_page, title="Sorting Assistant"),
+            st.Page(activist_requests_page, title="Activist Requests"),
+        ],
+        "Environmental Context": [
             st.Page(air_page, title="Air & Exposure"),
             st.Page(water_page, title="Water Watch"),
             st.Page(permits_page, title="Polluters & Permits"),
