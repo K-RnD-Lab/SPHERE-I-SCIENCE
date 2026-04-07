@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import importlib.util
 import sys
 from pathlib import Path
 
@@ -11,7 +12,23 @@ if str(DASHBOARD_DIR) not in sys.path:
     sys.path.insert(0, str(DASHBOARD_DIR))
 
 from kecologic_common import configure_page, load_materials
-from sorting_logic import KEYWORD_RULES, build_guide_frame, build_preset_catalog_frame, classify_item
+
+
+def _load_sorting_logic():
+    module_path = DASHBOARD_DIR / "sorting_logic.py"
+    spec = importlib.util.spec_from_file_location("kecologic_sorting_logic", module_path)
+    if spec is None or spec.loader is None:
+        raise ImportError(f"Unable to load sorting logic from {module_path}")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+SORTING_LOGIC = _load_sorting_logic()
+KEYWORD_RULES = SORTING_LOGIC.KEYWORD_RULES
+build_guide_frame = SORTING_LOGIC.build_guide_frame
+build_preset_catalog_frame = SORTING_LOGIC.build_preset_catalog_frame
+classify_item = SORTING_LOGIC.classify_item
 
 
 configure_page("Packaging & Sorting Guide")
