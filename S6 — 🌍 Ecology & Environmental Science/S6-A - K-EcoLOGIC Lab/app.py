@@ -46,6 +46,10 @@ def packaging_page() -> None:
     _run_dashboard_script("pages/6_Packaging_Sorting_Guide.py")
 
 
+def ai_activist_page() -> None:
+    _run_dashboard_script("pages/7_AI_Activist_Mode.py")
+
+
 navigation = st.navigation(
     {
         "K-EcoLOGIC Lab": [
@@ -54,6 +58,7 @@ navigation = st.navigation(
         "Environmental Modules": [
             st.Page(sortsmart_page, title="SortSmart Ukraine"),
             st.Page(packaging_page, title="Packaging & Sorting Guide"),
+            st.Page(ai_activist_page, title="AI & Activist Mode"),
             st.Page(air_page, title="Air & Exposure"),
             st.Page(water_page, title="Water Watch"),
             st.Page(permits_page, title="Polluters & Permits"),

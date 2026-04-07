@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 from pathlib import Path
 
 import pandas as pd
@@ -20,6 +21,11 @@ PERMITS_OVERVIEW_PATH = ROOT_DIR / "data" / "processed" / "marts" / "permits_cit
 RADIATION_LOCATIONS_PATH = ROOT_DIR / "data" / "processed" / "normalized" / "radiation_locations.parquet"
 RADIATION_OVERVIEW_PATH = ROOT_DIR / "data" / "processed" / "marts" / "radiation_station_overview.parquet"
 RADIATION_PLATFORMS_PATH = ROOT_DIR / "data" / "processed" / "marts" / "radiation_platform_overview.parquet"
+NATIONAL_STORY_PATH = ROOT_DIR / "data" / "processed" / "marts" / "national_story.json"
+AIR_STORY_PATH = ROOT_DIR / "data" / "processed" / "marts" / "air_module_story.json"
+WATER_STORY_PATH = ROOT_DIR / "data" / "processed" / "marts" / "water_module_story.json"
+PERMITS_STORY_PATH = ROOT_DIR / "data" / "processed" / "marts" / "permits_module_story.json"
+RADIATION_STORY_PATH = ROOT_DIR / "data" / "processed" / "marts" / "radiation_module_story.json"
 
 
 def configure_page(title: str) -> None:
@@ -113,6 +119,33 @@ def load_radiation_platforms() -> pd.DataFrame | None:
     if not RADIATION_PLATFORMS_PATH.exists():
         return None
     return pd.read_parquet(RADIATION_PLATFORMS_PATH)
+
+
+@st.cache_data(show_spinner=False)
+def _load_json(path: Path) -> dict | None:
+    if not path.exists():
+        return None
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def load_national_story() -> dict | None:
+    return _load_json(NATIONAL_STORY_PATH)
+
+
+def load_air_story() -> dict | None:
+    return _load_json(AIR_STORY_PATH)
+
+
+def load_water_story() -> dict | None:
+    return _load_json(WATER_STORY_PATH)
+
+
+def load_permits_story() -> dict | None:
+    return _load_json(PERMITS_STORY_PATH)
+
+
+def load_radiation_story() -> dict | None:
+    return _load_json(RADIATION_STORY_PATH)
 
 
 def render_pipeline_hint() -> None:
