@@ -11,7 +11,7 @@ DASHBOARD_DIR = Path(__file__).resolve().parents[1]
 if str(DASHBOARD_DIR) not in sys.path:
     sys.path.insert(0, str(DASHBOARD_DIR))
 
-from common import (
+from kecologic_common import (
     configure_page,
     load_air_city_snapshot,
     load_air_overview,

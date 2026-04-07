@@ -10,7 +10,7 @@ DASHBOARD_DIR = Path(__file__).resolve().parents[1]
 if str(DASHBOARD_DIR) not in sys.path:
     sys.path.insert(0, str(DASHBOARD_DIR))
 
-from common import configure_page, load_water_overview
+from kecologic_common import configure_page, load_water_overview
 
 
 configure_page("Water Watch")

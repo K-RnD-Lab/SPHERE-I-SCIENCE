@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import streamlit as st
 
-from common import (
+from kecologic_common import (
     configure_page,
     load_air_context,
     load_air_overview,

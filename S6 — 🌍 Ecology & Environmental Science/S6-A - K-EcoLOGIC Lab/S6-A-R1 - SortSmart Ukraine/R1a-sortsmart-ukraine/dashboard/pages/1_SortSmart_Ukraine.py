@@ -3,7 +3,7 @@ from __future__ import annotations
 import plotly.express as px
 import streamlit as st
 
-from common import (
+from kecologic_common import (
     configure_page,
     load_materials,
     load_sortsmart_mart,
