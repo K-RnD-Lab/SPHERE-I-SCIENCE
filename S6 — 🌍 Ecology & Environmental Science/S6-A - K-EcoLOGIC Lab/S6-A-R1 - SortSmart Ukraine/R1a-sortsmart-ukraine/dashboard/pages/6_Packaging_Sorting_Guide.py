@@ -11,7 +11,7 @@ if str(DASHBOARD_DIR) not in sys.path:
     sys.path.insert(0, str(DASHBOARD_DIR))
 
 from kecologic_common import configure_page, load_materials
-from sorting_logic import KEYWORD_RULES, build_guide_frame, classify_item
+from sorting_logic import KEYWORD_RULES, build_guide_frame, build_preset_catalog_frame, classify_item
 
 
 configure_page("Packaging & Sorting Guide")
@@ -112,6 +112,9 @@ with tab2:
     guide_frame = build_guide_frame()
     st.subheader("Public-facing packaging guide")
     st.dataframe(guide_frame, use_container_width=True, hide_index=True)
+
+    st.subheader("Prepared public item catalog")
+    st.dataframe(build_preset_catalog_frame(), use_container_width=True, hide_index=True)
 
     st.warning(
         "The next upgrade should connect these guidance rules to city-level infrastructure data, so the answer can depend not only on material, but also on the user's municipality."
