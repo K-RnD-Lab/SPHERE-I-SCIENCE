@@ -9,7 +9,7 @@ from common import configure_page, load_water_overview
 configure_page("Water Watch")
 
 st.title("Water Watch")
-st.caption("Planned surface-water intelligence layer")
+st.caption("Live MVP for surface-water monitoring and basin-level summaries")
 
 st.markdown(
     """

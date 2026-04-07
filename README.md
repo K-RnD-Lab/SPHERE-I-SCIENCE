@@ -145,6 +145,13 @@ Current example:
   - public wrapper for the K-EcoLOGIC Lab environmental platform
 - live app
   - `https://k-ecologic-lab.streamlit.app/`
+  - module pages:
+    - `Home`
+    - `SortSmart Ukraine`
+    - `Air & Exposure`
+    - `Water Watch`
+    - `Polluters & Permits`
+    - `Radiation & Risk`
 
 ## Interactive Spaces
 

@@ -16,6 +16,13 @@ Its purpose is to build a structured Ukrainian water-observability layer for:
 - module page
   - `Water Watch`
 
+Other modules on the same platform:
+
+- `SortSmart Ukraine`
+- `Air & Exposure`
+- `Polluters & Permits`
+- `Radiation & Risk`
+
 ## Why this belongs in S6
 
 The research unit is an environmental system centered on:

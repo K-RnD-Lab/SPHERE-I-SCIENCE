@@ -16,3 +16,10 @@ This module now contributes a live MVP page inside the shared K-EcoLOGIC Lab pla
 - implemented MVP module
 - exposed publicly through `Air & Exposure`
 - hosted as part of `https://k-ecologic-lab.streamlit.app/`
+
+Other modules on the same public app:
+
+- `SortSmart Ukraine`
+- `Water Watch`
+- `Polluters & Permits`
+- `Radiation & Risk`

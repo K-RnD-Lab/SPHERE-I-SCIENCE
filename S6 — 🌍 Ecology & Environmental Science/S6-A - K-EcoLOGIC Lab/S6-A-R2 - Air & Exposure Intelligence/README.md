@@ -16,6 +16,13 @@ Its purpose is to turn fragmented Ukrainian air-quality and exposure data into a
 - module page
   - `Air & Exposure`
 
+Other modules on the same platform:
+
+- `SortSmart Ukraine`
+- `Water Watch`
+- `Polluters & Permits`
+- `Radiation & Risk`
+
 ## Why this belongs in S6
 
 The core research unit is still an environmental system:

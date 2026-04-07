@@ -9,7 +9,7 @@ from common import configure_page, load_permits_overview
 configure_page("Polluters & Permits")
 
 st.title("Polluters & Permits")
-st.caption("Planned oversight module for permits, EIA, and industrial monitoring")
+st.caption("Live MVP for permits, EIA context, and industrial oversight signals")
 
 st.markdown(
     """

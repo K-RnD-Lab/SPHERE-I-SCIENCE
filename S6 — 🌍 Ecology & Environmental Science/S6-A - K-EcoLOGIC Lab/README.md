@@ -29,6 +29,15 @@ Public live app:
 
 - [`https://k-ecologic-lab.streamlit.app/`](https://k-ecologic-lab.streamlit.app/)
 
+Module pages on the public app:
+
+- `Home`
+- `SortSmart Ukraine`
+- `Air & Exposure`
+- `Water Watch`
+- `Polluters & Permits`
+- `Radiation & Risk`
+
 Primary platform files:
 
 - `app.py`

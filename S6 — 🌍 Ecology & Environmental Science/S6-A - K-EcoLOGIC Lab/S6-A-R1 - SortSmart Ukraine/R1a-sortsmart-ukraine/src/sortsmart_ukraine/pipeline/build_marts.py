@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import re
+
 import pandas as pd
 
 from sortsmart_ukraine.config import MATERIAL_FACTORS_PATH, OBLAST_REFERENCE_PATH, PROCESSED_DIR
@@ -8,6 +10,26 @@ from sortsmart_ukraine.utils.io import ensure_dir, write_dataframe, write_json
 
 def _safe_div(numerator: pd.Series, denominator: pd.Series) -> pd.Series:
     return numerator.div(denominator.where(denominator.ne(0)))
+
+
+def _normalize_name(value: object) -> str:
+    if pd.isna(value):
+        return ""
+    normalized = str(value).strip().lower().replace("\xa0", " ")
+    normalized = normalized.replace("’", "'").replace("`", "'")
+    normalized = re.sub(r"[\"'.,()]", "", normalized)
+    normalized = re.sub(r"\s+", " ", normalized)
+    return normalized
+
+
+def _risk_band(value: float) -> str:
+    if pd.isna(value):
+        return "No signal"
+    if value >= 1.0:
+        return "High exceedance pressure"
+    if value >= 0.5:
+        return "Elevated pressure"
+    return "Lower pressure"
 
 
 def _scoring_constants(material_factors: pd.DataFrame) -> tuple[float, float, str]:
@@ -67,6 +89,155 @@ def _build_scored_mart(
     return mart
 
 
+def _build_air_supporting_marts(normalized_dir, marts_dir, sortsmart_mart: pd.DataFrame) -> None:
+    air_path = normalized_dir / "air_quality_context.parquet"
+    if not air_path.exists():
+        return
+
+    air = pd.read_parquet(air_path)
+    required_columns = {
+        "city",
+        "pollutant_name_uk",
+        "pollutant_key",
+        "q_avg_gdk_ratio",
+        "q_max_gdk_ratio",
+        "q_avg_mg_m3",
+        "observation_month",
+        "observation_month_label",
+    }
+    if not required_columns.issubset(air.columns):
+        return
+
+    air["observation_month"] = pd.to_datetime(air["observation_month"], errors="coerce")
+    air["city_normalized"] = air["city"].map(_normalize_name)
+
+    trends = (
+        air.groupby(["observation_month", "observation_month_label", "pollutant_key", "pollutant_name_uk"], dropna=False)
+        .agg(
+            sample_count=("city", "count"),
+            city_count=("city", "nunique"),
+            avg_q_avg_mg_m3=("q_avg_mg_m3", "mean"),
+            avg_q_avg_gdk_ratio=("q_avg_gdk_ratio", "mean"),
+            max_q_max_gdk_ratio=("q_max_gdk_ratio", "max"),
+        )
+        .reset_index()
+        .sort_values(["observation_month", "avg_q_avg_gdk_ratio"], ascending=[True, False])
+    )
+    write_dataframe(trends, marts_dir / "air_monthly_trends")
+
+    latest_month = air["observation_month"].dropna().max()
+    latest = air[air["observation_month"] == latest_month].copy() if pd.notna(latest_month) else air.copy()
+    if latest.empty:
+        latest = air.copy()
+
+    pollutant_rollup = (
+        latest.groupby(["city", "city_normalized", "pollutant_name_uk", "pollutant_key"], dropna=False)
+        .agg(
+            avg_q_avg_gdk_ratio=("q_avg_gdk_ratio", "mean"),
+            max_q_max_gdk_ratio=("q_max_gdk_ratio", "max"),
+            avg_q_avg_mg_m3=("q_avg_mg_m3", "mean"),
+            sample_count=("pollutant_name_uk", "count"),
+        )
+        .reset_index()
+        .sort_values(["city", "avg_q_avg_gdk_ratio", "max_q_max_gdk_ratio"], ascending=[True, False, False])
+    )
+    top_pollutant = pollutant_rollup.drop_duplicates("city").rename(
+        columns={
+            "pollutant_name_uk": "top_pollutant_name_uk",
+            "pollutant_key": "top_pollutant_key",
+            "avg_q_avg_gdk_ratio": "top_pollutant_avg_q_avg_gdk_ratio",
+            "max_q_max_gdk_ratio": "top_pollutant_max_q_max_gdk_ratio",
+        }
+    )
+
+    city_snapshot = (
+        latest.groupby(["city", "city_normalized"], dropna=False)
+        .agg(
+            pollutant_count=("pollutant_name_uk", "nunique"),
+            pollutant_rows=("pollutant_name_uk", "count"),
+            avg_q_avg_mg_m3=("q_avg_mg_m3", "mean"),
+            avg_q_avg_gdk_ratio=("q_avg_gdk_ratio", "mean"),
+            max_q_max_gdk_ratio=("q_max_gdk_ratio", "max"),
+        )
+        .reset_index()
+        .merge(
+            top_pollutant[
+                [
+                    "city",
+                    "top_pollutant_name_uk",
+                    "top_pollutant_key",
+                    "top_pollutant_avg_q_avg_gdk_ratio",
+                    "top_pollutant_max_q_max_gdk_ratio",
+                ]
+            ],
+            on="city",
+            how="left",
+        )
+    )
+    city_snapshot["observation_month"] = latest_month
+    city_snapshot["observation_month_label"] = latest_month.strftime("%Y-%m") if pd.notna(latest_month) else None
+    city_snapshot["risk_band"] = city_snapshot["max_q_max_gdk_ratio"].map(_risk_band)
+
+    permits_path = normalized_dir / "permits_registry.parquet"
+    if permits_path.exists():
+        permits = pd.read_parquet(permits_path)
+        permits["city_normalized"] = permits["addressPostName"].map(_normalize_name)
+        permit_crosswalk = (
+            permits.groupby("city_normalized", dropna=False)
+            .agg(
+                permit_count=("permissionNum", "count"),
+                permit_admin_unit_count=("addressAdminUnitL2", "nunique"),
+                permit_admin_units=("addressAdminUnitL2", lambda values: ", ".join(sorted({str(v) for v in values if pd.notna(v)}))),
+                latest_permit_issued=("permissionIssued", "max"),
+            )
+            .reset_index()
+        )
+        permit_crosswalk["latest_permit_issued"] = pd.to_datetime(
+            permit_crosswalk["latest_permit_issued"], errors="coerce"
+        ).dt.strftime("%Y-%m-%d")
+        city_snapshot = city_snapshot.merge(permit_crosswalk, on="city_normalized", how="left")
+
+    if "permit_count" not in city_snapshot.columns:
+        city_snapshot["permit_count"] = 0
+    city_snapshot["permit_count"] = city_snapshot["permit_count"].fillna(0).astype(int)
+
+    if "permit_admin_unit_count" not in city_snapshot.columns:
+        city_snapshot["permit_admin_unit_count"] = 0
+    city_snapshot["permit_admin_unit_count"] = city_snapshot["permit_admin_unit_count"].fillna(0).astype(int)
+
+    if "permit_admin_units" not in city_snapshot.columns:
+        city_snapshot["permit_admin_units"] = ""
+    city_snapshot["permit_admin_units"] = city_snapshot["permit_admin_units"].fillna("")
+
+    if "latest_permit_issued" not in city_snapshot.columns:
+        city_snapshot["latest_permit_issued"] = pd.NA
+    city_snapshot["has_permits_context"] = city_snapshot["permit_count"].gt(0)
+    city_snapshot["sortsmart_regions_covered"] = int(sortsmart_mart["oblast_name_en"].nunique(dropna=True))
+
+    write_dataframe(
+        city_snapshot.sort_values(["max_q_max_gdk_ratio", "avg_q_avg_gdk_ratio"], ascending=[False, False]),
+        marts_dir / "air_city_snapshot",
+    )
+
+    crosswalk = city_snapshot[
+        [
+            "city",
+            "observation_month_label",
+            "pollutant_count",
+            "avg_q_avg_gdk_ratio",
+            "max_q_max_gdk_ratio",
+            "top_pollutant_name_uk",
+            "permit_count",
+            "permit_admin_unit_count",
+            "permit_admin_units",
+            "latest_permit_issued",
+            "has_permits_context",
+            "risk_band",
+        ]
+    ].copy()
+    write_dataframe(crosswalk, marts_dir / "air_permit_crosswalk")
+
+
 def main() -> None:
     normalized_dir = PROCESSED_DIR / "normalized"
     marts_dir = ensure_dir(PROCESSED_DIR / "marts")
@@ -108,6 +279,8 @@ def main() -> None:
     ]
     mart = mart[ordered].sort_values("sorting_readiness_score", ascending=False).reset_index(drop=True)
     write_dataframe(mart, marts_dir / "oblast_sorting_readiness")
+
+    _build_air_supporting_marts(normalized_dir, marts_dir, mart)
 
     summary = {
         "latest_year": latest_year,

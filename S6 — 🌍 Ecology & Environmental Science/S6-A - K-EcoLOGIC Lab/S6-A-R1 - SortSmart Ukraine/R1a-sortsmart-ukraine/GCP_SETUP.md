@@ -169,6 +169,9 @@ The warehouse setup for this project loads the following relations into the `sor
   - `oblast_sorting_readiness`
   - `oblast_sorting_readiness_trend`
   - `air_module_overview`
+  - `air_monthly_trends`
+  - `air_city_snapshot`
+  - `air_permit_crosswalk`
   - `water_basin_overview`
   - `permits_city_overview`
   - `radiation_station_overview`

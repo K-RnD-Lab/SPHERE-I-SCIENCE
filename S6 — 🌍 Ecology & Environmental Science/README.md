@@ -27,6 +27,17 @@ Current public app entrypoint:
 
 - `S6-A - K-EcoLOGIC Lab/app.py`
 
+Public platform:
+
+- `https://k-ecologic-lab.streamlit.app/`
+- module pages:
+  - `Home`
+  - `SortSmart Ukraine`
+  - `Air & Exposure`
+  - `Water Watch`
+  - `Polluters & Permits`
+  - `Radiation & Risk`
+
 Indexing rule:
 
 - `S6` holds the domain-level map

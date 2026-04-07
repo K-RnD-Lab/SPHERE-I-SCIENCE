@@ -1,6 +1,7 @@
-source_file,source_sheet,row_count,column_count
-air_town_april_2025.xls,По містам,320,12
-air_town_june_2025.xls,По містам,320,12
-air_town_march_2025.xls,По містам,320,12
-air_town_november_2024.xlsx,По містам,319,12
-air_town_november_2024-2.xlsx,ГДК,24,12
+observation_month_label,source_file,source_sheet,row_count,city_count,pollutant_count,avg_q_avg_gdk_ratio,max_q_max_gdk_ratio
+2024-10,air_town_november_2024.xlsx,По містам,252,33,13,0.8558820464439655,4.875
+2024-11,air_town_november_2024-2.xlsx,По містам,252,33,13,0.8007202920887124,4.5
+2025-02,air_town_february_2025.xlsx,По містам,253,33,14,0.795362694202535,4.75
+2025-03,air_town_march_2025.xls,По містам,253,33,14,0.8203785011092535,4.875
+2025-04,air_town_april_2025.xls,По містам,253,33,14,0.8058826381220593,4.875
+2025-05,air_town_june_2025.xls,По містам,253,33,14,0.7948992040609851,4.375

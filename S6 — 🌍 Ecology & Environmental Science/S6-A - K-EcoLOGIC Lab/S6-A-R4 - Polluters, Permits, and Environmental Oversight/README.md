@@ -16,6 +16,13 @@ Its purpose is to connect oversight-oriented environmental records into a practi
 - module page
   - `Polluters & Permits`
 
+Other modules on the same platform:
+
+- `SortSmart Ukraine`
+- `Air & Exposure`
+- `Water Watch`
+- `Radiation & Risk`
+
 ## Why this belongs in S6
 
 The program still studies environmental systems through:

@@ -1,5 +1,7 @@
 {
-  "resource_count": 5,
-  "sheet_count": 5,
-  "row_count": 1303
+  "resource_count": 6,
+  "sheet_count": 6,
+  "row_count": 1516,
+  "month_count": 6,
+  "city_count": 33
 }

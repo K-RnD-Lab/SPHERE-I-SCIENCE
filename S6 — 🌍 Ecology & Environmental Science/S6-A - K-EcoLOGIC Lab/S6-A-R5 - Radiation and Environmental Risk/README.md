@@ -16,6 +16,13 @@ Its purpose is to connect radiation-monitoring context into a practical analytic
 - module page
   - `Radiation & Risk`
 
+Other modules on the same platform:
+
+- `SortSmart Ukraine`
+- `Air & Exposure`
+- `Water Watch`
+- `Polluters & Permits`
+
 ## Why this belongs in S6
 
 The program studies environmental systems through:

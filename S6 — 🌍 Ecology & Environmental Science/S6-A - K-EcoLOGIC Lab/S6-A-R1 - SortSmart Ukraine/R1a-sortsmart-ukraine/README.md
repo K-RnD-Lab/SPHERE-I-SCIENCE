@@ -15,6 +15,15 @@ It is a nationwide data engineering module about waste sorting readiness, recove
 - deploy entrypoint
   - `deploy/k_ecologic_lab.py`
 
+Module pages on the public app:
+
+- `Home`
+- `SortSmart Ukraine`
+- `Air & Exposure`
+- `Water Watch`
+- `Polluters & Permits`
+- `Radiation & Risk`
+
 ## Project Question
 
 This project answers a practical question:
@@ -164,6 +173,9 @@ The Python warehouse loader pushes these data assets into BigQuery:
   - `oblast_sorting_readiness`
   - `oblast_sorting_readiness_trend`
   - `air_module_overview`
+  - `air_monthly_trends`
+  - `air_city_snapshot`
+  - `air_permit_crosswalk`
   - `water_basin_overview`
   - `permits_city_overview`
   - `radiation_station_overview`
@@ -240,7 +252,7 @@ If you keep the project on BigQuery Sandbox with billing disabled, the platform 
 In practice for this project, the items that automatically expire are the BigQuery objects inside the sandbox dataset, including:
 
 - tables
-  - for example `waste_metrics`, `permits_registry`, `oblast_sorting_readiness`, `air_module_overview`
+  - for example `waste_metrics`, `permits_registry`, `oblast_sorting_readiness`, `air_module_overview`, `air_monthly_trends`, `air_city_snapshot`, `air_permit_crosswalk`
 - views
   - for example `stg_waste_metrics`, `stg_waste_facility_counts`
 - partitions
@@ -275,7 +287,7 @@ Recommended project framing for Zoomcamp:
 ## Known Limitations
 
 - the climate-impact layer is modeled, not directly measured
-- the air-quality component is currently a context layer, not the main decision engine
+- the air-quality component is now a live supporting module with monthly trend summaries, city-level snapshots, and permit cross-links, but it is still not the flagship decision engine of the platform
 - the current regional waste file exposes waste-management outcomes, so `generated` is proxied from recovery, incineration, and landfill-disposal for scoring
 - the current permits MVP is based on the latest open CSV resource available for Vinnytsia oblast, so this module is a regional pilot rather than nationwide coverage
 - the radiation MVP currently shows monitoring-network coverage and source context, not a validated real-time emergency warning feed
