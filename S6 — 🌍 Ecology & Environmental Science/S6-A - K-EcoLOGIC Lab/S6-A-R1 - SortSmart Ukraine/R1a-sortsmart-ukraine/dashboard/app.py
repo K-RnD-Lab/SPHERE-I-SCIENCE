@@ -31,6 +31,24 @@ For the current Zoomcamp delivery, the flagship module is `SortSmart Ukraine`.
 """
 )
 
+st.subheader("Why this platform matters")
+st.markdown(
+    """
+K-EcoLOGIC Lab is meant to help with a practical public-interest problem:
+
+- environmental data in Ukraine is fragmented across different ministries, registries, and publication cycles
+- some nationwide datasets appear late, irregularly, or only at coarse regional level
+- activists and civic teams still need one place to understand the problem, explain it visually, and decide what to ask for next
+
+So this site is not only a dashboard. It is an environmental evidence surface for:
+
+- showing the current visible state
+- documenting where the data gaps still are
+- translating raw tables into more understandable public signals
+- helping climate and waste activists frame next requests, letters, pilots, and interventions
+"""
+)
+
 mart = load_sortsmart_mart()
 air = load_air_context()
 air_overview = load_air_overview()
@@ -116,3 +134,29 @@ Use the left sidebar to open a module page:
 - `Water Watch`, `Polluters & Permits`, and `Radiation & Risk` for the broader environmental context
 """
 )
+
+with st.expander("Where AI fits and where it does not"):
+    st.markdown(
+        """
+AI is optional here, not the foundation.
+
+Good uses:
+
+- summarizing long environmental tables into human-readable notes
+- drafting activist-facing briefs and public explanations
+- helping classify packaging or waste types into clearer user categories
+- suggesting what new data should be requested next
+
+Less useful uses:
+
+- inventing environmental facts that are not in the source data
+- replacing official monitoring or regulatory records
+- pretending sparse public data is complete when it is not
+
+So the better pattern is:
+
+- warehouse first
+- transparent transforms second
+- AI only as an explanation and decision-support layer on top
+"""
+    )

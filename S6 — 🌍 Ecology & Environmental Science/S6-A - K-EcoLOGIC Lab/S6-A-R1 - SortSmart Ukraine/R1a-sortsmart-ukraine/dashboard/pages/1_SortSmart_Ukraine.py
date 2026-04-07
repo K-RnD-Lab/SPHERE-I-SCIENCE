@@ -40,6 +40,19 @@ st.info(
     "This module currently works at oblast level, not city level. The regional waste file published on data.gov.ua is the strongest open source we have for nationwide coverage."
 )
 
+st.markdown(
+    """
+This page is best read as a decision-support layer, not just a scoreboard.
+
+It helps answer:
+
+- where landfill dependence still dominates
+- where recovery is already happening but still under-scaled
+- which material streams are the most actionable to separate first
+- where the public data itself is still too weak and needs follow-up requests
+"""
+)
+
 with st.expander("What do these metrics mean?"):
     st.markdown(
         """
@@ -62,7 +75,7 @@ if selected_region != "All Ukraine" and not filtered.empty:
         f"{selected_region} in {selected_year}: recovery {row['recovery']:.1f} thsd.t, landfill disposal {row['disposal_on_landfills']:.1f} thsd.t, readiness {row['sorting_readiness_score']:.1f}."
     )
 
-tab1, tab2, tab3 = st.tabs(["Overview", "Trends", "Material Guide"])
+tab1, tab2, tab3, tab4 = st.tabs(["Overview", "Trends", "Problem & Action", "Material Guide"])
 
 with tab1:
     overview_col1, overview_col2 = st.columns(2)
@@ -183,5 +196,121 @@ with tab2:
         st.plotly_chart(fig, use_container_width=True)
 
 with tab3:
+    st.subheader("Problem framing and action paths")
+    st.markdown(
+        """
+Three structural problems are visible even in the current MVP:
+
+- Ukraine's strongest open nationwide waste data is still mostly oblast-level, which makes local sorting systems harder to evaluate
+- the official file reflects management outcomes better than true generation structure, so part of the model still has to stay transparent about proxies
+- infrastructure, public awareness, and material-specific collection are not yet aligned, so one mixed-bin reality still dominates in many places
+"""
+    )
+
+    action_col1, action_col2 = st.columns(2)
+
+    with action_col1:
+        st.markdown(
+            """
+**What this already helps with**
+
+- showing where recovery gaps are largest
+- identifying which regions are more landfill-dependent
+- explaining why sorting should start with high-value material streams
+- giving activists a clearer evidence base for presentations, letters, and partnerships
+"""
+        )
+
+    with action_col2:
+        st.markdown(
+            """
+**What should happen next**
+
+- request fresher regional and municipal waste datasets
+- map real container and collection coverage by city
+- separate packaging guidance into user-friendly categories
+- connect local sorting behavior with funding, procurement, and ministry-level accountability
+"""
+        )
+
+    if selected_region == "All Ukraine":
+        gap_ranking = year_slice.sort_values("recovery_gap_thsd_t", ascending=False).head(10)
+        readiness_ranking = year_slice.sort_values("sorting_readiness_score", ascending=False).head(10)
+    else:
+        gap_ranking = year_slice.sort_values("recovery_gap_thsd_t", ascending=False).head(10)
+        readiness_ranking = year_slice.sort_values("sorting_readiness_score", ascending=False).head(10)
+
+    left, right = st.columns(2)
+
+    with left:
+        st.markdown("**Where recovery gaps are biggest right now**")
+        st.dataframe(
+            gap_ranking[["oblast_name_en", "recovery_gap_thsd_t", "disposal_on_landfills", "priority_material"]],
+            use_container_width=True,
+            hide_index=True,
+        )
+
+    with right:
+        st.markdown("**Where readiness is currently strongest**")
+        st.dataframe(
+            readiness_ranking[["oblast_name_en", "sorting_readiness_score", "facility_count", "priority_material"]],
+            use_container_width=True,
+            hide_index=True,
+        )
+
+with tab4:
     st.caption("Transparent material assumptions used for modeled recovery and climate impact.")
     st.dataframe(materials, use_container_width=True, hide_index=True)
+
+    st.subheader("Packaging and container guidance")
+    st.markdown(
+        """
+This is the practical public-facing layer that can later become a dedicated education page.
+
+The goal is not only to say **what materials exist**, but to say **what a person should do with common packaging**.
+"""
+    )
+
+    packaging_guide = [
+        {
+            "common_item": "Cardboard box, paper bag, clean paper packaging",
+            "likely_stream": "Paper / cardboard",
+            "what_to_do": "Keep dry, flatten if possible, and avoid mixing with greasy food waste.",
+            "container_hint": "Paper bin or dry recyclables bin",
+        },
+        {
+            "common_item": "PET bottle, detergent bottle, rigid plastic container",
+            "likely_stream": "Plastic",
+            "what_to_do": "Rinse lightly, compress if possible, and separate from mixed waste.",
+            "container_hint": "Plastic bin or mixed dry recyclables bin",
+        },
+        {
+            "common_item": "Glass bottle or jar",
+            "likely_stream": "Glass",
+            "what_to_do": "Empty contents and remove obvious contamination.",
+            "container_hint": "Glass bin or dry recyclables bin",
+        },
+        {
+            "common_item": "Aluminium can, metal food tin",
+            "likely_stream": "Metals",
+            "what_to_do": "Rinse if dirty and keep in the metal or dry recyclables stream.",
+            "container_hint": "Metal bin or dry recyclables bin",
+        },
+        {
+            "common_item": "Food scraps, coffee grounds, yard waste",
+            "likely_stream": "Organics",
+            "what_to_do": "Best diverted to composting or organics collection if it exists.",
+            "container_hint": "Organics bin, compost, or separate collection",
+        },
+        {
+            "common_item": "Battery, small electronics, charger, cable",
+            "likely_stream": "Hazardous / e-waste",
+            "what_to_do": "Do not place in mixed waste. Use dedicated collection points only.",
+            "container_hint": "Battery or e-waste drop-off point",
+        },
+    ]
+    st.dataframe(packaging_guide, use_container_width=True, hide_index=True)
+
+    st.warning(
+        "Container rules vary by municipality. This guide shows the most sensible default logic for public education, but the next platform upgrade should connect each material stream to city-level collection infrastructure."
+    )
