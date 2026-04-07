@@ -59,7 +59,7 @@ radiation_overview = load_radiation_overview()
 col1, col2, col3 = st.columns(3)
 active_modules = sum(value is not None for value in [mart, air_overview, water_overview, permits_overview, radiation_overview])
 col1.metric("Data-backed Modules", str(active_modules))
-col2.metric("Platform Pages", "6")
+col2.metric("Platform Pages", "7")
 col3.metric("Core Scope", "Ukraine")
 
 st.subheader("Module Map")
@@ -69,6 +69,11 @@ module_data = [
         "module": "SortSmart Ukraine",
         "status": "Live",
         "focus": "Waste sorting readiness, recovery gap, climate impact",
+    },
+    {
+        "module": "Packaging & Sorting Guide",
+        "status": "Live",
+        "focus": "Public-friendly sorting help for packaging, containers, and everyday waste items",
     },
     {
         "module": "Air & Exposure",
@@ -130,6 +135,7 @@ st.markdown(
 Use the left sidebar to open a module page:
 
 - `SortSmart Ukraine` for the main working dashboard
+- `Packaging & Sorting Guide` for public-friendly sorting help and the interactive disposal assistant
 - `Air & Exposure` for climate-context monitoring
 - `Water Watch`, `Polluters & Permits`, and `Radiation & Risk` for the broader environmental context
 """
