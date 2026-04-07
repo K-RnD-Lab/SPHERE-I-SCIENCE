@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import sys
 from pathlib import Path
 
@@ -13,17 +14,27 @@ if str(DASHBOARD_DIR) not in sys.path:
 from kecologic_common import (
     configure_page,
     load_air_city_snapshot,
-    load_air_story,
-    load_national_story,
     load_permits_overview,
-    load_permits_story,
-    load_radiation_story,
     load_sortsmart_mart,
     load_sortsmart_trend,
     load_water_overview,
-    load_water_story,
 )
 from sorting_logic import classify_item
+
+
+MODULE_ROOT = DASHBOARD_DIR.parent
+MARTS_DIR = MODULE_ROOT / "data" / "processed" / "marts"
+NATIONAL_STORY_PATH = MARTS_DIR / "national_story.json"
+AIR_STORY_PATH = MARTS_DIR / "air_module_story.json"
+WATER_STORY_PATH = MARTS_DIR / "water_module_story.json"
+PERMITS_STORY_PATH = MARTS_DIR / "permits_module_story.json"
+RADIATION_STORY_PATH = MARTS_DIR / "radiation_module_story.json"
+
+
+def _load_story(path: Path) -> dict | None:
+    if not path.exists():
+        return None
+    return json.loads(path.read_text(encoding="utf-8"))
 
 
 def _format_number(value: float) -> str:
@@ -200,11 +211,11 @@ trend = load_sortsmart_trend()
 air_snapshot = load_air_city_snapshot()
 water_overview = load_water_overview()
 permits_overview = load_permits_overview()
-national_story = load_national_story()
-air_story = load_air_story()
-water_story = load_water_story()
-permits_story = load_permits_story()
-radiation_story = load_radiation_story()
+air_story = _load_story(AIR_STORY_PATH)
+national_story = _load_story(NATIONAL_STORY_PATH)
+water_story = _load_story(WATER_STORY_PATH)
+permits_story = _load_story(PERMITS_STORY_PATH)
+radiation_story = _load_story(RADIATION_STORY_PATH)
 
 tab1, tab2, tab3 = st.tabs(["Environmental Brief Generator", "AI Sorting Assistant", "AI Activist Mode"])
 
