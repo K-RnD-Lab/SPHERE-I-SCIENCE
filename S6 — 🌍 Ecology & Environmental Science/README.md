@@ -29,7 +29,7 @@ Current public app entrypoint:
 
 Public platform:
 
-- `https://k-ecologic-lab.streamlit.app/`
+- [`https://k-ecologic-lab.streamlit.app/`](https://k-ecologic-lab.streamlit.app/)
 - module pages:
   - `Home`
   - `SortSmart Ukraine`
