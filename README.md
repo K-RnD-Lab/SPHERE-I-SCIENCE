@@ -43,19 +43,19 @@ SPHERE I — SCIENCE
 
 ## Science Boundaries
 
-- `S1` Biomedical & Oncology
+- `S1` Biomedical & Oncology <br>
   Computational oncology, RNA therapeutics, delivery systems, biomarkers, and rare-cancer hypotheses.
-- `S2` Plant Science & Phytochemistry
+- `S2` Plant Science & Phytochemistry <br>
   Plant-intrinsic biology: phytochemicals, plant metabolites, bioactive compounds, and plant molecular traits.
-- `S3` Agricultural Biology & Biofertilizers
+- `S3` Agricultural Biology & Biofertilizers <br>
   Applied agro-biology: soil, rhizosphere, biofertilizers, crop-growth systems, and intervention logic.
-- `S4` Biochemistry & Metabolomics
+- `S4` Biochemistry & Metabolomics <br>
   Cross-organism biochemical mechanisms, pathway logic, and metabolomic signatures.
-- `S5` Neuroscience & Aging
+- `S5` Neuroscience & Aging <br>
   Neurobiology, cognition, neuroinflammation, aging, and computational vulnerability patterns.
-- `S6` Ecology & Environmental Science
+- `S6` Ecology & Environmental Science <br>
   Ecosystems, biodiversity, environmental communities, and climate/pollution-linked system effects.
-- `S7` K Life OS
+- `S7` K Life OS <br>
   Science-facing work on measurable life systems, cognition, adaptive training, self-tracking, and longitudinal human-pattern research.
 
 ## Conference-Aligned Expertise
@@ -144,7 +144,7 @@ Current example:
 - `deploy/k_ecologic_lab.py`
   - public wrapper for the K-EcoLOGIC Lab environmental platform
 - live app
-  - `https://k-ecologic-lab.streamlit.app/`
+  - [`https://k-ecologic-lab.streamlit.app/`](https://k-ecologic-lab.streamlit.app/)
   - module pages:
     - `Home`
     - `SortSmart Ukraine`
