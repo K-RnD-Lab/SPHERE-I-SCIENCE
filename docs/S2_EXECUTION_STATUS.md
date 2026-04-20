@@ -18,7 +18,7 @@ This file prevents confusion between:
 ### `S2-B Phytochemicals & Natural Products`
 
 - `R1` guide: ready
-- `R2` guide: planned
+- `R2` guide: ready
 
 ### `S2-C Stress Biology & Resilience`
 
@@ -61,14 +61,14 @@ But for architectural consistency, `S2-A-R1` and `S2-A-R2` were added immediatel
 
 ## Recommended next order inside S2
 
-1. `S2-B-R2`
-2. `S2-E-R1`
-3. `S2-D-R1`
-4. `S2-C-R2`
+1. `S2-E-R1`
+2. `S2-D-R1`
+3. `S2-C-R2`
+4. `S2-E-R2`
 
 Reason:
 
 - `S2-C-R1` already gives `S2` real biological depth
-- `S2-B-R2` should now prevent phytochemicals from staying only a catalog
-- `S2-E-R1` gives the next translational bridge
+- `S2-B-R2` now gives `S2-B` a mechanism layer, not only a catalog
+- `S2-E-R1` is the next translational bridge
 - `S2-D-R1` becomes stronger once omics, phytochemicals, and stress logic are already defined
