@@ -19,6 +19,8 @@ This file prevents confusion between:
 
 - `R1` guide: ready
 - `R2` guide: ready
+- `R1` evidence table: active
+- `R1` preliminary findings: active
 
 ### `S2-C Stress Biology & Resilience`
 
@@ -50,6 +52,19 @@ It already has:
 - one translational entry line
 - one molecular/omics backbone
 - one state-classification backbone
+- one active evidence-backed shortlist in `S2-B-R1`
+
+## Active execution note
+
+`S2-B-R1` is no longer only a guide.
+
+It now has:
+
+- an evidence schema with real candidate records
+- an active source registry
+- a preliminary findings note
+
+This is the first point where `S2` starts behaving like a real research workspace rather than only a planning layer.
 
 ## Why `S2-B-R1` appeared early
 
