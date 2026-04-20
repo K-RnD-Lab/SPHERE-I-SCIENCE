@@ -19,6 +19,14 @@
 
 This repository maps **SPHERE I — SCIENCE** inside K R&D Lab. Scientific questions stay here; reusable tooling, scoring systems, and dashboards belong in `SPHERE-III-TECHNOLOGY`.
 
+## Documentation Workflow
+
+- `docs/` = active research staging and execution materials
+- `archived_docs/` = superseded planning, older operating notes, and historical strategy layers
+
+If a file is still needed to scope, execute, or stage an active study, it stays in `docs/`.
+If it has already been superseded by lane maps, execution status files, or actual research starter packs, it moves to `archived_docs/`.
+
 ## Current Science Directions
 
 - [🩺 S1 — Biomedical & Oncology](./S1%20%E2%80%94%20%F0%9F%A9%BA%20%20Biomedical%20%26%20Oncology/)
