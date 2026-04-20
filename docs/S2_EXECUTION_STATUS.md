@@ -25,7 +25,9 @@ This file prevents confusion between:
 ### `S2-C Stress Biology & Resilience`
 
 - `R1` guide: ready
-- `R2` guide: planned
+- `R2` guide: ready
+- `R2` evidence table: active
+- `R2` preliminary findings: active
 
 ### `S2-D Plant-Pathogen & Defense Systems`
 
@@ -55,6 +57,7 @@ It already has:
 - one molecular/omics backbone
 - one state-classification backbone
 - one active evidence-backed shortlist in `S2-B-R1`
+- one active recovery-profile panel in `S2-C-R2`
 - one active defense-signature panel in `S2-D-R1`
 
 ## Active execution note
@@ -76,6 +79,13 @@ This is the first point where `S2` starts behaving like a real research workspac
 - evidence schema
 - preliminary findings
 
+`S2-C-R2` now behaves in the same way:
+
+- guide
+- source registry
+- evidence schema
+- preliminary findings
+
 ## Why `S2-B-R1` appeared early
 
 `S2-B-R1` was not chosen because `S2-A` was empty.
@@ -86,14 +96,15 @@ But for architectural consistency, `S2-A-R1` and `S2-A-R2` were added immediatel
 
 ## Recommended next order inside S2
 
-1. `S2-C-R2`
-2. `S2-E-R2`
-3. `S2-D-R2`
-4. `S2-A` or `S2-B` figure layer
+1. `S2-E-R2`
+2. `S2-D-R2`
+3. `S2-A` or `S2-B` figure layer
+4. expand active evidence rows in `S2-B` and `S2-C`
 
 Reason:
 
 - `S2-C-R1` already gives `S2` real biological depth
+- `S2-C-R2` now gives `S2` a true recovery and resilience layer
 - `S2-B-R2` now gives `S2-B` a mechanism layer, not only a catalog
 - `S2-E-R1` now gives `S2` an explicit translational bridge
 - `S2-D-R1` is now active enough to support later comparative expansion
