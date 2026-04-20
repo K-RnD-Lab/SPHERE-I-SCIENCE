@@ -34,7 +34,9 @@ This file prevents confusion between:
 - `R1` guide: ready
 - `R1` evidence table: active
 - `R1` preliminary findings: active
-- `R2` guide: planned
+- `R2` guide: ready
+- `R2` evidence table: active
+- `R2` preliminary findings: active
 
 ### `S2-E Translational Plant Bioactivity`
 
@@ -61,6 +63,7 @@ It already has:
 - one active evidence-backed shortlist in `S2-B-R1`
 - one active recovery-profile panel in `S2-C-R2`
 - one active defense-signature panel in `S2-D-R1`
+- one active resistant-vs-susceptible comparison layer in `S2-D-R2`
 - one active comparative translational panel in `S2-E-R2`
 
 ## Active execution note
@@ -96,6 +99,13 @@ This is the first point where `S2` starts behaving like a real research workspac
 - evidence schema
 - preliminary findings
 
+`S2-D-R2` now behaves in the same way:
+
+- guide
+- source registry
+- evidence schema
+- preliminary findings
+
 ## Why `S2-B-R1` appeared early
 
 `S2-B-R1` was not chosen because `S2-A` was empty.
@@ -106,10 +116,10 @@ But for architectural consistency, `S2-A-R1` and `S2-A-R2` were added immediatel
 
 ## Recommended next order inside S2
 
-1. `S2-D-R2`
-2. `S2-A` or `S2-B` figure layer
-3. expand active evidence rows in `S2-B` and `S2-C`
-4. expand translational evidence rows in `S2-E`
+1. `S2-A` or `S2-B` figure layer
+2. expand active evidence rows in `S2-B` and `S2-C`
+3. expand translational evidence rows in `S2-E`
+4. strengthen `S2-D` with one more perennial or non-model comparison
 
 Reason:
 
@@ -118,4 +128,4 @@ Reason:
 - `S2-B-R2` now gives `S2-B` a mechanism layer, not only a catalog
 - `S2-E-R1` now gives `S2` an explicit translational bridge
 - `S2-E-R2` now adds comparative opportunity-versus-friction logic
-- `S2-D-R1` is now active enough to support later comparative expansion
+- `S2-D-R1` is now complemented by a true resistant-vs-susceptible comparison layer
