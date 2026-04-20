@@ -1,0 +1,63 @@
+# S3 Execution Status
+
+## Why this file exists
+
+This file separates:
+
+- lane architecture
+- ready research guides
+- planned next guides
+
+It keeps `S3` readable as a staged build rather than a random set of ideas.
+
+## S3 lane status
+
+### `S3-A Soil & Rhizosphere Microbiomes`
+
+- `R1` guide: ready
+- `R2` guide: planned
+
+### `S3-B Biofertilizer Design & Validation`
+
+- `R1` guide: planned
+- `R2` guide: planned
+
+### `S3-C Crop Stress & Yield Systems`
+
+- `R1` guide: planned
+- `R2` guide: planned
+
+### `S3-D Agro-Intervention Analytics`
+
+- `R1` guide: planned
+- `R2` guide: planned
+
+### `S3-E Field Translation & Practical Deployment`
+
+- `R1` guide: planned
+- `R2` guide: planned
+
+## Current interpretation
+
+`S3` currently has:
+
+- a full lane map
+- one starter guide for the microbiome-first entry line
+
+This means `S3` has a clear scientific start, but not yet a balanced execution layer across intervention, field logic, and deployment.
+
+## Recommended next order inside S3
+
+1. `S3-B-R1`
+2. `S3-D-R1`
+3. `S3-C-R1`
+4. `S3-E-R1`
+5. `S3-A-R2`
+
+Reason:
+
+- `S3-B-R1` makes the sphere practically legible
+- `S3-D-R1` adds decision logic
+- `S3-C-R1` strengthens crop-context interpretation
+- `S3-E-R1` turns the science into usable field-facing form
+- `S3-A-R2` becomes stronger after the applied side is clearer
