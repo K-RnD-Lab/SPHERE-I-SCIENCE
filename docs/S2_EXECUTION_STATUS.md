@@ -32,7 +32,7 @@ This file prevents confusion between:
 
 ### `S2-E Translational Plant Bioactivity`
 
-- `R1` guide: planned
+- `R1` guide: ready
 - `R2` guide: planned
 
 ## Current interpretation
@@ -61,14 +61,14 @@ But for architectural consistency, `S2-A-R1` and `S2-A-R2` were added immediatel
 
 ## Recommended next order inside S2
 
-1. `S2-E-R1`
-2. `S2-D-R1`
-3. `S2-C-R2`
-4. `S2-E-R2`
+1. `S2-D-R1`
+2. `S2-C-R2`
+3. `S2-E-R2`
+4. `S2-D-R2`
 
 Reason:
 
 - `S2-C-R1` already gives `S2` real biological depth
 - `S2-B-R2` now gives `S2-B` a mechanism layer, not only a catalog
-- `S2-E-R1` is the next translational bridge
-- `S2-D-R1` becomes stronger once omics, phytochemicals, and stress logic are already defined
+- `S2-E-R1` now gives `S2` an explicit translational bridge
+- `S2-D-R1` becomes stronger once omics, phytochemicals, stress, and translational logic are already defined
