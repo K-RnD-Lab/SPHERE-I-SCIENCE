@@ -175,7 +175,7 @@ The current live app environment is split across these Spaces:
 | [Cancer Research Suite](https://huggingface.co/spaces/K-RnD-Lab/Cancer-Research-Suite_03-2026) | Live research-gap exploration, real-data lookups, and research assistant workflows | `spaces/cancer-research-suite` |
 | [PHYLO BRCA2 miRNA Demo](https://huggingface.co/spaces/K-RnD-Lab/PHYLO-03_2026-01_A1-brca2-mirna) | Dedicated BRCA2 miRNA study demo | `spaces/phylo-brca2-mirna` |
 
-More detail is documented in [`spaces/README.md`](spaces/README.md) and [`docs/hf-space-sync.md`](docs/hf-space-sync.md).
+More detail is documented in [`spaces/README.md`](spaces/README.md) and [`docs/core/hf-space-sync.md`](docs/core/hf-space-sync.md).
 
 ## Repository Layout
 
@@ -193,7 +193,14 @@ SPHERE-I-SCIENCE/
 |   |-- cancer-research-suite/
 |   `-- phylo-brca2-mirna/
 |-- docs/
-|   `-- hf-space-sync.md
+|   |-- core/
+|   |   `-- hf-space-sync.md
+|   |-- S1/
+|   |-- S2/
+|   |-- S3/
+|   |-- S4/
+|   |-- S5/
+|   `-- S6/
 `-- tools/
     `-- sync_hf_spaces.ps1
 ```
