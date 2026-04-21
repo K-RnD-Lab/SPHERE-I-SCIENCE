@@ -59,6 +59,21 @@ Primary platform files:
 
 This means the public-facing app can now be deployed from the lab root instead of directly from the internal `R1a` module path.
 
+## Documentation Scope
+
+This README is the canonical lab-level page for `S6-A`.
+
+Use the documentation layers like this:
+
+- `S6-A/README.md`
+  - lab positioning, public app root, module map, and platform-level architecture
+- `S6-A-R*/README.md`
+  - research-program purpose, intended users, and why the program belongs inside `S6-A`
+- `S6-A-R*/R*a-*/README.md`
+  - implementation-module notes only: current scope, entrypoints, and module-specific outputs
+
+This keeps the platform story in one place and prevents module folders from carrying duplicated lab-level narrative.
+
 ## Research Programs
 
 - [S6-A-R1 - SortSmart Ukraine](./S6-A-R1%20-%20SortSmart%20Ukraine/)

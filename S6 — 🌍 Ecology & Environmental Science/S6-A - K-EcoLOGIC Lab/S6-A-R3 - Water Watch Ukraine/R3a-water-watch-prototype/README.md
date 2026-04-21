@@ -1,25 +1,31 @@
 # R3a - Water Watch Prototype
 
-`R3a-water-watch-prototype` is the first implementation module for `S6-A-R3`.
+`R3a-water-watch-prototype` is the first implementation module for `S6-A-R3 - Water Watch Ukraine`.
 
-This module now contributes a live MVP page inside the shared K-EcoLOGIC Lab platform.
+This README is module-scoped. The lab-level platform description lives in `S6-A/README.md`, and the research-program framing lives in the parent `S6-A-R3` README.
 
 ## Current Scope
 
 - water dataset inventory
 - ingestion and normalization scripts
 - basin-level summaries
-- platform-facing dashboard outputs
+- dashboard outputs for the `Water Watch` page
+
+## Public Surface
+
+- public platform
+  - `https://k-ecologic-lab.streamlit.app/`
+- module page
+  - `Water Watch`
 
 ## Current State
 
 - implemented MVP module
 - exposed publicly through `Water Watch`
-- hosted as part of `https://k-ecologic-lab.streamlit.app/`
 
-Other modules on the same public app:
+## Documentation Context
 
-- `SortSmart Ukraine`
-- `Air & Exposure`
-- `Polluters & Permits`
-- `Radiation & Risk`
+- lab overview
+  - [../../README.md](../../README.md)
+- parent research program
+  - [../README.md](../README.md)
