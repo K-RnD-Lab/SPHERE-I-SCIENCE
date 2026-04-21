@@ -15,7 +15,7 @@ It keeps `S4` readable as a mechanism-first bridge rather than a chemistry catch
 ### `S4-A Metabolomics & Signature Discovery`
 
 - `R1` guide: ready
-- `R2` guide: planned
+- `R2` guide: ready
 
 ### `S4-B Pathway Chemistry & Perturbation`
 
@@ -50,11 +50,12 @@ It keeps `S4` readable as a mechanism-first bridge rather than a chemistry catch
 This means `S4` now has:
 
 - a metabolite-signature entry line through `S4-A`
+- a deeper state-profile layer through `S4-A-R2`
 - a first mechanism-facing execution line through `S4-B-R1`
 - a target-facing execution line through `S4-C-R1`
 - a translational shortlist layer through `S4-E-R1`
 
-It still needs the deeper signature layer and cross-domain layer to become operational as a full sphere.
+It still needs the cross-domain layer to become operational as a full sphere.
 
 ## Recommended next order inside S4
 
@@ -91,3 +92,8 @@ Current active `S4` execution layer:
 - `S4-E-R1_EVIDENCE_SCHEMA.csv`
 - `S4-E-R1_REPORT_SKELETON.md`
 - `S4-E-R1_PRELIMINARY_FINDINGS.md`
+- `S4-A-R2_RESEARCH_GUIDE.md`
+- `S4-A-R2_SOURCE_REGISTRY.md`
+- `S4-A-R2_EVIDENCE_SCHEMA.csv`
+- `S4-A-R2_REPORT_SKELETON.md`
+- `S4-A-R2_PRELIMINARY_FINDINGS.md`
