@@ -29,7 +29,7 @@ It keeps `S3` readable as a staged build rather than a random set of ideas.
 
 ### `S3-D Agro-Intervention Analytics`
 
-- `R1` guide: planned
+- `R1` guide: ready
 - `R2` guide: planned
 
 ### `S3-E Field Translation & Practical Deployment`
@@ -44,6 +44,7 @@ It keeps `S3` readable as a staged build rather than a random set of ideas.
 - a full lane map
 - one starter guide for the microbiome-first entry line
 - one active execution pack for biofertilizer efficacy and validation
+- one active execution pack for intervention comparison frameworks
 
 This means `S3` now has:
 
@@ -51,6 +52,13 @@ This means `S3` now has:
 - a practical intervention-validation line through `S3-B-R1`
 
 But it still does not yet have a balanced execution layer across decision logic, crop-context interpretation, and deployment.
+
+It now has:
+
+- a field-validation line in `S3-B-R1`
+- a comparison and recommendation layer in `S3-D-R1`
+
+The next missing layer is crop-context interpretation and field translation.
 
 ## Recommended next order inside S3
 
@@ -77,3 +85,8 @@ Current active `S3` execution layer:
 - `S3-B-R1_EVIDENCE_SCHEMA.csv`
 - `S3-B-R1_REPORT_SKELETON.md`
 - `S3-B-R1_PRELIMINARY_FINDINGS.md`
+- `S3-D-R1_RESEARCH_GUIDE.md`
+- `S3-D-R1_SOURCE_REGISTRY.md`
+- `S3-D-R1_EVIDENCE_SCHEMA.csv`
+- `S3-D-R1_REPORT_SKELETON.md`
+- `S3-D-R1_PRELIMINARY_FINDINGS.md`
