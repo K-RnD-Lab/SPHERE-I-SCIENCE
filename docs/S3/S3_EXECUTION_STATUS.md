@@ -30,7 +30,7 @@ It keeps `S3` readable as a staged build rather than a random set of ideas.
 ### `S3-D Agro-Intervention Analytics`
 
 - `R1` guide: ready
-- `R2` guide: planned
+- `R2` guide: ready
 
 ### `S3-E Field Translation & Practical Deployment`
 
@@ -46,6 +46,7 @@ It keeps `S3` readable as a staged build rather than a random set of ideas.
 - one active execution pack for biofertilizer efficacy and validation
 - one active execution pack for biofertilizer reliability, quality control, and failure modes
 - one active execution pack for intervention comparison frameworks
+- one active execution pack for intervention portfolios, scaling, and context transfer
 - one active execution pack for crop stress and support profiles
 - one active execution pack for recovery, resilience, and recurrent stress response
 - one active execution pack for field translation playbooks
@@ -68,7 +69,13 @@ The next missing layer is crop-context interpretation and field translation.
 
 `S3-C-R1` now covers the crop-context interpretation side, and `S3-E-R1` now covers field translation and deployment packaging.
 
-The main missing layer now is a second intervention-comparison or scaling line in `S3-D-R2`.
+`S3` now has an active execution pack in every currently prioritized lane.
+
+The next missing work is no longer lane coverage. It is depth:
+
+- expanding evidence rows in the strongest packs
+- deciding whether to move into `S4`
+- or selecting one `S3` line for a deeper report-level build
 
 ## Recommended next order inside S3
 
@@ -80,6 +87,7 @@ The main missing layer now is a second intervention-comparison or scaling line i
 6. `S3-B-R2`
 7. `S3-E-R2`
 8. `S3-C-R2`
+9. `S3-D-R2`
 
 Reason:
 
@@ -91,6 +99,7 @@ Reason:
 - `S3-B-R2` makes the validation lane stricter by adding reliability and quality-control logic
 - `S3-E-R2` closes the loop by adding monitoring and revision after deployment
 - `S3-C-R2` makes the crop-response lane dynamic by adding recovery and recurrent-stress logic
+- `S3-D-R2` adds portfolio and scaling logic beyond single intervention comparison
 
 ## Active execution files
 
@@ -111,6 +120,11 @@ Current active `S3` execution layer:
 - `S3-D-R1_EVIDENCE_SCHEMA.csv`
 - `S3-D-R1_REPORT_SKELETON.md`
 - `S3-D-R1_PRELIMINARY_FINDINGS.md`
+- `S3-D-R2_RESEARCH_GUIDE.md`
+- `S3-D-R2_SOURCE_REGISTRY.md`
+- `S3-D-R2_EVIDENCE_SCHEMA.csv`
+- `S3-D-R2_REPORT_SKELETON.md`
+- `S3-D-R2_PRELIMINARY_FINDINGS.md`
 - `S3-C-R1_RESEARCH_GUIDE.md`
 - `S3-C-R1_SOURCE_REGISTRY.md`
 - `S3-C-R1_EVIDENCE_SCHEMA.csv`
