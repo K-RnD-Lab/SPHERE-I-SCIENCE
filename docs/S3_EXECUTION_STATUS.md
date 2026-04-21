@@ -19,7 +19,7 @@ It keeps `S3` readable as a staged build rather than a random set of ideas.
 
 ### `S3-B Biofertilizer Design & Validation`
 
-- `R1` guide: planned
+- `R1` guide: ready
 - `R2` guide: planned
 
 ### `S3-C Crop Stress & Yield Systems`
@@ -43,8 +43,14 @@ It keeps `S3` readable as a staged build rather than a random set of ideas.
 
 - a full lane map
 - one starter guide for the microbiome-first entry line
+- one active execution pack for biofertilizer efficacy and validation
 
-This means `S3` has a clear scientific start, but not yet a balanced execution layer across intervention, field logic, and deployment.
+This means `S3` now has:
+
+- a biological entry line through `S3-A`
+- a practical intervention-validation line through `S3-B-R1`
+
+But it still does not yet have a balanced execution layer across decision logic, crop-context interpretation, and deployment.
 
 ## Recommended next order inside S3
 
@@ -61,3 +67,13 @@ Reason:
 - `S3-C-R1` strengthens crop-context interpretation
 - `S3-E-R1` turns the science into usable field-facing form
 - `S3-A-R2` becomes stronger after the applied side is clearer
+
+## Active execution files
+
+Current active `S3` execution layer:
+
+- `S3-B-R1_RESEARCH_GUIDE.md`
+- `S3-B-R1_SOURCE_REGISTRY.md`
+- `S3-B-R1_EVIDENCE_SCHEMA.csv`
+- `S3-B-R1_REPORT_SKELETON.md`
+- `S3-B-R1_PRELIMINARY_FINDINGS.md`
