@@ -24,7 +24,7 @@ It keeps `S4` readable as a mechanism-first bridge rather than a chemistry catch
 
 ### `S4-C Enzyme, Target & Substrate Logic`
 
-- `R1` guide: planned
+- `R1` guide: ready
 - `R2` guide: planned
 
 ### `S4-D Cross-Domain Mechanism Models`
@@ -44,13 +44,15 @@ It keeps `S4` readable as a mechanism-first bridge rather than a chemistry catch
 - a full lane map
 - one starter guide for metabolite signature work
 - one active execution pack for pathway perturbation maps
+- one active execution pack for target and enzyme prioritization
 
 This means `S4` now has:
 
 - a metabolite-signature entry line through `S4-A`
 - a first mechanism-facing execution line through `S4-B-R1`
+- a target-facing execution line through `S4-C-R1`
 
-It still needs the target, translational, and cross-domain layers to become operational as a full sphere.
+It still needs the translational and cross-domain layers to become operational as a full sphere.
 
 ## Recommended next order inside S4
 
@@ -77,3 +79,8 @@ Current active `S4` execution layer:
 - `S4-B-R1_EVIDENCE_SCHEMA.csv`
 - `S4-B-R1_REPORT_SKELETON.md`
 - `S4-B-R1_PRELIMINARY_FINDINGS.md`
+- `S4-C-R1_RESEARCH_GUIDE.md`
+- `S4-C-R1_SOURCE_REGISTRY.md`
+- `S4-C-R1_EVIDENCE_SCHEMA.csv`
+- `S4-C-R1_REPORT_SKELETON.md`
+- `S4-C-R1_PRELIMINARY_FINDINGS.md`
