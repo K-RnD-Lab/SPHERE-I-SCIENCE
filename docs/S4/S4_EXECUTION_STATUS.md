@@ -29,7 +29,7 @@ It keeps `S4` readable as a mechanism-first bridge rather than a chemistry catch
 
 ### `S4-D Cross-Domain Mechanism Models`
 
-- `R1` guide: planned
+- `R1` guide: ready
 - `R2` guide: planned
 
 ### `S4-E Translational Chemical Inference`
@@ -54,8 +54,9 @@ This means `S4` now has:
 - a first mechanism-facing execution line through `S4-B-R1`
 - a target-facing execution line through `S4-C-R1`
 - a translational shortlist layer through `S4-E-R1`
+- a cross-domain motif-transfer layer through `S4-D-R1`
 
-It still needs the cross-domain layer to become operational as a full sphere.
+It now has an operational active layer across signature, pathway, target, translational, and cross-domain mechanism work.
 
 ## Recommended next order inside S4
 
@@ -97,3 +98,8 @@ Current active `S4` execution layer:
 - `S4-A-R2_EVIDENCE_SCHEMA.csv`
 - `S4-A-R2_REPORT_SKELETON.md`
 - `S4-A-R2_PRELIMINARY_FINDINGS.md`
+- `S4-D-R1_RESEARCH_GUIDE.md`
+- `S4-D-R1_SOURCE_REGISTRY.md`
+- `S4-D-R1_EVIDENCE_SCHEMA.csv`
+- `S4-D-R1_REPORT_SKELETON.md`
+- `S4-D-R1_PRELIMINARY_FINDINGS.md`
