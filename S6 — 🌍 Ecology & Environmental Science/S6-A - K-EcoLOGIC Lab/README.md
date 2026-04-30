@@ -315,7 +315,7 @@ Recommended project framing:
 - project title
   - `K-EcoLOGIC Lab: SortSmart Ukraine`
 - GitHub path
-  - `S6 — 🌍 Ecology & Environmental Science/S6-A - K-EcoLOGIC Lab`
+  - `S6 - Ecology & Environmental Science/S6-A - K-EcoLOGIC Lab`
 - live app
   - `https://k-ecologic-lab.streamlit.app/`
 

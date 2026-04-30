@@ -1,0 +1,5 @@
+record_id,region_or_scope,time_window,signal_type,metric,value,unit,source_dataset,processing_layer,coverage_note,confidence_level,notes
+S6A501,all_regions,current_snapshot,network_coverage,radiation_station_count,tbd,count,data.gov.ua radiation dataset,radiation_station_overview,coverage depends on station source metadata,medium,extract from current mart
+S6A502,all_regions,current_snapshot,indicator_context,indicator_count,tbd,count,data.gov.ua radiation dataset,radiation_indicators,indicator dictionary not live risk proof,medium,metadata signal
+S6A503,providers,current_snapshot,network_context,provider_count,tbd,count,radiation_locations,normalized_snapshot,provider fields may vary,medium,source diversity context
+S6A504,public_platform,current_snapshot,delivery,module_status,implemented,status,Streamlit app,public_interface,not emergency alert system,medium,live MVP module

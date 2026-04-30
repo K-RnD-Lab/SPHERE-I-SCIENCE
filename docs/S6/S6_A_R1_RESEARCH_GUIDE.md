@@ -3,116 +3,133 @@
 ## Research home
 
 - Sphere: `S6`
-- Lane: `S6-A Environmental Sentinel Systems`
-- Research line: `S6-A-R1 Urban Air, Exposure, and Environmental Risk Signals`
+- Lane: `S6-A K-EcoLOGIC Lab`
+- Research line: `S6-A-R1 SortSmart Ukraine`
 
-## Why this is a strong first `S6` study
+## Why this is the correct first S6 study
 
-`S6-A-R1` is a strong first `S6` study because it:
+`S6-A-R1` is already the flagship implemented module inside `K-EcoLOGIC Lab`.
 
-- is publicly legible
-- supports civic and scientific interpretation
-- can use open environmental data
-- fits the positioning of `K-EcoLOGIC Lab`
+It should stay focused on waste, sorting, recovery potential, and environmental decision support for Ukraine.
+
+This line is strong because it combines:
+
+- official public environmental datasets
+- data engineering and reproducible pipelines
+- regional comparison logic
+- modeled recovery and avoided-emissions assumptions
+- a public Streamlit interface
 
 ## Core question
 
-How can open environmental monitoring data be translated into an interpretable exposure and environmental risk signal for ordinary people and public-interest analysis?
+How much waste-management and sorting-readiness signal can be extracted from open Ukrainian environmental datasets, and where are the clearest gaps between waste generation, recovery, landfill disposal, and infrastructure?
 
 ## Practical substudies
 
-### `S6-A-R1a` Pollutant And Exposure Scoring Logic
+### `S6-A-R1a` Regional Sorting Readiness Logic
 
 Goal:
 
-- build a practical scoring layer for pollutant and exposure signals
+- compare Ukrainian regions by waste outcomes and infrastructure readiness
 
 Focus:
 
-- pollutant concentration
-- temporal dynamics
-- interpretable scoring
+- waste recovered
+- waste sent to landfill
+- incineration
+- facility-count signals
+- regional readiness ranking
 
-### `S6-A-R1b` Location-Based Risk Interpretation
+### `S6-A-R1b` Material Recovery And Avoided CO2e Assumptions
 
 Goal:
 
-- translate monitoring data into location-aware public interpretation
+- make transparent, reviewable assumptions for material recovery and avoided emissions
 
 Focus:
 
-- region comparison
-- time-based signal changes
-- public-facing risk context
+- material factors
+- recyclable share assumptions
+- avoided CO2e estimates
+- sensitivity notes
+- communication limits
 
-## Why this matters now
+## Useful local platform references
 
-Environmental monitoring and sentinel-style surveillance are increasingly being framed as public-health and public-interest infrastructure.
-
-Useful references:
-
-- human sentinel surveillance framework for environmental health: https://www.frontiersin.org/articles/10.3389/fpubh.2025.1641884/full
-- air monitoring priorities and data systems context: https://www.epa.gov/system/files/documents/2024-12/fy25-and-fy26-npm-guidance-monitoring-appendix-for-external-review-120324.pdf
-- Earth observation and human health exposure applications: https://www.sciencedirect.com/science/article/abs/pii/S235293852500254X
+- lab app root:
+  - `S6 — 🌍 Ecology & Environmental Science/S6-A - K-EcoLOGIC Lab/app.py`
+- flagship implementation module:
+  - `S6 — 🌍 Ecology & Environmental Science/S6-A - K-EcoLOGIC Lab/S6-A-R1 - SortSmart Ukraine/R1a-sortsmart-ukraine/`
+- lab-level README:
+  - `S6 — 🌍 Ecology & Environmental Science/S6-A - K-EcoLOGIC Lab/README.md`
+- project status:
+  - `S6 — 🌍 Ecology & Environmental Science/S6-A - K-EcoLOGIC Lab/PROJECT_STATUS.md`
 
 ## Data classes to collect
 
-For the first pass, prioritize:
+For the first research report, prioritize:
 
-- air quality measurements
-- pollutant concentration records
-- weather context
-- time and location metadata
-- optional population or health context for interpretation
+- region
+- year
+- recovered waste
+- landfill-disposed waste
+- incinerated waste
+- facility counts
+- material factor assumptions
+- sorting-readiness score
+- avoided-emissions estimate
+- source file and dataset id
 
 ## Required outputs
 
-The first useful output should include:
-
-- cleaned exposure table
-- scoring logic
-- region or time comparison figures
-- short report
-- public-facing interpretation notes
+- regional sorting-readiness evidence table
+- source registry
+- report skeleton
+- preliminary findings note
+- later: one figure pack from existing marts
 
 ## GitHub role
 
 GitHub should hold:
 
-- exposure schema
-- scoring logic
-- figures
-- report
-- methods note
+- source registry
+- evidence schema
+- report and methods notes
+- assumptions table
+- reproducibility notes
 
-## Hugging Face role
+## Hugging Face or Streamlit role
 
-Hugging Face should hold:
+The public app should hold:
 
-- exposure explorer
-- location-based lookup
-- simple risk explanation interface
+- regional dashboard
+- material guidance
+- public-facing summaries
+- sorting assistant
+- activist/request framing
 
 ## Suggested first workflow
 
-1. choose one region or city framing
-2. collect one open air-quality dataset
-3. clean and normalize the measurements
-4. define the first scoring logic
-5. write the first public-science report
+1. preserve the existing app as the public platform
+2. extract a research-grade evidence table from current marts
+3. write the first SortSmart research note
+4. add one figure pack later
+5. only then mirror stable outputs into deeper S6 folders if needed
 
 ## Evidence fields to standardize
 
 At minimum, track:
 
-- `location_id`
-- `date`
-- `pollutant`
-- `concentration`
-- `weather_context`
-- `exposure_score`
-- `risk_flag`
-- `evidence_source`
+- `record_id`
+- `region`
+- `year`
+- `signal_type`
+- `metric`
+- `value`
+- `unit`
+- `source_dataset`
+- `processing_layer`
+- `assumption_note`
 - `confidence_level`
 - `notes`
 
@@ -120,14 +137,15 @@ At minimum, track:
 
 Do not:
 
-- pretend this is a medical diagnosis layer
-- turn the study into a generic dashboard with no scientific method note
-- merge regulatory oversight and exposure scoring too early
+- rename `S6-A-R1` away from `SortSmart Ukraine`
+- treat modeled avoided CO2e as directly measured emissions
+- hide assumptions behind a dashboard-only interface
+- move lab-level architecture back into module-level READMEs
 
 ## Immediate next move
 
-If we continue from here, the cleanest next step is:
+The cleanest next step is:
 
-1. choose the first city or region
-2. define the starter exposure schema
-3. draft the first report skeleton
+1. keep the current app structure stable
+2. create `S6-A-R1` source registry and evidence schema
+3. build the first report skeleton from the existing platform outputs

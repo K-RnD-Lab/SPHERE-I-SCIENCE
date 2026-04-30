@@ -1,0 +1,5 @@
+record_id,basin_or_scope,time_window,signal_type,metric,value,unit,source_dataset,processing_layer,coverage_note,confidence_level,notes
+S6A301,river_basins,current_snapshot,coverage,monitoring_post_count,tbd,count,surface-water-monitoring,water_basin_overview,coverage varies by basin,medium,extract from current mart
+S6A302,river_basins,current_snapshot,coverage,observation_count,tbd,count,surface-water-monitoring,water_basin_overview,observation density varies,medium,core basin signal
+S6A303,monitoring_posts,current_snapshot,indicator_availability,parameter_presence,tbd,mixed,water_monitoring_observations,normalized_snapshot,indicator coverage uneven,medium,do not infer missing risk
+S6A304,public_platform,current_snapshot,delivery,module_status,implemented,status,Streamlit app,public_interface,site visibility not official validation,medium,live MVP module

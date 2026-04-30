@@ -20,33 +20,79 @@ Use:
 - `R1`, `R2` as the two main directions inside each lane
 - `R1a`, `R1b`, `R2a`, `R2b` as substudies when needed
 
-## S6-A Environmental Sentinel Systems
+## S6-A K-EcoLOGIC Lab
 
 ### Role
 
-Monitoring, environmental interpretation, exposure signals, and public-interest environmental intelligence.
+Environmental intelligence platform for waste, sorting, exposure context, water, permits, radiation, and public-interest environmental decision support.
 
-### `S6-A-R1` Urban Air, Exposure, and Environmental Risk Signals
+Unlike the other S6 lanes, `S6-A` already exists as an implemented platform. Its numbering should follow the actual K-EcoLOGIC Lab modules.
+
+### `S6-A-R1` SortSmart Ukraine
 
 #### Substudies
 
-- `S6-A-R1a` pollutant and exposure scoring logic
-- `S6-A-R1b` temporal and location-based risk interpretation
+- `S6-A-R1a` regional sorting-readiness logic
+- `S6-A-R1b` material recovery and avoided CO2e assumptions
 
 #### Why this stays central
 
-This is the clearest public-facing scientific identity for `K-EcoLOGIC Lab`.
+This is the flagship implemented data-engineering and environmental-intelligence module.
 
-### `S6-A-R2` Polluters, Permits, and Oversight Signals
+### `S6-A-R2` Air & Exposure Intelligence
 
 #### Substudies
 
-- `S6-A-R2a` entity-level oversight and permit tracking
-- `S6-A-R2b` alert and flagging logic for public accountability
+- `S6-A-R2a` air quality context signals
+- `S6-A-R2b` air and permit crosswalk logic
 
 #### Why this matters
 
-This gives `S6-A` a durable civic and scientific use case.
+This adds an environmental exposure-context layer without turning the platform into a medical or emergency-warning system.
+
+### `S6-A-R3` Water Watch Ukraine
+
+#### Substudies
+
+- `S6-A-R3a` basin-level monitoring summaries
+- `S6-A-R3b` water-quality observation coverage and gaps
+
+#### Why this matters
+
+This gives the lab a water-monitoring layer that complements waste and air signals.
+
+### `S6-A-R4` Polluters, Permits, and Environmental Oversight
+
+#### Substudies
+
+- `S6-A-R4a` entity-level oversight and permit tracking
+- `S6-A-R4b` alert and flagging logic for public accountability
+
+#### Why this matters
+
+This gives `S6-A` a durable civic and public-interest use case.
+
+### `S6-A-R5` Radiation and Environmental Risk
+
+#### Substudies
+
+- `S6-A-R5a` radiation-monitoring station coverage
+- `S6-A-R5b` environmental-risk source and indicator context
+
+#### Why this matters
+
+This keeps radiation risk visible as monitoring-network context, not as an unvalidated emergency feed.
+
+### `S6-A-R6` Land, Soil, and Environmental Damage Signals
+
+#### Substudies
+
+- `S6-A-R6a` land and soil damage signal collection
+- `S6-A-R6b` environmental damage severity and recovery context
+
+#### Why this matters
+
+This is the clean planned expansion after the current platform modules stabilize.
 
 ## S6-B Environmental Microbiomes
 
@@ -196,3 +242,20 @@ Reason:
 - `S6-C` strengthens ecological status interpretation
 - `S6-B` adds microbiome depth without redefining the sphere
 - `S6-E` becomes stronger once the rest of the monitoring logic is already stable
+
+## Recommended order inside S6-A
+
+1. `S6-A-R1` SortSmart Ukraine
+2. `S6-A-R2` Air & Exposure Intelligence
+3. `S6-A-R3` Water Watch Ukraine
+4. `S6-A-R4` Polluters, Permits, and Environmental Oversight
+5. `S6-A-R5` Radiation and Environmental Risk
+6. `S6-A-R6` Land, Soil, and Environmental Damage Signals
+
+Reason:
+
+- `S6-A-R1` is the implemented flagship and should stay first
+- `S6-A-R2` is the closest exposure-context extension
+- `S6-A-R3` and `S6-A-R4` add water and oversight depth
+- `S6-A-R5` remains a monitoring-network layer with strong caveats
+- `S6-A-R6` should be planned after the current platform is stable

@@ -1,0 +1,6 @@
+record_id,location_or_scope,time_window,signal_type,metric,value,unit,source_dataset,processing_layer,coverage_note,confidence_level,notes
+S6A201,cities_or_populated_places,monthly,air_context,observation_count,tbd,count,data.gov.ua air package,air_monthly_trends,coverage depends on source package,medium,extract from current mart
+S6A202,cities_or_populated_places,latest_snapshot,air_context,latest_pollutant_summary,tbd,mixed,data.gov.ua air package,air_city_snapshot,indicator availability varies,medium,city context layer
+S6A203,permit_locations,current_snapshot,permit_context,permit_record_count,tbd,count,data.gov.ua permits dataset,permits_city_overview,regional pilot coverage,medium,not nationwide complete
+S6A204,air_and_permits,current_snapshot,crosswalk,air_permit_overlap,tbd,flag,derived crosswalk,air_permit_crosswalk,overlap is contextual not causal,low_to_medium,public-interest signal
+S6A205,public_platform,current_snapshot,delivery,module_status,implemented,status,Streamlit app,public_interface,site visibility not official validation,medium,module is live MVP

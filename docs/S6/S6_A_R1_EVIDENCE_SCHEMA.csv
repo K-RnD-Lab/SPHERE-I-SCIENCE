@@ -1,0 +1,7 @@
+record_id,region,year,signal_type,metric,value,unit,source_dataset,processing_layer,assumption_note,confidence_level,notes
+S6A101,all_regions,multi_year,waste_outcome,recovered_waste,tbd,tonnes,data.gov.ua waste metrics,normalized_and_mart,official metric after normalization,medium,extract from current marts
+S6A102,all_regions,multi_year,waste_outcome,landfill_disposal,tbd,tonnes,data.gov.ua waste metrics,normalized_and_mart,official metric after normalization,medium,core disposal signal
+S6A103,all_regions,current_snapshot,infrastructure,waste_facility_count,tbd,count,data.gov.ua facility registry,normalized_and_mart,registry coverage may be uneven,medium,facility signal not direct capacity
+S6A104,all_regions,current_snapshot,readiness,sorting_readiness_score,tbd,index,derived mart,mart_oblast_sorting_readiness,composite score based on transparent assumptions,medium,needs method note
+S6A105,all_regions,current_snapshot,climate_model,avoided_co2e_potential,tbd,tCO2e,material_factors seed,dbt_and_mart,modeled not directly measured,low_to_medium,use as scenario estimate
+S6A106,all_regions,current_snapshot,public_delivery,platform_module,implemented,status,Streamlit app,public_interface,site visibility not same as official validation,medium,public-facing research interface

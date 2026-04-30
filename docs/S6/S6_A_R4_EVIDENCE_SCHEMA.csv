@@ -1,0 +1,5 @@
+record_id,location_or_scope,time_window,signal_type,metric,value,unit,source_dataset,processing_layer,coverage_note,confidence_level,notes
+S6A401,permit_scope,current_snapshot,permit_context,permit_record_count,tbd,count,data.gov.ua permits dataset,permits_city_overview,regional pilot coverage,medium,extract from current mart
+S6A402,cities,current_snapshot,permit_context,city_permit_count,tbd,count,data.gov.ua permits dataset,permits_city_overview,city grouping depends on source fields,medium,city summary signal
+S6A403,air_and_permits,current_snapshot,crosswalk,air_permit_overlap,tbd,flag,derived crosswalk,air_permit_crosswalk,overlap is not causation,low_to_medium,follow-up lead only
+S6A404,public_platform,current_snapshot,delivery,module_status,implemented,status,Streamlit app,public_interface,not official enforcement,medium,live MVP module
