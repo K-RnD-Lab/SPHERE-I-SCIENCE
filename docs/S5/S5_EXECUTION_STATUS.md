@@ -20,22 +20,22 @@ It keeps `S5` readable as a staged neuroscience-and-aging program rather than a 
 ### `S5-B Cognitive Aging & Vulnerability`
 
 - `R1` guide: ready
-- `R2` guide: planned
+- `R2` guide: ready
 
 ### `S5-C Neurodegeneration Models`
 
 - `R1` guide: ready
-- `R2` guide: planned
+- `R2` guide: ready
 
 ### `S5-D Brain Resilience & Recovery`
 
 - `R1` guide: ready
-- `R2` guide: planned
+- `R2` guide: ready
 
 ### `S5-E Longitudinal Brain Risk Systems`
 
 - `R1` guide: ready
-- `R2` guide: planned
+- `R2` guide: ready
 
 ## Current interpretation
 
@@ -48,8 +48,12 @@ It keeps `S5` readable as a staged neuroscience-and-aging program rather than a 
 - one active execution pack for neurodegeneration state models
 - one active execution pack for resilience marker profiles
 - one active execution pack for neuroinflammatory biomarker specificity
+- one active execution pack for contextual vulnerability interpretation
+- one active execution pack for predictive risk and progression signals
+- one active execution pack for neurodegeneration progression and pattern distinction
+- one active execution pack for recovery pattern interpretation
 
-This means `S5` now has a strong translational scientific entry point, a human-facing vulnerability layer, a time-aware risk layer, a disease-state model layer, a resilience layer, and a biomarker-specificity layer.
+This means `S5` now has a strong translational scientific entry point, a human-facing vulnerability layer, a time-aware risk layer, a disease-state model layer, a resilience layer, a recovery layer, and a biomarker-specificity layer.
 
 ## Recommended next order inside S5
 
@@ -96,3 +100,23 @@ Current active `S5` execution layer:
 - `S5-A-R2_EVIDENCE_SCHEMA.csv`
 - `S5-A-R2_REPORT_SKELETON.md`
 - `S5-A-R2_PRELIMINARY_FINDINGS.md`
+- `S5-B-R2_RESEARCH_GUIDE.md`
+- `S5-B-R2_SOURCE_REGISTRY.md`
+- `S5-B-R2_EVIDENCE_SCHEMA.csv`
+- `S5-B-R2_REPORT_SKELETON.md`
+- `S5-B-R2_PRELIMINARY_FINDINGS.md`
+- `S5-E-R2_RESEARCH_GUIDE.md`
+- `S5-E-R2_SOURCE_REGISTRY.md`
+- `S5-E-R2_EVIDENCE_SCHEMA.csv`
+- `S5-E-R2_REPORT_SKELETON.md`
+- `S5-E-R2_PRELIMINARY_FINDINGS.md`
+- `S5-C-R2_RESEARCH_GUIDE.md`
+- `S5-C-R2_SOURCE_REGISTRY.md`
+- `S5-C-R2_EVIDENCE_SCHEMA.csv`
+- `S5-C-R2_REPORT_SKELETON.md`
+- `S5-C-R2_PRELIMINARY_FINDINGS.md`
+- `S5-D-R2_RESEARCH_GUIDE.md`
+- `S5-D-R2_SOURCE_REGISTRY.md`
+- `S5-D-R2_EVIDENCE_SCHEMA.csv`
+- `S5-D-R2_REPORT_SKELETON.md`
+- `S5-D-R2_PRELIMINARY_FINDINGS.md`
