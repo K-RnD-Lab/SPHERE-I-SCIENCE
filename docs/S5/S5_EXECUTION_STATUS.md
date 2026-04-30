@@ -15,7 +15,7 @@ It keeps `S5` readable as a staged neuroscience-and-aging program rather than a 
 ### `S5-A Neuroinflammation & Biomarkers`
 
 - `R1` guide: ready
-- `R2` guide: planned
+- `R2` guide: ready
 
 ### `S5-B Cognitive Aging & Vulnerability`
 
@@ -29,7 +29,7 @@ It keeps `S5` readable as a staged neuroscience-and-aging program rather than a 
 
 ### `S5-D Brain Resilience & Recovery`
 
-- `R1` guide: planned
+- `R1` guide: ready
 - `R2` guide: planned
 
 ### `S5-E Longitudinal Brain Risk Systems`
@@ -46,8 +46,10 @@ It keeps `S5` readable as a staged neuroscience-and-aging program rather than a 
 - one active execution pack for cognitive aging vulnerability profiles
 - one active execution pack for longitudinal brain-risk panels
 - one active execution pack for neurodegeneration state models
+- one active execution pack for resilience marker profiles
+- one active execution pack for neuroinflammatory biomarker specificity
 
-This means `S5` now has a strong translational scientific entry point, a human-facing vulnerability layer, a time-aware risk layer, and a disease-state model layer. It still needs the recovery and resilience layer to avoid becoming decline-only.
+This means `S5` now has a strong translational scientific entry point, a human-facing vulnerability layer, a time-aware risk layer, a disease-state model layer, a resilience layer, and a biomarker-specificity layer.
 
 ## Recommended next order inside S5
 
@@ -84,3 +86,13 @@ Current active `S5` execution layer:
 - `S5-C-R1_EVIDENCE_SCHEMA.csv`
 - `S5-C-R1_REPORT_SKELETON.md`
 - `S5-C-R1_PRELIMINARY_FINDINGS.md`
+- `S5-D-R1_RESEARCH_GUIDE.md`
+- `S5-D-R1_SOURCE_REGISTRY.md`
+- `S5-D-R1_EVIDENCE_SCHEMA.csv`
+- `S5-D-R1_REPORT_SKELETON.md`
+- `S5-D-R1_PRELIMINARY_FINDINGS.md`
+- `S5-A-R2_RESEARCH_GUIDE.md`
+- `S5-A-R2_SOURCE_REGISTRY.md`
+- `S5-A-R2_EVIDENCE_SCHEMA.csv`
+- `S5-A-R2_REPORT_SKELETON.md`
+- `S5-A-R2_PRELIMINARY_FINDINGS.md`
