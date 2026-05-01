@@ -28,6 +28,7 @@ Historical or superseded material should move to:
   - active sync or transition files
   - the structure approval gate before real research execution
   - GPT-assisted research workflow rules
+  - the S1-S6 research execution index
 - `docs/S1/`
   - active biomedical and oncology research staging
 - `docs/S2/`
@@ -57,6 +58,8 @@ If a file is still being used to define, stage, validate, or execute a current s
 Use `docs/core/STRUCTURE_APPROVAL_GATE.md` as the checkpoint before turning starter packs into full studies.
 
 Use `docs/core/GPT_ASSISTED_RESEARCH_WORKFLOW.md` when a research pack is being sent into GPT and returned as repo-ready `.md` output.
+
+Use `docs/core/S1_S6_RESEARCH_EXECUTION_INDEX.md` as the cross-sphere index for deciding which research route to execute next.
 
 The practical rule is:
 
