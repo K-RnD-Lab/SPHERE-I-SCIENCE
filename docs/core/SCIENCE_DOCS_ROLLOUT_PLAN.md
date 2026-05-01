@@ -8,8 +8,8 @@ Do not move into the top-level `S1...S6` directories until the structural layer 
 
 This is especially important because:
 
-- `S6` should remain untouched for a few days
 - the repo still needs a stable documentation-first operating layer
+- top-level science folders should receive only stable outputs, not every draft
 
 ## Current phase
 
@@ -27,9 +27,9 @@ Status:
 - `S1`: ready
 - `S2`: active and partially filled
 - `S3`: status layer ready
-- `S4`: status layer ready
-- `S5`: status layer ready
-- `S6`: frozen for now
+- `S4`: active R1/R2 execution layer ready
+- `S5`: active R1/R2 execution layer ready
+- `S6`: active K-EcoLOGIC execution layer ready for S6-A
 
 ### Phase 3: actual research execution
 
@@ -44,7 +44,7 @@ Execution will mean:
 
 ## Current priority order
 
-1. finish structural `docs/` for `S2-S5`
+1. finish structural `docs/` for `S2-S6`
 2. stop expanding structure when each sphere has a usable execution layer
 3. then move one by one into real research
 
@@ -54,17 +54,20 @@ Execution will mean:
 2. `S3`
 3. `S5`
 4. `S4`
-5. `S6` later
+5. `S6-A`
+6. `S6-D`
+7. `S6-C`
 
 ## Practical rule
 
 When a sphere is structurally ready, the next move is:
 
-1. source registry
-2. evidence schema
-3. report skeleton
-4. actual notes, figures, and outputs
-5. only then mirror into the real `S` section
+1. pass the structure approval gate
+2. source registry
+3. evidence schema
+4. report skeleton
+5. actual notes, figures, and outputs
+6. only then mirror into the real `S` section
 
 ## Why this is the right sequence
 

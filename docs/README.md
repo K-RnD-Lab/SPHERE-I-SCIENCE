@@ -26,6 +26,7 @@ Historical or superseded material should move to:
   - cross-sphere active execution notes
   - rollout notes
   - active sync or transition files
+  - the structure approval gate before real research execution
 - `docs/S1/`
   - active biomedical and oncology research staging
 - `docs/S2/`
@@ -49,3 +50,13 @@ Right now, `docs/` should contain the files that still directly support:
 - actual starter packs for upcoming studies
 
 If a file is still being used to define, stage, validate, or execute a current study, it belongs here.
+
+## Before real research execution
+
+Use `docs/core/STRUCTURE_APPROVAL_GATE.md` as the checkpoint before turning starter packs into full studies.
+
+The practical rule is:
+
+- `docs/` holds active structure and research staging
+- top-level `S` folders receive stable outputs
+- `archived_docs/` receives superseded planning layers
