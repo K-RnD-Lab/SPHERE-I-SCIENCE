@@ -12,6 +12,65 @@ class BaselineAssumptions:
 
 BASELINE = BaselineAssumptions()
 
+BASELINE_REFERENCE_OPTIONS = {
+    "demo_reference_pool": {
+        "label": "Demo working pool",
+        "value": 10_000_000,
+        "note": "Synthetic starting universe for scenario testing; not the full Ukraine population.",
+    },
+    "sssu_jan_2022_total": {
+        "label": "SSSU Jan 2022 total population",
+        "value": 41_167_335,
+        "note": "Official pre-full-scale-invasion total population estimate cited by ACAPS.",
+    },
+    "custom": {
+        "label": "Custom baseline",
+        "value": 10_000_000,
+        "note": "Use when modeling a narrower adult, regional, platform, or pre-filtered pool.",
+    },
+}
+
+SALARY_ANCHORS_UAH = {
+    "official_pfu_2025_average": 20_654,
+    "kse_workua_jan_2026_median": 27_500,
+    "workua_current_average": 28_600,
+}
+
+INCOME_THRESHOLD_LABELS = {
+    "any": "Any income",
+    "above_median": "Above median (about 28,600 UAH/month)",
+    "top_25": "Top 25 scenario (about 45,000 UAH/month)",
+    "top_10": "Top 10 scenario (about 70,000 UAH/month)",
+}
+
+SOURCE_LINKS = [
+    {
+        "label": "Work.ua salary statistics",
+        "url": "https://www.work.ua/en/salary-all/",
+        "note": "Current salary benchmark from job postings; Work.ua states that the median is calculated from recent vacancies.",
+    },
+    {
+        "label": "KSE Ukraine Monthly Economic Update, February 2026",
+        "url": "https://institute.kse.ua/wp-content/uploads/2026/02/ukraine_monthly_economic_update_eng_february_2026.pdf",
+        "note": "Cites Work.ua January 2026 offered median salary of UAH 27,500.",
+    },
+    {
+        "label": "Pension Fund of Ukraine average wage indicator, 2025",
+        "url": "https://www.pfu.gov.ua/2170600-pokaznyk-serednoyi-zarobitnoyi-platy-za-2025-rik/",
+        "note": "Official average wage indicator used for pension calculations; annual 2025 value is UAH 20,653.55.",
+    },
+    {
+        "label": "ACAPS Ukraine population data sources report",
+        "url": "https://www.acaps.org/fileadmin/Data_Product/Main_media/20230818_ACAPS_Thematic_report_Ukraine_estimates_and_sources_of_population_data.pdf",
+        "note": "Explains baseline population datasets and cites SSSU January 2022 total population estimate.",
+    },
+    {
+        "label": "State Statistics Service of Ukraine 2022 overview",
+        "url": "https://www.ukrstat.gov.ua/operativ/infografika/2022/o_soc_ek_Ukr/01_2022_e.pdf",
+        "note": "Official population-statistics context and methodology notes.",
+    },
+]
+
 AGE_BAND_FACTORS = {
     "18-24": 0.12,
     "25-34": 0.22,

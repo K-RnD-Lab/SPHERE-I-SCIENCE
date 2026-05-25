@@ -127,7 +127,12 @@ def estimate_pool(criteria: Criteria) -> PoolEstimate:
 def sensitivity_table(criteria: Criteria) -> list[dict[str, float | str]]:
     remaining = float(criteria.base_population)
     rows: list[dict[str, float | str]] = [
-        {"factor": "Baseline", "coefficient": 1.0, "remaining": remaining}
+        {
+            "factor": "Baseline",
+            "coefficient": 1.0,
+            "remaining": remaining,
+            "percent_of_baseline": 100.0,
+        }
     ]
     for label, coefficient in model_factors(criteria):
         remaining *= coefficient
@@ -136,6 +141,7 @@ def sensitivity_table(criteria: Criteria) -> list[dict[str, float | str]]:
                 "factor": label,
                 "coefficient": round(coefficient, 4),
                 "remaining": round(remaining, 2),
+                "percent_of_baseline": round((remaining / criteria.base_population) * 100, 6),
             }
         )
     return rows

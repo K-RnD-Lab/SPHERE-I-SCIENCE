@@ -4,7 +4,14 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
-from src.assumptions import BASELINE, DATA_QUALITY_NOTES
+from src.assumptions import (
+    BASELINE,
+    BASELINE_REFERENCE_OPTIONS,
+    DATA_QUALITY_NOTES,
+    INCOME_THRESHOLD_LABELS,
+    SALARY_ANCHORS_UAH,
+    SOURCE_LINKS,
+)
 from src.model_pool import Criteria, estimate_pool, sensitivity_table
 
 
@@ -21,6 +28,22 @@ def parse_count(value: str, fallback: int) -> int:
 
 def title_label(value: str) -> str:
     return value.replace("_", " ").title()
+
+
+def income_label(value: str) -> str:
+    return INCOME_THRESHOLD_LABELS[value]
+
+
+def format_percent(value: int | float) -> str:
+    if value == 0:
+        return "0%"
+    if value < 0.001:
+        return "<0.001%"
+    if value < 0.01:
+        return f"{value:.4f}%"
+    if value < 1:
+        return f"{value:.3f}%"
+    return f"{value:.2f}%"
 
 
 st.set_page_config(
@@ -40,10 +63,23 @@ st.info(
 with st.sidebar:
     st.header("Scenario")
     with st.expander("Core demographics", expanded=True):
+        baseline_preset = st.selectbox(
+            "Baseline preset",
+            list(BASELINE_REFERENCE_OPTIONS),
+            format_func=lambda value: BASELINE_REFERENCE_OPTIONS[value]["label"],
+            help=(
+                "Baseline is the starting universe before filters. It is not automatically the whole country; "
+                "choose a national reference or a narrower custom pool depending on the scenario."
+            ),
+        )
+        preset = BASELINE_REFERENCE_OPTIONS[baseline_preset]
         base_population_text = st.text_input(
             "Baseline population",
-            value=format_count(BASELINE.total_reference_population),
-            help=f"Reference population before filters, formatted with commas. Demo default: {format_count(BASELINE.total_reference_population)}.",
+            value=format_count(preset["value"]),
+            help=(
+                f"{preset['note']} Formatted with commas. "
+                "Example: 10,000,000 means a synthetic reference pool, not Ukraine's total population."
+            ),
         )
         try:
             base_population = parse_count(base_population_text, BASELINE.total_reference_population)
@@ -89,8 +125,13 @@ with st.sidebar:
         income_level = st.selectbox(
             "Income threshold",
             ["any", "above_median", "top_25", "top_10"],
-            format_func=title_label,
-            help="Applies an estimated income threshold coefficient.",
+            format_func=income_label,
+            help=(
+                "Salary anchors: Work.ua current benchmark is about "
+                f"{format_count(SALARY_ANCHORS_UAH['workua_current_average'])} UAH/month; "
+                f"KSE cites Work.ua January 2026 median at {format_count(SALARY_ANCHORS_UAH['kse_workua_jan_2026_median'])} UAH/month. "
+                "Top 25 and Top 10 are scenario thresholds, not official percentiles."
+            ),
         )
         education_level = st.selectbox(
             "Education filter",
@@ -182,35 +223,54 @@ criteria = Criteria(
 
 estimate = estimate_pool(criteria)
 steps = sensitivity_table(criteria)
+central_percent = (estimate.central / criteria.base_population) * 100
 
-col_a, col_b, col_c = st.columns(3)
+col_a, col_b, col_c, col_d = st.columns(4)
 col_a.metric("Conservative estimate", format_count(estimate.conservative))
 col_b.metric("Central estimate", format_count(estimate.central))
 col_c.metric("Optimistic estimate", format_count(estimate.optimistic))
+col_d.metric("Central share", format_percent(central_percent))
 
 st.subheader("What narrows the pool")
 step_df = pd.DataFrame(steps)
 display_df = step_df.assign(
     coefficient=step_df["coefficient"].map("{:.4f}".format),
     remaining=step_df["remaining"].map(format_count),
+    percent_of_baseline=step_df["percent_of_baseline"].map(format_percent),
 )
 fig = px.bar(
     step_df,
     x="factor",
     y="remaining",
     text="remaining",
-    custom_data=["coefficient"],
+    custom_data=["coefficient", "percent_of_baseline"],
     title="Remaining estimated pool after each criterion",
 )
 fig.update_traces(texttemplate="%{text:,.0f}", textposition="outside")
 fig.update_traces(
-    hovertemplate="<b>%{x}</b><br>Remaining: %{y:,.0f}<br>Coefficient: %{customdata[0]:.4f}<extra></extra>"
+    hovertemplate=(
+        "<b>%{x}</b><br>"
+        "Remaining: %{y:,.0f}<br>"
+        "Share of baseline: %{customdata[1]:.4f}%<br>"
+        "Coefficient: %{customdata[0]:.4f}<extra></extra>"
+    )
 )
 fig.update_layout(yaxis_title="Estimated remaining pool", xaxis_title="")
 st.plotly_chart(fig, use_container_width=True)
 
 st.subheader("Scenario details")
 st.dataframe(display_df, use_container_width=True, hide_index=True)
+
+st.subheader("Baseline and salary anchors")
+st.write(
+    "Baseline population is the starting reference pool before filters. The default 10,000,000 is a demo working pool, "
+    "not the population of Ukraine. For a national pre-invasion reference, use the SSSU January 2022 option "
+    f"({format_count(BASELINE_REFERENCE_OPTIONS['sssu_jan_2022_total']['value'])})."
+)
+st.write(
+    f"`Above median` currently means roughly {format_count(SALARY_ANCHORS_UAH['workua_current_average'])} UAH/month "
+    "as a public job-market benchmark. Higher salary bands are scenario cutoffs until a validated percentile source is added."
+)
 
 st.subheader("Data quality notes")
 for note in DATA_QUALITY_NOTES:
@@ -222,3 +282,7 @@ st.write(
     "A stricter filter can make a pool smaller, but it does not define a person's real-life chances. "
     "War, children, housing, and lifestyle filters are sensitive context variables; treat them as transparent assumptions."
 )
+
+st.subheader("Sources")
+for source in SOURCE_LINKS:
+    st.markdown(f"- [{source['label']}]({source['url']}) — {source['note']}")
