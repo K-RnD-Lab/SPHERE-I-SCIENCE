@@ -140,6 +140,7 @@ RELATIONSHIP_STATUS_FACTORS = {
 }
 
 HEIGHT_FACTORS = {
+    150: 1.0,
     160: 0.92,
     165: 0.82,
     170: 0.67,

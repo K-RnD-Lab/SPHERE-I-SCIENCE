@@ -102,8 +102,8 @@ with st.sidebar:
             "Age range",
             18,
             70,
-            (28, 42),
-            help="Narrows the pool by the selected age-band overlap.",
+            (18, 70),
+            help="Narrows the pool by the selected age-band overlap. The full 18-70 range is treated as no age filter.",
         )
         region_scope = st.selectbox(
             "Region scope",
@@ -121,13 +121,13 @@ with st.sidebar:
             "Minimum height, cm",
             150,
             205,
-            175,
-            help="Interpolates a demo height-distribution coefficient.",
+            150,
+            help="Interpolates a demo height-distribution coefficient. 150 cm is treated as no height filter.",
         )
         income_min_uah = st.select_slider(
             "Minimum monthly income, UAH",
             options=INCOME_THRESHOLD_OPTIONS_UAH,
-            value=30_000,
+            value=0,
             format_func=income_threshold_label,
             help=(
                 "Scenario salary threshold. 0 means no income filter. Salary anchors: Work.ua current benchmark is about "
@@ -237,6 +237,11 @@ col_a.metric("Conservative estimate", format_count(estimate.conservative))
 col_b.metric("Central estimate", format_count(estimate.central))
 col_c.metric("Optimistic estimate", format_count(estimate.optimistic))
 col_d.metric("Central share", format_percent(central_percent))
+
+if central_percent == 100:
+    st.caption("Neutral defaults are active: the central estimate equals 100% of the selected baseline.")
+else:
+    st.caption("Central share is the central estimate divided by the selected baseline after all active filters.")
 
 st.subheader("What narrows the pool")
 step_df = pd.DataFrame(steps)
