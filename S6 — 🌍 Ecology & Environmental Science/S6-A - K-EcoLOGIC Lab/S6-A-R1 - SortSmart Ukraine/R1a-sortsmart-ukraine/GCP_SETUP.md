@@ -181,7 +181,7 @@ The warehouse setup for this project loads the following relations into the `sor
   - views: `stg_waste_metrics`, `stg_waste_facility_counts`
   - mart: `mart_oblast_sorting_readiness`
 
-## Minimal Values To Send Back To Codex
+## Minimal Values To Send Back To The Project Maintainer
 
 After setup, send:
 
