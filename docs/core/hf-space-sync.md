@@ -9,9 +9,17 @@ This repo keeps research structure and reports in GitHub, while interactive runt
 
 ## Current mapping
 
+- `K-RnD-Lab/README` -> `spaces/hf-readme`
+- `K-RnD-Lab/SPHERE-FRONTIER` -> `spaces/sphere-frontier`
 - `K-RnD-Lab/Learning-Playground_03-2026` -> `spaces/learning-playground`
 - `K-RnD-Lab/Cancer-Research-Suite_03-2026` -> `spaces/cancer-research-suite`
 - `K-RnD-Lab/PHYLO-03_2026-01_A1-brca2-mirna` -> `spaces/phylo-brca2-mirna`
+- `K-RnD-Lab/bioscore` -> `spaces/bioscore`
+- `K-RnD-Lab/set-method` -> `spaces/set-method`
+- `K-RnD-Lab/studyreg` -> `spaces/studyreg`
+- `K-RnD-Lab/Partner-Pool-Simulator_05-2026` -> `spaces/partner-pool-simulator`
+
+Historical note: `K-RnD-Lab/Study-Registry_04-2026` is not available on the Hub anymore. The active registry Space is `K-RnD-Lab/studyreg`.
 
 ## Sync command
 

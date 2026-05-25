@@ -5,8 +5,10 @@
 **Science sphere entry point for K-RnD Lab**
 
 [![GitHub](https://img.shields.io/badge/GitHub-K--RnD--Lab%2FSPHERE--I--SCIENCE-black)](https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE)
+[![HF Frontier](https://img.shields.io/badge/HF-SPHERE_FRONTIER-green)](https://huggingface.co/spaces/K-RnD-Lab/SPHERE-FRONTIER)
 [![HF Learning Playground](https://img.shields.io/badge/HF-Learning_Playground-yellow)](https://huggingface.co/spaces/K-RnD-Lab/Learning-Playground_03-2026)
 [![HF Cancer Research Suite](https://img.shields.io/badge/HF-Cancer_Research_Suite-blue)](https://huggingface.co/spaces/K-RnD-Lab/Cancer-Research-Suite_03-2026)
+[![HF Study Registry](https://img.shields.io/badge/HF-studyreg-green)](https://huggingface.co/spaces/K-RnD-Lab/studyreg)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 *Computational approaches to biology, medicine, plant science, ecology, chemistry, cognition, and longitudinal life-pattern research*
@@ -135,7 +137,7 @@ Hugging Face is treated as an interactive delivery layer for demos and interface
 The first shared registry scaffold across `SCIENCE`, `ENTREPRENEURSHIP`, and `TECHNOLOGY` lives in `SPHERE-III`:
 
 - [Study Registry Dashboard Template](https://github.com/K-RnD-Lab/SPHERE-III-TECHNOLOGY/tree/main/T3%20-%20Dashboards%2C%20Interfaces%20%26%20Open%20Infrastructure/T3-R1%20-%20Dashboard%20Templates%20%26%20Public%20Interfaces/R1a-study-registry-dashboard-template)
-- [Live Study Registry Space](https://huggingface.co/spaces/K-RnD-Lab/Study-Registry_04-2026)
+- [Live Study Registry Space](https://huggingface.co/spaces/K-RnD-Lab/studyreg)
 
 ## Source Of Truth
 
@@ -171,9 +173,15 @@ The current live app environment is split across these Spaces:
 
 | Space | Purpose | Local mirror |
 | --- | --- | --- |
+| [HF README](https://huggingface.co/spaces/K-RnD-Lab/README) | Hugging Face organization landing page | `spaces/hf-readme` |
+| [SPHERE FRONTIER](https://huggingface.co/spaces/K-RnD-Lab/SPHERE-FRONTIER) | Static frontier index for live K-RnD Lab HF environments | `spaces/sphere-frontier` |
 | [Learning Playground](https://huggingface.co/spaces/K-RnD-Lab/Learning-Playground_03-2026) | Interactive sandbox for miRNA, siRNA, LNP, flow-corona, and variant-learning tabs | `spaces/learning-playground` |
 | [Cancer Research Suite](https://huggingface.co/spaces/K-RnD-Lab/Cancer-Research-Suite_03-2026) | Live research-gap exploration, real-data lookups, and research assistant workflows | `spaces/cancer-research-suite` |
 | [PHYLO BRCA2 miRNA Demo](https://huggingface.co/spaces/K-RnD-Lab/PHYLO-03_2026-01_A1-brca2-mirna) | Dedicated BRCA2 miRNA study demo | `spaces/phylo-brca2-mirna` |
+| [BioScore](https://huggingface.co/spaces/K-RnD-Lab/bioscore) | Biomedical scoring prototype for reproducibility, quality, and readiness | `spaces/bioscore` |
+| [SET Method](https://huggingface.co/spaces/K-RnD-Lab/set-method) | Classify-score-recommend prototype for the SET framework | `spaces/set-method` |
+| [Study Registry](https://huggingface.co/spaces/K-RnD-Lab/studyreg) | Current live study registry Space | `spaces/studyreg` |
+| [Partner Pool Simulator](https://huggingface.co/spaces/K-RnD-Lab/Partner-Pool-Simulator_05-2026) | `S7-K` partner-pool assumption simulator demo | `spaces/partner-pool-simulator` |
 
 More detail is documented in [`spaces/README.md`](spaces/README.md) and [`docs/core/hf-space-sync.md`](docs/core/hf-space-sync.md).
 

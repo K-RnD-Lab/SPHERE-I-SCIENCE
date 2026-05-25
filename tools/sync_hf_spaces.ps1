@@ -6,6 +6,16 @@ $ErrorActionPreference = "Stop"
 
 $spaceMappings = @(
     @{
+        Name = "README"
+        Source = "https://huggingface.co/spaces/K-RnD-Lab/README"
+        Target = "spaces/hf-readme"
+    },
+    @{
+        Name = "SPHERE-FRONTIER"
+        Source = "https://huggingface.co/spaces/K-RnD-Lab/SPHERE-FRONTIER"
+        Target = "spaces/sphere-frontier"
+    },
+    @{
         Name = "Learning-Playground_03-2026"
         Source = "https://huggingface.co/spaces/K-RnD-Lab/Learning-Playground_03-2026"
         Target = "spaces/learning-playground"
@@ -19,6 +29,26 @@ $spaceMappings = @(
         Name = "PHYLO-03_2026-01_A1-brca2-mirna"
         Source = "https://huggingface.co/spaces/K-RnD-Lab/PHYLO-03_2026-01_A1-brca2-mirna"
         Target = "spaces/phylo-brca2-mirna"
+    },
+    @{
+        Name = "bioscore"
+        Source = "https://huggingface.co/spaces/K-RnD-Lab/bioscore"
+        Target = "spaces/bioscore"
+    },
+    @{
+        Name = "set-method"
+        Source = "https://huggingface.co/spaces/K-RnD-Lab/set-method"
+        Target = "spaces/set-method"
+    },
+    @{
+        Name = "studyreg"
+        Source = "https://huggingface.co/spaces/K-RnD-Lab/studyreg"
+        Target = "spaces/studyreg"
+    },
+    @{
+        Name = "Partner-Pool-Simulator_05-2026"
+        Source = "https://huggingface.co/spaces/K-RnD-Lab/Partner-Pool-Simulator_05-2026"
+        Target = "spaces/partner-pool-simulator"
     }
 )
 
