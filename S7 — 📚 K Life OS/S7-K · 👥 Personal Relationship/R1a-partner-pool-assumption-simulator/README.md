@@ -37,6 +37,7 @@ Many public calculators use demographic framing as viral content without clear m
 
 ## Current App
 
+- [Live Hugging Face Space](https://huggingface.co/spaces/K-RnD-Lab/Partner-Pool-Simulator_05-2026)
 - [`app.py`](app.py) - Streamlit prototype
 - [`src/model_pool.py`](src/model_pool.py) - deterministic demo model
 - [`src/assumptions.py`](src/assumptions.py) - baseline assumptions and data-quality labels

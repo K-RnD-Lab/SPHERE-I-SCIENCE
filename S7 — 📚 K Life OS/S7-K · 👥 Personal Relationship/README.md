@@ -10,6 +10,10 @@ Focus:
 
 - [R1a Partner Pool Assumption Simulator](./R1a-partner-pool-assumption-simulator/)
 
+## Live Demos
+
+- [Partner Pool Simulator 05-2026](https://huggingface.co/spaces/K-RnD-Lab/Partner-Pool-Simulator_05-2026)
+
 ## Boundary Rule
 
 Use this lane when the primary question is about relationship patterns, partner selection assumptions, interpersonal dynamics, or longitudinal personal-relationship data.
