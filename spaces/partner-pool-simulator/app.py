@@ -39,64 +39,125 @@ st.info(
 
 with st.sidebar:
     st.header("Scenario")
-    base_population_text = st.text_input(
-        "Baseline population",
-        value=format_count(BASELINE.total_reference_population),
-        help=f"Reference population before filters, formatted with commas. Demo default: {format_count(BASELINE.total_reference_population)}.",
-    )
-    try:
-        base_population = parse_count(base_population_text, BASELINE.total_reference_population)
-    except ValueError:
-        st.warning("Use digits with optional commas, for example 10,000,000.")
-        base_population = BASELINE.total_reference_population
-    if not 10_000 <= base_population <= 50_000_000:
-        st.warning("Baseline population should stay between 10,000 and 50,000,000 for this demo.")
-        base_population = max(10_000, min(base_population, 50_000_000))
+    with st.expander("Core demographics", expanded=True):
+        base_population_text = st.text_input(
+            "Baseline population",
+            value=format_count(BASELINE.total_reference_population),
+            help=f"Reference population before filters, formatted with commas. Demo default: {format_count(BASELINE.total_reference_population)}.",
+        )
+        try:
+            base_population = parse_count(base_population_text, BASELINE.total_reference_population)
+        except ValueError:
+            st.warning("Use digits with optional commas, for example 10,000,000.")
+            base_population = BASELINE.total_reference_population
+        if not 10_000 <= base_population <= 50_000_000:
+            st.warning("Baseline population should stay between 10,000 and 50,000,000 for this demo.")
+            base_population = max(10_000, min(base_population, 50_000_000))
 
-    target_population = st.selectbox(
-        "Target population",
-        ["all_adults", "women", "men"],
-        format_func=title_label,
-        help="Applies a demo sex-share coefficient before the other filters. Women: 53%, Men: 47%, All adults: 100%.",
-    )
-    age_min, age_max = st.slider(
-        "Age range",
-        18,
-        70,
-        (28, 42),
-        help="Narrows the pool by the selected age-band overlap.",
-    )
-    region_scope = st.selectbox(
-        "Region scope",
-        ["all_ukraine", "large_cities", "kyiv_region", "western_regions"],
-        format_func=title_label,
-        help="Applies the selected regional scope coefficient.",
-    )
-    relationship_status = st.selectbox(
-        "Relationship status",
-        ["any", "not_married", "single_or_divorced"],
-        format_func=title_label,
-        help="Demo availability proxy. Official marital status is not the same as real availability.",
-    )
-    min_height = st.slider(
-        "Minimum height, cm",
-        150,
-        205,
-        175,
-        help="Interpolates a demo height-distribution coefficient.",
-    )
-    income_level = st.selectbox(
-        "Income threshold",
-        ["any", "above_median", "top_25", "top_10"],
-        format_func=title_label,
-        help="Applies an estimated income threshold coefficient.",
-    )
-    education_level = st.selectbox(
-        "Education filter",
-        ["any", "higher_education", "graduate_plus"],
-        format_func=title_label,
-        help="Applies an estimated education-level coefficient.",
-    )
+        target_population = st.selectbox(
+            "Target population",
+            ["all_adults", "women", "men"],
+            format_func=title_label,
+            help="Applies a demo sex-share coefficient before the other filters. Women: 53%, Men: 47%, All adults: 100%.",
+        )
+        age_min, age_max = st.slider(
+            "Age range",
+            18,
+            70,
+            (28, 42),
+            help="Narrows the pool by the selected age-band overlap.",
+        )
+        region_scope = st.selectbox(
+            "Region scope",
+            ["all_ukraine", "large_cities", "kyiv_region", "western_regions"],
+            format_func=title_label,
+            help="Applies the selected regional scope coefficient.",
+        )
+        relationship_status = st.selectbox(
+            "Relationship status",
+            ["any", "not_married", "single_or_divorced"],
+            format_func=title_label,
+            help="Demo availability proxy. Official marital status is not the same as real availability.",
+        )
+        min_height = st.slider(
+            "Minimum height, cm",
+            150,
+            205,
+            175,
+            help="Interpolates a demo height-distribution coefficient.",
+        )
+        income_level = st.selectbox(
+            "Income threshold",
+            ["any", "above_median", "top_25", "top_10"],
+            format_func=title_label,
+            help="Applies an estimated income threshold coefficient.",
+        )
+        education_level = st.selectbox(
+            "Education filter",
+            ["any", "higher_education", "graduate_plus"],
+            format_func=title_label,
+            help="Applies an estimated education-level coefficient.",
+        )
+
+    with st.expander("Family context"):
+        children_status = st.selectbox(
+            "Children status",
+            ["any", "no_children", "has_children", "co_parenting_ready"],
+            format_func=title_label,
+            help="Scenario preference around existing children. These are demo assumptions, not value judgments.",
+        )
+        future_children = st.selectbox(
+            "Future children",
+            ["any", "wants_children", "does_not_want_children", "open_or_undecided"],
+            format_func=title_label,
+            help="Scenario preference around future children.",
+        )
+
+    with st.expander("War and mobility"):
+        military_status = st.selectbox(
+            "Military status",
+            ["any", "civilian_or_not_serving", "active_service", "veteran_or_service_history"],
+            format_func=title_label,
+            help="War-related scenario filter. Active service and veteran/service-history shares are placeholders until sourced.",
+        )
+        relocation = st.selectbox(
+            "Relocation",
+            ["any", "same_city_only", "open_to_relocation", "remote_or_long_distance_ok"],
+            format_func=title_label,
+            help="Mobility and distance preference filter.",
+        )
+
+    with st.expander("Lifestyle and compatibility"):
+        housing = st.selectbox(
+            "Housing",
+            ["any", "independent_living", "own_or_stable_housing"],
+            format_func=title_label,
+            help="Scenario proxy for independent or stable living setup.",
+        )
+        smoking = st.selectbox(
+            "Smoking",
+            ["any", "non_smoker", "ok_with_smoking"],
+            format_func=title_label,
+            help="Lifestyle preference around smoking.",
+        )
+        alcohol = st.selectbox(
+            "Alcohol",
+            ["any", "rare_or_none", "moderate_ok"],
+            format_func=title_label,
+            help="Lifestyle preference around alcohol use.",
+        )
+        language = st.selectbox(
+            "Language comfort",
+            ["any", "ukrainian_comfortable", "english_comfortable", "ukrainian_and_english"],
+            format_func=title_label,
+            help="Communication comfort filter.",
+        )
+        pets = st.selectbox(
+            "Pets",
+            ["any", "pet_friendly", "no_pets_preferred"],
+            format_func=title_label,
+            help="Household compatibility preference around pets.",
+        )
 
 criteria = Criteria(
     base_population=base_population,
@@ -108,6 +169,15 @@ criteria = Criteria(
     min_height_cm=min_height,
     income_level=income_level,
     education_level=education_level,
+    children_status=children_status,
+    future_children=future_children,
+    military_status=military_status,
+    relocation=relocation,
+    housing=housing,
+    smoking=smoking,
+    alcohol=alcohol,
+    language=language,
+    pets=pets,
 )
 
 estimate = estimate_pool(criteria)
@@ -149,5 +219,6 @@ for note in DATA_QUALITY_NOTES:
 st.subheader("Interpretation guardrails")
 st.write(
     "This model estimates a demographic scenario, not compatibility, attraction, safety, or relationship success. "
-    "A stricter filter can make a pool smaller, but it does not define a person's real-life chances."
+    "A stricter filter can make a pool smaller, but it does not define a person's real-life chances. "
+    "War, children, housing, and lifestyle filters are sensitive context variables; treat them as transparent assumptions."
 )

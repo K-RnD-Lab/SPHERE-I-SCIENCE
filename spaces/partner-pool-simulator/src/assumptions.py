@@ -62,6 +62,65 @@ EDUCATION_FACTORS = {
     "graduate_plus": 0.16,
 }
 
+CHILDREN_STATUS_FACTORS = {
+    "any": 1.0,
+    "no_children": 0.62,
+    "has_children": 0.31,
+    "co_parenting_ready": 0.18,
+}
+
+FUTURE_CHILDREN_FACTORS = {
+    "any": 1.0,
+    "wants_children": 0.48,
+    "does_not_want_children": 0.22,
+    "open_or_undecided": 0.58,
+}
+
+MILITARY_STATUS_FACTORS = {
+    "any": 1.0,
+    "civilian_or_not_serving": 0.91,
+    "active_service": 0.07,
+    "veteran_or_service_history": 0.15,
+}
+
+RELOCATION_FACTORS = {
+    "any": 1.0,
+    "same_city_only": 0.22,
+    "open_to_relocation": 0.36,
+    "remote_or_long_distance_ok": 0.44,
+}
+
+HOUSING_FACTORS = {
+    "any": 1.0,
+    "independent_living": 0.48,
+    "own_or_stable_housing": 0.29,
+}
+
+SMOKING_FACTORS = {
+    "any": 1.0,
+    "non_smoker": 0.72,
+    "ok_with_smoking": 1.0,
+}
+
+ALCOHOL_FACTORS = {
+    "any": 1.0,
+    "rare_or_none": 0.46,
+    "moderate_ok": 0.76,
+}
+
+LANGUAGE_FACTORS = {
+    "any": 1.0,
+    "ukrainian_comfortable": 0.82,
+    "english_comfortable": 0.38,
+    "ukrainian_and_english": 0.31,
+}
+
+PETS_FACTORS = {
+    "any": 1.0,
+    "pet_friendly": 0.54,
+    "no_pets_preferred": 0.42,
+}
+
 DATA_QUALITY_NOTES = [
     {
         "label": "Population",
@@ -78,5 +137,17 @@ DATA_QUALITY_NOTES = [
     {
         "label": "Height",
         "note": "Height currently requires proxy distribution unless a Ukraine-specific source is validated.",
+    },
+    {
+        "label": "Military status",
+        "note": "War-related filters are sensitive, time-changing, and should stay scenario-only until sourced.",
+    },
+    {
+        "label": "Children",
+        "note": "Children and co-parenting filters are preference-context assumptions, not value judgments.",
+    },
+    {
+        "label": "Independence",
+        "note": "Multiplying many filters assumes independence; use results as a stress test, not a factual census.",
     },
 ]

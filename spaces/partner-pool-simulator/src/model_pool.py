@@ -4,12 +4,21 @@ from dataclasses import dataclass
 
 from .assumptions import (
     AGE_BAND_FACTORS,
+    ALCOHOL_FACTORS,
     BASELINE,
+    CHILDREN_STATUS_FACTORS,
     EDUCATION_FACTORS,
+    FUTURE_CHILDREN_FACTORS,
     HEIGHT_FACTORS,
+    HOUSING_FACTORS,
     INCOME_FACTORS,
+    LANGUAGE_FACTORS,
+    MILITARY_STATUS_FACTORS,
+    PETS_FACTORS,
     REGION_FACTORS,
     RELATIONSHIP_STATUS_FACTORS,
+    RELOCATION_FACTORS,
+    SMOKING_FACTORS,
     TARGET_POPULATION_FACTORS,
 )
 
@@ -25,6 +34,15 @@ class Criteria:
     min_height_cm: int
     income_level: str
     education_level: str
+    children_status: str
+    future_children: str
+    military_status: str
+    relocation: str
+    housing: str
+    smoking: str
+    alcohol: str
+    language: str
+    pets: str
 
 
 @dataclass(frozen=True)
@@ -78,6 +96,15 @@ def model_factors(criteria: Criteria) -> list[tuple[str, float]]:
         ("Minimum height", height_factor(criteria.min_height_cm)),
         ("Income threshold", INCOME_FACTORS[criteria.income_level]),
         ("Education filter", EDUCATION_FACTORS[criteria.education_level]),
+        ("Children status", CHILDREN_STATUS_FACTORS[criteria.children_status]),
+        ("Future children", FUTURE_CHILDREN_FACTORS[criteria.future_children]),
+        ("Military status", MILITARY_STATUS_FACTORS[criteria.military_status]),
+        ("Relocation", RELOCATION_FACTORS[criteria.relocation]),
+        ("Housing", HOUSING_FACTORS[criteria.housing]),
+        ("Smoking", SMOKING_FACTORS[criteria.smoking]),
+        ("Alcohol", ALCOHOL_FACTORS[criteria.alcohol]),
+        ("Language", LANGUAGE_FACTORS[criteria.language]),
+        ("Pets", PETS_FACTORS[criteria.pets]),
     ]
 
 
