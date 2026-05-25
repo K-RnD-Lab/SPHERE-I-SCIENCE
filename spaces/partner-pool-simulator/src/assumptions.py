@@ -36,12 +36,18 @@ SALARY_ANCHORS_UAH = {
     "workua_current_average": 28_600,
 }
 
-INCOME_THRESHOLD_LABELS = {
-    "any": "Any income",
-    "above_median": "Above median (about 28,600 UAH/month)",
-    "top_25": "Top 25 scenario (about 45,000 UAH/month)",
-    "top_10": "Top 10 scenario (about 70,000 UAH/month)",
-}
+INCOME_SLIDER_MAX_UAH = 500_000
+
+INCOME_CURVE_POINTS_UAH = [
+    (0, 1.0),
+    (SALARY_ANCHORS_UAH["official_pfu_2025_average"], 0.55),
+    (SALARY_ANCHORS_UAH["workua_current_average"], 0.42),
+    (45_000, 0.25),
+    (70_000, 0.10),
+    (100_000, 0.055),
+    (200_000, 0.015),
+    (500_000, 0.002),
+]
 
 SOURCE_LINKS = [
     {
@@ -106,13 +112,6 @@ HEIGHT_FACTORS = {
     180: 0.28,
     185: 0.13,
     190: 0.04,
-}
-
-INCOME_FACTORS = {
-    "any": 1.0,
-    "above_median": 0.42,
-    "top_25": 0.25,
-    "top_10": 0.10,
 }
 
 EDUCATION_FACTORS = {

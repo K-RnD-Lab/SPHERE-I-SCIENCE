@@ -11,7 +11,7 @@ from .assumptions import (
     FUTURE_CHILDREN_FACTORS,
     HEIGHT_FACTORS,
     HOUSING_FACTORS,
-    INCOME_FACTORS,
+    INCOME_CURVE_POINTS_UAH,
     LANGUAGE_FACTORS,
     MILITARY_STATUS_FACTORS,
     PETS_FACTORS,
@@ -32,7 +32,7 @@ class Criteria:
     region_scope: str
     relationship_status: str
     min_height_cm: int
-    income_level: str
+    income_min_uah: int
     education_level: str
     children_status: str
     future_children: str
@@ -87,6 +87,22 @@ def height_factor(min_height_cm: int) -> float:
     return HEIGHT_FACTORS[lower] + ratio * (HEIGHT_FACTORS[upper] - HEIGHT_FACTORS[lower])
 
 
+def income_factor(income_min_uah: int) -> float:
+    points = sorted(INCOME_CURVE_POINTS_UAH)
+    if income_min_uah <= points[0][0]:
+        return points[0][1]
+    if income_min_uah >= points[-1][0]:
+        return points[-1][1]
+
+    lower = max(point for point in points if point[0] <= income_min_uah)
+    upper = min(point for point in points if point[0] >= income_min_uah)
+    if lower == upper:
+        return lower[1]
+
+    ratio = (income_min_uah - lower[0]) / (upper[0] - lower[0])
+    return lower[1] + ratio * (upper[1] - lower[1])
+
+
 def model_factors(criteria: Criteria) -> list[tuple[str, float]]:
     return [
         ("Target population", TARGET_POPULATION_FACTORS[criteria.target_population]),
@@ -94,7 +110,7 @@ def model_factors(criteria: Criteria) -> list[tuple[str, float]]:
         ("Region scope", REGION_FACTORS[criteria.region_scope]),
         ("Relationship status", RELATIONSHIP_STATUS_FACTORS[criteria.relationship_status]),
         ("Minimum height", height_factor(criteria.min_height_cm)),
-        ("Income threshold", INCOME_FACTORS[criteria.income_level]),
+        ("Minimum income", income_factor(criteria.income_min_uah)),
         ("Education filter", EDUCATION_FACTORS[criteria.education_level]),
         ("Children status", CHILDREN_STATUS_FACTORS[criteria.children_status]),
         ("Future children", FUTURE_CHILDREN_FACTORS[criteria.future_children]),

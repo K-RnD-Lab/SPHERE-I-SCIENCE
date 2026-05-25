@@ -8,7 +8,7 @@ from src.assumptions import (
     BASELINE,
     BASELINE_REFERENCE_OPTIONS,
     DATA_QUALITY_NOTES,
-    INCOME_THRESHOLD_LABELS,
+    INCOME_SLIDER_MAX_UAH,
     SALARY_ANCHORS_UAH,
     SOURCE_LINKS,
 )
@@ -28,10 +28,6 @@ def parse_count(value: str, fallback: int) -> int:
 
 def title_label(value: str) -> str:
     return value.replace("_", " ").title()
-
-
-def income_label(value: str) -> str:
-    return INCOME_THRESHOLD_LABELS[value]
 
 
 def format_percent(value: int | float) -> str:
@@ -122,16 +118,22 @@ with st.sidebar:
             175,
             help="Interpolates a demo height-distribution coefficient.",
         )
-        income_level = st.selectbox(
-            "Income threshold",
-            ["any", "above_median", "top_25", "top_10"],
-            format_func=income_label,
+        income_min_uah = st.slider(
+            "Minimum monthly income, UAH",
+            min_value=0,
+            max_value=INCOME_SLIDER_MAX_UAH,
+            value=30_000,
+            step=5_000,
             help=(
-                "Salary anchors: Work.ua current benchmark is about "
+                "Scenario salary threshold. 0 means no income filter. Salary anchors: Work.ua current benchmark is about "
                 f"{format_count(SALARY_ANCHORS_UAH['workua_current_average'])} UAH/month; "
                 f"KSE cites Work.ua January 2026 median at {format_count(SALARY_ANCHORS_UAH['kse_workua_jan_2026_median'])} UAH/month. "
-                "Top 25 and Top 10 are scenario thresholds, not official percentiles."
+                "Very high thresholds such as 200,000 or 500,000 UAH/month use demo tail assumptions, not official percentiles."
             ),
+        )
+        st.caption(
+            "Selected income threshold: "
+            f"{'Any income' if income_min_uah == 0 else format_count(income_min_uah) + ' UAH/month'}"
         )
         education_level = st.selectbox(
             "Education filter",
@@ -208,7 +210,7 @@ criteria = Criteria(
     region_scope=region_scope,
     relationship_status=relationship_status,
     min_height_cm=min_height,
-    income_level=income_level,
+    income_min_uah=income_min_uah,
     education_level=education_level,
     children_status=children_status,
     future_children=future_children,
@@ -268,8 +270,8 @@ st.write(
     f"({format_count(BASELINE_REFERENCE_OPTIONS['sssu_jan_2022_total']['value'])})."
 )
 st.write(
-    f"`Above median` currently means roughly {format_count(SALARY_ANCHORS_UAH['workua_current_average'])} UAH/month "
-    "as a public job-market benchmark. Higher salary bands are scenario cutoffs until a validated percentile source is added."
+    f"The income slider uses {format_count(SALARY_ANCHORS_UAH['workua_current_average'])} UAH/month as the current public job-market benchmark. "
+    "High values such as 200,000 or 500,000 UAH/month are supported as scenario stress-test cutoffs, not official salary percentiles."
 )
 
 st.subheader("Data quality notes")
