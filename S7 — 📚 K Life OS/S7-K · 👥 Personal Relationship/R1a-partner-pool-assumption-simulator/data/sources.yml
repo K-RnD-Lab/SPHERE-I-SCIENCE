@@ -1,0 +1,59 @@
+sources:
+  - id: ukraine_nowpop
+    name: Ukraine NowPop
+    url: https://nowpop.org/
+    use_for:
+      - population_by_age_sex_region
+    status: candidate
+    confidence: medium
+    notes: Current population estimates should be reviewed for license, geographic granularity, and update cadence.
+
+  - id: ukrstat
+    name: State Statistics Service of Ukraine
+    url: https://stat.gov.ua/
+    use_for:
+      - baseline_demography
+      - wages
+      - social_indicators
+    status: candidate
+    confidence: medium
+    notes: Official source, but some demographic series may lag wartime mobility.
+
+  - id: ministry_of_justice_marriage
+    name: Ministry of Justice marriage and divorce administrative data
+    url: https://minjust.gov.ua/
+    use_for:
+      - marriages
+      - divorces
+    status: candidate
+    confidence: medium
+    notes: Useful for flow indicators, not a direct measure of single or available population.
+
+  - id: opendatabot_marriage_divorce
+    name: Opendatabot marriage/divorce analytics
+    url: https://opendatabot.ua/
+    use_for:
+      - public_context
+      - administrative_data_summary
+    status: candidate
+    confidence: low_to_medium
+    notes: Aggregated public analytics; validate against primary Ministry of Justice releases before using in model coefficients.
+
+  - id: ncd_risc_height
+    name: NCD Risk Factor Collaboration anthropometric data
+    url: https://ncdrisc.org/
+    use_for:
+      - height_distribution_proxy
+    status: candidate_proxy
+    confidence: low
+    notes: Use only if Ukraine-specific height distribution is unavailable; label as proxy.
+
+  - id: world_bank_living_conditions
+    name: World Bank Ukraine living conditions updates
+    url: https://www.worldbank.org/en/country/ukraine
+    use_for:
+      - income_context
+      - living_conditions_context
+    status: candidate
+    confidence: medium
+    notes: Useful for context and uncertainty framing rather than direct demographic filtering.
