@@ -27,6 +27,12 @@ REGION_FACTORS = {
     "western_regions": 0.24,
 }
 
+TARGET_POPULATION_FACTORS = {
+    "all_adults": 1.0,
+    "women": 0.53,
+    "men": 0.47,
+}
+
 RELATIONSHIP_STATUS_FACTORS = {
     "any": 1.0,
     "not_married": 0.46,

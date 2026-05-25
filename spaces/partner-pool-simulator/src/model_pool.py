@@ -10,12 +10,14 @@ from .assumptions import (
     INCOME_FACTORS,
     REGION_FACTORS,
     RELATIONSHIP_STATUS_FACTORS,
+    TARGET_POPULATION_FACTORS,
 )
 
 
 @dataclass(frozen=True)
 class Criteria:
     base_population: int
+    target_population: str
     age_min: int
     age_max: int
     region_scope: str
@@ -69,6 +71,7 @@ def height_factor(min_height_cm: int) -> float:
 
 def model_factors(criteria: Criteria) -> list[tuple[str, float]]:
     return [
+        ("Target population", TARGET_POPULATION_FACTORS[criteria.target_population]),
         ("Age range", age_factor(criteria.age_min, criteria.age_max)),
         ("Region scope", REGION_FACTORS[criteria.region_scope]),
         ("Relationship status", RELATIONSHIP_STATUS_FACTORS[criteria.relationship_status]),
