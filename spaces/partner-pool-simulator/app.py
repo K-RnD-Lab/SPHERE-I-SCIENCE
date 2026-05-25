@@ -8,7 +8,7 @@ from src.assumptions import (
     BASELINE,
     BASELINE_REFERENCE_OPTIONS,
     DATA_QUALITY_NOTES,
-    INCOME_SLIDER_MAX_UAH,
+    INCOME_THRESHOLD_OPTIONS_UAH,
     SALARY_ANCHORS_UAH,
     SOURCE_LINKS,
 )
@@ -28,6 +28,12 @@ def parse_count(value: str, fallback: int) -> int:
 
 def title_label(value: str) -> str:
     return value.replace("_", " ").title()
+
+
+def income_threshold_label(value: int) -> str:
+    if value == 0:
+        return "Any income"
+    return f"{format_count(value)} UAH"
 
 
 def format_percent(value: int | float) -> str:
@@ -74,7 +80,7 @@ with st.sidebar:
             value=format_count(preset["value"]),
             help=(
                 f"{preset['note']} Formatted with commas. "
-                "Example: 10,000,000 means a synthetic reference pool, not Ukraine's total population."
+                "Demo is a fixed synthetic example. Custom means you choose your own starting audience."
             ),
         )
         try:
@@ -118,17 +124,16 @@ with st.sidebar:
             175,
             help="Interpolates a demo height-distribution coefficient.",
         )
-        income_min_uah = st.slider(
+        income_min_uah = st.select_slider(
             "Minimum monthly income, UAH",
-            min_value=0,
-            max_value=INCOME_SLIDER_MAX_UAH,
+            options=INCOME_THRESHOLD_OPTIONS_UAH,
             value=30_000,
-            step=5_000,
+            format_func=income_threshold_label,
             help=(
                 "Scenario salary threshold. 0 means no income filter. Salary anchors: Work.ua current benchmark is about "
                 f"{format_count(SALARY_ANCHORS_UAH['workua_current_average'])} UAH/month; "
                 f"KSE cites Work.ua January 2026 median at {format_count(SALARY_ANCHORS_UAH['kse_workua_jan_2026_median'])} UAH/month. "
-                "Very high thresholds such as 200,000 or 500,000 UAH/month use demo tail assumptions, not official percentiles."
+                "High thresholds up to 1,000,000 UAH/month are scenario stress-test cutoffs, not official maximum salary data."
             ),
         )
         st.caption(
@@ -271,7 +276,8 @@ st.write(
 )
 st.write(
     f"The income slider uses {format_count(SALARY_ANCHORS_UAH['workua_current_average'])} UAH/month as the current public job-market benchmark. "
-    "High values such as 200,000 or 500,000 UAH/month are supported as scenario stress-test cutoffs, not official salary percentiles."
+    "High values such as 200,000, 500,000, or 1,000,000 UAH/month are supported as scenario stress-test cutoffs. "
+    "They are not official salary percentiles or a claimed real maximum."
 )
 
 st.subheader("Data quality notes")

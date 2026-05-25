@@ -14,7 +14,7 @@ BASELINE = BaselineAssumptions()
 
 BASELINE_REFERENCE_OPTIONS = {
     "demo_reference_pool": {
-        "label": "Demo working pool",
+        "label": "Demo working pool (10M)",
         "value": 10_000_000,
         "note": "Synthetic starting universe for scenario testing; not the full Ukraine population.",
     },
@@ -24,9 +24,9 @@ BASELINE_REFERENCE_OPTIONS = {
         "note": "Official pre-full-scale-invasion total population estimate cited by ACAPS.",
     },
     "custom": {
-        "label": "Custom baseline",
-        "value": 10_000_000,
-        "note": "Use when modeling a narrower adult, regional, platform, or pre-filtered pool.",
+        "label": "Custom starting pool",
+        "value": 1_000_000,
+        "note": "Editable starting universe for a narrower adult, regional, platform, or pre-filtered pool.",
     },
 }
 
@@ -36,7 +36,30 @@ SALARY_ANCHORS_UAH = {
     "workua_current_average": 28_600,
 }
 
-INCOME_SLIDER_MAX_UAH = 500_000
+INCOME_THRESHOLD_OPTIONS_UAH = [
+    0,
+    20_000,
+    25_000,
+    30_000,
+    35_000,
+    40_000,
+    45_000,
+    50_000,
+    60_000,
+    70_000,
+    80_000,
+    90_000,
+    100_000,
+    125_000,
+    150_000,
+    200_000,
+    250_000,
+    300_000,
+    400_000,
+    500_000,
+    750_000,
+    1_000_000,
+]
 
 INCOME_CURVE_POINTS_UAH = [
     (0, 1.0),
@@ -47,6 +70,8 @@ INCOME_CURVE_POINTS_UAH = [
     (100_000, 0.055),
     (200_000, 0.015),
     (500_000, 0.002),
+    (750_000, 0.001),
+    (1_000_000, 0.0005),
 ]
 
 SOURCE_LINKS = [
@@ -64,6 +89,16 @@ SOURCE_LINKS = [
         "label": "Pension Fund of Ukraine average wage indicator, 2025",
         "url": "https://www.pfu.gov.ua/2170600-pokaznyk-serednoyi-zarobitnoyi-platy-za-2025-rik/",
         "note": "Official average wage indicator used for pension calculations; annual 2025 value is UAH 20,653.55.",
+    },
+    {
+        "label": "DOU developer salary statistics",
+        "url": "https://jobs.dou.ua/salaries/?switch_lang=en",
+        "note": "IT salary survey and CSV-backed salary analytics for Ukrainian tech roles.",
+    },
+    {
+        "label": "Djinni salary guide",
+        "url": "https://guide.djinni.co/salaries",
+        "note": "Tech salary benchmarks for Ukraine-focused hiring; useful for high-income scenario context.",
     },
     {
         "label": "ACAPS Ukraine population data sources report",
@@ -190,7 +225,7 @@ DATA_QUALITY_NOTES = [
     },
     {
         "label": "Income",
-        "note": "Income and salary filters are sensitive to self-employment and informal earnings.",
+        "note": "Income thresholds above public medians are scenario cutoffs. Open sources do not provide a universal real maximum salary.",
     },
     {
         "label": "Height",
