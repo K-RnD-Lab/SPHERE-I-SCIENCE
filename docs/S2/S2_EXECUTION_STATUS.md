@@ -121,6 +121,10 @@ But for architectural consistency, `S2-A-R1` and `S2-A-R2` were added immediatel
 3. expand translational evidence rows in `S2-E`
 4. strengthen `S2-D` with one more perennial or non-model comparison
 
+## Planned source intakes
+
+- `S2_EVENT_INTAKE_2026_06_BOTANY_CAREER.md`: planned botany career-orientation event intake. Keep it outside active execution until post-event notes, sources, or a concrete research question exist.
+
 Reason:
 
 - `S2-C-R1` already gives `S2` real biological depth
