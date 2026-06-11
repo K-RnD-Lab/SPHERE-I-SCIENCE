@@ -68,6 +68,13 @@ It gives a scientific home to projects where the object of study is:
 
 ## Current active lane
 
+### [S7-D - Finance](./S7-D%20%C2%B7%20%F0%9F%92%B5%20Finance/)
+
+This lane now holds the finance-facing research scaffold for investment-system monitoring and paper-trading analytics.
+
+Current project inside this lane:
+- [R1 - Investment Systems & Paper Trading](./S7-D%20%C2%B7%20%F0%9F%92%B5%20Finance/R1%20-%20Investment%20Systems%20%26%20Paper%20Trading/)
+
 ### [S7-I · 🔎 Career or Education](./S7-I%20%C2%B7%20%F0%9F%94%8E%20Career%20or%20Education/)
 
 This is the most concrete active lane right now for career, preparation, and education-facing analytics.

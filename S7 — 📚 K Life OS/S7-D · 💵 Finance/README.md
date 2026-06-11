@@ -1,8 +1,22 @@
-﻿# S7-D · 💵 Finance
+# S7-D - Finance
 
-A sub-lane inside 📚 S7 — K Life OS.
+A sub-lane inside `S7 - K Life OS`.
 
-Focus:
+## Focus
+
 - Financial behavior, allocation logic, savings, spending patterns, and long-range resource strategy.
+- Investment-system monitoring, paper-trading analytics, risk visibility, fees, slippage, and funding costs when these become measurable life-finance signals.
 
-This lane can later hold its own measurable research cases, long-horizon reviews, and periodic assessments.
+## Current project
+
+- [R1 - Investment Systems & Paper Trading](./R1%20-%20Investment%20Systems%20%26%20Paper%20Trading/)
+
+## Boundary rule
+
+Use `S7-D` when the primary object of study is personal finance behavior, investment-system operation, risk visibility, or long-range resource strategy.
+
+Keep reusable trading infrastructure, generalized dashboards, or automation frameworks in `SPHERE-III` if they become tools for other users or other research programs.
+
+## Safety note
+
+All trading and investment-system materials in this lane are research-grade and educational. They are not financial advice, brokerage recommendations, or production trading instructions.

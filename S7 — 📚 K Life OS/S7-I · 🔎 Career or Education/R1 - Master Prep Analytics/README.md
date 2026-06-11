@@ -1,4 +1,4 @@
-# R1 - Master Prep Analytics
+﻿# R1 - Master Prep Analytics
 
 A combined research case for magistracy preparation, learning systems, cognition, live dashboarding, and the actual trainer workspace used in practice.
 
@@ -6,7 +6,7 @@ This project belongs to:
 - `K R&D Lab`
 - `SPHERE I - SCIENCE`
 - `?? S7 - K Life OS`
-- `S7-I � ?? Career or Education`
+- `S7-I · ?? Career or Education`
 
 ---
 
@@ -22,12 +22,14 @@ That means the preparation environment and the public proof layer now live in on
 
 ## Public entry points
 
-Replace placeholders with your real links when each layer is ready:
+Some live links are intentionally kept as private or planned until each layer is ready for public release:
 
-- **Live dashboard (Vercel):** [replace with your public dashboard](https://REPLACE_ME.vercel.app)
-- **Google Sheet:** [replace with your source spreadsheet](https://docs.google.com/spreadsheets/d/REPLACE_ME/edit)
-- **Looker Studio:** [replace with your report layer](https://lookerstudio.google.com/reporting/REPLACE_ME)
-- **Apps Script endpoint:** [replace with your JSON endpoint](https://script.google.com/macros/s/REPLACE_ME/exec)
+| Layer | Status |
+|---|---|
+| Live dashboard | Planned public deployment |
+| Google Sheet | Private source of truth |
+| Looker Studio | Optional report layer |
+| Apps Script endpoint | Private or staged JSON endpoint |
 
 ---
 
@@ -168,4 +170,5 @@ That public build now also contains a `Trainer` tab and a deployable `dashboard/
 3. keep training in `trainer/` or `dashboard/trainer/`, with new logs posting into Google Sheet automatically when Apps Script is public
 4. let the Vercel dashboard read live Google Sheet data
 5. use local export only as backup once live sheet sync is active
+
 
