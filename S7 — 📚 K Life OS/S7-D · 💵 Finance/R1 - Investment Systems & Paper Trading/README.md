@@ -4,7 +4,12 @@
 
 ## Status
 
-Active private runtime with public research scaffold.
+Active private runtime with **public demo**.
+
+| Surface | URL / doc |
+|---------|-----------|
+| **Dashboard (SIM + live paper)** | [k-investments-hub-crypto-bot.web.app](https://k-investments-hub-crypto-bot.web.app) |
+| **Access guide** | [docs/demo-live-access.md](./docs/demo-live-access.md) — modes, **20 SIM slots**, live paper code |
 
 The live VM, Firebase credentials, UID files, and service-account material stay outside GitHub. This folder documents the safe public structure, metrics, and synchronization logic only.
 

@@ -9,7 +9,9 @@ A sub-lane inside `S7 - K Life OS`.
 
 ## Current project
 
-- [R1 - Investment Systems & Paper Trading](./R1%20-%20Investment%20Systems%20%26%20Paper%20Trading/)
+- **[R1 - Investment Systems & Paper Trading](./R1%20-%20Investment%20Systems%20%26%20Paper%20Trading/)**
+  - Live dashboard: [k-investments-hub-crypto-bot.web.app](https://k-investments-hub-crypto-bot.web.app)
+  - Access guide: [demo-live-access.md](./R1%20-%20Investment%20Systems%20%26%20Paper%20Trading/docs/demo-live-access.md) (20 SIM slots, live paper code)
 
 ## Boundary rule
 
