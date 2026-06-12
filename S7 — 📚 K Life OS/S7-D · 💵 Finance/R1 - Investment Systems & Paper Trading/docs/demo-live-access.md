@@ -81,3 +81,17 @@ WFO backtest figures (15–23%/mo on selected alts) are **research optimism** �
 - [risk-and-cost-accounting.md](./risk-and-cost-accounting.md) — fees & slippage model
 
 **Lane:** [S7-D · Finance](https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE/tree/main/S7%20%E2%80%94%20%F0%9F%93%9A%20K%20Life%20OS/S7-D%20%C2%B7%20%F0%9F%92%B5%20Finance) · K Life OS
+
+## Dashboard UTP (2026-06)
+
+On the live dashboard:
+
+- Equity curve: bot vs equal-weight alt buy-and-hold (same universe, spot, no leverage)
+- Pain markers: funding, fees, stop-loss on the curve
+- Export: CSV / JSON of trades with fee columns
+
+Baseline is not buy-alts advice — passive hold vs active risk-managed paper.
+
+## Live paper code (K-RnD-Lab)
+
+Invite hash in Firebase viewer_invites. Plain code shared privately with lab members. Tab Live paper авторки after Google sign-in.
