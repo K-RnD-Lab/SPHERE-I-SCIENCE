@@ -75,6 +75,13 @@ This lane now holds the finance-facing research scaffold for investment-system m
 Current project inside this lane:
 - [R1 - Investment Systems & Paper Trading](./S7-D%20%C2%B7%20%F0%9F%92%B5%20Finance/R1%20-%20Investment%20Systems%20%26%20Paper%20Trading/)
 
+### [S7-H - Physical Health](./S7-H%20%C2%B7%20%F0%9F%8C%B3%20Physical%20Health/)
+
+This lane now holds the physical-health research scaffold for nutrition, movement, conditioning, recovery, and cognitive-energy self-tracking.
+
+Current project inside this lane:
+- [R1 - Nutrition, Movement & Cognitive Energy](./S7-H%20%C2%B7%20%F0%9F%8C%B3%20Physical%20Health/R1%20-%20Nutrition%2C%20Movement%20%26%20Cognitive%20Energy/)
+
 ### [S7-I · 🔎 Career or Education](./S7-I%20%C2%B7%20%F0%9F%94%8E%20Career%20or%20Education/)
 
 This is the most concrete active lane right now for career, preparation, and education-facing analytics.
