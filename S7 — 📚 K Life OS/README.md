@@ -77,10 +77,11 @@ Current project inside this lane:
 
 ### [S7-H - Physical Health](./S7-H%20%C2%B7%20%F0%9F%8C%B3%20Physical%20Health/)
 
-This lane now holds the physical-health research scaffold for nutrition, movement, conditioning, recovery, and cognitive-energy self-tracking.
+This lane now holds two separate physical-health research tracks: physical conditioning and cognitive energy, plus nutrition and cognitive energy.
 
 Current project inside this lane:
-- [R1 - Nutrition, Movement & Cognitive Energy](./S7-H%20%C2%B7%20%F0%9F%8C%B3%20Physical%20Health/R1%20-%20Nutrition%2C%20Movement%20%26%20Cognitive%20Energy/)
+- [R1 - Physical Conditioning & Cognitive Energy](./S7-H%20%C2%B7%20%F0%9F%8C%B3%20Physical%20Health/R1%20-%20Physical%20Conditioning%20%26%20Cognitive%20Energy/)
+- [R2 - Nutrition & Cognitive Energy](./S7-H%20%C2%B7%20%F0%9F%8C%B3%20Physical%20Health/R2%20-%20Nutrition%20%26%20Cognitive%20Energy/)
 
 ### [S7-I · 🔎 Career or Education](./S7-I%20%C2%B7%20%F0%9F%94%8E%20Career%20or%20Education/)
 

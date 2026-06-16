@@ -10,7 +10,16 @@ A sub-lane inside `S7 - K Life OS`.
 
 ## Current project
 
-- [R1 - Nutrition, Movement & Cognitive Energy](./R1%20-%20Nutrition%2C%20Movement%20%26%20Cognitive%20Energy/)
+- [R1 - Physical Conditioning & Cognitive Energy](./R1%20-%20Physical%20Conditioning%20%26%20Cognitive%20Energy/)
+- [R2 - Nutrition & Cognitive Energy](./R2%20-%20Nutrition%20%26%20Cognitive%20Energy/)
+
+## Research split
+
+Movement and nutrition are connected, but they should be studied separately because they work through different mechanisms, evidence bases, and self-tracking signals.
+
+`R1` focuses on activity, conditioning, movement load, recovery, and how physical activity may influence cognitive energy.
+
+`R2` focuses on food patterns, meal comfort, micronutrient awareness, supplements, and how nutrition may influence cognitive energy.
 
 ## Boundary rule
 

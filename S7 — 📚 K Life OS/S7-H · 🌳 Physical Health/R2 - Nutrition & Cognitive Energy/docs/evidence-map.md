@@ -2,35 +2,15 @@
 
 ## Purpose
 
-This map defines the first evidence questions for `S7-H-R1`.
+This map defines the first evidence questions for `S7-H-R2`.
 
 It should help separate:
 
 - public-health guidance
-- observational evidence
-- intervention evidence
-- personal self-tracking
+- dietary pattern evidence
+- personal comfort and adherence
 - supplement claims
 - medical decisions
-
-## Physical activity
-
-### Working evidence anchor
-
-Adults generally benefit from regular aerobic activity and muscle-strengthening activity.
-
-Initial guideline anchors:
-
-- WHO physical activity guidelines: 150-300 minutes of moderate-intensity aerobic activity or 75-150 minutes of vigorous activity weekly, plus muscle-strengthening activity.
-- CDC adult activity overview: at least 150 minutes of moderate-intensity activity weekly and 2 days of muscle-strengthening activity.
-- American Heart Association recommendations: similar weekly aerobic targets, strength training at least 2 days per week, and less sedentary time.
-
-### Research questions
-
-- What activity mix is realistic and sustainable?
-- How do walking, running, strength training, and home workouts affect energy, mood, and focus?
-- What minimum effective routine gives the best adherence?
-- How should soreness, fatigue, sleep, and recovery be tracked?
 
 ## Nutrition
 
@@ -89,8 +69,6 @@ Initial source anchors:
 - Which claims are supported by human evidence, and which are marketing?
 
 ## Evidence-status labels
-
-Use these labels in future notes:
 
 - `guideline_backed`
 - `systematic_review_supported`
