@@ -279,6 +279,46 @@ input, select {
   background: rgba(166,65,55,.08);
   border-color: rgba(166,65,55,.25);
 }
+.explanation-blocks {
+  display: grid;
+  gap: 10px;
+  margin: 12px 0 0;
+}
+.explanation-block {
+  display: grid;
+  gap: 6px;
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(255,255,255,.78);
+  border: 1px solid rgba(61,72,83,.14);
+}
+.explanation-block p {
+  margin: 0;
+}
+.choice-explanations {
+  display: grid;
+  gap: 8px;
+  padding: 0;
+  margin: 12px 0 0;
+  list-style: none;
+}
+.choice-explanations li {
+  display: grid;
+  gap: 4px;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(255,255,255,.72);
+  border: 1px solid rgba(61,72,83,.14);
+}
+.choice-explanations strong {
+  font-size: 14px;
+}
+.choice-explanation-correct {
+  border-color: rgba(20,106,82,.35) !important;
+}
+.choice-explanation-selected {
+  box-shadow: inset 3px 0 0 rgba(30,116,183,.55);
+}
 .info-stack,
 .log-list {
   display: grid;

@@ -40,6 +40,8 @@ const DEFAULT_STATE = {
 
   simulationRuntime: null,
 
+  variantCursor: {},
+
 };
 
 
@@ -1287,6 +1289,10 @@ function getLocalizedQuestionContent(question) {
       prompt: record.prompt,
       choices: record.choices || {},
       explanation: record.explanation || '',
+      scientific_explanation: record.scientific_explanation || '',
+      real_life_example: record.real_life_example || '',
+      correct_answer: record.correct_answer,
+      choice_explanations: record.choice_explanations || {},
     };
   }
 
@@ -1296,6 +1302,10 @@ function getLocalizedQuestionContent(question) {
     prompt: localized.prompt?.ua || record.prompt,
     choices: localized.choices?.ua || record.choices || {},
     explanation: localized.explanation?.ua || record.explanation || '',
+    scientific_explanation: localized.scientific_explanation?.ua || record.scientific_explanation || '',
+    real_life_example: localized.real_life_example?.ua || record.real_life_example || '',
+    correct_answer: record.correct_answer,
+    choice_explanations: localized.choice_explanations?.ua || record.choice_explanations || {},
   };
 }
 
@@ -1636,11 +1646,18 @@ function startSimulationSession() {
 
   const subject = state.settings.subject;
 
-  const all = shuffle(getQuestionsForSubject(subject));
+  const subjectQuestions = getQuestionsForSubject(subject);
+  const variants = [...new Set(subjectQuestions.map((question) => question.variant).filter(Boolean))].sort((a, b) => Number(a) - Number(b));
+  const selectedVariant = variants.length
+    ? variants[state.variantCursor?.[subject] || 0] || variants[0]
+    : null;
+  const all = selectedVariant
+    ? subjectQuestions.filter((question) => question.variant === selectedVariant)
+    : shuffle(subjectQuestions);
 
   const target = Math.min(all.length, SUBJECTS[subject].examQuestions);
 
-  const questions = all.slice(0, target);
+  const questions = selectedVariant ? all.slice(0, target) : all.slice(0, target);
 
   if (!questions.length) {
 
@@ -1658,7 +1675,9 @@ function startSimulationSession() {
 
     subject,
 
-    label: `${state.settings.sessionLabel}-exam`,
+    variant: selectedVariant,
+
+    label: `${state.settings.sessionLabel}-exam${selectedVariant ? `-v${selectedVariant}` : ''}`,
 
     startedAt: new Date().toISOString(),
 
@@ -1671,6 +1690,11 @@ function startSimulationSession() {
     score: { correct: 0, answered: 0 },
 
   };
+
+  if (selectedVariant) {
+    state.variantCursor = state.variantCursor || {};
+    state.variantCursor[subject] = ((state.variantCursor[subject] || 0) + 1) % variants.length;
+  }
 
   saveState();
 
@@ -1767,6 +1791,8 @@ function renderRuntimeInto(runtime, statsNode, panelNode, prefix) {
 
     <span class="badge">${escapeHtml(t(`subject_${runtime.subject}`))}</span>
 
+    ${runtime.variant ? `<span class="badge">Variant ${escapeHtml(String(runtime.variant))}</span>` : ''}
+
     <span class="badge">${escapeHtml(t('progress'))}: ${escapeHtml(progress)}</span>
 
     <span class="badge">${escapeHtml(t('score'))}: ${escapeHtml(accuracy)}</span>
@@ -1798,6 +1824,10 @@ function renderRuntimeInto(runtime, statsNode, panelNode, prefix) {
       <strong>${escapeHtml(answer.correct ? t('answerCorrect') : t('answerIncorrect'))}</strong>
 
       <p>${escapeHtml(localizedQuestion.explanation || '')}</p>
+
+      ${renderExplanationBlocks(localizedQuestion)}
+
+      ${renderChoiceExplanations(localizedQuestion, answer.selected)}
 
     </div>
 
@@ -1845,6 +1875,48 @@ function renderRuntimeInto(runtime, statsNode, panelNode, prefix) {
 
   panelNode.querySelector(`#${prefix}-check-btn`)?.addEventListener('click', () => checkCurrentAnswer(prefix));
 
+}
+
+function renderExplanationBlocks(question) {
+  const scientificLabel = state.settings.lang === 'uk' ? '\u041d\u0430\u0443\u043a\u043e\u0432\u043e' : 'Scientific explanation';
+  const realLifeLabel = state.settings.lang === 'uk' ? '\u041f\u0440\u0438\u043a\u043b\u0430\u0434 \u0443 \u0436\u0438\u0442\u0442\u0456' : 'Real-life example';
+  const blocks = [
+    ['\u{1F52C}', scientificLabel, question.scientific_explanation],
+    ['\u{1F3E0}', realLifeLabel, question.real_life_example],
+  ].filter(([, , body]) => body);
+
+  return blocks.length ? `
+    <div class="explanation-blocks">
+      ${blocks.map(([icon, title, body]) => `
+        <section class="explanation-block">
+          <strong>${escapeHtml(icon)} ${escapeHtml(title)}</strong>
+          <p>${escapeHtml(body)}</p>
+        </section>
+      `).join('')}
+    </div>
+  ` : '';
+}
+
+function renderChoiceExplanations(question, selected) {
+  const explanations = question.choice_explanations || {};
+  const choices = question.choices || {};
+  const rows = Object.entries(choices).map(([key, value]) => {
+    const isCorrect = key === question.correct_answer;
+    const isSelected = key === selected;
+    const mark = isCorrect ? '\u2705' : '\u274c';
+    const selectedLabel = isSelected ? ' \u2190 your pick' : '';
+    const fallback = isCorrect
+      ? `Correct: ${question.explanation || value}`
+      : 'Not this one: it does not match the exact wording of the question.';
+    return `
+      <li class="${isCorrect ? 'choice-explanation-correct' : ''} ${isSelected ? 'choice-explanation-selected' : ''}">
+        <strong>${escapeHtml(mark)} ${escapeHtml(key)}.${escapeHtml(selectedLabel)}</strong>
+        <span>${escapeHtml(explanations[key] || fallback)}</span>
+      </li>
+    `;
+  }).join('');
+
+  return rows ? `<ul class="choice-explanations">${rows}</ul>` : '';
 }
 
 
