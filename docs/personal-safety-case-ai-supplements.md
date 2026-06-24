@@ -1,4 +1,4 @@
-# S7H-R2 AI Supplement Safety Case
+# Personal Safety Case: AI-Assisted Supplement Self-Treatment
 
 ## Status
 
