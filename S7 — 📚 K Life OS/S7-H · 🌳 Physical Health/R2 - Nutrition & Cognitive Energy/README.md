@@ -35,6 +35,7 @@ This line studies:
 - diet quality and cognitive state
 - D3, omega-3, magnesium, and nootropic claims as evidence questions
 - lab-informed and clinician-informed supplement decisions
+- AI-advice and self-treatment risk patterns around supplements
 
 ## Initial evidence anchors
 
@@ -49,6 +50,7 @@ This is only a research scaffold:
 - build a comfortable baseline diet before optimizing details
 - prioritize enough protein, fiber, colorful plants, hydration, and regular meals
 - treat supplements as evidence questions, not identity or magic
+- separate nutrient intake from capsule intake
 - track subjective response carefully but avoid over-interpreting short-term changes
 - use lab testing and clinician input for D3, iron/ferritin, B12, thyroid, or other medical questions
 
@@ -79,3 +81,4 @@ Private supplement-oriented notes should be treated as source material for evide
 - `docs/source-registry.md`
 - `docs/nutrition-tracking-schema.md`
 - `docs/supplement-safety-checklist.md`
+- `docs/personal-safety-case-ai-supplements.md`

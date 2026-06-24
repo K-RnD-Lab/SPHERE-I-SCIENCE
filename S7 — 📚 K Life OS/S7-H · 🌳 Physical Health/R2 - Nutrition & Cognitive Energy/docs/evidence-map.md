@@ -60,6 +60,7 @@ Initial source anchors:
 - NIH Office of Dietary Supplements vitamin D fact sheet gives recommended intakes and safety context.
 - NIH and National Academies sources identify 4,000 IU/day as a common adult tolerable upper intake level for vitamin D unless a clinician directs otherwise.
 - Magnesium, omega-3, and nootropic blends require separate source review, especially for GI effects, bleeding risk, sedation, thyroid/autoimmune issues, medication interactions, pregnancy, and liver/kidney considerations.
+- FDA and NIH consumer guidance emphasize that supplements can have risks, can interact with medicines, and should be discussed with health professionals when uncertainty or health context matters.
 
 ### Research questions
 
@@ -67,6 +68,24 @@ Initial source anchors:
 - What is the dose, form, duration, and stop rule?
 - What symptoms or adverse effects should trigger stopping and clinician review?
 - Which claims are supported by human evidence, and which are marketing?
+- Is the plan food-first, or is it replacing a food-pattern question with a capsule question?
+
+## Personal safety cases
+
+### Working evidence anchor
+
+Personal cases can be useful when they create safer research rules, but they do not prove that a supplement works or fails.
+
+Initial case:
+
+- [Personal Safety Case: AI-Assisted Supplement Self-Treatment](./personal-safety-case-ai-supplements.md)
+
+### Research questions
+
+- How should AI-assisted supplement advice be labeled and constrained?
+- Which personal symptoms should trigger stopping, source review, or clinician review?
+- How can food-based intake and capsule use be tracked separately?
+- How can seasonal notes avoid creating false certainty?
 
 ## Evidence-status labels
 

@@ -19,7 +19,10 @@ This schema supports food-pattern observation without turning nutrition into pun
 | `hydration_ok` | boolean | Subjective |
 | `meal_regularity` | string | regular / irregular / skipped / late |
 | `caffeine_timing` | string | none / morning / afternoon / late |
+| `food_based_nutrient_sources` | string | Fish, seafood, seeds, nuts, cacao, legumes, greens, etc. |
 | `supplements_taken` | string | Names only, no public private dosing |
+| `supplement_reason` | string | deficiency / diet gap / clinician-guided / AI-suggested / marketing exposure / other |
+| `supplement_stop_rule` | string | What would trigger stopping or review? |
 | `digestion_comfort_1_5` | integer | Optional |
 | `notes` | text | Symptoms, context, cycle, illness, workload |
 
@@ -48,3 +51,9 @@ Look for repeated patterns across several weeks and check confounders:
 - training load
 - caloric restriction
 - novelty or placebo effect
+
+## Supplement interpretation rule
+
+Track food-based intake and capsule intake separately.
+
+Do not write "omega-3 = 0" if the intended meaning is "omega-3 capsules = 0." Use separate notes for food intake and supplement use.

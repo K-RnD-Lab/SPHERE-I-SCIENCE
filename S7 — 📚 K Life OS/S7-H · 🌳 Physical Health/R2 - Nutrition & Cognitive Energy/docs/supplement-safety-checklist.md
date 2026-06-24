@@ -8,6 +8,7 @@ This checklist is for evidence review and clinician-facing questions. It is not 
 
 - What problem is it supposed to solve?
 - Is there a lab-confirmed deficiency or only a general wellness claim?
+- Is food intake already sufficient for the relevant nutrient target?
 - What is the evidence level: guideline, systematic review, small trial, mechanism, or marketing?
 - What is the planned duration?
 - What is the stop rule?
@@ -34,6 +35,7 @@ Useful questions:
 
 Review:
 
+- food intake separately from capsule intake
 - EPA/DHA amount, not only fish-oil capsule size
 - bleeding risk and anticoagulant/antiplatelet medication
 - GI tolerance
@@ -44,6 +46,7 @@ Review:
 
 Review:
 
+- food-based magnesium separately from supplemental magnesium
 - form and elemental magnesium amount
 - GI tolerance
 - kidney function
@@ -54,6 +57,7 @@ Review:
 
 For blends such as mushroom extracts, adaptogens, amino acids, or multi-ingredient cognitive products:
 
+- do not let AI-generated stacks replace medical or nutrition review
 - avoid changing many inputs at once
 - check sedation, stimulation, anxiety, GI effects, and sleep
 - check medication and thyroid/autoimmune considerations
@@ -63,6 +67,8 @@ For blends such as mushroom extracts, adaptogens, amino acids, or multi-ingredie
 ## Public repo rule
 
 Do not publish personal dosing protocols as recommendations.
+
+If AI-generated advice contributed to the plan, label it clearly as an input to review, not as an authority.
 
 If a personal experiment is documented, label it as:
 

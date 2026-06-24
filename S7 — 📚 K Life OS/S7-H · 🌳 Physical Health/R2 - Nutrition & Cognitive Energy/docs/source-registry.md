@@ -15,6 +15,10 @@
 | S7H-R2-SRC101 | NIH Office of Dietary Supplements - Vitamin D Health Professional Fact Sheet | https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/ | vitamin D intake, status, and safety context |
 | S7H-R2-SRC102 | NIH Office of Dietary Supplements - Vitamin D Consumer Fact Sheet | https://ods.od.nih.gov/factsheets/VitaminD-Consumer/ | plain-language upper-limit context |
 | S7H-R2-SRC103 | National Academies / NCBI: Tolerable Upper Intake Levels for Calcium and Vitamin D | https://www.ncbi.nlm.nih.gov/books/NBK56058/ | upper intake level and toxicity context |
+| S7H-R2-SRC104 | NIH Office of Dietary Supplements - Magnesium Health Professional Fact Sheet | https://ods.od.nih.gov/factsheets/Magnesium-HealthProfessional/ | magnesium forms, intake, side effects, and interactions |
+| S7H-R2-SRC105 | NIH Office of Dietary Supplements - Omega-3 Fatty Acids Health Professional Fact Sheet | https://ods.od.nih.gov/factsheets/Omega3FattyAcids-HealthProfessional/ | omega-3 food and supplement context |
+| S7H-R2-SRC106 | NIH Office of Dietary Supplements - Dietary Supplements: What You Need To Know | https://ods.od.nih.gov/factsheets/WYNTK-Consumer/ | consumer safety and clinician-discussion context |
+| S7H-R2-SRC107 | FDA 101: Dietary Supplements | https://www.fda.gov/consumers/consumer-updates/fda-101-dietary-supplements | supplement regulation and safety caution |
 
 ## Nutrition and cognition
 
@@ -26,8 +30,6 @@
 
 ## Future sources to add
 
-- omega-3 safety and cardiovascular/cognitive evidence
-- magnesium evidence and upper-limit/safety sources
 - protein requirements and satiety sources
 - nutrition behavior and adherence literature
 - hydration and cognitive performance sources
