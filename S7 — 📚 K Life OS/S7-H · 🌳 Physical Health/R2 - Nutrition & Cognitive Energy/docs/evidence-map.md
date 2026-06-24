@@ -79,6 +79,7 @@ Personal cases can be useful when they create safer research rules, but they do 
 Initial case:
 
 - [Personal Safety Case: AI-Assisted Supplement Self-Treatment](./personal-safety-case-ai-supplements.md)
+- ASCII mirror for editor/path compatibility: [S7H_R2_AI_SUPPLEMENT_SAFETY_CASE.md](../../../../../docs/S7H_R2_AI_SUPPLEMENT_SAFETY_CASE.md)
 
 ### Research questions
 

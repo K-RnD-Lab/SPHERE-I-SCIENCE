@@ -82,3 +82,4 @@ Private supplement-oriented notes should be treated as source material for evide
 - `docs/nutrition-tracking-schema.md`
 - `docs/supplement-safety-checklist.md`
 - `docs/personal-safety-case-ai-supplements.md`
+- ASCII mirror: `../../../docs/S7H_R2_AI_SUPPLEMENT_SAFETY_CASE.md`
