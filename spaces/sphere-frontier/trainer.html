@@ -1,237 +1,233 @@
 <!doctype html>
-<html lang="en">
+<html lang="uk">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AI Master Trainer</title>
-  <link rel="stylesheet" href="trainer.css?v=20260628a1">
+  <title>Master Training — K R&D Lab</title>
+  <link rel="stylesheet" href="./assets/css/rnd-lab.css">
+  <style>
+    .sphere-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:16px 0}
+    .sphere-card{background:var(--card-bg);border:1px solid var(--line);border-radius:22px;padding:22px;cursor:pointer;transition:all .15s;text-align:center}
+    .sphere-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+    .sphere-card.active{border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 20%,transparent)}
+    .sphere-card .icon{font-size:42px;margin-bottom:8px}
+    .sphere-card h3{margin:0 0 4px;font-size:16px}
+    .sphere-card .sub{font-size:13px;color:var(--muted)}
+    .s-card{border-left:4px solid var(--science)}.e-card{border-left:4px solid var(--entrepreneurship)}.t-card{border-left:4px solid var(--technology)}
+    .level-tabs,.mode-tabs,.analytics-tabs{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
+    .level-tabs button,.mode-tabs button,.analytics-tabs button{border:1px solid var(--line);border-radius:999px;padding:6px 16px;font-size:13px;cursor:pointer;background:var(--input-bg);color:var(--ink);transition:all .15s}
+    .level-tabs button:hover,.mode-tabs button:hover,.analytics-tabs button:hover{background:var(--ink);color:#fff}
+    .level-tabs button.active,.mode-tabs button.active,.analytics-tabs button.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+    [data-theme="dark"] .level-tabs button:hover,[data-theme="dark"] .mode-tabs button:hover,[data-theme="dark"] .analytics-tabs button:hover{background:#001428;color:#fff;border-color:rgba(110,168,240,.5)}
+    [data-theme="dark"] .level-tabs button.active,[data-theme="dark"] .mode-tabs button.active,[data-theme="dark"] .analytics-tabs button.active{background:#001428;color:#fff;border-color:rgba(110,168,240,.5)}
+    .q-card{background:var(--card-bg);border:1px solid var(--line);border-radius:18px;padding:22px}
+    .q-card h3{margin:0 0 16px;font-size:17px;line-height:1.5}
+    .q-options{display:flex;flex-direction:column;gap:8px}
+    .q-opt{padding:12px 16px;border:1px solid var(--line);border-radius:12px;cursor:pointer;font-size:14px;transition:all .12s}
+    .q-opt:hover{border-color:var(--accent)}
+    .q-opt.selected{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 8%,transparent)}
+    .q-opt.correct{border-color:#22c55e;background:rgba(34,197,94,.08);cursor:default}
+    .q-opt.wrong{border-color:#ef4444;background:rgba(239,68,68,.08);cursor:default}
+    .q-opt.reveal{opacity:.5;cursor:default}
+    .stat-pill{display:inline-flex;align-items:center;gap:4px;padding:4px 12px;border:1px solid var(--line);border-radius:999px;font-size:13px;margin:2px}
+    .stat-pill .val{font-weight:700}
+    .readiness{font-weight:700;font-size:15px}
+    .readiness.high{color:#22c55e}.readiness.medium{color:#eab308}.readiness.low{color:#ef4444}
+    .acc-bar{height:8px;background:var(--line);border-radius:999px;overflow:hidden;margin-top:6px}
+    .acc-bar .fill{height:100%;border-radius:999px;transition:width .3s}
+    .link-pill{display:inline-block;padding:4px 14px;border:1px solid var(--line);border-radius:999px;font-size:13px;color:var(--ink);text-decoration:none;transition:all .12s}
+    .link-pill:hover{border-color:var(--accent);color:var(--accent)}
+    .trainer-grid{display:grid;grid-template-columns:1fr 320px;gap:18px}
+    @media(max-width:768px){.trainer-grid{grid-template-columns:1fr}}
+    .side-panel{display:flex;flex-direction:column;gap:14px}
+    .side-panel section{background:var(--card-bg);border:1px solid var(--line);border-radius:16px;padding:16px}
+    .side-panel h4{margin:0 0 8px;font-size:14px}
+    .side-panel a{display:block;font-size:13px;margin:4px 0;color:var(--technology)}
+    #sessionEnd{text-align:center;padding:40px 20px}
+    #sessionEnd h2{font-size:28px;margin:0 0 8px}
+    #finalScore{font-size:64px;font-weight:800}
+    select{padding:6px 12px;border:1px solid var(--line);border-radius:10px;background:var(--card-bg);color:var(--ink);font-size:13px}
+    label{font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:4px}
+    label.dimmed{opacity:.45;pointer-events:none}
+    label.dimmed select{cursor:not-allowed}
+    #startScreen{text-align:center;padding:40px 20px}
+    #startScreen h2{font-size:22px;margin:0 0 8px}
+    #startScreen p{color:var(--muted);font-size:14px;margin:0 0 16px}
+    .start-btn{display:inline-block;padding:12px 32px;border:2px solid var(--accent);border-radius:999px;font-size:16px;font-weight:700;cursor:pointer;background:var(--accent);color:#fff;transition:all .15s}
+    .start-btn:hover{transform:scale(1.05);box-shadow:0 4px 12px rgba(0,0,0,.15)}
+    #timerBar{display:flex;align-items:center;gap:8px;margin-bottom:12px;padding:8px 14px;border:1px solid var(--line);border-radius:12px;background:var(--card-bg);font-size:14px}
+    #timerBar .timer-icon{font-size:18px}
+    #timerBar .timer-value{font-weight:700;font-variant-numeric:tabular-nums}
+    #timerBar .timer-label{color:var(--muted);font-size:12px}
+  </style>
 </head>
 <body>
-  <header class="hero">
-    <div class="hero-copy-wrap">
-      <p class="eyebrow" data-i18n="heroEyebrow">PRIVATE PREP ENVIRONMENT</p>
-      <h1>AI Master Trainer</h1>
-      <p class="hero-copy" data-i18n="heroCopy">A lighter prep cockpit for resources, short practice, simulation, and session logs.</p>
-      <p class="hero-subcopy" data-i18n="heroSubcopy">Logs are created by this site when you study here or when you manually record an external session.</p>
-    </div>
-    <nav class="hero-actions">
-      <a href="./index.html" data-i18n="openHub">Back to Analytics Hub</a>
-      <button id="export-json-btn" type="button" data-i18n="exportJson">Export JSON</button>
-      <button id="export-csv-btn" type="button" data-i18n="exportCsv">Export CSV</button>
-      <label class="import-label" data-owner-only>
-        <span data-i18n="importJson">Import JSON</span>
-        <input id="import-json-input" type="file" accept="application/json">
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+  <script>const th=localStorage.getItem("theme")||"light";document.documentElement.setAttribute("data-theme",th);document.getElementById("themeToggle").textContent=th==="dark"?"☀️":"🌙";</script>
+  <main class="page">
+    <section class="hero">
+      <p class="eyebrow" data-i18n="eyebrow">K R&D Lab / S7-I-R1 / 🎓 Master Training</p>
+      <h1 data-i18n="title">Master Training</h1>
+      <p class="lede" data-i18n="lede">🤝 You've got this. Pick your sphere — 🩺 Science, 💼 Entrepreneurship, 💻 Technology — and train alongside the community.</p>
+      <div class="hero-links">
+        <a href="./training-analytics.html" class="link-pill">← Analytics</a>
+        <a href="./index.html" class="link-pill">R&D Lab</a>
+      </div>
+    </section>
+
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin:12px 0">
+      <label><span data-i18n="uiLang">Interface language</span>
+        <select id="uiLang"><option value="ua">Українська</option><option value="en">English</option></select>
       </label>
-      <button id="reset-state-btn" type="button" class="danger" data-owner-only data-i18n="resetState">Reset Local State</button>
-    </nav>
-  </header>
+      <label class="dimmed"><span data-i18n="qLang">Question language</span>
+        <select id="qLang" disabled><option value="en" selected>English (only)</option></select>
+      </label>
+    </div>
 
-  <main class="layout">
-    <section class="card workspace-card">
-      <div class="workspace-head">
-        <div>
-          <p class="section-kicker" data-i18n="workspaceKicker">WORKSPACE</p>
-          <h2 data-i18n="workspaceTitle">Today setup</h2>
+    <section id="sphereSection">
+      <h3 style="font-size:14px;color:var(--muted);margin:0 0 8px">📚 Foundation — base for all exams</h3>
+      <div class="sphere-cards">
+        <div class="sphere-card" data-sphere="foundation" style="border-left:4px solid var(--ink)">
+          <div class="icon">📚</div>
+          <h3>Foundation</h3>
+          <div class="sub" data-i18n="subF">🧮 Logic, Math</div>
         </div>
-        <p class="workspace-note" data-i18n="workspaceNote">Use one subject at a time, do a short batch, then let the log capture the result.</p>
+        <div class="sphere-card" data-sphere="english" style="border-left:4px solid var(--ink)">
+          <div class="icon">🇬🇧</div>
+          <h3>English</h3>
+          <div class="sub" data-i18n="subEn">📖 Reading, Grammar, Vocabulary, Listening</div>
+        </div>
       </div>
-      <div class="controls-grid">
-        <label>
-          <span data-i18n="subjectLabel">Subject</span>
-          <select id="subject-select"></select>
-        </label>
-        <label>
-          <span data-i18n="languageLabel">Interface Language</span>
-          <select id="language-select">
-            <option value="en">English</option>
-            <option value="uk">Українська</option>
-          </select>
-        </label>
-        <label>
-          <span data-i18n="practiceSizeLabel">Practice Batch</span>
-          <select id="practice-size-select">
-            <option value="5">5 questions</option>
-            <option value="10">10 questions</option>
-            <option value="15">15 questions</option>
-          </select>
-        </label>
-        <label>
-          <span data-i18n="sessionLabel">Session Label</span>
-          <input id="session-label-input" type="text" placeholder="s001">
-        </label>
+      <h3 style="font-size:14px;color:var(--muted);margin:16px 0 8px">🎓 SET — specialized exam by sphere</h3>
+      <div class="sphere-cards">
+        <div class="sphere-card s-card" data-sphere="S">
+          <div class="icon">🩺</div>
+          <h3>Science</h3>
+          <div class="sub" data-i18n="subS">🔬 Biology, Chemistry, Physics, Bioinformatics</div>
+        </div>
+        <div class="sphere-card e-card" data-sphere="E">
+          <div class="icon">💼</div>
+          <h3>Entrepreneurship</h3>
+          <div class="sub" data-i18n="subE">📈 Management, Marketing, Finance, Analytics</div>
+        </div>
+        <div class="sphere-card t-card" data-sphere="T">
+          <div class="icon">💻</div>
+          <h3>Technology</h3>
+          <div class="sub" data-i18n="subT">🛠️ Programming, AI, Algorithms, Databases</div>
+        </div>
       </div>
-      <p class="micro-note" data-i18n="workspaceLogNote">This site does not pull logs from external platforms automatically. It saves your built-in sessions and any manual log entries you add.</p>
-<p class="micro-note sync-note" id="sync-status">Sheet sync is not connected yet.</p>
-    </section>
-
-    <section class="card tabs-card">
-      <div class="tabs">
-        <button type="button" class="tab is-active" data-tab="resources" data-i18n="tabResources">Resources</button>
-        <button type="button" class="tab" data-tab="practice" data-i18n="tabPractice">Practice</button>
-        <button type="button" class="tab" data-tab="simulation" data-i18n="tabSimulation">Simulation</button>
-        <button type="button" class="tab" data-tab="logs" data-i18n="tabLogs">Logs</button>
+      <h3 style="font-size:14px;color:var(--muted);margin:16px 0 8px">🔀 Combos — cross-sphere paths</h3>
+      <div class="sphere-cards">
+        <div class="sphere-card s-card" data-sphere="ST">
+          <div class="icon">🩺💻</div>
+          <h3>Science + Tech</h3>
+          <div class="sub" data-i18n="subST">🧬 Biotech, Bioinformatics, Data Analysis</div>
+        </div>
+        <div class="sphere-card e-card" data-sphere="ET">
+          <div class="icon">💼💻</div>
+          <h3>Entrepreneurship + Tech</h3>
+          <div class="sub" data-i18n="subET">📊 Digital Marketing, ERP, IT Management</div>
+        </div>
+        <div class="sphere-card" data-sphere="SE" style="border-left:4px solid var(--science)">
+          <div class="icon">🩺💼</div>
+          <h3>Science + Entrepreneurship</h3>
+          <div class="sub" data-i18n="subSE">💊 Pharma, Health Economics, Biotech Business</div>
+        </div>
       </div>
-    </section>
-
-    <section class="pane is-active" data-pane="resources">
-      <div class="split-grid">
-        <section class="card">
-          <div class="section-head">
-            <div>
-              <p class="section-kicker" data-i18n="materialsKicker">FOUNDATIONS</p>
-              <h2 data-i18n="materialsTitle">Study blocks</h2>
-            </div>
-            <p class="section-copy" data-i18n="materialsCopy">Pick one compact block, spend 15-45 minutes, then log it in one click.</p>
-          </div>
-          <div id="materials-grid" class="materials-grid"></div>
-        </section>
-
-        <section class="card">
-          <div class="section-head">
-            <div>
-              <p class="section-kicker" data-i18n="resourceLinksKicker">READY-MADE RESOURCES</p>
-              <h2 data-i18n="resourceLinksTitle">Where to practice outside</h2>
-            </div>
-            <p class="section-copy" data-i18n="resourceLinksCopy">Use these existing platforms for bigger pools and official demos. Then log the result back here.</p>
-          </div>
-          <div id="resource-links-grid" class="resource-links-grid"></div>
-        </section>
+      <div class="level-tabs" id="levelTabs">
+        <button data-level="bachelor" class="active">Bachelor</button>
+        <button data-level="master">Master</button>
       </div>
     </section>
 
-    <section class="pane" data-pane="practice" hidden>
-      <div class="split-grid split-grid-compact">
-        <section class="card">
-          <div class="section-head">
-            <div>
-              <p class="section-kicker" data-i18n="practiceKicker">SHORT RUN</p>
-              <h2 data-i18n="practiceTitle">Practice session</h2>
-            </div>
-            <div id="practice-stats" class="badge-row"></div>
-          </div>
-          <div class="controls-actions compact-actions">
-            <button id="start-practice-btn" type="button" data-i18n="startPractice">Start Practice</button>
-            <button id="next-practice-btn" type="button" class="ghost" data-i18n="nextQuestion">Next Question</button>
-            <button id="finish-practice-btn" type="button" class="warning" data-i18n="finishPractice">Finish And Log</button>
-          </div>
-          <div id="practice-panel" class="question-panel"></div>
-        </section>
-
-        <section class="card sidebar-card">
-          <div class="section-head">
-            <div>
-              <p class="section-kicker" data-i18n="practiceHowKicker">HOW IT WORKS</p>
-              <h2 data-i18n="practiceHowTitle">What this log gives you</h2>
-            </div>
-          </div>
-          <div id="practice-info" class="info-stack"></div>
-        </section>
-      </div>
+    <section id="msgBox" style="text-align:center;padding:32px">
+      <h2 data-i18n="msgTitle">Your trainer is right here.</h2>
+      <p data-i18n="msgBody">Pick a sphere and level — let's start together. You've got this!</p>
     </section>
 
-    <section class="pane" data-pane="simulation" hidden>
-      <div class="split-grid split-grid-compact">
-        <section class="card">
-          <div class="section-head">
-            <div>
-              <p class="section-kicker" data-i18n="simulationKicker">LONGER RUN</p>
-              <h2 data-i18n="simulationTitle">Simulation</h2>
-            </div>
-            <div id="simulation-stats" class="badge-row"></div>
-          </div>
-          <div class="controls-actions compact-actions">
-            <button id="start-simulation-btn" type="button" data-i18n="startSimulation">Start Simulation</button>
-            <button id="next-simulation-btn" type="button" class="ghost" data-i18n="nextQuestion">Next Question</button>
-            <button id="finish-simulation-btn" type="button" class="warning" data-i18n="finishSimulation">Finish And Log</button>
-          </div>
-          <div id="simulation-panel" class="question-panel"></div>
-        </section>
-
-        <section class="card sidebar-card">
-          <div class="section-head">
-            <div>
-              <p class="section-kicker" data-i18n="simulationMetaKicker">EXAM MODE</p>
-              <h2 data-i18n="simulationMetaTitle">Session profile</h2>
-            </div>
-          </div>
-          <div id="simulation-meta" class="info-stack"></div>
-        </section>
+    <section id="startScreen" style="display:none">
+      <div style="margin-bottom:16px"><button class="link-pill" id="backToSpheres">← Change sphere</button></div>
+      <h2 id="startTitle">Ready to begin?</h2>
+      <p id="startDesc" style="color:var(--muted);font-size:14px;margin-bottom:16px">Choose your subject and mode, then press Start.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:center;margin-bottom:16px">
+        <select id="subjectFilter"></select>
+        <div class="mode-tabs">
+          <button data-mode="practice" class="active" data-i18n="practice">Practice</button>
+          <button data-mode="simulation" data-i18n="simulation">Simulation</button>
+        </div>
       </div>
+      <p style="font-size:12px;color:var(--muted);margin-bottom:12px" id="modeHint">Practice: 10 questions at your pace. Simulation: all available questions with countdown timer.</p>
+      <button class="start-btn" id="startBtn">Start Session</button>
     </section>
 
-    <section class="pane" data-pane="logs" hidden>
-      <div class="metrics-grid" id="summary-grid"></div>
-
-      <div class="split-grid">
-        <section class="card">
-          <div class="section-head">
-            <div>
-              <p class="section-kicker" data-i18n="manualLogKicker">EXTERNAL SESSION</p>
-              <h2 data-i18n="manualLogTitle">Quick Log</h2>
-            </div>
-            <p class="section-copy" data-i18n="manualLogCopy">Use this when you study or test yourself on other sites and still want one clean dashboard.</p>
-          </div>
-          <div class="controls-grid">
-            <label>
-              <span data-i18n="platformLabel">Platform</span>
-              <input id="manual-source-input" type="text" placeholder="Connected / Testportal / Osvita.ua">
-            </label>
-            <label>
-              <span data-i18n="modeLabel">Mode</span>
-              <select id="manual-mode-select">
-                <option value="practice">Practice</option>
-                <option value="simulation">Simulation</option>
-                <option value="review">Review</option>
-              </select>
-            </label>
-            <label>
-              <span data-i18n="questionsLabel">Questions</span>
-              <input id="manual-total-input" type="number" min="0" value="10">
-            </label>
-            <label>
-              <span data-i18n="correctLabel">Correct</span>
-              <input id="manual-correct-input" type="number" min="0" value="0">
-            </label>
-            <label>
-              <span data-i18n="minutesLabel">Minutes</span>
-              <input id="manual-minutes-input" type="number" min="0" value="25">
-            </label>
-            <label>
-              <span data-i18n="predictedScoreLabel">Predicted score</span>
-              <input id="manual-predicted-input" type="number" min="0" max="100" step="1">
-            </label>
-            <label>
-              <span data-i18n="actualScoreLabel">Actual score</span>
-              <input id="manual-actual-input" type="number" min="0" max="100" step="1">
-            </label>
-            <label>
-              <span data-i18n="notesLabel">Notes</span>
-              <input id="manual-notes-input" type="text" placeholder="reading, logic, weak spots">
-            </label>
-          </div>
-          <div class="controls-actions">
-            <button id="save-manual-log-btn" type="button" data-i18n="saveManualLog">Save Quick Log</button>
-          </div>
+    <div id="trainerMain" class="trainer-grid" style="display:none">
+      <div>
+        <button class="link-pill" id="backToStart" style="margin-bottom:8px">← Back to setup</button>
+        <div id="timerBar" style="display:none">
+          <span class="timer-icon">⏱</span>
+          <span class="timer-value" id="timerValue">00:00</span>
+          <span class="timer-label" id="timerLabel">elapsed</span>
+        </div>
+        <div id="questionArea"></div>
+        <div id="qNav" style="display:flex;gap:8px;margin-top:12px">
+          <button id="prevBtn" class="link-pill">← <span data-i18n="back">Back</span></button>
+          <span id="qCounter" style="font-size:13px;color:var(--muted);align-self:center"></span>
+          <button id="nextBtn" class="link-pill"><span data-i18n="next">Next</span> →</button>
+        </div>
+        <div style="margin-top:12px" id="sessionStats"></div>
+        <div style="margin-top:8px">
+          <span data-i18n="readiness" style="font-size:13px;color:var(--muted)">Readiness signal</span>
+          <span id="readinessValue" class="readiness low">New</span>
+          <div class="acc-bar" style="margin-top:4px"><div id="readinessBar" class="fill" style="width:10%;background:#ef4444"></div></div>
+        </div>
+      </div>
+      <div class="side-panel">
+        <section>
+          <h4 data-i18n="resources">Resources</h4>
+          <div id="resourceLinks"></div>
         </section>
-
-        <section class="card">
-          <div class="section-head">
-            <div>
-              <p class="section-kicker" data-i18n="logsKicker">SESSION HISTORY</p>
-              <h2 data-i18n="logsTitle">Recent logs</h2>
-            </div>
-            <p class="section-copy" data-i18n="logsCopy">Export CSV to open everything in Google Sheets.</p>
+        <section>
+          <h4>Analytics</h4>
+          <div class="analytics-tabs">
+            <button data-type="descriptive" class="active" data-i18n="desc">Descriptive</button>
+            <button data-type="diagnostic" data-i18n="diag">Diagnostic</button>
+            <button data-type="prescriptive" data-i18n="presc">Prescriptive</button>
+            <button data-type="predictive" data-i18n="pred">Predictive</button>
           </div>
-          <div id="logs-list" class="log-list"></div>
+          <h5 id="chartTitle" style="margin:8px 0 4px;font-size:13px;color:var(--muted)"></h5>
+          <canvas id="mainChart" style="width:100%;height:180px"></canvas>
+          <h5 style="margin:12px 0 4px;font-size:13px;color:var(--muted)" data-i18n="sharedTitle">Shared progress</h5>
+          <canvas id="sharedChart" style="width:100%;height:180px"></canvas>
         </section>
       </div>
-    </section>
+    </div>
+
+    <div id="sessionEnd" style="display:none">
+      <h2 data-i18n="endTitle">Session complete!</h2>
+      <p data-i18n="endGreat" style="font-size:18px;color:var(--accent)">You did great!</p>
+      <div id="finalScore">0%</div>
+      <div id="finalStats" style="margin:12px 0"></div>
+      <p data-i18n="endMsg" style="color:var(--muted);font-size:14px">Every session is a step forward. Keep going!</p>
+      <button onclick="location.reload()" class="link-pill" style="margin-top:12px" data-i18n="newSession">New Session</button>
+      <a href="./training-analytics.html" class="link-pill" style="margin-top:8px">📊 View Analytics →</a>
+    </div>
   </main>
 
-  <script src="trainer_config.js?v=20260628a1"></script>
-  <script src="trainer.js?v=20260628a1"></script>
+  <script src="./assets/js/trainer/questions.js"></script>
+  <script src="./assets/js/trainer/q1.js"></script><script src="./assets/js/trainer/q2.js"></script><script src="./assets/js/trainer/q3.js"></script>
+  <script src="./assets/js/trainer/q4.js"></script><script src="./assets/js/trainer/q5.js"></script><script src="./assets/js/trainer/q6.js"></script>
+  <script src="./assets/js/trainer/q7.js"></script><script src="./assets/js/trainer/q8.js"></script><script src="./assets/js/trainer/q9.js"></script>
+  <script src="./assets/js/trainer/q10.js"></script><script src="./assets/js/trainer/q11.js"></script><script src="./assets/js/trainer/q12.js"></script><script src="./assets/js/trainer/q13.js"></script>
+  <script src="./assets/js/trainer/q14.js"></script><script src="./assets/js/trainer/q15.js"></script><script src="./assets/js/trainer/q16.js"></script>
+  <script src="./assets/js/trainer/q17.js"></script><script src="./assets/js/trainer/q18.js"></script><script src="./assets/js/trainer/q19.js"></script>
+  <script src="./assets/js/trainer/q20.js"></script><script src="./assets/js/trainer/q21.js"></script><script src="./assets/js/trainer/q22.js"></script>
+  <script src="./assets/js/trainer/q23.js"></script><script src="./assets/js/trainer/q24.js"></script><script src="./assets/js/trainer/q25.js"></script>
+  <script src="./assets/js/trainer/q26.js"></script><script src="./assets/js/trainer/q27.js"></script>
+  <script src="./assets/js/trainer/q28.js"></script><script src="./assets/js/trainer/q29.js"></script>
+  <script src="./assets/js/trainer/q30.js"></script><script src="./assets/js/trainer/q31.js"></script>
+  <script src="./assets/js/trainer/q32.js"></script><script src="./assets/js/trainer/q33.js"></script>
+  <script src="./assets/js/trainer/resources.js"></script>
+  <script src="./assets/js/trainer/trainer.js"></script>
+  <script>document.getElementById("themeToggle").addEventListener("click",function(){const c=this.textContent==="🌙"?"dark":"light";document.documentElement.setAttribute("data-theme",c);localStorage.setItem("theme",c);this.textContent=c==="dark"?"☀️":"🌙";});</script>
 </body>
 </html>
-
-
-
