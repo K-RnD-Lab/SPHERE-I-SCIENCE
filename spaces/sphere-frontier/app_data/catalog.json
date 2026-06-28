@@ -1,0 +1,88 @@
+{
+  "generated_at": "2026-03-24",
+  "subjects": [
+    {
+      "id": "tznk",
+      "name": "TZNK",
+      "real_exam_questions": 33,
+      "ui_grouped_tasks": 27,
+      "real_exam_minutes": 75,
+      "prep_pool_questions": 627,
+      "blocks": [
+        "verbal",
+        "logic"
+      ],
+      "name_i18n": {
+        "uk": "????",
+        "en": "TZNK"
+      },
+      "content_languages": [
+        "ua",
+        "en"
+      ]
+    },
+    {
+      "id": "english",
+      "name": "English",
+      "real_exam_questions": 30,
+      "real_exam_minutes": 45,
+      "prep_pool_questions": 804,
+      "blocks": [
+        "reading",
+        "use_of_english"
+      ],
+      "name_i18n": {
+        "uk": "??????????",
+        "en": "English"
+      },
+      "content_languages": [
+        "en"
+      ]
+    },
+    {
+      "id": "it",
+      "name": "IT",
+      "real_exam_questions": 140,
+      "real_exam_minutes": 180,
+      "prep_pool_questions": 140,
+      "blocks": [
+        "algorithms",
+        "systems",
+        "databases",
+        "software_engineering",
+        "cybersecurity",
+        "math",
+        "networks",
+        "operating_systems",
+        "programming",
+        "ai"
+      ],
+      "name_i18n": {
+        "uk": "??",
+        "en": "IT"
+      },
+      "content_languages": [
+        "ua",
+        "en"
+      ]
+    }
+  ],
+  "admission_2026": {
+    "evi_required_for_all_master_specialties": true,
+    "it_subject_test_required_for_field_f": true,
+    "main_session": "2026-06-26/2026-07-14",
+    "additional_session": "2026-08-03/2026-08-21"
+  },
+  "sources": {
+    "uceqa_2026_main": "https://testportal.gov.ua/osnovne-pro-yevi-yefvv-2026/",
+    "uceqa_2024_report": "https://testportal.gov.ua/wp-content/uploads/2024/12/Zvit_YEVI_YEFVV_2024_1.pdf",
+    "uceqa_evi_block_structure": "https://testportal.gov.ua/osoblyvosti-blokiv-tznk-ta-inozemna-mova-v-testi-yevi/",
+    "mon_it_program": "https://mon.gov.ua/npa/pro-zatverdzhennya-programi-predmetnogo-testu-z-informacijnih-tehnologij-yedinogo-fahovogo-vstupnogo-viprobuvannya",
+    "mon_language_program_pdf": "https://mon.gov.ua/static-objects/mon/uploads/public/661/687/704/66168770465de084402330.pdf",
+    "zno_tznk_pool": "https://zno.osvita.ua/master/tznpk/list.html",
+    "zno_english_pool": "https://zno.osvita.ua/master/english/list.html",
+    "zno_it_pool": "https://zno.osvita.ua/master/it/list.html",
+    "set_grants": "https://www.setuniversity.edu.ua/landings/grants/",
+    "set_admission_2026": "https://www.setuniversity.edu.ua/en/admission/vstup-2025/"
+  }
+}
