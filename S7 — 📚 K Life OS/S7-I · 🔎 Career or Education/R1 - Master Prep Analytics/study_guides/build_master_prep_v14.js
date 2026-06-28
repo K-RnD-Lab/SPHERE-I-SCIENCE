@@ -1642,11 +1642,11 @@ function renderExpansion(module) {
   if (!data) return "";
   return `
       <div class="exam-expansion">
-        <h3>🧰 Екзаменаційне спорядження</h3>
+        <h3>🎯 Екзаменаційне спорядження</h3>
         <div class="role-card"><b>Професійна прив'язка:</b> ${data.role}</div>
         <div class="exp-grid">
           <div class="exp-card"><h4>🎯 Що реально питають</h4>${list(data.exam)}</div>
-          <div class="exp-card"><h4>🪤 Де ловлять</h4>${list(data.traps)}</div>
+          <div class="exp-card"><h4>Пастки: де ловлять</h4>${list(data.traps)}</div>
         </div>
         <div class="drill-card"><b>Міні-дріл:</b> ${data.drill}</div>
       </div>`;
