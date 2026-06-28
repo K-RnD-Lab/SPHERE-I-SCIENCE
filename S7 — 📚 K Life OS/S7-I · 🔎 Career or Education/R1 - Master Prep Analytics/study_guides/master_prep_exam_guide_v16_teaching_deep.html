@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<title>Master Prep Exam Teaching Guide v16</title>
+<style>
+@page { size: A4; margin: 13mm 11mm; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Segoe UI", Arial, sans-serif; color: #14222c; background: #f4f0e6; line-height: 1.55; }
+.page { max-width: 980px; margin: 0 auto; background: #fffdf8; }
+.cover { min-height: 900px; padding: 56px 48px; background: linear-gradient(145deg, #0b1e28, #123b32 54%, #f6c84d 54.2%, #fbefd9); color: #fff; }
+.cover-card { margin-top: 190px; background: rgba(255,255,255,.95); color: #14222c; border-radius: 22px; padding: 34px; box-shadow: 0 22px 54px rgba(0,0,0,.24); }
+h1 { font-size: 42px; line-height: 1.08; margin: 0 0 14px; letter-spacing: 0; }
+h2 { font-size: 26px; line-height: 1.2; margin: 0 0 12px; color: #123244; }
+h3 { font-size: 18px; margin: 20px 0 9px; color: #123244; }
+h4 { font-size: 15px; margin: 0 0 7px; color: #123244; }
+p { margin: 7px 0; }
+.subtitle { font-size: 18px; max-width: 720px; }
+.kicker { text-transform: uppercase; font-size: 12px; letter-spacing: .08em; font-weight: 800; color: #d99b00; }
+.section { padding: 28px 34px; }
+.module { border: 1px solid #d8e1df; border-radius: 18px; background: #fff; padding: 22px; }
+.goal { border-left: 5px solid #f4bd2f; background: #fff8df; border-radius: 12px; padding: 12px 14px; margin: 12px 0; }
+.map { display: flex; flex-wrap: wrap; gap: 7px; margin: 10px 0 12px; }
+.map span { padding: 6px 10px; border-radius: 999px; background: #eef7f2; border: 1px solid #d8e6df; font-size: 12px; font-weight: 750; }
+.callout { border-left: 5px solid #f4bd2f; background: #fff8df; padding: 13px 15px; border-radius: 12px; margin: 14px 0; }
+.science { border-left-color: #367a99; background: #edf7fb; }
+.life { border-left-color: #35a86b; background: #eefaf2; }
+.trap { border-left-color: #c34a42; background: #fff0ee; }
+.trap li { margin-bottom: 10px; }
+.trap span { display: block; color: #4d5963; }
+.trap em { display: block; margin-top: 3px; color: #7a332d; font-style: normal; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.card { border: 1px solid #dfe7e9; border-radius: 14px; background: #f9fbfa; padding: 12px; break-inside: avoid; page-break-inside: avoid; }
+pre { margin: 8px 0 0; padding: 10px; border-radius: 10px; background: #eef4f6; color: #14222c; border: 1px solid #d9e6ea; white-space: pre-wrap; font-size: 12px; line-height: 1.38; }
+code { font-family: "Cascadia Mono", "Consolas", monospace; }
+ul { margin: 8px 0 0 20px; padding: 0; }
+li { margin: 4px 0; }
+.toc { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.toc div { border: 1px solid #dfe7e9; border-radius: 12px; background: #fff; padding: 11px; }
+.page-break { page-break-before: always; }
+@media print { .card, .module { break-inside: avoid; page-break-inside: avoid; } }
+
+.module h3 { margin-top: 22px; }
+.callout.trap li em { display:block; margin-top:6px; color:#0f3b44; font-style:normal; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; }
+</style>
+</head>
+<body>
+<div class="page">
+  <section class="cover">
+    <div class="kicker">K-RnD Lab / Master Prep</div>
+    <div class="cover-card">
+      <h1>🎓 Посібник, який має навчити: ТЗНК, English, IT</h1>
+      <p class="subtitle">Версія v16: не суха шпаргалка, а пояснення під реальні тестові пастки. Фокус: розпізнати тип питання, вибрати правильний алгоритм, не переплутати схожі поняття.</p>
+      <p><b>Як читати:</b> спочатку піддисципліна, потім алгоритм рішення, потім пастки. Якщо питання здається страшним, знайди в ньому маркер: АБО/І, порядок, база відсотка, граматична форма, роль IT-компонента.</p>
+    </div>
+  </section>
+
+  <section class="section page-break">
+    <div class="module">
+      <div class="kicker">Карта</div>
+      <h2>🧭 Які блоки закриває посібник</h2>
+      <div class="toc">
+        <div><b>Блок 01</b><br>🧠 ТЗНК: комбінаторика, логіка, відсотки, висновки</div><div><b>Блок 02</b><br>🇬🇧 English: grammar, use of English, reading evidence</div><div><b>Блок 03</b><br>💻 IT: programming, OOP, algorithms, databases, networks, OS, security, ML</div>
+      </div>
+      <div class="callout">
+        <b>Головна ідея:</b> тест не питає “чи знайоме слово”. Він питає, чи можна відрізнити сусідні поняття. Тому в кожному блоці є “де ловлять”.
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="section page-break">
+    <div class="module">
+      <div class="kicker">Блок 01</div>
+      <h2>🧠 ТЗНК: комбінаторика, логіка, відсотки, висновки</h2>
+      <div class="goal"><b>Мета:</b> Навчитися не вгадувати формулу, а розпізнавати тип задачі за словами: або, і, порядок, без повторів, хоча б один, істинне/хибне.</div>
+      <div class="map"><span>АБО → сума</span><span>І / послідовність → добуток</span><span>порядок важливий</span><span>порядок не важливий</span><span>обмеження</span><span>must be true</span></div>
+      <div class="callout science"><b>Науково:</b> ТЗНК перевіряє формалізацію умови. Треба перетворити текст на структуру: вибір з альтернатив, послідовність дій, множину без порядку, логічне твердження або відсоткову зміну від бази.</div>
+      <div class="callout life"><b>Приклад у житті:</b> Уяви меню. Якщо можна взяти каву або чай, варіанти додаються. Якщо треба взяти напій і десерт, варіанти множаться. Якщо обираємо комісію з людей, порядок не важливий. Якщо призначаємо президента і секретаря, порядок важливий.</div>
+      <h3>Піддисципліни всередині блоку</h3>
+      <div class="grid"><div class="card"><h4>Комбінаторика: правило суми</h4><p>Правило суми працює, коли треба обрати один варіант з кількох неперетинних груп. Маркери: або, один із, будь-який з цих об'єктів.</p><pre><code>a має 6 способів, b має 4 способи.
+Обрати один: a або b.
+Це не пара (a,b), а одна доріжка.
+6 + 4 = 10</code></pre></div><div class="card"><h4>Комбінаторика: правило добутку</h4><p>Правило добутку працює, коли треба виконати кілька кроків разом: спочатку A, потім B. Маркери: і, пара, послідовність, код, маршрут.</p><pre><code>3 сорочки і 4 пари штанів.
+Образ = сорочка + штани.
+3 * 4 = 12</code></pre></div><div class="card"><h4>Перестановки та розміщення</h4><p>Якщо порядок важливий, A-B і B-A різні. Для k місць з n об'єктів без повторів: n*(n-1)*... стільки множників, скільки місць.</p><pre><code>Президент і секретар з 5 людей:
+5 варіантів на президента
+4 варіанти на секретаря
+5 * 4 = 20</code></pre></div><div class="card"><h4>Комбінації</h4><p>Якщо порядок не важливий, A-B і B-A однакова група. Тоді ділимо на кількість перестановок усередині вибраної групи.</p><pre><code>Обрати 3 людей з 8:
+C(8,3)=8*7*6/(3*2*1)=56</code></pre></div><div class="card"><h4>Обмеження та заборонені випадки</h4><p>Спершу рахуємо всі можливі варіанти, потім віднімаємо заборонені. Це зручно, коли заборону легше порахувати, ніж дозволені варіанти.</p><pre><code>Комісія з 3 людей з 8, A і B не разом.
+Усі: C(8,3)=56
+Заборонені: A і B + 1 з решти 6 = 6
+Дозволені: 56 - 6 = 50</code></pre></div><div class="card"><h4>Логіка: якщо P, то Q</h4><p>Імплікація P → Q хибна тільки в одному випадку: P істинне, а Q хибне. Якщо умова не виконалась, обіцянка формально не порушена.</p><pre><code>Якщо прибереш кімнату (P), отримаєш цукерку (Q).
+Порушення тільки так:
+прибрав, але цукерку не отримав.</code></pre></div><div class="card"><h4>Відсотки</h4><p>Відсоток завжди рахується від поточної бази. +20%, а потім -20% не повертає до початкового числа.</p><pre><code>100 + 20% = 120
+120 - 20% = 96
+Не 100, бо друга база вже 120.</code></pre></div><div class="card"><h4>Текстові висновки</h4><p>Must be true означає: відповідь обов'язково випливає з умови. Не можна додавати здоровий глузд, симпатичну версію або припущення.</p><pre><code>Якщо A &gt; B і B &gt; C,
+то A &gt; C обов'язково.
+А от 'A найкращий' не випливає.</code></pre></div></div>
+      <h3>Як розв'язувати на тесті</h3>
+      <div class="grid"><div class="card"><h4>П'ять питань перед формулою</h4><p>Перед обчисленням постав ці питання. Вони майже завжди показують, що робити: додавати, множити, ділити на перестановки або віднімати заборонене.</p><pre><code>1. Обираємо одне чи кілька?
+2. Є слово АБО чи І?
+3. Порядок важливий?
+4. Повтори дозволені?
+5. Є заборона / 'хоча б один'?</code></pre></div><div class="card"><h4>Як вирішити приклад a або b</h4><p>Умова каже: обрати один. Це не означає взяти a і b разом. Є 6 доріжок через a і 4 доріжки через b.</p><pre><code>a: a1 a2 a3 a4 a5 a6
+b: b1 b2 b3 b4
+Разом доріжок: 6+4=10</code></pre></div><div class="card"><h4>Хоча б один</h4><p>Часто легше рахувати через доповнення: усі варіанти мінус жодного потрібного.</p><pre><code>У паролі має бути хоча б одна цифра.
+Дозволені = усі паролі - паролі без цифр.</code></pre></div><div class="card"><h4>Логічна імплікація</h4><p>Не думай морально, думай формально. Обіцянку порушено тільки коли умова виконана, а результат не настав.</p><pre><code>P true, Q true  → правило true
+P true, Q false → правило false
+P false, Q true → правило true
+P false, Q false → правило true</code></pre></div></div>
+      <h3>Типові пастки: де ловлять</h3>
+      <div class="callout trap"><ul><li><b>Множать там, де треба додати.</b><span>Якщо в умові 'a або b', це альтернативи. Ми не створюємо пару a-b, тому 6*4 буде пасткою.</span><em>Обрати будь-який з об'єктів a або b → 6+4.</em></li><li><b>Додають там, де треба множити.</b><span>Якщо один результат складається з кількох частин, кожна перша опція поєднується з кожною другою.</span><em>Логін і пароль, сорочка і штани, маршрут з двох ділянок.</em></li><li><b>Не ділять комбінації на повтори порядку.</b><span>Комісія {A,B,C} не змінюється від перестановки B,C,A. Якщо порядок не важливий, перестановки всередині групи треба прибрати.</span><em>C(8,3)=8*7*6/(3*2*1), не 8*7*6.</em></li><li><b>Must be true плутають з 'може бути правдою'.</b><span>У тесті треба брати лише те, що гарантовано випливає з умови. Можливі життєві пояснення не рахуються.</span><em>Якщо сказано 'деякі', не можна робити висновок 'усі'.</em></li><li><b>Відсотки рахують від старої бази.</b><span>Після кожної зміни база стає новою. Тому +20% і -20% не компенсують одне одного.</span><em>100 → 120 → 96.</em></li></ul></div>
+      <h3>Міні-дрил</h3>
+      <div class="grid"><div class="card"><h4>Дрил 1: АБО чи І</h4><p>Підкреслюй у задачі слово, яке вирішує дію.</p><pre><code>один із / або / будь-який → додати
+пара / код / послідовність / і → помножити</code></pre></div><div class="card"><h4>Дрил 2: порядок</h4><p>Питай: якщо поміняти місцями, це новий результат?</p><pre><code>президент-секретар: так → порядок важливий
+комісія з 3 людей: ні → комбінація</code></pre></div><div class="card"><h4>Дрил 3: обмеження</h4><p>Якщо є 'не разом', 'хоча б один', 'без', часто вигідно рахувати через заборонене.</p><pre><code>дозволені = усі - заборонені</code></pre></div></div>
+    </div>
+  </section>
+  <section class="section page-break">
+    <div class="module">
+      <div class="kicker">Блок 02</div>
+      <h2>🇬🇧 English: grammar, use of English, reading evidence</h2>
+      <div class="goal"><b>Мета:</b> Зібрати граматику не як список часів, а як систему маркерів: форма дієслова, часова рамка, прийменник, linker, доказ у тексті.</div>
+      <div class="map"><span>tenses</span><span>passive</span><span>conditionals</span><span>modals</span><span>collocations</span><span>reading</span></div>
+      <div class="callout science"><b>Науково:</b> Use of English перевіряє, чи підходить форма слова граматично й лексично. Reading перевіряє не пам'ять, а доказ: правильна відповідь має опору в тексті.</div>
+      <div class="callout life"><b>Приклад у житті:</b> Речення як пазл. Якщо одна деталь не підходить за формою, весь пазл кривий: час, прийменник, артикль, linker і сенс мають стати разом.</div>
+      <h3>Піддисципліни всередині блоку</h3>
+      <div class="grid"><div class="card"><h4>Tenses: часова рамка</h4><p>Час показує, коли дія відбувається і чи важливий результат. Не перекладай дослівно, шукай маркери: yesterday, already, since, while, by the time.</p><pre><code>Past Simple: I studied yesterday.
+Present Perfect: I have studied this topic already.
+Past Continuous: I was studying when she called.</code></pre></div><div class="card"><h4>Passive voice</h4><p>Passive потрібен, коли важливий об'єкт дії, а не виконавець. Формула: be + V3.</p><pre><code>The committee reviewed the report.
+The report was reviewed by the committee.</code></pre></div><div class="card"><h4>Conditionals</h4><p>Conditionals показують тип умови: факт, реальна майбутня умова, нереальна теперішня, нереальна минула.</p><pre><code>0: If water boils, it evaporates.
+1: If I study, I will pass.
+2: If I studied more, I would pass.
+3: If I had studied, I would have passed.</code></pre></div><div class="card"><h4>Modals</h4><p>Modals показують силу твердження: must - необхідність або сильний висновок, may/might - можливість, should - порада, can/could - здатність або можливість.</p><pre><code>You must wear a helmet. = obligation
+She might be late. = possibility
+He must be tired. = strong deduction</code></pre></div><div class="card"><h4>Collocations and prepositions</h4><p>У тестах часто питають сталі поєднання. Їх не завжди можна вивести логікою з української.</p><pre><code>depend on
+responsible for
+interested in
+similar to
+different from
+pay attention to
+take part in</code></pre></div><div class="card"><h4>Reading evidence</h4><p>Правильна відповідь не має бути просто 'розумною'. Вона має бути підтверджена фразою в тексті або дуже близьким перефразуванням.</p><pre><code>Text: The number declined slightly.
+Correct paraphrase: It decreased a little.
+Wrong: It collapsed dramatically.</code></pre></div></div>
+      <h3>Як розв'язувати на тесті</h3>
+      <div class="grid"><div class="card"><h4>Use of English: порядок дій</h4><p>Спершу визнач роль пропуску: дієслово, іменник, прикметник, прийменник, linker. Потім перевір граматику зліва і справа.</p><pre><code>The report ___ by the committee.
+by the committee → passive
+was reviewed</code></pre></div><div class="card"><h4>Reading: доказ перед відповіддю</h4><p>Перед вибором знайди в тексті речення-доказ. Якщо доказу немає, відповідь може бути пасткою.</p><pre><code>Question: What can be inferred?
+Good answer = обережний висновок з тексту
+Bad answer = додана фантазія</code></pre></div><div class="card"><h4>Linkers</h4><p>Linker змінює логіку речення: contrast, cause, result, addition. Не дивись тільки на переклад, дивись на відношення між частинами.</p><pre><code>although + clause
+however, + sentence
+despite + noun/gerund
+because + reason
+therefore + result</code></pre></div></div>
+      <h3>Типові пастки: де ловлять</h3>
+      <div class="callout trap"><ul><li><b>Second і Third Conditional плутають.</b><span>Second говорить про нереальну теперішню/майбутню ситуацію. Third говорить про минуле, яке вже не змінити.</span><em>If I had known, I would have helped. Це third.</em></li><li><b>Present Perfect плутають з Past Simple.</b><span>Past Simple має завершений час у минулому. Present Perfect часто має результат зараз або період, що триває до тепер.</span><em>I lost my key yesterday. / I have lost my key, so I can't enter.</em></li><li><b>Дослівний переклад прийменників.</b><span>English collocations часто не збігаються з українською логікою.</span><em>depend on, не depend from.</em></li><li><b>Reading inference роблять занадто широким.</b><span>Inference має бути обережним. Якщо в тексті 'some', не можна відповідати 'all'. Якщо 'slightly', не можна 'dramatically'.</span><em>probably / suggests / may indicate - обережніші за proves.</em></li></ul></div>
+      <h3>Міні-дрил</h3>
+      <div class="grid"><div class="card"><h4>Дрил 1: conditionals</h4><p>Дивись на форму після if.</p><pre><code>present → 0/1
+past → 2
+had + V3 → 3</code></pre></div><div class="card"><h4>Дрил 2: reading</h4><p>Для кожної відповіді пиши поруч слово-доказ з тексту.</p><pre><code>Answer A → line 4: 'however'
+Answer B → no evidence → reject</code></pre></div><div class="card"><h4>Дрил 3: collocations</h4><p>Вчи не окреме слово, а пару.</p><pre><code>responsible FOR
+interested IN
+similar TO
+capable OF</code></pre></div></div>
+    </div>
+  </section>
+  <section class="section page-break">
+    <div class="module">
+      <div class="kicker">Блок 03</div>
+      <h2>💻 IT: programming, OOP, algorithms, databases, networks, OS, security, ML</h2>
+      <div class="goal"><b>Мета:</b> Покрити IT як карту піддисциплін: що означає поняття, де воно живе в системі, чим відрізняється від схожого, на чому ловлять у тестах.</div>
+      <div class="map"><span>programming</span><span>OOP</span><span>algorithms</span><span>SQL</span><span>networks</span><span>OS</span><span>security</span><span>ML</span></div>
+      <div class="callout science"><b>Науково:</b> IT-тест перевіряє базову комп'ютерну грамотність на рівні понять і ролей: що робить компонент, на якому рівні працює, які дані приймає, який результат дає.</div>
+      <div class="callout life"><b>Приклад у житті:</b> Думай про IT як про місто. Програми - це сервіси, БД - архів, мережа - дороги й адреси, ОС - диспетчер ресурсів, security - замки й правила доступу, ML - модель, яка вчиться на прикладах.</div>
+      <h3>Піддисципліни всередині блоку</h3>
+      <div class="grid"><div class="card"><h4>Procedural programming</h4><p>Процедурне програмування описує послідовність кроків: змінні, умови, цикли, функції. Питання часто питають, що буде після виконання коду.</p><pre><code>let x = 2;
+x = x + 3;
+if (x &gt; 4) x = x * 2;
+// x = 10</code></pre></div><div class="card"><h4>Compiler, interpreter, linker</h4><p>Compiler перекладає код у машинний/об'єктний код. Interpreter виконує код поступово. Linker збирає кілька об'єктних модулів в один виконуваний модуль.</p><pre><code>source code → compiler → object files
+object files + libraries → linker → executable</code></pre></div><div class="card"><h4>OOP</h4><p>Class - шаблон. Object - конкретний екземпляр. Encapsulation ховає внутрішній стан. Inheritance моделює is-a. Polymorphism дозволяє однаковий виклик з різною поведінкою.</p><pre><code>class Animal { speak(){} }
+class Dog extends Animal { speak(){ return 'woof'; } }
+class Cat extends Animal { speak(){ return 'meow'; } }</code></pre></div><div class="card"><h4>Algorithms and Big-O</h4><p>Big-O описує, як зростає кількість операцій при збільшенні вхідних даних. Не рахує точний час, а форму росту.</p><pre><code>O(1) direct access
+O(log n) binary search
+O(n) one loop
+O(n^2) nested loops</code></pre></div><div class="card"><h4>Data structures</h4><p>Array дає швидкий доступ за індексом. Stack працює LIFO. Queue працює FIFO. Hash table шукає за ключем. Tree має ієрархію.</p><pre><code>stack: last in, first out
+queue: first in, first out
+hash table: key → value</code></pre></div><div class="card"><h4>Databases and SQL</h4><p>Relational DB зберігає дані в таблицях. Primary key унікально визначає рядок. Foreign key посилається на іншу таблицю. GRANT дає права доступу.</p><pre><code>SELECT department, COUNT(*)
+FROM employees
+WHERE active = true
+GROUP BY department
+HAVING COUNT(*) &gt; 5;</code></pre></div><div class="card"><h4>Networks</h4><p>Switch пересилає кадри за MAC-адресами в LAN. Router маршрутизує пакети за IP. DNS перетворює домен на IP. DHCP видає мережеві налаштування.</p><pre><code>switch → MAC / layer 2
+router → IP / layer 3
+TCP → reliable
+UDP → fast, no delivery guarantee</code></pre></div><div class="card"><h4>Operating systems</h4><p>OS керує процесами, потоками, пам'яттю, файлами, правами доступу й пристроями введення/виведення.</p><pre><code>process = running program
+thread = execution path inside process
+RAM = volatile memory
+file system = organized storage</code></pre></div><div class="card"><h4>Cybersecurity and cryptography</h4><p>Hash односторонній відбиток. Encryption зворотне шифрування з ключем. Authentication перевіряє хто ти. Authorization перевіряє що тобі дозволено.</p><pre><code>Kupyna = hash function
+AES / Rijndael = block cipher
+TLS protects HTTPS
+least privilege = мінімум прав</code></pre></div><div class="card"><h4>Data Science / ML</h4><p>Classification прогнозує клас. Regression прогнозує число. Clustering групує без міток. PCA зменшує розмірність. SVM шукає межу з максимальним margin.</p><pre><code>spam / not spam → classification
+price tomorrow → regression
+customer groups → clustering</code></pre></div></div>
+      <h3>Як розв'язувати на тесті</h3>
+      <div class="grid"><div class="card"><h4>Як відповідати на IT-визначення</h4><p>Знайди ключову дію в питанні: збирає, виконує, маршрутизує, шифрує, хешує, нормалізує, класифікує.</p><pre><code>збирає object modules → linker
+виконує code line by line → interpreter
+translates source code → compiler</code></pre></div><div class="card"><h4>Як не плутати мережі</h4><p>Запам'ятай ролі, не назви. Switch всередині LAN, router між мережами, DNS для імен, DHCP для налаштувань.</p><pre><code>domain → DNS → IP
+new laptop joins Wi-Fi → DHCP gives IP
+packet to another network → router</code></pre></div><div class="card"><h4>Як не плутати security</h4><p>Hash не розшифровують. Encryption розшифровують. Signature доводить автора/цілісність. TLS захищає канал.</p><pre><code>password storage → hash
+private message → encryption
+software release proof → digital signature</code></pre></div><div class="card"><h4>Як читати код у тесті</h4><p>Створи маленьку таблицю значень змінних після кожного рядка. Не тримай все в голові.</p><pre><code>i | x
+0 | 1
+1 | 2
+2 | 4
+3 | 8</code></pre></div></div>
+      <h3>Типові пастки: де ловлять</h3>
+      <div class="callout trap"><ul><li><b>Class і object плутають.</b><span>Class - шаблон. Object - конкретний створений екземпляр.</span><em>Dog як порода/тип - class; конкретний пес Бім - object.</em></li><li><b>Inheritance плутають з composition.</b><span>Inheritance = is-a. Composition = has-a / part-of.</span><em>Car has Engine, але Car is not Engine.</em></li><li><b>WHERE і HAVING міняють місцями.</b><span>WHERE фільтрує рядки до групування. HAVING фільтрує групи після GROUP BY.</span><em>WHERE active=true; HAVING COUNT(*)>5.</em></li><li><b>Switch і router плутають.</b><span>Switch працює з MAC у локальній мережі. Router працює з IP між мережами.</span><em>Комутатор у LAN пересилає кадри за MAC.</em></li><li><b>Hash і encryption плутають.</b><span>Hash не має нормального 'розшифрування'. Encryption має зворотне перетворення з ключем.</span><em>Kupyna - hash; AES/Rijndael - cipher.</em></li><li><b>Classification і regression плутають.</b><span>Classification дає категорію. Regression дає число.</span><em>хворий/здоровий → classification; температура завтра → regression.</em></li></ul></div>
+      <h3>Міні-дрил</h3>
+      <div class="grid"><div class="card"><h4>Дрил 1: ролі систем</h4><p>Для кожного терміна пиши одну дію.</p><pre><code>compiler → translates
+linker → combines
+router → routes
+DNS → resolves
+GRANT → grants permissions</code></pre></div><div class="card"><h4>Дрил 2: SQL-порядок</h4><p>Тримай порядок виконання як ланцюжок.</p><pre><code>FROM → WHERE → GROUP BY → HAVING → SELECT → ORDER BY</code></pre></div><div class="card"><h4>Дрил 3: ML-питання</h4><p>Питай, який тип відповіді очікується.</p><pre><code>class label → classification
+numeric value → regression
+hidden groups → clustering
+reduce variables → PCA</code></pre></div></div>
+    </div>
+  </section>
+
+  <section class="section page-break">
+    <div class="module">
+      <div class="kicker">Фінальна карта</div>
+      <h2>✅ Чекліст перед тестом</h2>
+      <div class="grid">
+        <div class="card"><h4>ТЗНК</h4><p>Перед формулою відповісти: АБО чи І? порядок важливий? повтори дозволені? є заборона? це must be true чи may be true?</p><pre><code>OR -&gt; add
+AND/sequence -&gt; multiply
+order matters -&gt; arrangements
+order not matters -&gt; combinations
+forbidden -&gt; total - forbidden</code></pre></div>
+        <div class="card"><h4>English</h4><p>Перед відповіддю знайти граматичну роль і доказ у тексті. Не перекладати прийменники дослівно.</p><pre><code>if + had V3 -&gt; third conditional
+be + V3 -&gt; passive
+although + clause
+despite + noun/gerund</code></pre></div>
+        <div class="card"><h4>IT</h4><p>Для кожного терміна назвати роль. Якщо роль інша, відповідь інша, навіть якщо слово звучить знайомо.</p><pre><code>switch -&gt; MAC
+router -&gt; IP
+DNS -&gt; name to IP
+GRANT -&gt; permissions
+hash -&gt; one-way
+classification -&gt; class</code></pre></div>
+        <div class="card"><h4>Як тренуватися</h4><p>Після кожної помилки записати не тільки правильну відповідь, а тип пастки.</p><pre><code>1. confused terms
+2. missed keyword
+3. wrong formula
+4. added assumption
+5. guessed grammar</code></pre></div>
+      </div>
+    </div>
+  </section>
+  <section class="section page-break">
+    <div class="module">
+      <div class="kicker">Оновлення v16</div>
+      <h2>🧭 Карта підготовки: що саме треба вміти на тесті</h2>
+      <div class="goal"><b>Мета:</b> не просто впізнавати правильну відповідь, а розуміти, за якою ознакою вона правильна. На реальному тесті часто перевіряють не термін, а межу між двома схожими термінами.</div>
+      <div class="grid">
+        <div class="card"><h4>🧠 ТЗНК</h4><p>Логіка висловлювань, комбінаторика, відсотки, таблиці, графіки, висновки з тексту. Головне питання: що саме дозволено умовою, а що ми додумали самі?</p></div>
+        <div class="card"><h4>🇬🇧 English</h4><p>Grammar in context, Use of English, reading for evidence, linkers, collocations. Головне питання: яка граматична роль слова в реченні і де доказ у тексті?</p></div>
+        <div class="card"><h4>💻 IT</h4><p>Програмування, ООП, алгоритми, архітектура, ОС, мережі, БД, безпека, ML/Data Science. Головне питання: яку роль виконує об'єкт, команда або технологія?</p></div>
+      </div>
+      <div class="callout science"><b>Науково:</b> екзамен будується на класифікації. Якщо поняття мають схожі слова, тест перевіряє ознаку розрізнення: порядок важливий чи ні, дія одна чи послідовна, права доступу чи запит даних, switch чи router, inheritance чи composition.</div>
+      <div class="callout life"><b>Приклад у житті:</b> якщо в меню написано "кава або чай", це правило суми. Якщо написано "напій і десерт", це правило добутку. Якщо "обери 3 людей у комісію", порядок не важливий. Якщо "президент, секретар, бухгалтер", порядок важливий, бо ролі різні.</div>
+    </div>
+  </section>
+
+  <section class="section page-break">
+    <div class="module">
+      <div class="kicker">Блок 10 / поглиблено</div>
+      <h2>🧠 ТЗНК: комбінаторика без паніки</h2>
+      <div class="goal"><b>Фокус:</b> навчитися бачити дію в умові: "або", "і", "порядок важливий", "порядок не важливий", "заборонено", "принаймні", "рівно".</div>
+      <h3>Піддисципліни всередині блоку</h3>
+      <div class="grid">
+        <div class="card"><h4>🧩 Правило суми</h4><p>Використовуємо, коли треба обрати один варіант з кількох неперетинних груп: A або B. Варіанти не виконуються разом.</p><pre><code>a можна вибрати 6 способами, b - 4 способами.
+Обрати один: a або b.
+Разом: 6 + 4 = 10</code></pre></div>
+        <div class="card"><h4>🧩 Правило добутку</h4><p>Використовуємо, коли вибір складається з кількох кроків: спочатку A, потім B. Кожен варіант A може поєднатися з кожним варіантом B.</p><pre><code>3 напої і 4 десерти.
+Обрати напій і десерт.
+Разом: 3 * 4 = 12</code></pre></div>
+        <div class="card"><h4>🧮 Перестановки</h4><p>Порядок важливий, і використовуються всі об'єкти. Якщо 4 людини стають у чергу, А-Б-В-Г і Б-А-В-Г - різні варіанти.</p><pre><code>4 людини в чергу:
+4! = 4 * 3 * 2 * 1 = 24</code></pre></div>
+        <div class="card"><h4>🧮 Розміщення</h4><p>Порядок важливий, але використовуються не всі об'єкти. Наприклад, з 8 людей треба обрати президента і секретаря.</p><pre><code>A(8,2) = 8 * 7 = 56
+бо перша роль має 8 варіантів,
+друга - 7 після першого вибору</code></pre></div>
+        <div class="card"><h4>🧮 Комбінації</h4><p>Порядок не важливий. Комісія {А, Б, В} - це та сама комісія, що {В, Б, А}. Тому ділимо на кількість перестановок усередині групи.</p><pre><code>C(8,3) = 8 * 7 * 6 / (3 * 2 * 1) = 56</code></pre></div>
+        <div class="card"><h4>🚧 Заборонені варіанти</h4><p>Спочатку рахуємо всі варіанти, потім віднімаємо ті, які порушують умову. Це часто найпростіший шлях.</p><pre><code>Комісія з 3 людей із 8, А і Б не можуть бути разом.
+Усі: C(8,3)=56
+Погані: А і Б уже взяті, третій з решти 6
+Правильні: 56 - 6 = 50</code></pre></div>
+      </div>
+      <h3>Як розв'язувати задачу "a - 6 способів, b - 4 способи, обрати один"</h3>
+      <div class="grid">
+        <div class="card"><h4>Крок 1: знайти ключове слово</h4><p>Умова каже: обрати один: a або b. Слово 'або' означає, що ми не будуємо пару (a,b), а відкриваємо дві окремі доріжки.</p><pre><code>доріжка A: 6 варіантів
+доріжка B: 4 варіанти</code></pre></div>
+        <div class="card"><h4>Крок 2: перевірити, чи дії одночасні</h4><p>Якщо треба було б обрати a і b, тоді було б 6*4. Але тут треба обрати будь-який один об'єкт з двох типів.</p><pre><code>не пара: (a,b)
+а один вибір: або a, або b</code></pre></div>
+        <div class="card"><h4>Крок 3: скласти доріжки</h4><p>Коли доріжки альтернативні, додаємо. Коли кроки послідовні, множимо.</p><pre><code>6 + 4 = 10</code></pre></div>
+        <div class="card"><h4>Пастка</h4><p>Тест часто дає варіант 24, бо мозок бачить два числа і хоче множити. Але множення - тільки коли обидва вибори потрібні одночасно.</p><pre><code>обрати a або b -&gt; +
+обрати a і b -&gt; *</code></pre></div>
+      </div>
+      <div class="callout trap"><ul>
+        <li><b>Слова 'будь-який з цих об'єктів' часто означають суму.</b><span>Бо треба один об'єкт з об'єднання груп, а не набір з двох об'єктів.</span><em>m способів для a, n способів для b -&gt; m+n</em></li>
+        <li><b>Слова 'пара', 'послідовність', 'код', 'маршрут' часто означають добуток.</b><span>Бо результат складається з кількох позицій, і кожна позиція має свої варіанти.</span><em>2 літери і 3 цифри -&gt; 26*26*10*10*10</em></li>
+        <li><b>'Не разом', 'без', 'крім' часто зручно рахувати через віднімання.</b><span>Усі варіанти мінус заборонені майже завжди простіше, ніж будувати правильні з нуля.</span></li>
+        <li><b>'Принаймні один' часто зручно рахувати через доповнення.</b><span>Принаймні один = усі варіанти мінус жодного.</span><em>хоча б одна дівчина = усі команди - команди без дівчат</em></li>
+      </ul></div>
+    </div>
+  </section>
+
+  <section class="section page-break">
+    <div class="module">
+      <div class="kicker">Блок 10 / логіка</div>
+      <h2>🧠 ТЗНК: імплікація, висновки, таблиці, графіки</h2>
+      <div class="grid">
+        <div class="card"><h4>✅ Імплікація P → Q</h4><p>Фраза 'якщо P, то Q' хибна тільки в одному випадку: P істинне, а Q хибне. Обіцянка порушена лише тоді, коли умову виконали, а результат не дали.</p><pre><code>Якщо прибереш кімнату (P), отримаєш цукерку (Q).
+P=true, Q=false -&gt; брехня.
+Інші випадки -&gt; правило не порушено.</code></pre></div>
+        <div class="card"><h4>✅ Must be true</h4><p>Потрібно вибрати те, що неминуче випливає з умови. Не те, що ймовірно, знайомо або звучить розумно.</p><pre><code>Якщо A&gt;B і B&gt;C,
+то A&gt;C обов'язково.
+А от 'A найбільше у світі' не випливає.</code></pre></div>
+        <div class="card"><h4>📊 Таблиці</h4><p>Спершу читаємо назви рядків і колонок, потім одиниці виміру. Пастка: порівняти відсотки з різних баз.</p><pre><code>20% від 100 = 20
+20% від 50 = 10
+Однаковий відсоток не означає однакову кількість.</code></pre></div>
+        <div class="card"><h4>📈 Графіки функцій</h4><p>Лінійна функція дає пряму. Квадратична - параболу. Обернена пропорційність y=1/x має дві гілки. Експонента швидко росте або спадає.</p><pre><code>y=x -&gt; пряма
+y=x^2 -&gt; парабола
+y=1/x -&gt; гіпербола
+y=2^x -&gt; експонента</code></pre></div>
+        <div class="card"><h4>🧮 Логарифм</h4><p>Логарифм питає: до якого степеня треба піднести основу, щоб отримати число. Це обернена дія до експоненти.</p><pre><code>2^3 = 8
+log2(8) = 3</code></pre></div>
+        <div class="card"><h4>🧮 Відсотки</h4><p>Завжди питай: від якої бази рахуємо? Збільшення і зменшення на той самий відсоток не повертає до початкового числа.</p><pre><code>100 + 20% = 120
+120 - 20% = 96</code></pre></div>
+      </div>
+      <div class="callout science"><b>Науково:</b> логічні задачі перевіряють не пам'ять, а валідність переходу від умови до висновку. Комбінаторика перевіряє структуру простору варіантів: альтернативи додаються, незалежні кроки множаться, порядок або зберігається, або стирається діленням.</div>
+      <div class="callout life"><b>Приклад у житті:</b> якщо доставка каже "якщо замовлення до 12:00, привеземо сьогодні", вона збрехала тільки тоді, коли замовлення було до 12:00, а доставка не приїхала сьогодні. Якщо замовлення було після 12:00, правило нічого не обіцяло.</div>
+    </div>
+  </section>
+
+  <section class="section page-break">
+    <div class="module">
+      <div class="kicker">Блок 11 / English</div>
+      <h2>🇬🇧 English: що реально ловлять</h2>
+      <div class="grid">
+        <div class="card"><h4>⏱️ Tenses</h4><p>Час обираємо не за перекладом, а за маркером і логікою події. Present Perfect - результат до тепер. Past Simple - завершений час у минулому. Past Continuous - дія в процесі в минулому.</p><pre><code>I have already finished.
+I finished yesterday.
+I was reading when he called.</code></pre></div>
+        <div class="card"><h4>🔁 Passive voice</h4><p>Якщо важливий об'єкт дії, а не виконавець, часто потрібен passive: be + V3.</p><pre><code>The report was prepared yesterday.
+The data are stored in a database.</code></pre></div>
+        <div class="card"><h4>🔀 Conditionals</h4><p>Умовні речення перевіряють реальність ситуації: реальна, малоймовірна, минула нереальна.</p><pre><code>If it rains, we will stay home.
+If I knew, I would tell you.
+If I had known, I would have told you.</code></pre></div>
+        <div class="card"><h4>🧷 Modals</h4><p>must - внутрішня необхідність або сильний висновок. have to - зовнішнє правило. should - порада. may/might - можливість.</p><pre><code>You must be tired. -&gt; сильний висновок
+You have to submit the form. -&gt; правило</code></pre></div>
+        <div class="card"><h4>🧱 Articles</h4><p>a/an - один із багатьох, the - конкретний або вже відомий. Нульовий артикль часто з абстрактними/загальними поняттями.</p><pre><code>a database -&gt; якась база
+the database -&gt; конкретна база</code></pre></div>
+        <div class="card"><h4>🧲 Collocations</h4><p>На тесті часто треба знати не переклад, а природну пару слів: make a decision, do research, depend on, responsible for.</p><pre><code>make a mistake
+do homework
+depend on
+interested in</code></pre></div>
+        <div class="card"><h4>🔗 Linkers</h4><p>however - контраст, therefore - наслідок, although - контраст усередині речення, because - причина, despite - після нього noun/gerund.</p><pre><code>Although it was late, we continued.
+Despite being tired, we continued.</code></pre></div>
+        <div class="card"><h4>🔎 Reading</h4><p>Не шукай 'красиву' відповідь. Шукай рядок-доказ. Якщо відповідь ширша за текст або додає припущення, вона підозріла.</p><pre><code>Question asks: why?
+Find because / reason / caused by.
+Then compare wording, not emotion.</code></pre></div>
+      </div>
+      <div class="callout trap"><ul>
+        <li><b>Переклад прийменника дослівно</b><span>Українське 'залежить від' не допомагає, англійською буде depend on.</span></li>
+        <li><b>Плутанина despite / although</b><span>Despite + noun/gerund. Although + повне речення з підметом і присудком.</span><em>despite the rain / although it rained</em></li>
+        <li><b>Present Perfect vs Past Simple</b><span>Already/just/yet часто тягнуть Perfect, yesterday/last year - Past Simple.</span></li>
+        <li><b>Reading: відповідь звучить логічно, але її нема в тексті</b><span>На іспиті правильна відповідь має мати доказ, а не просто бути правдоподібною.</span></li>
+      </ul></div>
+    </div>
+  </section>
+
+  <section class="section page-break">
+    <div class="module">
+      <div class="kicker">Блоки IT / повна рамка</div>
+      <h2>💻 IT: піддисципліни, які треба впізнавати</h2>
+      <div class="grid">
+        <div class="card"><h4>🧱 Процедурне програмування</h4><p>Програма організована як послідовність команд і процедур. Дані й функції часто існують окремо.</p><pre><code>function volumeUp(device) {
+  device.volume += 1;
+}</code></pre></div>
+        <div class="card"><h4>🧱 ООП: клас і об'єкт</h4><p>Клас - шаблон. Об'єкт - конкретний екземпляр. Інкапсуляція ховає внутрішній стан і дає керований доступ.</p><pre><code>class Speaker {
+  volume = 10;
+  up() { this.volume++; }
+}
+const jbl = new Speaker();</code></pre></div>
+        <div class="card"><h4>🧱 Наслідування</h4><p>Новий клас отримує властивості й методи базового класу. Це 'is-a': ноутбук є пристроєм. Пастка: не плутати з композицією, де об'єкт має інший об'єкт.</p><pre><code>class Device {}
+class Laptop extends Device {}
+// Laptop is a Device</code></pre></div>
+        <div class="card"><h4>🧱 Поліморфізм</h4><p>Одна команда викликає різну поведінку залежно від об'єкта. Як кнопка гучності: на телефоні змінює звук дзвінка, у плеєрі - медіа, у навушниках - локальний рівень.</p><pre><code>devices.forEach(d =&gt; d.volumeUp());
+// method name same,
+// behavior can differ</code></pre></div>
+        <div class="card"><h4>📈 Алгоритми і Big-O</h4><p>Big-O описує, як росте час/пам'ять при збільшенні входу. O(1) - стало, O(log n) - дуже повільний ріст, O(n) - лінійно, O(n²) - вкладені порівняння.</p><pre><code>binary search -&gt; O(log n)
+linear scan -&gt; O(n)
+nested loops -&gt; O(n^2)</code></pre></div>
+        <div class="card"><h4>🗃️ Структури даних</h4><p>Array швидко бере за індексом. Stack - останній зайшов, перший вийшов. Queue - перший зайшов, перший вийшов. Hash table шукає за ключем.</p><pre><code>stack.push(x); stack.pop();
+queue.enqueue(x); queue.dequeue();</code></pre></div>
+        <div class="card"><h4>🗄️ SQL і БД</h4><p>SELECT читає, JOIN з'єднує таблиці, WHERE фільтрує рядки до групування, HAVING фільтрує групи після GROUP BY, GRANT дає права.</p><pre><code>SELECT user_id, COUNT(*)
+FROM orders
+WHERE status='paid'
+GROUP BY user_id
+HAVING COUNT(*) &gt; 3;</code></pre></div>
+        <div class="card"><h4>🗄️ Моделі даних</h4><p>Концептуальна модель описує сутності бізнесу. Логічна - таблиці, ключі, зв'язки. Фізична - як це зберігає конкретна СУБД.</p><pre><code>student - course - enrollment
+PK: student_id
+FK: enrollment.student_id</code></pre></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section page-break">
+    <div class="module">
+      <div class="kicker">IT / networks, OS, security, ML</div>
+      <h2>🌐 Мережі, sysadmin/devops, безпека, Data Science</h2>
+      <div class="grid">
+        <div class="card"><h4>🌐 OSI</h4><p>OSI - модель із 7 рівнів. Для тесту важливо не вивчити все як вірш, а прив'язати приклади: фізика, кадр, пакет/IP, TCP/UDP, HTTP/DNS.</p><pre><code>L2: Ethernet, MAC, switch
+L3: IP, router
+L4: TCP/UDP, ports
+L7: HTTP, DNS, SMTP</code></pre></div>
+        <div class="card"><h4>🌐 Packet / frame / segment</h4><p>На L2 часто говорять frame і MAC. На L3 - packet і IP. На L4 - segment/datagram і ports. Пастка: switch не маршрутизує за IP як router.</p><pre><code>switch -&gt; MAC table
+router -&gt; routing table / IP
+DNS -&gt; domain to IP</code></pre></div>
+        <div class="card"><h4>🖥️ Sysadmin minimum</h4><p>Користувачі, права, процеси, журнали, служби, резервні копії, оновлення. На тесті питають роль: хто керує ресурсами і доступом.</p><pre><code>Linux:
+ps aux
+systemctl status nginx
+chmod 640 file
+journalctl -u service</code></pre></div>
+        <div class="card"><h4>🛠️ DevOps minimum</h4><p>DevOps - не тільки 'деплой'. Це CI/CD, автоматизація, контейнери, моніторинг, інфраструктура як код.</p><pre><code>git push -&gt; CI tests -&gt; build -&gt; deploy
+Dockerfile -&gt; image
+Kubernetes -&gt; orchestration</code></pre></div>
+        <div class="card"><h4>💾 Операційні системи</h4><p>ОС керує процесами, пам'яттю, файловою системою, пристроями та доступом. Kernel - ядро, shell - інтерфейс команд.</p><pre><code>process -&gt; scheduler
+RAM -&gt; memory manager
+file -&gt; filesystem
+USB -&gt; driver</code></pre></div>
+        <div class="card"><h4>🔐 Криптографія</h4><p>Hash - односторонній відбиток. Encryption - можна розшифрувати ключем. Digital signature - підтверджує автора й цілісність.</p><pre><code>Kupyna -&gt; hash
+AES/Rijndael -&gt; symmetric encryption
+RSA/ECDSA -&gt; signatures / asymmetric</code></pre></div>
+        <div class="card"><h4>🤖 ML / Data Science</h4><p>Classification передбачає клас, regression - число, clustering - групи без міток. SVM шукає гіперплощину з максимальним margin.</p><pre><code>classification: spam / not spam
+regression: price
+clustering: customer groups</code></pre></div>
+        <div class="card"><h4>📊 Data Engineering зв'язок</h4><p>Для екзамену не треба йти вглиб професії, але корисно бачити роль: SQL, сховища, ETL/ELT, якість даних, права доступу, моніторинг пайплайнів.</p><pre><code>source -&gt; extract -&gt; transform -&gt; warehouse
+quality checks -&gt; dashboard</code></pre></div>
+      </div>
+      <div class="callout trap"><ul>
+        <li><b>Switch vs router</b><span>Switch працює переважно на L2 і дивиться на MAC. Router працює на L3 і маршрутизує IP-пакети між мережами.</span></li>
+        <li><b>Hash vs encryption</b><span>Hash не 'розшифровують'. Якщо можна повернути оригінал ключем - це шифрування, не хеш.</span></li>
+        <li><b>Inheritance vs composition</b><span>Inheritance: Laptop is a Device. Composition: Laptop has a Battery.</span></li>
+        <li><b>WHERE vs HAVING</b><span>WHERE до групування, HAVING після групування. Якщо є агрегат COUNT/SUM у фільтрі - часто HAVING.</span></li>
+        <li><b>Compiler / interpreter / linker</b><span>Compiler перекладає код, interpreter виконує поступово, linker збирає об'єктні модулі в виконуваний модуль.</span></li>
+      </ul></div>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
