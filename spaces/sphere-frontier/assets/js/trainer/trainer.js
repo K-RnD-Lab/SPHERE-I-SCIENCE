@@ -7,7 +7,7 @@ let APPS_SCRIPT_URL="https://script.google.com/macros/s/AKfycbzDJy4ysMJpXiDXI1_n
 // i18n
 const I18N={
   ua:{
-    eyebrow:"K Mentorship Hub / 🧭 REAL-PREP-EDUCATION",
+    eyebrow:"K MENTORSHIP HUB / \u{1F9ED} REAL-PREP-EDUCATION",
     title:"Master Training",
     lede:"\u{1F91D} You've got this. Pick foundation, a sphere exam, or a combo path \u2014 and train.",
     subF:"\u{1F9EE} Logic, Math",
@@ -60,7 +60,7 @@ const I18N={
     totalAcc:"Overall accuracy (all sessions)"
   },
   en:{
-    eyebrow:"K Mentorship Hub / 🧭 REAL-PREP-EDUCATION",
+    eyebrow:"K MENTORSHIP HUB / \u{1F9ED} REAL-PREP-EDUCATION",
     title:"Master Training",
     lede:"\u{1F91D} You've got this. Pick foundation, a sphere exam, or a combo path \u2014 and train.",
     frontDoor:"Front Door",
@@ -119,7 +119,7 @@ function applyI18N(){
   if(ct&&at[state.analyticsType])ct.textContent=t(at[state.analyticsType]);
 }
 
-let state={sphere:null,level:"bachelor",subject:"all",mode:"practice",analyticsType:"descriptive",questions:[],currentIdx:0,answers:{},sessionStart:null,sessions:[],sessionLog:[],sheetsData:[]};
+let state={sphere:null,level:"bachelor",subject:"all",variant:1,mode:"practice",analyticsType:"descriptive",questions:[],currentIdx:0,answers:{},sessionStart:null,sessions:[],sessionLog:[],sheetsData:[],examBank:null};
 
 // One-time: clear stale localStorage (old entries without sphere/id cause duplicates)
 const _LS_VER="mt_v5";
@@ -254,6 +254,68 @@ document.getElementById("uiLang").addEventListener("change",e=>{
 // Question language is locked to EN (questions are in English)
 // qLang select stays disabled
 
+// Real exam bank adapter: keep the dark trainer UI, feed it the serious IT/TZNK/English bank.
+const EXAM_SUBJECT_BY_SPHERE={foundation:"tznk",F:"tznk",english:"english",T:"it"};
+const EXAM_LABELS={tznk:"ТЗНК",english:"English",it:"IT / Computer Science"};
+const CHOICE_KEYS=["A","B","C","D","E"];
+async function ensureExamBank(){
+  if(state.examBank)return state.examBank;
+  const res=await fetch("./app_data/quiz_bank_v1.json",{cache:"no-store"});
+  if(!res.ok)throw new Error("Cannot load quiz_bank_v1.json");
+  state.examBank=await res.json();
+  return state.examBank;
+}
+function examSubjectForState(){
+  return EXAM_SUBJECT_BY_SPHERE[state.sphere]||null;
+}
+function getExamSet(subject,variant){
+  if(!state.examBank||!state.examBank.quiz_sets)return null;
+  return Object.values(state.examBank.quiz_sets).find(set=>
+    Number(set.variant)===Number(variant)&&
+    Array.isArray(set.questions)&&
+    set.questions[0]&&set.questions[0].subject===subject
+  )||null;
+}
+function toTrainerQuestion(q,i){
+  const keys=CHOICE_KEYS.filter(k=>q.choices&&Object.prototype.hasOwnProperty.call(q.choices,k));
+  return {
+    q:q.prompt,
+    opts:keys.map(k=>q.choices[k]),
+    ans:keys.indexOf(q.correct_answer),
+    subject:EXAM_LABELS[q.subject]||q.subject,
+    idx:i,
+    id:q.id,
+    block:q.block,
+    topic:q.topic,
+    explanation:q.explanation||"",
+    choiceExplanations:q.choice_explanations||{},
+    scientific:q.scientific_explanation||"",
+    life:q.real_life_example||"",
+    sourceSubject:q.subject,
+    variant:q.variant
+  };
+}
+function ensureVariantControl(){
+  if(document.getElementById("variantFilter"))return;
+  const subject=document.getElementById("subjectFilter");
+  const row=subject&&subject.closest("div");
+  if(!row)return;
+  const wrap=document.createElement("label");
+  wrap.id="variantLabel";
+  wrap.innerHTML='<span>\u0412\u0430\u0440\u0456\u0430\u043d\u0442</span><select id="variantFilter"><option value="1">\u0412\u0430\u0440\u0456\u0430\u043d\u0442 1</option><option value="2">\u0412\u0430\u0440\u0456\u0430\u043d\u0442 2</option><option value="3">\u0412\u0430\u0440\u0456\u0430\u043d\u0442 3</option></select>';
+  row.insertBefore(wrap, subject.closest("label")?.nextSibling||subject.nextSibling);
+  const sel=document.getElementById("variantFilter");
+  sel.value=String(state.variant||1);
+  sel.addEventListener("change",e=>{state.variant=Number(e.target.value)||1;});
+}
+function shuffle(pool){
+  for(let i=pool.length-1;i>0;i--){
+    const j=Math.floor(Math.random()*(i+1));
+    [pool[i],pool[j]]=[pool[j],pool[i]];
+  }
+  return pool;
+}
+
 // Sphere cards
 document.querySelectorAll(".sphere-card").forEach(c=>{
   c.addEventListener("click",()=>{
@@ -292,6 +354,21 @@ document.getElementById("nextBtn").addEventListener("click",()=>{if(state.curren
 
 function initSubjects(){
   const sel=document.getElementById("subjectFilter");
+  ensureVariantControl();
+  const examSubject=examSubjectForState();
+  if(examSubject){
+    sel.innerHTML="";
+    const o=document.createElement("option");
+    o.value=examSubject;
+    o.textContent=EXAM_LABELS[examSubject];
+    sel.appendChild(o);
+    state.subject=examSubject;
+    const variantLabel=document.getElementById("variantLabel");
+    if(variantLabel)variantLabel.style.display="flex";
+    return;
+  }
+  const variantLabel=document.getElementById("variantLabel");
+  if(variantLabel)variantLabel.style.display="none";
   // For English card: subjects from SPHERES.english; for F: from SPHERES.F
   const sphereKey=state.subject==="english"?"english":state.sphere;
   const subs=SPHERES[sphereKey]?SPHERES[sphereKey][state.level]:SPHERES[state.sphere][state.level];
@@ -380,14 +457,27 @@ function startTimer(){
 
 function stopTimer(){if(timerInterval){clearInterval(timerInterval);timerInterval=null;}}
 
-function startSession(){
-  const subs=state.subject==="all"?(SPHERES[state.sphere]||SPHERES.F)[state.level]:state.subject==="english"?(SPHERES.english||SPHERES.F)[state.level]:[state.subject];
+async function startSession(){
   let pool=[];
-  subs.forEach(sub=>{if(Q[sub])Q[sub].forEach((q,i)=>pool.push({...q,subject:sub,idx:i}));});
-  for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]];}
-  // Simulation: use all available questions (up to 60) to mimic real exam; Practice: 10
-  const n=state.mode==="simulation"?Math.min(pool.length,60):Math.min(pool.length,10);
-  state.questions=pool.slice(0,n);state.currentIdx=0;state.answers={};state.sessionStart=Date.now();state.sessionLog=[];
+  const examSubject=examSubjectForState();
+  if(examSubject){
+    try{
+      await ensureExamBank();
+      const set=getExamSet(examSubject,state.variant||1);
+      if(!set)throw new Error("No exam set for "+examSubject+" variant "+state.variant);
+      pool=set.questions.map(toTrainerQuestion);
+    }catch(e){
+      console.error(e);
+      alert("Could not load quiz_bank_v1.json. Check app_data/quiz_bank_v1.json.");
+      return;
+    }
+  }else{
+    const subs=state.subject==="all"?(SPHERES[state.sphere]||SPHERES.F)[state.level]:state.subject==="english"?(SPHERES.english||SPHERES.F)[state.level]:[state.subject];
+    subs.forEach(sub=>{if(Q[sub])Q[sub].forEach((q,i)=>pool.push({...q,subject:sub,idx:i}));});
+    shuffle(pool);
+  }
+  const n=state.mode==="simulation"?pool.length:Math.min(pool.length,10);
+  state.questions=(state.mode==="simulation"?pool:shuffle([...pool])).slice(0,n);state.currentIdx=0;state.answers={};state.sessionStart=Date.now();state.sessionLog=[];
   document.getElementById("sessionEnd").style.display="none";
   document.getElementById("trainerMain").style.display="grid";
   startTimer();
@@ -397,6 +487,10 @@ function startSession(){
 function renderQ(){
   const q=state.questions[state.currentIdx];
   const area=document.getElementById("questionArea");
+  if(!q){
+    area.innerHTML=`<div class="q-card"><h3>No questions loaded.</h3></div>`;
+    return;
+  }
   document.getElementById("qNav").style.display="flex";
   document.getElementById("qCounter").textContent=`${state.currentIdx+1} / ${state.questions.length}`;
   const answered=state.answers[state.currentIdx]!==undefined;
@@ -407,18 +501,33 @@ function renderQ(){
     else if(ua===i)c+=" selected";
     return `<div class="${c}" data-i="${i}">${o}</div>`;
   }).join("");
-  area.innerHTML=`<div class="q-card"><div style="font-size:12px;color:var(--muted);margin-bottom:8px">${q.subject}</div><h3>${q.q}</h3><div class="q-options">${oh}</div>${answered?`<div style="margin-top:12px;font-size:13px;color:${ua===q.ans?'#22c55e':'#ef4444'}">${ua===q.ans?'✅ '+t('correct'):'❌ '+t('wrong')+q.opts[q.ans]}</div>`:''}</div>`;
+  area.innerHTML=`<div class="q-card"><div style="font-size:12px;color:var(--muted);margin-bottom:8px">${q.subject}${q.block?" / "+q.block:""}${q.topic?" / "+q.topic:""}${q.variant?" / v"+q.variant:""}</div><h3>${q.q}</h3><div class="q-options">${oh}</div>${answered?renderExplanation(q,ua):""}</div>`;
   area.querySelectorAll(".q-opt:not(.correct):not(.wrong):not(.reveal)").forEach(el=>{
     el.addEventListener("click",()=>{
       const idx=parseInt(el.dataset.i);state.answers[state.currentIdx]=idx;
-      state.sessionLog.push({subject:q.subject,correct:idx===q.ans,time:Date.now()});
+      state.sessionLog.push({subject:q.sourceSubject||q.subject,correct:idx===q.ans,time:Date.now()});
       renderQ();renderStats();renderAnalytics();
     });
   });
   document.getElementById("prevBtn").disabled=state.currentIdx===0;
-  document.getElementById("nextBtn").innerHTML=state.currentIdx===state.questions.length-1?t('finish'):t('next')+" →";
+  document.getElementById("nextBtn").innerHTML=state.currentIdx===state.questions.length-1?t("finish"):t("next")+" ?";
 }
 
+function renderExplanation(q,ua){
+  const ok=ua===q.ans;
+  const answerLine=`<div style="margin-top:12px;font-size:13px;color:${ok?'#22c55e':'#ef4444'}">${ok?'? '+t('correct'):'? '+t('wrong')+q.opts[q.ans]}</div>`;
+  if(!q.explanation&&!q.scientific&&!q.life&&!q.choiceExplanations)return answerLine;
+  const letters=CHOICE_KEYS.slice(0,q.opts.length);
+  const choices=q.choiceExplanations?letters.map(letter=>
+    q.choiceExplanations[letter]?`<li><b>${letter}.</b> ${q.choiceExplanations[letter]}</li>`:""
+  ).join(""):"";
+  return `${answerLine}<div style="margin-top:12px;padding:12px;border:1px solid var(--line);border-radius:14px;background:color-mix(in srgb,var(--accent) 6%,transparent);font-size:13px;line-height:1.55">
+    ${q.explanation?`<div><b>\u041a\u043e\u0440\u043e\u0442\u043a\u043e:</b> ${q.explanation}</div>`:""}
+    ${q.scientific?`<div style="margin-top:8px">${q.scientific}</div>`:""}
+    ${q.life?`<div style="margin-top:8px">${q.life}</div>`:""}
+    ${choices?`<ul style="margin:10px 0 0;padding-left:18px">${choices}</ul>`:""}
+  </div>`;
+}
 function endSession(){
   const el=Math.max(1,Math.round((Date.now()-state.sessionStart)/60000));
   const tot=state.sessionLog.length,cor=state.sessionLog.filter(l=>l.correct).length;
