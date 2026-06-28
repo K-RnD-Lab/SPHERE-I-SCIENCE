@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>English Error Focus v1</title>
+  <style>
+    body{font-family:Arial,system-ui,sans-serif;margin:0;background:#f7faf8;color:#172a2f;line-height:1.55}
+    main{max-width:920px;margin:0 auto;padding:42px 28px}
+    h1{font-size:42px;line-height:1.08;margin:0 0 10px;color:#102b30}
+    h2{font-size:25px;margin:34px 0 12px;color:#143942}
+    h3{font-size:18px;margin:22px 0 8px}
+    .lead{font-size:19px;color:#486066}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    .card{background:white;border:1px solid #dce8e4;border-radius:14px;padding:16px 18px;box-shadow:0 10px 28px rgba(30,60,55,.06)}
+    .danger{border-left:6px solid #d94f4f;background:#fff7f6}
+    .ok{border-left:6px solid #25a56a;background:#f5fffa}
+    .tag{display:inline-block;background:#e7f3ef;color:#145140;border-radius:999px;padding:4px 10px;font-weight:700;font-size:12px;margin-bottom:8px}
+    code{background:#eef4f2;border-radius:6px;padding:2px 5px}
+    table{width:100%;border-collapse:collapse;background:white;border-radius:12px;overflow:hidden}
+    th,td{border:1px solid #dce8e4;padding:10px;text-align:left;vertical-align:top}
+    th{background:#eaf4f1}
+    @media print{body{background:white}main{padding:24px}.card{box-shadow:none;break-inside:avoid}.grid{grid-template-columns:1fr 1fr}}
+  </style>
+</head>
+<body>
+<main>
+  <h1>🇬🇧 English Error Focus</h1>
+  <p class="lead">Фокус після трьох спроб: не “вивчити все”, а закрити типи помилок, які повторюються саме в реальному форматі ЄВІ-style English: matching, reading, lexical cloze, grammar cloze.</p>
+
+  <section class="card ok">
+    <span class="tag">діагностика</span>
+    <p><strong>Результати:</strong> 17/30, 21/30, 19/30. Загальна картина: приблизно 63%. Найбільше балів губиться там, де варіанти дуже схожі, а правильний вибір залежить від доказу в тексті або сталої англійської пари слів.</p>
+  </section>
+
+  <h2>1. Matching: обираємо доказ, а не тему</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>🔎 Як ловлять</h3>
+      <p>У тексті є “designed by different architects”, а в опції “rooms designed by various artists”. Це не дослівно те саме, але сенс збігається. Пастка - обрати сусідню красиву опцію, де теж є “artists”, “environment”, “history”, але доказ не той.</p>
+    </div>
+    <div class="card">
+      <h3>🧭 Алгоритм</h3>
+      <p>1. Підкресли 2-3 факти в мінітексті. 2. Перефразуй їх українською. 3. Шукай опцію з тим самим змістом, а не тим самим словом. 4. Якщо доказу немає, варіант не беремо.</p>
+    </div>
+  </div>
+
+  <h2>2. Reading detail: не додумувати</h2>
+  <div class="card danger">
+    <h3>⚠️ Типова помилка</h3>
+    <p>Питання: “What did she notice when she returned?” У тексті: landscape was damaged. Неправильний вибір часто бере слово з теми, але змінює напрям: “forests were being replanted” замість “forests had been cleared”.</p>
+  </div>
+  <table>
+    <tr><th>Сигнал у питанні</th><th>Що робити</th></tr>
+    <tr><td><code>What did X notice?</code></td><td>Шукати перший конкретний факт після повернення/події.</td></tr>
+    <tr><td><code>Why did X happen?</code></td><td>Не брати наслідок замість причини.</td></tr>
+    <tr><td><code>What can be inferred?</code></td><td>Обрати найобережніший висновок, який текст підтримує.</td></tr>
+  </table>
+
+  <h2>3. Lexical cloze: сталі пари</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>🧩 Пари, які треба впізнавати</h3>
+      <p><code>get the chance</code>, <code>turn into</code>, <code>catch on</code>, <code>drop by half</code>, <code>pay attention</code>, <code>make progress</code>, <code>receive criticism</code>, <code>raise awareness</code>, <code>keep records</code>.</p>
+    </div>
+    <div class="card">
+      <h3>🏠 Аналогія</h3>
+      <p>Це як “зробити висновок” українською: слово “виготовити висновок” ніби зрозуміле, але неприродне. В англійській так само: не <code>do a decision</code>, а <code>make a decision</code>.</p>
+    </div>
+  </div>
+
+  <h2>4. Grammar cloze: сигнали</h2>
+  <table>
+    <tr><th>Патерн</th><th>Як впізнати</th><th>Приклад</th></tr>
+    <tr><td>Modal perfect</td><td>висновок/жаль про минуле</td><td><code>must have received</code>, <code>should have read</code></td></tr>
+    <tr><td>Conditional inversion</td><td>немає if, речення починається з Had</td><td><code>Had I known...</code> = <code>If I had known...</code></td></tr>
+    <tr><td>so...that</td><td>результат після прикметника/прислівника</td><td><code>so clearly that I remembered</code></td></tr>
+    <tr><td>Relative time</td><td>перед пропуском слово про час</td><td><code>the day when</code>, <code>the summer when</code></td></tr>
+    <tr><td>Quantifier</td><td>раховане чи незлічуване?</td><td><code>little information</code>, <code>a few students</code>, <code>thousands of</code></td></tr>
+  </table>
+
+  <h2>5. Як проходити оновлені English v1-v3</h2>
+  <div class="card ok">
+    <p>Проходити по черзі: Variant 1 → розбір помилок → Variant 2 → розбір → Variant 3. Після кожної помилки записувати не переклад слова, а тип пастки: <strong>evidence</strong>, <strong>collocation</strong>, <strong>phrasal</strong>, <strong>modal perfect</strong>, <strong>article/quantifier</strong>, <strong>conditional</strong>.</p>
+  </div>
+</main>
+</body>
+</html>
