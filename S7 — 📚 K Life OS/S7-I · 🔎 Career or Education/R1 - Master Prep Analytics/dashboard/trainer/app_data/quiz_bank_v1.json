@@ -13238,722 +13238,723 @@
           "subject": "english",
           "block": "use_of_english",
           "topic": "passive",
-          "prompt": "The report ___ by the committee.",
+          "prompt": "The results ___ before publication.",
           "choices": {
-            "A": "was reviewed",
-            "B": "has reviewing",
-            "C": "was reviewing",
-            "D": "reviewed"
+            "A": "checked",
+            "B": "were checked",
+            "C": "were checking",
+            "D": "have checking"
           },
-          "correct_answer": "A",
-          "explanation": "Passive: was reviewed.",
+          "correct_answer": "B",
+          "explanation": "Passive: were checked.",
           "variant": 2,
           "choice_explanations": {
-            "A": "✅ Так: Passive: was reviewed.",
-            "B": "❌ Не підходить: «has reviewing» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "C": "❌ Не підходить: «was reviewing» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "D": "❌ Не підходить: «reviewed» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні."
+            "A": "❌ Ні: \"checked\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "B": "✅ Так: Passive: were checked.",
+            "C": "❌ Ні: \"were checking\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "D": "❌ Ні: \"have checking\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 Passive voice переносить фокус з виконавця дії на об’єкт. Формула: be у потрібному часі + V3. У «The report was reviewed» звіт не виконує дію, а зазнає її.",
-          "real_life_example": "🏠 Як новина: «звіт був перевірений». Нам важливий сам факт перевірки, а не те, хто саме її зробив."
+          "scientific_explanation": "🔬 Passive voice переносить фокус з виконавця дії на об'єкт. Формула: be у потрібному часі + V3.",
+          "real_life_example": "🏠 Як у новині: важливо, що звіт перевірили або дані зберегли, а не хто саме це зробив."
         },
         {
           "id": "english-realstyle-002-v2",
           "subject": "english",
           "block": "use_of_english",
           "topic": "word_form",
-          "prompt": "The system improved the ___ of payments.",
+          "prompt": "Accurate ___ is essential in a laboratory.",
           "choices": {
-            "A": "security",
-            "B": "securely",
-            "C": "secured",
-            "D": "secure"
+            "A": "measure",
+            "B": "measurable",
+            "C": "measurement",
+            "D": "measuringly"
           },
-          "correct_answer": "A",
-          "explanation": "Потрібен noun: security.",
+          "correct_answer": "C",
+          "explanation": "A noun is needed: measurement.",
           "variant": 2,
           "choice_explanations": {
-            "A": "✅ Так: Потрібен noun: security.",
-            "B": "❌ Не підходить: «securely» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "C": "❌ Не підходить: «secured» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "D": "❌ Не підходить: «secure» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні."
+            "A": "❌ Ні: \"measure\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "B": "❌ Ні: \"measurable\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "C": "✅ Так: A noun is needed: measurement.",
+            "D": "❌ Ні: \"measuringly\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 У кібербезпеці події класифікують за тим, яку властивість вони порушують: confidentiality, integrity або availability. Атаки на людину, як phishing, використовують не технічну ваду, а довіру та поведінку.",
-          "real_life_example": "🏠 Якщо хтось прочитав чужий щоденник — це конфіденційність; переписав сторінку — цілісність; забрав щоденник і не дає читати — доступність."
+          "scientific_explanation": "🔬 Word formation перевіряє частину мови: noun, adjective, adverb або verb. Дивись на місце слова у реченні.",
+          "real_life_example": "🏠 Як деталь у конструкторі: слово має підійти за формою до сусідніх слів."
         },
         {
           "id": "english-realstyle-003-v2",
           "subject": "english",
           "block": "use_of_english",
           "topic": "conditionals",
-          "prompt": "If the device had been charged, it ___ off.",
+          "prompt": "If she had followed the instructions, she ___ the error.",
           "choices": {
-            "A": "will not switch",
-            "B": "would not have switched",
-            "C": "does not switch",
-            "D": "would not switch"
+            "A": "will avoid",
+            "B": "would avoid",
+            "C": "would have avoided",
+            "D": "avoids"
           },
-          "correct_answer": "B",
-          "explanation": "Third conditional.",
+          "correct_answer": "C",
+          "explanation": "Third conditional: would have + V3.",
           "variant": 2,
           "choice_explanations": {
-            "A": "❌ Не підходить: «will not switch» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "B": "✅ Так: Third conditional.",
-            "C": "❌ Не підходить: «does not switch» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "D": "❌ Не підходить: «would not switch» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні."
+            "A": "❌ Ні: \"will avoid\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "B": "❌ Ні: \"would avoid\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "C": "✅ Так: Third conditional: would have + V3.",
+            "D": "❌ Ні: \"avoids\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 У Use of English відповідь визначається граматичною роллю слова, керуванням, часовою логікою та сталими сполученнями. У reading треба спиратися тільки на текст, а не на власні припущення.",
-          "real_life_example": "🏠 Це як пазл: форма слова має підходити до місця в реченні, а читання — до доказу в тексті, не до відчуття “звучить нормально”."
+          "scientific_explanation": "🔬 Conditionals показують реальність умови: реальна, уявна або минула нереальна ситуація.",
+          "real_life_example": "🏠 Це як сценарій: якщо умова вже не справдилася в минулому, потрібен third conditional."
         },
         {
           "id": "english-realstyle-004-v2",
           "subject": "english",
           "block": "use_of_english",
           "topic": "collocation",
-          "prompt": "The university decided to ___ a centre.",
+          "prompt": "The students were asked to ___ research on air quality.",
           "choices": {
-            "A": "do",
-            "B": "establish",
-            "C": "perform",
-            "D": "make"
+            "A": "make",
+            "B": "do",
+            "C": "take",
+            "D": "put"
           },
           "correct_answer": "B",
-          "explanation": "Collocation: establish a centre.",
+          "explanation": "Collocation: do research.",
           "variant": 2,
           "choice_explanations": {
-            "A": "❌ Не підходить: «do» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "B": "✅ Так: Collocation: establish a centre.",
-            "C": "❌ Не підходить: «perform» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "D": "❌ Не підходить: «make» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні."
+            "A": "❌ Ні: \"make\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "B": "✅ Так: Collocation: do research.",
+            "C": "❌ Ні: \"take\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "D": "❌ Ні: \"put\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 У Use of English відповідь визначається граматичною роллю слова, керуванням, часовою логікою та сталими сполученнями. У reading треба спиратися тільки на текст, а не на власні припущення.",
-          "real_life_example": "🏠 Це як пазл: форма слова має підходити до місця в реченні, а читання — до доказу в тексті, не до відчуття “звучить нормально”."
+          "scientific_explanation": "🔬 Collocation — це стала пара слів. Її не завжди можна перекласти дослівно.",
+          "real_life_example": "🏠 Англійська любить звичні пари: make a decision, do research, pay attention."
         },
         {
           "id": "english-realstyle-005-v2",
           "subject": "english",
           "block": "reading",
           "topic": "inference",
-          "prompt": "Although expensive, the software reduced manual work by half. What follows?",
+          "prompt": "The course was demanding, but most students completed it successfully. What can be inferred?",
           "choices": {
-            "A": "It was free",
-            "B": "Manual work increased",
-            "C": "It was rejected",
-            "D": "Efficiency outweighed initial cost"
+            "A": "The course was impossible.",
+            "B": "The course required effort.",
+            "C": "No one completed the course.",
+            "D": "The course was cancelled."
           },
-          "correct_answer": "D",
-          "explanation": "Although introduces contrast.",
+          "correct_answer": "B",
+          "explanation": "Demanding means it required effort.",
           "variant": 2,
           "choice_explanations": {
-            "A": "❌ Не підходить: «It was free» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "B": "❌ Не підходить: «Manual work increased» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "C": "❌ Не підходить: «It was rejected» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "D": "✅ Так: Although introduces contrast."
+            "A": "❌ Ні: \"The course was impossible.\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "B": "✅ Так: Demanding means it required effort.",
+            "C": "❌ Ні: \"No one completed the course.\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "D": "❌ Ні: \"The course was cancelled.\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 Операційна система керує процесами, пам’яттю, файлами й пристроями. Файлова система відповідає за імена, каталоги, права доступу й логічну організацію даних на носії.",
-          "real_life_example": "🏠 Файлова система — це бібліотечний каталог і полиці: вона не є самою книгою, але визначає, де що лежить, як називається і хто може це взяти."
+          "scientific_explanation": "🔬 Inference питає, що логічно випливає з тексту, але не додає нових припущень.",
+          "real_life_example": "🏠 Як детектив: висновок має спиратися на сліди в тексті, а не на здогад."
         },
         {
           "id": "english-realstyle-006-v2",
           "subject": "english",
           "block": "use_of_english",
           "topic": "relative",
-          "prompt": "The applicant ___ experience matched the job was invited.",
+          "prompt": "The researcher ___ article was cited received an award.",
           "choices": {
-            "A": "whose",
+            "A": "which",
             "B": "where",
-            "C": "what",
-            "D": "which"
+            "C": "whose",
+            "D": "what"
           },
-          "correct_answer": "A",
+          "correct_answer": "C",
           "explanation": "Whose shows possession.",
           "variant": 2,
           "choice_explanations": {
-            "A": "✅ Так: Whose shows possession.",
-            "B": "❌ Не підходить: «where» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "C": "❌ Не підходить: «what» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "D": "❌ Не підходить: «which» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні."
+            "A": "❌ Ні: \"which\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "B": "❌ Ні: \"where\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "C": "✅ Так: Whose shows possession.",
+            "D": "❌ Ні: \"what\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 Relative pronouns з’єднують частини речення. Whose показує належність: whose experience = чий досвід. Which стосується речей, where — місця, what не працює тут як зв’язка з іменником.",
-          "real_life_example": "🏠 Уяви анкету: «кандидат, чий досвід підійшов». Саме «чий» підказує whose."
+          "scientific_explanation": "🔬 Relative pronouns з'єднують частини речення. Whose показує належність, which — річ, where — місце.",
+          "real_life_example": "🏠 Якщо можна сказати 'чий/чия/чиє', майже завжди шукай whose."
         },
         {
           "id": "english-realstyle-007-v2",
           "subject": "english",
           "block": "use_of_english",
           "topic": "quantifier",
-          "prompt": "There is ___ evidence to support the claim.",
+          "prompt": "There is ___ information about the deadline.",
           "choices": {
-            "A": "little",
-            "B": "many",
+            "A": "many",
+            "B": "few",
             "C": "several",
-            "D": "few"
+            "D": "little"
           },
-          "correct_answer": "A",
-          "explanation": "Evidence is uncountable.",
+          "correct_answer": "D",
+          "explanation": "Information is uncountable: little information.",
           "variant": 2,
           "choice_explanations": {
-            "A": "✅ Так: Evidence is uncountable.",
-            "B": "❌ Не підходить: «many» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "C": "❌ Не підходить: «several» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "D": "❌ Не підходить: «few» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні."
+            "A": "❌ Ні: \"many\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "B": "❌ Ні: \"few\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "C": "❌ Ні: \"several\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "D": "✅ Так: Information is uncountable: little information."
           },
-          "scientific_explanation": "🔬 Quantifiers залежать від того, чи іменник злічуваний. Evidence — uncountable, тому little evidence. Many, several, few потребують множини злічуваних об’єктів.",
-          "real_life_example": "🏠 Evidence як «вода» або «інформація»: ми не рахуємо «одна evidence, дві evidences» у звичному сенсі. Тому little, а не few/many."
+          "scientific_explanation": "🔬 Quantifiers залежать від того, чи іменник злічуваний. Evidence, information, advice — uncountable.",
+          "real_life_example": "🏠 Information як вода: її може бути little/much, але не many/few."
         },
         {
           "id": "english-realstyle-008-v2",
           "subject": "english",
           "block": "use_of_english",
           "topic": "prep",
-          "prompt": "The results depend ___ input quality.",
+          "prompt": "The project depends ___ reliable data.",
           "choices": {
-            "A": "on",
-            "B": "for",
-            "C": "with",
-            "D": "of"
+            "A": "of",
+            "B": "on",
+            "C": "for",
+            "D": "at"
           },
-          "correct_answer": "A",
-          "explanation": "depend on.",
+          "correct_answer": "B",
+          "explanation": "Depend on.",
           "variant": 2,
           "choice_explanations": {
-            "A": "✅ Так: depend on.",
-            "B": "❌ Не підходить: «for» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "C": "❌ Не підходить: «with» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "D": "❌ Не підходить: «of» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні."
+            "A": "❌ Ні: \"of\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "B": "✅ Так: Depend on.",
+            "C": "❌ Ні: \"for\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "D": "❌ Ні: \"at\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 У Use of English відповідь визначається граматичною роллю слова, керуванням, часовою логікою та сталими сполученнями. У reading треба спиратися тільки на текст, а не на власні припущення.",
-          "real_life_example": "🏠 Це як пазл: форма слова має підходити до місця в реченні, а читання — до доказу в тексті, не до відчуття “звучить нормально”."
+          "scientific_explanation": "🔬 Prepositions часто є частиною керування слова: depend on, interested in, responsible for.",
+          "real_life_example": "🏠 Це як пароль до слова: неправильний прийменник ламає всю фразу."
         },
         {
           "id": "english-realstyle-009-v2",
           "subject": "english",
           "block": "reading",
           "topic": "reference",
-          "prompt": "The old procedure was slow, so the manager replaced it. “It” refers to:",
+          "prompt": "The new policy reduced delays. This change helped students plan better. 'This change' refers to:",
           "choices": {
-            "A": "old procedure",
-            "B": "speed",
-            "C": "replacement",
-            "D": "manager"
+            "A": "the delays",
+            "B": "the new policy",
+            "C": "the students",
+            "D": "the plan"
           },
-          "correct_answer": "A",
-          "explanation": "Pronoun refers to old procedure.",
+          "correct_answer": "B",
+          "explanation": "The phrase points back to the new policy.",
           "variant": 2,
           "choice_explanations": {
-            "A": "✅ Так: Pronoun refers to old procedure.",
-            "B": "❌ Не підходить: «speed» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "C": "❌ Не підходить: «replacement» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "D": "❌ Не підходить: «manager» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні."
+            "A": "❌ Ні: \"the delays\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "B": "✅ Так: The phrase points back to the new policy.",
+            "C": "❌ Ні: \"the students\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "D": "❌ Ні: \"the plan\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 У Use of English відповідь визначається граматичною роллю слова, керуванням, часовою логікою та сталими сполученнями. У reading треба спиратися тільки на текст, а не на власні припущення.",
-          "real_life_example": "🏠 Це як пазл: форма слова має підходити до місця в реченні, а читання — до доказу в тексті, не до відчуття “звучить нормально”."
+          "scientific_explanation": "🔬 Reference questions питають, до чого в тексті повертається it/this/they. Дивись на найближчу логічну іменну групу.",
+          "real_life_example": "🏠 Як стрілочка в нотатках: this change має вказувати на конкретну зміну перед ним."
         },
         {
           "id": "english-realstyle-010-v2",
           "subject": "english",
           "block": "use_of_english",
           "topic": "tense",
-          "prompt": "By the time the lecture started, students ___ seats.",
+          "prompt": "She ___ at the university since 2022.",
           "choices": {
-            "A": "take",
-            "B": "are taking",
-            "C": "will take",
-            "D": "had taken"
+            "A": "works",
+            "B": "worked",
+            "C": "has worked",
+            "D": "is working yesterday"
           },
-          "correct_answer": "D",
-          "explanation": "Past perfect before another past action.",
+          "correct_answer": "C",
+          "explanation": "Since + starting point often needs Present Perfect.",
           "variant": 2,
           "choice_explanations": {
-            "A": "❌ Не підходить: «take» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "B": "❌ Не підходить: «are taking» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "C": "❌ Не підходить: «will take» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "D": "✅ Так: Past perfect before another past action."
+            "A": "❌ Ні: \"works\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "B": "❌ Ні: \"worked\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "C": "✅ Так: Since + starting point often needs Present Perfect.",
+            "D": "❌ Ні: \"is working yesterday\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 У Use of English відповідь визначається граматичною роллю слова, керуванням, часовою логікою та сталими сполученнями. У reading треба спиратися тільки на текст, а не на власні припущення.",
-          "real_life_example": "🏠 Це як пазл: форма слова має підходити до місця в реченні, а читання — до доказу в тексті, не до відчуття “звучить нормально”."
+          "scientific_explanation": "🔬 Tense вибирається за часовою логікою і маркерами: since, already, by the time, yesterday.",
+          "real_life_example": "🏠 Спершу визнач, коли дія сталася і чи важливий її результат зараз."
         },
         {
           "id": "english-realstyle-011-v2",
           "subject": "english",
           "block": "use_of_english",
           "topic": "gerund",
-          "prompt": "Choose the correct option: She avoided ___ the mistake.",
+          "prompt": "He considered ___ for the scholarship.",
           "choices": {
-            "A": "to make",
-            "B": "making",
-            "C": "made",
-            "D": "make"
+            "A": "apply",
+            "B": "applying",
+            "C": "to applying",
+            "D": "applied"
           },
           "correct_answer": "B",
-          "explanation": "avoid + gerund",
+          "explanation": "Consider + gerund.",
           "variant": 2,
           "choice_explanations": {
-            "A": "❌ Не підходить: «to make» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "B": "✅ Так: avoid + gerund",
-            "C": "❌ Не підходить: «made» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "D": "❌ Не підходить: «make» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні."
+            "A": "❌ Ні: \"apply\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "B": "✅ Так: Consider + gerund.",
+            "C": "❌ Ні: \"to applying\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "D": "❌ Ні: \"applied\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 Операційна система керує процесами, пам’яттю, файлами й пристроями. Файлова система відповідає за імена, каталоги, права доступу й логічну організацію даних на носії.",
-          "real_life_example": "🏠 Файлова система — це бібліотечний каталог і полиці: вона не є самою книгою, але визначає, де що лежить, як називається і хто може це взяти."
+          "scientific_explanation": "🔬 Після деяких дієслів потрібен gerund: avoid doing, consider applying, suggest trying.",
+          "real_life_example": "🏠 Це як сталий маршрут після слова: avoid завжди веде до -ing."
         },
         {
           "id": "english-realstyle-012-v2",
           "subject": "english",
           "block": "use_of_english",
           "topic": "modal",
-          "prompt": "Choose the correct option: You ___ submit today; deadline is tomorrow.",
+          "prompt": "You ___ be exhausted after such a long exam.",
           "choices": {
-            "A": "don’t have to",
-            "B": "shouldn’t have",
-            "C": "can’t have",
-            "D": "mustn’t"
+            "A": "must",
+            "B": "can to",
+            "C": "should to",
+            "D": "have"
           },
           "correct_answer": "A",
-          "explanation": "not necessary",
+          "explanation": "Must can express a strong logical conclusion.",
           "variant": 2,
           "choice_explanations": {
-            "A": "✅ Так: not necessary",
-            "B": "❌ Не підходить: «shouldn’t have» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "C": "❌ Не підходить: «can’t have» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "D": "❌ Не підходить: «mustn’t» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні."
+            "A": "✅ Так: Must can express a strong logical conclusion.",
+            "B": "❌ Ні: \"can to\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "C": "❌ Ні: \"should to\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "D": "❌ Ні: \"have\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 Операційна система керує процесами, пам’яттю, файлами й пристроями. Файлова система відповідає за імена, каталоги, права доступу й логічну організацію даних на носії.",
-          "real_life_example": "🏠 Файлова система — це бібліотечний каталог і полиці: вона не є самою книгою, але визначає, де що лежить, як називається і хто може це взяти."
+          "scientific_explanation": "🔬 Modals передають обов'язок, пораду, дозвіл або логічний висновок: must, should, may, have to.",
+          "real_life_example": "🏠 Must be home — це не наказ, а сильний висновок за доказом."
         },
         {
           "id": "english-realstyle-013-v2",
           "subject": "english",
           "block": "use_of_english",
           "topic": "article",
-          "prompt": "Choose the correct option: She works as ___ engineer.",
+          "prompt": "It took ___ hour to finish the task.",
           "choices": {
-            "A": "an",
-            "B": "the",
-            "C": "-",
-            "D": "a"
+            "A": "a",
+            "B": "an",
+            "C": "the an",
+            "D": "-"
           },
-          "correct_answer": "A",
-          "explanation": "vowel sound",
+          "correct_answer": "B",
+          "explanation": "An before vowel sound: an hour.",
           "variant": 2,
           "choice_explanations": {
-            "A": "✅ Так: vowel sound",
-            "B": "❌ Не підходить: «the» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "C": "❌ Не підходить: «-» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "D": "❌ Не підходить: «a» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні."
+            "A": "❌ Ні: \"a\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "B": "✅ Так: An before vowel sound: an hour.",
+            "C": "❌ Ні: \"the an\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "D": "❌ Ні: \"-\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 Операційна система керує процесами, пам’яттю, файлами й пристроями. Файлова система відповідає за імена, каталоги, права доступу й логічну організацію даних на носії.",
-          "real_life_example": "🏠 Файлова система — це бібліотечний каталог і полиці: вона не є самою книгою, але визначає, де що лежить, як називається і хто може це взяти."
+          "scientific_explanation": "🔬 Articles показують, чи предмет новий/один із багатьох, чи вже конкретний. Звук важливіший за літеру: an hour.",
+          "real_life_example": "🏠 A/an — вперше показуємо предмет, the — повертаємось до вже відомого."
         },
         {
           "id": "english-realstyle-014-v2",
           "subject": "english",
           "block": "use_of_english",
           "topic": "linker",
-          "prompt": "Choose the correct option: The task was difficult; ___, we finished.",
+          "prompt": "The evidence was limited; ___, the conclusion was cautious.",
           "choices": {
-            "A": "because",
-            "B": "unless",
-            "C": "although",
-            "D": "however"
+            "A": "therefore",
+            "B": "although",
+            "C": "despite",
+            "D": "unless"
           },
-          "correct_answer": "D",
-          "explanation": "contrast",
+          "correct_answer": "A",
+          "explanation": "Therefore shows result.",
           "variant": 2,
           "choice_explanations": {
-            "A": "❌ Не підходить: «because» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "B": "❌ Не підходить: «unless» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "C": "❌ Не підходить: «although» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "D": "✅ Так: contrast"
+            "A": "✅ Так: Therefore shows result.",
+            "B": "❌ Ні: \"although\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "C": "❌ Ні: \"despite\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "D": "❌ Ні: \"unless\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 Операційна система керує процесами, пам’яттю, файлами й пристроями. Файлова система відповідає за імена, каталоги, права доступу й логічну організацію даних на носії.",
-          "real_life_example": "🏠 Файлова система — це бібліотечний каталог і полиці: вона не є самою книгою, але визначає, де що лежить, як називається і хто може це взяти."
+          "scientific_explanation": "🔬 Linkers показують логіку між частинами: contrast, cause, result, addition.",
+          "real_life_example": "🏠 However розвертає думку, therefore показує наслідок."
         },
         {
           "id": "english-realstyle-015-v2",
           "subject": "english",
           "block": "use_of_english",
           "topic": "phrasal",
-          "prompt": "Choose the correct option: The meeting was ___ because he was ill.",
+          "prompt": "The exam was ___ because of a technical issue.",
           "choices": {
-            "A": "put on",
-            "B": "put out",
+            "A": "put off",
+            "B": "put on",
             "C": "put up",
-            "D": "put off"
+            "D": "put out"
           },
-          "correct_answer": "D",
-          "explanation": "postpone",
+          "correct_answer": "A",
+          "explanation": "Put off means postpone.",
           "variant": 2,
           "choice_explanations": {
-            "A": "❌ Не підходить: «put on» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "B": "❌ Не підходить: «put out» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "C": "❌ Не підходить: «put up» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "D": "✅ Так: postpone"
+            "A": "✅ Так: Put off means postpone.",
+            "B": "❌ Ні: \"put on\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "C": "❌ Ні: \"put up\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "D": "❌ Ні: \"put out\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 Операційна система керує процесами, пам’яттю, файлами й пристроями. Файлова система відповідає за імена, каталоги, права доступу й логічну організацію даних на носії.",
-          "real_life_example": "🏠 Файлова система — це бібліотечний каталог і полиці: вона не є самою книгою, але визначає, де що лежить, як називається і хто може це взяти."
+          "scientific_explanation": "🔬 Phrasal verbs мають значення як ціла фраза, не як сума окремих слів.",
+          "real_life_example": "🏠 Put off — це не 'покласти геть', а 'відкласти'."
         },
         {
           "id": "english-realstyle-016-v2",
           "subject": "english",
           "block": "use_of_english",
           "topic": "word",
-          "prompt": "Choose the correct option: The instructions were clear and ___.",
+          "prompt": "The instructions were ___, so everyone understood them.",
           "choices": {
-            "A": "concern",
-            "B": "conclude",
-            "C": "collision",
-            "D": "concise"
+            "A": "ambiguous",
+            "B": "clear",
+            "C": "random",
+            "D": "silent"
           },
-          "correct_answer": "D",
-          "explanation": "clear and concise",
+          "correct_answer": "B",
+          "explanation": "Clear fits the meaning.",
           "variant": 2,
           "choice_explanations": {
-            "A": "❌ Не підходить: «concern» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "B": "❌ Не підходить: «conclude» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "C": "❌ Не підходить: «collision» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "D": "✅ Так: clear and concise"
+            "A": "❌ Ні: \"ambiguous\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "B": "✅ Так: Clear fits the meaning.",
+            "C": "❌ Ні: \"random\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "D": "❌ Ні: \"silent\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 Операційна система керує процесами, пам’яттю, файлами й пристроями. Файлова система відповідає за імена, каталоги, права доступу й логічну організацію даних на носії.",
-          "real_life_example": "🏠 Файлова система — це бібліотечний каталог і полиці: вона не є самою книгою, але визначає, де що лежить, як називається і хто може це взяти."
+          "scientific_explanation": "🔬 Vocabulary questions перевіряють точне значення і стиль слова в контексті.",
+          "real_life_example": "🏠 Обирай слово, яке природно звучить у реченні, а не просто схоже за перекладом."
         },
         {
           "id": "english-realstyle-017-v2",
           "subject": "english",
           "block": "use_of_english",
           "topic": "tense",
-          "prompt": "Choose the correct option: I ___ this book since Monday.",
+          "prompt": "By the time we arrived, the lecture ___ already ___.",
           "choices": {
-            "A": "am reading",
-            "B": "have been reading",
-            "C": "was read",
-            "D": "read"
+            "A": "has / started",
+            "B": "had / started",
+            "C": "will / start",
+            "D": "is / starting"
           },
           "correct_answer": "B",
-          "explanation": "since + ongoing",
+          "explanation": "Past Perfect for an earlier past action.",
           "variant": 2,
           "choice_explanations": {
-            "A": "❌ Не підходить: «am reading» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "B": "✅ Так: since + ongoing",
-            "C": "❌ Не підходить: «was read» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "D": "❌ Не підходить: «read» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні."
+            "A": "❌ Ні: \"has / started\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "B": "✅ Так: Past Perfect for an earlier past action.",
+            "C": "❌ Ні: \"will / start\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "D": "❌ Ні: \"is / starting\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 Операційна система керує процесами, пам’яттю, файлами й пристроями. Файлова система відповідає за імена, каталоги, права доступу й логічну організацію даних на носії.",
-          "real_life_example": "🏠 Файлова система — це бібліотечний каталог і полиці: вона не є самою книгою, але визначає, де що лежить, як називається і хто може це взяти."
+          "scientific_explanation": "🔬 Tense вибирається за часовою логікою і маркерами: since, already, by the time, yesterday.",
+          "real_life_example": "🏠 Спершу визнач, коли дія сталася і чи важливий її результат зараз."
         },
         {
           "id": "english-realstyle-018-v2",
           "subject": "english",
           "block": "use_of_english",
           "topic": "zero_cond",
-          "prompt": "Choose the correct option: If water reaches 100°C, it ___.",
+          "prompt": "If metal is heated, it ___.",
           "choices": {
-            "A": "would boil",
-            "B": "boiled",
-            "C": "had boiled",
-            "D": "boils"
+            "A": "expanded",
+            "B": "expands",
+            "C": "will expanded",
+            "D": "would expanded"
           },
-          "correct_answer": "D",
-          "explanation": "zero conditional",
+          "correct_answer": "B",
+          "explanation": "Zero conditional: present + present.",
           "variant": 2,
           "choice_explanations": {
-            "A": "❌ Не підходить: «would boil» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "B": "❌ Не підходить: «boiled» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "C": "❌ Не підходить: «had boiled» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "D": "✅ Так: zero conditional"
+            "A": "❌ Ні: \"expanded\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "B": "✅ Так: Zero conditional: present + present.",
+            "C": "❌ Ні: \"will expanded\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "D": "❌ Ні: \"would expanded\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 Операційна система керує процесами, пам’яттю, файлами й пристроями. Файлова система відповідає за імена, каталоги, права доступу й логічну організацію даних на носії.",
-          "real_life_example": "🏠 Файлова система — це бібліотечний каталог і полиці: вона не є самою книгою, але визначає, де що лежить, як називається і хто може це взяти."
+          "scientific_explanation": "🔬 Zero conditional описує загальне правило або факт: if + present, present.",
+          "real_life_example": "🏠 Як закон природи: якщо нагріти лід, він тане."
         },
         {
           "id": "english-realstyle-019-v2",
           "subject": "english",
           "block": "use_of_english",
           "topic": "passive",
-          "prompt": "Choose the correct option: Emails ___ every morning.",
+          "prompt": "The data ___ on a secure server.",
           "choices": {
-            "A": "are sent",
-            "B": "sent",
-            "C": "sending",
-            "D": "send"
+            "A": "store",
+            "B": "stores",
+            "C": "are stored",
+            "D": "storing"
           },
-          "correct_answer": "A",
-          "explanation": "present passive",
+          "correct_answer": "C",
+          "explanation": "Passive: are stored.",
           "variant": 2,
           "choice_explanations": {
-            "A": "✅ Так: present passive",
-            "B": "❌ Не підходить: «sent» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "C": "❌ Не підходить: «sending» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "D": "❌ Не підходить: «send» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні."
+            "A": "❌ Ні: \"store\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "B": "❌ Ні: \"stores\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "C": "✅ Так: Passive: are stored.",
+            "D": "❌ Ні: \"storing\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 Операційна система керує процесами, пам’яттю, файлами й пристроями. Файлова система відповідає за імена, каталоги, права доступу й логічну організацію даних на носії.",
-          "real_life_example": "🏠 Файлова система — це бібліотечний каталог і полиці: вона не є самою книгою, але визначає, де що лежить, як називається і хто може це взяти."
+          "scientific_explanation": "🔬 Passive voice переносить фокус з виконавця дії на об'єкт. Формула: be у потрібному часі + V3.",
+          "real_life_example": "🏠 Як у новині: важливо, що звіт перевірили або дані зберегли, а не хто саме це зробив."
         },
         {
           "id": "english-realstyle-020-v2",
           "subject": "english",
           "block": "use_of_english",
           "topic": "collocation",
-          "prompt": "Choose the correct option: Please ___ attention.",
+          "prompt": "The team made significant ___ during the project.",
           "choices": {
-            "A": "take",
-            "B": "pay",
-            "C": "do",
-            "D": "make"
+            "A": "progress",
+            "B": "progresses",
+            "C": "attention",
+            "D": "homework"
           },
-          "correct_answer": "B",
-          "explanation": "pay attention",
+          "correct_answer": "A",
+          "explanation": "Collocation: make progress.",
           "variant": 2,
           "choice_explanations": {
-            "A": "❌ Не підходить: «take» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "B": "✅ Так: pay attention",
-            "C": "❌ Не підходить: «do» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "D": "❌ Не підходить: «make» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні."
+            "A": "✅ Так: Collocation: make progress.",
+            "B": "❌ Ні: \"progresses\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "C": "❌ Ні: \"attention\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "D": "❌ Ні: \"homework\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 Операційна система керує процесами, пам’яттю, файлами й пристроями. Файлова система відповідає за імена, каталоги, права доступу й логічну організацію даних на носії.",
-          "real_life_example": "🏠 Файлова система — це бібліотечний каталог і полиці: вона не є самою книгою, але визначає, де що лежить, як називається і хто може це взяти."
+          "scientific_explanation": "🔬 Collocation — це стала пара слів. Її не завжди можна перекласти дослівно.",
+          "real_life_example": "🏠 Англійська любить звичні пари: make a decision, do research, pay attention."
         },
         {
           "id": "english-realstyle-021-v2",
           "subject": "english",
           "block": "use_of_english",
           "topic": "prep",
-          "prompt": "Choose the correct option: She is responsible ___ the report.",
+          "prompt": "She is interested ___ environmental policy.",
           "choices": {
-            "A": "of",
-            "B": "to",
-            "C": "at",
+            "A": "on",
+            "B": "at",
+            "C": "in",
             "D": "for"
           },
-          "correct_answer": "D",
-          "explanation": "responsible for",
+          "correct_answer": "C",
+          "explanation": "Interested in.",
           "variant": 2,
           "choice_explanations": {
-            "A": "❌ Не підходить: «of» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "B": "❌ Не підходить: «to» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "C": "❌ Не підходить: «at» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "D": "✅ Так: responsible for"
+            "A": "❌ Ні: \"on\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "B": "❌ Ні: \"at\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "C": "✅ Так: Interested in.",
+            "D": "❌ Ні: \"for\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 Криптографічні механізми розрізняють конфіденційність, цілісність і автентичність. Шифрування приховує зміст, хешування дає дайджест, AH в IPsec перевіряє автентичність та цілісність, а ESP може шифрувати дані.",
-          "real_life_example": "🏠 Це як запечатаний конверт і контрольна печатка: конверт приховує текст, а печатка показує, чи його відкривали або підміняли."
+          "scientific_explanation": "🔬 Prepositions часто є частиною керування слова: depend on, interested in, responsible for.",
+          "real_life_example": "🏠 Це як пароль до слова: неправильний прийменник ламає всю фразу."
         },
         {
           "id": "english-realstyle-022-v2",
           "subject": "english",
           "block": "use_of_english",
           "topic": "word_form",
-          "prompt": "Choose the correct option: The experiment was conducted ___.",
+          "prompt": "The results were checked ___ before submission.",
           "choices": {
             "A": "careful",
             "B": "carefully",
-            "C": "carefulness",
-            "D": "care"
+            "C": "care",
+            "D": "carefulness"
           },
           "correct_answer": "B",
-          "explanation": "adverb",
+          "explanation": "An adverb modifies checked: carefully.",
           "variant": 2,
           "choice_explanations": {
-            "A": "❌ Не підходить: «careful» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "B": "✅ Так: adverb",
-            "C": "❌ Не підходить: «carefulness» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "D": "❌ Не підходить: «care» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні."
+            "A": "❌ Ні: \"careful\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "B": "✅ Так: An adverb modifies checked: carefully.",
+            "C": "❌ Ні: \"care\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "D": "❌ Ні: \"carefulness\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 Операційна система керує процесами, пам’яттю, файлами й пристроями. Файлова система відповідає за імена, каталоги, права доступу й логічну організацію даних на носії.",
-          "real_life_example": "🏠 Файлова система — це бібліотечний каталог і полиці: вона не є самою книгою, але визначає, де що лежить, як називається і хто може це взяти."
+          "scientific_explanation": "🔬 Word formation перевіряє частину мови: noun, adjective, adverb або verb. Дивись на місце слова у реченні.",
+          "real_life_example": "🏠 Як деталь у конструкторі: слово має підійти за формою до сусідніх слів."
         },
         {
           "id": "english-realstyle-023-v2",
           "subject": "english",
           "block": "reading",
           "topic": "reading",
-          "prompt": "Remote work saved commute time but reduced informal communication.",
+          "prompt": "A small pilot study cannot prove a nationwide trend, but it can show whether the method is practical. The main idea is that:",
           "choices": {
-            "A": "It had benefits and drawbacks",
-            "B": "No benefits",
-            "C": "Illegal",
-            "D": "Only improved communication"
+            "A": "pilot studies are useless",
+            "B": "a pilot study has limited but useful value",
+            "C": "nationwide trends are always false",
+            "D": "methods do not matter"
           },
-          "correct_answer": "A",
-          "explanation": "balanced view",
+          "correct_answer": "B",
+          "explanation": "The text says limited proof but practical value.",
           "variant": 2,
           "choice_explanations": {
-            "A": "✅ Так: balanced view",
-            "B": "❌ Пастка: «No benefits» може звучати близько, але не відповідає умові. Спершу знайди тип задачі, а потім обирай.",
-            "C": "❌ Пастка: «Illegal» може звучати близько, але не відповідає умові. Спершу знайди тип задачі, а потім обирай.",
-            "D": "❌ Пастка: «Only improved communication» може звучати близько, але не відповідає умові. Спершу знайди тип задачі, а потім обирай."
+            "A": "❌ Ні: \"pilot studies are useless\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "B": "✅ Так: The text says limited proof but practical value.",
+            "C": "❌ Ні: \"nationwide trends are always false\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "D": "❌ Ні: \"methods do not matter\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 English перевіряє граматичну роль слова, сталу колокацію, часову рамку або доказ у тексті. Відповідь має підходити і за змістом, і за формою.",
-          "real_life_example": "🏠 Речення як пазл: час, прийменник, linker і форма дієслова мають стати у правильне місце."
+          "scientific_explanation": "🔬 Reading перевіряє доказ у тексті. Правильна відповідь має бути підтверджена фразою або логікою уривка.",
+          "real_life_example": "🏠 Не обирай відповідь, яка просто звучить розумно. Шукай рядок-доказ."
         },
         {
           "id": "english-realstyle-024-v2",
           "subject": "english",
           "block": "use_of_english",
           "topic": "modal",
-          "prompt": "Choose the correct option: He ___ be home; his car is outside.",
+          "prompt": "She ___ have left already; her coat is gone.",
           "choices": {
             "A": "must",
-            "B": "mustn’t",
-            "C": "can’t",
-            "D": "doesn’t have to"
+            "B": "should to",
+            "C": "need",
+            "D": "can to"
           },
           "correct_answer": "A",
-          "explanation": "logical deduction",
+          "explanation": "Must have + V3 expresses a strong conclusion about the past.",
           "variant": 2,
           "choice_explanations": {
-            "A": "✅ Так: logical deduction",
-            "B": "❌ Пастка: «mustn’t» може звучати близько, але не відповідає умові. Спершу знайди тип задачі, а потім обирай.",
-            "C": "❌ Пастка: «can’t» може звучати близько, але не відповідає умові. Спершу знайди тип задачі, а потім обирай.",
-            "D": "❌ Пастка: «doesn’t have to» може звучати близько, але не відповідає умові. Спершу знайди тип задачі, а потім обирай."
+            "A": "✅ Так: Must have + V3 expresses a strong conclusion about the past.",
+            "B": "❌ Ні: \"should to\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "C": "❌ Ні: \"need\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "D": "❌ Ні: \"can to\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 English перевіряє граматичну роль слова, сталу колокацію, часову рамку або доказ у тексті. Відповідь має підходити і за змістом, і за формою.",
-          "real_life_example": "🏠 Речення як пазл: час, прийменник, linker і форма дієслова мають стати у правильне місце."
+          "scientific_explanation": "🔬 Modals передають обов'язок, пораду, дозвіл або логічний висновок: must, should, may, have to.",
+          "real_life_example": "🏠 Must be home — це не наказ, а сильний висновок за доказом."
         },
         {
+          "id": "english-realstyle-025-v2",
           "subject": "english",
-          "block": "english",
+          "block": "use_of_english",
           "topic": "conditionals",
-          "prompt": "If the instructions ___ clearer, fewer students would make mistakes.",
+          "prompt": "If I ___ more time, I would revise the essay again.",
           "choices": {
-            "A": "are",
-            "B": "were",
-            "C": "had been",
-            "D": "will be"
+            "A": "have",
+            "B": "had",
+            "C": "will have",
+            "D": "had had"
           },
           "correct_answer": "B",
-          "explanation": "Second conditional: if + Past Simple, would + V.",
+          "explanation": "Second conditional: if + Past Simple, would + verb.",
           "variant": 2,
-          "scientific_explanation": "🔬 English перевіряє граматичну роль слова, сталу колокацію, часову рамку, linker або доказ у тексті.",
-          "real_life_example": "🏠 Речення як пазл: час, прийменник, linker і форма дієслова мають стати у правильне місце.",
           "choice_explanations": {
-            "A": "❌ Пастка: «are» звучить можливо, але не відповідає ключовій ознаці умови.",
-            "B": "✅ Так: Second conditional: if + Past Simple, would + V.",
-            "C": "❌ Пастка: «had been» звучить можливо, але не відповідає ключовій ознаці умови.",
-            "D": "❌ Пастка: «will be» звучить можливо, але не відповідає ключовій ознаці умови."
+            "A": "❌ Ні: \"have\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "B": "✅ Так: Second conditional: if + Past Simple, would + verb.",
+            "C": "❌ Ні: \"will have\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "D": "❌ Ні: \"had had\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "id": "english-realstyle-025-v2"
+          "scientific_explanation": "🔬 Conditionals показують реальність умови: реальна, уявна або минула нереальна ситуація.",
+          "real_life_example": "🏠 Це як сценарій: якщо умова вже не справдилася в минулому, потрібен third conditional."
         },
         {
+          "id": "english-realstyle-026-v2",
           "subject": "english",
-          "block": "english",
+          "block": "use_of_english",
           "topic": "conditionals",
-          "prompt": "If the server had been updated, the error ___ occurred.",
+          "prompt": "If the file had been saved, the work ___ lost.",
           "choices": {
-            "A": "will not have",
-            "B": "would not have",
-            "C": "would not",
-            "D": "had not"
+            "A": "would not be",
+            "B": "will not be",
+            "C": "would not have been",
+            "D": "is not"
           },
-          "correct_answer": "B",
-          "explanation": "Third conditional: would not have + V3.",
+          "correct_answer": "C",
+          "explanation": "Third conditional passive: would not have been lost.",
           "variant": 2,
-          "scientific_explanation": "🔬 English перевіряє граматичну роль слова, сталу колокацію, часову рамку, linker або доказ у тексті.",
-          "real_life_example": "🏠 Речення як пазл: час, прийменник, linker і форма дієслова мають стати у правильне місце.",
           "choice_explanations": {
-            "A": "❌ Пастка: «will not have» звучить можливо, але не відповідає ключовій ознаці умови.",
-            "B": "✅ Так: Third conditional: would not have + V3.",
-            "C": "❌ Пастка: «would not» звучить можливо, але не відповідає ключовій ознаці умови.",
-            "D": "❌ Пастка: «had not» звучить можливо, але не відповідає ключовій ознаці умови."
+            "A": "❌ Ні: \"would not be\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "B": "❌ Ні: \"will not be\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "C": "✅ Так: Third conditional passive: would not have been lost.",
+            "D": "❌ Ні: \"is not\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "id": "english-realstyle-026-v2"
+          "scientific_explanation": "🔬 Conditionals показують реальність умови: реальна, уявна або минула нереальна ситуація.",
+          "real_life_example": "🏠 Це як сценарій: якщо умова вже не справдилася в минулому, потрібен third conditional."
         },
         {
+          "id": "english-realstyle-027-v2",
           "subject": "english",
-          "block": "english",
+          "block": "use_of_english",
           "topic": "tense",
-          "prompt": "By 9 p.m., she ___ all practice tests.",
+          "prompt": "By next Friday, they ___ the report.",
           "choices": {
-            "A": "will complete",
-            "B": "will have completed",
-            "C": "completed",
-            "D": "has completing"
+            "A": "will have completed",
+            "B": "completed",
+            "C": "have completed yesterday",
+            "D": "are completed"
           },
-          "correct_answer": "B",
-          "explanation": "Future Perfect: will have + V3 for action completed before a future time.",
+          "correct_answer": "A",
+          "explanation": "Future Perfect: will have + V3.",
           "variant": 2,
-          "scientific_explanation": "🔬 English перевіряє граматичну роль слова, сталу колокацію, часову рамку, linker або доказ у тексті.",
-          "real_life_example": "🏠 Речення як пазл: час, прийменник, linker і форма дієслова мають стати у правильне місце.",
           "choice_explanations": {
-            "A": "❌ Пастка: «will complete» звучить можливо, але не відповідає ключовій ознаці умови.",
-            "B": "✅ Так: Future Perfect: will have + V3 for action completed before a future time.",
-            "C": "❌ Пастка: «completed» звучить можливо, але не відповідає ключовій ознаці умови.",
-            "D": "❌ Пастка: «has completing» звучить можливо, але не відповідає ключовій ознаці умови."
+            "A": "✅ Так: Future Perfect: will have + V3.",
+            "B": "❌ Ні: \"completed\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "C": "❌ Ні: \"have completed yesterday\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "D": "❌ Ні: \"are completed\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "id": "english-realstyle-027-v2"
+          "scientific_explanation": "🔬 Tense вибирається за часовою логікою і маркерами: since, already, by the time, yesterday.",
+          "real_life_example": "🏠 Спершу визнач, коли дія сталася і чи важливий її результат зараз."
         },
         {
+          "id": "english-realstyle-028-v2",
           "subject": "english",
-          "block": "english",
+          "block": "use_of_english",
           "topic": "linker",
-          "prompt": "The task seemed simple. ___, most candidates chose the wrong option.",
+          "prompt": "The task was simple; ___, many candidates overlooked a key word.",
           "choices": {
-            "A": "Therefore",
-            "B": "However",
-            "C": "For example",
-            "D": "Because"
+            "A": "however",
+            "B": "because",
+            "C": "therefore",
+            "D": "so"
           },
-          "correct_answer": "B",
-          "explanation": "However signals contrast.",
+          "correct_answer": "A",
+          "explanation": "However shows contrast.",
           "variant": 2,
-          "scientific_explanation": "🔬 English перевіряє граматичну роль слова, сталу колокацію, часову рамку, linker або доказ у тексті.",
-          "real_life_example": "🏠 Речення як пазл: час, прийменник, linker і форма дієслова мають стати у правильне місце.",
           "choice_explanations": {
-            "A": "❌ Пастка: «Therefore» звучить можливо, але не відповідає ключовій ознаці умови.",
-            "B": "✅ Так: However signals contrast.",
-            "C": "❌ Пастка: «For example» звучить можливо, але не відповідає ключовій ознаці умови.",
-            "D": "❌ Пастка: «Because» звучить можливо, але не відповідає ключовій ознаці умови."
+            "A": "✅ Так: However shows contrast.",
+            "B": "❌ Ні: \"because\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "C": "❌ Ні: \"therefore\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "D": "❌ Ні: \"so\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "id": "english-realstyle-028-v2"
+          "scientific_explanation": "🔬 Linkers показують логіку між частинами: contrast, cause, result, addition.",
+          "real_life_example": "🏠 However розвертає думку, therefore показує наслідок."
         },
         {
+          "id": "english-realstyle-029-v2",
           "subject": "english",
-          "block": "english",
+          "block": "use_of_english",
           "topic": "prep",
-          "prompt": "The answer is similar ___ the previous one, but not identical.",
+          "prompt": "The solution is different ___ the previous one.",
           "choices": {
-            "A": "with",
-            "B": "to",
-            "C": "from",
-            "D": "on"
+            "A": "than",
+            "B": "from",
+            "C": "of",
+            "D": "at"
           },
           "correct_answer": "B",
-          "explanation": "Collocation: similar to.",
+          "explanation": "Different from.",
           "variant": 2,
-          "scientific_explanation": "🔬 English перевіряє граматичну роль слова, сталу колокацію, часову рамку, linker або доказ у тексті.",
-          "real_life_example": "🏠 Речення як пазл: час, прийменник, linker і форма дієслова мають стати у правильне місце.",
           "choice_explanations": {
-            "A": "❌ Пастка: «with» звучить можливо, але не відповідає ключовій ознаці умови.",
-            "B": "✅ Так: Collocation: similar to.",
-            "C": "❌ Пастка: «from» звучить можливо, але не відповідає ключовій ознаці умови.",
-            "D": "❌ Пастка: «on» звучить можливо, але не відповідає ключовій ознаці умови."
+            "A": "❌ Ні: \"than\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "B": "✅ Так: Different from.",
+            "C": "❌ Ні: \"of\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "D": "❌ Ні: \"at\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "id": "english-realstyle-029-v2"
+          "scientific_explanation": "🔬 Prepositions часто є частиною керування слова: depend on, interested in, responsible for.",
+          "real_life_example": "🏠 Це як пароль до слова: неправильний прийменник ламає всю фразу."
         },
         {
+          "id": "english-realstyle-030-v2",
           "subject": "english",
-          "block": "english",
+          "block": "reading",
           "topic": "reading",
-          "prompt": "In a reading passage, the phrase “this approach” most often refers to:",
+          "prompt": "When a paragraph begins with 'As a result', the next sentence usually presents:",
           "choices": {
-            "A": "a following unrelated idea",
-            "B": "the nearest previous method or idea",
-            "C": "the title only",
-            "D": "the reader's opinion"
+            "A": "a cause",
+            "B": "a contrast",
+            "C": "a consequence",
+            "D": "an unrelated example"
           },
-          "correct_answer": "B",
-          "explanation": "Reference words usually point to a nearby previous idea.",
+          "correct_answer": "C",
+          "explanation": "As a result signals a consequence.",
           "variant": 2,
-          "scientific_explanation": "🔬 English перевіряє граматичну роль слова, сталу колокацію, часову рамку, linker або доказ у тексті.",
-          "real_life_example": "🏠 Речення як пазл: час, прийменник, linker і форма дієслова мають стати у правильне місце.",
           "choice_explanations": {
-            "A": "❌ Пастка: «a following unrelated idea» звучить можливо, але не відповідає ключовій ознаці умови.",
-            "B": "✅ Так: Reference words usually point to a nearby previous idea.",
-            "C": "❌ Пастка: «the title only» звучить можливо, але не відповідає ключовій ознаці умови.",
-            "D": "❌ Пастка: «the reader's opinion» звучить можливо, але не відповідає ключовій ознаці умови."
+            "A": "❌ Ні: \"a cause\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "B": "❌ Ні: \"a contrast\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "C": "✅ Так: As a result signals a consequence.",
+            "D": "❌ Ні: \"an unrelated example\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "id": "english-realstyle-030-v2"
+          "scientific_explanation": "🔬 Reading перевіряє доказ у тексті. Правильна відповідь має бути підтверджена фразою або логікою уривка.",
+          "real_life_example": "🏠 Не обирай відповідь, яка просто звучить розумно. Шукай рядок-доказ."
         }
-      ]
+      ],
+      "updated_at": "2026-06-28T12:47:10.386Z"
     },
     {
       "id": "exam-english-30-v3",
@@ -13965,723 +13966,724 @@
           "subject": "english",
           "block": "use_of_english",
           "topic": "passive",
-          "prompt": "The report ___ by the committee.",
+          "prompt": "The application ___ by the admissions office yesterday.",
           "choices": {
-            "A": "has reviewing",
-            "B": "was reviewing",
-            "C": "reviewed",
-            "D": "was reviewed"
+            "A": "processed",
+            "B": "was processed",
+            "C": "was processing",
+            "D": "has processing"
           },
-          "correct_answer": "D",
-          "explanation": "Passive: was reviewed.",
+          "correct_answer": "B",
+          "explanation": "Passive in Past Simple: was processed.",
           "variant": 3,
           "choice_explanations": {
-            "A": "❌ Не підходить: «has reviewing» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "B": "❌ Не підходить: «was reviewing» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "C": "❌ Не підходить: «reviewed» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "D": "✅ Так: Passive: was reviewed."
+            "A": "❌ Ні: \"processed\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "B": "✅ Так: Passive in Past Simple: was processed.",
+            "C": "❌ Ні: \"was processing\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "D": "❌ Ні: \"has processing\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 Passive voice переносить фокус з виконавця дії на об’єкт. Формула: be у потрібному часі + V3. У «The report was reviewed» звіт не виконує дію, а зазнає її.",
-          "real_life_example": "🏠 Як новина: «звіт був перевірений». Нам важливий сам факт перевірки, а не те, хто саме її зробив."
+          "scientific_explanation": "🔬 Passive voice переносить фокус з виконавця дії на об'єкт. Формула: be у потрібному часі + V3.",
+          "real_life_example": "🏠 Як у новині: важливо, що звіт перевірили або дані зберегли, а не хто саме це зробив."
         },
         {
           "id": "english-realstyle-002-v3",
           "subject": "english",
           "block": "use_of_english",
           "topic": "word_form",
-          "prompt": "The system improved the ___ of payments.",
+          "prompt": "The new software increased team ___.",
           "choices": {
-            "A": "securely",
-            "B": "secured",
-            "C": "secure",
-            "D": "security"
+            "A": "productive",
+            "B": "productively",
+            "C": "productivity",
+            "D": "produce"
           },
-          "correct_answer": "D",
-          "explanation": "Потрібен noun: security.",
+          "correct_answer": "C",
+          "explanation": "A noun is needed: productivity.",
           "variant": 3,
           "choice_explanations": {
-            "A": "❌ Не підходить: «securely» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "B": "❌ Не підходить: «secured» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "C": "❌ Не підходить: «secure» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "D": "✅ Так: Потрібен noun: security."
+            "A": "❌ Ні: \"productive\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "B": "❌ Ні: \"productively\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "C": "✅ Так: A noun is needed: productivity.",
+            "D": "❌ Ні: \"produce\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 У кібербезпеці події класифікують за тим, яку властивість вони порушують: confidentiality, integrity або availability. Атаки на людину, як phishing, використовують не технічну ваду, а довіру та поведінку.",
-          "real_life_example": "🏠 Якщо хтось прочитав чужий щоденник — це конфіденційність; переписав сторінку — цілісність; забрав щоденник і не дає читати — доступність."
+          "scientific_explanation": "🔬 Word formation перевіряє частину мови: noun, adjective, adverb або verb. Дивись на місце слова у реченні.",
+          "real_life_example": "🏠 Як деталь у конструкторі: слово має підійти за формою до сусідніх слів."
         },
         {
           "id": "english-realstyle-003-v3",
           "subject": "english",
           "block": "use_of_english",
           "topic": "conditionals",
-          "prompt": "If the device had been charged, it ___ off.",
+          "prompt": "If the instructions were clearer, fewer users ___ support.",
           "choices": {
-            "A": "would not have switched",
-            "B": "does not switch",
-            "C": "would not switch",
-            "D": "will not switch"
+            "A": "needed",
+            "B": "would need",
+            "C": "will needed",
+            "D": "had needed"
           },
-          "correct_answer": "A",
-          "explanation": "Third conditional.",
+          "correct_answer": "B",
+          "explanation": "Second conditional: would + verb.",
           "variant": 3,
           "choice_explanations": {
-            "A": "✅ Так: Third conditional.",
-            "B": "❌ Не підходить: «does not switch» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "C": "❌ Не підходить: «would not switch» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "D": "❌ Не підходить: «will not switch» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні."
+            "A": "❌ Ні: \"needed\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "B": "✅ Так: Second conditional: would + verb.",
+            "C": "❌ Ні: \"will needed\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "D": "❌ Ні: \"had needed\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 У Use of English відповідь визначається граматичною роллю слова, керуванням, часовою логікою та сталими сполученнями. У reading треба спиратися тільки на текст, а не на власні припущення.",
-          "real_life_example": "🏠 Це як пазл: форма слова має підходити до місця в реченні, а читання — до доказу в тексті, не до відчуття “звучить нормально”."
+          "scientific_explanation": "🔬 Conditionals показують реальність умови: реальна, уявна або минула нереальна ситуація.",
+          "real_life_example": "🏠 Це як сценарій: якщо умова вже не справдилася в минулому, потрібен third conditional."
         },
         {
           "id": "english-realstyle-004-v3",
           "subject": "english",
           "block": "use_of_english",
           "topic": "collocation",
-          "prompt": "The university decided to ___ a centre.",
+          "prompt": "Before choosing a programme, students should ___ a decision carefully.",
           "choices": {
-            "A": "establish",
-            "B": "perform",
-            "C": "make",
-            "D": "do"
+            "A": "make",
+            "B": "do",
+            "C": "take to",
+            "D": "perform"
           },
           "correct_answer": "A",
-          "explanation": "Collocation: establish a centre.",
+          "explanation": "Collocation: make a decision.",
           "variant": 3,
           "choice_explanations": {
-            "A": "✅ Так: Collocation: establish a centre.",
-            "B": "❌ Не підходить: «perform» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "C": "❌ Не підходить: «make» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "D": "❌ Не підходить: «do» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні."
+            "A": "✅ Так: Collocation: make a decision.",
+            "B": "❌ Ні: \"do\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "C": "❌ Ні: \"take to\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "D": "❌ Ні: \"perform\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 У Use of English відповідь визначається граматичною роллю слова, керуванням, часовою логікою та сталими сполученнями. У reading треба спиратися тільки на текст, а не на власні припущення.",
-          "real_life_example": "🏠 Це як пазл: форма слова має підходити до місця в реченні, а читання — до доказу в тексті, не до відчуття “звучить нормально”."
+          "scientific_explanation": "🔬 Collocation — це стала пара слів. Її не завжди можна перекласти дослівно.",
+          "real_life_example": "🏠 Англійська любить звичні пари: make a decision, do research, pay attention."
         },
         {
           "id": "english-realstyle-005-v3",
           "subject": "english",
           "block": "reading",
           "topic": "inference",
-          "prompt": "Although expensive, the software reduced manual work by half. What follows?",
+          "prompt": "The article says online courses are flexible, but require strong self-discipline. What follows?",
           "choices": {
-            "A": "Manual work increased",
-            "B": "It was rejected",
-            "C": "Efficiency outweighed initial cost",
-            "D": "It was free"
+            "A": "They are always easier.",
+            "B": "They may not suit everyone.",
+            "C": "They have no advantages.",
+            "D": "They remove all responsibility."
           },
-          "correct_answer": "C",
-          "explanation": "Although introduces contrast.",
+          "correct_answer": "B",
+          "explanation": "The text gives both benefit and requirement.",
           "variant": 3,
           "choice_explanations": {
-            "A": "❌ Не підходить: «Manual work increased» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "B": "❌ Не підходить: «It was rejected» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "C": "✅ Так: Although introduces contrast.",
-            "D": "❌ Не підходить: «It was free» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні."
+            "A": "❌ Ні: \"They are always easier.\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "B": "✅ Так: The text gives both benefit and requirement.",
+            "C": "❌ Ні: \"They have no advantages.\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "D": "❌ Ні: \"They remove all responsibility.\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 Операційна система керує процесами, пам’яттю, файлами й пристроями. Файлова система відповідає за імена, каталоги, права доступу й логічну організацію даних на носії.",
-          "real_life_example": "🏠 Файлова система — це бібліотечний каталог і полиці: вона не є самою книгою, але визначає, де що лежить, як називається і хто може це взяти."
+          "scientific_explanation": "🔬 Inference питає, що логічно випливає з тексту, але не додає нових припущень.",
+          "real_life_example": "🏠 Як детектив: висновок має спиратися на сліди в тексті, а не на здогад."
         },
         {
           "id": "english-realstyle-006-v3",
           "subject": "english",
           "block": "use_of_english",
           "topic": "relative",
-          "prompt": "The applicant ___ experience matched the job was invited.",
+          "prompt": "The platform ___ we used for training saved our progress.",
           "choices": {
             "A": "where",
-            "B": "what",
+            "B": "whose",
             "C": "which",
-            "D": "whose"
+            "D": "what"
           },
-          "correct_answer": "D",
-          "explanation": "Whose shows possession.",
+          "correct_answer": "C",
+          "explanation": "Which refers to a thing: the platform.",
           "variant": 3,
           "choice_explanations": {
-            "A": "❌ Не підходить: «where» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "B": "❌ Не підходить: «what» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "C": "❌ Не підходить: «which» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "D": "✅ Так: Whose shows possession."
+            "A": "❌ Ні: \"where\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "B": "❌ Ні: \"whose\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "C": "✅ Так: Which refers to a thing: the platform.",
+            "D": "❌ Ні: \"what\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 Relative pronouns з’єднують частини речення. Whose показує належність: whose experience = чий досвід. Which стосується речей, where — місця, what не працює тут як зв’язка з іменником.",
-          "real_life_example": "🏠 Уяви анкету: «кандидат, чий досвід підійшов». Саме «чий» підказує whose."
+          "scientific_explanation": "🔬 Relative pronouns з'єднують частини речення. Whose показує належність, which — річ, where — місце.",
+          "real_life_example": "🏠 Якщо можна сказати 'чий/чия/чиє', майже завжди шукай whose."
         },
         {
           "id": "english-realstyle-007-v3",
           "subject": "english",
           "block": "use_of_english",
           "topic": "quantifier",
-          "prompt": "There is ___ evidence to support the claim.",
+          "prompt": "Only ___ students submitted the optional task.",
           "choices": {
-            "A": "many",
-            "B": "several",
-            "C": "few",
-            "D": "little"
+            "A": "much",
+            "B": "little",
+            "C": "a few",
+            "D": "any"
           },
-          "correct_answer": "D",
-          "explanation": "Evidence is uncountable.",
+          "correct_answer": "C",
+          "explanation": "Students are countable: a few students.",
           "variant": 3,
           "choice_explanations": {
-            "A": "❌ Не підходить: «many» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "B": "❌ Не підходить: «several» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "C": "❌ Не підходить: «few» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "D": "✅ Так: Evidence is uncountable."
+            "A": "❌ Ні: \"much\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "B": "❌ Ні: \"little\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "C": "✅ Так: Students are countable: a few students.",
+            "D": "❌ Ні: \"any\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 Quantifiers залежать від того, чи іменник злічуваний. Evidence — uncountable, тому little evidence. Many, several, few потребують множини злічуваних об’єктів.",
-          "real_life_example": "🏠 Evidence як «вода» або «інформація»: ми не рахуємо «одна evidence, дві evidences» у звичному сенсі. Тому little, а не few/many."
+          "scientific_explanation": "🔬 Quantifiers залежать від того, чи іменник злічуваний. Evidence, information, advice — uncountable.",
+          "real_life_example": "🏠 Information як вода: її може бути little/much, але не many/few."
         },
         {
           "id": "english-realstyle-008-v3",
           "subject": "english",
           "block": "use_of_english",
           "topic": "prep",
-          "prompt": "The results depend ___ input quality.",
+          "prompt": "The lecturer focused ___ common mistakes.",
           "choices": {
-            "A": "for",
-            "B": "with",
+            "A": "on",
+            "B": "in",
             "C": "of",
-            "D": "on"
+            "D": "to"
           },
-          "correct_answer": "D",
-          "explanation": "depend on.",
+          "correct_answer": "A",
+          "explanation": "Focus on.",
           "variant": 3,
           "choice_explanations": {
-            "A": "❌ Не підходить: «for» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "B": "❌ Не підходить: «with» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "C": "❌ Не підходить: «of» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "D": "✅ Так: depend on."
+            "A": "✅ Так: Focus on.",
+            "B": "❌ Ні: \"in\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "C": "❌ Ні: \"of\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "D": "❌ Ні: \"to\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 У Use of English відповідь визначається граматичною роллю слова, керуванням, часовою логікою та сталими сполученнями. У reading треба спиратися тільки на текст, а не на власні припущення.",
-          "real_life_example": "🏠 Це як пазл: форма слова має підходити до місця в реченні, а читання — до доказу в тексті, не до відчуття “звучить нормально”."
+          "scientific_explanation": "🔬 Prepositions часто є частиною керування слова: depend on, interested in, responsible for.",
+          "real_life_example": "🏠 Це як пароль до слова: неправильний прийменник ламає всю фразу."
         },
         {
           "id": "english-realstyle-009-v3",
           "subject": "english",
           "block": "reading",
           "topic": "reference",
-          "prompt": "The old procedure was slow, so the manager replaced it. “It” refers to:",
+          "prompt": "The survey was anonymous, and this encouraged honest answers. 'This' refers to:",
           "choices": {
-            "A": "speed",
-            "B": "replacement",
-            "C": "manager",
-            "D": "old procedure"
+            "A": "the honesty",
+            "B": "the anonymity of the survey",
+            "C": "the answers",
+            "D": "the respondents"
           },
-          "correct_answer": "D",
-          "explanation": "Pronoun refers to old procedure.",
+          "correct_answer": "B",
+          "explanation": "This points back to the anonymous survey.",
           "variant": 3,
           "choice_explanations": {
-            "A": "❌ Не підходить: «speed» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "B": "❌ Не підходить: «replacement» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "C": "❌ Не підходить: «manager» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "D": "✅ Так: Pronoun refers to old procedure."
+            "A": "❌ Ні: \"the honesty\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "B": "✅ Так: This points back to the anonymous survey.",
+            "C": "❌ Ні: \"the answers\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "D": "❌ Ні: \"the respondents\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 У Use of English відповідь визначається граматичною роллю слова, керуванням, часовою логікою та сталими сполученнями. У reading треба спиратися тільки на текст, а не на власні припущення.",
-          "real_life_example": "🏠 Це як пазл: форма слова має підходити до місця в реченні, а читання — до доказу в тексті, не до відчуття “звучить нормально”."
+          "scientific_explanation": "🔬 Reference questions питають, до чого в тексті повертається it/this/they. Дивись на найближчу логічну іменну групу.",
+          "real_life_example": "🏠 Як стрілочка в нотатках: this change має вказувати на конкретну зміну перед ним."
         },
         {
           "id": "english-realstyle-010-v3",
           "subject": "english",
           "block": "use_of_english",
           "topic": "tense",
-          "prompt": "By the time the lecture started, students ___ seats.",
+          "prompt": "I ___ three practice tests this week.",
           "choices": {
-            "A": "are taking",
-            "B": "will take",
-            "C": "had taken",
-            "D": "take"
+            "A": "completed yesterday",
+            "B": "have completed",
+            "C": "was completed",
+            "D": "complete last week"
           },
-          "correct_answer": "C",
-          "explanation": "Past perfect before another past action.",
+          "correct_answer": "B",
+          "explanation": "This week can connect past actions to now: Present Perfect.",
           "variant": 3,
           "choice_explanations": {
-            "A": "❌ Не підходить: «are taking» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "B": "❌ Не підходить: «will take» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "C": "✅ Так: Past perfect before another past action.",
-            "D": "❌ Не підходить: «take» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні."
+            "A": "❌ Ні: \"completed yesterday\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "B": "✅ Так: This week can connect past actions to now: Present Perfect.",
+            "C": "❌ Ні: \"was completed\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "D": "❌ Ні: \"complete last week\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 У Use of English відповідь визначається граматичною роллю слова, керуванням, часовою логікою та сталими сполученнями. У reading треба спиратися тільки на текст, а не на власні припущення.",
-          "real_life_example": "🏠 Це як пазл: форма слова має підходити до місця в реченні, а читання — до доказу в тексті, не до відчуття “звучить нормально”."
+          "scientific_explanation": "🔬 Tense вибирається за часовою логікою і маркерами: since, already, by the time, yesterday.",
+          "real_life_example": "🏠 Спершу визнач, коли дія сталася і чи важливий її результат зараз."
         },
         {
           "id": "english-realstyle-011-v3",
           "subject": "english",
           "block": "use_of_english",
           "topic": "gerund",
-          "prompt": "Choose the correct option: She avoided ___ the mistake.",
+          "prompt": "They suggested ___ the schedule.",
           "choices": {
-            "A": "making",
-            "B": "made",
-            "C": "make",
-            "D": "to make"
+            "A": "change",
+            "B": "to change",
+            "C": "changing",
+            "D": "changed"
           },
-          "correct_answer": "A",
-          "explanation": "avoid + gerund",
+          "correct_answer": "C",
+          "explanation": "Suggest + gerund.",
           "variant": 3,
           "choice_explanations": {
-            "A": "✅ Так: avoid + gerund",
-            "B": "❌ Не підходить: «made» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "C": "❌ Не підходить: «make» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "D": "❌ Не підходить: «to make» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні."
+            "A": "❌ Ні: \"change\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "B": "❌ Ні: \"to change\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "C": "✅ Так: Suggest + gerund.",
+            "D": "❌ Ні: \"changed\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 Операційна система керує процесами, пам’яттю, файлами й пристроями. Файлова система відповідає за імена, каталоги, права доступу й логічну організацію даних на носії.",
-          "real_life_example": "🏠 Файлова система — це бібліотечний каталог і полиці: вона не є самою книгою, але визначає, де що лежить, як називається і хто може це взяти."
+          "scientific_explanation": "🔬 Після деяких дієслів потрібен gerund: avoid doing, consider applying, suggest trying.",
+          "real_life_example": "🏠 Це як сталий маршрут після слова: avoid завжди веде до -ing."
         },
         {
           "id": "english-realstyle-012-v3",
           "subject": "english",
           "block": "use_of_english",
           "topic": "modal",
-          "prompt": "Choose the correct option: You ___ submit today; deadline is tomorrow.",
+          "prompt": "Students ___ bring ID; it is required by the rules.",
           "choices": {
-            "A": "shouldn’t have",
-            "B": "can’t have",
-            "C": "mustn’t",
-            "D": "don’t have to"
+            "A": "might",
+            "B": "have to",
+            "C": "could to",
+            "D": "may to"
           },
-          "correct_answer": "D",
-          "explanation": "not necessary",
+          "correct_answer": "B",
+          "explanation": "Have to expresses external obligation.",
           "variant": 3,
           "choice_explanations": {
-            "A": "❌ Не підходить: «shouldn’t have» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "B": "❌ Не підходить: «can’t have» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "C": "❌ Не підходить: «mustn’t» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "D": "✅ Так: not necessary"
+            "A": "❌ Ні: \"might\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "B": "✅ Так: Have to expresses external obligation.",
+            "C": "❌ Ні: \"could to\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "D": "❌ Ні: \"may to\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 Операційна система керує процесами, пам’яттю, файлами й пристроями. Файлова система відповідає за імена, каталоги, права доступу й логічну організацію даних на носії.",
-          "real_life_example": "🏠 Файлова система — це бібліотечний каталог і полиці: вона не є самою книгою, але визначає, де що лежить, як називається і хто може це взяти."
+          "scientific_explanation": "🔬 Modals передають обов'язок, пораду, дозвіл або логічний висновок: must, should, may, have to.",
+          "real_life_example": "🏠 Must be home — це не наказ, а сильний висновок за доказом."
         },
         {
           "id": "english-realstyle-013-v3",
           "subject": "english",
           "block": "use_of_english",
           "topic": "article",
-          "prompt": "Choose the correct option: She works as ___ engineer.",
+          "prompt": "The university opened ___ new laboratory.",
           "choices": {
-            "A": "the",
-            "B": "-",
-            "C": "a",
-            "D": "an"
+            "A": "a",
+            "B": "an",
+            "C": "the an",
+            "D": "-"
           },
-          "correct_answer": "D",
-          "explanation": "vowel sound",
+          "correct_answer": "A",
+          "explanation": "A before consonant sound: a new laboratory.",
           "variant": 3,
           "choice_explanations": {
-            "A": "❌ Не підходить: «the» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "B": "❌ Не підходить: «-» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "C": "❌ Не підходить: «a» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "D": "✅ Так: vowel sound"
+            "A": "✅ Так: A before consonant sound: a new laboratory.",
+            "B": "❌ Ні: \"an\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "C": "❌ Ні: \"the an\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "D": "❌ Ні: \"-\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 Операційна система керує процесами, пам’яттю, файлами й пристроями. Файлова система відповідає за імена, каталоги, права доступу й логічну організацію даних на носії.",
-          "real_life_example": "🏠 Файлова система — це бібліотечний каталог і полиці: вона не є самою книгою, але визначає, де що лежить, як називається і хто може це взяти."
+          "scientific_explanation": "🔬 Articles показують, чи предмет новий/один із багатьох, чи вже конкретний. Звук важливіший за літеру: an hour.",
+          "real_life_example": "🏠 A/an — вперше показуємо предмет, the — повертаємось до вже відомого."
         },
         {
           "id": "english-realstyle-014-v3",
           "subject": "english",
           "block": "use_of_english",
           "topic": "linker",
-          "prompt": "Choose the correct option: The task was difficult; ___, we finished.",
+          "prompt": "___ the instructions were long, they were easy to follow.",
           "choices": {
-            "A": "unless",
-            "B": "although",
-            "C": "however",
-            "D": "because"
+            "A": "Because",
+            "B": "Although",
+            "C": "Therefore",
+            "D": "So"
           },
-          "correct_answer": "C",
-          "explanation": "contrast",
+          "correct_answer": "B",
+          "explanation": "Although introduces contrast.",
           "variant": 3,
           "choice_explanations": {
-            "A": "❌ Не підходить: «unless» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "B": "❌ Не підходить: «although» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "C": "✅ Так: contrast",
-            "D": "❌ Не підходить: «because» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні."
+            "A": "❌ Ні: \"Because\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "B": "✅ Так: Although introduces contrast.",
+            "C": "❌ Ні: \"Therefore\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "D": "❌ Ні: \"So\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 Операційна система керує процесами, пам’яттю, файлами й пристроями. Файлова система відповідає за імена, каталоги, права доступу й логічну організацію даних на носії.",
-          "real_life_example": "🏠 Файлова система — це бібліотечний каталог і полиці: вона не є самою книгою, але визначає, де що лежить, як називається і хто може це взяти."
+          "scientific_explanation": "🔬 Linkers показують логіку між частинами: contrast, cause, result, addition.",
+          "real_life_example": "🏠 However розвертає думку, therefore показує наслідок."
         },
         {
           "id": "english-realstyle-015-v3",
           "subject": "english",
           "block": "use_of_english",
           "topic": "phrasal",
-          "prompt": "Choose the correct option: The meeting was ___ because he was ill.",
+          "prompt": "Please ___ the form before the deadline.",
           "choices": {
-            "A": "put out",
-            "B": "put up",
-            "C": "put off",
-            "D": "put on"
+            "A": "fill in",
+            "B": "fill out of",
+            "C": "fill away",
+            "D": "fill under"
           },
-          "correct_answer": "C",
-          "explanation": "postpone",
+          "correct_answer": "A",
+          "explanation": "Fill in/fill out a form.",
           "variant": 3,
           "choice_explanations": {
-            "A": "❌ Не підходить: «put out» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "B": "❌ Не підходить: «put up» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "C": "✅ Так: postpone",
-            "D": "❌ Не підходить: «put on» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні."
+            "A": "✅ Так: Fill in/fill out a form.",
+            "B": "❌ Ні: \"fill out of\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "C": "❌ Ні: \"fill away\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "D": "❌ Ні: \"fill under\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 Операційна система керує процесами, пам’яттю, файлами й пристроями. Файлова система відповідає за імена, каталоги, права доступу й логічну організацію даних на носії.",
-          "real_life_example": "🏠 Файлова система — це бібліотечний каталог і полиці: вона не є самою книгою, але визначає, де що лежить, як називається і хто може це взяти."
+          "scientific_explanation": "🔬 Phrasal verbs мають значення як ціла фраза, не як сума окремих слів.",
+          "real_life_example": "🏠 Put off — це не 'покласти геть', а 'відкласти'."
         },
         {
           "id": "english-realstyle-016-v3",
           "subject": "english",
           "block": "use_of_english",
           "topic": "word",
-          "prompt": "Choose the correct option: The instructions were clear and ___.",
+          "prompt": "The explanation was ___ enough for beginners.",
           "choices": {
-            "A": "conclude",
-            "B": "collision",
-            "C": "concise",
-            "D": "concern"
+            "A": "hostile",
+            "B": "accessible",
+            "C": "temporary",
+            "D": "irrelevant"
           },
-          "correct_answer": "C",
-          "explanation": "clear and concise",
+          "correct_answer": "B",
+          "explanation": "Accessible means easy to understand/use.",
           "variant": 3,
           "choice_explanations": {
-            "A": "❌ Не підходить: «conclude» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "B": "❌ Не підходить: «collision» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "C": "✅ Так: clear and concise",
-            "D": "❌ Не підходить: «concern» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні."
+            "A": "❌ Ні: \"hostile\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "B": "✅ Так: Accessible means easy to understand/use.",
+            "C": "❌ Ні: \"temporary\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "D": "❌ Ні: \"irrelevant\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 Операційна система керує процесами, пам’яттю, файлами й пристроями. Файлова система відповідає за імена, каталоги, права доступу й логічну організацію даних на носії.",
-          "real_life_example": "🏠 Файлова система — це бібліотечний каталог і полиці: вона не є самою книгою, але визначає, де що лежить, як називається і хто може це взяти."
+          "scientific_explanation": "🔬 Vocabulary questions перевіряють точне значення і стиль слова в контексті.",
+          "real_life_example": "🏠 Обирай слово, яке природно звучить у реченні, а не просто схоже за перекладом."
         },
         {
           "id": "english-realstyle-017-v3",
           "subject": "english",
           "block": "use_of_english",
           "topic": "tense",
-          "prompt": "Choose the correct option: I ___ this book since Monday.",
+          "prompt": "While the teacher was explaining, several students ___ notes.",
           "choices": {
-            "A": "have been reading",
-            "B": "was read",
-            "C": "read",
-            "D": "am reading"
+            "A": "took",
+            "B": "were taking",
+            "C": "have taken yesterday",
+            "D": "had taking"
           },
-          "correct_answer": "A",
-          "explanation": "since + ongoing",
+          "correct_answer": "B",
+          "explanation": "Past Continuous for an action in progress.",
           "variant": 3,
           "choice_explanations": {
-            "A": "✅ Так: since + ongoing",
-            "B": "❌ Не підходить: «was read» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "C": "❌ Не підходить: «read» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "D": "❌ Не підходить: «am reading» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні."
+            "A": "❌ Ні: \"took\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "B": "✅ Так: Past Continuous for an action in progress.",
+            "C": "❌ Ні: \"have taken yesterday\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "D": "❌ Ні: \"had taking\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 Операційна система керує процесами, пам’яттю, файлами й пристроями. Файлова система відповідає за імена, каталоги, права доступу й логічну організацію даних на носії.",
-          "real_life_example": "🏠 Файлова система — це бібліотечний каталог і полиці: вона не є самою книгою, але визначає, де що лежить, як називається і хто може це взяти."
+          "scientific_explanation": "🔬 Tense вибирається за часовою логікою і маркерами: since, already, by the time, yesterday.",
+          "real_life_example": "🏠 Спершу визнач, коли дія сталася і чи важливий її результат зараз."
         },
         {
           "id": "english-realstyle-018-v3",
           "subject": "english",
           "block": "use_of_english",
           "topic": "zero_cond",
-          "prompt": "Choose the correct option: If water reaches 100°C, it ___.",
+          "prompt": "If you divide by zero, the operation ___ undefined.",
           "choices": {
-            "A": "boiled",
-            "B": "had boiled",
-            "C": "boils",
-            "D": "would boil"
+            "A": "is",
+            "B": "was",
+            "C": "will was",
+            "D": "would been"
           },
-          "correct_answer": "C",
-          "explanation": "zero conditional",
+          "correct_answer": "A",
+          "explanation": "Zero conditional/general rule.",
           "variant": 3,
           "choice_explanations": {
-            "A": "❌ Не підходить: «boiled» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "B": "❌ Не підходить: «had boiled» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "C": "✅ Так: zero conditional",
-            "D": "❌ Не підходить: «would boil» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні."
+            "A": "✅ Так: Zero conditional/general rule.",
+            "B": "❌ Ні: \"was\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "C": "❌ Ні: \"will was\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "D": "❌ Ні: \"would been\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 Операційна система керує процесами, пам’яттю, файлами й пристроями. Файлова система відповідає за імена, каталоги, права доступу й логічну організацію даних на носії.",
-          "real_life_example": "🏠 Файлова система — це бібліотечний каталог і полиці: вона не є самою книгою, але визначає, де що лежить, як називається і хто може це взяти."
+          "scientific_explanation": "🔬 Zero conditional описує загальне правило або факт: if + present, present.",
+          "real_life_example": "🏠 Як закон природи: якщо нагріти лід, він тане."
         },
         {
           "id": "english-realstyle-019-v3",
           "subject": "english",
           "block": "use_of_english",
           "topic": "passive",
-          "prompt": "Choose the correct option: Emails ___ every morning.",
+          "prompt": "The final scores ___ automatically.",
           "choices": {
-            "A": "sent",
-            "B": "sending",
-            "C": "send",
-            "D": "are sent"
+            "A": "calculate",
+            "B": "are calculated",
+            "C": "calculating",
+            "D": "has calculated"
           },
-          "correct_answer": "D",
-          "explanation": "present passive",
+          "correct_answer": "B",
+          "explanation": "Passive: are calculated.",
           "variant": 3,
           "choice_explanations": {
-            "A": "❌ Не підходить: «sent» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "B": "❌ Не підходить: «sending» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "C": "❌ Не підходить: «send» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "D": "✅ Так: present passive"
+            "A": "❌ Ні: \"calculate\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "B": "✅ Так: Passive: are calculated.",
+            "C": "❌ Ні: \"calculating\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "D": "❌ Ні: \"has calculated\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 Операційна система керує процесами, пам’яттю, файлами й пристроями. Файлова система відповідає за імена, каталоги, права доступу й логічну організацію даних на носії.",
-          "real_life_example": "🏠 Файлова система — це бібліотечний каталог і полиці: вона не є самою книгою, але визначає, де що лежить, як називається і хто може це взяти."
+          "scientific_explanation": "🔬 Passive voice переносить фокус з виконавця дії на об'єкт. Формула: be у потрібному часі + V3.",
+          "real_life_example": "🏠 Як у новині: важливо, що звіт перевірили або дані зберегли, а не хто саме це зробив."
         },
         {
           "id": "english-realstyle-020-v3",
           "subject": "english",
           "block": "use_of_english",
           "topic": "collocation",
-          "prompt": "Choose the correct option: Please ___ attention.",
+          "prompt": "The committee reached a ___ after a long discussion.",
           "choices": {
-            "A": "pay",
-            "B": "do",
-            "C": "make",
-            "D": "take"
+            "A": "decision",
+            "B": "homework",
+            "C": "research",
+            "D": "mistake"
           },
           "correct_answer": "A",
-          "explanation": "pay attention",
+          "explanation": "Collocation: reach a decision.",
           "variant": 3,
           "choice_explanations": {
-            "A": "✅ Так: pay attention",
-            "B": "❌ Не підходить: «do» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "C": "❌ Не підходить: «make» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "D": "❌ Не підходить: «take» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні."
+            "A": "✅ Так: Collocation: reach a decision.",
+            "B": "❌ Ні: \"homework\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "C": "❌ Ні: \"research\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "D": "❌ Ні: \"mistake\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 Операційна система керує процесами, пам’яттю, файлами й пристроями. Файлова система відповідає за імена, каталоги, права доступу й логічну організацію даних на носії.",
-          "real_life_example": "🏠 Файлова система — це бібліотечний каталог і полиці: вона не є самою книгою, але визначає, де що лежить, як називається і хто може це взяти."
+          "scientific_explanation": "🔬 Collocation — це стала пара слів. Її не завжди можна перекласти дослівно.",
+          "real_life_example": "🏠 Англійська любить звичні пари: make a decision, do research, pay attention."
         },
         {
           "id": "english-realstyle-021-v3",
           "subject": "english",
           "block": "use_of_english",
           "topic": "prep",
-          "prompt": "Choose the correct option: She is responsible ___ the report.",
+          "prompt": "This result is similar ___ the previous finding.",
           "choices": {
             "A": "to",
-            "B": "at",
-            "C": "for",
-            "D": "of"
+            "B": "with",
+            "C": "of",
+            "D": "at"
           },
-          "correct_answer": "C",
-          "explanation": "responsible for",
+          "correct_answer": "A",
+          "explanation": "Similar to.",
           "variant": 3,
           "choice_explanations": {
-            "A": "❌ Не підходить: «to» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "B": "❌ Не підходить: «at» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "C": "✅ Так: responsible for",
-            "D": "❌ Не підходить: «of» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні."
+            "A": "✅ Так: Similar to.",
+            "B": "❌ Ні: \"with\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "C": "❌ Ні: \"of\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "D": "❌ Ні: \"at\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 Криптографічні механізми розрізняють конфіденційність, цілісність і автентичність. Шифрування приховує зміст, хешування дає дайджест, AH в IPsec перевіряє автентичність та цілісність, а ESP може шифрувати дані.",
-          "real_life_example": "🏠 Це як запечатаний конверт і контрольна печатка: конверт приховує текст, а печатка показує, чи його відкривали або підміняли."
+          "scientific_explanation": "🔬 Prepositions часто є частиною керування слова: depend on, interested in, responsible for.",
+          "real_life_example": "🏠 Це як пароль до слова: неправильний прийменник ламає всю фразу."
         },
         {
           "id": "english-realstyle-022-v3",
           "subject": "english",
           "block": "use_of_english",
           "topic": "word_form",
-          "prompt": "Choose the correct option: The experiment was conducted ___.",
+          "prompt": "The argument was presented in a ___ way.",
           "choices": {
-            "A": "carefully",
-            "B": "carefulness",
-            "C": "care",
-            "D": "careful"
+            "A": "logic",
+            "B": "logical",
+            "C": "logically",
+            "D": "logician"
           },
-          "correct_answer": "A",
-          "explanation": "adverb",
+          "correct_answer": "B",
+          "explanation": "An adjective is needed before way: logical.",
           "variant": 3,
           "choice_explanations": {
-            "A": "✅ Так: adverb",
-            "B": "❌ Не підходить: «carefulness» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "C": "❌ Не підходить: «care» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні.",
-            "D": "❌ Не підходить: «careful» є відволікаючим або сусіднім поняттям. Воно не покриває точну ознаку, яку питають у формулюванні."
+            "A": "❌ Ні: \"logic\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "B": "✅ Так: An adjective is needed before way: logical.",
+            "C": "❌ Ні: \"logically\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "D": "❌ Ні: \"logician\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 Операційна система керує процесами, пам’яттю, файлами й пристроями. Файлова система відповідає за імена, каталоги, права доступу й логічну організацію даних на носії.",
-          "real_life_example": "🏠 Файлова система — це бібліотечний каталог і полиці: вона не є самою книгою, але визначає, де що лежить, як називається і хто може це взяти."
+          "scientific_explanation": "🔬 Word formation перевіряє частину мови: noun, adjective, adverb або verb. Дивись на місце слова у реченні.",
+          "real_life_example": "🏠 Як деталь у конструкторі: слово має підійти за формою до сусідніх слів."
         },
         {
           "id": "english-realstyle-023-v3",
           "subject": "english",
           "block": "reading",
           "topic": "reading",
-          "prompt": "Remote work saved commute time but reduced informal communication.",
+          "prompt": "The passage states that the tool saves time, but only after users learn the basics. The best conclusion is:",
           "choices": {
-            "A": "It had benefits and drawbacks",
-            "B": "No benefits",
-            "C": "Illegal",
-            "D": "Only improved communication"
+            "A": "Training is unnecessary.",
+            "B": "The tool can be useful after initial learning.",
+            "C": "The tool never saves time.",
+            "D": "Users cannot learn it."
           },
-          "correct_answer": "A",
-          "explanation": "balanced view",
+          "correct_answer": "B",
+          "explanation": "The text links usefulness with initial learning.",
           "variant": 3,
           "choice_explanations": {
-            "A": "✅ Так: balanced view",
-            "B": "❌ Пастка: «No benefits» може звучати близько, але не відповідає умові. Спершу знайди тип задачі, а потім обирай.",
-            "C": "❌ Пастка: «Illegal» може звучати близько, але не відповідає умові. Спершу знайди тип задачі, а потім обирай.",
-            "D": "❌ Пастка: «Only improved communication» може звучати близько, але не відповідає умові. Спершу знайди тип задачі, а потім обирай."
+            "A": "❌ Ні: \"Training is unnecessary.\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "B": "✅ Так: The text links usefulness with initial learning.",
+            "C": "❌ Ні: \"The tool never saves time.\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "D": "❌ Ні: \"Users cannot learn it.\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 English перевіряє граматичну роль слова, сталу колокацію, часову рамку або доказ у тексті. Відповідь має підходити і за змістом, і за формою.",
-          "real_life_example": "🏠 Речення як пазл: час, прийменник, linker і форма дієслова мають стати у правильне місце."
+          "scientific_explanation": "🔬 Reading перевіряє доказ у тексті. Правильна відповідь має бути підтверджена фразою або логікою уривка.",
+          "real_life_example": "🏠 Не обирай відповідь, яка просто звучить розумно. Шукай рядок-доказ."
         },
         {
           "id": "english-realstyle-024-v3",
           "subject": "english",
           "block": "use_of_english",
           "topic": "modal",
-          "prompt": "Choose the correct option: He ___ be home; his car is outside.",
+          "prompt": "You ___ not share your password with anyone.",
           "choices": {
             "A": "must",
-            "B": "mustn’t",
-            "C": "can’t",
-            "D": "doesn’t have to"
+            "B": "might to",
+            "C": "can to",
+            "D": "would to"
           },
           "correct_answer": "A",
-          "explanation": "logical deduction",
+          "explanation": "Must not expresses prohibition.",
           "variant": 3,
           "choice_explanations": {
-            "A": "✅ Так: logical deduction",
-            "B": "❌ Пастка: «mustn’t» може звучати близько, але не відповідає умові. Спершу знайди тип задачі, а потім обирай.",
-            "C": "❌ Пастка: «can’t» може звучати близько, але не відповідає умові. Спершу знайди тип задачі, а потім обирай.",
-            "D": "❌ Пастка: «doesn’t have to» може звучати близько, але не відповідає умові. Спершу знайди тип задачі, а потім обирай."
+            "A": "✅ Так: Must not expresses prohibition.",
+            "B": "❌ Ні: \"might to\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "C": "❌ Ні: \"can to\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "D": "❌ Ні: \"would to\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "scientific_explanation": "🔬 English перевіряє граматичну роль слова, сталу колокацію, часову рамку або доказ у тексті. Відповідь має підходити і за змістом, і за формою.",
-          "real_life_example": "🏠 Речення як пазл: час, прийменник, linker і форма дієслова мають стати у правильне місце."
+          "scientific_explanation": "🔬 Modals передають обов'язок, пораду, дозвіл або логічний висновок: must, should, may, have to.",
+          "real_life_example": "🏠 Must be home — це не наказ, а сильний висновок за доказом."
         },
         {
+          "id": "english-realstyle-025-v3",
           "subject": "english",
-          "block": "english",
+          "block": "use_of_english",
           "topic": "conditionals",
-          "prompt": "If the instructions ___ clearer, fewer students would make mistakes.",
+          "prompt": "If the internet connection fails, the app ___ offline mode.",
           "choices": {
-            "A": "are",
-            "B": "were",
-            "C": "had been",
-            "D": "will be"
+            "A": "uses",
+            "B": "used",
+            "C": "would used",
+            "D": "had used"
           },
-          "correct_answer": "B",
-          "explanation": "Second conditional: if + Past Simple, would + V.",
+          "correct_answer": "A",
+          "explanation": "Zero/real conditional for a general system behavior.",
           "variant": 3,
-          "scientific_explanation": "🔬 English перевіряє граматичну роль слова, сталу колокацію, часову рамку, linker або доказ у тексті.",
-          "real_life_example": "🏠 Речення як пазл: час, прийменник, linker і форма дієслова мають стати у правильне місце.",
           "choice_explanations": {
-            "A": "❌ Пастка: «are» звучить можливо, але не відповідає ключовій ознаці умови.",
-            "B": "✅ Так: Second conditional: if + Past Simple, would + V.",
-            "C": "❌ Пастка: «had been» звучить можливо, але не відповідає ключовій ознаці умови.",
-            "D": "❌ Пастка: «will be» звучить можливо, але не відповідає ключовій ознаці умови."
+            "A": "✅ Так: Zero/real conditional for a general system behavior.",
+            "B": "❌ Ні: \"used\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "C": "❌ Ні: \"would used\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "D": "❌ Ні: \"had used\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "id": "english-realstyle-025-v3"
+          "scientific_explanation": "🔬 Conditionals показують реальність умови: реальна, уявна або минула нереальна ситуація.",
+          "real_life_example": "🏠 Це як сценарій: якщо умова вже не справдилася в минулому, потрібен third conditional."
         },
         {
+          "id": "english-realstyle-026-v3",
           "subject": "english",
-          "block": "english",
+          "block": "use_of_english",
           "topic": "conditionals",
-          "prompt": "If the server had been updated, the error ___ occurred.",
+          "prompt": "If they had checked the data, they ___ the duplicate rows.",
           "choices": {
-            "A": "will not have",
-            "B": "would not have",
-            "C": "would not",
-            "D": "had not"
+            "A": "will find",
+            "B": "would find",
+            "C": "would have found",
+            "D": "find"
           },
-          "correct_answer": "B",
-          "explanation": "Third conditional: would not have + V3.",
+          "correct_answer": "C",
+          "explanation": "Third conditional: would have + V3.",
           "variant": 3,
-          "scientific_explanation": "🔬 English перевіряє граматичну роль слова, сталу колокацію, часову рамку, linker або доказ у тексті.",
-          "real_life_example": "🏠 Речення як пазл: час, прийменник, linker і форма дієслова мають стати у правильне місце.",
           "choice_explanations": {
-            "A": "❌ Пастка: «will not have» звучить можливо, але не відповідає ключовій ознаці умови.",
-            "B": "✅ Так: Third conditional: would not have + V3.",
-            "C": "❌ Пастка: «would not» звучить можливо, але не відповідає ключовій ознаці умови.",
-            "D": "❌ Пастка: «had not» звучить можливо, але не відповідає ключовій ознаці умови."
+            "A": "❌ Ні: \"will find\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "B": "❌ Ні: \"would find\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "C": "✅ Так: Third conditional: would have + V3.",
+            "D": "❌ Ні: \"find\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "id": "english-realstyle-026-v3"
+          "scientific_explanation": "🔬 Conditionals показують реальність умови: реальна, уявна або минула нереальна ситуація.",
+          "real_life_example": "🏠 Це як сценарій: якщо умова вже не справдилася в минулому, потрібен third conditional."
         },
         {
+          "id": "english-realstyle-027-v3",
           "subject": "english",
-          "block": "english",
+          "block": "use_of_english",
           "topic": "tense",
-          "prompt": "By 9 p.m., she ___ all practice tests.",
+          "prompt": "The platform ___ users since 2020.",
           "choices": {
-            "A": "will complete",
-            "B": "will have completed",
-            "C": "completed",
-            "D": "has completing"
+            "A": "supports",
+            "B": "supported yesterday",
+            "C": "has supported",
+            "D": "is support"
           },
-          "correct_answer": "B",
-          "explanation": "Future Perfect: will have + V3 for action completed before a future time.",
+          "correct_answer": "C",
+          "explanation": "Since + starting point: Present Perfect.",
           "variant": 3,
-          "scientific_explanation": "🔬 English перевіряє граматичну роль слова, сталу колокацію, часову рамку, linker або доказ у тексті.",
-          "real_life_example": "🏠 Речення як пазл: час, прийменник, linker і форма дієслова мають стати у правильне місце.",
           "choice_explanations": {
-            "A": "❌ Пастка: «will complete» звучить можливо, але не відповідає ключовій ознаці умови.",
-            "B": "✅ Так: Future Perfect: will have + V3 for action completed before a future time.",
-            "C": "❌ Пастка: «completed» звучить можливо, але не відповідає ключовій ознаці умови.",
-            "D": "❌ Пастка: «has completing» звучить можливо, але не відповідає ключовій ознаці умови."
+            "A": "❌ Ні: \"supports\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "B": "❌ Ні: \"supported yesterday\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "C": "✅ Так: Since + starting point: Present Perfect.",
+            "D": "❌ Ні: \"is support\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "id": "english-realstyle-027-v3"
+          "scientific_explanation": "🔬 Tense вибирається за часовою логікою і маркерами: since, already, by the time, yesterday.",
+          "real_life_example": "🏠 Спершу визнач, коли дія сталася і чи важливий її результат зараз."
         },
         {
+          "id": "english-realstyle-028-v3",
           "subject": "english",
-          "block": "english",
+          "block": "use_of_english",
           "topic": "linker",
-          "prompt": "The task seemed simple. ___, most candidates chose the wrong option.",
+          "prompt": "The sample was small; ___, the findings should be treated carefully.",
           "choices": {
-            "A": "Therefore",
-            "B": "However",
-            "C": "For example",
-            "D": "Because"
+            "A": "therefore",
+            "B": "unless",
+            "C": "although",
+            "D": "meanwhile"
           },
-          "correct_answer": "B",
-          "explanation": "However signals contrast.",
+          "correct_answer": "A",
+          "explanation": "Therefore signals the conclusion/result.",
           "variant": 3,
-          "scientific_explanation": "🔬 English перевіряє граматичну роль слова, сталу колокацію, часову рамку, linker або доказ у тексті.",
-          "real_life_example": "🏠 Речення як пазл: час, прийменник, linker і форма дієслова мають стати у правильне місце.",
           "choice_explanations": {
-            "A": "❌ Пастка: «Therefore» звучить можливо, але не відповідає ключовій ознаці умови.",
-            "B": "✅ Так: However signals contrast.",
-            "C": "❌ Пастка: «For example» звучить можливо, але не відповідає ключовій ознаці умови.",
-            "D": "❌ Пастка: «Because» звучить можливо, але не відповідає ключовій ознаці умови."
+            "A": "✅ Так: Therefore signals the conclusion/result.",
+            "B": "❌ Ні: \"unless\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "C": "❌ Ні: \"although\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "D": "❌ Ні: \"meanwhile\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "id": "english-realstyle-028-v3"
+          "scientific_explanation": "🔬 Linkers показують логіку між частинами: contrast, cause, result, addition.",
+          "real_life_example": "🏠 However розвертає думку, therefore показує наслідок."
         },
         {
+          "id": "english-realstyle-029-v3",
           "subject": "english",
-          "block": "english",
+          "block": "use_of_english",
           "topic": "prep",
-          "prompt": "The answer is similar ___ the previous one, but not identical.",
+          "prompt": "The candidate was familiar ___ the format of the exam.",
           "choices": {
             "A": "with",
-            "B": "to",
-            "C": "from",
-            "D": "on"
+            "B": "on",
+            "C": "for",
+            "D": "at"
           },
-          "correct_answer": "B",
-          "explanation": "Collocation: similar to.",
+          "correct_answer": "A",
+          "explanation": "Familiar with.",
           "variant": 3,
-          "scientific_explanation": "🔬 English перевіряє граматичну роль слова, сталу колокацію, часову рамку, linker або доказ у тексті.",
-          "real_life_example": "🏠 Речення як пазл: час, прийменник, linker і форма дієслова мають стати у правильне місце.",
           "choice_explanations": {
-            "A": "❌ Пастка: «with» звучить можливо, але не відповідає ключовій ознаці умови.",
-            "B": "✅ Так: Collocation: similar to.",
-            "C": "❌ Пастка: «from» звучить можливо, але не відповідає ключовій ознаці умови.",
-            "D": "❌ Пастка: «on» звучить можливо, але не відповідає ключовій ознаці умови."
+            "A": "✅ Так: Familiar with.",
+            "B": "❌ Ні: \"on\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "C": "❌ Ні: \"for\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "D": "❌ Ні: \"at\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "id": "english-realstyle-029-v3"
+          "scientific_explanation": "🔬 Prepositions часто є частиною керування слова: depend on, interested in, responsible for.",
+          "real_life_example": "🏠 Це як пароль до слова: неправильний прийменник ламає всю фразу."
         },
         {
+          "id": "english-realstyle-030-v3",
           "subject": "english",
-          "block": "english",
+          "block": "reading",
           "topic": "reading",
-          "prompt": "In a reading passage, the phrase “this approach” most often refers to:",
+          "prompt": "If a question asks for the author's attitude, the answer should describe:",
           "choices": {
-            "A": "a following unrelated idea",
-            "B": "the nearest previous method or idea",
-            "C": "the title only",
-            "D": "the reader's opinion"
+            "A": "tone or opinion",
+            "B": "only a date",
+            "C": "a grammar rule",
+            "D": "an unrelated fact"
           },
-          "correct_answer": "B",
-          "explanation": "Reference words usually point to a nearby previous idea.",
+          "correct_answer": "A",
+          "explanation": "Author's attitude means tone/opinion.",
           "variant": 3,
-          "scientific_explanation": "🔬 English перевіряє граматичну роль слова, сталу колокацію, часову рамку, linker або доказ у тексті.",
-          "real_life_example": "🏠 Речення як пазл: час, прийменник, linker і форма дієслова мають стати у правильне місце.",
           "choice_explanations": {
-            "A": "❌ Пастка: «a following unrelated idea» звучить можливо, але не відповідає ключовій ознаці умови.",
-            "B": "✅ Так: Reference words usually point to a nearby previous idea.",
-            "C": "❌ Пастка: «the title only» звучить можливо, але не відповідає ключовій ознаці умови.",
-            "D": "❌ Пастка: «the reader's opinion» звучить можливо, але не відповідає ключовій ознаці умови."
+            "A": "✅ Так: Author's attitude means tone/opinion.",
+            "B": "❌ Ні: \"only a date\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "C": "❌ Ні: \"a grammar rule\" не відповідає граматичній ролі, часовій логіці або змісту цього речення.",
+            "D": "❌ Ні: \"an unrelated fact\" не відповідає граматичній ролі, часовій логіці або змісту цього речення."
           },
-          "id": "english-realstyle-030-v3"
+          "scientific_explanation": "🔬 Reading перевіряє доказ у тексті. Правильна відповідь має бути підтверджена фразою або логікою уривка.",
+          "real_life_example": "🏠 Не обирай відповідь, яка просто звучить розумно. Шукай рядок-доказ."
         }
-      ]
+      ],
+      "updated_at": "2026-06-28T12:47:10.386Z"
     }
   ],
-  "updated_at": "2026-06-28T05:25:44.630Z"
+  "updated_at": "2026-06-28T12:47:10.386Z"
 }

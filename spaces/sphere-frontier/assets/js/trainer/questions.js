@@ -34,3 +34,30 @@ const SPHERES={
     bachelor:["Pharma Management","Health Economics","Biotech Business","Clinical Trials"],
     master:["Healthcare Innovation","Bioventures","Regulatory Science","Medical Marketing"]}
 };
+
+const RES={
+  guide:[
+    {l:"📘 ЄВІ/ЄФВВ guide: ТЗНК + English + IT",u:"./study_guides/master_prep_exam_guide_v17_full_plus_deep_teaching.pdf"},
+    {l:"📄 HTML version of the guide",u:"./study_guides/master_prep_exam_guide_v17_full_plus_deep_teaching.html"}
+  ],
+  tznk:[
+    {l:"🧠 ZNO/Освіта: ТЗНПК варіанти",u:"https://zno.osvita.ua/master/tznpk/list.html"},
+    {l:"🧩 ZNO/Освіта: ТЗНК variant 1",u:"https://zno.osvita.ua/master/tznpk/tag-tznk_variant_1/"},
+    {l:"🧮 Math Corporation: логіка / TZNK-style practice",u:"https://www.mathcorporation.com/quizzes/english-master-zno?year=all"}
+  ],
+  english:[
+    {l:"🇬🇧 ZNO/Освіта: English master tests",u:"https://zno.osvita.ua/master/english/list.html"},
+    {l:"🇬🇧 Math Corporation: English Master ZNO",u:"https://www.mathcorporation.com/quizzes/english-master-zno?year=all"}
+  ],
+  it:[
+    {l:"💻 ZNO/Освіта: Master IT tests",u:"https://zno.osvita.ua/master/it"},
+    {l:"🧪 Connected: додаткові тести",u:"https://connected.com.ua/tests/"}
+  ],
+  nmt:[
+    {l:"🎓 ZNO/Освіта: НМТ / шкільна база",u:"https://zno.osvita.ua/"}
+  ],
+  research:[
+    {l:"🧙 Oksana Kolisnyk — TEZv / K-RnD Lab research context",u:"./index.html"},
+    {l:"📊 Training Analytics",u:"./training-analytics.html"}
+  ]
+};

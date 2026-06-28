@@ -7,9 +7,9 @@ let APPS_SCRIPT_URL="https://script.google.com/macros/s/AKfycbzDJy4ysMJpXiDXI1_n
 // i18n
 const I18N={
   ua:{
-    eyebrow:"K MENTORSHIP HUB / \u{1F9ED} REAL-PREP-EDUCATION",
+    eyebrow:"K-RnD Lab / Oksana Kolisnyk \u{1F9D9} - TEZv / Real-prep research",
     title:"Master Training",
-    lede:"\u{1F91D} You've got this. Pick foundation, a sphere exam, or a combo path \u2014 and train.",
+    lede:"\u{1F91D} Дослідницький тренажер для підготовки: ТЗНК, English та IT. Це K-RnD Lab study prototype; зовнішні ресурси винесені окремо для глибшої практики.",
     subF:"\u{1F9EE} Logic, Math",
     subEn:"\u{1F4D6} Reading, Grammar, Vocabulary, Listening",
     subS:"\u{1F52C} Biology, Chemistry, Physics, Bioinformatics",
@@ -60,9 +60,9 @@ const I18N={
     totalAcc:"Overall accuracy (all sessions)"
   },
   en:{
-    eyebrow:"K MENTORSHIP HUB / \u{1F9ED} REAL-PREP-EDUCATION",
+    eyebrow:"K-RnD Lab / Oksana Kolisnyk \u{1F9D9} - TEZv / Real-prep research",
     title:"Master Training",
-    lede:"\u{1F91D} You've got this. Pick foundation, a sphere exam, or a combo path \u2014 and train.",
+    lede:"\u{1F91D} Research trainer for exam practice: TZNK, English, and IT. Built as a K-RnD Lab study prototype; external resources are linked separately for deeper practice.",
     frontDoor:"Front Door",
     uiLang:"Interface language",qLang:"Question language",
     subF:"\u{1F9EE} Logic, Math",
@@ -570,9 +570,18 @@ function getReadiness(){
 }
 
 function renderResources(){
-  const subs=state.subject==="all"?SPHERES[state.sphere][state.level]:state.subject==="english"?SPHERES.english[state.level]:[state.subject];
-  let h="";
-  subs.forEach(s=>{if(RES[s]){h+=`<div style="font-size:12px;font-weight:600;margin:8px 0 4px">${s}</div>`;RES[s].forEach(r=>h+=`<a href="${r.u}" target="_blank" rel="noreferrer">${r.l}</a>`);}});
+  const groups=["guide"];
+  const subject=(state.subject||"").toLowerCase();
+  const sphere=(state.sphere||"").toLowerCase();
+  if(subject==="english"||sphere==="english")groups.push("english");
+  else if(subject==="it"||sphere==="t")groups.push("it");
+  else groups.push("tznk");
+  groups.push("research");
+  const labels={guide:"Core guide",tznk:"TZNK practice",english:"English practice",it:"IT practice",nmt:"NMT base",research:"Research context"};
+  const h=groups.map(g=>{
+    const links=RES[g]||[];
+    return `<div class="resource-group"><div class="resource-title">${labels[g]||g}</div>${links.map(r=>`<a href="${r.u}" target="_blank" rel="noreferrer">${r.l}</a>`).join("")}</div>`;
+  }).join("");
   document.getElementById("resourceLinks").innerHTML=h;
 }
 

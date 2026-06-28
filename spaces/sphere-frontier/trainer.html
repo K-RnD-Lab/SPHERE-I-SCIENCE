@@ -59,6 +59,17 @@
     #timerBar .timer-icon{font-size:18px}
     #timerBar .timer-value{font-weight:700;font-variant-numeric:tabular-nums}
     #timerBar .timer-label{color:var(--muted);font-size:12px}
+    .prep-context{margin:14px 0 18px;background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:18px}
+    .prep-context h2{margin:0 0 8px;font-size:18px}
+    .prep-context p{margin:0;color:var(--muted);font-size:14px;line-height:1.55}
+    .prep-resource-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:14px}
+    .prep-resource-card{background:var(--card-bg);border:1px solid var(--line);border-radius:16px;padding:14px}
+    .prep-resource-card h3{margin:0 0 6px;font-size:14px}
+    .prep-resource-card a{display:block;color:var(--technology);font-size:13px;margin:5px 0;text-decoration:none}
+    .prep-resource-card a:hover{text-decoration:underline}
+    .resource-group{border-top:1px solid var(--line);padding-top:10px;margin-top:10px}
+    .resource-group:first-child{border-top:0;padding-top:0;margin-top:0}
+    .resource-title{font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
   </style>
 </head>
 <body>
@@ -84,6 +95,33 @@
         <select id="qLang" disabled><option value="en" selected>English (only)</option></select>
       </label>
     </div>
+
+    <section class="prep-context">
+      <h2>Фокус підготовки</h2>
+      <p>Цей тренажер K-RnD Lab зараз сфокусований на ЄВІ/ЄФВВ: ТЗНК, English та IT / Computer Science. Це частина дослідницької практики Oksana Kolisnyk 🧙 - TEZv; ширші посферні гайди для Science, Entrepreneurship і cross-sphere треків краще тримати окремо, не змішуючи їх із цим екзаменаційним набором.</p>
+      <div class="prep-resource-grid">
+        <div class="prep-resource-card">
+          <h3>📘 Core guide</h3>
+          <a href="./study_guides/master_prep_exam_guide_v17_full_plus_deep_teaching.pdf" target="_blank" rel="noopener">TZNK + English + IT PDF</a>
+          <a href="./study_guides/master_prep_exam_guide_v17_full_plus_deep_teaching.html" target="_blank" rel="noopener">HTML version</a>
+        </div>
+        <div class="prep-resource-card">
+          <h3>🧠 TZNK / logic</h3>
+          <a href="https://zno.osvita.ua/master/tznpk/list.html" target="_blank" rel="noopener">ZNO/Освіта TZNK list</a>
+          <a href="https://zno.osvita.ua/master/tznpk/tag-tznk_variant_1/" target="_blank" rel="noopener">ZNO/Освіта TZNK variant</a>
+        </div>
+        <div class="prep-resource-card">
+          <h3>🇬🇧 English</h3>
+          <a href="https://zno.osvita.ua/master/english/list.html" target="_blank" rel="noopener">ZNO/Освіта English</a>
+          <a href="https://www.mathcorporation.com/quizzes/english-master-zno?year=all" target="_blank" rel="noopener">Math Corporation English practice</a>
+        </div>
+        <div class="prep-resource-card">
+          <h3>💻 IT</h3>
+          <a href="https://zno.osvita.ua/master/it" target="_blank" rel="noopener">ZNO/Освіта IT</a>
+          <a href="https://connected.com.ua/tests/" target="_blank" rel="noopener">Connected tests</a>
+        </div>
+      </div>
+    </section>
 
     <section id="sphereSection">
       <h3 style="font-size:14px;color:var(--muted);margin:0 0 8px">📚 Foundation — base for all exams</h3>
