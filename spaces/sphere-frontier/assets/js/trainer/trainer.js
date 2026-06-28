@@ -322,7 +322,7 @@ document.querySelectorAll(".sphere-card").forEach(c=>{
     document.querySelectorAll(".sphere-card").forEach(x=>x.classList.remove("active"));
     c.classList.add("active");
     const sp=c.dataset.sphere;
-    state.sphere=sp==="foundation"||sp==="english"?"F":sp;
+    state.sphere=sp==="foundation"?"F":sp;
     state.subject=sp==="english"?"english":"all";
     document.getElementById("sphereSection").style.display="none";
     document.getElementById("msgBox").style.display="none";
