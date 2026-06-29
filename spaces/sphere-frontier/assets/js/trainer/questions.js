@@ -37,9 +37,9 @@ const SPHERES={
 
 const RES={
   guide:[
-    {l:"📘 ЄВІ/ЄФВВ guide: ТЗНК + English + IT",u:"./study_guides/master_prep_exam_guide_v17_full_plus_deep_teaching.pdf"},
+    {l:"📘 ЄВІ/ЄФВВ guide: ТЗНК + English + IT",u:"./study_guides/master_prep_exam_guide_v18_tznk_clear_combinatorics.pdf"},
     {l:"🇬🇧 English error-focus mini guide",u:"./study_guides/english_error_focus_v1.pdf"},
-    {l:"🌐 HTML version of the main guide",u:"./study_guides/master_prep_exam_guide_v17_full_plus_deep_teaching.html"}
+    {l:"🌐 HTML version of the main guide",u:"./study_guides/master_prep_exam_guide_v18_tznk_clear_combinatorics.html"}
   ],
   tznk:[
     {l:"🧠 ZNO/Освіта: ТЗНПК варіанти",u:"https://zno.osvita.ua/master/tznpk/list.html"},
