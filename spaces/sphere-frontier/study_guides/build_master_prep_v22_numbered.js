@@ -168,12 +168,28 @@ async function main() {
   html = html.replace(/Master Prep Exam Guide v21/g, "Master Prep Exam Guide v22");
   html = html.replace("</style>", `${polishCss}\n  </style>`);
 
-  html = html.replace("<tr><th>Стор.</th><th>Блок</th><th>Що всередині</th><th>Як читати</th></tr>", "<tr><th>№</th><th>Блок</th><th>Що всередині</th><th>Як читати</th></tr>");
+  html = html.replace("<tr><th>№</th><th>Блок</th><th>Що всередині</th><th>Як читати</th></tr>", "<tr><th>Стор.</th><th>Блок</th><th>Що всередині</th><th>Як читати</th></tr>");
+  const pageRanges = [
+    "1",
+    "2-3",
+    "4",
+    "5-11",
+    "12-17",
+    "18-22",
+    "23-26",
+    "27-31",
+    "32-38",
+    "39-45",
+    "46-53",
+    "54-63",
+    "64-71",
+    "72+",
+  ];
   let n = 0;
-  html = html.replace(/<td class="page">[^<]+<\/td>/g, () => `<td class="page">${String(++n).padStart(2, "0")}</td>`);
+  html = html.replace(/<td class="page">[^<]+<\/td>/g, () => `<td class="page">${pageRanges[n++] || ""}</td>`);
   html = html.replace(
     /<div class="toc-note"><b>Примітка:<\/b>[\s\S]*?<\/div>/,
-    `<div class="toc-note"><b>Примітка:</b> у змісті наведено порядок розділів, а справжня PDF-нумерація стоїть у нижньому колонтитулі кожної сторінки. Так навігація не ламається після додавання схем, коду або нових пояснень.</div>`
+    `<div class="toc-note"><b>Примітка:</b> у змісті наведено діапазони сторінок для поточної PDF-версії v22. Точний номер поточної сторінки завжди видно в нижньому колонтитулі у форматі <b>4 / 97</b>.</div>`
   );
 
   fs.writeFileSync(outHtml, html, "utf8");
