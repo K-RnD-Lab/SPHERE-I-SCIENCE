@@ -144,9 +144,7 @@ async function printPdfWithFooter(chrome, htmlPath, pdfPath) {
       headerTemplate: "<div></div>",
       footerTemplate: `
         <div style="width:100%;font-family:Arial,sans-serif;font-size:8px;color:#65757c;text-align:center;padding:0 12mm;">
-          <span>Master Prep Exam Guide v22</span>
-          <span style="padding:0 8px;color:#b5a36d;">•</span>
-          <span>стор. <span class="pageNumber"></span> / <span class="totalPages"></span></span>
+          <span class="pageNumber"></span> / <span class="totalPages"></span>
         </div>`,
     });
     fs.writeFileSync(pdfPath, Buffer.from(result.data, "base64"));
