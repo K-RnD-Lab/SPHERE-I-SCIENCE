@@ -1,0 +1,63 @@
+{
+  "n_cases": 7,
+  "n_prion_linked": 6,
+  "hook": "Why lions don't eat lions - and when humans force cattle to, epidemics follow.",
+  "cases": [
+    {
+      "case": "BSE UK 1980s",
+      "species": "Bos taurus",
+      "trigger": "MBM in feed - forced conspecific",
+      "pathogen_or_mechanism": "prion BSE to vCJD in humans",
+      "outcome": "epidemic millions culled",
+      "notes": "S6+S5 link"
+    },
+    {
+      "case": "Kuru",
+      "species": "Homo sapiens Fore",
+      "trigger": "funerary cannibalism",
+      "pathogen_or_mechanism": "prion kuru",
+      "outcome": "population decline; PRNP selection",
+      "notes": "classic"
+    },
+    {
+      "case": "CWD",
+      "species": "Cervidae",
+      "trigger": " saliva urine soil",
+      "pathogen_or_mechanism": "prion CWD",
+      "outcome": "herd collapse risk",
+      "notes": "human risk debated"
+    },
+    {
+      "case": "Scrapie",
+      "species": "Ovis aries",
+      "trigger": "placenta ingestion on pasture",
+      "pathogen_or_mechanism": "prion scrapie",
+      "outcome": "sheep flocks",
+      "notes": "S6"
+    },
+    {
+      "case": "Rat Tg overexpression",
+      "species": "Rattus lab",
+      "trigger": "intracerebral inoculation",
+      "pathogen_or_mechanism": "prion RML",
+      "outcome": "accelerated lab disease",
+      "notes": "S5 models"
+    },
+    {
+      "case": "Chimp infanticide",
+      "species": "Pan troglodytes",
+      "trigger": "rare not dietary",
+      "pathogen_or_mechanism": "behavioral not prion",
+      "outcome": "not food chain",
+      "notes": "contrast"
+    },
+    {
+      "case": "Human war",
+      "species": "Homo sapiens",
+      "trigger": "politics",
+      "pathogen_or_mechanism": "no biological brake",
+      "outcome": "ongoing",
+      "notes": "S7-A metaphor"
+    }
+  ]
+}

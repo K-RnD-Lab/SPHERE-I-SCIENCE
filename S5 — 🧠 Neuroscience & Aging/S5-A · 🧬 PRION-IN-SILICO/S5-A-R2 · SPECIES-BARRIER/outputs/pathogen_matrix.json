@@ -1,0 +1,88 @@
+{
+  "title": "Conspecific pathogen compatibility matrix",
+  "n_entries": 10,
+  "n_critical_conspecific": 4,
+  "conclusion": "Even with hypothetical PrP elimination, multiple independent conspecific-critical classes remain (viruses, bacteria, latent prions).",
+  "entries": [
+    {
+      "pathogen_class": "prion",
+      "example": "PrPSc / CJD / FFI",
+      "conspecific_risk": "critical",
+      "inter_specific_risk": "low_to_moderate",
+      "barrier_note": "100% PrP compatibility within species",
+      "source_type": "literature"
+    },
+    {
+      "pathogen_class": "prion",
+      "example": "BSE to human vCJD",
+      "conspecific_risk": "high",
+      "inter_specific_risk": "variable",
+      "barrier_note": "cross-mammal exception (cattle)",
+      "source_type": "literature"
+    },
+    {
+      "pathogen_class": "virus",
+      "example": "HIV-1",
+      "conspecific_risk": "critical",
+      "inter_specific_risk": "none",
+      "barrier_note": "human-specific; tissue and blood",
+      "source_type": "literature"
+    },
+    {
+      "pathogen_class": "virus",
+      "example": "Hepatitis B/C",
+      "conspecific_risk": "critical",
+      "inter_specific_risk": "low",
+      "barrier_note": "human liver tropism",
+      "source_type": "literature"
+    },
+    {
+      "pathogen_class": "virus",
+      "example": "prion-like debate N/A",
+      "conspecific_risk": "na",
+      "inter_specific_risk": "na",
+      "barrier_note": "not virus",
+      "source_type": "na"
+    },
+    {
+      "pathogen_class": "bacteria",
+      "example": "Mycobacterium tuberculosis",
+      "conspecific_risk": "critical",
+      "inter_specific_risk": "low",
+      "barrier_note": "respiratory and tissue in immunocompetent hosts",
+      "source_type": "literature"
+    },
+    {
+      "pathogen_class": "bacteria",
+      "example": "Clostridium perfringens (cadaveric)",
+      "conspecific_risk": "high",
+      "inter_specific_risk": "moderate",
+      "barrier_note": "spoilage not species-specific but toxin risk",
+      "source_type": "literature"
+    },
+    {
+      "pathogen_class": "parasite",
+      "example": "Taenia solium (neurocysticercosis)",
+      "conspecific_risk": "context",
+      "inter_specific_risk": "low",
+      "barrier_note": "human cycle if eggs ingested",
+      "source_type": "literature"
+    },
+    {
+      "pathogen_class": "toxin",
+      "example": "cadaverine_putrescine",
+      "conspecific_risk": "repulsion",
+      "inter_specific_risk": "repulsion",
+      "barrier_note": "behavioral not prion — disgust brake",
+      "source_type": "ecology"
+    },
+    {
+      "pathogen_class": "sporadic",
+      "example": "CJD sporadic (no cannibalism)",
+      "conspecific_risk": "latent_critical",
+      "inter_specific_risk": "na",
+      "barrier_note": "hidden prion in «healthy» deceased",
+      "source_type": "literature"
+    }
+  ]
+}

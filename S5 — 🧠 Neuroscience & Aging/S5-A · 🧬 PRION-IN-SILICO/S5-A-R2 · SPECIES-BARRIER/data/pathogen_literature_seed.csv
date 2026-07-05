@@ -1,0 +1,11 @@
+pathogen_class,example,conspecific_risk,inter_specific_risk,barrier_note,source_type
+prion,PrPSc / CJD / FFI,critical,low_to_moderate,100% PrP compatibility within species,literature
+prion,BSE to human vCJD,high,variable,cross-mammal exception (cattle),literature
+virus,HIV-1,critical,none,human-specific; tissue and blood,literature
+virus,Hepatitis B/C,critical,low,human liver tropism,literature
+virus,prion-like debate N/A,na,na,not virus,na
+bacteria,Mycobacterium tuberculosis,critical,low,respiratory and tissue in immunocompetent hosts,literature
+bacteria,Clostridium perfringens (cadaveric),high,moderate,spoilage not species-specific but toxin risk,literature
+parasite,Taenia solium (neurocysticercosis),context,low,human cycle if eggs ingested,literature
+toxin,cadaverine_putrescine,repulsion,repulsion,behavioral not prion — disgust brake,ecology
+sporadic,CJD sporadic (no cannibalism),latent_critical,na,hidden prion in «healthy» deceased,literature
