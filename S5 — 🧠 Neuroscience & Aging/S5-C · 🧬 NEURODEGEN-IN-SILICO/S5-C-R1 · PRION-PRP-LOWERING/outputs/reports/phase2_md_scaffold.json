@@ -1,0 +1,6 @@
+{
+  "phase": 2,
+  "status": "scaffold_only",
+  "human_pdb_present": true,
+  "next": "GROMACS/OpenMM locally"
+}

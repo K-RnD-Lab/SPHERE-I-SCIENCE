@@ -1,0 +1,20 @@
+{
+  "human": {
+    "uniprot": "P04156",
+    "pdb_file": "human_P04156.pdb",
+    "plddt_avg": 64.19,
+    "coverage": null
+  },
+  "mouse": {
+    "uniprot": "P04925",
+    "pdb_file": "mouse_P04925.pdb",
+    "plddt_avg": 64.62,
+    "coverage": null
+  },
+  "rat": {
+    "uniprot": "P13852",
+    "pdb_file": "rat_P13852.pdb",
+    "plddt_avg": 63.0,
+    "coverage": null
+  }
+}

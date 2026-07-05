@@ -1,0 +1,149 @@
+{
+  "gene": "PRNP",
+  "cdna_length": 2435,
+  "published_targets": {
+    "ION717": {
+      "type": "ASO",
+      "trial": "NCT06153966",
+      "note": "Ionis antisense oligonucleotide; intrathecal; lowers CSF PrP"
+    },
+    "2439_exNA_divalent_siRNA": {
+      "type": "siRNA (divalent)",
+      "trial": "NCT07444580",
+      "doi": "10.1101/2024.12.05.627039",
+      "mouse_residual_prp_pct": [
+        17,
+        49
+      ]
+    }
+  },
+  "prp_lowering_thresholds": {
+    "heterozygous_knockout_residual_pct": 50,
+    "minimal_benefit_prophylactic_pct": 75,
+    "deep_lowering_goal_pct": 17,
+    "moderate_lowering_pct": 49
+  },
+  "heuristic_sirna_windows": [
+    {
+      "start": 51,
+      "end": 71,
+      "gc_pct": 52.4,
+      "seq": "GAGGCAGAGCAGTCATTATGG"
+    },
+    {
+      "start": 101,
+      "end": 121,
+      "gc_pct": 52.4,
+      "seq": "TTTGTGGCCACATGGAGTGAC"
+    },
+    {
+      "start": 351,
+      "end": 371,
+      "gc_pct": 57.1,
+      "seq": "CCCACAGTCAGTGGAACAAGC"
+    },
+    {
+      "start": 451,
+      "end": 471,
+      "gc_pct": 57.1,
+      "seq": "CATGCTGGGAAGTGCCATGAG"
+    },
+    {
+      "start": 501,
+      "end": 521,
+      "gc_pct": 47.6,
+      "seq": "ATGAGGACCGTTACTATCGTG"
+    },
+    {
+      "start": 551,
+      "end": 571,
+      "gc_pct": 52.4,
+      "seq": "TACTACAGGCCCATGGATGAG"
+    },
+    {
+      "start": 701,
+      "end": 721,
+      "gc_pct": 47.6,
+      "seq": "CAGATGTGTATCACCCAGTAC"
+    },
+    {
+      "start": 751,
+      "end": 771,
+      "gc_pct": 52.4,
+      "seq": "AGGATCGAGCATGGTCCTCTT"
+    },
+    {
+      "start": 801,
+      "end": 821,
+      "gc_pct": 42.9,
+      "seq": "CTTTCCTCATCTTCCTGATAG"
+    },
+    {
+      "start": 901,
+      "end": 921,
+      "gc_pct": 47.6,
+      "seq": "CCTTTTAGTGGTGGTGTCTCA"
+    },
+    {
+      "start": 951,
+      "end": 971,
+      "gc_pct": 42.9,
+      "seq": "CTAATCAATACCCTTGGCACT"
+    },
+    {
+      "start": 1051,
+      "end": 1071,
+      "gc_pct": 42.9,
+      "seq": "AATGCCAGGCCAGTAAAAGTA"
+    },
+    {
+      "start": 1151,
+      "end": 1171,
+      "gc_pct": 42.9,
+      "seq": "ACAGTCTGAAATACCTTTGCC"
+    },
+    {
+      "start": 1201,
+      "end": 1221,
+      "gc_pct": 42.9,
+      "seq": "AGCTCAGTATACTAATGCCCT"
+    },
+    {
+      "start": 1301,
+      "end": 1321,
+      "gc_pct": 42.9,
+      "seq": "AGGAGGCCACATGATACTTAT"
+    },
+    {
+      "start": 1551,
+      "end": 1571,
+      "gc_pct": 47.6,
+      "seq": "CAAATGTTTGGGAATGGTGCC"
+    },
+    {
+      "start": 1601,
+      "end": 1621,
+      "gc_pct": 42.9,
+      "seq": "TAAAGGACCCTATATGTGGCA"
+    },
+    {
+      "start": 1651,
+      "end": 1671,
+      "gc_pct": 42.9,
+      "seq": "GCAGCTGAAAAGTAAATTGCC"
+    },
+    {
+      "start": 1701,
+      "end": 1721,
+      "gc_pct": 42.9,
+      "seq": "TCCATTTACCTGGAAACCAGA"
+    },
+    {
+      "start": 2251,
+      "end": 2271,
+      "gc_pct": 42.9,
+      "seq": "GCTTACAATGTGCACTGAATC"
+    }
+  ],
+  "disclaimer": "Heuristic only. Validate with siDirect, RNAfold, BLAST before any claim."
+}

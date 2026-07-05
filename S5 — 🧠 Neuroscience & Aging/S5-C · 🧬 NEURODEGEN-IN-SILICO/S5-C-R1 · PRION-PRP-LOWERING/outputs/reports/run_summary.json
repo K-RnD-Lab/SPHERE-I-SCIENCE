@@ -1,0 +1,286 @@
+{
+  "sequences": {
+    "species": {
+      "human": {
+        "uniprot": "P04156",
+        "length": 253,
+        "file": "data\\sequences\\human_P04156.fasta"
+      },
+      "mouse": {
+        "uniprot": "P04925",
+        "length": 254,
+        "file": "data\\sequences\\mouse_P04925.fasta"
+      },
+      "rat": {
+        "uniprot": "P13852",
+        "length": 254,
+        "file": "data\\sequences\\rat_P13852.fasta"
+      }
+    },
+    "variants": {
+      "WT": {
+        "mutations": [],
+        "length": 253,
+        "file": "data\\sequences\\human_WT.fasta"
+      },
+      "FFI_D178N": {
+        "mutations": [
+          [
+            "D",
+            178,
+            "N"
+          ]
+        ],
+        "length": 253,
+        "file": "data\\sequences\\human_FFI_D178N.fasta"
+      },
+      "CJD_E200K": {
+        "mutations": [
+          [
+            "E",
+            200,
+            "K"
+          ]
+        ],
+        "length": 253,
+        "file": "data\\sequences\\human_CJD_E200K.fasta"
+      },
+      "protective_G127V": {
+        "mutations": [
+          [
+            "G",
+            127,
+            "V"
+          ]
+        ],
+        "length": 253,
+        "file": "data\\sequences\\human_protective_G127V.fasta"
+      }
+    }
+  },
+  "alphafold": {
+    "human": {
+      "uniprot": "P04156",
+      "pdb_file": "human_P04156.pdb",
+      "plddt_avg": 64.19,
+      "coverage": null
+    },
+    "mouse": {
+      "uniprot": "P04925",
+      "pdb_file": "mouse_P04925.pdb",
+      "plddt_avg": 64.62,
+      "coverage": null
+    },
+    "rat": {
+      "uniprot": "P13852",
+      "pdb_file": "rat_P13852.pdb",
+      "plddt_avg": 63.0,
+      "coverage": null
+    }
+  },
+  "comparison": {
+    "human_length": 253,
+    "cross_species": {
+      "mouse": {
+        "identity_vs_human_pct": 88.19,
+        "length": 254
+      },
+      "rat": {
+        "identity_vs_human_pct": 88.98,
+        "length": 254
+      }
+    },
+    "variants": {
+      "WT": {
+        "sites": [],
+        "identity_vs_wt_pct": 100.0
+      },
+      "FFI_D178N": {
+        "sites": [
+          {
+            "position": 178,
+            "ref": "D",
+            "alt": "N"
+          }
+        ],
+        "identity_vs_wt_pct": 99.6
+      },
+      "CJD_E200K": {
+        "sites": [
+          {
+            "position": 200,
+            "ref": "E",
+            "alt": "K"
+          }
+        ],
+        "identity_vs_wt_pct": 99.6
+      },
+      "protective_G127V": {
+        "sites": [
+          {
+            "position": 127,
+            "ref": "G",
+            "alt": "V"
+          }
+        ],
+        "identity_vs_wt_pct": 99.6
+      }
+    },
+    "note_FFI": "Clinical FFI typically requires D178N plus Met at codon 129 (cis); this pipeline models D178N on the reference sequence only."
+  },
+  "phase3": {
+    "gene": "PRNP",
+    "cdna_length": 2435,
+    "published_targets": {
+      "ION717": {
+        "type": "ASO",
+        "trial": "NCT06153966",
+        "note": "Ionis antisense oligonucleotide; intrathecal; lowers CSF PrP"
+      },
+      "2439_exNA_divalent_siRNA": {
+        "type": "siRNA (divalent)",
+        "trial": "NCT07444580",
+        "doi": "10.1101/2024.12.05.627039",
+        "mouse_residual_prp_pct": [
+          17,
+          49
+        ]
+      }
+    },
+    "prp_lowering_thresholds": {
+      "heterozygous_knockout_residual_pct": 50,
+      "minimal_benefit_prophylactic_pct": 75,
+      "deep_lowering_goal_pct": 17,
+      "moderate_lowering_pct": 49
+    },
+    "heuristic_sirna_windows": [
+      {
+        "start": 51,
+        "end": 71,
+        "gc_pct": 52.4,
+        "seq": "GAGGCAGAGCAGTCATTATGG"
+      },
+      {
+        "start": 101,
+        "end": 121,
+        "gc_pct": 52.4,
+        "seq": "TTTGTGGCCACATGGAGTGAC"
+      },
+      {
+        "start": 351,
+        "end": 371,
+        "gc_pct": 57.1,
+        "seq": "CCCACAGTCAGTGGAACAAGC"
+      },
+      {
+        "start": 451,
+        "end": 471,
+        "gc_pct": 57.1,
+        "seq": "CATGCTGGGAAGTGCCATGAG"
+      },
+      {
+        "start": 501,
+        "end": 521,
+        "gc_pct": 47.6,
+        "seq": "ATGAGGACCGTTACTATCGTG"
+      },
+      {
+        "start": 551,
+        "end": 571,
+        "gc_pct": 52.4,
+        "seq": "TACTACAGGCCCATGGATGAG"
+      },
+      {
+        "start": 701,
+        "end": 721,
+        "gc_pct": 47.6,
+        "seq": "CAGATGTGTATCACCCAGTAC"
+      },
+      {
+        "start": 751,
+        "end": 771,
+        "gc_pct": 52.4,
+        "seq": "AGGATCGAGCATGGTCCTCTT"
+      },
+      {
+        "start": 801,
+        "end": 821,
+        "gc_pct": 42.9,
+        "seq": "CTTTCCTCATCTTCCTGATAG"
+      },
+      {
+        "start": 901,
+        "end": 921,
+        "gc_pct": 47.6,
+        "seq": "CCTTTTAGTGGTGGTGTCTCA"
+      },
+      {
+        "start": 951,
+        "end": 971,
+        "gc_pct": 42.9,
+        "seq": "CTAATCAATACCCTTGGCACT"
+      },
+      {
+        "start": 1051,
+        "end": 1071,
+        "gc_pct": 42.9,
+        "seq": "AATGCCAGGCCAGTAAAAGTA"
+      },
+      {
+        "start": 1151,
+        "end": 1171,
+        "gc_pct": 42.9,
+        "seq": "ACAGTCTGAAATACCTTTGCC"
+      },
+      {
+        "start": 1201,
+        "end": 1221,
+        "gc_pct": 42.9,
+        "seq": "AGCTCAGTATACTAATGCCCT"
+      },
+      {
+        "start": 1301,
+        "end": 1321,
+        "gc_pct": 42.9,
+        "seq": "AGGAGGCCACATGATACTTAT"
+      },
+      {
+        "start": 1551,
+        "end": 1571,
+        "gc_pct": 47.6,
+        "seq": "CAAATGTTTGGGAATGGTGCC"
+      },
+      {
+        "start": 1601,
+        "end": 1621,
+        "gc_pct": 42.9,
+        "seq": "TAAAGGACCCTATATGTGGCA"
+      },
+      {
+        "start": 1651,
+        "end": 1671,
+        "gc_pct": 42.9,
+        "seq": "GCAGCTGAAAAGTAAATTGCC"
+      },
+      {
+        "start": 1701,
+        "end": 1721,
+        "gc_pct": 42.9,
+        "seq": "TCCATTTACCTGGAAACCAGA"
+      },
+      {
+        "start": 2251,
+        "end": 2271,
+        "gc_pct": 42.9,
+        "seq": "GCTTACAATGTGCACTGAATC"
+      }
+    ],
+    "disclaimer": "Heuristic only. Validate with siDirect, RNAfold, BLAST before any claim."
+  },
+  "phase2": {
+    "phase": 2,
+    "status": "scaffold_only",
+    "human_pdb_present": true,
+    "next": "GROMACS/OpenMM locally"
+  }
+}

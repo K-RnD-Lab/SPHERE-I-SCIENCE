@@ -1,0 +1,50 @@
+{
+  "human_length": 253,
+  "cross_species": {
+    "mouse": {
+      "identity_vs_human_pct": 88.19,
+      "length": 254
+    },
+    "rat": {
+      "identity_vs_human_pct": 88.98,
+      "length": 254
+    }
+  },
+  "variants": {
+    "WT": {
+      "sites": [],
+      "identity_vs_wt_pct": 100.0
+    },
+    "FFI_D178N": {
+      "sites": [
+        {
+          "position": 178,
+          "ref": "D",
+          "alt": "N"
+        }
+      ],
+      "identity_vs_wt_pct": 99.6
+    },
+    "CJD_E200K": {
+      "sites": [
+        {
+          "position": 200,
+          "ref": "E",
+          "alt": "K"
+        }
+      ],
+      "identity_vs_wt_pct": 99.6
+    },
+    "protective_G127V": {
+      "sites": [
+        {
+          "position": 127,
+          "ref": "G",
+          "alt": "V"
+        }
+      ],
+      "identity_vs_wt_pct": 99.6
+    }
+  },
+  "note_FFI": "Clinical FFI typically requires D178N plus Met at codon 129 (cis); this pipeline models D178N on the reference sequence only."
+}

@@ -1,0 +1,59 @@
+{
+  "species": {
+    "human": {
+      "uniprot": "P04156",
+      "length": 253,
+      "file": "data\\sequences\\human_P04156.fasta"
+    },
+    "mouse": {
+      "uniprot": "P04925",
+      "length": 254,
+      "file": "data\\sequences\\mouse_P04925.fasta"
+    },
+    "rat": {
+      "uniprot": "P13852",
+      "length": 254,
+      "file": "data\\sequences\\rat_P13852.fasta"
+    }
+  },
+  "variants": {
+    "WT": {
+      "mutations": [],
+      "length": 253,
+      "file": "data\\sequences\\human_WT.fasta"
+    },
+    "FFI_D178N": {
+      "mutations": [
+        [
+          "D",
+          178,
+          "N"
+        ]
+      ],
+      "length": 253,
+      "file": "data\\sequences\\human_FFI_D178N.fasta"
+    },
+    "CJD_E200K": {
+      "mutations": [
+        [
+          "E",
+          200,
+          "K"
+        ]
+      ],
+      "length": 253,
+      "file": "data\\sequences\\human_CJD_E200K.fasta"
+    },
+    "protective_G127V": {
+      "mutations": [
+        [
+          "G",
+          127,
+          "V"
+        ]
+      ],
+      "length": 253,
+      "file": "data\\sequences\\human_protective_G127V.fasta"
+    }
+  }
+}
