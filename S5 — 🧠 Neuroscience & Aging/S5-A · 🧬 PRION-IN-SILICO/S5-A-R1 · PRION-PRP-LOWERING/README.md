@@ -1,7 +1,7 @@
-# S5-C-R1 · PRION-PRP-LOWERING
+# S5-A-R1 · PRION-PRP-LOWERING
 
-**Lane:** S5-C Neurodegeneration Models (`docs/S5/S5_A_TO_E_RESEARCH_MAP.md`)  
-**Project:** S5-C-R1 · Prion PrP Lowering — In Silico  
+**Lane:** S5-A · PRION-IN-SILICO (перший sub-lane S5, A→B→C…)  
+**Project:** S5-A-R1 · Prion PrP Lowering — In Silico  
 **Status:** ⚠ IN SILICO / HYPOTHESIS
 
 Computational pipeline for human/mouse/rat prion protein (PrP) structure comparison,
@@ -10,7 +10,7 @@ pathogenic PRNP mutations (FFI, CJD), and literature-grounded siRNA/ASO target c
 ## Quick start
 
 ```bash
-cd work/sphere-i-science/S5-C-PRION-IN-SILICO
+cd work/sphere-i-science/S5-A-PRION-IN-SILICO
 python3.11 -m venv .venv
 .venv/Scripts/pip install -r requirements.txt
 .venv/Scripts/python scripts/run_phase1.py

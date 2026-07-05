@@ -1,4 +1,4 @@
-"""Paths and constants for S5-C-R1 PRION-IN-SILICO."""
+"""Paths and constants for S5-A-R1 PRION-IN-SILICO."""
 
 from pathlib import Path
 
