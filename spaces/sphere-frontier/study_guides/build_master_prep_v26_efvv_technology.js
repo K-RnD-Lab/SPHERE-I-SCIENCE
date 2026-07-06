@@ -322,6 +322,51 @@ Quick sort:
 більші -> праворуч</div>
           <p><b>Пастка:</b> quicksort теж часто O(n log n), але в найгіршому може бути O(n²). Якщо питають “найгірший гарантований n log n” серед простих варіантів — це merge sort.</p>
         </article>
+                <article class="v26-card wide">
+          <h3>🧮 Сортування: повна карта для тесту</h3>
+          <div class="v26-flow">Як читати складність:
+log n     -> щоразу ділимо простір пошуку навпіл
+n         -> один повний прохід по всіх елементах
+n log n   -> log n рівнів, на кожному рівні торкаємось n елементів
+n^2       -> багато попарних порівнянь, часто вкладені цикли
+
+Bubble sort:
+порівнює сусідів і міняє їх місцями; великі значення "спливають" у кінець
+best O(n), average/worst O(n^2), stable, memory O(1)
+
+Selection sort:
+щоразу шукає мінімум і ставить його на наступну фіксовану позицію
+best/average/worst O(n^2), usually not stable, memory O(1)
+
+Insertion sort:
+бере наступний елемент і вставляє його в уже відсортовану ліву частину
+best O(n), average/worst O(n^2), stable, memory O(1)
+
+Merge sort:
+ділить масив навпіл, потім зливає вже відсортовані половини
+best/average/worst O(n log n), stable, memory O(n)
+
+Quick sort:
+обирає pivot і робить partition: менші ліворуч, більші праворуч
+best/average O(n log n), worst O(n^2), usually not stable, memory O(log n)
+
+Heap sort:
+будує binary heap і багато разів дістає max/min
+best/average/worst O(n log n), not stable, memory O(1)</div>
+          <p><b>🧠 Як обрати в тесті:</b> якщо питають гарантоване <code>O(n log n)</code> у найгіршому випадку серед класичних сортувань — думати про <b>Merge Sort</b> або <b>Heap Sort</b>. Якщо в умові є <b>pivot</b>, <b>partition</b>, “менші ліворуч, більші праворуч” — це <b>Quick Sort</b>. Якщо елемент вставляють у вже відсортовану ліву частину — <b>Insertion Sort</b>. Якщо щоразу шукають мінімум — <b>Selection Sort</b>. Якщо міняють місцями сусідні елементи — <b>Bubble Sort</b>.</p>
+          <p><b>🏠 Асоціація:</b> insertion — як вставляти карти в руці у правильне місце; selection — щоразу вибирати найменшу книжку з купи; bubble — сусіди міняються місцями, поки найбільший не доїде в кінець; merge — розкласти документи на маленькі стопки й зливати їх; quick — вибрати опорний документ і розкидати решту ліворуч/праворуч.</p>
+          <table class="v26-table">
+            <tr><th>Алгоритм</th><th>Best</th><th>Average</th><th>Worst</th><th>Stable?</th><th>Пам'ять</th><th>Ключова ознака</th></tr>
+            <tr><td>Bubble</td><td>O(n)</td><td>O(n^2)</td><td>O(n^2)</td><td>так</td><td>O(1)</td><td>сусідні обміни</td></tr>
+            <tr><td>Selection</td><td>O(n^2)</td><td>O(n^2)</td><td>O(n^2)</td><td>зазвичай ні</td><td>O(1)</td><td>пошук мінімуму</td></tr>
+            <tr><td>Insertion</td><td>O(n)</td><td>O(n^2)</td><td>O(n^2)</td><td>так</td><td>O(1)</td><td>вставка в sorted-left</td></tr>
+            <tr><td>Merge</td><td>O(n log n)</td><td>O(n log n)</td><td>O(n log n)</td><td>так</td><td>O(n)</td><td>divide + merge</td></tr>
+            <tr><td>Quick</td><td>O(n log n)</td><td>O(n log n)</td><td>O(n^2)</td><td>зазвичай ні</td><td>O(log n)</td><td>pivot + partition</td></tr>
+            <tr><td>Heap</td><td>O(n log n)</td><td>O(n log n)</td><td>O(n log n)</td><td>ні</td><td>O(1)</td><td>binary heap</td></tr>
+            <tr><td>Counting</td><td>O(n+k)</td><td>O(n+k)</td><td>O(n+k)</td><td>може бути так</td><td>O(k)</td><td>лічильники значень</td></tr>
+            <tr><td>Radix</td><td>O(d(n+k))</td><td>O(d(n+k))</td><td>O(d(n+k))</td><td>так, якщо stable pass</td><td>O(n+k)</td><td>по розрядах</td></tr>
+          </table>
+        </article>
         <article class="v26-card">
           <h3>Типи алгоритмічних задач</h3>
           <div class="v26-flow">пошук -> знайти елемент
