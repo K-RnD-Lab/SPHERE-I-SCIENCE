@@ -1,0 +1,2831 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<title>Master Prep Exam Teaching Guide v26</title>
+<style>
+@page { size: A4; margin: 14mm 12mm; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Segoe UI", Arial, sans-serif; color: #17212b; background: #f6f2e8; line-height: 1.55; }
+.page { max-width: 980px; margin: 0 auto; background: #fffdf8; }
+.cover { min-height: 930px; padding: 54px 48px; background: linear-gradient(145deg, #102032, #143b42 52%, #f4c84d 52.2%, #fbf0dc); color: #fff; }
+.cover-card { margin-top: 190px; background: rgba(255,255,255,.94); color: #17212b; border-radius: 22px; padding: 34px; box-shadow: 0 20px 48px rgba(0,0,0,.2); }
+h1 { font-size: 44px; line-height: 1.06; margin: 0 0 14px; letter-spacing: 0; }
+h2 { font-size: 27px; margin: 0 0 12px; color: #123244; }
+h3 { font-size: 19px; margin: 20px 0 8px; color: #123244; }
+h4 { font-size: 16px; margin: 0 0 7px; color: #123244; }
+.subtitle { font-size: 18px; max-width: 720px; }
+.kicker { text-transform: uppercase; font-size: 12px; letter-spacing: .08em; font-weight: 800; color: #d99b00; }
+.section { padding: 28px 36px; }
+.module { border: 1px solid #d8e1df; border-radius: 18px; background: #fff; padding: 22px; }
+.goal { border-left: 5px solid #f4bd2f; background: #fff8df; border-radius: 12px; padding: 12px 14px; margin: 12px 0; }
+.links { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; padding: 11px; border: 1px solid #dfe7e9; border-radius: 14px; background: #f5f8f7; }
+.links span { padding: 6px 9px; border-radius: 999px; background: #fff; border: 1px solid #d8e1e3; font-size: 12px; font-weight: 700; }
+.links b { color: #367a99; }
+.callout { border-left: 5px solid #f4bd2f; background: #fff8df; padding: 13px 15px; border-radius: 12px; margin: 14px 0; }
+.science { border-left-color: #367a99; background: #edf7fb; }
+.life { border-left-color: #35a86b; background: #eefaf2; }
+.trap { border-left-color: #c34a42; background: #fff0ee; }
+.trap li { margin-bottom: 9px; }
+.trap span { color: #4d5963; }
+.trap em { display: block; margin-top: 3px; color: #7a332d; font-style: normal; }
+.examples { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.example-card { border: 1px solid #dfe7e9; border-radius: 14px; background: #f9fbfa; padding: 12px; break-inside: avoid; page-break-inside: avoid; }
+.example-card p { margin: 6px 0 8px; }
+pre { margin: 8px 0 0; padding: 10px; border-radius: 10px; background: #eef4f6; color: #17212b; border: 1px solid #d9e6ea; white-space: pre-wrap; font-size: 12px; line-height: 1.38; }
+code { font-family: "Cascadia Mono", "Consolas", monospace; }
+ul { margin: 8px 0 0 20px; padding: 0; }
+li { margin: 4px 0; }
+.related { margin-top: 14px; padding: 10px 12px; border-radius: 12px; background: #f3f6f7; border: 1px solid #dfe7e9; }
+.exam-expansion { margin-top: 16px; padding-top: 12px; border-top: 2px dashed #d8e1df; break-inside: avoid; page-break-inside: avoid; }
+.role-card { border-left: 5px solid #143b42; background: #edf7fb; padding: 11px 13px; border-radius: 12px; margin: 9px 0 10px; }
+.exp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.exp-card { border: 1px solid #dfe7e9; border-radius: 14px; background: #fffdf8; padding: 12px; }
+.exp-card h4 { margin-bottom: 6px; }
+.drill-card { margin-top: 10px; border-left: 5px solid #35a86b; background: #eefaf2; padding: 11px 13px; border-radius: 12px; }
+.page-break { page-break-before: always; }
+.toc { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.toc div { border: 1px solid #dfe7e9; border-radius: 12px; background: #fff; padding: 10px; }
+@media print { .examples, .exp-grid { grid-template-columns: 1fr 1fr; } .example-card, .module, .exam-expansion { break-inside: avoid; page-break-inside: avoid; } }
+
+.module h3 { margin-top: 22px; }
+.callout.trap li em { display:block; margin-top:6px; color:#0f3b44; font-style:normal; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; }
+
+    .schema-atlas{background:#fbfdfa;border:1px solid #dce8e1;border-radius:24px;padding:24px;margin:18px 0}
+    .schema-atlas h2{margin-top:0}
+    .schema-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    .schema-card,.schema-mini{background:#fff;border:1px solid #d9e5df;border-radius:18px;padding:16px;break-inside:avoid}
+    .schema-card h3,.schema-mini h4{margin:0 0 10px;color:#193443}
+    .schema-box{background:#10202b;color:#edf8f3;border-radius:14px;padding:14px;overflow:hidden;font-family:"Consolas","Courier New",monospace;font-size:12.5px;line-height:1.45;white-space:pre-wrap}
+    .schema-box.small{font-size:11.5px}
+    .schema-note{border-left:4px solid #7db4a4;background:#f4faf7;border-radius:12px;padding:10px 12px;margin-top:10px;line-height:1.45}
+    .schema-note.life{border-left-color:#d5a23a;background:#fff9eb}
+    .schema-note.trap{border-left-color:#d04d4d;background:#fff0f0}
+    .schema-note.drill{border-left-color:#4d86d0;background:#eef6ff}
+    .schema-map{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:14px 0}
+    .schema-map div{border:1px solid #d9e5df;border-radius:14px;padding:10px;background:#fff;min-height:70px}
+    .schema-map b{display:block;color:#193443;margin-bottom:4px}
+    .schema-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    @media print{.schema-card,.schema-mini{page-break-inside:avoid}.schema-atlas{page-break-inside:auto}.schema-grid,.schema-columns{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+  
+    /* v25: PDF print fix. CSS grids can jump to the next page and leave a blank header page. */
+    @media print{
+      .schema-grid,.schema-columns{display:block!important}
+      .schema-card,.schema-mini{break-inside:auto!important;page-break-inside:auto!important;margin:0 0 12px!important}
+      .schema-atlas{page-break-inside:auto!important}
+      .schema-box{font-size:10.5px!important;line-height:1.38!important}
+      .code-lab{page-break-inside:auto!important}
+      .code-lab .schema-card{page-break-inside:avoid!important}
+    }
+
+  
+    .toc{background:#fffdf7;border:1px solid #ded8c9;border-radius:24px;padding:26px;margin:18px 0}
+    .toc h2{margin:0 0 8px;color:#183342}
+    .toc .toc-lede{font-size:14px;line-height:1.55;color:#4d5c63;margin:0 0 16px}
+    .toc-table{width:100%;border-collapse:collapse;font-size:12.5px;line-height:1.35}
+    .toc-table th{background:#f1efe6;color:#183342;text-align:left;padding:8px;border-bottom:1px solid #d7d1c2}
+    .toc-table td{padding:8px;border-bottom:1px solid #ebe6d9;vertical-align:top}
+    .toc-table .page{width:68px;text-align:right;font-weight:700;color:#12384a;white-space:nowrap}
+    .toc-table .part{width:26%;font-weight:700;color:#183342}
+    .toc-chip{display:inline-block;background:#eaf6f1;border:1px solid #cfe5dc;border-radius:999px;padding:2px 8px;margin:1px 3px 1px 0;font-size:11.5px}
+    .toc-route{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:14px 0}
+    .toc-route div{border:1px solid #ded8c9;border-radius:16px;background:#fff;padding:12px}
+    .toc-route b{display:block;color:#183342;margin-bottom:4px}
+    .toc-note{background:#eef6ff;border-left:4px solid #4d86d0;border-radius:12px;padding:10px 12px;margin-top:12px;font-size:13px;line-height:1.45}
+    @media print{
+      .toc{page-break-inside:auto}
+      .toc-route{display:block}
+      .toc-route div{margin-bottom:8px}
+      .toc-table{font-size:11.5px}
+      .toc-table td,.toc-table th{padding:6px}
+    }
+
+  
+    .toc{padding:22px 24px!important;border-radius:18px!important}
+    .toc h2{font-size:25px!important;margin-bottom:6px!important}
+    .toc .toc-lede{font-size:13px!important;margin-bottom:12px!important}
+    .toc-route{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:8px!important;margin:10px 0 12px!important}
+    .toc-route div{padding:10px!important;border-radius:12px!important;font-size:12.5px!important;line-height:1.38!important}
+    .toc-table{font-size:11.4px!important;line-height:1.25!important;border:1px solid #e5dece}
+    .toc-table th{padding:6px 7px!important}
+    .toc-table td{padding:5px 7px!important}
+    .toc-table .page{width:38px!important;text-align:center!important;color:#4b6570!important}
+    .toc-table .part{width:24%!important}
+    .toc-note{font-size:12px!important;margin-top:10px!important;padding:8px 10px!important}
+    @media print{
+      .toc{padding:18px 20px!important}
+      .toc-route div{margin-bottom:6px!important}
+      .toc-table{font-size:10.3px!important}
+      .toc-table td,.toc-table th{padding:4px 5px!important}
+    }
+    .v25-focus{border:1px solid #d5e3df;border-radius:16px;background:#fbfdfb;padding:13px 14px;margin:12px 0;break-inside:avoid;page-break-inside:avoid}
+    .v25-focus h4{margin:0 0 7px!important;color:#123244!important}
+    .v25-flow{background:#10202b;color:#edf8f3;border-radius:13px;padding:12px;margin:8px 0;font-family:"Consolas","Courier New",monospace;font-size:11.3px;line-height:1.45;white-space:pre-wrap}
+    .v25-two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:10px 0}
+    .v25-two>div{border:1px solid #dfe7e9;border-radius:14px;background:#fff;padding:11px}
+    .v25-warning{border-left:5px solid #c34a42;background:#fff0ee;border-radius:12px;padding:10px 12px;margin:10px 0}
+    .v25-story{border-left:5px solid #367a99;background:#edf7fb;border-radius:12px;padding:10px 12px;margin:10px 0}
+    @media print{.v25-two{display:block}.v25-two>div{margin-bottom:8px}.v25-flow{font-size:10.6px}}
+
+  
+    .v25-atlas{background:#fffdf8;border:1px solid #d9e5df;border-radius:24px;padding:24px;margin:18px 0}
+    .v25-atlas h2{margin-top:0}
+    .v25-legend{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+    .v25-legend span{border:1px solid #d9e5df;border-radius:999px;background:#f4faf7;padding:6px 10px;font-weight:700;font-size:12px}
+    .v25-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .v25-block-map{border:1px solid #dbe6e1;border-radius:16px;background:#fbfdfb;padding:14px;break-inside:avoid;page-break-inside:avoid}
+    .v25-block-map h3{margin:0 0 8px;color:#123244;font-size:17px}
+    .v25-block-map p{margin:7px 0;font-size:12.6px;line-height:1.45}
+    .v25-flow{background:#10202b;color:#edf8f3;border-radius:13px;padding:11px;margin:8px 0;font-family:"Consolas","Courier New",monospace;font-size:11px;line-height:1.38;white-space:pre-wrap}
+    .v25-summary{margin-top:14px;border-left:5px solid #f4bd2f;background:#fff8df;border-radius:14px;padding:13px}
+    @media print{.v25-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.v25-flow{font-size:10.2px}.v25-block-map p{font-size:12px}}
+  
+
+    .v24-atlas{background:#fffdf8;border:1px solid #d9e5df;border-radius:24px;padding:24px;margin:18px 0}
+    .v24-atlas h2{margin-top:0}
+    .v24-legend{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+    .v24-legend span{border:1px solid #d9e5df;border-radius:999px;background:#f4faf7;padding:6px 10px;font-weight:700;font-size:12px}
+    .v24-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .v24-block-map{border:1px solid #dbe6e1;border-radius:16px;background:#fbfdfb;padding:14px;break-inside:avoid;page-break-inside:avoid}
+    .v24-block-map h3{margin:0 0 8px;color:#123244;font-size:17px}
+    .v24-block-map p{margin:7px 0;font-size:12.6px;line-height:1.45}
+    .v24-flow{background:#10202b;color:#edf8f3;border-radius:13px;padding:11px;margin:8px 0;font-family:"Consolas","Courier New",monospace;font-size:11px;line-height:1.38;white-space:pre-wrap}
+    .v24-summary{margin-top:14px;border-left:5px solid #f4bd2f;background:#fff8df;border-radius:14px;padding:13px}
+    @media print{.v24-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.v24-flow{font-size:10.2px}.v24-block-map p{font-size:12px}}
+  
+
+    .v26-atlas{background:#fffdf8;border:1px solid #d9e5df;border-radius:24px;padding:24px;margin:18px 0;break-inside:avoid}
+    .v26-atlas h2{margin-top:0;color:#123244}
+    .v26-atlas h3{margin:0 0 8px;color:#123244}
+    .v26-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:12px 0}
+    .v26-card{border:1px solid #dbe6e1;border-radius:16px;background:#fbfdfb;padding:14px;break-inside:avoid;page-break-inside:avoid}
+    .v26-card p{margin:7px 0;font-size:12.5px;line-height:1.45}
+    .v26-flow{background:#10202b;color:#edf8f3;border-radius:13px;padding:11px;margin:8px 0;font-family:"Consolas","Courier New",monospace;font-size:10.8px;line-height:1.38;white-space:pre-wrap}
+    .v26-trap{border-left:5px solid #c34a42;background:#fff0ee;border-radius:12px;padding:10px 12px;margin:10px 0;font-size:12.4px}
+    .v26-life{border-left:5px solid #367a99;background:#edf7fb;border-radius:12px;padding:10px 12px;margin:10px 0;font-size:12.4px}
+    .v26-table{width:100%;border-collapse:collapse;font-size:11.7px;line-height:1.35;margin:10px 0}
+    .v26-table th,.v26-table td{border:1px solid #e2e9e4;padding:7px;vertical-align:top}
+    .v26-table th{background:#f4faf7;text-align:left}
+    @media print{.v26-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.v26-flow{font-size:9.8px}.v26-card p{font-size:11.6px}}
+
+</style>
+</head>
+<body>
+<div class="page">
+  <section class="cover">
+    <div class="kicker">K-RnD Lab · Master Prep</div>
+    <div class="cover-card">
+      <h1>🎓 Посібник, який має навчити: ЄВІ / ЄФВВ</h1>
+      <p class="subtitle">Не шпаргалка і не сухий чекліст. Це навчальний маршрут: теорія людською мовою, науковий сенс, аналогії з життя, приклади коду, схеми пам'яті й пастки реальних тестів.</p>
+      <p><b>Головна ідея:</b> не зазубрити відповідь, а впізнати механізм питання.</p>
+    </div>
+  </section>
+
+  <section class="section page-break">
+    <div class="module">
+      <div class="kicker">Навігація</div>
+      <h2>🗺️ Що тут є</h2>
+      <div class="toc">
+        <div><b>Блок 00</b><br>🧭 Як вчитися, щоб не плутатися</div><div><b>Блок 01</b><br>🔢 Бінарний рахунок і представлення даних</div><div><b>Блок 02</b><br>💻 Процедурне програмування і виконання коду</div><div><b>Блок 03</b><br>🧱 ООП: клас, об'єкт, інкапсуляція, наслідування, поліморфізм</div><div><b>Блок 03B</b><br>🧱 ООП поглиблено: наслідування, композиція, агрегація, тестування</div><div><b>Блок 04</b><br>📈 Алгоритми і структури даних</div><div><b>Блок 04B</b><br>🖥️ Архітектура комп'ютера: CPU, RAM, cache, I/O</div><div><b>Блок 05</b><br>🗄️ Бази даних і SQL</div><div><b>Блок 06</b><br>🏗️ OLTP, OLAP, Data Warehouse</div><div><b>Блок 06B</b><br>📐 Математика в IT: функції, графіки, логарифми, експонента</div><div><b>Блок 07</b><br>🔐 Кібербезпека і криптографія</div><div><b>Блок 08</b><br>🌐 Мережі і операційні системи</div><div><b>Блок 08B</b><br>🌐 Мережі поглиблено: packets, switch/router, sysadmin/devops база</div><div><b>Блок 08C</b><br>🧱 OSI/TCP-IP рівні: де frame, packet, port і HTTP</div><div><b>Блок 09</b><br>🤖 Data Science / ML</div><div><b>Блок 10</b><br>🧠 ТЗНК: комбінаторика, логіка, відсотки</div><div><b>Блок 10B</b><br>🧩 ТЗНК поглиблено: перестановки, комбінації, пропуски, обмеження</div><div><b>Блок 11</b><br>🇬🇧 English: grammar patterns and reading</div><div><b>Блок 11B</b><br>🇬🇧 English toolkit: усі базові часи, conditionals, reading markers</div>
+      </div>
+      <div class="callout">
+        <b>Як читати:</b> один блок за раз. Після блоку одразу пройти 10-15 питань. Якщо помилка — записати не літеру, а пару “я переплутала X із Y”.
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="section page-break">
+    <div class="module">
+      <div class="kicker">Блок 00</div>
+      <h2>🧭 Як вчитися, щоб не плутатися</h2>
+      <div class="goal"><b>Ціль:</b> Перетворити незнайомі слова на впізнавані ситуації. На іспиті виграє не той, хто зазубрив більше, а той, хто швидко розпізнає тип питання.</div>
+      <h3>🧭 Карта пам'яті</h3>
+      <div class="links"><span>ключові слова</span><b>↔</b><span>поняття</span><b>↔</b><span>аналогія</span><b>↔</b><span>приклад</span><b>↔</b><span>пастка</span><b>↔</b><span>відповідь</span></div>
+      <div class="callout science"><b>🔬 Науково, але зрозуміло:</b><br>Більшість тестових питань перевіряє категоризацію: чи можна за описом віднести ситуацію до правильного поняття. Тому треба вчити не лише визначення, а й межі поняття: чим воно НЕ є.</div>
+      <div class="callout life"><b>🏠 Аналогія:</b><br>Це як набір інструментів. Молоток, викрутка й ключ усі корисні, але якщо в умові “закрутити гвинт”, молоток відпадає, навіть якщо він знайомий.</div>
+      <h3>🧪 Пояснення через приклади</h3>
+      <div class="examples">
+    <div class="example-card">
+      <h4>Як читати питання</h4>
+      <p>1. Знайти дієслово: обрати, визначити, НЕ є, найточніше. 2. Підкреслити ознаку. 3. Відкинути сусідні поняття. 4. Обрати найвужчу відповідь.</p>
+      <pre><code>Питання: яка програма збирає об'єктні модулі в один виконуваний модуль?
+Ознака: збирає об'єктні модулі
+Відповідь: компонувальник / linker</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>Як запам'ятовувати</h4>
+      <p>Для кожного терміна треба мати три гачки: коротке визначення, життєву аналогію і тестову пастку.</p>
+      <pre><code>Hash = відбиток пальця файлу.
+Encryption = сейф із ключем.
+Signature = підпис і печатка.
+Пастка: hash не розшифровують.</code></pre>
+    </div></div>
+      <div class="callout trap"><b>⚠️ Типові пастки:</b><ul><li>Не відповідати на перше знайоме слово.</li><li>У питаннях з “не є” шукати зайвий варіант.</li><li>У “найточніше” не брати ширше поняття, якщо є точніше.</li></ul></div>
+      <div class="related"><b>🔗 Пов'язано з:</b> ТЗНК · English reading · усі IT-визначення</div>
+      
+      <div class="exam-expansion">
+        <h3>🎯 Екзаменаційне спорядження</h3>
+        <div class="role-card"><b>Професійна прив'язка:</b> Будь-яка IT/аналітична роль: junior developer, QA, data analyst, support engineer.</div>
+        <div class="exp-grid">
+          <div class="exp-card"><h4>🎯 Що реально питають</h4><ul><li>Екзамен часто перевіряє не “чи знаєш слово”, а чи бачиш ключову умову.</li><li>Перед відповіддю знайди в питанні маркер: “найточніше”, “не є”, “після”, “будь-який”, “обов'язково”.</li><li>Якщо варіант звучить знайомо, але не відповідає маркеру, це пастка, а не відповідь.</li></ul></div>
+          <div class="exp-card"><h4>Пастки: де ловлять</h4><ul><li>Не обирати перше знайоме слово.</li><li>Не додумувати умову, якої нема в тексті.</li><li>Не рахувати складну задачу, поки не визначено тип: сума, добуток, перестановка, комбінація.</li></ul></div>
+        </div>
+        <div class="drill-card"><b>Міні-дріл:</b> Після кожної помилки записати: 1) що було ключовим словом, 2) чому правильний варіант саме він, 3) чим заманив неправильний.</div>
+      </div>
+    </div>
+  </section>
+  
+  
+  <section class="section page-break">
+    <div class="module toc">
+      <div class="kicker">Зміст / як читати посібник</div>
+      <h2>📑 План підготовки і навігація по блоках</h2>
+      <p class="toc-lede">Цей посібник краще читати не як книжку “від першої до останньої сторінки”, а як тренувальну карту: спочатку подивитися схеми, потім кодові приклади, далі перейти до повних блоків теорії і після цього відкривати тести.</p>
+
+      <div class="toc-route">
+        <div><b>1. Швидкий вхід</b>Схеми дають карту понять: що з чим не плутати і які слова-маркери ловити в тестах.</div>
+        <div><b>2. Наглядність</b>Кодові вставки показують, як IT-поняття виглядають “руками”: class, object, inheritance, SQL, network request.</div>
+        <div><b>3. Закріплення</b>Основні блоки нижче дають теорію, приклади, пастки й міні-дріли перед тренажером.</div>
+      </div>
+
+      
+      <table class="toc-table">
+        <thead>
+          <tr><th>Стор.</th><th>Блок</th><th>Що всередині</th><th>Як читати</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="page">1</td><td class="part">Обкладинка</td><td>Назва, призначення, фокус на ЄВІ/ЄФВВ: IT, ТЗНК, English.</td><td>Зрозуміти рамку: це не загальна IT-книга, а підготовка до тестового формату.</td></tr>
+          <tr><td class="page">2-3</td><td class="part">🗺️ Навігація</td><td>Повна карта блоків: IT, ТЗНК, English, додатки.</td><td>Швидко побачити, які теми є в документі.</td></tr>
+          <tr><td class="page">4-5</td><td class="part">🧭 Блок 00</td><td>Як вчитися, щоб не плутатися: ключові слова, пастки, спосіб читання питань.</td><td>Прочитати перед усіма тестами, як інструкцію до мислення.</td></tr>
+          <tr><td class="page">6-7</td><td class="part">📑 Зміст і маршрут</td><td>План читання, секції, сторінкові орієнтири.</td><td>Повертатися сюди, коли губиться “де я зараз і навіщо це читаю”.</td></tr>
+          <tr><td class="page">8</td><td class="part">🗺️ Схемний атлас</td><td><span class="toc-chip">IT</span><span class="toc-chip">ТЗНК</span><span class="toc-chip">English</span> Загальна карта трьох дисциплін.</td><td>Спочатку проглянути очима всі блоки, не вчитуватися глибоко.</td></tr>
+          <tr><td class="page">9-14</td><td class="part">💻 IT-схеми</td><td>Bit/byte, signed/unsigned, compiler/interpreter/linker, OOP, algorithms, SQL, networks, security, ML.</td><td>Читати як “що з чим плутають”. Кожну схему закривати прикладом і пасткою.</td></tr>
+          <tr><td class="page">15-19</td><td class="part">🧪 Код як мікроскоп</td><td>Java OOP, composition, binary search, SQL, DNS/TCP/HTTPS.</td><td>Не зубрити синтаксис. Дивитися, де саме клас, об'єкт, метод, роль, запит, право доступу.</td></tr>
+          <tr><td class="page">20-22</td><td class="part">🧠 ТЗНК-схеми</td><td>Комбінаторика: додавання/множення, ролі/без ролей, fixed/forbidden, exactly one, at least one; логіка, відсотки, графіки.</td><td>Кожну задачу починати з дерева: АБО чи І? ролі є? обмеження є?</td></tr>
+          <tr><td class="page">23-25</td><td class="part">🇬🇧 English-схеми</td><td>Reading evidence, tenses, conditionals, collocations, linkers.</td><td>Не перекладати все підряд. Шукати доказ у тексті й граматичні маркери.</td></tr>
+          <tr><td class="page">26-33</td><td class="part">🔢 Блок 01-02</td><td>Бінарний рахунок, представлення даних, процедурне програмування, виконання коду.</td><td>Після схем повернутися сюди для повнішого пояснення і дрілів.</td></tr>
+          <tr><td class="page">34-45</td><td class="part">🧱 Блок 03-04B</td><td>ООП, наслідування, композиція, тестування, алгоритми, структури даних, CPU/RAM/cache/I/O.</td><td>Читати разом із Java-вставками вище.</td></tr>
+          <tr><td class="page">46-54</td><td class="part">🗄️ Блок 05-06B</td><td>Бази даних, SQL, OLTP/OLAP/Data Warehouse, функції, графіки, логарифми, експонента.</td><td>Підкреслювати різниці: WHERE/HAVING, conceptual/logical/physical, OLTP/OLAP.</td></tr>
+          <tr><td class="page">55-69</td><td class="part">🔐 Блок 07-09</td><td>Кібербезпека, криптографія, мережі, OSI/TCP-IP, sysadmin/devops база, Data Science/ML.</td><td>Особливо ловити терміни, які звучать схоже, але мають різні ролі.</td></tr>
+          <tr><td class="page">70-79</td><td class="part">🧠 Блок 10-10C</td><td>ТЗНК: логіка, комбінаторика, перестановки, пропуски, обмеження, розбір “капітан”, “не разом”, “рівно один”.</td><td>Це читати повільно. Після кожного прикладу пробувати змінити умову і перерахувати.</td></tr>
+          <tr><td class="page">80-85</td><td class="part">🇬🇧 Блок 11-11B</td><td>English grammar patterns, reading markers, усі базові часи, conditionals, типові пастки.</td><td>Після блоку одразу пройти English variant у тренажері.</td></tr>
+          <tr><td class="page">86-100</td><td class="part">🧩 Додатки</td><td>IT-професії, фінальний чеклист, додаткові пояснення, поглиблені ТЗНК/English/IT рамки.</td><td>Використовувати як довідник, коли тест показав слабке місце.</td></tr>
+          <tr><td class="page">101-109</td><td class="part">🗺️ v25 карти всіх блоків + v26 ЄФВВ Technology</td><td>Схеми навчання для кожного блоку: IT, data, security, networks, ML, ТЗНК, English.</td><td>Читати перед повторенням блоку або після помилки в тесті.</td></tr>
+        </tbody>
+      </table>
+
+      <div class="toc-note"><b>Примітка:</b> у змісті наведено діапазони сторінок для поточної PDF-версії v25. Точний номер поточної сторінки завжди видно в нижньому колонтитулі у форматі <b>4 / 109</b>.</div>
+    </div>
+  </section>
+
+  <section class="section page-break">
+    <div class="module schema-atlas">
+      <div class="kicker">Версія v26 / схемний атлас</div>
+      <h2>🗺️ Як читати цей посібник: схема → приклад → пастка</h2>
+      <p>Ця версія перебудована під візуальне запам'ятовування. Спочатку дивимося на карту, потім читаємо коротке пояснення, далі одразу перевіряємо себе на типовій пастці з тесту.</p>
+      <div class="schema-map">
+        <div><b>🔢 IT-база</b>біти, байти, signed/unsigned, код, ООП, алгоритми, БД, мережі, безпека, ML</div>
+        <div><b>🧠 ТЗНК</b>логіка, комбінаторика, відсотки, таблиці, графіки, висновки з умов</div>
+        <div><b>🇬🇧 English</b>reading evidence, grammar traps, conditionals, tenses, collocations, linkers</div>
+      </div>
+      <div class="callout science"><b>🔬 Принцип:</b> тест рідко питає “дай визначення”. Частіше він перевіряє, чи видно різницю між сусідніми поняттями: class/object, compiler/linker, GRANT/SELECT, switch/router, combination/arrangement, must/might.</div>
+    </div>
+  </section>
+
+  <section class="section page-break">
+    <div class="module schema-atlas">
+      <div class="kicker">Схеми IT / основа</div>
+      <h2>💻 IT: карти понять, які найчастіше плутають</h2>
+      <div class="schema-grid">
+        
+    <div class="schema-card">
+      <h3>🔢 Дані: bit, byte, binary, signed/unsigned</h3>
+      <pre class="schema-box"><code>[ ДАНІ В КОМП'ЮТЕРІ ]
+  |
+  |-- bit  -&gt; 0 або 1
+  |-- byte -&gt; 8 bit
+  |
+  |-- binary number -&gt; запис числа у системі 0/1
+  |     приклад: 10110₂ = 16 + 4 + 2 = 22₁₀
+  |
+  |-- unsigned byte -&gt; 0..255
+  |-- signed byte   -&gt; -128..127</code></pre>
+      <div class="schema-note"><b>🔬 Науково:</b> n бітів дають 2^n різних комбінацій. Якщо число беззнакове, усі комбінації йдуть на невід'ємні значення. Якщо зі знаком, частина діапазону відведена під від'ємні.</div>
+      <div class="schema-note life"><b>🏠 Приклад:</b> 8 бітів: 2^8 = 256. Unsigned: 00000000=0, 11111111=255. Signed: 01111111=127, 10000000=-128, 11111111=-1.</div>
+      <div class="v25-focus">
+        <h4>🧩 Як не плутати signed і unsigned</h4>
+        <div class="v25-flow">[ 8 однакових бітів: 11111111 ]
+  |
+  |-- якщо тип unsigned -> усі біти є числом
+  |      128+64+32+16+8+4+2+1 = 255
+  |
+  |-- якщо тип signed -> перший біт зліва є знаком
+         1....... означає "мінус", тому 11111111 = -1</div>
+        <p><b>Науково:</b> біти самі не мають “плюса” чи “мінуса”. Значення задає тип даних у програмі. Той самий байт можна прочитати як 255 або як -1, якщо програма дивиться на нього різними “окулярами”.</p>
+        <p><b>Аналогія:</b> запис <code>01.02</code> може бути датою “1 лютого” або часом “1 хвилина 2 секунди”. Символи ті самі, контекст інший. Так само <code>11111111</code> залежить від signed/unsigned.</p>
+      </div>
+      <div class="v25-focus">
+        <h4>🔁 Two's complement: чому -10 = 11110110</h4>
+        <div class="v25-flow">+10 = 00001010
+крок 1: інверсія бітів        -> 11110101
+крок 2: додати 1 справа       -> 11110110
+
+перевірка:
+  00001010
++ 11110110
+-----------
+1 00000000  <- дев'ятий біт не влазить, лишається 00000000</div>
+        <p><b>Чому +1 додається справа?</b> Бо це звичайне число <code>1</code>, найменший розряд. Як у десятковій системі <code>153 + 1</code> додає одиницю під останню цифру, так у binary одиниця заходить справа і переноситься лівіше, якщо зустрічає <code>1+1=10</code>.</p>
+      </div>
+      <div class="v25-story">
+        <b>🌍 Реальний приклад:</b> ліміт 32-bit integer став помітним, коли лічильник переглядів YouTube для “Gangnam Style” перетнув 2 147 483 647. Це максимум для signed 32-bit integer: <code>2^31 - 1</code>.
+        <div class="v24-flow">Було:
+signed 32-bit integer
+діапазон: -2 147 483 648 .. 2 147 483 647
+для переглядів фактично корисна верхня межа: 2 147 483 647
+
+Стало:
+signed 64-bit integer / 64-bit counter
+верхня межа: 2^63 - 1
+= 9 223 372 036 854 775 807</div>
+        <p><b>Що саме змінили:</b> не “магічну формулу”, а тип/розмір поля, у якому зберігався лічильник: з 32 бітів пам'яті для числа на 64 біти. Тобто для одного значення стало доступно вдвічі більше бітів, але кількість можливих значень виросла не вдвічі, а експоненційно: з приблизно 2,1 млрд до приблизно 9,22 квінтильйона.</p>
+        <p><b>Чому signed, якщо перегляди не бувають від'ємними?</b> У багатьох мовах, базах даних і API стандартний “великий integer” часто є signed int64 / BIGINT. Для лічильника можна було б теоретично взяти unsigned 64-bit, тоді максимум був би <code>2^64 - 1 = 18 446 744 073 709 551 615</code>, але публічно YouTube згадував саме 64-bit integer із межею <code>2^63</code>/<code>2^63 - 1</code>, тобто по суті signed 64-bit.</p>
+        <p><b>Альтернатива ще більша:</b> для зовсім необмежених чисел у деяких системах використовують arbitrary precision / BigInt, але для лічильника переглядів 64-bit достатньо з величезним запасом.</p>
+      </div>
+      <div class="v25-warning">
+        <b>⚠️ Обережно з легендами:</b> історію про “Nuclear Gandhi” часто розповідають як приклад unsigned overflow <code>1 - 2 -> 255</code>, але для оригінальної Civilization це радше відома ігрова легенда, а не надійно підтверджений факт. Для іспиту важлива сама механіка: якщо unsigned-лічильник не має мінусів, віднімання нижче нуля може “перекинути” значення до максимуму.
+      </div>
+      <div class="schema-note trap"><b>⚠️ Пастка:</b> 101₂ не читаємо як “сто один”. Нижній індекс показує систему числення. 1 byte = 8 bits, а не 10.</div>
+      <div class="schema-note drill"><b>🧪 Міні-дріл:</b> Переведи 33₁₀: 32 входить, лишається 1, отже 100001₂.</div>
+    </div>
+        
+    <div class="schema-card">
+      <h3>🧾 Програма: compiler, interpreter, linker</h3>
+      <pre class="schema-box"><code>[ КОД ]
+  |
+  |-- compiler    -&gt; перекладає програму в машинний/об'єктний код
+  |-- interpreter -&gt; виконує поступово, без окремого exe
+  |-- linker      -&gt; збирає об'єктні модулі в один виконуваний файл
+  |-- lexer       -&gt; ріже текст на токени</code></pre>
+      <div class="schema-note"><b>🔬 Науково:</b> Компіляція, інтерпретація, компонування і лексичний аналіз - це різні етапи обробки програми.</div>
+      <div class="schema-note life"><b>🏠 Приклад:</b> C/C++: .c -> compiler -> .o -> linker -> exe. Python: інтерпретатор читає й виконує інструкції.</div>
+      <div class="schema-note trap"><b>⚠️ Пастка:</b> Якщо в умові “приймає об'єктні модулі і збирає виконуваний модуль” - це linker/компонувальник, не компілятор.</div>
+      <div class="schema-note drill"><b>🧪 Міні-дріл:</b> Маркер для linker: багато object modules -> один executable.</div>
+    </div>
+        
+    <div class="schema-card">
+      <h3>🧱 ООП: class, object, encapsulation, inheritance, polymorphism</h3>
+      <pre class="schema-box"><code>[ OOP ]
+  |
+  |-- class          -&gt; креслення / тип
+  |-- object         -&gt; конкретний екземпляр
+  |-- encapsulation  -&gt; дані + методи сховані за інтерфейсом
+  |-- inheritance    -&gt; клас-нащадок отримує властивості базового
+  |-- polymorphism   -&gt; один інтерфейс, різна поведінка</code></pre>
+      <div class="schema-note"><b>🔬 Науково:</b> ООП моделює систему як набір об'єктів зі станом і поведінкою. Наслідування повторно використовує спільне, поліморфізм дозволяє підміняти реалізації.</div>
+      <div class="schema-note life"><b>🏠 Приклад:</b> Кнопка гучності: інтерфейс один - натиснути volume up. Телефон, ноутбук і плеєр реагують по-своєму. Це поліморфізм.</div>
+      <div class="schema-note trap"><b>⚠️ Пастка:</b> Class не є object. Наслідування не те саме, що композиція: “is-a” проти “has-a”.</div>
+      <div class="schema-note drill"><b>🧪 Міні-дріл:</b> Dog is Animal -> inheritance. Car has Engine -> composition.</div>
+    </div>
+        
+    <div class="schema-card">
+      <h3>📈 Алгоритми: масив, стек, черга, дерево, складність</h3>
+      <pre class="schema-box"><code>[ DATA STRUCTURES ]
+  |
+  |-- array -&gt; індексований доступ
+  |-- stack -&gt; LIFO: останній зайшов, перший вийшов
+  |-- queue -&gt; FIFO: перший зайшов, перший вийшов
+  |-- tree  -&gt; ієрархія
+  |-- hash  -&gt; швидкий пошук за ключем
+
+[ COMPLEXITY ]
+  O(1) &lt; O(log n) &lt; O(n) &lt; O(n log n) &lt; O(n^2)</code></pre>
+      <div class="schema-note"><b>🔬 Науково:</b> Структура даних визначає, які операції дешеві або дорогі. Складність описує, як росте час/пам'ять при збільшенні n.</div>
+      <div class="schema-note life"><b>🏠 Приклад:</b> Черга в банку - FIFO. Стос тарілок - LIFO. Телефонна книга навпіл - binary search O(log n).</div>
+      <div class="schema-note trap"><b>⚠️ Пастка:</b> Binary search працює тільки на відсортованих даних. Binary system і binary search - різні поняття.</div>
+      <div class="schema-note drill"><b>🧪 Міні-дріл:</b> Якщо масив не sorted, binary search не гарантує правильний результат.</div>
+    </div>
+        
+    <div class="schema-card">
+      <h3>🗄️ SQL і моделі даних</h3>
+      <pre class="schema-box"><code>[ DATA MODEL ]
+  conceptual -&gt; сутності бізнесу
+  logical    -&gt; таблиці, ключі, зв'язки
+  physical   -&gt; як зберігається в СУБД
+
+[ SQL ]
+  SELECT -&gt; читати
+  WHERE  -&gt; фільтр рядків
+  GROUP BY -&gt; групування
+  HAVING -&gt; фільтр груп
+  JOIN -&gt; об'єднання таблиць
+  GRANT -&gt; права доступу</code></pre>
+      <div class="schema-note"><b>🔬 Науково:</b> Модель даних проходить шлях від сенсу предметної області до фізичного зберігання. SQL розділяє читання, зміну даних і керування доступом.</div>
+      <div class="schema-note life"><b>🏠 Приклад:</b> Студент-Курс-Оплата: conceptual. Таблиці students/courses/payments з PK/FK: logical. Індекси, типи, сторінки: physical.</div>
+      <div class="schema-note trap"><b>⚠️ Пастка:</b> Нормалізація стосується логічної моделі таблиць, не ER-діаграми як картинки. GRANT - права, не вибірка.</div>
+      <div class="schema-note drill"><b>🧪 Міні-дріл:</b> WHERE до GROUP BY; HAVING після GROUP BY.</div>
+    </div>
+        
+    <div class="schema-card">
+      <h3>🌐 Мережі: packet, switch, router, DNS, DHCP, TCP/UDP</h3>
+      <pre class="schema-box"><code>[ NETWORK ]
+  user -&gt; browser -&gt; DNS -&gt; IP
+       -&gt; TCP/UDP -&gt; packets -&gt; router -&gt; server
+
+[ DEVICES ]
+  switch -&gt; всередині локальної мережі, MAC
+  router -&gt; між мережами, IP
+
+[ PROTOCOLS ]
+  DNS  -&gt; name to IP
+  DHCP -&gt; видає IP-налаштування
+  TCP  -&gt; порядок і доставка
+  UDP  -&gt; швидко, без гарантій</code></pre>
+      <div class="schema-note"><b>🔬 Науково:</b> Мережа ділить дані на пакети, доставляє їх через пристрої і протоколи. Рівні моделі розділяють відповідальність.</div>
+      <div class="schema-note life"><b>🏠 Приклад:</b> DNS - телефонна книга. DHCP - адміністратор офісу, що видає адресу. TCP - доставка з підписом. UDP - швидке повідомлення без гарантії.</div>
+      <div class="schema-note trap"><b>⚠️ Пастка:</b> Switch не замінює router. TCP не “швидший UDP”; TCP надійніший, але має накладні витрати.</div>
+      <div class="schema-note drill"><b>🧪 Міні-дріл:</b> HTTP працює поверх TCP; IP відповідає за адресацію між мережами.</div>
+    </div>
+        
+    <div class="schema-card">
+      <h3>🔐 Безпека: hash, encryption, signature, symmetric/asymmetric</h3>
+      <pre class="schema-box"><code>[ CRYPTO ]
+  hash       -&gt; відбиток, не розшифровується
+  encryption -&gt; можна розшифрувати ключем
+  signature  -&gt; підтверджує автора і цілісність
+
+[ KEYS ]
+  symmetric  -&gt; один спільний ключ
+  asymmetric -&gt; public/private key pair</code></pre>
+      <div class="schema-note"><b>🔬 Науково:</b> Геш-функція стискає повідомлення в фіксований відбиток. Шифрування приховує зміст. Підпис доводить, що дані не змінені й походять від власника ключа.</div>
+      <div class="schema-note life"><b>🏠 Приклад:</b> Пароль не зберігають відкритим: зберігають hash. AES/Rijndael шифрує. Купина - українська геш-функція.</div>
+      <div class="schema-note trap"><b>⚠️ Пастка:</b> Hash не можна “розшифрувати”. AES/Rijndael - шифр, не геш-функція.</div>
+      <div class="schema-note drill"><b>🧪 Міні-дріл:</b> Якщо питають криптографічну геш-функцію серед ДСТУ - шукай Купина.</div>
+    </div>
+        
+    <div class="schema-card">
+      <h3>🤖 ML: supervised, unsupervised, classification, SVM</h3>
+      <pre class="schema-box"><code>[ MACHINE LEARNING ]
+  supervised   -&gt; є правильні відповіді в train data
+  unsupervised -&gt; шукаємо структуру без labels
+
+  classification -&gt; клас
+  regression     -&gt; число
+  clustering     -&gt; групи
+
+  SVM -&gt; шукає гіперплощину з найбільшим margin</code></pre>
+      <div class="schema-note"><b>🔬 Науково:</b> Модель вчиться знаходити закономірність у даних. У класифікації відповідь - категорія, у регресії - числове значення.</div>
+      <div class="schema-note life"><b>🏠 Приклад:</b> Email spam/not spam - classification. Ціна квартири - regression. Групи клієнтів без labels - clustering.</div>
+      <div class="schema-note trap"><b>⚠️ Пастка:</b> SVM не зменшує розмірність; він розділяє класи гіперплощиною, максимізуючи margin.</div>
+      <div class="schema-note drill"><b>🧪 Міні-дріл:</b> PCA зменшує розмірність; SVM класифікує.</div>
+    </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="section page-break">
+    <div class="module schema-atlas code-lab">
+      <div class="kicker">Схеми IT / код як мікроскоп</div>
+      <h2>🧪 Код-вставки: побачити поняття руками</h2>
+      <p>Код тут не для зубріння синтаксису. Він показує, що саме означає поняття в тестах: де клас, де об'єкт, де інкапсуляція, де наслідування, де поліморфізм, і чому це не одне й те саме.</p>
+      <div class="schema-grid">
+        <div class="schema-card">
+          <h3>☕ Java OOP: class, object, encapsulation</h3>
+          <pre class="schema-box"><code>// class = креслення для майбутніх об'єктів
+class BankAccount {
+  // private = інкапсуляція: баланс не можна змінити напряму ззовні
+  private int balance;
+
+  // constructor = як створюється конкретний object
+  BankAccount(int startBalance) {
+    balance = startBalance;
+  }
+
+  // public method = контрольований спосіб взаємодії
+  void deposit(int amount) {
+    if (amount > 0) balance += amount;
+  }
+
+  int getBalance() {
+    return balance;
+  }
+}
+
+BankAccount acc = new BankAccount(100); // object / екземпляр
+acc.deposit(50);
+System.out.println(acc.getBalance()); // 150</code></pre>
+          <div class="schema-note"><b>🔬 Науково:</b> клас описує структуру і поведінку, об'єкт є конкретним екземпляром цього опису. Інкапсуляція ховає внутрішній стан і дозволяє змінювати його тільки через методи.</div>
+          <div class="schema-note life"><b>🏠 Аналогія:</b> банківський рахунок не дає просто написати “баланс = мільйон”. Є каса/додаток/операція, яка перевіряє правила.</div>
+          <div class="schema-note trap"><b>⚠️ Пастка:</b> private не означає “даних немає”. Дані є, але доступ до них контрольований.</div>
+        </div>
+
+        <div class="schema-card">
+          <h3>☕ Java OOP: inheritance + polymorphism</h3>
+          <pre class="schema-box"><code>// superclass = спільний тип
+abstract class Device {
+  abstract void volumeUp();
+}
+
+// inheritance: Phone IS-A Device
+class Phone extends Device {
+  @Override
+  void volumeUp() {
+    System.out.println("Phone: louder ringtone");
+  }
+}
+
+// inheritance: Laptop IS-A Device
+class Laptop extends Device {
+  @Override
+  void volumeUp() {
+    System.out.println("Laptop: louder speakers");
+  }
+}
+
+Device a = new Phone();
+Device b = new Laptop();
+
+a.volumeUp(); // той самий виклик, інша реакція
+b.volumeUp(); // це polymorphism</code></pre>
+          <div class="schema-note"><b>🔬 Науково:</b> наслідування описує відношення “is-a”, а поліморфізм дозволяє викликати один метод через спільний тип і отримувати різну реалізацію.</div>
+          <div class="schema-note life"><b>🏠 Аналогія:</b> кнопка гучності однакова, але телефон змінює дзвінок, ноутбук - динаміки, плеєр - навушники.</div>
+          <div class="schema-note trap"><b>⚠️ Пастка:</b> якщо об'єкт просто “має” інший об'єкт, це не inheritance, а composition.</div>
+        </div>
+
+        <div class="schema-card">
+          <h3>☕ Composition: has-a, не is-a</h3>
+          <pre class="schema-box"><code>class Engine {
+  void start() {
+    System.out.println("engine starts");
+  }
+}
+
+class Car {
+  // Car HAS-A Engine: машина має двигун
+  private Engine engine = new Engine();
+
+  void drive() {
+    engine.start();
+    System.out.println("car moves");
+  }
+}</code></pre>
+          <div class="schema-note"><b>🔬 Науково:</b> композиція означає, що один об'єкт складається з інших. Це часто краща модель, ніж наслідування, якщо немає відношення “є різновидом”.</div>
+          <div class="schema-note trap"><b>⚠️ Пастка:</b> Car is Engine - неправда. Car has Engine - правда.</div>
+        </div>
+
+        <div class="schema-card">
+          <h3>📈 Алгоритм: binary search працює тільки на sorted array</h3>
+          <pre class="schema-box"><code>int[] a = {2, 5, 9, 14, 20}; // sorted
+int target = 14;
+int left = 0, right = a.length - 1;
+
+while (left <= right) {
+  int mid = (left + right) / 2;
+
+  if (a[mid] == target) {
+    System.out.println("found");
+    break;
+  } else if (a[mid] < target) {
+    left = mid + 1;   // шукаємо правіше
+  } else {
+    right = mid - 1;  // шукаємо лівіше
+  }
+}</code></pre>
+          <div class="schema-note"><b>🔬 Науково:</b> binary search кожним кроком відкидає половину простору пошуку, тому має O(log n), але лише коли дані впорядковані.</div>
+          <div class="schema-note trap"><b>⚠️ Пастка:</b> binary search не має стосунку до binary number system, окрім слова “binary”.</div>
+        </div>
+
+        <div class="schema-card">
+          <h3>🗄️ SQL: WHERE, GROUP BY, HAVING, GRANT</h3>
+          <pre class="schema-box"><code>-- WHERE фільтрує рядки ДО групування
+SELECT student_id, AVG(score) AS avg_score
+FROM exam_results
+WHERE subject = 'IT'
+GROUP BY student_id
+HAVING AVG(score) >= 70
+ORDER BY avg_score DESC;
+
+-- GRANT не читає дані, а видає право доступу
+GRANT SELECT ON exam_results TO analyst;</code></pre>
+          <div class="schema-note"><b>🔬 Науково:</b> SQL має різні класи команд: DQL для запитів, DML для зміни даних, DCL для прав доступу. GRANT належить до керування правами.</div>
+          <div class="schema-note trap"><b>⚠️ Пастка:</b> HAVING не замінює WHERE. HAVING працює після GROUP BY і фільтрує вже групи.</div>
+        </div>
+
+        <div class="schema-card">
+          <h3>🌐 Мережі: DNS → TCP → HTTP</h3>
+          <pre class="schema-box"><code>1. Browser asks DNS:
+   k-rnd-lab.vercel.app -> IP address
+
+2. Browser opens TCP connection:
+   client port -> server port 443
+
+3. Browser sends HTTPS request:
+   GET /trainer.html HTTP/2
+
+4. Server returns:
+   200 OK + HTML/CSS/JS</code></pre>
+          <div class="schema-note"><b>🔬 Науково:</b> DNS відповідає за ім'я, TCP - за надійну доставку потоку байтів, HTTP/HTTPS - за зміст запиту і відповіді.</div>
+          <div class="schema-note trap"><b>⚠️ Пастка:</b> switch, router, DNS, TCP і HTTP - це не взаємозамінні слова. Вони працюють на різних рівнях і мають різні ролі.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section page-break">
+    <div class="module schema-atlas">
+      <div class="kicker">Схеми ТЗНК / комбінаторика й логіка</div>
+      <h2>🧠 ТЗНК: дерево рішень без паніки</h2>
+      <div class="schema-columns">
+        
+    <div class="schema-card">
+      <h3>🧩 Комбінаторика: яку дію обрати</h3>
+      <pre class="schema-box"><code>ПИТАННЯ 1: це один вибір чи кілька кроків?
+  |
+  |-- АБО / один із / будь-який з цих -&gt; ДОДАЄМО
+  |     6 способів для a або 4 для b -&gt; 6 + 4
+  |
+  |-- І / пара / послідовність -&gt; МНОЖИМО
+        5 варіантів першої дії і 4 другої -&gt; 5 * 4
+
+ПИТАННЯ 2: якщо обираємо з однієї групи, чи є ролі?
+  |
+  |-- є ролі/місця -&gt; порядок важливий -&gt; НЕ ділимо
+  |-- нема ролей   -&gt; порядок неважливий -&gt; ділимо на перестановки</code></pre>
+      <div class="schema-note"><b>🔬 Науково:</b> Комбінаторика рахує простір можливих результатів. Головне - зрозуміти, що вважається одним і тим самим результатом.</div>
+      <div class="schema-note life"><b>🏠 Приклад:</b> Голова+заступник: Петро/Іван і Іван/Петро - різні. Команда з двох: Петро/Іван і Іван/Петро - однакова.</div>
+      <div class="schema-note trap"><b>⚠️ Пастка:</b> Не ділимо там, де є посади. Ділимо там, де це просто група.</div>
+      <div class="schema-note drill"><b>🧪 Міні-дріл:</b> 8 людей, голова і заступник: 8*7=56. 2 людини в комісію з 8: 8*7/2=28.</div>
+    </div>
+        
+    <div class="schema-card">
+      <h3>🚧 Обмеження: fixed, forbidden, exactly one, at least one</h3>
+      <pre class="schema-box"><code>[ ОБМЕЖЕННЯ ]
+  |
+  |-- fixed / вже входить
+  |     команда 3 з 7, капітан уже є -&gt; C(6,2)
+  |
+  |-- forbidden / не входить
+  |     команда 3 з 7, капітан не може -&gt; C(6,3)
+  |
+  |-- incompatible pair / не разом
+  |     усі варіанти - погані разом
+  |
+  |-- exactly one of A,B
+  |     A без B + B без A
+  |
+  |-- at least one of A,B
+        усі - без A і без B</code></pre>
+      <div class="schema-note"><b>🔬 Науково:</b> Обмеження змінює множину допустимих результатів. Найчастіше швидше рахувати всі варіанти і віднімати заборонені.</div>
+      <div class="schema-note life"><b>🏠 Приклад:</b> 3 з 7, А і Б не можуть разом: усі C(7,3)=35. Погані: А+Б уже взяли, третій з 5 -> 5. Відповідь 30.</div>
+      <div class="schema-note trap"><b>⚠️ Пастка:</b> Слово “капітан” не завжди означає роль для призначення. Якщо капітан уже відомий і має входити - його не обираємо.</div>
+      <div class="schema-note drill"><b>🧪 Міні-дріл:</b> Капітан уже входить у команду 3 з 7: лишається 2 місця серед 6 -> C(6,2)=15.</div>
+    </div>
+      </div>
+      <div class="schema-grid">
+        
+    <div class="schema-mini">
+      <h4>🧠 Логіка: implication якщо P, то Q</h4>
+      <pre class="schema-box small"><code>[ P -&gt; Q ] хибне тільки тоді:
+  P = true, Q = false
+
+Обіцянка: якщо прибереш, отримаєш цукерку
+  прибрав + не дали -&gt; брехня
+  не прибрав + дали -&gt; не брехня</code></pre>
+      <p>Не роби висновок “якщо Q, то P”. Умова гарантує наслідок лише в один бік.</p>
+    </div>
+        
+    <div class="schema-mini">
+      <h4>📊 Відсотки</h4>
+      <pre class="schema-box small"><code>x% від A = A * x / 100
+зростання на x%: A * (1 + x/100)
+падіння на x%: A * (1 - x/100)
+
++20%, потім -20%:
+100 -&gt; 120 -&gt; 96, не 100</code></pre>
+      <p>Пастка: відсоток завжди від поточної бази, а не від початкової, якщо умова говорить про послідовні зміни.</p>
+    </div>
+        
+    <div class="schema-mini">
+      <h4>📈 Графіки</h4>
+      <pre class="schema-box small"><code>y = kx + b       -&gt; пряма
+ y = x^2          -&gt; парабола
+ y = 1/x          -&gt; гіпербола
+ y = 2^x          -&gt; експонента
+ y = log₂x        -&gt; логарифм</code></pre>
+      <p>Експонента швидко росте, логарифм росте повільно. Гіпербола має асимптоти і не проходить через 0.</p>
+    </div>
+        
+    <div class="schema-mini">
+      <h4>📚 Тексти і висновки</h4>
+      <pre class="schema-box small"><code>Можна стверджувати тільки те, що випливає з умови.
+
+'усі A є B' не означає 'усі B є A'
+'деякі' не означає 'усі'
+'може' не означає 'точно'</code></pre>
+      <p>У тестах часто ловлять на категоричності: “жоден”, “усі”, “обов'язково”, якщо в умові цього немає.</p>
+    </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section page-break">
+    <div class="module schema-atlas">
+      <div class="kicker">Схеми English / reading + grammar</div>
+      <h2>🇬🇧 English: як бачити пастки в тексті й граматиці</h2>
+      <div class="schema-grid">
+        
+    <div class="schema-card">
+      <h3>📖 Reading evidence</h3>
+      <pre class="schema-box"><code>[ QUESTION ]
+  |
+  |-- main idea -&gt; шукай загальний сенс, не деталь
+  |-- detail    -&gt; шукай конкретний рядок
+  |-- inference -&gt; висновок з тексту, але без фантазії
+  |-- attitude  -&gt; тон автора: critical/supportive/neutral
+
+[ ANSWER ]
+  must be supported by text</code></pre>
+      <div class="schema-note"><b>🔬 Науково:</b> Reading перевіряє не переклад кожного слова, а доказовість відповіді. Правильний варіант має опору в тексті.</div>
+      <div class="schema-note life"><b>🏠 Приклад:</b> Якщо текст каже 'may help', відповідь 'will definitely solve' занадто сильна.</div>
+      <div class="schema-note trap"><b>⚠️ Пастка:</b> Найчастіша пастка - знайоме слово в неправильному контексті або відповідь, яка звучить логічно, але не написана в тексті.</div>
+      <div class="schema-note drill"><b>🧪 Міні-дріл:</b> Підкреслюй у тексті 3-5 слів, які доводять відповідь.</div>
+    </div>
+        
+    <div class="schema-card">
+      <h3>⏱️ Tenses: швидка карта</h3>
+      <pre class="schema-box"><code>[ TIME + ASPECT ]
+  Present Simple      -&gt; факт/звичка
+  Present Continuous  -&gt; зараз/тимчасово
+  Present Perfect     -&gt; досвід або результат до now
+  Past Simple         -&gt; завершена минула дія
+  Past Perfect        -&gt; раніше за іншу минулу дію
+  Future / be going to -&gt; майбутнє / план</code></pre>
+      <div class="schema-note"><b>🔬 Науково:</b> Час в англійській показує не лише коли, а й як дія пов'язана з моментом мовлення або іншою дією.</div>
+      <div class="schema-note life"><b>🏠 Приклад:</b> I have lost my keys = ключі загублені і зараз це має наслідок. I lost my keys yesterday = факт учора.</div>
+      <div class="schema-note trap"><b>⚠️ Пастка:</b> Since/for часто ведуть до Present Perfect. Yesterday/last year - Past Simple.</div>
+      <div class="schema-note drill"><b>🧪 Міні-дріл:</b> Before he arrived, she had left: she left раніше.</div>
+    </div>
+        
+    <div class="schema-card">
+      <h3>🔀 Conditionals</h3>
+      <pre class="schema-box"><code>[ IF ]
+  Zero: if + Present, Present -&gt; закон/факт
+  First: if + Present, will -&gt; реальна можливість
+  Second: if + Past, would -&gt; уявна ситуація зараз
+  Third: if + Past Perfect, would have V3 -&gt; жаль про минуле</code></pre>
+      <div class="schema-note"><b>🔬 Науково:</b> Conditionals кодують ступінь реальності ситуації: факт, реальний майбутній шанс, уявність, або минуле, яке вже не змінити.</div>
+      <div class="schema-note life"><b>🏠 Приклад:</b> If I study, I will pass. If I studied more, I would pass. If I had studied, I would have passed.</div>
+      <div class="schema-note trap"><b>⚠️ Пастка:</b> Після if у First Conditional не ставимо will: If I will study - типова помилка.</div>
+      <div class="schema-note drill"><b>🧪 Міні-дріл:</b> Маркер regret / past: would have + V3.</div>
+    </div>
+        
+    <div class="schema-card">
+      <h3>🧩 Use of English: collocations, phrasals, linkers</h3>
+      <pre class="schema-box"><code>[ WORD CHOICE ]
+  make a decision
+  do homework
+  take responsibility
+  pay attention
+
+[ LINKERS ]
+  although -&gt; контраст
+  because -&gt; причина
+  therefore -&gt; наслідок
+  unless -&gt; if not</code></pre>
+      <div class="schema-note"><b>🔬 Науково:</b> Use of English перевіряє сталі поєднання, керування дієслів, прийменники і логічні зв'язки між частинами речення.</div>
+      <div class="schema-note life"><b>🏠 Приклад:</b> Although it was raining, we went out. Тут although створює контраст, не причину.</div>
+      <div class="schema-note trap"><b>⚠️ Пастка:</b> Не перекладай дослівно з української. 'make homework' звучить логічно, але правильно 'do homework'.</div>
+      <div class="schema-note drill"><b>🧪 Міні-дріл:</b> Після unless не додавай додаткове not: unless you don't - часто подвійне заперечення.</div>
+    </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section page-break">
+    <div class="module">
+      <div class="kicker">Блок 01</div>
+      <h2>🔢 Бінарний рахунок і представлення даних</h2>
+      <div class="goal"><b>Ціль:</b> Навчитися рахувати у двійковій системі, розуміти біти/байти і не лякатися питань про пам'ять, кодування, IP, маски, права доступу.</div>
+      <h3>🧭 Карта пам'яті</h3>
+      <div class="links"><span>0/1</span><b>↔</b><span>bit</span><b>↔</b><span>byte</span><b>↔</b><span>powers of two</span><b>↔</b><span>memory</span><b>↔</b><span>files</span><b>↔</b><span>networks</span></div>
+      <div class="callout science"><b>🔬 Науково, але зрозуміло:</b><br>Комп'ютер зберігає інформацію як послідовність бітів. Біт має два стани: 0 або 1. Двійкове число працює так само, як десяткове, але замість розрядів 1, 10, 100 використовує 1, 2, 4, 8, 16, 32...</div>
+      <div class="callout life"><b>🏠 Аналогія:</b><br>Уяви ряд вимикачів. Кожен вимикач або вимкнений (0), або ввімкнений (1). Комбінація вимикачів кодує число, літеру, колір, звук, дозвіл доступу.</div>
+      <h3>🧪 Пояснення через приклади</h3>
+      <div class="examples">
+    <div class="example-card">
+      <h4>Як перевести binary → decimal</h4>
+      <p>Підписуємо розряди справа наліво: 1, 2, 4, 8, 16. Додаємо тільки ті, де стоїть 1.</p>
+      <pre><code>10110₂
+розряди: 16 8 4 2 1
+біти:     1 0 1 1 0
+сума: 16 + 4 + 2 = 22₁₀</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>Як перевести decimal → binary</h4>
+      <p>Беремо найбільший степінь двійки, який влізає, ставимо 1, віднімаємо, повторюємо.</p>
+      <pre><code>25₁₀
+25 = 16 + 8 + 1
+розряди 16 8 4 2 1
+біти     1  1 0 0 1
+25₁₀ = 11001₂</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>Байт і пам'ять</h4>
+      <p>1 byte = 8 bits. Один байт може мати 256 комбінацій, бо 2⁸ = 256.</p>
+      <pre><code>00000000 = 0
+11111111 = 255
+Тому unsigned byte часто має діапазон 0..255</code></pre>
+      <div class="examples">
+        <div class="example-card">
+          <h4>Signed byte: чому максимум саме 127</h4>
+          <p>У signed 8-bit перший біт зліва показує знак. Для додатних чисел він має бути <code>0</code>, тому для величини лишається 7 бітів.</p>
+          <pre><code>01111111
+розряди: 64 32 16 8 4 2 1
+сума: 64+32+16+8+4+2+1 = 127
+
+10000000 вже починається з 1,
+тому у signed це не +128, а -128.</code></pre>
+        </div>
+        <div class="example-card">
+          <h4>Unsigned vs signed як “режим читання”</h4>
+          <p>Комп'ютер не вгадує тип. Тип задає код, формат файлу або інструкція процесора.</p>
+          <pre><code>байт у пам'яті: 11111111
+
+unsigned char -> 255
+signed char   -> -1
+
+ті самі біти, різні правила читання</code></pre>
+        </div>
+        <div class="example-card">
+          <h4>Як зробити від'ємне число</h4>
+          <p>Для two's complement: взяти додатне число, перевернути біти, додати 1 справа.</p>
+          <pre><code>+5 = 00000101
+інверсія = 11111010
++1       = 11111011
+
+отже, -5 = 11111011</code></pre>
+        </div>
+        <div class="example-card">
+          <h4>Що таке overflow</h4>
+          <p>Overflow - це коли результат потребує більше бітів, ніж виділено. Зайвий старший біт відкидається або фіксується як помилка залежно від мови/режиму.</p>
+          <pre><code>unsigned 8-bit:
+255 = 11111111
+255 + 1 = 1 00000000
+
+у 8 бітах лишається 00000000,
+тобто лічильник повернувся до 0.</code></pre>
+        </div>
+      </div>
+      <div class="callout life"><b>🏠 Аналогія з лічильником:</b> якщо старий лічильник має лише 3 цифри, після 999 наступне значення знову 000. У 8-бітному unsigned те саме: після 255 наступне значення може стати 0.</div>
+      <div class="callout science"><b>🔬 Чому це питають на іспитах:</b> тема перевіряє не “зубріння бітів”, а розуміння меж типів даних. У реальному коді неправильний тип може зламати лічильник, індекс масиву, розмір файлу, рейтинг, баланс або кількість переглядів.</div>
+    </div>
+    <div class="example-card">
+      <h4>Бінарне в житті</h4>
+      <p>Колір у RGB часто має канали 0..255. IP-адреса IPv4 складається з 4 байтів. Права файлів у Linux теж зручно думати як біти.</p>
+      <pre><code>read=4, write=2, execute=1
+7 = 4+2+1 = rwx
+5 = 4+1 = r-x</code></pre>
+    </div></div>
+      <div class="callout trap"><b>⚠️ Типові пастки:</b><ul><li><b>101₂ — це не сто один, а 5.</b><br><span>Маленьке ₂ означає, що число записане у двійковій системі. Там розряди не 100/10/1, а 4/2/1.</span><br><em>Приклад: 101₂ = 1*4 + 0*2 + 1*1 = 5₁₀.</em></li><li><b>1 byte = 8 bits, не 10.</b><br><span>Byte — це стандартна група з 8 бітів. Десяткова звичка “10” тут не працює, бо комп'ютерна пам'ять побудована на степенях двійки.</span><br><em>Приклад: 8 bits дають 2⁸ = 256 різних комбінацій.</em></li><li><b>2⁸ = 256 комбінацій, але unsigned byte має значення 0..255.</b><br><span>Комбінацій 256, бо рахуємо всі варіанти від 00000000 до 11111111. Якщо починаємо з нуля, останнє значення буде 255.</span><br><em>Приклад: 00000000₂ = 0, 11111111₂ = 255.</em></li><li><b>Бінарний пошук і бінарна система — різні речі.</b><br><span>Бінарна система — спосіб запису чисел через 0 і 1. Бінарний пошук — алгоритм пошуку у відсортованому списку через поділ навпіл.</span><br><em>Приклад: 33₁₀ = 100001₂ — це система числення; пошук 33 у sorted array — це алгоритм.</em></li></ul></div>
+      <div class="related"><b>🔗 Пов'язано з:</b> операційні системи · мережі · криптографія · алгоритми</div>
+      
+      <div class="exam-expansion">
+        <h3>🎯 Екзаменаційне спорядження</h3>
+        <div class="role-card"><b>Професійна прив'язка:</b> Computer systems, embedded/basic hardware, networks, cybersecurity, data engineering.</div>
+        <div class="exp-grid">
+          <div class="exp-card"><h4>🎯 Що реально питають</h4><ul><li>Біти, байти, кодування, двійкова/десяткова системи та діапазони значень.</li><li>2^n означає кількість комбінацій; якщо нумерація з нуля, останнє значення буде 2^n - 1.</li><li>Binary у “binary search” і binary як система числення - різні теми, але обидві люблять у тестах.</li></ul></div>
+          <div class="exp-card"><h4>Пастки: де ловлять</h4><ul><li>101₂ читається як 5₁₀, а не як сто один.</li><li>1 byte = 8 bits, тому 1 KB у технічних контекстах може бути 1024 bytes, але в маркетингу іноді 1000.</li><li>Signed/unsigned плутають: unsigned byte 0..255, signed byte часто -128..127.</li></ul></div>
+        </div>
+        <div class="drill-card"><b>Міні-дріл:</b> Навчитися швидко розкладати числа по степенях 2: 1,2,4,8,16,32,64,128,256. Для 33: 32+1 = 100001₂.</div>
+      </div>
+    </div>
+  </section>
+  <section class="section page-break">
+    <div class="module">
+      <div class="kicker">Блок 02</div>
+      <h2>💻 Процедурне програмування і виконання коду</h2>
+      <div class="goal"><b>Ціль:</b> Навчитися читати код як послідовність змін стану: змінні, присвоєння, цикли, масиви, функції, рекурсія.</div>
+      <h3>🧭 Карта пам'яті</h3>
+      <div class="links"><span>state</span><b>↔</b><span>assignment</span><b>↔</b><span>condition</span><b>↔</b><span>loop</span><b>↔</b><span>function</span><b>↔</b><span>result</span></div>
+      <div class="callout science"><b>🔬 Науково, але зрозуміло:</b><br>Процедурна програма виконує інструкції послідовно. Пам'ять містить поточні значення змінних. Кожна команда може змінити стан, а результат залежить від порядку виконання.</div>
+      <div class="callout life"><b>🏠 Аналогія:</b><br>Кнопка гучності — чудова аналогія. Вона не має одного сталого результату. Якщо гучність 3, натискання + дає 4. Якщо вже 8, те саме натискання дає 9. Команда діє на поточний стан.</div>
+      <h3>🧪 Пояснення через приклади</h3>
+      <div class="examples">
+    <div class="example-card">
+      <h4>Присвоєння</h4>
+      <p>Праворуч рахуємо зі старим значенням, потім записуємо результат у змінну.</p>
+      <pre><code>let x = 2;
+x = x + 3;
+// старе x було 2
+// нове x стало 5</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>Цикл</h4>
+      <p>Цикл повторює дію. Щоб не помилитися, треба вести таблицю: i, значення змінної, умова.</p>
+      <pre><code>let volume = 3;
+for (let i = 0; i &lt; 2; i++) {
+  volume = volume + 1;
+}
+// i=0: volume 3→4
+// i=1: volume 4→5
+// відповідь: 5</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>Масив та індекс</h4>
+      <p>У багатьох мовах перший елемент має індекс 0. Це одна з найчастіших пасток.</p>
+      <pre><code>const a = [10, 20, 30];
+a[0] = 10
+a[1] = 20
+a[2] = 30</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>Рекурсія</h4>
+      <p>Рекурсія має базовий випадок і крок, який наближає до базового випадку.</p>
+      <pre><code>function fact(n) {
+  if (n === 1) return 1;
+  return n * fact(n - 1);
+}
+fact(4) = 4*3*2*1 = 24</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>Компілятор, інтерпретатор, компонувальник</h4>
+      <p>Компілятор перекладає код у нижчий рівень. Інтерпретатор виконує поступово. Компонувальник/linker збирає об'єктні модулі в виконуваний файл.</p>
+      <pre><code>main.c → compiler → main.o
+math.c → compiler → math.o
+main.o + math.o → linker → app.exe</code></pre>
+    </div></div>
+      <div class="callout trap"><b>⚠️ Типові пастки:</b><ul><li><b>Компілятор ≠ компонувальник.</b><br><span>Компілятор перекладає окремий файл/код у проміжний або машинний формат. Компонувальник бере вже готові об'єктні модулі й зшиває їх в один виконуваний файл.</span><br><em>Приклад: main.c → main.o робить compiler; main.o + math.o → app.exe робить linker.</em></li><li><b>a[2] при індексації з 0 — третій елемент.</b><br><span>Перший елемент має індекс 0, другий — 1, третій — 2. Людська лічба і комп'ютерний індекс зсунуті на 1.</span><br><em>Приклад: a = [4, 7, 1]; a[2] = 1.</em></li><li><b>У циклі важливі старт, умова, крок і тіло циклу.</b><br><span>Помилка часто виникає не в арифметиці, а в тому, скільки разів тіло циклу реально виконалося.</span><br><em>Приклад: for (i=0; i<3; i++) виконається для i=0,1,2 — тобто 3 рази.</em></li><li><b>Рекурсія без базового випадку може бути нескінченною.</b><br><span>Функція має колись зупинитися. Базовий випадок — це умова, де вона вже не викликає саму себе.</span><br><em>Приклад: fact(1) return 1 — база; fact(n) викликає fact(n-1) — крок.</em></li></ul></div>
+      <div class="related"><b>🔗 Пов'язано з:</b> алгоритми · операційні системи · ООП</div>
+      
+      <div class="exam-expansion">
+        <h3>🎯 Екзаменаційне спорядження</h3>
+        <div class="role-card"><b>Професійна прив'язка:</b> Software developer, QA automation, algorithmic problem solving.</div>
+        <div class="exp-grid">
+          <div class="exp-card"><h4>🎯 Що реально питають</h4><ul><li>Трасування коду: значення змінних після присвоєнь, циклів, умов і рекурсії.</li><li>Компілятор, інтерпретатор, лінкер/компонувальник, лексичний аналізатор - це різні етапи.</li><li>Масиви часто мають індексацію з нуля; a[2] - третій елемент.</li></ul></div>
+          <div class="exp-card"><h4>Пастки: де ловлять</h4><ul><li>У присвоєнні права частина рахується першою: x = x + 1 не рівність, а оновлення.</li><li>У циклі помилка часто в межі: < або <=, старт з 0 чи з 1.</li><li>Рекурсія має базовий випадок; без нього стек викликів росте до помилки.</li></ul></div>
+        </div>
+        <div class="drill-card"><b>Міні-дріл:</b> Для кожного фрагмента коду зробити таблицю: крок, значення змінних, умова, результат.</div>
+      </div>
+    </div>
+  </section>
+  <section class="section page-break">
+    <div class="module">
+      <div class="kicker">Блок 03</div>
+      <h2>🧱 ООП: клас, об'єкт, інкапсуляція, наслідування, поліморфізм</h2>
+      <div class="goal"><b>Ціль:</b> Не зубрити принципи ООП, а бачити їх у пристроях, кнопках, програмах і API.</div>
+      <h3>🧭 Карта пам'яті</h3>
+      <div class="links"><span>class</span><b>↔</b><span>object</span><b>↔</b><span>state</span><b>↔</b><span>method</span><b>↔</b><span>interface</span><b>↔</b><span>behavior</span></div>
+      <div class="callout science"><b>🔬 Науково, але зрозуміло:</b><br>ООП моделює систему як об'єкти зі станом і поведінкою. Клас описує шаблон. Об'єкт є конкретним екземпляром. Інкапсуляція ховає внутрішню реалізацію, наслідування повторно використовує структуру, поліморфізм дозволяє одному інтерфейсу мати різні реалізації.</div>
+      <div class="callout life"><b>🏠 Аналогія:</b><br>Одна кнопка Play у різних програмах: у Spotify запускає звук, у YouTube відео, у грі сцену. Кнопка однакова для користувача, але реалізація різна — це поліморфізм.</div>
+      <h3>🧪 Пояснення через приклади</h3>
+      <div class="examples">
+    <div class="example-card">
+      <h4>Клас і об'єкт</h4>
+      <p>Клас — креслення, об'єкт — конкретна річ за кресленням.</p>
+      <pre><code>class Button {
+  constructor(label) { this.label = label; }
+}
+const save = new Button('Save');
+// Button = клас
+// save = об'єкт</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>Інкапсуляція</h4>
+      <p>Користувач тисне кнопку гучності, але не бачить аудіодрайвер, системний мікшер і внутрішнє поле level.</p>
+      <pre><code>class Volume {
+  #level = 5;
+  up() { if (this.#level &lt; 10) this.#level++; }
+  value() { return this.#level; }
+}</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>Поліморфізм</h4>
+      <p>Один виклик, різна поведінка. Це корисно, коли код хоче працювати з різними об'єктами однаково.</p>
+      <pre><code>apps.forEach(app =&gt; app.play());
+// MusicApp.play() → звук
+// VideoApp.play() → відео
+// GameApp.play() → сцена</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>API</h4>
+      <p>API — контракт між програмами. Клієнт знає, що попросити і який формат відповіді чекати.</p>
+      <pre><code>GET /users/42
+→ { id: 42, name: 'Anna' }</code></pre>
+    </div></div>
+      <div class="callout trap"><b>⚠️ Типові пастки:</b><ul><li><b>Клас ≠ об'єкт.</b><br><span>Клас — опис або шаблон. Об'єкт — конкретний екземпляр, який уже має власні значення полів.</span><br><em>Приклад: class Phone — шаблон; myPhone з гучністю 7 і темною темою — об'єкт.</em></li><li><b>Інкапсуляція — не просто private.</b><br><span>Сенс не в слові private, а в тому, що об'єкт сам контролює, як змінюється його внутрішній стан.</span><br><em>Приклад: Volume.up() не дозволяє зробити level=999, бо метод перевіряє межу.</em></li><li><b>Поліморфізм — не “багато класів”.</b><br><span>Поліморфізм виникає, коли одна команда або інтерфейс запускає різну поведінку в різних об'єктах.</span><br><em>Приклад: play() у MusicApp дає звук, у VideoApp — відео, у GameApp — сцену.</em></li><li><b>UML class diagram ≠ sequence diagram.</b><br><span>Class diagram показує статичну структуру: класи, поля, зв'язки. Sequence diagram показує часовий порядок повідомлень.</span><br><em>Приклад: “User має Orders” — class diagram; “User натиснув Pay → API → Bank” — sequence.</em></li></ul></div>
+      <div class="related"><b>🔗 Пов'язано з:</b> процедурне програмування · API · UML · software engineering</div>
+      
+      <div class="exam-expansion">
+        <h3>🎯 Екзаменаційне спорядження</h3>
+        <div class="role-card"><b>Професійна прив'язка:</b> Backend/frontend developer, QA, software architect.</div>
+        <div class="exp-grid">
+          <div class="exp-card"><h4>🎯 Що реально питають</h4><ul><li>Клас - шаблон; об'єкт - конкретний екземпляр.</li><li>Інкапсуляція - контроль доступу й приховування внутрішньої реалізації за стабільним інтерфейсом.</li><li>Наслідування - is-a; композиція/агрегація - has-a; поліморфізм - один інтерфейс, різні реалізації.</li></ul></div>
+          <div class="exp-card"><h4>Пастки: де ловлять</h4><ul><li>Не кожен зв'язок “має” є наслідуванням.</li><li>Private поле саме по собі не пояснює інкапсуляцію, якщо немає ідеї контрольованого доступу.</li><li>Поліморфізм - не просто багато методів, а можливість викликати однакову операцію для різних типів.</li></ul></div>
+        </div>
+        <div class="drill-card"><b>Міні-дріл:</b> Питання “Cat extends Animal” → inheritance. “Car has Engine” → composition. “Button може бути SaveButton або CancelButton” → polymorphism.</div>
+      </div>
+    </div>
+  </section>
+  <section class="section page-break">
+    <div class="module">
+      <div class="kicker">Блок 03B</div>
+      <h2>🧱 ООП поглиблено: наслідування, композиція, агрегація, тестування</h2>
+      <div class="goal"><b>Ціль:</b> Закрити прогалину: не просто назвати принципи ООП, а розуміти, як відрізняти наслідування від композиції/агрегації та як це питають у тестах.</div>
+      <h3>🧭 Карта пам'яті</h3>
+      <div class="links"><span>is-a</span><b>↔</b><span>has-a</span><b>↔</b><span>part-of</span><b>↔</b><span>interface</span><b>↔</b><span>test</span><b>↔</b><span>bug</span></div>
+      <div class="callout science"><b>🔬 Науково, але зрозуміло:</b><br>Наслідування моделює відношення “є різновидом” (is-a). Композиція й агрегація моделюють “має” або “складається з” (has-a/part-of). У software engineering також важливо розуміти тестування: unit, integration, system, acceptance.</div>
+      <div class="callout life"><b>🏠 Аналогія:</b><br>Електросамокат є транспортом — це наслідування. Самокат має батарею — це композиція. Університет має студентів, але студенти можуть існувати без конкретного університету — це агрегація.</div>
+      <h3>🧪 Пояснення через приклади</h3>
+      <div class="examples">
+    <div class="example-card">
+      <h4>Наслідування: is-a</h4>
+      <p>Використовувати, коли дочірній клас справді є різновидом базового.</p>
+      <pre><code>class Vehicle {}
+class Scooter extends Vehicle {}
+class Car extends Vehicle {}
+// Scooter is a Vehicle</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>Композиція: сильне part-of</h4>
+      <p>Частина належить цілому й зазвичай не має сенсу без нього.</p>
+      <pre><code>class Phone {
+  constructor() {
+    this.battery = new Battery();
+  }
+}
+// battery є частиною phone</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>Агрегація: слабше has-a</h4>
+      <p>Об'єкт містить посилання на інший об'єкт, але той може існувати окремо.</p>
+      <pre><code>class University {
+  constructor(students) {
+    this.students = students;
+  }
+}
+// student може перейти в інший university</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>Тестування</h4>
+      <p>Unit test перевіряє маленьку функцію. Integration test перевіряє взаємодію частин. System test перевіряє всю систему.</p>
+      <pre><code>unit: add(2,3) === 5
+integration: API + database
+system: user login flow</code></pre>
+    </div></div>
+      <div class="callout trap"><b>⚠️ Типові пастки:</b><ul><li><b>Не кожен has-a — наслідування.</b><br><span>Якщо об'єкт має частину, це не означає, що він є різновидом цієї частини.</span><br><em>Приклад: Car має Engine, але Car не є Engine.</em></li><li><b>Composition ≠ Aggregation.</b><br><span>У композиції частина сильно належить цілому. В агрегації частина може існувати незалежніше.</span><br><em>Приклад: House-Room ближче до composition; Team-Player ближче до aggregation.</em></li><li><b>Unit test ≠ Integration test.</b><br><span>Unit ізолює маленьку одиницю коду. Integration перевіряє, чи частини працюють разом.</span><br><em>Приклад: Перевірити формулу знижки — unit; перевірити checkout + payment API — integration.</em></li></ul></div>
+      <div class="related"><b>🔗 Пов'язано з:</b> ООП · software engineering · API · UML</div>
+      
+      <div class="exam-expansion">
+        <h3>🎯 Екзаменаційне спорядження</h3>
+        <div class="role-card"><b>Професійна прив'язка:</b> Software engineer, backend developer, QA engineer, API designer.</div>
+        <div class="exp-grid">
+          <div class="exp-card"><h4>🎯 Що реально питають</h4><ul><li>Composition означає сильну залежність частини від цілого; aggregation - слабший зв'язок.</li><li>Unit test перевіряє малу одиницю, integration test - взаємодію частин.</li><li>API contract важливий: клієнт очікує стабільні endpoint, формат даних і коди відповіді.</li></ul></div>
+          <div class="exp-card"><h4>Пастки: де ловлять</h4><ul><li>Team has Players частіше aggregation, бо player може існувати без team.</li><li>House has Rooms частіше composition, бо кімната як частина моделі не живе окремо від будинку.</li><li>Unit test не має залежати від реальної бази даних або зовнішньої мережі.</li></ul></div>
+        </div>
+        <div class="drill-card"><b>Міні-дріл:</b> Для кожного has-a запитай: якщо видалити ціле, частина логічно зникає? Так - composition, ні - aggregation.</div>
+      </div>
+    </div>
+  </section>
+  <section class="section page-break">
+    <div class="module">
+      <div class="kicker">Блок 04</div>
+      <h2>📈 Алгоритми і структури даних</h2>
+      <div class="goal"><b>Ціль:</b> Розуміти, як дані організовані і як алгоритм рухається по них: пошук, сортування, stack, queue, BFS, DFS, Big-O.</div>
+      <h3>🧭 Карта пам'яті</h3>
+      <div class="links"><span>data</span><b>↔</b><span>operation</span><b>↔</b><span>steps</span><b>↔</b><span>complexity</span><b>↔</b><span>memory</span></div>
+      <div class="callout science"><b>🔬 Науково, але зрозуміло:</b><br>Алгоритм — формальна послідовність кроків. Структура даних визначає, як інформація лежить у пам'яті і які операції зручні. Big-O описує, як ростуть витрати алгоритму зі збільшенням розміру входу.</div>
+      <div class="callout life"><b>🏠 Аналогія:</b><br>Шукати слово в словнику з першої сторінки — лінійний пошук. Відкрити посередині й щоразу відкидати половину — бінарний пошук.</div>
+      <h3>🧪 Пояснення через приклади</h3>
+      <div class="examples">
+    <div class="example-card">
+      <h4>Big-O</h4>
+      <p>O(1) — приблизно однаково швидко. O(n) — пройти всі n елементів. O(log n) — щоразу зменшувати задачу в кілька разів. O(n²) — часто два вкладені цикли.</p>
+      <pre><code>for item in items:
+  print(item)
+# один прохід → O(n)
+
+for a in items:
+  for b in items:
+    compare(a, b)
+# вкладені цикли → O(n²)</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>Бінарний пошук</h4>
+      <p>Працює тільки на відсортованих даних. Якщо дані не відсортовані, середина не дає інформації, яку половину відкидати.</p>
+      <pre><code>[1,3,5,7,9], шукаємо 7
+middle = 5 → 7 більше → права половина
+middle = 7 → знайдено</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>Stack і Queue</h4>
+      <p>Stack: останній зайшов, перший вийшов. Queue: перший зайшов, перший вийшов.</p>
+      <pre><code>stack: push A, push B, pop → B
+queue: add A, add B, take → A</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>BFS і DFS</h4>
+      <p>BFS обходить граф шарами і часто використовує queue. DFS іде вглиб і часто використовує stack або рекурсію.</p>
+      <pre><code>BFS: спершу всі сусіди 1-го рівня
+DFS: один шлях до кінця, потім назад</code></pre>
+    </div></div>
+      <div class="callout trap"><b>⚠️ Типові пастки:</b><ul><li><b>Binary search потребує sorted data.</b><br><span>Середина має сенс тільки тоді, коли ліворуч точно менші значення, а праворуч більші. Інакше неможливо знати, яку половину відкидати.</span><br><em>Приклад: [1,3,5,7,9] — можна; [7,1,9,3,5] — спершу треба сортувати.</em></li><li><b>BFS ≠ DFS.</b><br><span>BFS іде шарами через чергу, DFS іде вглиб через стек або рекурсію. Вони можуть відвідати ті самі вершини, але в іншому порядку.</span><br><em>Приклад: Для найкоротшого шляху в неваговому графі зазвичай беруть BFS.</em></li><li><b>Stack ≠ Queue.</b><br><span>У stack дістаємо останнє додане, у queue — найстаріше. Це різна поведінка при однаковій ідеї “контейнера”.</span><br><em>Приклад: Stack: тарілки; Queue: черга до каси.</em></li><li><b>O(n log n) часто асоціюється з ефективними сортуваннями.</b><br><span>Алгоритм ділить задачу на частини log n разів і на кожному рівні обробляє n елементів.</span><br><em>Приклад: Merge Sort: поділ навпіл + злиття всіх елементів.</em></li></ul></div>
+      <div class="related"><b>🔗 Пов'язано з:</b> бінарний рахунок · програмування · ML · ТЗНК</div>
+      
+      <div class="exam-expansion">
+        <h3>🎯 Екзаменаційне спорядження</h3>
+        <div class="role-card"><b>Професійна прив'язка:</b> Developer, data engineer, ML engineer, technical interviewer.</div>
+        <div class="exp-grid">
+          <div class="exp-card"><h4>🎯 Що реально питають</h4><ul><li>Big-O описує ріст часу/пам'яті при збільшенні n.</li><li>Stack: LIFO; Queue: FIFO; Hash table: швидкий доступ за ключем; Tree/Graph: ієрархії та зв'язки.</li><li>BFS і DFS питають через “найкоротший шлях у невагомому графі”, “черга”, “стек/рекурсія”.</li></ul></div>
+          <div class="exp-card"><h4>Пастки: де ловлять</h4><ul><li>Binary search працює тільки на відсортованих даних.</li><li>O(1) не означає “миттєво”, а означає незалежність від n.</li><li>Greedy не завжди оптимальний; dynamic programming потрібен, коли є повторювані підзадачі й оптимальна підструктура.</li></ul></div>
+        </div>
+        <div class="drill-card"><b>Міні-дріл:</b> Знати асоціації: BFS=queue, DFS=stack/recursion, merge sort=divide and conquer, DP=таблиця підзадач.</div>
+      </div>
+    </div>
+  </section>
+  <section class="section page-break">
+    <div class="module">
+      <div class="kicker">Блок 04B</div>
+      <h2>🖥️ Архітектура комп'ютера: CPU, RAM, cache, I/O</h2>
+      <div class="goal"><b>Ціль:</b> Додати те, що часто є в програмі IT: як комп'ютер виконує інструкції, де лежать дані, чому cache швидший за RAM, що таке I/O.</div>
+      <h3>🧭 Карта пам'яті</h3>
+      <div class="links"><span>CPU</span><b>↔</b><span>registers</span><b>↔</b><span>cache</span><b>↔</b><span>RAM</span><b>↔</b><span>disk</span><b>↔</b><span>I/O</span></div>
+      <div class="callout science"><b>🔬 Науково, але зрозуміло:</b><br>CPU виконує інструкції. Регістри — найшвидша маленька пам'ять усередині CPU. Cache зберігає часто потрібні дані ближче до процесора. RAM швидша за диск, але втрачає дані без живлення. Disk/SSD зберігає дані довго.</div>
+      <div class="callout life"><b>🏠 Аналогія:</b><br>Робочий стіл: у руках — регістри, на столі — cache, у шафі поруч — RAM, в архіві на іншому поверсі — disk. Чим ближче, тим швидше, але менше місця.</div>
+      <h3>🧪 Пояснення через приклади</h3>
+      <div class="examples">
+    <div class="example-card">
+      <h4>Ієрархія пам'яті</h4>
+      <p>Швидкість і місткість обмінюються: ближча пам'ять швидша, але менша й дорожча.</p>
+      <pre><code>registers: дуже швидко, дуже мало
+cache: швидко, мало
+RAM: середньо, більше
+SSD/HDD: повільніше, дуже багато</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>Fetch-decode-execute</h4>
+      <p>CPU бере інструкцію, декодує її і виконує.</p>
+      <pre><code>fetch: взяти інструкцію з пам'яті
+decode: зрозуміти команду
+execute: виконати операцію</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>I/O</h4>
+      <p>Input/Output — взаємодія з зовнішніми пристроями або файлами.</p>
+      <pre><code>keyboard input
+screen output
+file read/write
+network request</code></pre>
+    </div></div>
+      <div class="callout trap"><b>⚠️ Типові пастки:</b><ul><li><b>RAM ≠ disk.</b><br><span>RAM тимчасова й швидка. Disk/SSD постійний і повільніший.</span><br><em>Приклад: Відкритий документ у RAM; збережений файл на SSD.</em></li><li><b>Cache ≠ browser cache у вузькому сенсі.</b><br><span>У архітектурі CPU cache — швидка пам'ять біля процесора. Browser cache — інша прикладна ідея кешування.</span><br><em>Приклад: L1/L2/L3 cache прискорює доступ CPU до даних.</em></li><li><b>I/O часто повільніше за обчислення.</b><br><span>Читання з диска або мережі потребує чекання зовнішнього пристрою.</span><br><em>Приклад: Скласти два числа швидше, ніж завантажити файл із мережі.</em></li></ul></div>
+      <div class="related"><b>🔗 Пов'язано з:</b> бінарний рахунок · ОС · алгоритми · мережі</div>
+      
+      <div class="exam-expansion">
+        <h3>🎯 Екзаменаційне спорядження</h3>
+        <div class="role-card"><b>Професійна прив'язка:</b> System programmer, DevOps/SRE, backend engineer, performance analyst.</div>
+        <div class="exp-grid">
+          <div class="exp-card"><h4>🎯 Що реально питають</h4><ul><li>CPU виконує інструкції, RAM тримає активні дані, disk зберігає довго, cache прискорює доступ.</li><li>Interrupt - сигнал процесору обробити подію; driver - програмний посередник між ОС і пристроєм.</li><li>I/O часто стає bottleneck, бо доступ до диска/мережі повільніший за обчислення в CPU.</li></ul></div>
+          <div class="exp-card"><h4>Пастки: де ловлять</h4><ul><li>RAM не є постійним сховищем.</li><li>Cache у CPU - не те саме, що browser cache, хоча ідея “швидке тимчасове зберігання” спільна.</li><li>Більше ядер не завжди дає прискорення, якщо задача не паралелізується.</li></ul></div>
+        </div>
+        <div class="drill-card"><b>Міні-дріл:</b> Уяви ресторан: CPU - кухар, RAM - робочий стіл, disk - склад, cache - продукти під рукою.</div>
+      </div>
+    </div>
+  </section>
+  <section class="section page-break">
+    <div class="module">
+      <div class="kicker">Блок 05</div>
+      <h2>🗄️ Бази даних і SQL</h2>
+      <div class="goal"><b>Ціль:</b> Навчитися бачити таблиці, ключі, зв'язки, нормалізацію і порядок SQL-запиту.</div>
+      <h3>🧭 Карта пам'яті</h3>
+      <div class="links"><span>entity</span><b>↔</b><span>table</span><b>↔</b><span>key</span><b>↔</b><span>relationship</span><b>↔</b><span>query</span><b>↔</b><span>result</span></div>
+      <div class="callout science"><b>🔬 Науково, але зрозуміло:</b><br>Реляційна база даних зберігає дані в таблицях. Рядок — один запис. Колонка — атрибут. Primary key унікально ідентифікує рядок. Foreign key зв'язує таблиці. SQL описує, який результат потрібен, а СУБД вирішує, як його отримати.</div>
+      <div class="callout life"><b>🏠 Аналогія:</b><br>База даних — це не просто Excel. Це архів із правилами: у кожного документа є номер, посилання не можуть вести в нікуди, а доступ видається ключами.</div>
+      <h3>🧪 Пояснення через приклади</h3>
+      <div class="examples">
+    <div class="example-card">
+      <h4>Моделі даних</h4>
+      <p>Концептуальна модель описує світ словами. Логічна — таблицями і зв'язками. Фізична — як це зберігається в конкретній СУБД.</p>
+      <pre><code>Концептуально: студент записується на курс.
+Логічно: Student, Course, Enrollment.
+Фізично: індекси, типи колонок, storage.</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>Primary / Foreign key</h4>
+      <p>Primary key — паспорт рядка. Foreign key — посилання на паспорт в іншій таблиці.</p>
+      <pre><code>users(id PRIMARY KEY, name)
+orders(id PRIMARY KEY, user_id REFERENCES users(id))</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>WHERE / GROUP BY / HAVING</h4>
+      <p>WHERE фільтрує рядки до групування. GROUP BY збирає групи. HAVING фільтрує групи після агрегатів.</p>
+      <pre><code>SELECT city, SUM(total)
+FROM orders
+WHERE status = 'paid'
+GROUP BY city
+HAVING SUM(total) &gt; 10000;</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>GRANT</h4>
+      <p>GRANT видає права доступу до об'єктів БД.</p>
+      <pre><code>GRANT SELECT ON students TO analyst;</code></pre>
+    </div></div>
+      <div class="callout trap"><b>⚠️ Типові пастки:</b><ul><li><b>GRANT, не ALLOW/PERMISSION.</b><br><span>У SQL ключове слово для надання прав доступу — саме GRANT. Інші слова можуть звучати логічно англійською, але не є оператором стандарту SQL.</span><br><em>Приклад: GRANT SELECT ON students TO analyst;</em></li><li><b>WHERE до GROUP BY, HAVING після GROUP BY.</b><br><span>WHERE працює з окремими рядками. HAVING працює з групами, які вже отримали SUM, COUNT, AVG.</span><br><em>Приклад: WHERE status='paid' фільтрує чеки; HAVING SUM(total)>10000 фільтрує міста після підрахунку.</em></li><li><b>Нормалізація зменшує дублювання й аномалії.</b><br><span>Якщо email клієнта записаний у 100 замовленнях, його треба міняти у 100 місцях. Нормалізація виносить клієнта в окрему таблицю.</span><br><em>Приклад: users(id,email) + orders(user_id,total) краще, ніж дублювати email у кожному order.</em></li><li><b>ER-model — сутності, атрибути, зв'язки.</b><br><span>ER ще не про фізичні індекси або конкретне зберігання. Це схема предметної області.</span><br><em>Приклад: Student має name; Course має title; Student enrolls in Course.</em></li></ul></div>
+      <div class="related"><b>🔗 Пов'язано з:</b> OLTP/OLAP · кібербезпека · data science</div>
+      
+      <div class="exam-expansion">
+        <h3>🎯 Екзаменаційне спорядження</h3>
+        <div class="role-card"><b>Професійна прив'язка:</b> Data engineer, backend developer, database administrator, analyst.</div>
+        <div class="exp-grid">
+          <div class="exp-card"><h4>🎯 Що реально питають</h4><ul><li>Концептуальна модель описує сутності бізнесу; логічна - таблиці й зв'язки; фізична - реалізацію в СУБД.</li><li>Primary key унікально визначає рядок; foreign key посилається на ключ іншої таблиці.</li><li>WHERE фільтрує рядки до групування, HAVING фільтрує групи після GROUP BY.</li></ul></div>
+          <div class="exp-card"><h4>Пастки: де ловлять</h4><ul><li>GRANT - команда надання прав, REVOKE - відкликання.</li><li>ER-model не є нормалізацією; ER показує сутності/зв'язки, нормалізація прибирає дублювання.</li><li>JOIN без умови може створити декартів добуток і різко збільшити кількість рядків.</li></ul></div>
+        </div>
+        <div class="drill-card"><b>Міні-дріл:</b> Тримай схему: SELECT columns → FROM table → JOIN → WHERE → GROUP BY → HAVING → ORDER BY.</div>
+      </div>
+    </div>
+  </section>
+  <section class="section page-break">
+    <div class="module">
+      <div class="kicker">Блок 06</div>
+      <h2>🏗️ OLTP, OLAP, Data Warehouse</h2>
+      <div class="goal"><b>Ціль:</b> Зрозуміти різницю між системою щоденних операцій і системою аналітики.</div>
+      <h3>🧭 Карта пам'яті</h3>
+      <div class="links"><span>OLTP</span><b>↔</b><span>ETL/ELT</span><b>↔</b><span>Warehouse</span><b>↔</b><span>Mart</span><b>↔</b><span>OLAP</span><b>↔</b><span>Report</span></div>
+      <div class="callout science"><b>🔬 Науково, але зрозуміло:</b><br>OLTP оптимізований для транзакцій: швидких, точних змін невеликих порцій даних. OLAP оптимізований для аналізу великих історичних даних, агрегатів і багатовимірних зрізів.</div>
+      <div class="callout life"><b>🏠 Аналогія:</b><br>OLTP — каса супермаркету, яка пробиває кожен чек. OLAP — кабінет аналітика, де дивляться продажі за містами, роками, категоріями.</div>
+      <h3>🧪 Пояснення через приклади</h3>
+      <div class="examples">
+    <div class="example-card">
+      <h4>OLTP</h4>
+      <p>Багато INSERT/UPDATE, важлива цілісність кожної операції.</p>
+      <pre><code>INSERT INTO orders(user_id, total)
+VALUES (42, 250);</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>OLAP</h4>
+      <p>Багато SELECT з GROUP BY, SUM, AVG, зрізами за вимірами.</p>
+      <pre><code>SELECT region, year, SUM(total)
+FROM sales
+GROUP BY region, year;</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>Dimensions / Measures</h4>
+      <p>Dimensions — за чим дивимось: дата, місто, товар. Measures — що рахуємо: сума, кількість, середнє.</p>
+      <pre><code>dimensions: date, region, product
+measures: revenue, quantity</code></pre>
+    </div></div>
+      <div class="callout trap"><b>⚠️ Типові пастки:</b><ul><li><b>OLTP не для великих аналітичних зрізів.</b><br><span>OLTP оптимізований для швидких змін маленьких порцій даних, а не для важких історичних агрегатів.</span><br><em>Приклад: Записати оплату зараз → OLTP; продажі за 3 роки по регіонах → OLAP.</em></li><li><b>OLAP не для щосекундних транзакцій каси.</b><br><span>OLAP читає й агрегує багато даних. Для постійних INSERT/UPDATE потрібна транзакційна система.</span><br><em>Приклад: Каса супермаркету не має чекати, поки аналітичний cube перерахує звіт.</em></li><li><b>Data Mart — тематичний шматок Data Warehouse.</b><br><span>Warehouse збирає широку картину, а mart робиться для конкретної команди або предметної області.</span><br><em>Приклад: Загальне сховище університету → mart для вступної кампанії.</em></li><li><b>Cube має dimensions і measures.</b><br><span>Dimensions відповідають на “за чим розрізаємо?”, measures — “що рахуємо?”.</span><br><em>Приклад: region/year/product — dimensions; revenue/count — measures.</em></li></ul></div>
+      <div class="related"><b>🔗 Пов'язано з:</b> SQL · data science · звітність</div>
+      
+      <div class="exam-expansion">
+        <h3>🎯 Екзаменаційне спорядження</h3>
+        <div class="role-card"><b>Професійна прив'язка:</b> Data engineer, BI analyst, analytics engineer, warehouse developer.</div>
+        <div class="exp-grid">
+          <div class="exp-card"><h4>🎯 Що реально питають</h4><ul><li>OLTP - транзакції: швидко записати/оновити конкретні записи.</li><li>OLAP - аналітика: швидко читати агрегати, зрізи, trends.</li><li>Data Warehouse збирає очищені історичні дані з різних джерел; Data Mart - тематична частина.</li></ul></div>
+          <div class="exp-card"><h4>Пастки: де ловлять</h4><ul><li>Каса магазину - OLTP, звіт продажів за рік - OLAP.</li><li>ETL/ELT не є самим сховищем; це процес переміщення й трансформації даних.</li><li>Dimension відповідає “за чим розрізати”, measure - “що міряти”.</li></ul></div>
+        </div>
+        <div class="drill-card"><b>Міні-дріл:</b> Питання “багато користувачів одночасно змінюють записи” → OLTP. “аналітичний куб/звіт” → OLAP.</div>
+      </div>
+    </div>
+  </section>
+  <section class="section page-break">
+    <div class="module">
+      <div class="kicker">Блок 06B</div>
+      <h2>📐 Математика в IT: функції, графіки, логарифми, експонента</h2>
+      <div class="goal"><b>Ціль:</b> Додати графіки й математичні форми, які допомагають у Big-O, ML, ТЗНК і задачах з функціями.</div>
+      <h3>🧭 Карта пам'яті</h3>
+      <div class="links"><span>linear</span><b>↔</b><span>quadratic</span><b>↔</b><span>hyperbola</span><b>↔</b><span>exponential</span><b>↔</b><span>logarithm</span><b>↔</b><span>parabola</span></div>
+      <div class="callout science"><b>🔬 Науково, але зрозуміло:</b><br>Функція описує залежність y від x. Лінійна росте рівномірно. Квадратична дає параболу. Обернена пропорційність має форму гіперболи. Експонента росте дуже швидко. Логарифм росте повільно і є оберненою ідеєю до експоненти.</div>
+      <div class="callout life"><b>🏠 Аналогія:</b><br>Лінійна — щодня додавати по 10 грн. Експонента — щодня подвоювати гроші. Логарифм — скільки разів треба подвоїти, щоб дійти до числа.</div>
+      <h3>🧪 Пояснення через приклади</h3>
+      <div class="examples">
+    <div class="example-card">
+      <h4>Лінійна функція</h4>
+      <p>y = kx + b. Графік — пряма. У Big-O це схоже на O(n).</p>
+      <pre><code>x: 1 2 3 4
+y: 2 4 6 8
+кожен крок додає однаково</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>Парабола</h4>
+      <p>y = x². Росте швидше за лінійну. У задачах це часто асоціація з вкладеними циклами O(n²).</p>
+      <pre><code>x: 1 2 3 4
+y: 1 4 9 16
+форма: U-подібна парабола</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>Гіпербола / обернена пропорційність</h4>
+      <p>y = 1/x. Коли x росте, y зменшується. Часто питають як форму графіка або залежність швидкості/часу.</p>
+      <pre><code>x: 1 2 4 10
+y: 1 0.5 0.25 0.1</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>Експонента і логарифм</h4>
+      <p>2^x росте дуже швидко. log₂(n) відповідає на питання: скільки разів поділити/подвоїти.</p>
+      <pre><code>2^5 = 32
+log₂(32) = 5
+binary search ≈ log₂(n) кроків</code></pre>
+    </div></div>
+      <div class="callout trap"><b>⚠️ Типові пастки:</b><ul><li><b>Експонента ≠ парабола.</b><br><span>x² росте квадратично, а 2^x множиться на 2 при кожному кроці. Експонента швидше виривається вгору.</span><br><em>Приклад: при x=10: x²=100, 2^x=1024.</em></li><li><b>log n росте повільно.</b><br><span>Логарифм рахує кількість поділів/подвоєнь, тому навіть для великого n число кроків невелике.</span><br><em>Приклад: log₂(1024)=10.</em></li><li><b>1/x зменшується, коли x росте.</b><br><span>Ділимо 1 на все більше число, тому результат стає меншим.</span><br><em>Приклад: 1/2=0.5, 1/10=0.1.</em></li></ul></div>
+      <div class="related"><b>🔗 Пов'язано з:</b> Big-O · binary search · ML · ТЗНК</div>
+      
+      <div class="exam-expansion">
+        <h3>🎯 Екзаменаційне спорядження</h3>
+        <div class="role-card"><b>Професійна прив'язка:</b> Data scientist, ML engineer, data analyst, algorithm engineer.</div>
+        <div class="exp-grid">
+          <div class="exp-card"><h4>🎯 Що реально питають</h4><ul><li>Лінійна функція росте рівномірно, квадратична утворює параболу, експонента росте дуже швидко.</li><li>log n росте повільно; тому binary search O(log n) значно кращий за лінійний пошук на великих n.</li><li>1/x - гіпербола; при зростанні x значення зменшується і наближається до нуля.</li></ul></div>
+          <div class="exp-card"><h4>Пастки: де ловлять</h4><ul><li>Експонента 2^n і квадрат n^2 - не одне й те саме.</li><li>Парабола має форму U або перевернуту U, а не S-curve.</li><li>Відсоткова зміна від нової бази не скасовує попередню зміну автоматично.</li></ul></div>
+        </div>
+        <div class="drill-card"><b>Міні-дріл:</b> Запам'ятати порядок росту: log n < n < n log n < n² < 2^n < n!.</div>
+      </div>
+    </div>
+  </section>
+  <section class="section page-break">
+    <div class="module">
+      <div class="kicker">Блок 07</div>
+      <h2>🔐 Кібербезпека і криптографія</h2>
+      <div class="goal"><b>Ціль:</b> Розвести поняття, які в тестах виглядають схоже: hash, encryption, signature, authentication, authorization, TLS, IPsec.</div>
+      <h3>🧭 Карта пам'яті</h3>
+      <div class="links"><span>CIA</span><b>↔</b><span>hash</span><b>↔</b><span>encryption</span><b>↔</b><span>signature</span><b>↔</b><span>TLS</span><b>↔</b><span>access</span></div>
+      <div class="callout science"><b>🔬 Науково, але зрозуміло:</b><br>Криптографія дає різні механізми для різних задач. Hash перевіряє цілісність. Encryption приховує зміст. Digital signature підтверджує автора і незмінність. Authentication встановлює особу, authorization визначає права.</div>
+      <div class="callout life"><b>🏠 Аналогія:</b><br>Hash — відбиток пальця файлу. Encryption — сейф із ключем. Digital signature — підпис і печатка. Authorization — список кімнат, куди дозволено заходити.</div>
+      <h3>🧪 Пояснення через приклади</h3>
+      <div class="examples">
+    <div class="example-card">
+      <h4>Hash</h4>
+      <p>Hash односторонній. Його не розшифровують назад. Його використовують для перевірки, чи змінилися дані.</p>
+      <pre><code>hash('hello') → 2cf24d...
+hash('Hello') → 185f8d...
+маленька зміна → інший відбиток</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>Encryption</h4>
+      <p>Шифрування має зворотну операцію з ключем: encrypt/decrypt.</p>
+      <pre><code>cipher = encrypt(message, key)
+plain = decrypt(cipher, key)</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>Українські алгоритми</h4>
+      <p>Купина — hash-функція. Калина, Струмок, AES/Rijndael — шифри.</p>
+      <pre><code>Питання: який алгоритм є криптографічною hash-функцією?
+Відповідь: Купина.</code></pre>
+    </div></div>
+      <div class="callout trap"><b>⚠️ Типові пастки:</b><ul><li><b>Hash не розшифровують.</b><br><span>Hash — односторонній відбиток. Його задача не приховати повідомлення для подальшого відкриття, а перевірити збіг/цілісність.</span><br><em>Приклад: Пароль часто порівнюють через hash: вводиш пароль → hash → порівняння збереженого hash.</em></li><li><b>Купина — hash.</b><br><span>У питанні про українські криптоалгоритми варіанти можуть бути всі знайомі, але ролі різні: Купина — hash, Калина/Струмок — шифри.</span><br><em>Приклад: “Який є криптографічною hash-функцією?” → Купина.</em></li><li><b>AES/Rijndael — шифр.</b><br><span>AES приховує зміст і має операцію decrypt із ключем. Це відрізняє його від hash.</span><br><em>Приклад: encrypt(message,key) → cipher; decrypt(cipher,key) → message.</em></li><li><b>Authentication ≠ Authorization.</b><br><span>Authentication встановлює особу. Authorization перевіряє дозволи цієї особи.</span><br><em>Приклад: Паспорт на вході — authentication; чи можна в архів — authorization.</em></li><li><b>HTTPS = HTTP поверх TLS.</b><br><span>HTTP описує веб-запит/відповідь. TLS додає захищений канал, сертифікати й шифрування транспорту.</span><br><em>Приклад: https://bank.com означає, що HTTP-обмін іде через TLS.</em></li></ul></div>
+      <div class="related"><b>🔗 Пов'язано з:</b> мережі · SQL GRANT · операційні системи</div>
+      
+      <div class="exam-expansion">
+        <h3>🎯 Екзаменаційне спорядження</h3>
+        <div class="role-card"><b>Професійна прив'язка:</b> Cybersecurity analyst, backend developer, DevOps/SRE, DBA.</div>
+        <div class="exp-grid">
+          <div class="exp-card"><h4>🎯 Що реально питають</h4><ul><li>Hash є одностороннім відбитком; encryption можна розшифрувати ключем.</li><li>Authentication перевіряє “хто ти”, authorization - “що тобі дозволено”.</li><li>TLS/HTTPS захищає канал, але не робить сам сайт автоматично безпечним від усіх атак.</li></ul></div>
+          <div class="exp-card"><h4>Пастки: де ловлять</h4><ul><li>Купина - hash function; Kalyna і AES/Rijndael - block ciphers.</li><li>Encoding не є encryption: Base64 легко декодується без секрету.</li><li>Password hashing має використовувати salt і повільні алгоритми, а не просто швидкий hash.</li></ul></div>
+        </div>
+        <div class="drill-card"><b>Міні-дріл:</b> Пара: login=password → authentication. Role admin/user → authorization. SHA/Kupyna → hash. AES/Kalyna → encryption.</div>
+      </div>
+    </div>
+  </section>
+  <section class="section page-break">
+    <div class="module">
+      <div class="kicker">Блок 08</div>
+      <h2>🌐 Мережі і операційні системи</h2>
+      <div class="goal"><b>Ціль:</b> Знати ролі протоколів і компонентів ОС: DNS, DHCP, TCP/UDP, HTTP/HTTPS, процес, потік, файлова система, driver.</div>
+      <h3>🧭 Карта пам'яті</h3>
+      <div class="links"><span>device</span><b>↔</b><span>OS</span><b>↔</b><span>network</span><b>↔</b><span>protocol</span><b>↔</b><span>server</span><b>↔</b><span>response</span></div>
+      <div class="callout science"><b>🔬 Науково, але зрозуміло:</b><br>Мережа працює шарами: адресація, транспорт, прикладні протоколи, захист. Операційна система керує ресурсами: процесорним часом, пам'яттю, файлами, пристроями.</div>
+      <div class="callout life"><b>🏠 Аналогія:</b><br>Відкрити сайт — це як відправити лист: DNS знаходить адресу, TCP домовляється про доставку, TLS запечатує конверт, HTTP формулює прохання.</div>
+      <h3>🧪 Пояснення через приклади</h3>
+      <div class="examples">
+    <div class="example-card">
+      <h4>DNS / DHCP</h4>
+      <p>DNS перетворює домен на IP. DHCP видає IP-адресу пристрою в мережі.</p>
+      <pre><code>DNS: example.com → 93.184.216.34
+DHCP: laptop отримав 192.168.1.20</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>TCP / UDP</h4>
+      <p>TCP надійний і стежить за доставкою. UDP швидший, але без гарантій.</p>
+      <pre><code>TCP: web, files, email
+UDP: video call, games, DNS query</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>Process / Thread</h4>
+      <p>Process — запущена програма. Thread — лінія виконання всередині процесу.</p>
+      <pre><code>Browser process:
+  UI thread
+  network thread
+  rendering thread</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>Driver</h4>
+      <p>Driver — програмний посередник між ОС і пристроєм.</p>
+      <pre><code>app → OS API → driver → printer</code></pre>
+    </div></div>
+      <div class="callout trap"><b>⚠️ Типові пастки:</b><ul><li><b>DNS ≠ DHCP.</b><br><span>DNS відповідає на питання “який IP у цього доменного імені?”. DHCP відповідає на питання “яку IP-адресу видати цьому пристрою?”.</span><br><em>Приклад: example.com → 93.184.216.34 це DNS; laptop отримав 192.168.1.20 це DHCP.</em></li><li><b>HTTP ≠ HTTPS.</b><br><span>HTTP — протокол запиту сторінок. HTTPS — той самий HTTP, але переданий через захищений TLS-канал.</span><br><em>Приклад: HTTP як листівка; HTTPS як лист у запечатаному конверті.</em></li><li><b>TCP надійніший, UDP швидший без гарантій.</b><br><span>TCP контролює доставку, порядок і повторну передачу. UDP просто надсилає датаграми без такого контролю.</span><br><em>Приклад: Файл краще TCP; відеодзвінок часто UDP, бо важливіша швидкість.</em></li><li><b>Process ≠ Thread.</b><br><span>Process має власний простір ресурсів. Thread — потік виконання всередині процесу, який може ділити пам'ять з іншими потоками процесу.</span><br><em>Приклад: Browser process може мати UI thread, network thread, render thread.</em></li><li><b>Driver ≠ пристрій.</b><br><span>Пристрій — hardware. Driver — програма-посередник, через яку ОС розмовляє з hardware.</span><br><em>Приклад: Printer — пристрій; printer driver — код, що пояснює ОС, як друкувати.</em></li></ul></div>
+      <div class="related"><b>🔗 Пов'язано з:</b> бінарний рахунок · кібербезпека · файли</div>
+      
+      <div class="exam-expansion">
+        <h3>🎯 Екзаменаційне спорядження</h3>
+        <div class="role-card"><b>Професійна прив'язка:</b> Sysadmin, DevOps, SRE, backend engineer, network engineer.</div>
+        <div class="exp-grid">
+          <div class="exp-card"><h4>🎯 Що реально питають</h4><ul><li>DNS перетворює домен на IP; DHCP видає IP-конфігурацію; ARP шукає MAC за IP у LAN.</li><li>TCP дає надійність і порядок, UDP дає меншу затримку без гарантій доставки.</li><li>Process має власну пам'ять, thread ділить пам'ять процесу; deadlock - взаємне очікування ресурсів.</li></ul></div>
+          <div class="exp-card"><h4>Пастки: де ловлять</h4><ul><li>HTTP 404 - ресурс не знайдено, 403 - заборонено, 500 - помилка сервера.</li><li>Port не дорівнює IP: IP знаходить хост, port знаходить сервіс на хості.</li><li>Firewall фільтрує трафік, але не замінює authentication.</li></ul></div>
+        </div>
+        <div class="drill-card"><b>Міні-дріл:</b> Схема: browser → DNS → IP → TCP/TLS → HTTP request → server → HTTP response.</div>
+      </div>
+    </div>
+  </section>
+  <section class="section page-break">
+    <div class="module">
+      <div class="kicker">Блок 08B</div>
+      <h2>🌐 Мережі поглиблено: packets, switch/router, sysadmin/devops база</h2>
+      <div class="goal"><b>Ціль:</b> Закрити мережеві й sysadmin/devops пастки: пакет/кадр, switch/router, ARP/NAT, ports/status codes, SSH, firewall, CI/CD, container, load balancer.</div>
+      <h3>🧭 Карта пам'яті</h3>
+      <div class="links"><span>frame</span><b>↔</b><span>packet</span><b>↔</b><span>switch</span><b>↔</b><span>router</span><b>↔</b><span>port</span><b>↔</b><span>firewall</span><b>↔</b><span>deploy</span></div>
+      <div class="callout science"><b>🔬 Науково, але зрозуміло:</b><br>Дані в мережі передаються шарами. На канальному рівні Ethernet-кадр працює з MAC-адресами. На мережевому рівні IP-пакет працює з IP-адресами. Switch зазвичай пересилає кадри в LAN, router пересилає пакети між мережами. DevOps-база додає автоматизацію доставки: build, test, deploy, monitoring.</div>
+      <div class="callout life"><b>🏠 Аналогія:</b><br>Switch — диспетчер усередині офісу: знає, до якого столу нести лист за MAC. Router — поштове відділення між містами: вирішує, в яку мережу відправити пакет за IP. Load balancer — адміністратор черги, що розподіляє людей між віконцями.</div>
+      <h3>🧪 Пояснення через приклади</h3>
+      <div class="examples">
+    <div class="example-card">
+      <h4>Frame vs Packet</h4>
+      <p>Frame живе на L2 і має MAC-адреси. Packet живе на L3 і має IP-адреси. У тесті це часто плутають.</p>
+      <pre><code>Ethernet frame: src MAC, dst MAC, payload
+IP packet: src IP, dst IP, payload
+Switch дивиться MAC; router дивиться IP.</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>Switch vs Router</h4>
+      <p>Switch працює всередині локальної мережі, router з'єднує різні мережі.</p>
+      <pre><code>Laptop A -&gt; switch -&gt; Laptop B у тій самій LAN
+LAN 192.168.1.0/24 -&gt; router -&gt; Internet</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>ARP, NAT, ports</h4>
+      <p>ARP знаходить MAC за IP у LAN. NAT перетворює приватні адреси на публічну. Port показує конкретну службу на хості.</p>
+      <pre><code>ARP: 192.168.1.5 -&gt; AA:BB:CC...
+NAT: 192.168.1.5 -&gt; 203.0.113.10
+HTTPS port: 443</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>Sysadmin/DevOps мінімум</h4>
+      <p>SSH — захищений доступ до сервера. Firewall фільтрує трафік. CI/CD автоматично збирає, тестує і доставляє зміни. Container пакує застосунок із залежностями.</p>
+      <pre><code>git push -&gt; CI build -&gt; tests -&gt; container image -&gt; deploy
+load balancer -&gt; server A / server B</code></pre>
+    </div></div>
+      <div class="callout trap"><b>⚠️ Типові пастки:</b><ul><li><b>Switch ≠ Router.</b><br><span>Switch зазвичай працює з MAC у межах LAN. Router працює з IP і маршрутами між мережами.</span><br><em>Приклад: Питання про MAC table → switch; питання про default gateway → router.</em></li><li><b>Packet ≠ Frame.</b><br><span>Frame — нижчий рівень передачі в локальній мережі. Packet — IP-рівень між мережами.</span><br><em>Приклад: Ethernet frame містить MAC; IP packet містить IP.</em></li><li><b>Port ≠ IP.</b><br><span>IP знаходить хост, port знаходить службу всередині хоста.</span><br><em>Приклад: 192.168.1.10:443 — хост 192.168.1.10, служба HTTPS.</em></li><li><b>CI/CD ≠ container.</b><br><span>CI/CD — процес автоматизації. Container — артефакт/середовище, яке може бути результатом build.</span><br><em>Приклад: Pipeline будує Docker image і деплоїть його.</em></li></ul></div>
+      <div class="related"><b>🔗 Пов'язано з:</b> мережі · операційні системи · кібербезпека · deployment</div>
+      
+      <div class="exam-expansion">
+        <h3>🎯 Екзаменаційне спорядження</h3>
+        <div class="role-card"><b>Професійна прив'язка:</b> Network engineer, sysadmin, DevOps/SRE, platform engineer.</div>
+        <div class="exp-grid">
+          <div class="exp-card"><h4>🎯 Що реально питають</h4><ul><li>Frame - канальний рівень і MAC; packet - мережевий рівень і IP.</li><li>Switch з'єднує пристрої в LAN за MAC; router з'єднує мережі за IP.</li><li>CI/CD автоматизує build-test-deploy; container пакує застосунок із залежностями; load balancer розподіляє трафік.</li></ul></div>
+          <div class="exp-card"><h4>Пастки: де ловлять</h4><ul><li>Docker/container - не віртуальна машина в повному сенсі.</li><li>Load balancer не виправляє помилки коду, він розподіляє запити.</li><li>SSH - безпечний remote shell, не протокол для вебсторінок.</li></ul></div>
+        </div>
+        <div class="drill-card"><b>Міні-дріл:</b> Питання про локальну доставку → switch/MAC/frame. Про міжмережеву доставку → router/IP/packet.</div>
+      </div>
+    </div>
+  </section>
+  <section class="section page-break">
+    <div class="module">
+      <div class="kicker">Блок 08C</div>
+      <h2>🧱 OSI/TCP-IP рівні: де frame, packet, port і HTTP</h2>
+      <div class="goal"><b>Ціль:</b> Навчитися не плутати рівні мережі: фізичний сигнал, кадр, IP-пакет, TCP/UDP-сегмент, порт і прикладний протокол.</div>
+      <h3>🧭 Карта пам'яті</h3>
+      <div class="links"><span>physical</span><b>↔</b><span>data link</span><b>↔</b><span>network</span><b>↔</b><span>transport</span><b>↔</b><span>application</span></div>
+      <div class="callout science"><b>🔬 Науково, але зрозуміло:</b><br>OSI-модель розкладає мережеву передачу на шари. На нижчих рівнях іде фізична передача сигналу й кадри Ethernet, на мережевому рівні працює IP-пакет, на транспортному - TCP або UDP з портами, на прикладному - HTTP, DNS, SMTP, SSH. У тестах часто питають не всю модель, а конкретне місце терміна в цій драбині.</div>
+      <div class="callout life"><b>🏠 Аналогія:</b><br>Лист іде шарами: папір і конверт - фізичний/канальний рівень, адреса міста - IP, номер кабінету - port, зміст листа - application protocol. Якщо переплутати місто й кабінет, лист не дійде.</div>
+      <h3>🧪 Пояснення через приклади</h3>
+      <div class="examples">
+    <div class="example-card">
+      <h4>Frame vs packet vs segment</h4>
+      <p>Frame живе на канальному рівні й містить MAC-адреси. Packet живе на мережевому рівні й містить IP-адреси. TCP/UDP segment/datagram живе на транспортному рівні й працює з портами.</p>
+      <pre><code>Ethernet frame: src MAC -&gt; dst MAC
+IP packet: src IP -&gt; dst IP
+TCP segment: src port -&gt; dst port
+HTTP: GET /page</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>Де який пристрій</h4>
+      <p>Hub працює дуже низько й просто ретранслює сигнал. Switch дивиться на MAC. Router дивиться на IP. Firewall може фільтрувати за IP, port, protocol, rules.</p>
+      <pre><code>MAC? -&gt; switch
+IP route? -&gt; router
+port 443 allowed? -&gt; firewall
+GET /api? -&gt; application/server</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>TCP/IP практично</h4>
+      <p>У реальному інтернеті частіше говорять TCP/IP stack: link, internet, transport, application. Це коротша практична модель, але ідея шарів та сама.</p>
+      <pre><code>Link: Ethernet/Wi-Fi
+Internet: IP
+Transport: TCP/UDP
+Application: HTTP/DNS/SSH</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>Питання-пастка</h4>
+      <p>Якщо питають про URL, HTTP, DNS name - це application. Якщо питають про IP - network. Якщо питають про port - transport. Якщо питають про MAC - data link.</p>
+      <pre><code>URL -&gt; application
+IP -&gt; network
+port -&gt; transport
+MAC -&gt; data link</code></pre>
+    </div></div>
+      <div class="callout trap"><b>⚠️ Типові пастки:</b><ul><li><b>Port не є адресою комп'ютера.</b><br><span>IP знаходить машину або мережевий інтерфейс, port знаходить процес/сервіс на цій машині.</span><br><em>Приклад: 192.168.1.10:5432 = IP хоста + порт PostgreSQL.</em></li><li><b>HTTP не працює “замість TCP”.</b><br><span>HTTP сидить вище, а TCP зазвичай переносить HTTP-запити на транспортному рівні.</span><br><em>Приклад: HTTPS = HTTP поверх TLS поверх TCP.</em></li><li><b>Switch і router можуть бути в одному фізичному пристрої, але ролі різні.</b><br><span>Домашній Wi-Fi роутер часто має switch-порти, NAT, firewall і access point в одному корпусі.</span><br><em>Приклад: У тесті дивись не на коробку, а на функцію: MAC чи IP?</em></li></ul></div>
+      <div class="related"><b>🔗 Пов'язано з:</b> мережі · кібербезпека · sysadmin/devops · HTTP/DNS/SSH</div>
+      
+      <div class="exam-expansion">
+        <h3>🎯 Екзаменаційне спорядження</h3>
+        <div class="role-card"><b>Професійна прив'язка:</b> Network engineer, DevOps/SRE, backend developer, cybersecurity analyst.</div>
+        <div class="exp-grid">
+          <div class="exp-card"><h4>🎯 Що реально питають</h4><ul><li>Знати, де живуть MAC, IP, port, HTTP, DNS, SSH.</li><li>Розуміти різницю між OSI-моделлю і практичним TCP/IP stack.</li><li>Уміти пояснити, чому frame, packet і segment/datagram не синоніми.</li></ul></div>
+          <div class="exp-card"><h4>Пастки: де ловлять</h4><ul><li>MAC не маршрутизується через інтернет як IP.</li><li>Port 443 не означає HTTPS завжди, але типово асоціюється з HTTPS.</li><li>Firewall може працювати на різних рівнях, тому дивись, за чим фільтрує: IP, port, application rule.</li></ul></div>
+        </div>
+        <div class="drill-card"><b>Міні-дріл:</b> Намалюй драбину: MAC -> IP -> port -> HTTP. Кожне мережеве питання став на цю драбину.</div>
+      </div>
+    </div>
+  </section>
+  <section class="section page-break">
+    <div class="module">
+      <div class="kicker">Блок 09</div>
+      <h2>🤖 Data Science / ML</h2>
+      <div class="goal"><b>Ціль:</b> Зрозуміти словник ML на іспитовому рівні: classification, regression, features, target, train/test, overfitting, SVM, PCA.</div>
+      <h3>🧭 Карта пам'яті</h3>
+      <div class="links"><span>data</span><b>↔</b><span>features</span><b>↔</b><span>target</span><b>↔</b><span>model</span><b>↔</b><span>prediction</span><b>↔</b><span>evaluation</span></div>
+      <div class="callout science"><b>🔬 Науково, але зрозуміло:</b><br>Модель машинного навчання шукає закономірність у даних. Classification прогнозує категорію, regression прогнозує число. Overfitting означає, що модель завчила тренувальні дані, але погано узагальнює.</div>
+      <div class="callout life"><b>🏠 Аналогія:</b><br>Модель як студент. Якщо студент вивчив лише конкретні відповіді одного пробника, але не зрозумів тему, на новому варіанті буде провал — це overfitting.</div>
+      <h3>🧪 Пояснення через приклади</h3>
+      <div class="examples">
+    <div class="example-card">
+      <h4>Classification vs Regression</h4>
+      <p>Classification дає клас. Regression дає число.</p>
+      <pre><code>email → spam/not spam  // classification
+flat → predicted price  // regression</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>Features / Target</h4>
+      <p>Features — вхідні ознаки. Target — те, що модель має передбачити.</p>
+      <pre><code>X = [hours_studied, mistakes]
+y = exam_score</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>SVM</h4>
+      <p>SVM шукає гіперплощину, яка розділяє класи з максимальним відступом до найближчих точок.</p>
+      <pre><code>class A   | margin |   class B
+найближчі точки = support vectors</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>PCA</h4>
+      <p>PCA зменшує розмірність: багато ознак стискає до кількох головних компонент.</p>
+      <pre><code>100 features → PCA → 2 components</code></pre>
+    </div></div>
+      <div class="callout trap"><b>⚠️ Типові пастки:</b><ul><li><b>PCA не класифікує, а зменшує розмірність.</b><br><span>PCA не вирішує, до якого класу належить об'єкт. Він перетворює багато ознак на меншу кількість головних компонент.</span><br><em>Приклад: 100 features → 2 components, але клас spam/not spam ще треба прогнозувати іншим методом.</em></li><li><b>SVM не мінімізує support vectors; він максимізує margin.</b><br><span>Support vectors — це найближчі до межі точки, які визначають положення гіперплощини. Мета — провести межу з найбільшим відступом.</span><br><em>Приклад: class A | широкий коридор | class B — це інтуїція SVM.</em></li><li><b>Classification ≠ Regression.</b><br><span>Classification повертає категорію, regression повертає числове значення.</span><br><em>Приклад: “складе/не складе” — classification; “який бал набере” — regression.</em></li><li><b>Overfitting видно, коли train добре, test погано.</b><br><span>Модель запам'ятала навчальні приклади, але не вивчила загальне правило для нових даних.</span><br><em>Приклад: train accuracy 99%, test accuracy 55% — типова ознака overfitting.</em></li></ul></div>
+      <div class="related"><b>🔗 Пов'язано з:</b> алгоритми · статистика · data warehouse</div>
+      
+      <div class="exam-expansion">
+        <h3>🎯 Екзаменаційне спорядження</h3>
+        <div class="role-card"><b>Професійна прив'язка:</b> Data scientist, ML engineer, analyst, AI engineer.</div>
+        <div class="exp-grid">
+          <div class="exp-card"><h4>🎯 Що реально питають</h4><ul><li>Classification прогнозує клас; regression прогнозує число; clustering групує без міток.</li><li>Training set навчає, validation налаштовує, test оцінює фінальну якість.</li><li>SVM шукає гіперплощину з максимальним margin; PCA зменшує розмірність.</li></ul></div>
+          <div class="exp-card"><h4>Пастки: де ловлять</h4><ul><li>Overfitting: train score високий, test score низький.</li><li>Correlation не доводить causation.</li><li>Accuracy не завжди добра метрика при дисбалансі класів.</li></ul></div>
+        </div>
+        <div class="drill-card"><b>Міні-дріл:</b> Email spam/not spam → classification. Ціна квартири → regression. Схожі клієнти без labels → clustering.</div>
+      </div>
+    </div>
+  </section>
+  <section class="section page-break">
+    <div class="module">
+      <div class="kicker">Блок 10</div>
+      <h2>🧠 ТЗНК: комбінаторика, логіка, відсотки</h2>
+      <div class="goal"><b>Ціль:</b> Навчитися розпізнавати: додавати чи множити, порядок важливий чи ні, що точно випливає з умови.</div>
+      <h3>🧭 Карта пам'яті</h3>
+      <div class="links"><span>read</span><b>↔</b><span>or/and</span><b>↔</b><span>order</span><b>↔</b><span>sets</span><b>↔</b><span>percent</span><b>↔</b><span>conclusion</span></div>
+      <div class="callout science"><b>🔬 Науково, але зрозуміло:</b><br>ТЗНК перевіряє операції мислення: формалізацію умови, комбінування варіантів, роботу з множинами, відсоткові зміни, логічні висновки.</div>
+      <div class="callout life"><b>🏠 Аналогія:</b><br>Комбінаторика — це меню. Якщо обираємо каву або чай, додаємо. Якщо обираємо напій і десерт, множимо.</div>
+      <h3>🧪 Пояснення через приклади</h3>
+      <div class="examples">
+    <div class="example-card">
+      <h4>Правило суми</h4>
+      <p>Якщо треба обрати один варіант із кількох груп: або A, або B — додаємо.</p>
+      <pre><code>кава: 3 види
+чай: 2 види
+обрати один напій → 3 + 2 = 5</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>Правило добутку</h4>
+      <p>Якщо треба виконати кілька кроків: A і B — множимо.</p>
+      <pre><code>3 напої і 4 десерти
+набір напій+десерт → 3 * 4 = 12</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>Перестановка vs Комбінація</h4>
+      <p>Якщо ролі різні або порядок важливий — перестановка. Якщо просто група без порядку — комбінація.</p>
+      <pre><code>голова і секретар з 5 людей: 5*4=20
+команда з 2 людей: 5*4/2=10</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>Відсотки</h4>
+      <p>Кожен відсоток рахується від поточної бази.</p>
+      <pre><code>100 +20% = 120
+120 -20% = 96
+не 100</code></pre>
+    </div></div>
+      <div class="callout trap"><b>⚠️ Типові пастки:</b><ul><li><b>АБО часто означає додавання.</b><br><span>Якщо вибір взаємовиключний — береться один варіант із групи A або один із групи B. Такі кількості додаються.</span><br><em>Приклад: 3 види кави або 2 види чаю → 3+2=5 напоїв.</em></li><li><b>І / пара / послідовність часто означає множення.</b><br><span>Якщо треба зробити кілька незалежних кроків, кожен варіант першого кроку поєднується з кожним варіантом другого.</span><br><em>Приклад: 3 напої і 4 десерти → 3*4=12 наборів.</em></li><li><b>Must be true — не додумувати.</b><br><span>У таких задачах правильне тільки те, що обов'язково випливає з умови. Життєві припущення можуть бути правдоподібні, але не доведені.</span><br><em>Приклад: Якщо A>B і B>C, то A>C must be true. Але “A найкращий” — уже домисел.</em></li><li><b>Відсотки рахуються від нової бази.</b><br><span>Після першої зміни початкове число вже інше, тому друга зміна застосовується до нового значення.</span><br><em>Приклад: 100 +20% = 120; 120 -20% = 96.</em></li></ul></div>
+      <div class="related"><b>🔗 Пов'язано з:</b> алгоритми · binary · reading logic</div>
+      
+      <div class="exam-expansion">
+        <h3>🎯 Екзаменаційне спорядження</h3>
+        <div class="role-card"><b>Професійна прив'язка:</b> Будь-яка роль, де треба швидко мислити: analyst, developer, manager.</div>
+        <div class="exp-grid">
+          <div class="exp-card"><h4>🎯 Що реально питають</h4><ul><li>Правило суми: або один сценарій, або інший, сценарії не перетинаються.</li><li>Правило добутку: послідовні незалежні вибори або кілька кроків.</li><li>Відсотки треба рахувати від актуальної бази, а не від початкової, якщо база змінилася.</li></ul></div>
+          <div class="exp-card"><h4>Пастки: де ловлять</h4><ul><li>“Будь-який з цих” часто означає суму, а “пара/послідовність” - добуток.</li><li>Якщо порядок важливий - перестановки/розміщення; якщо ні - комбінації.</li><li>Must be true означає тільки те, що гарантовано випливає з умови.</li></ul></div>
+        </div>
+        <div class="drill-card"><b>Міні-дріл:</b> Став питання: вибір один чи кілька кроків? порядок важливий? повторення дозволені? є обмеження?</div>
+      </div>
+    </div>
+  </section>
+  <section class="section page-break">
+    <div class="module">
+      <div class="kicker">Блок 10B</div>
+      <h2>🧩 ТЗНК поглиблено: перестановки, комбінації, пропуски, обмеження</h2>
+      <div class="goal"><b>Ціль:</b> Навчитися розрізняти хитрі комбінаторні формулювання: порядок важливий/неважливий, є пропуски, є заборони, є повторення.</div>
+      <h3>🧭 Карта пам'яті</h3>
+      <div class="links"><span>або</span><b>↔</b><span>і</span><b>↔</b><span>порядок</span><b>↔</b><span>повторення</span><b>↔</b><span>обмеження</span><b>↔</b><span>залишок</span></div>
+      <div class="callout science"><b>🔬 Науково, але зрозуміло:</b><br>Комбінаторика рахує кількість можливих варіантів. Ключові рішення: чи важливий порядок, чи можна повторювати, чи всі місця різні, чи є заборонені варіанти.</div>
+      <div class="callout life"><b>🏠 Аналогія:</b><br>Це як розсадити людей за столом. Якщо місця підписані — порядок важливий. Якщо просто обрати групу людей для команди — порядок неважливий.</div>
+      <h3>🧪 Пояснення через приклади</h3>
+      <div class="examples">
+    <div class="example-card">
+      <h4>Вибір без порядку</h4>
+      <p>Команда з 2 людей із 5: Анна+Богдан те саме, що Богдан+Анна.</p>
+      <pre><code>5*4 / 2 = 10
+ділимо на 2, бо кожна пара порахована двічі</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>Ролі різні</h4>
+      <p>Голова і секретар з 5 людей: Анна голова, Богдан секретар — не те саме, що навпаки.</p>
+      <pre><code>5 варіантів на голову
+4 залишилось на секретаря
+5*4 = 20</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>Є пропуски / недоставлене місце</h4>
+      <p>Якщо частина позицій уже зайнята або деякі варіанти заборонені, спочатку фіксуємо обмеження.</p>
+      <pre><code>3 місця, A вже на першому.
+Залишилось 2 людини на 2 місця:
+2*1 = 2</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>З повторенням</h4>
+      <p>Якщо цифри/літери можна повторювати, кількість варіантів не зменшується після вибору.</p>
+      <pre><code>PIN з 4 цифр, повтори дозволені:
+10*10*10*10 = 10000</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>Без повторення</h4>
+      <p>Якщо повтори заборонені, після кожного вибору варіантів менше.</p>
+      <pre><code>4-значний код з різних цифр:
+10*9*8*7</code></pre>
+    </div></div>
+      <div class="callout trap"><b>⚠️ Типові пастки:</b><ul><li><b>Не завжди треба формула C(n,k).</b><br><span>На тесті часто швидше зрозуміти логіку місць і ролей, ніж згадувати формулу.</span><br><em>Приклад: Голова+секретар: 5*4, бо ролі різні.</em></li><li><b>Якщо порядок неважливий — треба прибрати дублікати.</b><br><span>Пара A,B і B,A — одна команда, але множення рахує її двічі.</span><br><em>Приклад: 5*4/2 для команди з двох.</em></li><li><b>Обмеження рахуються першими.</b><br><span>Якщо хтось уже стоїть на місці або щось заборонено, простір варіантів змінюється.</span><br><em>Приклад: Якщо перша цифра не може бути 0, то для першої позиції 9 варіантів, не 10.</em></li></ul></div>
+      <div class="related"><b>🔗 Пов'язано з:</b> ТЗНК · ймовірність · множини · логіка</div>
+      
+      <div class="exam-expansion">
+        <h3>🎯 Екзаменаційне спорядження</h3>
+        <div class="role-card"><b>Професійна прив'язка:</b> Analyst, algorithmic thinker, product/data roles, exam reasoning.</div>
+        <div class="exp-grid">
+          <div class="exp-card"><h4>🎯 Що реально питають</h4><ul><li>Перестановка - порядок усіх елементів; розміщення - порядок частини; комбінація - вибір без порядку.</li><li>Обмеження краще враховувати першими: зафіксувати місце, виключити заборонені пари, розбити на випадки.</li><li>Euler/Venn diagrams допомагають із множинами, перетинами й “хоча б один”.</li></ul></div>
+          <div class="exp-card"><h4>Пастки: де ловлять</h4><ul><li>Подвійний підрахунок у перетинах множин.</li><li>Фраза “не поруч” часто рахується через complement: усі варіанти мінус поруч.</li><li>Пропущені місця в таблиці/послідовності часто мають два правила: по рядках і по стовпцях.</li></ul></div>
+        </div>
+        <div class="drill-card"><b>Міні-дріл:</b> Якщо “хоча б один” - часто легше рахувати 1 - “жодного”. Якщо “не поруч” - усі - “поруч”.</div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section page-break">
+    <div class="module">
+      <div class="kicker">Блок 10C / дуже повільно і без плутанини</div>
+      <h2>🧠 Комбінаторика: як не плутати додавання, множення, ролі й команди</h2>
+      <div class="goal"><b>Ціль:</b> навчитися не вгадувати формулу, а бачити сценарій. На тесті спершу читаємо умову як маленьку історію: кого вже взяли, кого треба добрати, чи є ролі, чи є заборонені пари.</div>
+
+      <div class="callout science">
+        <b>🔬 Науково, але людською мовою:</b><br>
+        Комбінаторика рахує кількість різних результатів. Два результати різні лише тоді, коли для умови тесту вони справді відрізняються. Якщо Петро-Іван і Іван-Петро виконують одну й ту саму роль “два члени команди”, це один результат. Якщо Петро — голова, а Іван — заступник, то обмін ролями дає інший результат.
+      </div>
+
+      <h3>🧭 Перше дерево рішень</h3>
+      <div class="examples">
+        <div class="example-card">
+          <h4>1. АБО → додавання</h4>
+          <p>Обираємо один шлях із кількох альтернатив. Результат не складається з двох частин.</p>
+          <pre><code>3 перші страви або 6 других
+беремо одну страву
+3 + 6 = 9</code></pre>
+        </div>
+        <div class="example-card">
+          <h4>2. І → множення</h4>
+          <p>Один результат складається з кількох частин. Кожен варіант першої частини поєднується з кожним варіантом другої.</p>
+          <pre><code>5 сиропів і 4 присипки
+кава = сироп + присипка
+5 * 4 = 20</code></pre>
+        </div>
+        <div class="example-card">
+          <h4>3. Є ролі → не ділимо</h4>
+          <p>Голова і заступник — це різні бейджі. Якщо люди помінялися бейджами, результат змінився.</p>
+          <pre><code>8 людей
+голова: 8 варіантів
+заступник: 7 варіантів
+8 * 7 = 56</code></pre>
+        </div>
+        <div class="example-card">
+          <h4>4. Просто група → ділимо</h4>
+          <p>Якщо всі рівноправні, порядок усередині групи не створює новий результат.</p>
+          <pre><code>2 гравці з 10 на перевірку
+10 * 9 = 90 рахує А-Б і Б-А
+90 / 2 = 45</code></pre>
+        </div>
+      </div>
+
+      <h3>🧩 Капітан: два різні типи задач</h3>
+      <div class="examples">
+        <div class="example-card">
+          <h4>Капітан уже відомий і має входити</h4>
+          <p>Капітана не обираємо. Він уже сидить у команді. Треба лише добрати решту.</p>
+          <pre><code>Команда з 3 із 7.
+Капітан уже входить.
+
+1 місце зайняте капітаном.
+Залишилось 2 місця.
+Кандидатів без капітана: 6.
+
+C(6,2) = 6 * 5 / 2 = 15</code></pre>
+        </div>
+        <div class="example-card">
+          <h4>Капітана треба призначити</h4>
+          <p>Тут “капітан” — роль, яку ще треба видати комусь. Роль важлива, тому порядок/призначення важливе.</p>
+          <pre><code>Із 7 людей обрати:
+капітан, спікер, секретар.
+
+капітан: 7
+спікер: 6
+секретар: 5
+
+7 * 6 * 5 = 210</code></pre>
+        </div>
+      </div>
+
+      <div class="callout trap">
+        <b>⚠️ Пастка зі словом “капітан”:</b>
+        <ul>
+          <li><b>“Капітан клубу має входити”</b><span> — капітан уже є конкретною людиною. Його не обираємо, просто фіксуємо всередині.</span><em>Команда з 3 із 7 → добрати 2 із 6.</em></li>
+          <li><b>“Обрати капітана команди”</b><span> — капітан ще не визначений. Це роль, отже вибір ролі рахується множенням.</span><em>Капітан і заступник із 8 → 8*7.</em></li>
+        </ul>
+      </div>
+
+      <h3>🚫 Двоє не можуть бути разом</h3>
+      <div class="examples">
+        <div class="example-card">
+          <h4>Швидкий спосіб: усі мінус погані</h4>
+          <p>Коли заборонено “разом”, часто найпростіше порахувати всі команди й відняти ті, де заборона порушена.</p>
+          <pre><code>Команда з 3 із 7.
+А і Б не можуть бути разом.
+
+Усі команди:
+C(7,3) = 35
+
+Погані команди:
+А і Б уже всередині,
+треба добрати 1 із решти 5:
+C(5,1) = 5
+
+Добрі:
+35 - 5 = 30</code></pre>
+        </div>
+        <div class="example-card">
+          <h4>Повільний спосіб: розбити на випадки</h4>
+          <p>Цей спосіб довший, але добре навчає логіки.</p>
+          <pre><code>Випадок 1: немає ні А, ні Б
+C(5,3) = 10
+
+Випадок 2: є А, немає Б
+C(5,2) = 10
+
+Випадок 3: є Б, немає А
+C(5,2) = 10
+
+Разом:
+10 + 10 + 10 = 30</code></pre>
+        </div>
+      </div>
+
+      <h3>🎯 Рівно один vs хоча б один</h3>
+      <div class="examples">
+        <div class="example-card">
+          <h4>Рівно один із двох</h4>
+          <p>Входить А або Б, але не обидва. Спершу обираємо, хто саме з двох, потім добираємо решту.</p>
+          <pre><code>Команда з 3 із 7.
+Рівно один із А/Б.
+
+хто з двох: 2 способи
+добрати ще 2 із решти 5:
+C(5,2)=10
+
+2 * 10 = 20</code></pre>
+        </div>
+        <div class="example-card">
+          <h4>Хоча б один із двох</h4>
+          <p>Може входити один, а можуть входити обидва. Найлегше: усі мінус жодного.</p>
+          <pre><code>Усі команди:
+C(7,3)=35
+
+Погані: немає ні А, ні Б.
+Тоді обираємо 3 із решти 5:
+C(5,3)=10
+
+35 - 10 = 25</code></pre>
+        </div>
+      </div>
+
+      <div class="callout life">
+        <b>🏠 Аналогія, яку варто тримати:</b><br>
+        Команда без ролей — це “люди в одній кімнаті”: неважливо, хто зайшов першим. Ролі — це “бейджі на грудях”: якщо бейджі поміняли, результат інший. Заборонена пара — це “ці двоє не сидять за одним столом”: або рахуємо всі столи й викидаємо погані, або чесно розписуємо випадки.
+      </div>
+
+      <div class="callout trap">
+        <b>🧪 Міні-дрил перед тестом:</b>
+        <ul>
+          <li><b>Якщо бачиш “або”</b><span> — перевір, чи це альтернативи. Якщо так, додаємо.</span><em>суп або салат → 3+6</em></li>
+          <li><b>Якщо бачиш “і”</b><span> — перевір, чи один результат складається з кількох частин. Якщо так, множимо.</span><em>сироп і присипка → 5*4</em></li>
+          <li><b>Якщо бачиш посади</b><span> — ролі різні, не ділимо.</span><em>голова+заступник → 8*7</em></li>
+          <li><b>Якщо бачиш команду/комісію/пару</b><span> — ролей нема, ділимо на перестановки всередині групи.</span><em>3 з 7 → 7*6*5/(3*2*1)</em></li>
+          <li><b>Якщо є “не разом”</b><span> — часто найшвидше: усі мінус погані.</span><em>C(7,3)-5</em></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section page-break">
+    <div class="module">
+      <div class="kicker">Блок 11</div>
+      <h2>🇬🇧 English: grammar patterns and reading</h2>
+      <div class="goal"><b>Ціль:</b> Не перекладати все дослівно, а впізнавати граматичні шаблони й знаходити доказ у тексті.</div>
+      <h3>🧭 Карта пам'яті</h3>
+      <div class="links"><span>sentence role</span><b>↔</b><span>grammar pattern</span><b>↔</b><span>collocation</span><b>↔</b><span>context</span><b>↔</b><span>evidence</span></div>
+      <div class="callout science"><b>🔬 Науково, але зрозуміло:</b><br>Use of English перевіряє граматичну роль слова і сталі мовні зв'язки. Reading перевіряє, чи можна знайти доказ у тексті і зробити обмежений висновок.</div>
+      <div class="callout life"><b>🏠 Аналогія:</b><br>Англійська в тесті — пазл. Слово має підходити не лише за перекладом, а й за формою, прийменником, часом і роллю в реченні.</div>
+      <h3>🧪 Пояснення через приклади</h3>
+      <div class="examples">
+    <div class="example-card">
+      <h4>Passive voice</h4>
+      <p>Фокус на об'єкті, який отримує дію.</p>
+      <pre><code>Active: The team wrote the report.
+Passive: The report was written by the team.
+pattern: be + V3</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>Conditionals</h4>
+      <p>Third conditional описує нереальну минулу умову.</p>
+      <pre><code>If I had studied, I would have passed.
+if + past perfect, would have + V3</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>Collocations</h4>
+      <p>Деякі слова треба запам'ятовувати парами.</p>
+      <pre><code>depend on
+responsible for
+pay attention to
+interested in</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>Reading inference</h4>
+      <p>Inference — висновок із тексту, а не фантазія.</p>
+      <pre><code>Text: She left without taking her umbrella.
+Careful inference: it probably was not raining at that moment.</code></pre>
+    </div></div>
+      <div class="callout trap"><b>⚠️ Типові пастки:</b><ul><li><b>depend on, не depend from.</b><br><span>Це стала колокація. Її не завжди можна вивести логікою з українського перекладу, треба впізнавати як готову пару.</span><br><em>Приклад: The result depends on data quality.</em></li><li><b>evidence — uncountable.</b><br><span>Uncountable nouns не вживаються з a/an і часто йдуть з little/much/some, а не many/few.</span><br><em>Приклад: There is little evidence, не a little evidences.</em></li><li><b>whose показує possession.</b><br><span>Whose відповідає на “чий/чия/чиє”, а не просто замінює who.</span><br><em>Приклад: The student whose essay won the prize...</em></li><li><b>Inference має мати доказ у passage.</b><br><span>Inference — це логічний висновок з тексту, а не загальна думка або життєвий досвід.</span><br><em>Приклад: Якщо в тексті “she left without umbrella”, можна обережно припустити, що дощу в той момент не було, але не можна вигадувати погоду на весь день.</em></li></ul></div>
+      <div class="related"><b>🔗 Пов'язано з:</b> логіка ТЗНК · читання умов · словник понять</div>
+      
+      <div class="exam-expansion">
+        <h3>🎯 Екзаменаційне спорядження</h3>
+        <div class="role-card"><b>Професійна прив'язка:</b> International IT communication, documentation, reading technical specs.</div>
+        <div class="exp-grid">
+          <div class="exp-card"><h4>🎯 Що реально питають</h4><ul><li>Reading перевіряє main idea, detail, inference, reference, vocabulary in context.</li><li>Use of English перевіряє сталі прийменники, word forms, linkers, conditionals, tenses.</li><li>Правильна відповідь у reading має доказ у тексті, а не просто звучить логічно.</li></ul></div>
+          <div class="exp-card"><h4>Пастки: де ловлять</h4><ul><li>Extreme words типу always/never часто занадто сильні.</li><li>Synonym trap: у відповіді не ті самі слова, але той самий зміст.</li><li>False friend: actual = фактичний, not актуальний; data is plural/uncountable depending context.</li></ul></div>
+        </div>
+        <div class="drill-card"><b>Міні-дріл:</b> У passage підкреслити sentence-evidence. Якщо не можеш показати речення-доказ, відповідь ризикована.</div>
+      </div>
+    </div>
+  </section>
+  <section class="section page-break">
+    <div class="module">
+      <div class="kicker">Блок 11B</div>
+      <h2>🇬🇧 English toolkit: усі базові часи, conditionals, reading markers</h2>
+      <div class="goal"><b>Ціль:</b> Дати компактний, але повний набір граматичних шаблонів, які найчастіше потрібні для Use of English і reading.</div>
+      <h3>🧭 Карта пам'яті</h3>
+      <div class="links"><span>tenses</span><b>↔</b><span>passive</span><b>↔</b><span>conditionals</span><b>↔</b><span>modals</span><b>↔</b><span>collocations</span><b>↔</b><span>reading evidence</span></div>
+      <div class="callout science"><b>🔬 Науково, але зрозуміло:</b><br>Граматика в тесті — це розпізнавання ролі слова в реченні. Часи показують часову рамку, conditionals — тип умови, modals — силу твердження, collocations — сталі поєднання.</div>
+      <div class="callout life"><b>🏠 Аналогія:</b><br>Речення як механізм: час — це коли працює механізм, modal — наскільки дія обов'язкова/можлива, preposition — маленька деталь, без якої механізм не замикається.</div>
+      <h3>🧪 Пояснення через приклади</h3>
+      <div class="examples">
+    <div class="example-card">
+      <h4>12 часів як сітка</h4>
+      <p>Є 3 часові зони: past, present, future. Є 4 аспекти: simple, continuous, perfect, perfect continuous.</p>
+      <pre><code>Present Simple: I study.
+Present Continuous: I am studying.
+Present Perfect: I have studied.
+Present Perfect Continuous: I have been studying.</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>Past / Future patterns</h4>
+      <p>Past Simple — завершена дія в минулому. Future Simple — will + V. Going to — план або очевидний намір.</p>
+      <pre><code>I studied yesterday.
+I will study tomorrow.
+I am going to revise SQL tonight.</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>Conditionals 0/1/2/3</h4>
+      <p>Zero — загальна істина. First — реальна майбутня умова. Second — нереальна теперішня/майбутня. Third — нереальна минула.</p>
+      <pre><code>0: If water boils, it evaporates.
+1: If I study, I will pass.
+2: If I studied more, I would pass.
+3: If I had studied, I would have passed.</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>Reading markers</h4>
+      <p>У reading відповідь часто ховається в маркерах контрасту, причини, наслідку, прикладу.</p>
+      <pre><code>contrast: however, although, whereas
+cause: because, since, due to
+result: therefore, as a result
+example: for instance, such as</code></pre>
+    </div>
+    <div class="example-card">
+      <h4>Корисні фразові зв'язки</h4>
+      <p>Ці пари часто трапляються у cloze/use of English.</p>
+      <pre><code>depend on
+responsible for
+interested in
+capable of
+similar to
+different from
+pay attention to
+take part in</code></pre>
+    </div></div>
+      <div class="callout trap"><b>⚠️ Типові пастки:</b><ul><li><b>Present Perfect ≠ Past Simple.</b><br><span>Past Simple має завершений час у минулому. Present Perfect важливий для результату/досвіду до теперішнього моменту.</span><br><em>Приклад: I lost my key yesterday. / I have lost my key, so I cannot enter.</em></li><li><b>Second і Third Conditional не плутати.</b><br><span>Second говорить про нереальне зараз/у майбутньому, Third — про минуле, яке вже не змінити.</span><br><em>Приклад: If I were ready, I would pass. / If I had been ready, I would have passed.</em></li><li><b>Reading inference не має бути фантазією.</b><br><span>Правильний висновок має спиратися на конкретний рядок або ідею в тексті.</span><br><em>Приклад: however сигналізує контраст: відповідь часто після нього змінює напрям думки.</em></li></ul></div>
+      <div class="related"><b>🔗 Пов'язано з:</b> English · ТЗНК verbal · reading logic</div>
+      
+      <div class="exam-expansion">
+        <h3>🎯 Екзаменаційне спорядження</h3>
+        <div class="role-card"><b>Професійна прив'язка:</b> English for IT, academic reading, documentation, team communication.</div>
+        <div class="exp-grid">
+          <div class="exp-card"><h4>🎯 Що реально питають</h4><ul><li>Present Simple - регулярність/факт; Present Continuous - зараз/тимчасово; Present Perfect - результат до тепер.</li><li>Past Simple - завершена дія в минулому; Past Perfect - дія до іншої минулої дії; Future Perfect - буде завершено до моменту.</li><li>Conditionals: zero fact, first real future, second unreal present/future, third unreal past.</li></ul></div>
+          <div class="exp-card"><h4>Пастки: де ловлять</h4><ul><li>If I had known, I would have acted - third conditional, не second.</li><li>Despite + noun/gerund; although + clause.</li><li>Responsible for, interested in, depend on, similar to, different from.</li></ul></div>
+        </div>
+        <div class="drill-card"><b>Міні-дріл:</b> Для conditionals дивись форму після if: present → first/zero; past → second; had + V3 → third.</div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section page-break">
+    <div class="module">
+      <div class="kicker">ДОДАТОК A</div>
+      <h2>🧭 Карта IT-професій: куди лягають блоки</h2>
+      <div class="examples">
+        <div class="example-card"><h4>💻 Software Developer</h4><p>Процедурне програмування, ООП, алгоритми, структури даних, API, тестування.</p><pre><code>must know: loops, arrays, recursion, OOP, Big-O, unit/integration tests</code></pre></div>
+        <div class="example-card"><h4>🗄️ Data Engineer / DBA</h4><p>SQL, ключі, нормалізація, OLTP/OLAP, Data Warehouse, права доступу, індекси.</p><pre><code>must know: SELECT/JOIN/GROUP BY/HAVING, GRANT, PK/FK, ETL/ELT</code></pre></div>
+        <div class="example-card"><h4>🌐 Sysadmin / DevOps / SRE</h4><p>ОС, процеси, мережі, DNS/DHCP, SSH, firewall, CI/CD, containers, load balancing.</p><pre><code>must know: process/thread, ports, TCP/UDP, SSH, Docker, deploy pipeline</code></pre></div>
+        <div class="example-card"><h4>🔐 Cybersecurity</h4><p>Hash vs encryption, authentication/authorization, TLS/HTTPS, permissions, least privilege.</p><pre><code>must know: hash != encrypt, Kupyna=hash, AES/Kalyna=cipher, authn/authz</code></pre></div>
+        <div class="example-card"><h4>🤖 Data Science / ML</h4><p>Classification/regression/clustering, overfitting, train/test split, PCA, SVM, metrics.</p><pre><code>must know: class vs number, margin, dimensionality reduction, imbalance</code></pre></div>
+        <div class="example-card"><h4>🧪 QA / Test Engineer</h4><p>Трасування коду, граничні випадки, unit/integration/e2e, логіка умов, читання вимог.</p><pre><code>must know: edge cases, expected vs actual, test levels, requirements traps</code></pre></div>
+      </div>
+      <div class="callout life"><b>Як це читати:</b> професія не означає, що на іспиті буде питання “хто такий DevOps”. Вона показує, навіщо тема існує і які слова в тестах можуть бути сусідніми.</div>
+    </div>
+  </section>
+
+  <section class="section page-break">
+    <div class="module">
+      <div class="kicker">ДОДАТОК B</div>
+      <h2>🎯 Фінальний чеклист перед Variant 1 / 2 / 3</h2>
+      <div class="examples">
+        <div class="example-card"><h4>IT: 15 хв швидкого повторення</h4><p>Binary, loops, OOP, Big-O, SQL, networks, OS, security, ML.</p><pre><code>1) 33 -&gt; 100001
+2) WHERE before GROUP BY, HAVING after
+3) switch=MAC, router=IP
+4) hash one-way, encryption reversible
+5) classification=class, regression=number</code></pre></div>
+        <div class="example-card"><h4>ТЗНК: 10 хв схем</h4><p>Сума/добуток, порядок, повторення, обмеження, відсотки, множини, must be true.</p><pre><code>OR -&gt; add
+AND/sequence -&gt; multiply
+order matters -&gt; arrangements/permutations
+order not matters -&gt; combinations
+at least one -&gt; complement</code></pre></div>
+        <div class="example-card"><h4>English: 10 хв маркерів</h4><p>Tenses, conditionals, linkers, prepositions, reading evidence.</p><pre><code>depend on
+responsible for
+similar to
+although + clause
+despite + noun/gerund
+had + V3 -&gt; would have + V3</code></pre></div>
+        <div class="example-card"><h4>Після симуляції</h4><p>Не просто дивитися score. Виписати тип пастки: термін, порядок, формула, граматика, reading evidence.</p><pre><code>Wrong because:
+[ ] confused terms
+[ ] missed keyword
+[ ] counted wrong base
+[ ] guessed grammar
+[ ] no evidence in text</code></pre></div>
+      </div>
+      <div class="callout trap"><b>⚠️ Найнебезпечніша помилка:</b> вчити все як окремі факти. На реальних тестах питають межі між поняттями: де схоже, але не те саме.</div>
+    </div>
+  </section>
+  <section class="section page-break">
+    <div class="module">
+      <div class="kicker">Оновлення v25/v26</div>
+      <h2>🧭 Карта підготовки: що саме треба вміти на тесті</h2>
+      <div class="goal"><b>Мета:</b> не просто впізнавати правильну відповідь, а розуміти, за якою ознакою вона правильна. На реальному тесті часто перевіряють не термін, а межу між двома схожими термінами.</div>
+      <div class="grid">
+        <div class="card"><h4>🧠 ТЗНК</h4><p>Логіка висловлювань, комбінаторика, відсотки, таблиці, графіки, висновки з тексту. Головне питання: що саме дозволено умовою, а що ми додумали самі?</p></div>
+        <div class="card"><h4>🇬🇧 English</h4><p>Grammar in context, Use of English, reading for evidence, linkers, collocations. Головне питання: яка граматична роль слова в реченні і де доказ у тексті?</p></div>
+        <div class="card"><h4>💻 IT</h4><p>Програмування, ООП, алгоритми, архітектура, ОС, мережі, БД, безпека, ML/Data Science. Головне питання: яку роль виконує об'єкт, команда або технологія?</p></div>
+      </div>
+      <div class="callout science"><b>Науково:</b> екзамен будується на класифікації. Якщо поняття мають схожі слова, тест перевіряє ознаку розрізнення: порядок важливий чи ні, дія одна чи послідовна, права доступу чи запит даних, switch чи router, inheritance чи composition.</div>
+      <div class="callout life"><b>Приклад у житті:</b> якщо в меню написано "кава або чай", це правило суми. Якщо написано "напій і десерт", це правило добутку. Якщо "обери 3 людей у комісію", порядок не важливий. Якщо "президент, секретар, бухгалтер", порядок важливий, бо ролі різні.</div>
+    </div>
+  </section>
+
+  <section class="section page-break">
+    <div class="module">
+      <div class="kicker">Блок 10 / поглиблено</div>
+      <h2>🧠 ТЗНК: комбінаторика без паніки</h2>
+      <div class="goal"><b>Фокус:</b> навчитися бачити дію в умові: "або", "і", "порядок важливий", "порядок не важливий", "заборонено", "принаймні", "рівно".</div>
+      <h3>Піддисципліни всередині блоку</h3>
+      <div class="grid">
+        <div class="card"><h4>🧩 Правило суми</h4><p>Використовуємо, коли треба обрати один варіант з кількох неперетинних груп: A або B. Варіанти не виконуються разом.</p><pre><code>a можна вибрати 6 способами, b - 4 способами.
+Обрати один: a або b.
+Разом: 6 + 4 = 10</code></pre></div>
+        <div class="card"><h4>🧩 Правило добутку</h4><p>Використовуємо, коли вибір складається з кількох кроків: спочатку A, потім B. Кожен варіант A може поєднатися з кожним варіантом B.</p><pre><code>3 напої і 4 десерти.
+Обрати напій і десерт.
+Разом: 3 * 4 = 12</code></pre></div>
+        <div class="card"><h4>🧮 Перестановки</h4><p>Порядок важливий, і використовуються всі об'єкти. Якщо 4 людини стають у чергу, А-Б-В-Г і Б-А-В-Г - різні варіанти.</p><pre><code>4 людини в чергу:
+4! = 4 * 3 * 2 * 1 = 24</code></pre></div>
+        <div class="card"><h4>🧮 Розміщення</h4><p>Порядок важливий, але використовуються не всі об'єкти. Наприклад, з 8 людей треба обрати президента і секретаря.</p><pre><code>A(8,2) = 8 * 7 = 56
+бо перша роль має 8 варіантів,
+друга - 7 після першого вибору</code></pre></div>
+        <div class="card"><h4>🧮 Комбінації</h4><p>Порядок не важливий. Комісія {А, Б, В} - це та сама комісія, що {В, Б, А}. Тому ділимо на кількість перестановок усередині групи.</p><pre><code>C(8,3) = 8 * 7 * 6 / (3 * 2 * 1) = 56</code></pre></div>
+        <div class="card"><h4>🚧 Заборонені варіанти</h4><p>Спочатку рахуємо всі варіанти, потім віднімаємо ті, які порушують умову. Це часто найпростіший шлях.</p><pre><code>Комісія з 3 людей із 8, А і Б не можуть бути разом.
+Усі: C(8,3)=56
+Погані: А і Б уже взяті, третій з решти 6
+Правильні: 56 - 6 = 50</code></pre></div>
+      </div>
+      <h3>Як розв'язувати задачу "a - 6 способів, b - 4 способи, обрати один"</h3>
+      <div class="grid">
+        <div class="card"><h4>Крок 1: знайти ключове слово</h4><p>Умова каже: обрати один: a або b. Слово 'або' означає, що ми не будуємо пару (a,b), а відкриваємо дві окремі доріжки.</p><pre><code>доріжка A: 6 варіантів
+доріжка B: 4 варіанти</code></pre></div>
+        <div class="card"><h4>Крок 2: перевірити, чи дії одночасні</h4><p>Якщо треба було б обрати a і b, тоді було б 6*4. Але тут треба обрати будь-який один об'єкт з двох типів.</p><pre><code>не пара: (a,b)
+а один вибір: або a, або b</code></pre></div>
+        <div class="card"><h4>Крок 3: скласти доріжки</h4><p>Коли доріжки альтернативні, додаємо. Коли кроки послідовні, множимо.</p><pre><code>6 + 4 = 10</code></pre></div>
+        <div class="card"><h4>Пастка</h4><p>Тест часто дає варіант 24, бо мозок бачить два числа і хоче множити. Але множення - тільки коли обидва вибори потрібні одночасно.</p><pre><code>обрати a або b -&gt; +
+обрати a і b -&gt; *</code></pre></div>
+      </div>
+      <div class="callout trap"><ul>
+        <li><b>Слова 'будь-який з цих об'єктів' часто означають суму.</b><span>Бо треба один об'єкт з об'єднання груп, а не набір з двох об'єктів.</span><em>m способів для a, n способів для b -&gt; m+n</em></li>
+        <li><b>Слова 'пара', 'послідовність', 'код', 'маршрут' часто означають добуток.</b><span>Бо результат складається з кількох позицій, і кожна позиція має свої варіанти.</span><em>2 літери і 3 цифри -&gt; 26*26*10*10*10</em></li>
+        <li><b>'Не разом', 'без', 'крім' часто зручно рахувати через віднімання.</b><span>Усі варіанти мінус заборонені майже завжди простіше, ніж будувати правильні з нуля.</span></li>
+        <li><b>'Принаймні один' часто зручно рахувати через доповнення.</b><span>Принаймні один = усі варіанти мінус жодного.</span><em>хоча б одна дівчина = усі команди - команди без дівчат</em></li>
+      </ul></div>
+    </div>
+  </section>
+
+  <section class="section page-break">
+    <div class="module">
+      <div class="kicker">Блок 10 / логіка</div>
+      <h2>🧠 ТЗНК: імплікація, висновки, таблиці, графіки</h2>
+      <div class="grid">
+        <div class="card"><h4>✅ Імплікація P → Q</h4><p>Фраза 'якщо P, то Q' хибна тільки в одному випадку: P істинне, а Q хибне. Обіцянка порушена лише тоді, коли умову виконали, а результат не дали.</p><pre><code>Якщо прибереш кімнату (P), отримаєш цукерку (Q).
+P=true, Q=false -&gt; брехня.
+Інші випадки -&gt; правило не порушено.</code></pre></div>
+        <div class="card"><h4>✅ Must be true</h4><p>Потрібно вибрати те, що неминуче випливає з умови. Не те, що ймовірно, знайомо або звучить розумно.</p><pre><code>Якщо A&gt;B і B&gt;C,
+то A&gt;C обов'язково.
+А от 'A найбільше у світі' не випливає.</code></pre></div>
+        <div class="card"><h4>📊 Таблиці</h4><p>Спершу читаємо назви рядків і колонок, потім одиниці виміру. Пастка: порівняти відсотки з різних баз.</p><pre><code>20% від 100 = 20
+20% від 50 = 10
+Однаковий відсоток не означає однакову кількість.</code></pre></div>
+        <div class="card"><h4>📈 Графіки функцій</h4><p>Лінійна функція дає пряму. Квадратична - параболу. Обернена пропорційність y=1/x має дві гілки. Експонента швидко росте або спадає.</p><pre><code>y=x -&gt; пряма
+y=x^2 -&gt; парабола
+y=1/x -&gt; гіпербола
+y=2^x -&gt; експонента</code></pre></div>
+        <div class="card"><h4>🧮 Логарифм</h4><p>Логарифм питає: до якого степеня треба піднести основу, щоб отримати число. Це обернена дія до експоненти.</p><pre><code>2^3 = 8
+log2(8) = 3</code></pre></div>
+        <div class="card"><h4>🧮 Відсотки</h4><p>Завжди питай: від якої бази рахуємо? Збільшення і зменшення на той самий відсоток не повертає до початкового числа.</p><pre><code>100 + 20% = 120
+120 - 20% = 96</code></pre></div>
+      </div>
+      <div class="callout science"><b>Науково:</b> логічні задачі перевіряють не пам'ять, а валідність переходу від умови до висновку. Комбінаторика перевіряє структуру простору варіантів: альтернативи додаються, незалежні кроки множаться, порядок або зберігається, або стирається діленням.</div>
+      <div class="callout life"><b>Приклад у житті:</b> якщо доставка каже "якщо замовлення до 12:00, привеземо сьогодні", вона збрехала тільки тоді, коли замовлення було до 12:00, а доставка не приїхала сьогодні. Якщо замовлення було після 12:00, правило нічого не обіцяло.</div>
+    </div>
+  </section>
+
+  <section class="section page-break">
+    <div class="module">
+      <div class="kicker">Блок 11 / English</div>
+      <h2>🇬🇧 English: що реально ловлять</h2>
+      <div class="grid">
+        <div class="card"><h4>⏱️ Tenses</h4><p>Час обираємо не за перекладом, а за маркером і логікою події. Present Perfect - результат до тепер. Past Simple - завершений час у минулому. Past Continuous - дія в процесі в минулому.</p><pre><code>I have already finished.
+I finished yesterday.
+I was reading when he called.</code></pre></div>
+        <div class="card"><h4>🔁 Passive voice</h4><p>Якщо важливий об'єкт дії, а не виконавець, часто потрібен passive: be + V3.</p><pre><code>The report was prepared yesterday.
+The data are stored in a database.</code></pre></div>
+        <div class="card"><h4>🔀 Conditionals</h4><p>Умовні речення перевіряють реальність ситуації: реальна, малоймовірна, минула нереальна.</p><pre><code>If it rains, we will stay home.
+If I knew, I would tell you.
+If I had known, I would have told you.</code></pre></div>
+        <div class="card"><h4>🧷 Modals</h4><p>must - внутрішня необхідність або сильний висновок. have to - зовнішнє правило. should - порада. may/might - можливість.</p><pre><code>You must be tired. -&gt; сильний висновок
+You have to submit the form. -&gt; правило</code></pre></div>
+        <div class="card"><h4>🧱 Articles</h4><p>a/an - один із багатьох, the - конкретний або вже відомий. Нульовий артикль часто з абстрактними/загальними поняттями.</p><pre><code>a database -&gt; якась база
+the database -&gt; конкретна база</code></pre></div>
+        <div class="card"><h4>🧲 Collocations</h4><p>На тесті часто треба знати не переклад, а природну пару слів: make a decision, do research, depend on, responsible for.</p><pre><code>make a mistake
+do homework
+depend on
+interested in</code></pre></div>
+        <div class="card"><h4>🔗 Linkers</h4><p>however - контраст, therefore - наслідок, although - контраст усередині речення, because - причина, despite - після нього noun/gerund.</p><pre><code>Although it was late, we continued.
+Despite being tired, we continued.</code></pre></div>
+        <div class="card"><h4>🔎 Reading</h4><p>Не шукай 'красиву' відповідь. Шукай рядок-доказ. Якщо відповідь ширша за текст або додає припущення, вона підозріла.</p><pre><code>Question asks: why?
+Find because / reason / caused by.
+Then compare wording, not emotion.</code></pre></div>
+      </div>
+      <div class="callout trap"><ul>
+        <li><b>Переклад прийменника дослівно</b><span>Українське 'залежить від' не допомагає, англійською буде depend on.</span></li>
+        <li><b>Плутанина despite / although</b><span>Despite + noun/gerund. Although + повне речення з підметом і присудком.</span><em>despite the rain / although it rained</em></li>
+        <li><b>Present Perfect vs Past Simple</b><span>Already/just/yet часто тягнуть Perfect, yesterday/last year - Past Simple.</span></li>
+        <li><b>Reading: відповідь звучить логічно, але її нема в тексті</b><span>На іспиті правильна відповідь має мати доказ, а не просто бути правдоподібною.</span></li>
+      </ul></div>
+    </div>
+  </section>
+
+  <section class="section page-break">
+    <div class="module">
+      <div class="kicker">Блоки IT / повна рамка</div>
+      <h2>💻 IT: піддисципліни, які треба впізнавати</h2>
+      <div class="grid">
+        <div class="card"><h4>🧱 Процедурне програмування</h4><p>Програма організована як послідовність команд і процедур. Дані й функції часто існують окремо.</p><pre><code>function volumeUp(device) {
+  device.volume += 1;
+}</code></pre></div>
+        <div class="card"><h4>🧱 ООП: клас і об'єкт</h4><p>Клас - шаблон. Об'єкт - конкретний екземпляр. Інкапсуляція ховає внутрішній стан і дає керований доступ.</p><pre><code>class Speaker {
+  volume = 10;
+  up() { this.volume++; }
+}
+const jbl = new Speaker();</code></pre></div>
+        <div class="card"><h4>🧱 Наслідування</h4><p>Новий клас отримує властивості й методи базового класу. Це 'is-a': ноутбук є пристроєм. Пастка: не плутати з композицією, де об'єкт має інший об'єкт.</p><pre><code>class Device {}
+class Laptop extends Device {}
+// Laptop is a Device</code></pre></div>
+        <div class="card"><h4>🧱 Поліморфізм</h4><p>Одна команда викликає різну поведінку залежно від об'єкта. Як кнопка гучності: на телефоні змінює звук дзвінка, у плеєрі - медіа, у навушниках - локальний рівень.</p><pre><code>devices.forEach(d =&gt; d.volumeUp());
+// method name same,
+// behavior can differ</code></pre></div>
+        <div class="card"><h4>📈 Алгоритми і Big-O</h4><p>Big-O описує, як росте час/пам'ять при збільшенні входу. O(1) - стало, O(log n) - дуже повільний ріст, O(n) - лінійно, O(n²) - вкладені порівняння.</p><pre><code>binary search -&gt; O(log n)
+linear scan -&gt; O(n)
+nested loops -&gt; O(n^2)</code></pre></div>
+        <div class="card"><h4>🗃️ Структури даних</h4><p>Array швидко бере за індексом. Stack - останній зайшов, перший вийшов. Queue - перший зайшов, перший вийшов. Hash table шукає за ключем.</p><pre><code>stack.push(x); stack.pop();
+queue.enqueue(x); queue.dequeue();</code></pre></div>
+        <div class="card"><h4>🗄️ SQL і БД</h4><p>SELECT читає, JOIN з'єднує таблиці, WHERE фільтрує рядки до групування, HAVING фільтрує групи після GROUP BY, GRANT дає права.</p><pre><code>SELECT user_id, COUNT(*)
+FROM orders
+WHERE status='paid'
+GROUP BY user_id
+HAVING COUNT(*) &gt; 3;</code></pre></div>
+        <div class="card"><h4>🗄️ Моделі даних</h4><p>Концептуальна модель описує сутності бізнесу. Логічна - таблиці, ключі, зв'язки. Фізична - як це зберігає конкретна СУБД.</p><pre><code>student - course - enrollment
+PK: student_id
+FK: enrollment.student_id</code></pre></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section page-break">
+    <div class="module">
+      <div class="kicker">IT / networks, OS, security, ML</div>
+      <h2>🌐 Мережі, sysadmin/devops, безпека, Data Science</h2>
+      <div class="grid">
+        <div class="card"><h4>🌐 OSI</h4><p>OSI - модель із 7 рівнів. Для тесту важливо не вивчити все як вірш, а прив'язати приклади: фізика, кадр, пакет/IP, TCP/UDP, HTTP/DNS.</p><pre><code>L2: Ethernet, MAC, switch
+L3: IP, router
+L4: TCP/UDP, ports
+L7: HTTP, DNS, SMTP</code></pre></div>
+        <div class="card"><h4>🌐 Packet / frame / segment</h4><p>На L2 часто говорять frame і MAC. На L3 - packet і IP. На L4 - segment/datagram і ports. Пастка: switch не маршрутизує за IP як router.</p><pre><code>switch -&gt; MAC table
+router -&gt; routing table / IP
+DNS -&gt; domain to IP</code></pre></div>
+        <div class="card"><h4>🖥️ Sysadmin minimum</h4><p>Користувачі, права, процеси, журнали, служби, резервні копії, оновлення. На тесті питають роль: хто керує ресурсами і доступом.</p><pre><code>Linux:
+ps aux
+systemctl status nginx
+chmod 640 file
+journalctl -u service</code></pre></div>
+        <div class="card"><h4>🛠️ DevOps minimum</h4><p>DevOps - не тільки 'деплой'. Це CI/CD, автоматизація, контейнери, моніторинг, інфраструктура як код.</p><pre><code>git push -&gt; CI tests -&gt; build -&gt; deploy
+Dockerfile -&gt; image
+Kubernetes -&gt; orchestration</code></pre></div>
+        <div class="card"><h4>💾 Операційні системи</h4><p>ОС керує процесами, пам'яттю, файловою системою, пристроями та доступом. Kernel - ядро, shell - інтерфейс команд.</p><pre><code>process -&gt; scheduler
+RAM -&gt; memory manager
+file -&gt; filesystem
+USB -&gt; driver</code></pre></div>
+        <div class="card"><h4>🔐 Криптографія</h4><p>Hash - односторонній відбиток. Encryption - можна розшифрувати ключем. Digital signature - підтверджує автора й цілісність.</p><pre><code>Kupyna -&gt; hash
+AES/Rijndael -&gt; symmetric encryption
+RSA/ECDSA -&gt; signatures / asymmetric</code></pre></div>
+        <div class="card"><h4>🤖 ML / Data Science</h4><p>Classification передбачає клас, regression - число, clustering - групи без міток. SVM шукає гіперплощину з максимальним margin.</p><pre><code>classification: spam / not spam
+regression: price
+clustering: customer groups</code></pre></div>
+        <div class="card"><h4>📊 Data Engineering зв'язок</h4><p>Для екзамену не треба йти вглиб професії, але корисно бачити роль: SQL, сховища, ETL/ELT, якість даних, права доступу, моніторинг пайплайнів.</p><pre><code>source -&gt; extract -&gt; transform -&gt; warehouse
+quality checks -&gt; dashboard</code></pre></div>
+      </div>
+      <div class="callout trap"><ul>
+        <li><b>Switch vs router</b><span>Switch працює переважно на L2 і дивиться на MAC. Router працює на L3 і маршрутизує IP-пакети між мережами.</span></li>
+        <li><b>Hash vs encryption</b><span>Hash не 'розшифровують'. Якщо можна повернути оригінал ключем - це шифрування, не хеш.</span></li>
+        <li><b>Inheritance vs composition</b><span>Inheritance: Laptop is a Device. Composition: Laptop has a Battery.</span></li>
+        <li><b>WHERE vs HAVING</b><span>WHERE до групування, HAVING після групування. Якщо є агрегат COUNT/SUM у фільтрі - часто HAVING.</span></li>
+        <li><b>Compiler / interpreter / linker</b><span>Compiler перекладає код, interpreter виконує поступово, linker збирає об'єктні модулі в виконуваний модуль.</span></li>
+      </ul></div>
+    </div>
+  </section>
+  <section class="section page-break">
+    <div class="module v25-atlas">
+      <div class="kicker">Оновлення v25/v26 / карти всіх блоків</div>
+      <h2>🗺 Як вчити кожен блок: схема → приклад → пастка → міні-перевірка</h2>
+      <p>Цей атлас не замінює основні сторінки посібника. Він працює як “карта перед дорогою”: спершу побачити структуру, потім читати блок, а після цього йти в тренажер. Якщо тема пливе, повертайся до її схеми й проходь рядок за рядком.</p>
+      <div class="v25-legend">
+        <span>🔬 науковий сенс</span><span>🏠 аналогія</span><span>⚠️ пастка</span><span>🧪 міні-дріл</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section page-break">
+    <div class="module v25-atlas">
+      <div class="kicker">IT / основа</div>
+      <h2>💻 Блоки 01-04B: як комп'ютер рахує, виконує код і організовує програму</h2>
+      <div class="v25-grid">
+        <article class="v25-block-map">
+          <h3>🔢 Блок 01: біти, байти, binary, signed/unsigned</h3>
+          <div class="v25-flow">дані -> bit 0/1 -> byte = 8 bits -> 2^n комбінацій
+  -> unsigned: усі біти = число
+  -> signed: перший біт = знак, решта = величина/код</div>
+          <p><b>🔬 Сенс:</b> комп'ютер зберігає не “числа”, а біти. Тип даних каже, як їх читати.</p>
+          <p><b>🏠 Аналогія:</b> той самий запис 01.02 може бути датою або часом. Так само 11111111 може бути 255 або -1.</p>
+          <p><b>⚠️ Ловлять:</b> 2^8 = 256 комбінацій, але значення unsigned: 0..255; signed 8-bit: -128..127.</p>
+          <p><b>🧪 Дріл:</b> 33 = 32+1 = 100001₂. -5: 00000101 → інверсія 11111010 → +1 = 11111011.</p>
+        </article>
+        <article class="v25-block-map">
+          <h3>💻 Блок 02: процедурне програмування</h3>
+          <div class="v25-flow">input -> змінні -> оператори -> if/else -> loop -> function -> output
+кожен рядок змінює стан програми</div>
+          <p><b>🔬 Сенс:</b> процедурний код читається як рецепт: крок 1, крок 2, крок 3.</p>
+          <p><b>🏠 Аналогія:</b> кавомашина: налити воду, змолоти каву, натиснути кнопку, отримати результат.</p>
+          <p><b>⚠️ Ловлять:</b> індексація з 0, межі циклу, присвоєння <code>=</code> проти порівняння, рекурсія без бази.</p>
+          <p><b>🧪 Дріл:</b> для циклу завжди роби таблицю: <code>i</code>, умова, тіло, нове значення.</p>
+        </article>
+        <article class="v25-block-map">
+          <h3>🧱 Блок 03: ООП базово</h3>
+          <div class="v25-flow">class = шаблон
+object = конкретний екземпляр
+encapsulation = стан змінюється через методи
+inheritance = is-a
+polymorphism = одна команда, різна поведінка</div>
+          <p><b>🔬 Сенс:</b> ООП групує дані й поведінку в об'єкти, щоб складну систему читати як взаємодію ролей.</p>
+          <p><b>🏠 Аналогія:</b> кнопка гучності одна, але телефон, ноутбук і навушники реагують по-своєму.</p>
+          <p><b>⚠️ Ловлять:</b> клас ≠ об'єкт; поліморфізм ≠ “просто багато класів”; private сам по собі ще не пояснює інкапсуляцію.</p>
+          <p><b>🧪 Дріл:</b> <code>Dog extends Animal</code> → inheritance. <code>Car has Engine</code> → composition.</p>
+        </article>
+        <article class="v25-block-map">
+          <h3>🧩 Блок 03B: композиція, агрегація, тести</h3>
+          <div class="v25-flow">is-a -> inheritance
+strong has-a -> composition
+weak has-a -> aggregation
+unit test -> одна частина
+integration test -> частини разом</div>
+          <p><b>🔬 Сенс:</b> зв'язки між об'єктами показують, хто ким є і хто кого має.</p>
+          <p><b>🏠 Аналогія:</b> кімната без будинку зазвичай не існує окремо, а гравець може перейти в іншу команду.</p>
+          <p><b>⚠️ Ловлять:</b> “має” не означає “є різновидом”. Машина має двигун, але машина не є двигуном.</p>
+          <p><b>🧪 Дріл:</b> якщо видалити ціле, частина логічно зникає? Так → composition, ні → aggregation.</p>
+        </article>
+        <article class="v25-block-map">
+          <h3>📈 Блок 04: алгоритми й структури даних</h3>
+          <div class="v25-flow">data structure = як лежать дані
+algorithm = як рухаємось
+Big-O = як росте час/пам'ять
+array / stack / queue / tree / graph / hash</div>
+          <p><b>🔬 Сенс:</b> структура даних визначає, які операції швидкі, а які дорогі.</p>
+          <p><b>🏠 Аналогія:</b> stack — стопка тарілок, queue — черга до каси, hash — шафка з номером.</p>
+          <p><b>⚠️ Ловлять:</b> binary search тільки для sorted data; BFS = queue; DFS = stack/recursion.</p>
+          <p><b>🧪 Дріл:</b> порядок росту: <code>O(1) < O(log n) < O(n) < O(n log n) < O(n²)</code>.</p>
+        </article>
+        <article class="v25-block-map">
+          <h3>🖥 Блок 04B: архітектура комп'ютера</h3>
+          <div class="v25-flow">CPU виконує інструкції
+RAM тримає активні дані
+cache близько до CPU і дуже швидкий
+disk/SSD зберігає довго
+I/O = взаємодія із зовнішнім світом</div>
+          <p><b>🔬 Сенс:</b> швидкість системи часто визначає не “сила CPU”, а шлях даних між CPU, пам'яттю, диском і мережею.</p>
+          <p><b>🏠 Аналогія:</b> CPU — кухар, RAM — робочий стіл, cache — інгредієнти під рукою, disk — склад.</p>
+          <p><b>⚠️ Ловлять:</b> RAM ≠ disk; CPU cache ≠ browser cache; I/O часто повільніше за обчислення.</p>
+          <p><b>🧪 Дріл:</b> “що швидше?” зазвичай: cache → RAM → SSD/disk → network.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section page-break">
+    <div class="module v25-atlas">
+      <div class="kicker">IT / data, math, security, networks, ML</div>
+      <h2>🗄 Блоки 05-09: дані, аналітика, безпека, мережі й ML</h2>
+      <div class="v25-grid">
+        <article class="v25-block-map">
+          <h3>🗄 Блок 05: бази даних і SQL</h3>
+          <div class="v25-flow">conceptual -> logical -> physical
+table -> row -> column
+primary key -> foreign key
+SELECT -> WHERE -> GROUP BY -> HAVING -> ORDER BY
+GRANT -> права доступу</div>
+          <p><b>🔬 Сенс:</b> база даних зберігає структуровані факти так, щоб їх можна було пов'язувати й запитувати.</p>
+          <p><b>🏠 Аналогія:</b> таблиці як аркуші в зошиті, ключі як ID-картки, foreign key як посилання на іншу картку.</p>
+          <p><b>⚠️ Ловлять:</b> WHERE до групування, HAVING після; GRANT, не ALLOW; ER-model показує сутності й зв'язки.</p>
+          <p><b>🧪 Дріл:</b> якщо питають “нормалізація таблиць” — це логічна модель, не фізичне зберігання.</p>
+        </article>
+        <article class="v25-block-map">
+          <h3>🏗 Блок 06: OLTP, OLAP, Data Warehouse</h3>
+          <div class="v25-flow">OLTP -> щоденні операції
+OLAP -> аналітичні запити
+Data Warehouse -> історичне сховище
+Data Mart -> підмножина для напряму
+Dimension -> за чим дивимось
+Measure -> що рахуємо</div>
+          <p><b>🔬 Сенс:</b> операційні системи оптимізовані для швидких змін, аналітичні — для читання великих зрізів.</p>
+          <p><b>🏠 Аналогія:</b> каса магазину — OLTP, місячний звіт продажів — OLAP, архів усіх продажів — warehouse.</p>
+          <p><b>⚠️ Ловлять:</b> OLTP ≠ OLAP; dimension ≠ measure; warehouse ≠ одна табличка.</p>
+          <p><b>🧪 Дріл:</b> “багато транзакцій зараз” → OLTP. “звіт за роки” → OLAP/warehouse.</p>
+        </article>
+        <article class="v25-block-map">
+          <h3>📐 Блок 06B: функції, графіки, логарифми</h3>
+          <div class="v25-flow">linear -> пряма
+quadratic -> парабола
+1/x -> гіпербола
+2^x -> експонента
+log x -> повільний ріст, кількість поділів/подвоєнь</div>
+          <p><b>🔬 Сенс:</b> графік показує не просто формулу, а характер росту або спадання.</p>
+          <p><b>🏠 Аналогія:</b> експонента — снігова куля; логарифм — скільки разів треба поділити навпіл.</p>
+          <p><b>⚠️ Ловлять:</b> парабола ≠ експонента; <code>1/x</code> зменшується; <code>log₂(1024)=10</code>.</p>
+          <p><b>🧪 Дріл:</b> binary search на 1024 елементах має приблизно 10 кроків.</p>
+        </article>
+        <article class="v25-block-map">
+          <h3>🔐 Блок 07: кібербезпека і криптографія</h3>
+          <div class="v25-flow">hash -> відбиток, не розшифровується
+encryption -> шифрування/розшифрування з ключем
+signature -> цілісність + авторство
+authentication -> хто ти
+authorization -> що тобі можна</div>
+          <p><b>🔬 Сенс:</b> безпека розділяє ролі: приховати, перевірити, підписати, впустити, дозволити.</p>
+          <p><b>🏠 Аналогія:</b> пароль на вході — authentication; список доступів до кімнат — authorization.</p>
+          <p><b>⚠️ Ловлять:</b> hash не decrypt; Купина — hash; AES/Rijndael, Калина, Струмок — шифри.</p>
+          <p><b>🧪 Дріл:</b> “який алгоритм є геш-функцією?” → шукай Купина.</p>
+        </article>
+        <article class="v25-block-map">
+          <h3>🌐 Блок 08: мережі й операційні системи</h3>
+          <div class="v25-flow">browser -> DNS -> IP -> TCP/TLS -> HTTP request -> server
+process -> програма в роботі
+thread -> потік всередині process
+driver -> посередник між OS і device</div>
+          <p><b>🔬 Сенс:</b> мережа — це шари відповідальності, а ОС керує ресурсами комп'ютера.</p>
+          <p><b>🏠 Аналогія:</b> DNS — телефонна книга, TCP — доставка з підтвердженням, UDP — швидке повідомлення без гарантій.</p>
+          <p><b>⚠️ Ловлять:</b> DNS ≠ DHCP; TCP ≠ UDP; process ≠ thread; device ≠ driver.</p>
+          <p><b>🧪 Дріл:</b> якщо питають “ім'я сайту → IP” — DNS. “видати IP пристрою” — DHCP.</p>
+        </article>
+        <article class="v25-block-map">
+          <h3>🧱 Блок 08B/08C: packets, switch/router, OSI</h3>
+          <div class="v25-flow">L2 data link -> frame + MAC + switch
+L3 network -> packet + IP + router
+L4 transport -> segment/datagram + port + TCP/UDP
+L7 application -> HTTP/DNS/SSH</div>
+          <p><b>🔬 Сенс:</b> кожен рівень додає свою адресу або роль: MAC, IP, port, protocol.</p>
+          <p><b>🏠 Аналогія:</b> IP знаходить будинок, port — квартиру/сервіс, HTTP — мова розмови.</p>
+          <p><b>⚠️ Ловлять:</b> switch ≠ router; frame ≠ packet; port не є IP-адресою; CI/CD ≠ container.</p>
+          <p><b>🧪 Дріл:</b> MAC → switch/frame; IP → router/packet; port → TCP/UDP; URL/HTTP → application.</p>
+        </article>
+        <article class="v25-block-map">
+          <h3>🤖 Блок 09: Data Science / ML</h3>
+          <div class="v25-flow">data -> features + target
+train -> model learns
+test -> model is checked
+classification -> class
+regression -> number
+clustering -> groups without labels
+PCA -> fewer dimensions
+SVM -> margin between classes</div>
+          <p><b>🔬 Сенс:</b> ML шукає правило в даних, але правило треба перевіряти на нових прикладах.</p>
+          <p><b>🏠 Аналогія:</b> тренування на задачнику ≠ екзамен. Якщо запам'ятати відповіді, а не правило, буде overfitting.</p>
+          <p><b>⚠️ Ловлять:</b> PCA не класифікує; SVM максимізує margin; train high + test low = overfitting.</p>
+          <p><b>🧪 Дріл:</b> spam/not spam → classification; ціна → regression; групи клієнтів без labels → clustering.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section page-break">
+    <div class="module v25-atlas">
+      <div class="kicker">ТЗНК + English / екзаменаційне мислення</div>
+      <h2>🧠 Блоки 10-11B: як розпізнавати пастки, а не вгадувати</h2>
+      <div class="v25-grid">
+        <article class="v25-block-map">
+          <h3>🧠 Блок 10: комбінаторика, логіка, відсотки</h3>
+          <div class="v25-flow">АБО -> додавання
+І / пара / послідовність -> множення
+ролі є -> порядок важливий
+ролей нема -> порядок не важливий, ділимо на перестановки
+must be true -> тільки те, що точно випливає</div>
+          <p><b>🔬 Сенс:</b> комбінаторика рахує не предмети, а сценарії вибору.</p>
+          <p><b>🏠 Аналогія:</b> кава або чай — вибір одного; кава і десерт — набір із двох частин.</p>
+          <p><b>⚠️ Ловлять:</b> “капітан уже є” ≠ “обрати капітана”; “не разом” часто рахується як усі мінус погані.</p>
+          <p><b>🧪 Дріл:</b> команда 3 з 7, капітан уже входить: обрати ще 2 з 6 → C(6,2)=15.</p>
+        </article>
+        <article class="v25-block-map">
+          <h3>🧩 Блок 10B/10C: обмеження й хитрі формулювання</h3>
+          <div class="v25-flow">1) знайди всіх кандидатів
+2) зафіксуй обов'язкових
+3) прибери заборонених
+4) виріши: порядок важливий?
+5) якщо "хоча б один" -> часто всі - жодного
+6) якщо "разом/не разом" -> блок або віднімання поганих</div>
+          <p><b>🔬 Сенс:</b> обмеження змінює простір варіантів до того, як рахувати формулу.</p>
+          <p><b>🏠 Аналогія:</b> бронювання місць: якщо одне місце вже зайняте, схема посадки змінилася.</p>
+          <p><b>⚠️ Ловлять:</b> множення рахує дублікати, якщо порядок неважливий; “рівно один” ≠ “принаймні один”.</p>
+          <p><b>🧪 Дріл:</b> двоє не можуть бути разом у команді 3 з 7: C(7,3)-5 = 35-5 = 30.</p>
+        </article>
+        <article class="v25-block-map">
+          <h3>✅ Логіка: імплікація, висновки, таблиці</h3>
+          <div class="v25-flow">P -> Q хибне тільки коли:
+P істинне, Q хибне
+
+must be true -> доведено умовою
+could be true -> не заборонено
+cannot be true -> суперечить умові</div>
+          <p><b>🔬 Сенс:</b> логіка тесту не питає, що “зазвичай буває”; вона питає, що випливає з умови.</p>
+          <p><b>🏠 Аналогія:</b> “якщо прибереш кімнату, отримаєш цукерку” порушено тільки якщо прибрав, а цукерку не дали.</p>
+          <p><b>⚠️ Ловлять:</b> якщо гарантовано пройшли A, це не означає, що всі не-A не пройшли.</p>
+          <p><b>🧪 Дріл:</b> підкреслюй слова: усі, жоден, деякі, тільки, обов'язково, можливо.</p>
+        </article>
+        <article class="v25-block-map">
+          <h3>🇬🇧 Блок 11: reading + grammar patterns</h3>
+          <div class="v25-flow">question -> keyword -> sentence evidence -> eliminate traps
+main idea -> не деталь
+inference -> висновок з тексту
+reference -> до кого/чого відноситься займенник
+tone -> attitude автора</div>
+          <p><b>🔬 Сенс:</b> reading перевіряє доказ у тексті, не загальну ерудицію.</p>
+          <p><b>🏠 Аналогія:</b> відповідь має мати “чек” з тексту. Якщо не можеш показати речення-доказ, це ризик.</p>
+          <p><b>⚠️ Ловлять:</b> знайоме слово в неправильному контексті; too broad/too narrow; відповідь “майже правда”, але не з passage.</p>
+          <p><b>🧪 Дріл:</b> після вибору відповіді знайди 3-5 слів у тексті, які її доводять.</p>
+        </article>
+        <article class="v25-block-map">
+          <h3>⏱ Блок 11B: tenses, conditionals, collocations</h3>
+          <div class="v25-flow">Past Simple -> finished past marker
+Present Perfect -> result/experience до now
+Past Perfect -> earlier past
+First conditional -> real future
+Second -> unreal now/future
+Third -> unreal past
+collocation -> готова пара слів</div>
+          <p><b>🔬 Сенс:</b> англійський час обирається не за українським перекладом, а за часовою логікою й маркерами.</p>
+          <p><b>🏠 Аналогія:</b> Past Simple — “факт у журналі”; Present Perfect — “наслідок досі на столі”.</p>
+          <p><b>⚠️ Ловлять:</b> depend on, not from; evidence uncountable; unless без зайвого not; would have + V3 для минулого жалю.</p>
+          <p><b>🧪 Дріл:</b> <code>yesterday/last</code> → Past Simple; <code>since/for/already</code> часто → Present Perfect.</p>
+        </article>
+      </div>
+      <div class="v25-summary">
+        <h3>🧭 Як читати будь-яке питання на іспиті</h3>
+        <div class="v25-flow">1. Назви блок: IT / ТЗНК / English.
+2. Підкресли ключове слово: "не є", "найточніше", "або", "і", "must", "could", marker tense.
+3. Визнач тип задачі: визначення, різниця, приклад, наслідок, розрахунок.
+4. Прибери варіанти-пастки.
+5. Обери відповідь і скажи: "чому не інші?"</div>
+      </div>
+    </div>
+  </section>
+</div>
+
+  <section class="section page-break">
+    <div class="module v26-atlas">
+      <div class="kicker">Оновлення v26 / ЄФВВ Technology після розбору помилок</div>
+      <h2>🧭 Карта тем, які тест 2024/2026 реально зачіпає</h2>
+      <p>Цей додаток не замінює основні блоки, а закриває “дірки”, які проявилися в тесті: UML, IEEE 754, реляційна алгебра, графи, системний аналіз, OSI, патерни, JIT, підмережі, ML і похідні. Читати краще як карту пасток: питання → схема → чому правильний варіант саме такий.</p>
+      <table class="v26-table">
+        <thead><tr><th>Зона</th><th>Що питають</th><th>Як не плутати</th></tr></thead>
+        <tbody>
+          <tr><td>Числа / IEEE 754</td><td>порядок, bias 127, нормалізація</td><td>спочатку рухаємо кому до 1.x, рахуємо справжній порядок p, лише потім p+127</td></tr>
+          <tr><td>БД</td><td>атомарність, індекси, SQL WHERE, реляційна алгебра</td><td>рядки = кортежі, стовпці = атрибути, π вибирає стовпці, σ фільтрує рядки</td></tr>
+          <tr><td>Графи</td><td>маршрутна матриця, планарність, AVL/BST</td><td>матриця суміжності = пряме ребро, маршрутна = шлях існує; AVL = баланс висот ≤ 1</td></tr>
+          <tr><td>ML/AI</td><td>sigmoid, kNN, SVM, IoU, навчання нейромережі</td><td>класифікація = клас, регресія = число, навчання НМ = зміна ваг</td></tr>
+          <tr><td>Мережі/безпека</td><td>OSI, пакети/кадри, subnet, DDoS, CIA/DAD</td><td>L2 frame/MAC/switch, L3 packet/IP/router, DDoS б’є по availability</td></tr>
+          <tr><td>Парадигми/SE</td><td>процедурне, функціональне, ООП, Bridge, JIT, waterfall</td><td>процедурне = кроки й функції; ООП = об’єкти; functional = чисті перетворення</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section page-break">
+    <div class="module v26-atlas">
+      <div class="kicker">IT / числа і математика</div>
+      <h2>🔢 IEEE 754, порядок, похідні, ймовірність</h2>
+      <div class="v26-grid">
+        <article class="v26-card">
+          <h3>Порядок числа з рухомою комою</h3>
+          <div class="v26-flow">A₂ = 1011,01₂
+
+1) Нормалізуємо:
+   1011,01₂ = 1,01101₂ × 2³
+
+2) Порядок = 3
+
+3) Якщо питають поле exponent IEEE 754:
+   bias = 127
+   exponent_field = 3 + 127 = 130 = 10000010₂</div>
+          <p><b>Науково:</b> порядок показує, на який степінь двійки множиться мантиса. У форматі IEEE 754 у полі exponent зберігається не сам порядок, а зміщене значення.</p>
+          <div class="v26-trap"><b>⚠️ Пастка:</b> “порядок” і “зміщений порядок/характеристика” не одне й те саме. Для 1011,01₂ порядок 3, а в полі exponent буде 130.</div>
+        </article>
+        <article class="v26-card">
+          <h3>Похідна як швидкість зміни</h3>
+          <div class="v26-flow">lim Δx→0 ((x+Δx)³ - x³) / Δx
+= похідна від x³
+= 3x²
+
+y = 1 - e^(-a x)
+y' = 0 - e^(-a x)·(-a)
+y' = a·e^(-a x)</div>
+          <p><b>Навіщо в IT:</b> похідні потрібні в ML для градієнтного спуску: модель змінює ваги в напрямку, де помилка зменшується.</p>
+          <div class="v26-life"><b>🏠 Аналогія:</b> похідна — це нахил дороги. Якщо нахил великий, значення змінюється швидко; якщо нуль — стаціонарна точка.</div>
+        </article>
+        <article class="v26-card">
+          <h3>Комбінаторика й імовірність у Technology</h3>
+          <div class="v26-flow">5 різних елементів у масиві:
+порядок важливий -> 5! = 120
+
+20 деталей, 4 браковані:
+стандартних = 20 - 4 = 16
+P(стандартна) = 16/20 = 0,8</div>
+          <p><b>Маркер:</b> “розташування” майже завжди означає порядок, тобто перестановки. “Ймовірність” = сприятливі / усі.</p>
+        </article>
+        <article class="v26-card">
+          <h3>Стаціонарні точки функції двох змінних</h3>
+          <div class="v26-flow">f(x,y) = -x³ + 4xy - 2y² + 1
+
+1) fx = -3x² + 4y = 0
+2) fy = 4x - 4y = 0 -> y = x
+3) -3x² + 4x = 0
+   x( -3x + 4 ) = 0
+   x = 0 або x = 4/3
+
+точки: (0,0), (4/3,4/3)</div>
+          <p><b>Пастка:</b> для двох змінних треба обнулити обидві частинні похідні, а не тільки одну.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section page-break">
+    <div class="module v26-atlas">
+      <div class="kicker">IT / бази даних</div>
+      <h2>🗄️ Реляційна алгебра, індекси, моделі даних</h2>
+      <div class="v26-grid">
+        <article class="v26-card">
+          <h3>Реляційна алгебра “Кіт”</h3>
+          <div class="v26-flow">Є дві таблиці: CatsA і CatsB
+Однаковий запис = збігаються всі атрибути
+
+Потрібні коти, які є лише в одній таблиці:
+(CatsA - CatsB) ∪ (CatsB - CatsA)
+
+Потрібно тільки ім’я:
+π name ( (CatsA - CatsB) ∪ (CatsB - CatsA) )</div>
+          <p><b>Позначення:</b> σ — відібрати рядки; π — залишити стовпці; ∪ — об’єднати; ∩ — спільні; − — різниця.</p>
+          <div class="v26-life"><b>🏠 Аналогія:</b> два списки гостей. Викреслюємо тих, хто є в обох списках, а з решти виписуємо лише імена.</div>
+        </article>
+        <article class="v26-card">
+          <h3>Індекс для WHERE</h3>
+          <div class="v26-flow">SELECT ...
+FROM Customers
+WHERE email_address LIKE 'Alex%'
+GROUP BY ...
+ORDER BY City;
+
+Індекс потрібен на:
+email_address</div>
+          <p><b>Правило:</b> індекс створюють на полі, за яким шукають або фільтрують. GROUP BY/ORDER BY теж можуть виграти від індексів, але в цьому питанні ключове слово — WHERE.</p>
+          <div class="v26-trap"><b>⚠️ Пастка:</b> якщо є WHERE, GROUP BY і ORDER BY, не поспішай обирати останній видимий стовпець. Спитай: “де саме умова відбору?”</div>
+        </article>
+        <article class="v26-card">
+          <h3>Моделі даних</h3>
+          <div class="v26-flow">концептуальна -> сутності бізнесу
+  "Кіт", "Власник", "Візит"
+
+логічна -> таблиці, ключі, нормалізація
+  Cats(id, name, sex, age)
+
+фізична -> як це зберігає конкретна СУБД
+  індекси, типи, сторінки, файли</div>
+          <p><b>Запам’ятати:</b> нормалізація таблиць — це логічна модель. ER-діаграма часто належить до концептуального/логічного опису, але “нормалізація таблиць” тягне до логічного рівня.</p>
+        </article>
+        <article class="v26-card">
+          <h3>Вимога реляційної моделі</h3>
+          <div class="v26-flow">таблиця = відношення
+рядок = кортеж
+стовпець = атрибут
+комірка = атомарне значення</div>
+          <p><b>Атомарність:</b> у комірці має бути одне неподільне значення. Не “Оля, Петро, Іра” в одному полі, а окремі рядки/зв’язки.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section page-break">
+    <div class="module v26-atlas">
+      <div class="kicker">IT / графи й алгоритми</div>
+      <h2>🌳 Графи, дерева, складність, сортування</h2>
+      <div class="v26-grid">
+        <article class="v26-card">
+          <h3>Матриці графа</h3>
+          <div class="v26-flow">Матриця суміжності:
+M[i,j] = 1, якщо є пряме ребро i -> j
+
+Маршрутна матриця:
+R[i,j] = 1, якщо існує шлях i ... j
+
+Планарний граф:
+можна намалювати без перетину ребер</div>
+          <p><b>Пастка:</b> “суміжність” = сусіди прямо зараз. “Маршрут” = можна дістатися, навіть через проміжні вершини.</p>
+        </article>
+        <article class="v26-card">
+          <h3>BST, AVL, двобічний список</h3>
+          <div class="v26-flow">BST:
+ліворуч менші ключі, праворуч більші
+
+AVL:
+BST + баланс висот
+|height(left) - height(right)| ≤ 1
+
+Doubly linked list:
+prev <- node -> next</div>
+          <p><b>Запам’ятати:</b> AVL питають через “відрізняються за висотою щонайбільше на 1”. Двобічний список питають через можливість руху вперед і назад.</p>
+        </article>
+        <article class="v26-card">
+          <h3>Складність і сортування</h3>
+          <div class="v26-flow">O(n): n = кількість вхідних даних
+
+Merge sort:
+worst case O(n log n)
+
+Quick sort:
+обрати pivot
+менші -> ліворуч
+більші -> праворуч</div>
+          <p><b>Пастка:</b> quicksort теж часто O(n log n), але в найгіршому може бути O(n²). Якщо питають “найгірший гарантований n log n” серед простих варіантів — це merge sort.</p>
+        </article>
+        <article class="v26-card">
+          <h3>Типи алгоритмічних задач</h3>
+          <div class="v26-flow">пошук -> знайти елемент
+сортування -> впорядкувати
+графи -> шлях, досяжність, зв’язність
+оптимізація -> найкращий варіант
+динамічне програмування -> підзадачі + пам’ять
+NP-hard/складні -> рюкзак, комівояжер</div>
+          <p><b>Для тесту:</b> якщо питають “найкращий набір за обмеженням” — думай про оптимізацію/рюкзак. Якщо “найкоротший шлях” — графи.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section page-break">
+    <div class="module v26-atlas">
+      <div class="kicker">IT / мережі, архітектура, безпека</div>
+      <h2>🌐 OSI, subnet, backbone, Harvard, CIA/DAD</h2>
+      <div class="v26-grid">
+        <article class="v26-card">
+          <h3>OSI і PDU</h3>
+          <div class="v26-flow">L2 Data Link:
+frame + MAC + switch
+
+L3 Network:
+packet + IP + router
+
+L4 Transport:
+segment/datagram + TCP/UDP
+
+Сусідні рівні взаємодіють через сервіси/інтерфейси.
+Однакові рівні різних систем — через протоколи.</div>
+          <p><b>Пастка:</b> “між сусідніми рівнями” — це не протокол, а сервіс/інтерфейс. Протокол — між однойменними рівнями на різних машинах.</p>
+        </article>
+        <article class="v26-card">
+          <h3>Підмережі</h3>
+          <div class="v26-flow">Адрес у підмережі:
+2^(32-prefix)
+
+Придатних хостів:
+2^(32-prefix) - 2
+
+/26 -> 64 адреси, 62 хости
+/25 -> 128 адрес, 126 хостів
+
+Якщо треба розмістити 64 вузли:
+/26 не вистачає придатних хостів
+потрібно /25 = 255.255.255.128</div>
+          <p><b>Пастка:</b> “64 вузли” не дорівнює “64 адреси”, бо network і broadcast забирають 2 адреси.</p>
+        </article>
+        <article class="v26-card">
+          <h3>Архітектура комп’ютера</h3>
+          <div class="v26-flow">Фон Неймана:
+команди й дані в одній пам’яті
+
+Гарвардська:
+пам’ять команд окремо
+пам’ять даних окремо
+
+JIT:
+байт-код/проміжний код
+-> компіляція гарячих ділянок під час виконання</div>
+          <p><b>Аналогія:</b> Гарвардська архітектура — окрема полиця для рецептів і окрема для продуктів. JIT — перекладач, який під час розмови запам’ятовує часті фрази.</p>
+        </article>
+        <article class="v26-card">
+          <h3>Безпека</h3>
+          <div class="v26-flow">CIA:
+Confidentiality -> не розкривати
+Integrity       -> не змінювати
+Availability    -> не блокувати
+
+DAD:
+Disclosure -> розкриття
+Alteration -> зміна
+Denial     -> відмова/блокування
+
+DDoS -> Availability</div>
+          <p><b>Нормативні “зубчики”:</b> “особливої важливості” → 30 років. Це не логічна задача, а факт для запам’ятовування.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section page-break">
+    <div class="module v26-atlas">
+      <div class="kicker">IT / ML, системи, UML, парадигми</div>
+      <h2>🤖 ML, системний аналіз, UML, патерни, парадигми</h2>
+      <div class="v26-grid">
+        <article class="v26-card">
+          <h3>ML-маркери</h3>
+          <div class="v26-flow">sigmoid:
+f(x)=1/(1+e^(-cx)) -> 0..1
+
+kNN:
+supervised, якщо є мітки класів
+
+SVM:
+гіперплощина + максимальний margin
+
+IoU:
+intersection / union для сегментації
+
+навчання нейромережі:
+зміна вагових коефіцієнтів</div>
+          <p><b>Пастка:</b> “розбити на train/test” — це підготовка експерименту, але не саме навчання нейромережі.</p>
+        </article>
+        <article class="v26-card">
+          <h3>Системний аналіз</h3>
+          <div class="v26-flow">еквіфінальність:
+різні початкові стани -> один фінал
+
+проблема:
+небажаний стан + немає готового засобу вирішення
+
+SI infection model:
+S = susceptible
+I = infected
+усього 2 стани
+
+нестаціонарна без пам’яті:
+y(t)=a(t)x(t)</div>
+          <p><b>Пастка:</b> якщо є x(t-1) або інтеграл — система має пам’ять. Якщо параметр залежить від t — нестаціонарна.</p>
+        </article>
+        <article class="v26-card">
+          <h3>UML і патерни</h3>
+          <div class="v26-flow">Class diagram:
+класи, поля, методи, зв’язки
+
+Sequence diagram:
+повідомлення між об’єктами в часі
+
+Bridge:
+structural pattern
+
+Singleton / Builder / Prototype:
+creational patterns</div>
+          <p><b>Bridge:</b> розділяє абстракцію і реалізацію, щоб вони змінювалися незалежно. Наприклад, RemoteControl і Device.</p>
+        </article>
+        <article class="v26-card">
+          <h3>Парадигми програмування</h3>
+          <div class="v26-flow">Процедурне:
+функції + дані + послідовні кроки
+
+ООП:
+об’єкти = стан + методи
+інкапсуляція, наслідування, поліморфізм
+
+Функціональне:
+чисті функції, композиція, мінімум побічних ефектів
+
+Подієве:
+події + обробники</div>
+          <p><b>Аналогія:</b> процедурне — рецепт; ООП — кавомашина з кнопками; функціональне — формули; подієве — “натиснули кнопку → спрацювала дія”.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
