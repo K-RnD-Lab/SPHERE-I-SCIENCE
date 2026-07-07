@@ -44,11 +44,11 @@
   <section class="page">
     <div class="kicker">Contents</div>
     <h2>Маршрут читання</h2>
-    <table><tr><th>Pages</th><th>Block</th><th>What it covers</th></tr><tr><td>3-4</td><td>📈 Algorithms and Data Structures</td><td>Big-O, sorting, search, graphs, trees, stacks/queues, classic hard tasks.</td></tr><tr><td>4-5</td><td>💻 Computer Architecture and Data Representation</td><td>CPU, cache, RAM/ROM, compiler/interpreter/linker/JIT, binary, signed/unsigned, IEEE 754.</td></tr><tr><td>5-6</td><td>🗄️ Databases, SQL and Relational Algebra</td><td>Relational model, keys, normalization, ER, SQL clauses, indexes, GRANT, ACID, OLTP/OLAP.</td></tr><tr><td>6-7</td><td>🧱 Software Engineering, UML and Design Patterns</td><td>SDLC, Agile/Scrum, UML diagrams, testing, cohesion/coupling, patterns.</td></tr><tr><td>7-8</td><td>🔐 Cybersecurity and Cryptography</td><td>CIA, DAD, DDoS, hashes, Ukrainian crypto standards, access control, signatures.</td></tr><tr><td>8-9</td><td>📐 Math for IT: Logic, Derivatives, Probability, Sets</td><td>Derivative rules, stationary points, probability, combinatorics, set operations, implication.</td></tr><tr><td>9-10</td><td>🌐 Networks, OSI, Subnets and Protocols</td><td>OSI levels, frames/packets/segments, switch/router, ARP/DNS/DHCP, TCP/UDP, subnet masks.</td></tr><tr><td>10-11</td><td>🖥️ Operating Systems</td><td>Processes, threads, scheduling, deadlock, mutex/semaphore, virtual memory, paging, kernel/user mode.</td></tr><tr><td>11-12</td><td>🧩 Programming Paradigms and Code Tracing</td><td>Procedural, OOP, functional, encapsulation, inheritance, polymorphism, interfaces, recursion, tracing variables.</td></tr><tr><td>12-13</td><td>🤖 AI, ML and Data Science</td><td>kNN, classification/regression/clustering, SVM, neural networks, activation functions, overfitting, IoU.</td></tr></table>
+    <table><tr><th>Pages</th><th>Block</th><th>What it covers</th></tr><tr><td>3-4</td><td>📈 Algorithms and Data Structures</td><td>Big-O, sorting, search, graphs, trees, stacks/queues, classic hard tasks.</td></tr><tr><td>4-5</td><td>💻 Computer Architecture and Data Representation</td><td>CPU, cache, RAM/ROM, compiler/interpreter/linker/JIT, binary, signed/unsigned, IEEE 754.</td></tr><tr><td>5-6</td><td>🗄️ Databases, SQL and Relational Algebra</td><td>Relational model, keys, normalization, ER, SQL clauses, indexes, GRANT, ACID, OLTP/OLAP.</td></tr><tr><td>6-7</td><td>🧱 Software Engineering, UML and Design Patterns</td><td>SDLC, Agile/Scrum, UML diagrams, testing, cohesion/coupling, patterns.</td></tr><tr><td>7-8</td><td>🔐 Cybersecurity and Cryptography</td><td>CIA, DAD, DDoS, hashes, Ukrainian crypto standards, access control, signatures.</td></tr><tr><td>8-9</td><td>📐 Math for IT: Logic, Derivatives, Probability, Sets</td><td>Derivative rules, stationary points, probability, combinatorics, set operations, implication.</td></tr><tr><td>9-10</td><td>🌐 Networks, OSI, Subnets and Protocols</td><td>OSI levels, frames/packets/segments, switch/router, ARP/DNS/DHCP, TCP/UDP, subnet masks.</td></tr><tr><td>10-11</td><td>🖥️ Operating Systems</td><td>Processes, threads, scheduling, deadlock, mutex/semaphore, virtual memory, paging, kernel/user mode.</td></tr><tr><td>11-12</td><td>🧩 Programming Paradigms and Code Tracing</td><td>Procedural, OOP, functional, encapsulation, inheritance, polymorphism, interfaces, recursion, one lightweight tracing drill.</td></tr><tr><td>12-13</td><td>🤖 AI, ML and Data Science</td><td>kNN, classification/regression/clustering, SVM, neural networks, activation functions, overfitting, IoU.</td></tr></table>
     <h2>Баланс тесту</h2>
     <p>IT v27 має 10 блоків по 14 питань у кожному варіанті. Це зроблено, щоб тренувати програму 2026, а не повторювати один старий тест.</p>
     <table><tr><th>Variant</th><th>Questions</th><th>Structure</th></tr><tr><td>IT v1</td><td>140</td><td>10 blocks × 14 questions</td></tr><tr><td>IT v2</td><td>140</td><td>same concepts, different formulations</td></tr><tr><td>IT v3</td><td>140</td><td>same concepts, different traps</td></tr></table>
-    <div class="note"><b>Про задачі з a, b, x, y, i:</b> вони потрібні, але не мають захопити весь тест. У реальному тренуванні достатньо 10-15 таких задач на варіант; основний бал дає впізнавання понять, моделей, алгоритмів, мереж, БД, ООП, ML і безпеки.</div>
+    <div class="note"><b>Про задачі з a, b, x, y, i:</b> вони потрібні лише як перевірка уважності до коду. У тренувальному IT-варіанті достатньо 1-2 таких змішаних задач; основний бал дає впізнавання понять, моделей, алгоритмів, мереж, БД, ООП, ML і безпеки.</div>
   </section>
   <section class="page block" id="block-01">
     <div class="kicker">Block 01 / algorithms</div>
@@ -221,23 +221,23 @@
 <section class="page block" id="block-09">
     <div class="kicker">Block 09 / programming</div>
     <h2>🧩 Programming Paradigms and Code Tracing</h2>
-    <p class="focus"><b>Focus:</b> Procedural, OOP, functional, encapsulation, inheritance, polymorphism, interfaces, recursion, tracing variables.</p>
+    <p class="focus"><b>Focus:</b> Procedural, OOP, functional, encapsulation, inheritance, polymorphism, interfaces, recursion, one lightweight tracing drill.</p>
     <div class="grid">
       <div class="card wide"><h3>Schema</h3><pre>PROGRAMMING PARADIGMS
   |
   |-- procedural: functions/procedures + data
   |-- OOP: class, object, state, methods
   |-- functional: pure functions, less mutable state
-  |-- tracing: update variables step by step
+  |-- tracing: 1-2 mixed tasks max, update variables step by step
   |-- recursion: function calls itself with a smaller case</pre></div>
       <div class="card"><h3>Scientific explanation</h3><p>Programming paradigms are ways to organize code and thinking. Procedural code emphasizes steps, OOP emphasizes objects with state and behaviour, functional programming emphasizes transformations through functions.</p></div>
       <div class="card"><h3>Life analogy</h3><p>Procedural is a recipe; OOP is a set of smart devices with their own buttons and state; functional is a clean pipeline where each step transforms input into output.</p></div>
       <div class="card"><h3>Typical traps</h3><ul><li>Class is a template; object is a concrete instance.</li><li>Encapsulation is controlled access to state, not just the word private.</li><li>Inheritance is is-a; composition is has-a.</li><li>Tracing variables must be done line by line, not by guessing.</li></ul></div>
-      <div class="card"><h3>Mini-drill</h3><ul><li>Make a table: iteration | a | b | x | y | result.</li><li>Limit tracing tasks in practice: enough to build skill, not enough to replace theory.</li><li>If assignment changes x, the next line uses the new x.</li></ul></div>
+      <div class="card"><h3>Mini-drill</h3><ul><li>Make a table: iteration | a | b | x | y | result.</li><li>Keep tracing to 1-2 mixed tasks: enough to learn the table method, not enough to replace theory.</li><li>If assignment changes x, the next line uses the new x.</li></ul></div>
       <div class="card wide"><h3>What v27 tests ask here</h3><ul><li><b>procedural</b>: Що покладено в основу процедурного програмування?</li><li><b>oop</b>: Що є основою об&#39;єктно-орієнтованого програмування?</li><li><b>functional</b>: Функціональне програмування найбільше підкреслює:</li><li><b>encapsulation</b>: Інкапсуляція означає:</li><li><b>inheritance</b>: Наслідування в ООП — це:</li><li><b>polymorphism</b>: Поліморфізм проявляється, коли:</li></ul></div>
     </div>
     
-    <div class="example"><h4>Code tracing: enough to pass, not too much</h4><pre><code>x = 2
+    <div class="example"><h4>Code tracing: one mixed task is enough</h4><pre><code>x = 2
 y = 3
 z = 1
 

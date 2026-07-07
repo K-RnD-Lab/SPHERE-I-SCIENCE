@@ -249,13 +249,13 @@ const blocks = [
     key: "programming",
     title: "Programming Paradigms and Code Tracing",
     emoji: "🧩",
-    focus: "Procedural, OOP, functional, encapsulation, inheritance, polymorphism, interfaces, recursion, tracing variables.",
+    focus: "Procedural, OOP, functional, encapsulation, inheritance, polymorphism, interfaces, recursion, one lightweight tracing drill.",
     scheme: `PROGRAMMING PARADIGMS
   |
   |-- procedural: functions/procedures + data
   |-- OOP: class, object, state, methods
   |-- functional: pure functions, less mutable state
-  |-- tracing: update variables step by step
+  |-- tracing: 1-2 mixed tasks max, update variables step by step
   |-- recursion: function calls itself with a smaller case`,
     science:
       "Programming paradigms are ways to organize code and thinking. Procedural code emphasizes steps, OOP emphasizes objects with state and behaviour, functional programming emphasizes transformations through functions.",
@@ -269,7 +269,7 @@ const blocks = [
     ],
     drill: [
       "Make a table: iteration | a | b | x | y | result.",
-      "Limit tracing tasks in practice: enough to build skill, not enough to replace theory.",
+      "Keep tracing to 1-2 mixed tasks: enough to learn the table method, not enough to replace theory.",
       "If assignment changes x, the next line uses the new x.",
     ],
   },
@@ -343,7 +343,7 @@ function sortingTable() {
 }
 
 function tracingExample() {
-  return `<div class="example"><h4>Code tracing: enough to pass, not too much</h4><pre><code>x = 2
+  return `<div class="example"><h4>Code tracing: one mixed task is enough</h4><pre><code>x = 2
 y = 3
 z = 1
 
@@ -427,7 +427,7 @@ function renderHtml() {
     <h2>Баланс тесту</h2>
     <p>IT v27 має 10 блоків по 14 питань у кожному варіанті. Це зроблено, щоб тренувати програму 2026, а не повторювати один старий тест.</p>
     <table><tr><th>Variant</th><th>Questions</th><th>Structure</th></tr><tr><td>IT v1</td><td>140</td><td>10 blocks × 14 questions</td></tr><tr><td>IT v2</td><td>140</td><td>same concepts, different formulations</td></tr><tr><td>IT v3</td><td>140</td><td>same concepts, different traps</td></tr></table>
-    <div class="note"><b>Про задачі з a, b, x, y, i:</b> вони потрібні, але не мають захопити весь тест. У реальному тренуванні достатньо 10-15 таких задач на варіант; основний бал дає впізнавання понять, моделей, алгоритмів, мереж, БД, ООП, ML і безпеки.</div>
+    <div class="note"><b>Про задачі з a, b, x, y, i:</b> вони потрібні лише як перевірка уважності до коду. У тренувальному IT-варіанті достатньо 1-2 таких змішаних задач; основний бал дає впізнавання понять, моделей, алгоритмів, мереж, БД, ООП, ML і безпеки.</div>
   </section>
   ${blocks.map(renderBlock).join("\n")}
   <section class="page">

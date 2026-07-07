@@ -35,7 +35,7 @@ function q(block, topic, prompt, choices, correct, explanation, extra = {}) {
     choices,
     correct_answer: correct,
     explanation,
-    choice_explanations: makeChoiceExplanations(choices, correct, explanation),
+    choice_explanations: extra.choice_explanations || makeChoiceExplanations(choices, correct, explanation),
     scientific_explanation:
       extra.scientific_explanation ||
       "🔬 Питання перевіряє не впізнавання слова, а вміння прив'язати термін до його точної ролі в системі.",
@@ -48,22 +48,30 @@ function q(block, topic, prompt, choices, correct, explanation, extra = {}) {
 function shuffleChoices(item, seed) {
   const order = choiceOrders[seed % choiceOrders.length];
   const nextChoices = {};
+  const nextChoiceExplanations = {};
   let nextCorrect = "A";
   for (let i = 0; i < letters.length; i += 1) {
     const target = letters[i];
     const source = order[i];
     nextChoices[target] = item.choices[source];
+    if (item.choice_explanations?.[source]) {
+      nextChoiceExplanations[target] = item.choice_explanations[source];
+    }
     if (source === item.correct_answer) nextCorrect = target;
   }
   return {
     ...item,
     choices: nextChoices,
     correct_answer: nextCorrect,
-    choice_explanations: makeChoiceExplanations(nextChoices, nextCorrect, item.explanation),
+    choice_explanations:
+      Object.keys(nextChoiceExplanations).length === letters.length
+        ? nextChoiceExplanations
+        : makeChoiceExplanations(nextChoices, nextCorrect, item.explanation),
   };
 }
 
 function rewritePrompt(item, variant, index) {
+  if (item.topic === "code_tracing") return item.prompt;
   if (variant === 1) return item.prompt;
 
   const topic = item.topic.replace(/_/g, " ");
@@ -329,8 +337,73 @@ const sections = [
   artificialIntelligence,
 ];
 
+function codeTracingQuestion(v) {
+  return byVariant(v, [
+    q(
+      "programming",
+      "code_tracing",
+      "Дано x = 2, y = 3, z = 1. Виконується цикл: for i = 1..3: спочатку z = z + x, потім x = x + y, потім y = y * 2. Яким буде z після завершення циклу?",
+      { A: "19", B: "12", C: "24", D: "8" },
+      "A",
+      "Рахуємо тільки рядок за рядком: старт x=2,y=3,z=1; i=1 -> z=3,x=5,y=6; i=2 -> z=8,x=11,y=12; i=3 -> z=19,x=23,y=24. У таких задачах не вгадуємо формулу, а ведемо таблицю станів.",
+      {
+        choice_explanations: {
+          A: "✅ Так. Після трьох ітерацій z послідовно стає 3, 8, 19.",
+          B: "❌ Це схоже на спробу додати старі x без повного оновлення змінних.",
+          C: "❌ 24 — це фінальне y, а не z. Пастка на плутання стовпчиків таблиці.",
+          D: "❌ 8 — це z після другої ітерації, але цикл має ще третю.",
+        },
+        scientific_explanation: "🔬 Це завдання на трасування стану програми: кожне присвоєння змінює значення для наступного рядка.",
+        real_life_example: "🏠 Аналогія: як рецепт, де після кожного кроку миска вже має новий склад; наступний крок працює не зі старими, а з оновленими інгредієнтами.",
+      }
+    ),
+    q(
+      "programming",
+      "code_tracing",
+      "Дано a = 1, b = 2, c = 0. Виконується цикл: for i = 1..2: спочатку c = c + a * b, потім a = a + 1, потім b = b + 2. Яким буде c після завершення циклу?",
+      { A: "10", B: "6", C: "14", D: "8" },
+      "A",
+      "Старт a=1,b=2,c=0. i=1: c=0+1*2=2, a=2, b=4. i=2: c=2+2*4=10, a=3, b=6. Пастка: у другій ітерації треба брати вже оновлені a і b.",
+      {
+        choice_explanations: {
+          A: "✅ Так. c накопичує 1*2, а потім 2*4: 2 + 8 = 10.",
+          B: "❌ 6 виходить, якщо помилково додати a+b або не врахувати множення a*b.",
+          C: "❌ 14 з'являється, якщо передчасно взяти фінальні a=3 і b=6 у розрахунок c.",
+          D: "❌ 8 — це тільки другий доданок 2*4, але треба додати попереднє c=2.",
+        },
+        scientific_explanation: "🔬 Це перевірка порядку виконання операторів: множення всередині присвоєння рахується з поточних значень змінних.",
+        real_life_example: "🏠 Аналогія: каса з накопиченням суми. На другій покупці ти додаєш нову суму до вже наявної, а не починаєш з нуля.",
+      }
+    ),
+    q(
+      "programming",
+      "code_tracing",
+      "Дано x = 4, y = 1, z = 0. Виконується цикл: for i = 1..3: спочатку y = y + i, потім z = z + y, потім x = x * 2. Яким буде z після завершення циклу?",
+      { A: "13", B: "7", C: "12", D: "32" },
+      "A",
+      "Старт x=4,y=1,z=0. i=1: y=2,z=2,x=8. i=2: y=4,z=6,x=16. i=3: y=7,z=13,x=32. Пастка: i змінюється кожну ітерацію, а z додає вже нове y.",
+      {
+        choice_explanations: {
+          A: "✅ Так. z накопичує нові y: 2 + 4 + 7 = 13.",
+          B: "❌ 7 — це фінальне y, а не накопичене z.",
+          C: "❌ 12 схоже на 2 + 4 + 6, але в третій ітерації y стає 7, бо додається i=3.",
+          D: "❌ 32 — це фінальне x після подвоєнь, а питають z.",
+        },
+        scientific_explanation: "🔬 Це завдання на змінну-лічильник i: її значення теж входить у обчислення й змінюється на кожному кроці циклу.",
+        real_life_example: "🏠 Аналогія: щодня додається більша порція. Підсумок z — це сума порцій за всі дні, не остання порція і не окремий лічильник.",
+      }
+    ),
+  ]);
+}
+
 function buildVariant(v) {
-  const questions = sections.flatMap((fn) => fn(v));
+  const questions = sections
+    .flatMap((fn) => fn(v))
+    .map((item) =>
+      item.block === "programming" && item.topic === "macro"
+        ? codeTracingQuestion(v)
+        : item
+    );
   if (questions.length !== 140) throw new Error(`Variant ${v} has ${questions.length} questions`);
   return questions.map((item, index) => {
     const rewritten = {
@@ -353,10 +426,10 @@ for (const set of bank.quiz_sets.filter((set) => set.id.startsWith("exam-it-140-
     "ЄФВВ-2026 oriented: 10 official content areas, 140 single-answer questions, no copied 2024 sequence and no generic filler prompts.";
 }
 
-bank.version = "3.5-efvv-2026-it-v27";
+bank.version = "3.6-efvv-2026-it-v27-tracing-lite";
 bank.updated_at = new Date().toISOString();
 bank.notes =
-  "v27 rebuilds IT variants from the 2026 EFVV structure: 3 distinct 140-question forms, reduced duplicate prompts, analogous rather than copied past-test items.";
+  "v27 rebuilds IT variants from the 2026 EFVV structure: 3 distinct 140-question forms, reduced duplicate prompts, analogous rather than copied past-test items. v3.6 limits variable-tracing to one mixed task per IT form.";
 
 fs.writeFileSync(bankPath, `${JSON.stringify(bank, null, 2)}\n`, "utf8");
 
