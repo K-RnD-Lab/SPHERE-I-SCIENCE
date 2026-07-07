@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<title>Master Prep Exam Guide v27</title>
+<style>
+  @page { size: A4; margin: 13mm 12mm 16mm; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #f7f3ea; color: #102a3a; font-family: Arial, "Segoe UI", sans-serif; line-height: 1.48; }
+  .page { page-break-after: always; min-height: 260mm; padding: 10mm 8mm; background: #fffdf8; border-left: 1px solid #eadfce; border-right: 1px solid #eadfce; }
+  h1 { font-size: 44px; line-height: 1.02; margin: 0 0 14px; }
+  h2 { font-size: 28px; margin: 0 0 12px; }
+  h3 { font-size: 17px; margin: 0 0 8px; }
+  h4 { font-size: 15px; margin: 0 0 8px; }
+  p { margin: 0 0 10px; }
+  .subtitle { font-size: 20px; max-width: 740px; color: #47606d; }
+  .kicker { color: #d19300; text-transform: uppercase; font-weight: 800; letter-spacing: .08em; font-size: 12px; margin-bottom: 8px; }
+  .focus { background: #e8f5ef; display: inline-block; padding: 8px 12px; border-radius: 16px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 14px; }
+  .card, .example { border: 1px solid #dbe7e3; background: #f8fbfa; border-radius: 12px; padding: 12px; break-inside: avoid; }
+  .wide { grid-column: 1 / -1; }
+  pre { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; background: #0e2430; color: #f2fbff; padding: 12px; border-radius: 10px; font: 12px/1.42 Consolas, "Courier New", monospace; }
+  code { font-family: Consolas, "Courier New", monospace; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0 14px; break-inside: avoid; }
+  th, td { border: 1px solid #d7dedb; padding: 7px; vertical-align: top; font-size: 12px; }
+  th { background: #eef5f1; text-align: left; }
+  ul { margin: 0; padding-left: 18px; }
+  li { margin: 0 0 5px; }
+  .hero { display: flex; flex-direction: column; justify-content: center; }
+  .pillrow { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+  .pill { border: 1px solid #cfe1da; background: #edf8f3; border-radius: 999px; padding: 7px 11px; font-weight: 700; }
+  .note { border-left: 5px solid #d19300; padding: 12px 14px; background: #fff6df; border-radius: 8px; margin-top: 18px; }
+  .block h2 { border-bottom: 2px solid #e7ece9; padding-bottom: 8px; }
+</style>
+</head>
+<body>
+  <section class="page hero">
+    <div class="kicker">K RnD Lab / Master Prep / v27</div>
+    <h1>ЄФВВ IT 2026: посібник, синхронізований із v27 тестами</h1>
+    <p class="subtitle">Не збірник старих питань, а карта понять для складання: 10 блоків програми, 140-питальні варіанти, схеми, пастки, приклади й мінімум трасування коду без перевантаження.</p>
+    <div class="pillrow"><span class="pill">📈 Algorithms and Data Structures</span><span class="pill">💻 Computer Architecture and Data Representation</span><span class="pill">🗄️ Databases, SQL and Relational Algebra</span><span class="pill">🧱 Software Engineering, UML and Design Patterns</span><span class="pill">🔐 Cybersecurity and Cryptography</span><span class="pill">📐 Math for IT: Logic, Derivatives, Probability, Sets</span><span class="pill">🌐 Networks, OSI, Subnets and Protocols</span><span class="pill">🖥️ Operating Systems</span><span class="pill">🧩 Programming Paradigms and Code Tracing</span><span class="pill">🤖 AI, ML and Data Science</span></div>
+    <div class="note"><b>Як читати:</b> спочатку схема, потім пастки, потім 6 прикладів того, що питає v27-банк у цьому блоці. Після кожного блоку варто пройти 10-15 питань у practice або цілий variant у simulation.</div>
+  </section>
+  <section class="page">
+    <div class="kicker">Contents</div>
+    <h2>Маршрут читання</h2>
+    <table><tr><th>Pages</th><th>Block</th><th>What it covers</th></tr><tr><td>3-4</td><td>📈 Algorithms and Data Structures</td><td>Big-O, sorting, search, graphs, trees, stacks/queues, classic hard tasks.</td></tr><tr><td>4-5</td><td>💻 Computer Architecture and Data Representation</td><td>CPU, cache, RAM/ROM, compiler/interpreter/linker/JIT, binary, signed/unsigned, IEEE 754.</td></tr><tr><td>5-6</td><td>🗄️ Databases, SQL and Relational Algebra</td><td>Relational model, keys, normalization, ER, SQL clauses, indexes, GRANT, ACID, OLTP/OLAP.</td></tr><tr><td>6-7</td><td>🧱 Software Engineering, UML and Design Patterns</td><td>SDLC, Agile/Scrum, UML diagrams, testing, cohesion/coupling, patterns.</td></tr><tr><td>7-8</td><td>🔐 Cybersecurity and Cryptography</td><td>CIA, DAD, DDoS, hashes, Ukrainian crypto standards, access control, signatures.</td></tr><tr><td>8-9</td><td>📐 Math for IT: Logic, Derivatives, Probability, Sets</td><td>Derivative rules, stationary points, probability, combinatorics, set operations, implication.</td></tr><tr><td>9-10</td><td>🌐 Networks, OSI, Subnets and Protocols</td><td>OSI levels, frames/packets/segments, switch/router, ARP/DNS/DHCP, TCP/UDP, subnet masks.</td></tr><tr><td>10-11</td><td>🖥️ Operating Systems</td><td>Processes, threads, scheduling, deadlock, mutex/semaphore, virtual memory, paging, kernel/user mode.</td></tr><tr><td>11-12</td><td>🧩 Programming Paradigms and Code Tracing</td><td>Procedural, OOP, functional, encapsulation, inheritance, polymorphism, interfaces, recursion, tracing variables.</td></tr><tr><td>12-13</td><td>🤖 AI, ML and Data Science</td><td>kNN, classification/regression/clustering, SVM, neural networks, activation functions, overfitting, IoU.</td></tr></table>
+    <h2>Баланс тесту</h2>
+    <p>IT v27 має 10 блоків по 14 питань у кожному варіанті. Це зроблено, щоб тренувати програму 2026, а не повторювати один старий тест.</p>
+    <table><tr><th>Variant</th><th>Questions</th><th>Structure</th></tr><tr><td>IT v1</td><td>140</td><td>10 blocks × 14 questions</td></tr><tr><td>IT v2</td><td>140</td><td>same concepts, different formulations</td></tr><tr><td>IT v3</td><td>140</td><td>same concepts, different traps</td></tr></table>
+    <div class="note"><b>Про задачі з a, b, x, y, i:</b> вони потрібні, але не мають захопити весь тест. У реальному тренуванні достатньо 10-15 таких задач на варіант; основний бал дає впізнавання понять, моделей, алгоритмів, мереж, БД, ООП, ML і безпеки.</div>
+  </section>
+  <section class="page block" id="block-01">
+    <div class="kicker">Block 01 / algorithms</div>
+    <h2>📈 Algorithms and Data Structures</h2>
+    <p class="focus"><b>Focus:</b> Big-O, sorting, search, graphs, trees, stacks/queues, classic hard tasks.</p>
+    <div class="grid">
+      <div class="card wide"><h3>Schema</h3><pre>ALGORITHMS
+  |
+  |-- complexity: O(1), O(log n), O(n), O(n log n), O(n^2)
+  |-- sorting: bubble, selection, insertion, merge, quick, heap
+  |-- structures: stack, queue, linked list, BST, AVL, heap
+  |-- graphs: BFS, DFS, shortest path, planar graph
+  |-- task types: search, sort, optimization, dynamic programming</pre></div>
+      <div class="card"><h3>Scientific explanation</h3><p>An algorithm is a finite procedure for solving a task. Complexity estimates how the number of operations grows when input size n grows. Tests often ask not for exact time in seconds, but for the growth class.</p></div>
+      <div class="card"><h3>Life analogy</h3><p>Sorting papers: bubble swaps neighbours, selection chooses the smallest pile item, insertion places a new card into a sorted hand, merge splits piles and merges them, quick chooses a pivot and sends papers left/right.</p></div>
+      <div class="card"><h3>Typical traps</h3><ul><li>Binary search needs sorted data.</li><li>Quick sort is often O(n log n), but worst case can be O(n^2).</li><li>Merge sort has guaranteed O(n log n), but needs extra O(n) memory.</li><li>Stack is LIFO, queue is FIFO.</li><li>AVL is not just any BST; it is height-balanced.</li></ul></div>
+      <div class="card"><h3>Mini-drill</h3><ul><li>If the prompt says pivot/partition -&gt; Quick Sort.</li><li>If it says merge sorted halves -&gt; Merge Sort.</li><li>If it says repeatedly find minimum -&gt; Selection Sort.</li><li>If it says insert into sorted-left -&gt; Insertion Sort.</li></ul></div>
+      <div class="card wide"><h3>What v27 tests ask here</h3><ul><li><b>big o</b>: Що в записі складності O(n) позначає літера n?</li><li><b>sorting</b>: Який алгоритм сортування має гарантовану складність O(n log n) у найгіршому випадку?</li><li><b>quick sort</b>: У Quick Sort обрано опорний елемент. Що відбувається далі з масивом?</li><li><b>binary search</b>: Яка умова є обов&#39;язковою для коректної роботи бінарного пошуку?</li><li><b>avl tree</b>: Яке дерево пошуку підтримує різницю висот лівого і правого піддерев кожного вузла не більше ніж 1?</li><li><b>stack queue</b>: Яка структура даних працює за принципом LIFO?</li></ul></div>
+    </div>
+    <h3>Sorting quick table</h3><table><tr><th>Algorithm</th><th>Best</th><th>Average</th><th>Worst</th><th>Stable?</th><th>Memory</th><th>Exam clue</th></tr><tr><td>Bubble</td><td>O(n)</td><td>O(n^2)</td><td>O(n^2)</td><td>yes</td><td>O(1)</td><td>neighbour swaps</td></tr><tr><td>Selection</td><td>O(n^2)</td><td>O(n^2)</td><td>O(n^2)</td><td>usually no</td><td>O(1)</td><td>find minimum</td></tr><tr><td>Insertion</td><td>O(n)</td><td>O(n^2)</td><td>O(n^2)</td><td>yes</td><td>O(1)</td><td>insert into sorted-left</td></tr><tr><td>Merge</td><td>O(n log n)</td><td>O(n log n)</td><td>O(n log n)</td><td>yes</td><td>O(n)</td><td>divide + merge</td></tr><tr><td>Quick</td><td>O(n log n)</td><td>O(n log n)</td><td>O(n^2)</td><td>usually no</td><td>O(log n)</td><td>pivot + partition</td></tr><tr><td>Heap</td><td>O(n log n)</td><td>O(n log n)</td><td>O(n log n)</td><td>no</td><td>O(1)</td><td>binary heap</td></tr><tr><td>Counting</td><td>O(n+k)</td><td>O(n+k)</td><td>O(n+k)</td><td>can be yes</td><td>O(k)</td><td>counters for values</td></tr><tr><td>Radix</td><td>O(d(n+k))</td><td>O(d(n+k))</td><td>O(d(n+k))</td><td>yes, with stable pass</td><td>O(n+k)</td><td>digit by digit</td></tr></table>
+    
+  </section>
+<section class="page block" id="block-02">
+    <div class="kicker">Block 02 / architecture</div>
+    <h2>💻 Computer Architecture and Data Representation</h2>
+    <p class="focus"><b>Focus:</b> CPU, cache, RAM/ROM, compiler/interpreter/linker/JIT, binary, signed/unsigned, IEEE 754.</p>
+    <div class="grid">
+      <div class="card wide"><h3>Schema</h3><pre>COMPUTER DATA
+  |
+  |-- bit: 0 or 1
+  |-- byte: 8 bits
+  |-- unsigned: all combinations are non-negative
+  |-- signed: first bit helps encode negative values
+  |-- floating point: sign + exponent + mantissa</pre></div>
+      <div class="card"><h3>Scientific explanation</h3><p>The same bits can mean different values depending on the type. 11111111 can be 255 as unsigned 8-bit, but -1 as signed two&#39;s complement. The CPU follows the instruction and type context; it does not guess meaning by itself.</p></div>
+      <div class="card"><h3>Life analogy</h3><p>The same text &#39;01.02&#39; can mean February 1 in a date or 1 minute 2 seconds in sport. Bits are the same; context gives meaning.</p></div>
+      <div class="card"><h3>Typical traps</h3><ul><li>10000000 in 8 bits is 128 unsigned, but -128 signed.</li><li>256 needs 9 bits: 1 0000 0000.</li><li>IEEE 754 exponent stores biased exponent, not the raw order.</li><li>Compiler, interpreter, linker and JIT are different stages/tools.</li></ul></div>
+      <div class="card"><h3>Mini-drill</h3><ul><li>1011.01₂ = 1.01101₂ * 2^3, so raw order is 3.</li><li>For IEEE single precision exponent field: order + 127.</li><li>To get -10 in 8-bit two&#39;s complement: 00001010 -&gt; invert 11110101 -&gt; +1 = 11110110.</li></ul></div>
+      <div class="card wide"><h3>What v27 tests ask here</h3><ul><li><b>harvard</b>: Головна ознака Гарвардської архітектури:</li><li><b>von neumann</b>: У фон-нейманівській архітектурі програма і дані зазвичай:</li><li><b>cache</b>: Для чого потрібна cache-пам&#39;ять процесора?</li><li><b>cpu</b>: Який компонент CPU виконує арифметичні та логічні операції?</li><li><b>compiler interpreter</b>: Яке твердження про компілятор та інтерпретатор є правильним?</li><li><b>jit</b>: Що таке JIT-компіляція?</li></ul></div>
+    </div>
+    
+    
+  </section>
+<section class="page block" id="block-03">
+    <div class="kicker">Block 03 / databases</div>
+    <h2>🗄️ Databases, SQL and Relational Algebra</h2>
+    <p class="focus"><b>Focus:</b> Relational model, keys, normalization, ER, SQL clauses, indexes, GRANT, ACID, OLTP/OLAP.</p>
+    <div class="grid">
+      <div class="card wide"><h3>Schema</h3><pre>DATABASE THINKING
+  |
+  |-- conceptual model: business entities and relations
+  |-- logical model: tables, keys, normalization
+  |-- physical model: indexes, storage, files
+  |-- SQL: SELECT/FROM/WHERE/GROUP BY/HAVING/ORDER BY
+  |-- relational algebra: selection, projection, join, difference, union</pre></div>
+      <div class="card"><h3>Scientific explanation</h3><p>Relational databases model data as relations. A row is a tuple, a column is an attribute, and atomicity means one cell should contain one indivisible value. Relational algebra is the formal language behind SQL operations.</p></div>
+      <div class="card"><h3>Life analogy</h3><p>A library catalogue: primary key is the unique inventory number, foreign key points to another card, index is a fast lookup shelf, normalization prevents writing the same author details in every place.</p></div>
+      <div class="card"><h3>Typical traps</h3><ul><li>WHERE filters rows before grouping; HAVING filters groups after GROUP BY.</li><li>Index usually helps on columns used in WHERE/JOIN, not randomly on every SELECT column.</li><li>Only in one table means symmetric difference: (A-B) union (B-A).</li><li>Projection π keeps columns; selection σ filters rows.</li></ul></div>
+      <div class="card"><h3>Mini-drill</h3><ul><li>Names of cats only in one table: π_name((CatsA - CatsB) ∪ (CatsB - CatsA)).</li><li>WHERE email LIKE &#39;Alex%&#39; -&gt; index email_address.</li><li>GRANT gives permissions.</li></ul></div>
+      <div class="card wide"><h3>What v27 tests ask here</h3><ul><li><b>relational model</b>: Яка вимога характерна для відношення реляційної моделі?</li><li><b>keys</b>: Primary key у таблиці потрібен, щоб:</li><li><b>foreign key</b>: Foreign key зазвичай:</li><li><b>normalization</b>: Для чого потрібна нормалізація БД?</li><li><b>models</b>: Яка модель даних передбачає нормалізацію таблиць?</li><li><b>er model</b>: ER-модель насамперед показує:</li></ul></div>
+    </div>
+    
+    
+  </section>
+<section class="page block" id="block-04">
+    <div class="kicker">Block 04 / software_engineering</div>
+    <h2>🧱 Software Engineering, UML and Design Patterns</h2>
+    <p class="focus"><b>Focus:</b> SDLC, Agile/Scrum, UML diagrams, testing, cohesion/coupling, patterns.</p>
+    <div class="grid">
+      <div class="card wide"><h3>Schema</h3><pre>SOFTWARE ENGINEERING
+  |
+  |-- lifecycle: waterfall, iterative, agile
+  |-- UML structure: class diagram
+  |-- UML behaviour: sequence/use case diagrams
+  |-- quality: testing, cohesion, coupling
+  |-- patterns: creational, structural, behavioural</pre></div>
+      <div class="card"><h3>Scientific explanation</h3><p>Software engineering organizes development so the system can be specified, built, tested, changed and maintained. UML is a modelling language: each diagram answers a different question about the system.</p></div>
+      <div class="card"><h3>Life analogy</h3><p>Class diagram is like a building plan; sequence diagram is like a video of people passing documents; use case diagram is like a list of who uses the service and why.</p></div>
+      <div class="card"><h3>Typical traps</h3><ul><li>Class diagram shows static structure; sequence diagram shows message order over time.</li><li>Bridge is structural. Singleton, Builder, Prototype are creational.</li><li>Unit tests check small units; integration tests check interaction.</li><li>Waterfall is sequential; Agile is iterative.</li></ul></div>
+      <div class="card"><h3>Mini-drill</h3><ul><li>Attributes/methods/classes -&gt; UML class diagram.</li><li>Messages over time -&gt; UML sequence diagram.</li><li>Actors and goals -&gt; UML use case diagram.</li></ul></div>
+      <div class="card wide"><h3>What v27 tests ask here</h3><ul><li><b>waterfall</b>: Що передбачає водоспадна модель життєвого циклу?</li><li><b>agile</b>: Agile-підхід зазвичай робить акцент на:</li><li><b>scrum</b>: У Scrum короткий фіксований цикл роботи називають:</li><li><b>uml class</b>: Яка UML-діаграма показує класи, атрибути, методи та зв&#39;язки між класами?</li><li><b>uml sequence</b>: Яка UML-діаграма показує порядок повідомлень між об&#39;єктами в часі?</li><li><b>uml use case</b>: Use case diagram насамперед показує:</li></ul></div>
+    </div>
+    
+    
+  </section>
+<section class="page block" id="block-05">
+    <div class="kicker">Block 05 / cybersecurity</div>
+    <h2>🔐 Cybersecurity and Cryptography</h2>
+    <p class="focus"><b>Focus:</b> CIA, DAD, DDoS, hashes, Ukrainian crypto standards, access control, signatures.</p>
+    <div class="grid">
+      <div class="card wide"><h3>Schema</h3><pre>SECURITY
+  |
+  |-- CIA: confidentiality, integrity, availability
+  |-- attacker model: disclosure, alteration, denial
+  |-- crypto: hash, symmetric, asymmetric, signature
+  |-- access: MAC, DAC, RBAC
+  |-- attacks: DDoS, ransomware, phishing</pre></div>
+      <div class="card"><h3>Scientific explanation</h3><p>Information security protects data and services. Confidentiality hides information, integrity prevents unauthorized changes, availability keeps systems usable. Cryptographic hash functions create fixed-size digests and are not reversible encryption.</p></div>
+      <div class="card"><h3>Life analogy</h3><p>CIA is a guarded archive: only allowed people read it, pages are not changed, and the archive is open when needed. DDoS attacks the third part: availability.</p></div>
+      <div class="card"><h3>Typical traps</h3><ul><li>DDoS attacks availability, not integrity.</li><li>Kupyna is a hash function; Kalyna is a block cipher.</li><li>Hashing is not encryption because it is not meant to be reversed.</li><li>MAC in access control is Mandatory Access Control, not MAC address.</li></ul></div>
+      <div class="card"><h3>Mini-drill</h3><ul><li>CIA opposite in attacker language: DAD = Disclosure, Alteration, Denial.</li><li>Digital signature checks author and integrity.</li><li>RBAC gives permissions through roles.</li></ul></div>
+      <div class="card wide"><h3>What v27 tests ask here</h3><ul><li><b>cia</b>: Яка тріада є базовою моделлю захисту інформації?</li><li><b>dad</b>: Яку модель дій зловмисника часто протиставляють CIA?</li><li><b>ddos</b>: DDoS-атаки насамперед порушують:</li><li><b>hash</b>: Криптографічна геш-функція призначена для:</li><li><b>kupyna</b>: Який український стандарт є криптографічною геш-функцією?</li><li><b>symmetric</b>: Симетричне шифрування означає, що:</li></ul></div>
+    </div>
+    
+    
+  </section>
+<section class="page block" id="block-06">
+    <div class="kicker">Block 06 / math_it</div>
+    <h2>📐 Math for IT: Logic, Derivatives, Probability, Sets</h2>
+    <p class="focus"><b>Focus:</b> Derivative rules, stationary points, probability, combinatorics, set operations, implication.</p>
+    <div class="grid">
+      <div class="card wide"><h3>Schema</h3><pre>MATH IN IT TESTS
+  |
+  |-- derivative: rate of change, optimization, ML gradients
+  |-- probability: favourable / total
+  |-- combinatorics: OR=sum, AND=product, roles=arrangements, no roles=combinations
+  |-- sets: union, intersection, difference, symmetric difference
+  |-- logic: implication is false only when true -&gt; false</pre></div>
+      <div class="card"><h3>Scientific explanation</h3><p>Mathematical questions in IT tests usually check the tool, not deep theory. Derivatives support optimization and learning; probability checks risk/counting; set operations mirror database and logic operations.</p></div>
+      <div class="card"><h3>Life analogy</h3><p>Derivative is a speedometer for a function. Probability is how many good tickets are in the box. Combinatorics is counting routes without listing all routes by hand.</p></div>
+      <div class="card"><h3>Typical traps</h3><ul><li>OR between disjoint choices -&gt; add; AND sequence -&gt; multiply.</li><li>Committee/team without roles -&gt; combinations.</li><li>Chair/deputy/secretary -&gt; arrangements because roles matter.</li><li>P -&gt; Q is false only when P is true and Q is false.</li></ul></div>
+      <div class="card"><h3>Mini-drill</h3><ul><li>20 details, 4 defective -&gt; standard probability is 16/20.</li><li>d/dx x^3 = 3x^2.</li><li>d/dx (1 - e^(-a*x)) = a*e^(-a*x).</li></ul></div>
+      <div class="card wide"><h3>What v27 tests ask here</h3><ul><li><b>derivative</b>: Обчисліть границю lim Δx→0 ((x+Δx)³ − x³)/Δx.</li><li><b>chain rule</b>: Визначте похідну y(x)=1−e^{−a·x}, якщо a=const.</li><li><b>stationary points</b>: Стаціонарна точка функції кількох змінних — це точка, де:</li><li><b>probability</b>: У партії з 20 деталей 4 браковані. Яка ймовірність навмання взяти стандартну деталь?</li><li><b>sum rule</b>: Об&#39;єкт a можна вибрати 6 способами, а об&#39;єкт b — іншими 4 способами. Треба обрати будь-який один: a або b. Скільки способів?</li><li><b>product rule</b>: 6 варіантів першої дії і 4 варіантів другої. Треба виконати обидві дії. Скільки способів?</li></ul></div>
+    </div>
+    
+    
+  </section>
+<section class="page block" id="block-07">
+    <div class="kicker">Block 07 / networks</div>
+    <h2>🌐 Networks, OSI, Subnets and Protocols</h2>
+    <p class="focus"><b>Focus:</b> OSI levels, frames/packets/segments, switch/router, ARP/DNS/DHCP, TCP/UDP, subnet masks.</p>
+    <div class="grid">
+      <div class="card wide"><h3>Schema</h3><pre>NETWORK STACK
+  |
+  |-- L2: frame, MAC, switch
+  |-- L3: packet, IP, router
+  |-- L4: TCP/UDP, ports
+  |-- L7: HTTP, DNS, SMTP, SSH
+  |-- subnet: network bits + host bits</pre></div>
+      <div class="card"><h3>Scientific explanation</h3><p>OSI separates network communication into layers. Each layer has its own unit and responsibility. Subnetting splits an IP network into smaller address ranges, but network and broadcast addresses reduce usable hosts.</p></div>
+      <div class="card"><h3>Life analogy</h3><p>Sending a parcel: MAC is local apartment delivery, IP is city-to-city routing, port is the office room, HTTP/DNS are the application-level services.</p></div>
+      <div class="card"><h3>Typical traps</h3><ul><li>Switch -&gt; MAC/frame/L2; router -&gt; IP/packet/L3.</li><li>DNS resolves names; DHCP gives network settings.</li><li>64 required hosts need more than 64 total addresses, because network and broadcast are reserved.</li><li>HTTP 404 means resource not found.</li></ul></div>
+      <div class="card"><h3>Mini-drill</h3><ul><li>/26 gives 64 total addresses and 62 usable hosts.</li><li>Need 64 usable hosts -&gt; /25, mask 255.255.255.128.</li><li>ATM backbone clue -&gt; cell switching.</li></ul></div>
+      <div class="card wide"><h3>What v27 tests ask here</h3><ul><li><b>osi</b>: На якому рівні OSI працює IP?</li><li><b>pdu</b>: Що правильніше зіставляє PDU з рівнями?</li><li><b>switch</b>: Комутатор у LAN зазвичай пересилає кадри на основі:</li><li><b>router</b>: Маршрутизатор насамперед потрібен для:</li><li><b>arp</b>: ARP у локальній мережі використовується для:</li><li><b>tcp udp</b>: TCP відрізняється від UDP тим, що TCP:</li></ul></div>
+    </div>
+    
+    
+  </section>
+<section class="page block" id="block-08">
+    <div class="kicker">Block 08 / operating_systems</div>
+    <h2>🖥️ Operating Systems</h2>
+    <p class="focus"><b>Focus:</b> Processes, threads, scheduling, deadlock, mutex/semaphore, virtual memory, paging, kernel/user mode.</p>
+    <div class="grid">
+      <div class="card wide"><h3>Schema</h3><pre>OPERATING SYSTEM
+  |
+  |-- process: program instance with address space
+  |-- thread: execution path inside a process
+  |-- scheduler: decides who gets CPU
+  |-- memory: virtual memory, paging
+  |-- sync: mutex, semaphore, race condition, deadlock</pre></div>
+      <div class="card"><h3>Scientific explanation</h3><p>An operating system manages hardware resources and gives programs safe abstractions: processes, files, memory, devices and scheduling. Many test questions ask what component is responsible for a specific job.</p></div>
+      <div class="card"><h3>Life analogy</h3><p>OS is a building manager: gives rooms, schedules elevators, controls keys, handles device requests and prevents tenants from damaging each other.</p></div>
+      <div class="card"><h3>Typical traps</h3><ul><li>Process has its own address space; threads share process memory.</li><li>Mutex is one-at-a-time access; semaphore can allow limited multiple access.</li><li>Deadlock is circular waiting.</li><li>Kernel mode has privileged access; user mode is restricted.</li></ul></div>
+      <div class="card"><h3>Mini-drill</h3><ul><li>Race condition -&gt; result depends on timing/order of threads.</li><li>Driver -&gt; lets OS control hardware.</li><li>Buffer -&gt; smooths speed differences in I/O.</li></ul></div>
+      <div class="card wide"><h3>What v27 tests ask here</h3><ul><li><b>process thread</b>: Процес відрізняється від потоку тим, що процес:</li><li><b>scheduler</b>: Планувальник ОС вирішує:</li><li><b>deadlock</b>: Deadlock — це ситуація, коли:</li><li><b>mutex</b>: Mutex потрібен для:</li><li><b>semaphore</b>: Semaphore відрізняється від простого mutex тим, що може:</li><li><b>virtual memory</b>: Віртуальна пам&#39;ять дає змогу:</li></ul></div>
+    </div>
+    
+    
+  </section>
+<section class="page block" id="block-09">
+    <div class="kicker">Block 09 / programming</div>
+    <h2>🧩 Programming Paradigms and Code Tracing</h2>
+    <p class="focus"><b>Focus:</b> Procedural, OOP, functional, encapsulation, inheritance, polymorphism, interfaces, recursion, tracing variables.</p>
+    <div class="grid">
+      <div class="card wide"><h3>Schema</h3><pre>PROGRAMMING PARADIGMS
+  |
+  |-- procedural: functions/procedures + data
+  |-- OOP: class, object, state, methods
+  |-- functional: pure functions, less mutable state
+  |-- tracing: update variables step by step
+  |-- recursion: function calls itself with a smaller case</pre></div>
+      <div class="card"><h3>Scientific explanation</h3><p>Programming paradigms are ways to organize code and thinking. Procedural code emphasizes steps, OOP emphasizes objects with state and behaviour, functional programming emphasizes transformations through functions.</p></div>
+      <div class="card"><h3>Life analogy</h3><p>Procedural is a recipe; OOP is a set of smart devices with their own buttons and state; functional is a clean pipeline where each step transforms input into output.</p></div>
+      <div class="card"><h3>Typical traps</h3><ul><li>Class is a template; object is a concrete instance.</li><li>Encapsulation is controlled access to state, not just the word private.</li><li>Inheritance is is-a; composition is has-a.</li><li>Tracing variables must be done line by line, not by guessing.</li></ul></div>
+      <div class="card"><h3>Mini-drill</h3><ul><li>Make a table: iteration | a | b | x | y | result.</li><li>Limit tracing tasks in practice: enough to build skill, not enough to replace theory.</li><li>If assignment changes x, the next line uses the new x.</li></ul></div>
+      <div class="card wide"><h3>What v27 tests ask here</h3><ul><li><b>procedural</b>: Що покладено в основу процедурного програмування?</li><li><b>oop</b>: Що є основою об&#39;єктно-орієнтованого програмування?</li><li><b>functional</b>: Функціональне програмування найбільше підкреслює:</li><li><b>encapsulation</b>: Інкапсуляція означає:</li><li><b>inheritance</b>: Наслідування в ООП — це:</li><li><b>polymorphism</b>: Поліморфізм проявляється, коли:</li></ul></div>
+    </div>
+    
+    <div class="example"><h4>Code tracing: enough to pass, not too much</h4><pre><code>x = 2
+y = 3
+z = 1
+
+for i = 1 to 3:
+    z = z + x
+    x = x + y
+    y = y * 2</code></pre><table><tr><th>i</th><th>x</th><th>y</th><th>z</th></tr><tr><td>0</td><td>2</td><td>3</td><td>1</td></tr><tr><td>1</td><td>5</td><td>6</td><td>3</td></tr><tr><td>2</td><td>11</td><td>12</td><td>8</td></tr><tr><td>3</td><td>23</td><td>24</td><td>19</td></tr></table><p><b>Rule:</b> every next line uses the newest value. Do not mentally jump. Draw the table.</p></div>
+  </section>
+<section class="page block" id="block-10">
+    <div class="kicker">Block 10 / ai</div>
+    <h2>🤖 AI, ML and Data Science</h2>
+    <p class="focus"><b>Focus:</b> kNN, classification/regression/clustering, SVM, neural networks, activation functions, overfitting, IoU.</p>
+    <div class="grid">
+      <div class="card wide"><h3>Schema</h3><pre>MACHINE LEARNING
+  |
+  |-- supervised: labelled data, classification/regression
+  |-- unsupervised: clustering, dimensionality reduction
+  |-- kNN: class from nearest labelled neighbours
+  |-- SVM: separating hyperplane with margin
+  |-- neural net: weights + activation + training</pre></div>
+      <div class="card"><h3>Scientific explanation</h3><p>Machine learning builds models from data. Training changes parameters, such as weights, so the model makes fewer errors. Evaluation checks whether the learned pattern generalizes beyond training examples.</p></div>
+      <div class="card"><h3>Life analogy</h3><p>kNN is asking the nearest neighbours what label they have. SVM is drawing the widest separating road between two groups. A neural network is a chain of adjustable knobs.</p></div>
+      <div class="card"><h3>Typical traps</h3><ul><li>kNN with known labels -&gt; supervised learning.</li><li>Classification predicts category; regression predicts number.</li><li>Sigmoid maps to 0..1; RBF Gaussian looks like e^(-c*x^2).</li><li>IoU is for segmentation overlap, not image quality in general.</li></ul></div>
+      <div class="card"><h3>Mini-drill</h3><ul><li>Training NN -&gt; changing weights.</li><li>Overfitting -&gt; good train score, worse test score.</li><li>Recall -&gt; how many true positives were found.</li></ul></div>
+      <div class="card wide"><h3>What v27 tests ask here</h3><ul><li><b>knn</b>: До якого типу навчання належить kNN, якщо відомі правильні класи навчальних об&#39;єктів?</li><li><b>classification</b>: Класифікація в ML — це задача:</li><li><b>regression</b>: Регресія в ML — це задача:</li><li><b>clustering</b>: Кластеризація — це:</li><li><b>svm</b>: Для чого SVM використовує гіперплощину?</li><li><b>nn training</b>: Навчання нейронної мережі — це:</li></ul></div>
+    </div>
+    
+    
+  </section>
+  <section class="page">
+    <div class="kicker">TZNK and English</div>
+    <h2>Короткий міст до інших двох тестів</h2>
+    <div class="grid">
+      <div class="card"><h3>🧠 TZNK</h3><p>Тримати три питання: OR чи AND; порядок важливий чи ні; чи є заборонені варіанти, які треба відняти.</p><pre>OR -> add
+AND -> multiply
+roles -> arrangements
+no roles -> combinations
+bad cases -> total - forbidden</pre></div>
+      <div class="card"><h3>🇬🇧 English</h3><p>Фокус: grammar patterns, reading markers, conditionals, tense logic, connectors. У reading не перекладати все, а ловити reference words, contrast, cause/effect.</p><pre>however -> contrast
+therefore -> result
+unless -> if not
+although -> concession</pre></div>
+    </div>
+  </section>
+</body>
+</html>
