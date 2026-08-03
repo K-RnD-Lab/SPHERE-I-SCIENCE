@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520" role="img" aria-label="PM2.5 exposure: world and Ukraine">
 <rect width="100%" height="100%" fill="#fafafa"/>
 <text x="86" y="30" font-size="23" font-weight="700" fill="#111827">PM2.5 exposure: world and Ukraine</text>
-<text x="86" y="52" font-size="13" fill="#52525b">Mean annual exposure in micrograms per cubic meter; lower is better.</text>
+<text x="86" y="52" font-size="13" fill="#52525b">Mean annual exposure; the reference line is the WHO annual guideline.</text>
 <line x1="86" x2="924" y1="462" y2="462" stroke="#d4d4d8" stroke-width="1"/><text x="76" y="466" text-anchor="end" font-size="12" fill="#52525b">0</text>
 <line x1="86" x2="924" y1="361" y2="361" stroke="#d4d4d8" stroke-width="1"/><text x="76" y="365" text-anchor="end" font-size="12" fill="#52525b">9.2</text>
 <line x1="86" x2="924" y1="260" y2="260" stroke="#d4d4d8" stroke-width="1"/><text x="76" y="264" text-anchor="end" font-size="12" fill="#52525b">18.4</text>
@@ -15,5 +15,6 @@
 <text x="86" y="46" font-size="12" fill="#52525b">Micrograms per cubic meter</text>
 <path d="M86.0,60.0 L347.9,58.0 L609.8,67.0 L740.7,61.4 L845.4,96.0 L871.6,105.7 L897.8,98.0 L924.0,103.1" fill="none" stroke="#2563eb" stroke-width="3"/><text x="916" y="95.137340272796" text-anchor="end" font-size="13" fill="#2563eb">World: 32.7</text>
 <path d="M86.0,66.7 L347.9,128.3 L609.8,241.2 L740.7,274.0 L845.4,283.4 L871.6,286.7 L897.8,289.6 L924.0,308.3" fill="none" stroke="#dc2626" stroke-width="3"/><text x="916" y="300.2531397531368" text-anchor="end" font-size="13" fill="#dc2626">Ukraine: 14</text>
-<text x="86" y="504" font-size="12" fill="#71717a">Source: World Bank WDI via OWID grapher.</text>
+<path d="M86.0,407.2 L924.0,407.2" fill="none" stroke="#16a34a" stroke-width="3"/><text x="916" y="399.1819180114171" text-anchor="end" font-size="13" fill="#16a34a">WHO guideline: 5</text>
+<text x="86" y="504" font-size="12" fill="#71717a">Source: World Bank WDI via OWID; WHO guideline: 5 micrograms/m3.</text>
 </svg>

@@ -10,6 +10,14 @@ This folder holds science-facing staging docs for S7 studies that need simple AS
 ## Generated outputs
 
 - `data/world_population_milestones.csv`
+- `data/world_births_deaths_annual.csv`
 - `data/world_births_deaths_milestones.csv`
+- `data/world_demographic_transition_milestones.csv`
+- `data/birth_death_lag_correlations.csv`
 - `figures/world-population-long-run.svg`
 - `figures/world-births-deaths-1950-2023.svg`
+- `figures/world-birth-death-ratio-1950-2023.svg`
+- `figures/world-net-natural-increase-1950-2023.svg`
+- `figures/world-fertility-1950-2023.svg`
+- `figures/world-life-expectancy-1950-2023.svg`
+- `figures/birth-death-lag-correlations.svg`

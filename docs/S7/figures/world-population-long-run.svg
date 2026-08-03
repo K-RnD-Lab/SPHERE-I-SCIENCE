@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520" role="img" aria-label="World population long-run baseline">
 <rect width="100%" height="100%" fill="#fafafa"/>
 <text x="86" y="30" font-size="23" font-weight="700" fill="#111827">World population long-run baseline</text>
-<text x="86" y="52" font-size="13" fill="#52525b">Selected milestones from OWID population series; early years are historical reconstructions, not census counts.</text>
+<text x="86" y="52" font-size="13" fill="#52525b">Selected milestones; early years are reconstructions, not census counts.</text>
 <line x1="86" x2="924" y1="407.3483160667463" y2="407.3483160667463" stroke="#d4d4d8" stroke-width="1"/><text x="76" y="411.3483160667463" text-anchor="end" font-size="12" fill="#52525b">500M</text>
 <line x1="86" x2="924" y1="320.368919405463" y2="320.368919405463" stroke="#d4d4d8" stroke-width="1"/><text x="76" y="324.368919405463" text-anchor="end" font-size="12" fill="#52525b">1.0B</text>
 <line x1="86" x2="924" y1="233.3895227441797" y2="233.3895227441797" stroke="#d4d4d8" stroke-width="1"/><text x="76" y="237.3895227441797" text-anchor="end" font-size="12" fill="#52525b">2.0B</text>
@@ -18,5 +18,5 @@
 <line x1="924" x2="924" y1="462" y2="468" stroke="#71717a"/><text x="924" y="486" text-anchor="middle" font-size="12" fill="#52525b">2023</text>
 <text x="86" y="46" font-size="12" fill="#52525b">People, log scale</text>
 <path d="M86.0,462.0 L495.6,406.6 L741.3,322.5 L823.2,259.3 L864.2,205.7 L905.2,92.0 L924.0,58.0" fill="none" stroke="#2563eb" stroke-width="3"/><text x="916" y="50" text-anchor="end" font-size="13" fill="#2563eb">Population: 8.1B</text>
-<text x="86" y="504" font-size="12" fill="#71717a">Source: OWID population grapher, HYDE / Gapminder / UN WPP processing.</text>
+<text x="86" y="504" font-size="12" fill="#71717a">Source: OWID population series, HYDE / Gapminder / UN WPP.</text>
 </svg>

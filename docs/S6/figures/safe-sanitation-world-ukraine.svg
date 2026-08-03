@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520" role="img" aria-label="Safely managed sanitation">
+<rect width="100%" height="100%" fill="#fafafa"/>
+<text x="86" y="30" font-size="23" font-weight="700" fill="#111827">Safely managed sanitation</text>
+<text x="86" y="52" font-size="13" fill="#52525b">Service coverage is a pressure-control indicator, not direct river-quality evidence.</text>
+<line x1="86" x2="924" y1="462" y2="462" stroke="#d4d4d8" stroke-width="1"/><text x="76" y="466" text-anchor="end" font-size="12" fill="#52525b">0</text>
+<line x1="86" x2="924" y1="361" y2="361" stroke="#d4d4d8" stroke-width="1"/><text x="76" y="365" text-anchor="end" font-size="12" fill="#52525b">23.1</text>
+<line x1="86" x2="924" y1="260" y2="260" stroke="#d4d4d8" stroke-width="1"/><text x="76" y="264" text-anchor="end" font-size="12" fill="#52525b">46.2</text>
+<line x1="86" x2="924" y1="159" y2="159" stroke="#d4d4d8" stroke-width="1"/><text x="76" y="163" text-anchor="end" font-size="12" fill="#52525b">69.3</text>
+<line x1="86" x2="924" y1="58" y2="58" stroke="#d4d4d8" stroke-width="1"/><text x="76" y="62" text-anchor="end" font-size="12" fill="#52525b">92.4</text>
+<line x1="86" x2="924" y1="462" y2="462" stroke="#71717a"/>
+<line x1="86" x2="86" y1="58" y2="462" stroke="#71717a"/>
+<line x1="86" x2="86" y1="462" y2="468" stroke="#71717a"/><text x="86" y="486" text-anchor="middle" font-size="12" fill="#52525b">2000</text>
+<line x1="924" x2="924" y1="462" y2="468" stroke="#71717a"/><text x="924" y="486" text-anchor="middle" font-size="12" fill="#52525b">2024</text>
+<text x="86" y="46" font-size="12" fill="#52525b">Share of population, %</text>
+<path d="M86.0,325.1 L260.6,308.4 L435.2,280.6 L609.8,250.4 L784.3,220.7 L854.2,212.6 L889.1,209.3 L924.0,206.2" fill="none" stroke="#2563eb" stroke-width="3"/><text x="916" y="198.2248966895971" text-anchor="end" font-size="13" fill="#2563eb">World: 58.5</text>
+<path d="M86.0,78.9 L260.6,73.5 L435.2,66.9 L609.8,61.7 L784.3,59.4 L854.2,58.7 L889.1,58.3 L924.0,58.0" fill="none" stroke="#dc2626" stroke-width="3"/><text x="916" y="50" text-anchor="end" font-size="13" fill="#dc2626">Ukraine: 92.4</text>
+<text x="86" y="504" font-size="12" fill="#71717a">Source: WHO/UNICEF JMP 2025 via OWID.</text>
+</svg>

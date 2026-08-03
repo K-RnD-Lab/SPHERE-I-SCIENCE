@@ -37,7 +37,7 @@ It keeps `S6` readable as an environmental-science and environmental-intelligenc
 ### `S6-D Pollution, Stress & Response Networks`
 
 - `R1` guide: mapped
-- `R1a` global and Ukraine pollution visual study: active scaffold
+- `R1a` global and Ukraine pollution systems study: active preliminary research with reproducible data and seven visual panels
 - `R2` guide: mapped
 
 ### `S6-E Climate-Linked Ecological Change`

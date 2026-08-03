@@ -12,7 +12,7 @@
 
 ## Current study
 
-- [S6-D-R1a Global And Ukraine Pollution Visual Study](../../docs/S6/S6_D_R1A_GLOBAL_UKRAINE_POLLUTION_VISUAL_STUDY.md)
+- [S6-D-R1a Global And Ukraine Pollution Systems Study](../../docs/S6/S6_D_R1A_GLOBAL_UKRAINE_POLLUTION_VISUAL_STUDY.md)
 
 ## Boundary rule
 
