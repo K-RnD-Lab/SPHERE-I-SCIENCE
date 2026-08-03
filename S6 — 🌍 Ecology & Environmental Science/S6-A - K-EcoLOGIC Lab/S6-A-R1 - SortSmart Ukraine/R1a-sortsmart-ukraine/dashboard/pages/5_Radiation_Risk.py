@@ -45,6 +45,46 @@ st.warning(
     "Current MVP uses the open SaveEcoBot/SaveDnipro radiation-monitoring package from data.gov.ua. It is excellent for coverage analysis, but it should not be treated as a sole source for emergency decisions."
 )
 
+st.markdown("### Radiation remediation hypothesis checker")
+
+hypotheses = {
+    "Can water remove radiation?": (
+        "Partly valid",
+        "Water can wash loose radioactive material, shield radiation, carry heat, and serve as a treatment medium. "
+        "It does not erase absorbed dose, neutralize radioactive nuclei, or make contaminated water safe without measurement.",
+        "Model shielding or treatment digitally; track activity in treated water, filters, sludge, and brine.",
+    ),
+    "Can membranes or sorbent films clean radioactive water?": (
+        "Valid for selected radionuclides",
+        "Membranes, zeolites, and selective ion exchangers can capture particles or dissolved ions such as selected caesium and strontium forms. "
+        "Performance depends on radionuclide, chemical form, pH, competing ions, fouling, and flow.",
+        "Start with literature, aqueous chemistry, non-radioactive analogues, and a complete secondary-waste route.",
+    ),
+    "Can radioactivity be converted into useful energy?": (
+        "Valid only in engineered systems",
+        "Nuclear fuel and sealed radioisotope sources can provide heat or electricity. Harvesting energy does not itself decontaminate dispersed soil, water, or forests.",
+        "Compare useful energy recovered with containment, dose, waste, lifecycle, and end-of-life requirements.",
+    ),
+    "Does cooling remain necessary after shutdown?": (
+        "Yes",
+        "Fission stops, but radioactive decay continues to generate decay heat. Reactors and recently discharged spent fuel require reliable heat removal and shielding.",
+        "Treat cooling as a regulated nuclear-safety system with redundant power, pumps, barriers, instrumentation, and emergency procedures.",
+    ),
+    "Does an infusion remove radiation or toxins?": (
+        "Not as a general claim",
+        "Ordinary intravenous fluid does not remove external radiation and is not a universal radionuclide treatment. "
+        "Decorporation medicines are radionuclide-specific and require medical assessment and supervision.",
+        "Separate supportive treatment from measured internal contamination; rely on bioassay, dosimetry, and specialist guidance.",
+    ),
+}
+
+selected_hypothesis = st.selectbox("Hypothesis", list(hypotheses))
+verdict, explanation, safe_test = hypotheses[selected_hypothesis]
+st.markdown(f"**Verdict:** {verdict}")
+st.write(explanation)
+st.info(f"Safe validation path: {safe_test}")
+st.caption("Full protocol: S6-A-R5b Radiation Remediation Hypothesis Protocol")
+
 overview = load_radiation_overview()
 locations = load_radiation_locations()
 platforms = load_radiation_platforms()

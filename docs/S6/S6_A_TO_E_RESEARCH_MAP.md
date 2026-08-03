@@ -77,11 +77,11 @@ This gives `S6-A` a durable civic and public-interest use case.
 #### Substudies
 
 - `S6-A-R5a` radiation-monitoring station coverage
-- `S6-A-R5b` environmental-risk source and indicator context
+- `S6-A-R5b` radiation remediation, water-treatment, shielding, and thermal-management hypothesis testing
 
 #### Why this matters
 
-This keeps radiation risk visible as monitoring-network context, not as an unvalidated emergency feed.
+This keeps radiation risk visible as monitoring-network context while adding a strictly controlled path for remediation hypotheses, not an unvalidated emergency feed or public experiment surface.
 
 ### `S6-A-R6` Land, Soil, and Environmental Damage Signals
 
