@@ -22,6 +22,7 @@ Use the top-level `S6` layer as the navigation index for all environmental lanes
 Current active lane:
 
 - [S6-A - K-EcoLOGIC Lab](./S6-A%20-%20K-EcoLOGIC%20Lab/)
+- [S6-D - Pollution, Stress & Response Networks](./S6-D%20-%20Pollution,%20Stress%20%26%20Response%20Networks/)
 
 Current public app entrypoint:
 

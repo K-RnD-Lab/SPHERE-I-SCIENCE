@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520" role="img" aria-label="Global annual births and deaths">
+<rect width="100%" height="100%" fill="#fafafa"/>
+<text x="86" y="30" font-size="23" font-weight="700" fill="#111827">Global annual births and deaths</text>
+<text x="86" y="52" font-size="13" fill="#52525b">Milestone years from UN WPP via OWID; this is demographic turnover, not evidence for reincarnation.</text>
+<line x1="86" x2="930" y1="448" y2="448" stroke="#d4d4d8"/><text x="76" y="452" text-anchor="end" font-size="12" fill="#52525b">0</text>
+<line x1="86" x2="930" y1="351.5" y2="351.5" stroke="#d4d4d8"/><text x="76" y="355.5" text-anchor="end" font-size="12" fill="#52525b">36M</text>
+<line x1="86" x2="930" y1="255" y2="255" stroke="#d4d4d8"/><text x="76" y="259" text-anchor="end" font-size="12" fill="#52525b">72M</text>
+<line x1="86" x2="930" y1="158.5" y2="158.5" stroke="#d4d4d8"/><text x="76" y="162.5" text-anchor="end" font-size="12" fill="#52525b">108M</text>
+<line x1="86" x2="930" y1="62" y2="62" stroke="#d4d4d8"/><text x="76" y="66" text-anchor="end" font-size="12" fill="#52525b">143M</text>
+<line x1="86" x2="930" y1="448" y2="448" stroke="#71717a"/>
+<line x1="86" x2="86" y1="62" y2="448" stroke="#71717a"/>
+<text x="86" y="50" font-size="12" fill="#52525b">People per year</text>
+<rect x="105.30718954248366" y="200.936776730636" width="27.581699346405227" height="247.063223269364" fill="#2563eb"><title>1950 births: 92M</title></rect>
+<rect x="132.88888888888889" y="317.5402547109878" width="27.581699346405227" height="130.45974528901218" fill="#dc2626"><title>1950 deaths: 48M</title></rect><text x="132.88888888888889" y="471" text-anchor="middle" font-size="12" fill="#52525b">1950</text>
+<rect x="199.08496732026143" y="172.53960876729093" width="27.581699346405227" height="275.46039123270907" fill="#2563eb"><title>1960 births: 102M</title></rect>
+<rect x="226.66666666666666" y="301.0587398340265" width="27.581699346405227" height="146.94126016597352" fill="#dc2626"><title>1960 deaths: 55M</title></rect><text x="226.66666666666666" y="471" text-anchor="middle" font-size="12" fill="#52525b">1960</text>
+<rect x="292.8627450980392" y="113.99760827684543" width="27.581699346405227" height="334.0023917231546" fill="#2563eb"><title>1970 births: 124M</title></rect>
+<rect x="320.44444444444446" y="318.4104654199017" width="27.581699346405227" height="129.5895345800983" fill="#dc2626"><title>1970 deaths: 48M</title></rect><text x="320.44444444444446" y="471" text-anchor="middle" font-size="12" fill="#52525b">1970</text>
+<rect x="386.640522875817" y="105.08874327327862" width="27.581699346405227" height="342.9112567267214" fill="#2563eb"><title>1980 births: 127M</title></rect>
+<rect x="414.22222222222223" y="320.5994022365037" width="27.581699346405227" height="127.40059776349631" fill="#dc2626"><title>1980 deaths: 47M</title></rect><text x="414.2222222222222" y="471" text-anchor="middle" font-size="12" fill="#52525b">1980</text>
+<rect x="480.41830065359477" y="62" width="27.581699346405227" height="386" fill="#2563eb"><title>1990 births: 143M</title></rect>
+<rect x="508" y="314.0223997225177" width="27.581699346405227" height="133.97760027748228" fill="#dc2626"><title>1990 deaths: 50M</title></rect><text x="508" y="471" text-anchor="middle" font-size="12" fill="#52525b">1990</text>
+<rect x="574.1960784313726" y="82.7256755161074" width="27.581699346405227" height="365.2743244838926" fill="#2563eb"><title>2000 births: 136M</title></rect>
+<rect x="601.7777777777778" y="307.4410760746687" width="27.581699346405227" height="140.55892392533133" fill="#dc2626"><title>2000 deaths: 52M</title></rect><text x="601.7777777777778" y="471" text-anchor="middle" font-size="12" fill="#52525b">2000</text>
+<rect x="667.9738562091503" y="62.28838052767077" width="27.581699346405227" height="385.71161947232923" fill="#2563eb"><title>2010 births: 143M</title></rect>
+<rect x="695.5555555555555" y="301.98391450468006" width="27.581699346405227" height="146.01608549531994" fill="#dc2626"><title>2010 deaths: 54M</title></rect><text x="695.5555555555555" y="471" text-anchor="middle" font-size="12" fill="#52525b">2010</text>
+<rect x="761.751633986928" y="85.52085180810286" width="27.581699346405227" height="362.47914819189714" fill="#2563eb"><title>2020 births: 135M</title></rect>
+<rect x="789.3333333333333" y="277.0210847208957" width="27.581699346405227" height="170.97891527910429" fill="#dc2626"><title>2020 deaths: 64M</title></rect><text x="789.3333333333333" y="471" text-anchor="middle" font-size="12" fill="#52525b">2020</text>
+<rect x="855.5294117647059" y="92.54163423169797" width="27.581699346405227" height="355.45836576830203" fill="#2563eb"><title>2023 births: 132M</title></rect>
+<rect x="883.1111111111111" y="282.1190163878205" width="27.581699346405227" height="165.88098361217948" fill="#dc2626"><title>2023 deaths: 62M</title></rect><text x="883.1111111111111" y="471" text-anchor="middle" font-size="12" fill="#52525b">2023</text>
+<rect x="86" y="486" width="12" height="12" fill="#2563eb"/><text x="104" y="497" font-size="12" fill="#374151">births</text>
+<rect x="241" y="486" width="12" height="12" fill="#dc2626"/><text x="259" y="497" font-size="12" fill="#374151">deaths</text>
+<text x="86" y="512" font-size="12" fill="#71717a">Source: OWID annual births/deaths by world region, UN WPP 2024.</text>
+</svg>

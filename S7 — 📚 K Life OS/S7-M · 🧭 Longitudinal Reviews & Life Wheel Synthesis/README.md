@@ -13,6 +13,11 @@ This lane exists so broad life-pattern reviews do not have to be duplicated insi
 Current structure:
 
 - `R1 - Overall Five-Year Assessment`
+- `R2 - Demographic Turnover And Rebirth-Pattern Study`
+
+Current staged research:
+
+- [S7-M-R2a Demographic Turnover And Rebirth-Pattern Study](../../docs/S7/S7_M_R2A_DEMOGRAPHIC_TURNOVER_REBIRTH_PATTERN_STUDY.md)
 
 Recommended core fields:
 - `life_sphere`
