@@ -256,6 +256,33 @@ ${note ? `<text x="${margin.left}" y="${height - 8}" font-size="12" fill="#71717
 </svg>\n`;
 }
 
+function evidenceTimelineSvg(events, width = 960, height = 500) {
+  const left = 90;
+  const right = width - 60;
+  const top = 90;
+  const gap = (right - left) / (events.length - 1);
+  const colors = ["#9333ea", "#7c3aed", "#2563eb", "#0891b2", "#16a34a", "#ca8a04", "#dc2626"];
+  const marks = events.map((event, index) => {
+    const x = left + gap * index;
+    const y = top + (index % 2 ? 105 : 0);
+    const date = event.year < 0 ? `${Math.abs(event.year).toLocaleString("en-US")} BCE` : `${event.year} CE`;
+    return `<line x1="${x}" x2="${x}" y1="${top}" y2="${y + 18}" stroke="#a1a1aa" stroke-width="1"/>
+<circle cx="${x}" cy="${top}" r="8" fill="${colors[index % colors.length]}"/>
+<text x="${x}" y="${y + 42}" text-anchor="middle" font-size="13" font-weight="700" fill="#111827">${date}</text>
+<text x="${x}" y="${y + 62}" text-anchor="middle" font-size="12" fill="#374151">${event.short}</text>
+<text x="${x}" y="${y + 80}" text-anchor="middle" font-size="11" fill="#71717a">${event.evidence}</text>`;
+  }).join("\n");
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-label="Human demographic evidence from deep time to modern statistics">
+<rect width="100%" height="100%" fill="#fafafa"/>
+<text x="${left}" y="30" font-size="23" font-weight="700" fill="#111827">Human demographic evidence across deep time</text>
+<text x="${left}" y="52" font-size="13" fill="#52525b">Evidence types change across eras; positions are schematic and not proportional to elapsed time.</text>
+<line x1="${left}" x2="${right}" y1="${top}" y2="${top}" stroke="#71717a" stroke-width="2"/>
+${marks}
+<text x="${left}" y="${height - 34}" font-size="12" fill="#52525b">Fossils date human origins; genetics estimates breeding-history proxies; HYDE reconstructs population; UN WPP models annual demographic flows.</text>
+<text x="${left}" y="${height - 14}" font-size="12" fill="#71717a">No continuous global birth/death register exists for prehistory.</text>
+</svg>\n`;
+}
+
 async function legacyMain() {
   for (const dir of Object.values(out)) await mkdir(dir, { recursive: true });
   const [populationRows, birthRows, deathRows, co2Rows, pm25Rows] = await Promise.all(Object.values(urls).map(fetchCsv));
@@ -316,9 +343,18 @@ async function legacyMain() {
 }
 
 async function buildDemography({ populationRows, birthRows, deathRows, fertilityRows, lifeExpectancyRows, fields }) {
-  const longYears = new Set([1, 1000, 1500, 1800, 1900, 1950, 2000, 2023]);
+  const longYears = new Set([-10000, -8000, -5000, -3000, -1000, 0, 1000, 1500, 1800, 1900, 1950, 2000, 2023]);
   const milestoneYears = new Set([1950, 1960, 1970, 1980, 1990, 2000, 2010, 2020, 2023]);
   const worldPopulation = pick(populationRows, "World", fields.population, longYears);
+  const deepTimeEvidence = [
+    { year: -315000, short: "Early H. sapiens", evidence: "dated fossils", inference: "species-origin evidence; no population count", numeric_scope: "none" },
+    { year: -100000, short: "Pleistocene proxy", evidence: "population genetics", inference: "effective breeding size; not census size", numeric_scope: "model-dependent proxy" },
+    { year: -10000, short: "HYDE begins", evidence: "global reconstruction", inference: "estimated world population from archaeology and historical synthesis", numeric_scope: "population estimate" },
+    { year: 0, short: "Start of CE", evidence: "historical reconstruction", inference: "estimated global population; no complete vital registration", numeric_scope: "population estimate" },
+    { year: 1800, short: "Historical era", evidence: "censuses and reconstructions", inference: "improving population coverage with regional vital records", numeric_scope: "population estimate" },
+    { year: 1950, short: "UN WPP series", evidence: "annual demographic model", inference: "globally comparable births deaths fertility mortality", numeric_scope: "annual estimates" },
+    { year: 2023, short: "Current endpoint", evidence: "UN WPP 2024", inference: "latest estimate used in this study", numeric_scope: "annual estimates" },
+  ];
   const populationAnnual = new Map(pick(populationRows, "World", fields.population).map((d) => [d.year, d.value]));
   const worldBirthsDeaths = joinBirthDeath(
     pick(birthRows, "World", fields.births),
@@ -341,13 +377,14 @@ async function buildDemography({ populationRows, birthRows, deathRows, fertility
   const transitionMilestones = demographicTransition.filter((d) => milestoneYears.has(d.year));
 
   await writeFile(path.join(out.demographyData, "world_population_milestones.csv"), csv(worldPopulation, ["year", "value"]));
+  await writeFile(path.join(out.demographyData, "human_deep_time_evidence_timeline.csv"), csv(deepTimeEvidence, ["year", "short", "evidence", "inference", "numeric_scope"]));
   await writeFile(path.join(out.demographyData, "world_births_deaths_annual.csv"), csv(worldBirthsDeaths, ["year", "births", "deaths", "net", "turnover", "birth_death_ratio", "net_rate_per_1000", "turnover_rate_per_1000"]));
   await writeFile(path.join(out.demographyData, "world_births_deaths_milestones.csv"), csv(birthDeathMilestones, ["year", "births", "deaths", "net", "turnover", "birth_death_ratio", "net_rate_per_1000", "turnover_rate_per_1000"]));
   await writeFile(path.join(out.demographyData, "world_demographic_transition_milestones.csv"), csv(transitionMilestones, ["year", "fertility", "life_expectancy"]));
   await writeFile(path.join(out.demographyData, "birth_death_lag_correlations.csv"), csv(lagSummary, ["lag", "level_correlation", "change_correlation", "level_n", "change_n"]));
 
   const figures = [
-    ["world-population-long-run.svg", { title: "World population long-run baseline", subtitle: "Selected milestones; early years are reconstructions, not census counts.", series: [{ name: "Population", values: worldPopulation }], yLabel: "People, log scale", logY: true, note: "Source: OWID population series, HYDE / Gapminder / UN WPP." }],
+    ["world-population-long-run.svg", { title: "World population from 10,000 BCE to 2023", subtitle: "HYDE and historical estimates precede modern UN series; early values are reconstructions.", series: [{ name: "Population", values: worldPopulation }], yLabel: "People, log scale", logY: true, note: "Source: HYDE / Gapminder / UN WPP via OWID. No population count is inferred for 315,000 BCE." }],
     ["world-birth-death-ratio-1950-2023.svg", { title: "Birth-to-death ratio: demographic replacement flow", subtitle: "Above 1 means births exceeded deaths; this does not measure identity transfer.", series: [{ name: "Births / deaths", values: worldBirthsDeaths.map((d) => ({ year: d.year, value: d.birth_death_ratio })) }], yLabel: "Ratio", note: "Derived from UN WPP 2024 births and deaths via OWID." }],
     ["world-net-natural-increase-1950-2023.svg", { title: "Global net natural increase", subtitle: "Annual births minus annual deaths; migration cancels at the world level.", series: [{ name: "Births - deaths", values: worldBirthsDeaths.map((d) => ({ year: d.year, value: d.net })) }], yLabel: "People per year", note: "Derived from UN WPP 2024 births and deaths via OWID." }],
     ["world-fertility-1950-2023.svg", { title: "Global fertility transition", subtitle: "Average births per woman under period fertility rates.", series: [{ name: "Fertility", values: demographicTransition.map((d) => ({ year: d.year, value: d.fertility })) }], yLabel: "Births per woman", note: "Source: UN WPP 2024 via OWID." }],
@@ -355,6 +392,7 @@ async function buildDemography({ populationRows, birthRows, deathRows, fertility
     ["birth-death-lag-correlations.svg", { title: "Exploratory birth-death lag correlations", subtitle: "Annual levels and year-to-year changes, lags from -20 to +20 years.", series: [{ name: "Levels", values: lagSummary.map((d) => ({ year: d.lag, value: d.level_correlation })) }, { name: "Annual changes", values: lagSummary.map((d) => ({ year: d.lag, value: d.change_correlation })) }], yLabel: "Pearson correlation", note: "Exploratory only: trends, age structure and shocks prevent causal interpretation." }],
   ];
   for (const [name, config] of figures) await writeFile(path.join(out.demographyFigures, name), lineSvg(config));
+  await writeFile(path.join(out.demographyFigures, "human-deep-time-evidence-timeline.svg"), evidenceTimelineSvg(deepTimeEvidence));
   await writeFile(path.join(out.demographyFigures, "world-births-deaths-1950-2023.svg"), barSvg({
     title: "Global annual births and deaths",
     subtitle: "Milestone years; demographic turnover is not evidence for reincarnation.",

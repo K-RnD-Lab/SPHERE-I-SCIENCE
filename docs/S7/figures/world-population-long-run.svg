@@ -1,22 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520" role="img" aria-label="World population long-run baseline">
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520" role="img" aria-label="World population from 10,000 BCE to 2023">
 <rect width="100%" height="100%" fill="#fafafa"/>
-<text x="86" y="30" font-size="23" font-weight="700" fill="#111827">World population long-run baseline</text>
-<text x="86" y="52" font-size="13" fill="#52525b">Selected milestones; early years are reconstructions, not census counts.</text>
-<line x1="86" x2="924" y1="407.3483160667463" y2="407.3483160667463" stroke="#d4d4d8" stroke-width="1"/><text x="76" y="411.3483160667463" text-anchor="end" font-size="12" fill="#52525b">500M</text>
-<line x1="86" x2="924" y1="320.368919405463" y2="320.368919405463" stroke="#d4d4d8" stroke-width="1"/><text x="76" y="324.368919405463" text-anchor="end" font-size="12" fill="#52525b">1.0B</text>
-<line x1="86" x2="924" y1="233.3895227441797" y2="233.3895227441797" stroke="#d4d4d8" stroke-width="1"/><text x="76" y="237.3895227441797" text-anchor="end" font-size="12" fill="#52525b">2.0B</text>
-<line x1="86" x2="924" y1="146.41012608289634" y2="146.41012608289634" stroke="#d4d4d8" stroke-width="1"/><text x="76" y="150.41012608289634" text-anchor="end" font-size="12" fill="#52525b">4.0B</text>
-<line x1="86" x2="924" y1="59.43072942161308" y2="59.43072942161308" stroke="#d4d4d8" stroke-width="1"/><text x="76" y="63.43072942161308" text-anchor="end" font-size="12" fill="#52525b">8.0B</text>
+<text x="86" y="30" font-size="23" font-weight="700" fill="#111827">World population from 10,000 BCE to 2023</text>
+<text x="86" y="52" font-size="13" fill="#52525b">HYDE and historical estimates precede modern UN series; early values are reconstructions.</text>
+<line x1="86" x2="924" y1="294.8404368946651" y2="294.8404368946651" stroke="#d4d4d8" stroke-width="1"/><text x="76" y="298.8404368946651" text-anchor="end" font-size="12" fill="#52525b">100M</text>
+<line x1="86" x2="924" y1="208.07903868720967" y2="208.07903868720967" stroke="#d4d4d8" stroke-width="1"/><text x="76" y="212.07903868720967" text-anchor="end" font-size="12" fill="#52525b">500M</text>
+<line x1="86" x2="924" y1="170.71293833358766" y2="170.71293833358766" stroke="#d4d4d8" stroke-width="1"/><text x="76" y="174.71293833358766" text-anchor="end" font-size="12" fill="#52525b">1.0B</text>
+<line x1="86" x2="924" y1="133.3468379799657" y2="133.3468379799657" stroke="#d4d4d8" stroke-width="1"/><text x="76" y="137.3468379799657" text-anchor="end" font-size="12" fill="#52525b">2.0B</text>
+<line x1="86" x2="924" y1="95.98073762634374" y2="95.98073762634374" stroke="#d4d4d8" stroke-width="1"/><text x="76" y="99.98073762634374" text-anchor="end" font-size="12" fill="#52525b">4.0B</text>
+<line x1="86" x2="924" y1="58.61463727272172" y2="58.61463727272172" stroke="#d4d4d8" stroke-width="1"/><text x="76" y="62.61463727272172" text-anchor="end" font-size="12" fill="#52525b">8.0B</text>
 <line x1="86" x2="924" y1="462" y2="462" stroke="#71717a"/>
 <line x1="86" x2="86" y1="58" y2="462" stroke="#71717a"/>
-<line x1="86" x2="86" y1="462" y2="468" stroke="#71717a"/><text x="86" y="486" text-anchor="middle" font-size="12" fill="#52525b">1000</text>
-<line x1="495.57966764418376" x2="495.57966764418376" y1="462" y2="468" stroke="#71717a"/><text x="495.57966764418376" y="486" text-anchor="middle" font-size="12" fill="#52525b">1500</text>
-<line x1="741.327468230694" x2="741.327468230694" y1="462" y2="468" stroke="#71717a"/><text x="741.327468230694" y="486" text-anchor="middle" font-size="12" fill="#52525b">1800</text>
-<line x1="823.2434017595308" x2="823.2434017595308" y1="462" y2="468" stroke="#71717a"/><text x="823.2434017595308" y="486" text-anchor="middle" font-size="12" fill="#52525b">1900</text>
-<line x1="864.2013685239491" x2="864.2013685239491" y1="462" y2="468" stroke="#71717a"/><text x="864.2013685239491" y="486" text-anchor="middle" font-size="12" fill="#52525b">1950</text>
-<line x1="905.1593352883675" x2="905.1593352883675" y1="462" y2="468" stroke="#71717a"/><text x="905.1593352883675" y="486" text-anchor="middle" font-size="12" fill="#52525b">2000</text>
+<line x1="86" x2="86" y1="462" y2="468" stroke="#71717a"/><text x="86" y="486" text-anchor="middle" font-size="12" fill="#52525b">10000 BCE</text>
+<line x1="783.0671213507444" x2="783.0671213507444" y1="462" y2="468" stroke="#71717a"/><text x="783.0671213507444" y="486" text-anchor="middle" font-size="12" fill="#52525b">1</text>
+<line x1="852.6971637694419" x2="852.6971637694419" y1="462" y2="468" stroke="#71717a"/><text x="852.6971637694419" y="486" text-anchor="middle" font-size="12" fill="#52525b">1000</text>
+<line x1="887.5470348498711" x2="887.5470348498711" y1="462" y2="468" stroke="#71717a"/><text x="887.5470348498711" y="486" text-anchor="middle" font-size="12" fill="#52525b">1500</text>
+<line x1="908.4569574981286" x2="908.4569574981286" y1="462" y2="468" stroke="#71717a"/><text x="908.4569574981286" y="486" text-anchor="middle" font-size="12" fill="#52525b">1800</text>
+<line x1="915.4269317142144" x2="915.4269317142144" y1="462" y2="468" stroke="#71717a"/><text x="915.4269317142144" y="486" text-anchor="middle" font-size="12" fill="#52525b">1900</text>
+<line x1="918.9119188222573" x2="918.9119188222573" y1="462" y2="468" stroke="#71717a"/><text x="918.9119188222573" y="486" text-anchor="middle" font-size="12" fill="#52525b">1950</text>
+<line x1="922.3969059303002" x2="922.3969059303002" y1="462" y2="468" stroke="#71717a"/><text x="922.3969059303002" y="486" text-anchor="middle" font-size="12" fill="#52525b">2000</text>
 <line x1="924" x2="924" y1="462" y2="468" stroke="#71717a"/><text x="924" y="486" text-anchor="middle" font-size="12" fill="#52525b">2023</text>
 <text x="86" y="46" font-size="12" fill="#52525b">People, log scale</text>
-<path d="M86.0,462.0 L495.6,406.6 L741.3,322.5 L823.2,259.3 L864.2,205.7 L905.2,92.0 L924.0,58.0" fill="none" stroke="#2563eb" stroke-width="3"/><text x="916" y="50" text-anchor="end" font-size="13" fill="#2563eb">Population: 8.1B</text>
-<text x="86" y="504" font-size="12" fill="#71717a">Source: OWID population series, HYDE / Gapminder / UN WPP.</text>
+<path d="M86.0,462.0 L225.4,435.8 L434.5,383.9 L573.9,338.4 L713.3,289.4 L783.0,249.4 L852.7,231.6 L887.5,207.8 L908.5,171.6 L915.4,144.5 L918.9,121.5 L922.4,72.6 L924.0,58.0" fill="none" stroke="#2563eb" stroke-width="3"/><text x="916" y="50" text-anchor="end" font-size="13" fill="#2563eb">Population: 8.1B</text>
+<text x="86" y="504" font-size="12" fill="#71717a">Source: HYDE / Gapminder / UN WPP via OWID. No population count is inferred for 315,000 BCE.</text>
 </svg>

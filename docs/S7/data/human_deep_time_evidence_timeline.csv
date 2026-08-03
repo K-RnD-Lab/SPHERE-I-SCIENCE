@@ -1,0 +1,8 @@
+year,short,evidence,inference,numeric_scope
+-315000,Early H. sapiens,dated fossils,species-origin evidence; no population count,none
+-100000,Pleistocene proxy,population genetics,effective breeding size; not census size,model-dependent proxy
+-10000,HYDE begins,global reconstruction,estimated world population from archaeology and historical synthesis,population estimate
+0,Start of CE,historical reconstruction,estimated global population; no complete vital registration,population estimate
+1800,Historical era,censuses and reconstructions,improving population coverage with regional vital records,population estimate
+1950,UN WPP series,annual demographic model,globally comparable births deaths fertility mortality,annual estimates
+2023,Current endpoint,UN WPP 2024,latest estimate used in this study,annual estimates

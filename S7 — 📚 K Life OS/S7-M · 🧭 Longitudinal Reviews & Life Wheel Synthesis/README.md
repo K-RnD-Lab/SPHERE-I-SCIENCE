@@ -20,7 +20,7 @@ A meta-lane inside `S7 - K Life OS`.
 - [S7-M-R2a Demographic Turnover And Rebirth-Pattern Study](../../docs/S7/S7_M_R2A_DEMOGRAPHIC_TURNOVER_REBIRTH_PATTERN_STUDY.md)
 - [S7-M-R2a Source Registry](../../docs/S7/S7_M_R2A_SOURCE_REGISTRY.md)
 
-The R2 study distinguishes measurable demographic renewal from literal identity-level reincarnation claims. Aggregate births and deaths can test population turnover and lagged associations, but they cannot establish transfer of personal identity.
+The R2 study follows human demographic evidence from the earliest `Homo sapiens` time anchor, about 315,000 years ago, through prehistoric proxies, HYDE reconstructions from 10,000 BCE, and UN annual demographic estimates from 1950. It distinguishes measurable demographic renewal from literal identity-level reincarnation claims.
 
 ## Recommended core fields for life reviews
 

@@ -6,21 +6,22 @@
 - Lane: `S7-M Longitudinal Reviews & Life Wheel Synthesis`
 - Combination: `S+T`
 - Status: active exploratory study with reproducible data pipeline
-- Evidence window: reconstructed population from 1 CE; annual global demographic flows from 1950 to 2023
+- Evidence window: human-origin evidence from about 315,000 years ago; reconstructed population from 10,000 BCE; annual global demographic flows from 1950 to 2023
 
 ## Abstract
 
-This study asks whether long-run births and deaths contain repeatable patterns that could explain the intuitive idea of human "renewal" or "rebirth". It separates three claims that must not be mixed:
+This study asks whether evidence across the full known history of `Homo sapiens` contains repeatable patterns that could explain the intuitive idea of human "renewal" or "rebirth". The study begins near the earliest currently established fossil evidence for our species, but it does not pretend that one continuous demographic dataset exists for 300,000 years. It separates three claims that must not be mixed:
 
 1. demographic renewal: births and deaths continuously replace population members;
 2. statistical synchronization: aggregate births and deaths may co-move or show lagged relationships;
 3. literal reincarnation: personal identity or memory transfers from a deceased person to a newborn.
 
-The first two claims are measurable with population data. The third is not testable with aggregate demography. Preliminary results show a clear demographic transition, not a fixed mystical cycle: fertility fell, life expectancy rose, and natural increase slowed. Lagged correlations in the levels are dominated by trends and population age structure; correlations of annual changes are weaker and unstable. The current evidence therefore supports demographic turnover as a measurable process but does not support identity-level reincarnation.
+The first two claims become quantitatively measurable only in the later evidence layers. The third is not testable with aggregate demography. Deep prehistory is represented by fossils, archaeology, skeletal assemblages, radiocarbon-density proxies, and genetic effective population size. Continuous world-population reconstruction begins around 10,000 BCE, while globally comparable annual birth and death estimates begin in 1950. Preliminary modern results show a demographic transition, not a fixed mystical cycle: fertility fell, life expectancy rose, and natural increase slowed.
 
 ## Research questions
 
-- `RQ1` How did world population change from 1 CE to the present?
+- `RQ0` What can actually be known about human demography from approximately 315,000 years ago to 10,000 BCE?
+- `RQ1` How did reconstructed world population change from 10,000 BCE to the present?
 - `RQ2` How did annual births, deaths, natural increase, and total turnover change from 1950 to 2023?
 - `RQ3` Do births and deaths show stable synchronous or lagged relationships?
 - `RQ4` Are apparent relationships preserved after removing common trends through first differences?
@@ -39,9 +40,27 @@ The first two claims are measurable with population data. The third is not testa
 
 ## Data and provenance
 
-### Long-run population
+### Evidence layers across the full interval
 
-The population line from 1 CE is a historical reconstruction. Before modern censuses, values are model-based estimates assembled from sparse historical and archaeological evidence. They are useful for scale and era comparison, not precise annual inference.
+| Period | Main evidence | What can be inferred | What cannot be claimed |
+|---|---|---|---|
+| about 315,000 years ago | Jebel Irhoud fossils dated to `315 +/- 34 ka` | early phase of the `Homo sapiens` clade existed | global population, births, deaths, or life expectancy |
+| Pleistocene to early Holocene | population genetics, fossils, skeletal samples, archaeological sites | ancestry, divergence, migration, local mortality/fertility proxies, effective population size | exact census population or annual global vital events |
+| 10,000 BCE to 1799 CE | HYDE historical population reconstruction | approximate world and regional population scale | precise counts or complete birth/death registration |
+| 1800 to 1949 | censuses, historical reconstruction, selected parish and civil records | improving population totals and regional demographic rates | complete globally comparable annual flows |
+| 1950 to 2023 | UN WPP annual estimates | comparable population, births, deaths, fertility, mortality, migration | perfect observation without modelling uncertainty |
+
+### Why 300,000 years cannot be one numerical line
+
+The earliest currently established `Homo sapiens` evidence is not a population register. Jebel Irhoud dates the existence of an early morphological phase of the species, not the number of living humans.
+
+Population genetics estimates `effective population size` (`Ne`): the size of an idealized breeding population that would show the observed genetic drift. It is usually different from and often much smaller than census population. An estimate near ten thousand effective breeders must not be displayed as "only ten thousand humans existed".
+
+Paleodemography can estimate local age-at-death structure and fertility-related proxies from skeletons. Archaeological radiocarbon-date density can track relative population booms and contractions. Both are sensitive to preservation, excavation, dating, sampling, mobility, cultural practice, and model assumptions. They cannot be summed into exact annual world births and deaths.
+
+### Reconstructed population from 10,000 BCE
+
+HYDE provides an internally consistent population and land-use reconstruction beginning in 10,000 BCE. The current OWID/HYDE series estimates about 4.5 million people in 10,000 BCE, 19.2 million in 5000 BCE, 110.5 million in 1000 BCE, 232.3 million around the start of the Common Era, and 983.1 million in 1800. These are model-based milestones rather than census counts.
 
 ### Modern demographic flows
 
@@ -65,7 +84,8 @@ The birth-death ratio is a population-flow measure. It is not a probability of r
 
 ### A. Descriptive periodization
 
-- long-run scale: 1 CE, 1000, 1500, 1800, 1900, 1950, 2000, 2023;
+- human-origin scale: about 315,000 years ago to 10,000 BCE, represented as an evidence timeline rather than a population curve;
+- reconstruction scale: 10,000 BCE, 8000 BCE, 5000 BCE, 3000 BCE, 1000 BCE, start of CE, 1000, 1500, 1800, 1900, 1950, 2000, 2023;
 - modern flow: annual 1950-2023 series;
 - transition context: fertility and life expectancy;
 - shock review: war, epidemics, and other mortality disruptions.
@@ -80,6 +100,28 @@ Two versions are retained:
 - correlation of first differences, which compares year-to-year changes and removes much of the trend.
 
 This is an exploratory scan, not a hypothesis-confirming test. Searching many lags increases the chance of finding an apparently impressive coefficient.
+
+## Deep-time findings
+
+### 1. The beginning of the species is not the beginning of demographic measurement
+
+The Jebel Irhoud evidence places an early phase of the `Homo sapiens` clade at approximately `315 +/- 34 thousand years ago`. This establishes a biological and archaeological time anchor. It provides no direct world population total, fertility rate, death count, or birth count.
+
+### 2. Genetics provides a different quantity
+
+Genetic studies often infer a Pleistocene effective population size on the order of ten thousand breeding individuals. This is valuable evidence that ancestral human populations were genetically small, structured, or both. It is not a census. Population structure, unequal reproductive success, bottlenecks, gene flow, and model choice can make `Ne` very different from the number of living humans.
+
+### 3. Prehistoric demographic change can still be studied
+
+Before written registration, the usable outcomes are usually relative or local:
+
+- juvenile-to-adult skeletal ratios as fertility-related proxies;
+- age-at-death profiles with strong estimation caveats;
+- frequencies of radiocarbon-dated sites as relative population proxies;
+- ancient DNA for ancestry, migration, mixture, and effective size;
+- settlement area, site density, land use, and subsistence evidence.
+
+Research on the Neolithic transition finds evidence of population expansion after agriculture and, in some regions, later instability or collapse. These are regional demographic regimes, not a synchronized global birth-death cycle.
 
 ## Preliminary quantitative findings
 
@@ -158,7 +200,8 @@ Without these safeguards, a compelling story remains a story rather than a discr
 
 ## Visual outputs
 
-- [Long-run world population](./figures/world-population-long-run.svg)
+- [Deep-time evidence timeline](./figures/human-deep-time-evidence-timeline.svg)
+- [World population from 10,000 BCE](./figures/world-population-long-run.svg)
 - [Annual births and deaths](./figures/world-births-deaths-1950-2023.svg)
 - [Birth-to-death ratio](./figures/world-birth-death-ratio-1950-2023.svg)
 - [Net natural increase](./figures/world-net-natural-increase-1950-2023.svg)
@@ -168,6 +211,7 @@ Without these safeguards, a compelling story remains a story rather than a discr
 
 ## Reproducible data
 
+- [Deep-time evidence timeline](./data/human_deep_time_evidence_timeline.csv)
 - [Annual birth/death metrics](./data/world_births_deaths_annual.csv)
 - [Birth/death milestones](./data/world_births_deaths_milestones.csv)
 - [Demographic transition milestones](./data/world_demographic_transition_milestones.csv)
@@ -182,6 +226,9 @@ node tools/build_population_pollution_visuals.mjs
 
 ## Limitations
 
+- there are no direct global annual births and deaths for the Pleistocene or early Holocene;
+- effective population size is not census population;
+- skeletal and radiocarbon proxies are local and preservation-sensitive;
 - pre-modern population values are reconstructions;
 - global aggregation hides country and regional heterogeneity;
 - annual UN series contain modelled values and uncertainty;
@@ -195,6 +242,9 @@ The data support a strong, scientifically useful idea of human renewal: populati
 
 ## Next analytical phase
 
+- add a structured palaeodemography evidence table by region and period;
+- add radiocarbon-density and skeletal-demography case studies as separate regional analyses, never as global counts;
+- model broad prehistoric population ranges with explicit uncertainty rather than point estimates;
 - decompose results by world region and development group;
 - add age-standardized mortality and age-structure measures;
 - estimate change points with uncertainty;
