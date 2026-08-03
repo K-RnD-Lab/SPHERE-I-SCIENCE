@@ -58,6 +58,10 @@ def activist_requests_page() -> None:
     _run_dashboard_script("pages/9_Activist_Requests.py")
 
 
+def treatment_sandbox_page() -> None:
+    _run_dashboard_script("pages/10_Digital_Treatment_Sandbox.py")
+
+
 navigation = st.navigation(
     {
         "K-EcoLOGIC Lab": [
@@ -71,6 +75,7 @@ navigation = st.navigation(
             st.Page(environmental_briefs_page, title="Environmental Briefs"),
             st.Page(sorting_assistant_page, title="Sorting Assistant"),
             st.Page(activist_requests_page, title="Activist Requests"),
+            st.Page(treatment_sandbox_page, title="Digital Treatment Sandbox"),
         ],
         "Environmental Context": [
             st.Page(air_page, title="Air & Exposure"),

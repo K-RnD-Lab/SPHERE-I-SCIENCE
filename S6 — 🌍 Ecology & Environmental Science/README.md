@@ -38,6 +38,7 @@ Public platform:
   - `Environmental Briefs`
   - `Sorting Assistant`
   - `Activist Requests`
+  - `Digital Treatment Sandbox`
   - `Air & Exposure`
   - `Water Watch`
   - `Polluters & Permits`

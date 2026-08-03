@@ -33,7 +33,7 @@ Unlike the other S6 lanes, `S6-A` already exists as an implemented platform. Its
 #### Substudies
 
 - `S6-A-R1a` regional sorting-readiness logic
-- `S6-A-R1b` material recovery and avoided CO2e assumptions
+- `S6-A-R1b` Ukraine source-separation pilot, verified material routes, and avoided CO2e assumptions
 
 #### Why this stays central
 
@@ -156,27 +156,27 @@ This creates a bridge between descriptive biodiversity work and ecological monit
 
 Pollution-linked ecological disturbance, stress-response interpretation, and networked impact logic.
 
-### `S6-D-R1` Pollution Response Signatures
+### `S6-D-R1` Pollution Measurement And System Diagnosis
 
 #### Substudies
 
-- `S6-D-R1a` contaminant-linked stress profiles
-- `S6-D-R1b` response network interpretation across sites
+- `S6-D-R1a` global and Ukraine pollution baseline with contaminant-linked stress profiles
+- `S6-D-R1b` cross-media response network interpretation across sites
 
 #### Why this stays central
 
 This is one of the strongest operational lines inside `S6`.
 
-### `S6-D-R2` Impact Gradient And Recovery Logic
+### `S6-D-R2` Pollution Reduction And Recovery Systems
 
 #### Substudies
 
-- `S6-D-R2a` impact severity ranking
-- `S6-D-R2b` recovery or resilience signal comparison
+- `S6-D-R2a` digital treatment, remediation, and CO2-removal screening
+- `S6-D-R2b` controlled pilots, recovery verification, and resilience comparison
 
 #### Why this matters
 
-This makes `S6-D` useful for both scientific and public-interest interpretation.
+This connects diagnosis to safe intervention design without treating a digital model as field validation.
 
 ## S6-E Climate-Linked Ecological Change
 

@@ -10,9 +10,14 @@
 - recovery and resilience context
 - Ukraine and global comparison where source coverage allows it
 
-## Current study
+## Current studies
 
 - [S6-D-R1a Global And Ukraine Pollution Systems Study](../../docs/S6/S6_D_R1A_GLOBAL_UKRAINE_POLLUTION_VISUAL_STUDY.md)
+- [S6-D-R2a Pollution Reduction Digital Experiment Roadmap](../../docs/S6/S6_D_R2A_POLLUTION_REDUCTION_DIGITAL_EXPERIMENT_ROADMAP.md)
+
+## Experiment boundary
+
+Digital screening may compare treatment pathways and mass balances. Reagent doses, real contaminated samples, and environmental release require qualified laboratory supervision, validated analytical methods, residue management, and applicable authorization.
 
 ## Boundary rule
 

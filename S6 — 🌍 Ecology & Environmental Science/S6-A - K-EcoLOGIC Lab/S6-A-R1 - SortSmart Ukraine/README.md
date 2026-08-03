@@ -30,6 +30,7 @@ That makes it a natural fit for `S6 - Ecology & Environmental Science`.
 ## Working Module
 
 - [R1a-sortsmart-ukraine](./R1a-sortsmart-ukraine/)
+- [R1b Ukraine Source-Separation Pilot](../../../docs/S6/S6_A_R1B_UKRAINE_SOURCE_SEPARATION_PILOT.md)
 
 ## Intended Users
 
