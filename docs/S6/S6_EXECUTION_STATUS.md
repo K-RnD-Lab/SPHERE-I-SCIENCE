@@ -18,6 +18,7 @@ It keeps `S6` readable as an environmental-science and environmental-intelligenc
 - platform: implemented
 - public app: live
 - `R1` SortSmart Ukraine: active
+- `R1c` Kyiv waste-system and Landfill No. 5 transition analysis: active, evidence baseline and public planning page implemented
 - `R2` Air & Exposure Intelligence: active
 - `R3` Water Watch Ukraine: active
 - `R4` Polluters, Permits, and Environmental Oversight: active
@@ -79,6 +80,9 @@ Current active `S6` execution layer:
 - `S6_A_TO_E_RESEARCH_MAP.md`
 - `S6_A_R1_RESEARCH_GUIDE.md`
 - `S6_A_R1_SOURCE_REGISTRY.md`
+- `S6_A_R1B_UKRAINE_SOURCE_SEPARATION_PILOT.md`
+- `S6_A_R1C_KYIV_POLYGON_5_EU_TRANSITION_ANALYSIS.md`
+- `S6_A_R1C_SOURCE_REGISTRY.md`
 - `S6_A_R1_EVIDENCE_SCHEMA.csv`
 - `S6_A_R1_REPORT_SKELETON.md`
 - `S6_A_R1_PRELIMINARY_FINDINGS.md`

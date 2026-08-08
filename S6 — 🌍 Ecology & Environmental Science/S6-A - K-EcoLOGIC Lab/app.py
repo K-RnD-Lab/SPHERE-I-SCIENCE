@@ -62,6 +62,10 @@ def treatment_sandbox_page() -> None:
     _run_dashboard_script("pages/10_Digital_Treatment_Sandbox.py")
 
 
+def kyiv_waste_transition_page() -> None:
+    _run_dashboard_script("pages/11_Kyiv_Waste_Transition.py")
+
+
 navigation = st.navigation(
     {
         "K-EcoLOGIC Lab": [
@@ -70,6 +74,7 @@ navigation = st.navigation(
         "Public Guidance": [
             st.Page(sortsmart_page, title="SortSmart Ukraine"),
             st.Page(packaging_page, title="Packaging & Sorting Guide"),
+            st.Page(kyiv_waste_transition_page, title="Kyiv Waste Transition"),
         ],
         "AI & Activist Tools": [
             st.Page(environmental_briefs_page, title="Environmental Briefs"),

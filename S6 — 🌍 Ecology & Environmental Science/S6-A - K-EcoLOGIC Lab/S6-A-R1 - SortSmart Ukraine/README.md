@@ -31,6 +31,11 @@ That makes it a natural fit for `S6 - Ecology & Environmental Science`.
 
 - [R1a-sortsmart-ukraine](./R1a-sortsmart-ukraine/)
 - [R1b Ukraine Source-Separation Pilot](../../../docs/S6/S6_A_R1B_UKRAINE_SOURCE_SEPARATION_PILOT.md)
+- [R1c Kyiv Waste System and Landfill No. 5 Transition Analysis](../../../docs/S6/S6_A_R1C_KYIV_POLYGON_5_EU_TRANSITION_ANALYSIS.md)
+
+`R1c` adds a verified Kyiv baseline, corrects unsupported waste claims, separates
+EU recycling from energy-recovery categories, and defines the policy and
+investment conditions required before selecting a processing plant.
 
 ## Intended Users
 

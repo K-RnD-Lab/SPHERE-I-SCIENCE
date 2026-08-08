@@ -1,0 +1,13 @@
+phase,time_horizon,system_action,verification_gate,lead_actor,kpi
+0,0-6 months,Publish city waste mass balance,Generated and destination totals reconcile within disclosed uncertainty,Kyiv city and operators,Mass-balance closure
+0,0-6 months,Run seasonal composition study,Sampling design and raw results are public,Independent contractor and city,Waste composition by mass
+0,0-6 months,Audit Landfill No. 5,Stability gas leachate water air closure and reserve findings are published,Operator regulator and independent auditor,Open corrective actions
+1,6-18 months,Pilot source separation,Every stream has processor acceptance evidence,Districts collectors processors,Verified diversion rate
+1,6-18 months,Pilot organics collection,Contamination and final treatment are measured,Districts and organics operator,Organics capture rate
+1,6-18 months,Open supervised hazardous drop-off,Authorized downstream routes exist,City and licensed operators,Collected mass by stream
+2,18-36 months,Scale material recovery,Accepted output is reported rather than input alone,City and contracted operator,Verified recycling rate
+2,18-36 months,Build organics capacity,Product quality methane leakage and residues are monitored,Public or private operator,Accepted organics and product quality
+2,18-36 months,Separate construction and war debris,Explosive asbestos chemical and radiological screening precedes recovery,Recovery authorities and operators,Safe recovered share
+3,3-7 years,Restrict untreated residual disposal,Acceptance control and pretreatment evidence are auditable,Regulator and landfill operator,Residual landfill share
+3,3-7 years,Complete engineered closure,Closure gas leachate monitoring and aftercare are independently verified,City operator and regulator,Funded aftercare obligation
+4,ongoing,Publish public KPI dashboard,Definitions source dates and revisions are visible,Kyiv city,Data completeness and update latency
