@@ -74,7 +74,25 @@ The EU landfill framework requires disposal pricing to cover establishment, oper
 
 ## Can investors be forced to build plants?
 
+`Investor` is used here as a generic project role, not as the name of a verified current company or country. It may mean an equity sponsor, infrastructure operator, technology supplier, lender, development bank, or public-private partnership participant. These roles carry different obligations and should not be merged.
+
+Historical Kyiv statements from 2016-2018 reported discussions or proposals involving Polish, German, Czech, Japanese, South Korean, French, other Western, and Ukrainian participants. They do not establish a current shortlist, a contract award, financing commitment, or responsibility for the absence of a completed facility.
+
 An authority cannot arbitrarily order an unrelated private investor to construct a facility. It can, however, create enforceable obligations and a bankable market.
+
+### Which environmental standard applies?
+
+The mandatory baseline for a facility built in Ukraine is Ukrainian law, permits, environmental-impact assessment, procurement and contract requirements. A company's home-country rules do not automatically replace the host-country legal regime.
+
+Higher standards can become binding through:
+
+- tender specifications aligned with EU waste, industrial-emissions and best-available-technique requirements;
+- financing conditions imposed by institutions such as EBRD or EIB;
+- environmental and social impact assessment and management plans;
+- lender covenants, performance guarantees, monitoring and disclosure clauses;
+- operator permits and independently verified emissions and material-recovery targets.
+
+Therefore, a company coming from an EU country may know stricter standards, but Kyiv must still write those standards into the project and enforce them. Country of origin is not a substitute for technical due diligence or contract enforcement.
 
 ### Regulatory levers
 
@@ -229,6 +247,8 @@ What waste exists -> where it is generated -> how cleanly it can be separated
 - Kyiv City State Administration, strategic environmental assessment for the 2025-2027 action plan: https://minio.kyivcity.gov.ua/kyivcity/sites/22/strategy/5.%20%D0%97%D0%B2%D1%96%D1%82%20%D0%A1%D0%95%D0%9E%20%D0%9F%D0%BB%D0%B0%D0%BD%D1%83%20%D0%B7%D0%B0%D1%85%D0%BE%D0%B4%D1%96%D0%B2%20%D0%BD%D0%B0%202025-2027.pdf
 - Kyiv City State Administration, reclamation and closure preparation, 2020: https://kyivcity.gov.ua/news/vitaliy_klichko_na_poligoni_5_u_pidgirtsyakh_rozpochnut_rekultivatsiyu_i_pidgotovku_poligonu_do_zakrittya/
 - Kyiv City State Administration, first-cell reclamation design, 2018: https://kyivcity.gov.ua/news/u_kiyevi_zavershuyut_robotu_nad_proektom_rekultivatsi_persho_karti_poligonu__5/
+- Kyiv City State Administration, historical Polish investment proposal and international discussions, 2016: https://kyivcity.gov.ua/news/polski_investori_prezentuvali_v_kiyevi_tekhnologiyu_mekhanichno_i_termichno_pererobki_vidkhodiv/
+- Kyiv City State Administration, historical Suez and Ukrainian/Western investor discussions, 2018: https://kyivcity.gov.ua/news/kiv_vede_peregovori_z_investorami_schodo_budivnitstva_pershogo_v_ukrani_smittyepererobnogo_zavodu/
 - Kyiv regional waste-management plan, volume 1: https://minio.kyivcity.gov.ua/kyivcity/sites/27/uploaded-files/%20%D0%9A%D0%B8%D1%97%D0%B2%202025%20%D0%A2%D0%BE%D0%BC%201%2031-07-2025.pdf
 - Kyiv regional waste-management plan, volume 2: https://minio.kyivcity.gov.ua/kyivcity/sites/27/uploaded-files/%20%D0%9A%D0%B8%D1%97%D0%B2%202025%20%D0%A2%D0%BE%D0%BC%202%2031-07-2025.pdf
 - Kyiv environmental-programme indicator report for 2025: https://minio.kyivcity.gov.ua/kyivcity/sites/32/uploaded-files/ilovepdfmerged-4.pdf
@@ -239,3 +259,4 @@ What waste exists -> where it is generated -> how cleanly it can be separated
 - European Commission, Waste Framework Directive targets: https://environment.ec.europa.eu/news/waste-framework-directive-revision-2022-02-14_en
 - EU Landfill Directive, consolidated text: https://eur-lex.europa.eu/legal-content/en/ALL/?uri=CELEX%3A01999L0031-20240804
 - EBRD, Khmelnytskyi solid-waste investment example: https://www.ebrd.com/home/work-with-us/projects/psd/50729.html
+- EBRD, Mariupol solid-waste project environmental and social assessment example: https://www.ebrd.com/home/work-with-us/projects/psd/51267.html
