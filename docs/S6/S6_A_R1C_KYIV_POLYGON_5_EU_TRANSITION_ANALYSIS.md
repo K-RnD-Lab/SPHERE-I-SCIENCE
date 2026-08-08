@@ -21,6 +21,26 @@ Published official figures differ by document year and measurement basis. They m
 
 ## Corrections to common online claims
 
+### Claim: `Profpererobka` is only a transporter with no sorting facility
+
+Not supported by the current official planning record. Kyiv's regional waste-management plan lists a `Profpererobka` municipal-waste sorting line in Pidhirtsi and references an operating permit issued in December 2024. The company's public materials also describe collection, sorting of recoverable material, and disposal of residuals at official landfills.
+
+This does not by itself establish a recycling rate. A facility listing, permit, or marketing statement does not show:
+
+- weighed input by waste code;
+- recovered output by material and quality;
+- rejected or residual mass;
+- named final processors and transfer evidence;
+- mass-balance closure and reporting period.
+
+The correct research conclusion is `sorting capacity is documented, but recovery performance and final destinations require auditable operating data`, not `the company has no processing` and not `the collected material is proven recycled`.
+
+### Claim: a processing plant means residents do not need to sort
+
+Misleading. Mechanical or mechanical-biological facilities can separate parts of mixed waste, and residual-waste incineration can accept a mixed residual fraction. Neither eliminates the need for source separation. Food contamination reduces material quality, glass breakage contaminates other fractions, and batteries, chemicals, electronics, and other hazardous items create fire, exposure, and residue risks.
+
+`No household sorting` may describe a plant input model. It is not evidence that all mixed material becomes safe, marketable recycled products.
+
 ### Claim: the EU recycles almost all waste
 
 Incorrect. Recycling, composting, energy recovery, and landfill are different treatment categories. The EU municipal-waste benchmark is at least 55% preparation for reuse and recycling by 2025, 60% by 2030, and 65% by 2035. The landfill benchmark is no more than 10% of municipal waste by 2035. These are EU-member-state targets and alignment benchmarks for Ukraine, not automatically identical Ukrainian legal deadlines.
@@ -138,6 +158,45 @@ The National Waste Management Plan to 2033 sets the national planning direction.
 
 `Collected separately` is not the same as `recycled`. A claim becomes verified only when mass and destination evidence reach the accepting processor.
 
+## Operator traceability audit
+
+Apply the same protocol to municipal, private, and non-profit operators. Do not infer wrongdoing from missing public data; record the data gap and request evidence.
+
+| Audit layer | Minimum evidence |
+|---|---|
+| legal identity | operator name, EDRPOU, site owner/operator, service territory |
+| authorization | waste-operation permit, waste codes, allowed operations, capacity and validity dates |
+| collection | route, container stream, weighed mass, contamination and rejected loads |
+| treatment | input, recovered outputs, process losses, residues and mass-balance closure |
+| destination | named receiving facility, permit, transfer ticket, accepted mass and treatment operation |
+| disposal | landfill or thermal-treatment destination, weighed residual mass and gate record |
+| finance | tariff, gate fee, municipal payment, producer-responsibility payment and material revenue |
+| performance | verified recycling, recovery, landfill share, emissions, incidents and corrective actions |
+
+### Public claim labels
+
+- `service claim`: stated by an operator but not yet independently verified;
+- `permit verified`: the operation is authorized, but performance is not established;
+- `transfer verified`: destination and accepted mass are documented;
+- `recycling verified`: the accepting processor confirms material entered a recycling operation;
+- `system verified`: input, output, residue, destination, cost, and reporting period reconcile.
+
+## Environmental budget accountability track
+
+Claims that environmental taxes were stolen, diverted, or captured by a `waste mafia` require transaction-level evidence and should not be published as findings without it. The valid research question is whether revenue, appropriations, procurement, outputs, and environmental results reconcile.
+
+For every Kyiv waste measure, collect:
+
+1. legal funding source and budget code;
+2. planned appropriation and amendments;
+3. procurement identifier, contract, contractor, and beneficial-owner disclosure;
+4. treasury payment or reported actual expenditure;
+5. physical output: bins, routes, tonnes, facility work, monitoring, or closure milestone;
+6. outcome KPI and independent acceptance evidence;
+7. reason for underspending, non-performance, or scope change.
+
+The official 2025 programme report is already useful because it identifies at least one planned waste-related measure as not implemented where budget appropriations were not provided. This is evidence of a delivery gap, not by itself evidence of corruption.
+
 ## War-specific constraint
 
 Municipal waste cannot be mixed analytically or operationally with conflict debris. Damaged-building material may contain unexploded ordnance, asbestos, fuels, chemicals, medical material, and radiological contamination. Screening and safe clearance precede crushing, reuse, or recycling.
@@ -170,6 +229,10 @@ What waste exists -> where it is generated -> how cleanly it can be separated
 - Kyiv City State Administration, strategic environmental assessment for the 2025-2027 action plan: https://minio.kyivcity.gov.ua/kyivcity/sites/22/strategy/5.%20%D0%97%D0%B2%D1%96%D1%82%20%D0%A1%D0%95%D0%9E%20%D0%9F%D0%BB%D0%B0%D0%BD%D1%83%20%D0%B7%D0%B0%D1%85%D0%BE%D0%B4%D1%96%D0%B2%20%D0%BD%D0%B0%202025-2027.pdf
 - Kyiv City State Administration, reclamation and closure preparation, 2020: https://kyivcity.gov.ua/news/vitaliy_klichko_na_poligoni_5_u_pidgirtsyakh_rozpochnut_rekultivatsiyu_i_pidgotovku_poligonu_do_zakrittya/
 - Kyiv City State Administration, first-cell reclamation design, 2018: https://kyivcity.gov.ua/news/u_kiyevi_zavershuyut_robotu_nad_proektom_rekultivatsi_persho_karti_poligonu__5/
+- Kyiv regional waste-management plan, volume 1: https://minio.kyivcity.gov.ua/kyivcity/sites/27/uploaded-files/%20%D0%9A%D0%B8%D1%97%D0%B2%202025%20%D0%A2%D0%BE%D0%BC%201%2031-07-2025.pdf
+- Kyiv regional waste-management plan, volume 2: https://minio.kyivcity.gov.ua/kyivcity/sites/27/uploaded-files/%20%D0%9A%D0%B8%D1%97%D0%B2%202025%20%D0%A2%D0%BE%D0%BC%202%2031-07-2025.pdf
+- Kyiv environmental-programme indicator report for 2025: https://minio.kyivcity.gov.ua/kyivcity/sites/32/uploaded-files/ilovepdfmerged-4.pdf
+- `Profpererobka` public service description: https://profpererobka.com.ua/
 - Law of Ukraine `On Waste Management`: https://zakon.rada.gov.ua/laws/show/2320-20#Text
 - National Waste Management Plan to 2033: https://www.kmu.gov.ua/storage/app/uploads/public/678/e56/9d5/678e569d56910563311352.pdf
 - Verkhovna Rada environmental committee, packaging-law development: https://komekolog.rada.gov.ua/news/Top-novyna/77757.html

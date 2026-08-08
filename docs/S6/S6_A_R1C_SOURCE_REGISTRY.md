@@ -10,6 +10,10 @@ Source registry for the Kyiv waste-system and Landfill No. 5 transition study. E
 | KCSA-2020 | [Landfill No. 5 reclamation and closure preparation](https://kyivcity.gov.ua/news/vitaliy_klichko_na_poligoni_5_u_pidgirtsyakh_rozpochnut_rekultivatsiyu_i_pidgotovku_poligonu_do_zakrittya/) | Kyiv City State Administration | reported annual intake and closure intent | municipal statement at a 2020 timepoint |
 | KCSA-2018 | [First-cell reclamation design](https://kyivcity.gov.ua/news/u_kiyevi_zavershuyut_robotu_nad_proektom_rekultivatsi_persho_karti_poligonu__5/) | Kyiv City State Administration | closure decision and engineering components | project-stage information |
 | KCSA-2019 | [First cell covered with soil](https://kyivcity.gov.ua/news/na_5-mu_poligoni_v_pidgirtsyakh_trivaye_rekultivatsiya_pershu_kartu_povnistyu_zasipali_runtom/) | Kyiv City State Administration | reported reclamation works | progress statement, not independent verification |
+| KYIV-RWMP-V1 | [Kyiv regional waste-management plan, volume 1](https://minio.kyivcity.gov.ua/kyivcity/sites/27/uploaded-files/%20%D0%9A%D0%B8%D1%97%D0%B2%202025%20%D0%A2%D0%BE%D0%BC%201%2031-07-2025.pdf) | Kyiv city planning record | waste facilities, operator and permit context | planning inventory; operating outputs still require verification |
+| KYIV-RWMP-V2 | [Kyiv regional waste-management plan, volume 2](https://minio.kyivcity.gov.ua/kyivcity/sites/27/uploaded-files/%20%D0%9A%D0%B8%D1%97%D0%B2%202025%20%D0%A2%D0%BE%D0%BC%202%2031-07-2025.pdf) | Kyiv city planning record | `Profpererobka` sorting line in Pidhirtsi and permit reference | does not establish recovered mass or final recycling destination |
+| KYIV-PROGRAMME-2025 | [Environmental-programme indicator report](https://minio.kyivcity.gov.ua/kyivcity/sites/32/uploaded-files/ilovepdfmerged-4.pdf) | Kyiv city programme report | planned, financed, completed and uncompleted environmental measures | programme reporting is not a corruption finding |
+| OPERATOR-PROFP | [`Profpererobka` public website](https://profpererobka.com.ua/) | operator self-description | collection, sorting and official-disposal service claims | service claim; verify permits, mass balance and destinations independently |
 | UA-LAW-2320 | [Law On Waste Management](https://zakon.rada.gov.ua/laws/show/2320-20#Text) | Verkhovna Rada of Ukraine | hierarchy, polluter pays, separate collection, local duties, EPR framework | sector-specific EPR requires further law and implementation |
 | UA-NWMP-2033 | [National Waste Management Plan to 2033](https://www.kmu.gov.ua/storage/app/uploads/public/678/e56/9d5/678e569d56910563311352.pdf) | Cabinet of Ministers of Ukraine | national transition planning | requires regional and local implementation |
 | UA-PACKAGING-2026 | [Packaging-law development](https://komekolog.rada.gov.ua/news/Top-novyna/77757.html) | Verkhovna Rada environmental committee | evidence that packaging EPR remained under legislative development | not evidence of an operational EPR system |
@@ -24,6 +28,9 @@ Source registry for the Kyiv waste-system and Landfill No. 5 transition study. E
 - unsupported claims that 70-80% of Soviet-era waste was organic or paper;
 - claims that Europe recycles nearly all municipal waste;
 - current Kyiv treatment shares inferred from historical municipal statements.
+- claims that a named operator has no sorting capacity when an official facility record exists;
+- corruption, budget diversion, or hidden-cash allegations without procurement, payment, audit, court, or investigative evidence;
+- claims that mixed-waste treatment makes source separation unnecessary.
 
 ## Update rule
 

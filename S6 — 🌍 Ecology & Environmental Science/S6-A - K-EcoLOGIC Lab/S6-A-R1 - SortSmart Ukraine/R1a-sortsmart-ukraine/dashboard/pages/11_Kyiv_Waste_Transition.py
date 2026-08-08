@@ -52,6 +52,19 @@ ROADMAP = pd.DataFrame(
     columns=["Phase", "Horizon", "Required outcome"],
 )
 
+TRACEABILITY = pd.DataFrame(
+    [
+        ("Legal identity", "Operator, EDRPOU, site, service territory"),
+        ("Authorization", "Permit, waste codes, operations, capacity, validity"),
+        ("Collection", "Route, stream, weighed mass, contamination, rejection"),
+        ("Treatment", "Input, recovered output, process loss, residual mass"),
+        ("Destination", "Named receiver, transfer ticket, accepted mass, operation"),
+        ("Finance", "Tariff, gate fee, public payment, material revenue"),
+        ("Outcome", "Verified recycling, landfill share, incidents, corrective action"),
+    ],
+    columns=["Audit layer", "Required evidence"],
+)
+
 
 st.set_page_config(page_title="Kyiv Waste Transition", layout="wide")
 st.title("Kyiv Waste Transition")
@@ -63,8 +76,8 @@ st.warning(
     "Ukrainian legal deadlines."
 )
 
-baseline_tab, gap_tab, roadmap_tab, investment_tab = st.tabs(
-    ["Verified baseline", "EU gap", "Roadmap", "Investment rules"]
+baseline_tab, gap_tab, roadmap_tab, traceability_tab, investment_tab = st.tabs(
+    ["Verified baseline", "EU gap", "Roadmap", "Traceability", "Investment rules"]
 )
 
 with baseline_tab:
@@ -99,6 +112,25 @@ with roadmap_tab:
     st.markdown(
         "**War constraint:** construction and conflict debris requires explosive, asbestos, "
         "chemical, medical, and radiological screening before crushing or recycling."
+    )
+
+with traceability_tab:
+    st.subheader("Collection is not proof of recycling")
+    st.dataframe(TRACEABILITY, use_container_width=True, hide_index=True)
+    st.markdown(
+        "Kyiv's regional plan lists a `Profpererobka` sorting line in Pidhirtsi. "
+        "That corrects the claim that the company is only a transporter, but a facility and "
+        "permit still do not prove the recovered share or final material destinations."
+    )
+    st.info(
+        "Use neutral evidence labels: service claim -> permit verified -> transfer verified "
+        "-> recycling verified -> full system mass balance verified."
+    )
+    st.markdown("**Budget audit rule**")
+    st.write(
+        "Reconcile appropriation, procurement, payment, physical output, and environmental KPI. "
+        "Missing delivery is a documented gap; corruption requires separate transaction, audit, "
+        "investigative, or court evidence."
     )
 
 with investment_tab:
@@ -142,6 +174,8 @@ st.markdown(
 - [Kyiv 2025-2027 strategic environmental assessment](https://minio.kyivcity.gov.ua/kyivcity/sites/22/strategy/5.%20%D0%97%D0%B2%D1%96%D1%82%20%D0%A1%D0%95%D0%9E%20%D0%9F%D0%BB%D0%B0%D0%BD%D1%83%20%D0%B7%D0%B0%D1%85%D0%BE%D0%B4%D1%96%D0%B2%20%D0%BD%D0%B0%202025-2027.pdf)
 - [Law of Ukraine On Waste Management](https://zakon.rada.gov.ua/laws/show/2320-20#Text)
 - [National Waste Management Plan to 2033](https://www.kmu.gov.ua/storage/app/uploads/public/678/e56/9d5/678e569d56910563311352.pdf)
+- [Kyiv regional waste-management plan, volume 2](https://minio.kyivcity.gov.ua/kyivcity/sites/27/uploaded-files/%20%D0%9A%D0%B8%D1%97%D0%B2%202025%20%D0%A2%D0%BE%D0%BC%202%2031-07-2025.pdf)
+- [Kyiv environmental-programme indicator report for 2025](https://minio.kyivcity.gov.ua/kyivcity/sites/32/uploaded-files/ilovepdfmerged-4.pdf)
 - [EU Waste Framework Directive targets](https://environment.ec.europa.eu/news/waste-framework-directive-revision-2022-02-14_en)
 - [EU Landfill Directive](https://eur-lex.europa.eu/legal-content/en/ALL/?uri=CELEX%3A01999L0031-20240804)
 """
