@@ -117,6 +117,8 @@ Therefore, a company coming from an EU country may know stricter standards, but 
 
 The correct formulation is not `force investors`. It is `make pollution non-subsidized, establish legal responsibility, and procure verified outcomes under transparent contracts`.
 
+The 2018 competition and its bankability gaps are reconstructed separately in [S6-A-R1d](S6_A_R1D_KYIV_2018_WASTE_TENDER_POSTMORTEM.md).
+
 ## Legal status in Ukraine
 
 Ukraine's Law `On Waste Management` establishes the waste hierarchy, the polluter-pays principle, local-government duties, separate collection, and the framework for extended producer responsibility (EPR). EPR for a specific product stream must be implemented through sector-specific law.

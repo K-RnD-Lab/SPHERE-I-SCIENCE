@@ -42,3 +42,7 @@ This folder is module-scoped. The broader `K-EcoLOGIC Lab` platform story lives 
   - [../../README.md](../../README.md)
 - parent research program
   - [../README.md](../README.md)
+- Kyiv waste transition analysis
+  - [../../../../docs/S6/S6_A_R1C_KYIV_POLYGON_5_EU_TRANSITION_ANALYSIS.md](../../../../docs/S6/S6_A_R1C_KYIV_POLYGON_5_EU_TRANSITION_ANALYSIS.md)
+- Kyiv 2018 waste-tender post-mortem
+  - [../../../../docs/S6/S6_A_R1D_KYIV_2018_WASTE_TENDER_POSTMORTEM.md](../../../../docs/S6/S6_A_R1D_KYIV_2018_WASTE_TENDER_POSTMORTEM.md)

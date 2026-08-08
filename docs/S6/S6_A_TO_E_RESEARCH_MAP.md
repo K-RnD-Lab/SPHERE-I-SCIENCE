@@ -35,6 +35,7 @@ Unlike the other S6 lanes, `S6-A` already exists as an implemented platform. Its
 - `S6-A-R1a` regional sorting-readiness logic
 - `S6-A-R1b` Ukraine source-separation pilot, verified material routes, and avoided CO2e assumptions
 - `S6-A-R1c` Kyiv waste-system and Landfill No. 5 transition analysis, EU alignment, and investment conditions
+- `S6-A-R1d` Kyiv 2018 waste-tender post-mortem, bankability gaps, and procurement redesign
 
 #### Why this stays central
 

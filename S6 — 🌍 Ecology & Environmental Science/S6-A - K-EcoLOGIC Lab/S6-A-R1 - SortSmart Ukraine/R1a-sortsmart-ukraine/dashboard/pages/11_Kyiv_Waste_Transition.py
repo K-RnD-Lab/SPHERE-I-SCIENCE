@@ -65,6 +65,16 @@ TRACEABILITY = pd.DataFrame(
     columns=["Audit layer", "Required evidence"],
 )
 
+TENDER_TIMELINE = pd.DataFrame(
+    [
+        ("23 Jul 2018", "Competition documentation approved", "Verified"),
+        ("28 Aug 2018", "Applications opened; UAH 31.5m guarantee", "Verified"),
+        ("28 Sep 2018", "Deadline and commission meeting: zero proposals", "Verified"),
+        ("15 Nov 2018", "Alternative municipal-private model reported", "Proposal stage"),
+    ],
+    columns=["Date", "Event", "Evidence status"],
+)
+
 
 st.set_page_config(page_title="Kyiv Waste Transition", layout="wide")
 st.title("Kyiv Waste Transition")
@@ -76,8 +86,8 @@ st.warning(
     "Ukrainian legal deadlines."
 )
 
-baseline_tab, gap_tab, roadmap_tab, traceability_tab, investment_tab = st.tabs(
-    ["Verified baseline", "EU gap", "Roadmap", "Traceability", "Investment rules"]
+baseline_tab, tender_tab, gap_tab, roadmap_tab, traceability_tab, investment_tab = st.tabs(
+    ["Verified baseline", "2018 tender", "EU gap", "Roadmap", "Traceability", "Investment rules"]
 )
 
 with baseline_tab:
@@ -86,6 +96,37 @@ with baseline_tab:
     st.info(
         "The 1986 commissioning date is supported by Kyiv city documents. A complete pre-1986 "
         "waste-flow history has not yet been verified and remains an archive research task."
+    )
+
+with tender_tab:
+    st.subheader("Why the 2018 competition produced no plant")
+    metric_left, metric_middle, metric_right = st.columns(3)
+    metric_left.metric("Proposals received", "0")
+    metric_middle.metric("Bid guarantee", "UAH 31.5m")
+    metric_right.metric("Outcome", "Not held")
+    st.dataframe(TENDER_TIMELINE, use_container_width=True, hide_index=True)
+
+    st.markdown("**What is documented**")
+    st.write(
+        "The official commission page records that no participant proposals were received. "
+        "A later city-owned newspaper attributed the failure primarily to the absence of a "
+        "legally reliable investment-recovery mechanism."
+    )
+    st.markdown("**What remains an inference**")
+    st.write(
+        "Revenue, feedstock, land, permitting, technology, currency, and affordability risks "
+        "are visible bankability gaps, but the public record does not prove which one caused "
+        "each unnamed company to decline. Outreach to foreign companies was not a bid."
+    )
+    st.warning(
+        "The reported EUR 60m Kyivspetstrans alternative was a proposal. No reviewed source "
+        "establishes a signed EBRD loan, construction contract, commissioning, or verified "
+        "operation of that proposed facility."
+    )
+    st.markdown(
+        "[Read the full documentary post-mortem on GitHub]"
+        "(https://github.com/K-RnD-Lab/SPHERE-I-SCIENCE/blob/main/docs/S6/"
+        "S6_A_R1D_KYIV_2018_WASTE_TENDER_POSTMORTEM.md)"
     )
 
 with gap_tab:
@@ -176,6 +217,8 @@ st.markdown(
 - [National Waste Management Plan to 2033](https://www.kmu.gov.ua/storage/app/uploads/public/678/e56/9d5/678e569d56910563311352.pdf)
 - [Kyiv regional waste-management plan, volume 2](https://minio.kyivcity.gov.ua/kyivcity/sites/27/uploaded-files/%20%D0%9A%D0%B8%D1%97%D0%B2%202025%20%D0%A2%D0%BE%D0%BC%202%2031-07-2025.pdf)
 - [Kyiv environmental-programme indicator report for 2025](https://minio.kyivcity.gov.ua/kyivcity/sites/32/uploaded-files/ilovepdfmerged-4.pdf)
+- [Kyivkomunservis 2018 competition document hub](https://kks.kyiv.ua/st_konkurs-z-vyznachennya-vykonavtsya-posluh-z-pereroblennya-obroblennya-ta-zahoronennya-pobutovyh-vidhodiv-scho-utvoryuyutsya-na-terytoriji-mista-kyeva/)
+- [Official commission result: no proposals received](https://kks.kyiv.ua/zasidannya-konkursnoji-komisiji-z-vyznachennya-vykonavtsya-posluh-z-pereroblennya-obroblennya-ta-zahoronennya-pobutovyh-vidhodiv-scho-utvoryuyutsya-na-terytoriji-mista-kyjeva-vid-28-09-2018/)
 - [EU Waste Framework Directive targets](https://environment.ec.europa.eu/news/waste-framework-directive-revision-2022-02-14_en)
 - [EU Landfill Directive](https://eur-lex.europa.eu/legal-content/en/ALL/?uri=CELEX%3A01999L0031-20240804)
 """
