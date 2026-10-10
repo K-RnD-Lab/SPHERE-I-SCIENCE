@@ -92,7 +92,7 @@ with st.sidebar:
     st.markdown("### Navigation")
     view = st.radio(
         "Section",
-        ["Overview", "Metagenomics", "Models & validation", "Ukraine pipeline", "Evidence notes"],
+        ["Overview", "Metagenomics", "Models & validation", "Ukraine pipeline", "Evidence & sources"],
         label_visibility="collapsed",
     )
     st.divider()
@@ -170,7 +170,7 @@ elif view == "Metagenomics":
     chart_layout(fig, 390)
     st.plotly_chart(fig, width="stretch", config={"displayModeBar": False})
     st.markdown(
-        '<div class="source">Source: Alina Frolova, “Metagenomics in Practice: From Urban Microbiomes to Human Health”, BioGENext 2026 slide.</div>',
+        '<div class="source">Source: BioGENext 2026 · “Metagenomics in Practice: From Urban Microbiomes to Human Health” · conference slide.</div>',
         unsafe_allow_html=True,
     )
 
@@ -249,10 +249,6 @@ elif view == "Models & validation":
     with cols[2]:
         metric("fastLBP example", "r = 0.28", "CHI3L1 expression prediction")
 
-    st.info(
-        "Important data clarification: the 87% figure belongs to an ErCas12a experimental assay, not a K-RnD Lab metagenomics model. It should not be presented as our accuracy."
-    )
-
 elif view == "Ukraine pipeline":
     st.subheader("Ukraine’s route: from policy to pipeline")
     st.markdown(
@@ -306,30 +302,36 @@ elif view == "Ukraine pipeline":
         unsafe_allow_html=True,
     )
 
-elif view == "Evidence notes":
-    st.subheader("What each figure means")
-    notes = [
-        ("Conference slide", "a figure shown by the speaker on a slide; cite the talk title"),
-        ("Benchmark", "a comparison of tools or models on a specific dataset"),
-        ("Experimental", "a laboratory validation result, but not necessarily clinical"),
-        ("Proposal", "planned infrastructure or roadmap, not an operational system"),
-        ("K-RnD prototype", "research or simulated result; not clinical validation"),
+elif view == "Evidence & sources":
+    st.subheader("Evidence registry")
+    st.markdown(
+        '<div class="small">This dashboard summarizes selected public conference material. '
+        'It does not reproduce private slides, patient-level data, unpublished K-RnD results, or clinical claims.</div>',
+        unsafe_allow_html=True,
+    )
+
+    sources = [
+        ("Metagenomics in Practice", "Dataset scale and unmapped reads", "conference slide"),
+        ("Pannotator benchmark", "Annotation runtime comparison", "benchmark"),
+        ("Boltz", "Computational design followed by experimental testing", "experimental"),
+        ("fastLBP", "Interpretable whole-slide image analysis", "conference slide"),
+        ("From Policy to Pipeline", "UBI Hub and MedTech Sandbox roadmap", "proposal"),
+        ("Project Pitching Competition", "11 finalist projects and qualitative themes", "program / pitch session"),
     ]
-    for label, description in notes:
-        st.markdown(f"**{label}** — {description}")
+    for title, scope, evidence_type in sources:
+        st.markdown(f"**{title}**  \n{scope} · `{evidence_type}`")
 
     st.divider()
-    st.markdown("### What is intentionally not shown here")
+    st.markdown("### Public-data boundary")
     st.markdown(
         """
-        - 87% accuracy as a K-RnD metagenomics result — there is no evidence for this claim.
-        - claims that clinicians are already using these models;
-        - the conclusion that a metagenomics test alone diagnoses or predicts disease;
-        - claims that the UBI Hub is already fully operational.
+        - No patient-level or raw genomic data is included.
+        - No private account-only material is reproduced.
+        - Conference figures are attributed to the talk or slide context.
+        - Simulated, benchmark, experimental, and proposal evidence are kept separate.
         """
     )
     st.markdown(
-        '<div class="callout"><b>Next research step:</b>  add the dataset, '
-        'validation type, unit of measurement, and next result user to every metric.</div>',
+        '<div class="callout"><b>Next research step:</b> add a public source URL or timestamp to each evidence card before treating it as independently verifiable.</div>',
         unsafe_allow_html=True,
     )
