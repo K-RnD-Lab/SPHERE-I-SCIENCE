@@ -182,6 +182,7 @@ The current live app environment is split across these Spaces:
 | [SET Method](https://huggingface.co/spaces/K-RnD-Lab/set-method) | Classify-score-recommend prototype for the SET framework | `spaces/set-method` |
 | [Study Registry](https://huggingface.co/spaces/K-RnD-Lab/studyreg) | Current live study registry Space | `spaces/studyreg` |
 | [Partner Pool Simulator](https://huggingface.co/spaces/K-RnD-Lab/Partner-Pool-Simulator_05-2026) | `S7-K` partner-pool assumption simulator demo | `spaces/partner-pool-simulator` |
+| [BioGENext Evidence Dashboard](https://biogenext-evidence-dashboard.streamlit.app/) | Public evidence map for a BioGENext 2026 translational research case | `spaces/biogenext-evidence-dashboard` |
 
 More detail is documented in [`spaces/README.md`](spaces/README.md) and [`docs/core/hf-space-sync.md`](docs/core/hf-space-sync.md).
 

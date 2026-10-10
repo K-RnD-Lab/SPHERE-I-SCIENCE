@@ -48,6 +48,7 @@ The current Hugging Face layer linked to `S1` is split by purpose:
 | [Learning Playground](https://huggingface.co/spaces/K-RnD-Lab/Learning-Playground_03-2026) | General interactive sandbox for RNA, siRNA, LNP, flow-corona, and variant-learning workflows |
 | [Cancer Research Suite](https://huggingface.co/spaces/K-RnD-Lab/Cancer-Research-Suite_03-2026) | Research-gap discovery, real-data exploration, and broader cancer research workflows |
 | [PHYLO BRCA2 miRNA Demo](https://huggingface.co/spaces/K-RnD-Lab/PHYLO-03_2026-01_A1-brca2-mirna) | Dedicated study demo for `S1-B-R1a` |
+| [BioGENext Evidence Dashboard](https://biogenext-evidence-dashboard.streamlit.app/) | Cross-cutting S1 evidence map: metagenomics, biomedical AI, molecular design, biomarkers, and translational infrastructure |
 
 ## Sync rule
 

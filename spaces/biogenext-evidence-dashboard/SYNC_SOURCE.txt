@@ -1,0 +1,4 @@
+Canonical app source: K-RnD Lab / SPHERE-I-SCIENCE / spaces / biogenext-evidence-dashboard
+Live app: https://biogenext-evidence-dashboard.streamlit.app/
+Scope: BioGENext 2026 evidence map; cross-cutting S1 biomedical research interface
+Evidence status: conference-slide extraction, benchmark, experimental, proposal, and illustrative layers are labeled in-app
